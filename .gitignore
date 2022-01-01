@@ -1,0 +1,13 @@
+*.bak
+*.log
+Project/.vs
+Project/bin
+Project/Setup/Debug
+Project/Setup/Release
+Project/SfHelper/x64
+Project/ShellFiler/obj
+Project/ShellFiler/ShellFiler.csproj.user
+Project/Util_CommandXmlConverter/bin
+Project/Util_CommandXmlConverter/obj
+Project/Util_ImageCombine/bin
+Project/Util_ImageCombine/obj

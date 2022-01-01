@@ -1,0 +1,70 @@
+<html>
+  <header>
+    <meta http-equiv="Content-Type" content="text/html; charset=Shift_JIS">
+    <style type="text/css">
+      h1 {
+        font-size: 14pt;
+        font-weight: bold;
+        color: #0000ff;
+        background-color: #c0f0f0;
+        line-height: 28px;
+        margin: 10px 5px 10px 5px;
+      }
+      h2 {
+        font-size: 11pt;
+        font-weight: bold;
+        color: #0000ff;
+        line-height: 13px;
+        margin: 0px 5px 5px 5px;
+      }
+      h3 {
+        font-size: 10pt;
+        font-weight: bold;
+        line-height: 12px;
+        margin: 5px 5px 5px 5px;
+      }
+      td {
+        font-size: 10pt;
+        margin: 2px 2px 2px 5px;
+      }
+      td.center {
+        font-size: 10pt;
+        text-align: center;
+      }
+      th {
+        font-size: 10pt;
+      }
+      li {
+        font-size: 10pt;
+        margin: 2px 2px 2px 25px;
+      }
+      p.copyright {
+        font-size: 10pt;
+        color: #808080;
+        margin: 5px 5px 0px 20px;
+      }
+      p {
+        font-size: 10pt;
+        margin: 8px 5px 8px 5px;
+      }
+      b {
+        font-size: 10pt;
+        margin: 8px 5px 8px 5px;
+      }
+    </style>
+  </header>
+  <body>
+    <h1>SSHチャネルの選択</h1>
+    <p>この画面は、SSHシェルモードで使用するチャネルを選択します。</p>
+    <br>
+    <h2>セッションとチャネル</h2>
+    <p>SSHプロトコルでは、ユーザー認証（パスワードや鍵ファイル）によってSSHサーバーに接続し、セッションを確立します。<br>セッションの配下には複数のチャネルを作成することができ、SFTPのコマンドや１つのコンソール画面でのやりとりはそれぞれのチャネルを通して実行します。</p>
+    <p class="image"><img src="207" border="0"></p>
+    <br><br>
+    <h2>ShellFilerのSSHシェル接続</h2>
+    <p>SSHシェル接続では、コマンドを実行するチャネル/コンソールを選ぶ必要があります。<br>
+SSHシェル接続はShellFilerがコンソール画面に表示される文字を解釈し、コマンドを自動的に入力することで実現しています。suコマンド等でユーザーを切り替えると、その状態はコンソール画面ごとに決まるため、SSHシェルのモードでファイル一覧を操作するには、まずチャネル/コンソールの選択が必要です。</p>
+    <p>ファイル一覧画面で操作し続けているときは前回のコンソール画面をそのまま引き継ぐことができますが、一度SSHシェルの一覧から外れた後、ブックマークで戻るような場合には、コマンドを実行するコンソール画面を選び直す必要があります。</p>
+    <b>SSHメニューから[SSH操作ユーザ－の切り替え]（su/exit）を実行すると、そのチャネルを使用しているすべての操作ユーザーも、su/exit後のユーザーに切り替わります。</b>
+  </body>
+</html>

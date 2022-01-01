@@ -1,0 +1,124 @@
+<html>
+  <header>
+    <meta http-equiv="Content-Type" content="text/html; charset=Shift_JIS">
+    <style type="text/css">
+      h1 {
+        font-size: 14pt;
+        font-weight: bold;
+        color: #0000ff;
+        background-color: #c0f0f0;
+        line-height: 28px;
+        margin: 10px 5px 10px 5px;
+      }
+      h2 {
+        font-size: 11pt;
+        font-weight: bold;
+        color: #0000ff;
+        line-height: 13px;
+        margin: 0px 5px 5px 5px;
+      }
+      h3 {
+        font-size: 10pt;
+        font-weight: bold;
+        line-height: 12px;
+        margin: 5px 5px 5px 5px;
+      }
+      td {
+        font-size: 10pt;
+        margin: 2px 2px 2px 5px;
+      }
+      td.center {
+        font-size: 10pt;
+        text-align: center;
+      }
+      th {
+        font-size: 10pt;
+      }
+      li {
+        font-size: 10pt;
+        margin: 2px 2px 2px 25px;
+      }
+      p.copyright {
+        font-size: 10pt;
+        color: #808080;
+        margin: 5px 5px 0px 20px;
+      }
+      p {
+        font-size: 10pt;
+        margin: 8px 5px 8px 5px;
+      }
+    </style>
+  </header>
+  <body>
+    <h1>SSHプロトコル</h1>
+    <p>ShellFilerでは、LinuxなどのSSHサーバーに接続して、ファイル操作を行うことができます。<br>
+    SSHサーバーへは次の２つのいずれかの方法で接続することができます。</p>
+    <table border="0">
+      <tr>
+        <td colspan="2"><b>SFTP</b></td>
+      </tr>
+      <tr>
+        <td>&nbsp;&nbsp;&nbsp;</td>
+        <td>SFTPモードではSFTPプロトコルを使ってサーバー上のファイルを操作します。SFTPは、SSHの上で動作するファイル転送プロトコルです。プロトコル自身にファイル操作の機能を持っているため、ファイルの転送速度が高速で、かつ安定した動作が得られます。<br>
+        一方、ログインしたユーザーのアクセス権を越えて操作することはできません。<br>
+        ※SFTPとFTPは異なるプロトコルのためShellFilerからFTPサーバーに接続することはできません。<br><br></td>
+      </tr>
+      <tr>
+        <td colspan="2"><b>SSHシェル</b></td>
+      </tr>
+      <tr>
+        <td>&nbsp;&nbsp;&nbsp;</td>
+        <td>SSHシェルモードでは、SSHのコンソール画面をShellFilerが解釈/操作することでファイル操作を行います。<br>
+        たとえば、コンソールからファイル一覧を見る場合はlsコマンドを使いますが、ShellFilerではフォルダの変更と同時に、内部でls -a -l -Q --time-style=full-isoコマンドを自動実行し、その結果を解釈してファイル一覧画面を表示します。<br>
+        もともと人間が操作する画面をスクリプト等で自動制御するため、標準出力へのゴミや、想定していないエラーメッセージにより、動作が不安定になることがあります。また、仕組み上、ローカルPCからのファイルのアップロードは非常に低速で、コマンドラインの入力ヒストリも乱れます（ヒアドキュメントで同期をとりながらテキストを転送し、バイナリ変換するため）。<br><br>
+        反面、suコマンドやトンネルなどのSSHターミナルで実行できる操作は一通り行え、かつ、ShellFilerでサポートしていない機能をコマンドラインから容易に実行することができます。<br>
+        ※アップロード後とダウンロード後はcksumコマンドでチェックサムの確認を行い、必要に応じて再転送するため、内容が化けることは基本的にありません。</td>
+      </tr>
+    </table>
+    <br><br>
+    <table border="1">
+      <tr>
+        <th>&nbsp;</th>
+        <th>SFTP</th>
+        <th>SSHシェル</th>
+        <th>備考</th>
+      </tr>
+      <tr>
+        <td>アップロード</td>
+        <td class="center">○</td>
+        <td class="center">△</td>
+        <td>SSHシェルは低速</td>
+      </tr>
+      <tr>
+        <td>ダウンロード</td>
+        <td class="center">○</td>
+        <td class="center">○</td>
+        <td>&nbsp;</td>
+      </tr>
+      <tr>
+        <td>ファイル操作</td>
+        <td class="center">○</td>
+        <td class="center">○</td>
+        <td>基本的に同等</td>
+      </tr>
+      <tr>
+        <td>コマンド実行</td>
+        <td class="center">△</td>
+        <td class="center">○</td>
+        <td>SFTPは接続中のセッションでターミナルを開くことが可能。SSHシェルは実行中の状態の続きでターミナル操作が可能</td>
+      </tr>
+      <tr>
+        <td>su/トンネル</td>
+        <td class="center">×</td>
+        <td class="center">○</td>
+        <td>SFTPはユーザーの変更不可。SSHシェルでのトンネルはコマンドラインで入力</td>
+      </tr>
+      <tr>
+        <td>安定性</td>
+        <td class="center">○</td>
+        <td class="center">△</td>
+        <td>SSHシェルは未知のメッセージやバックグラウンドプロセスからのゴミの影響を受ける</td>
+      </tr>
+    </table>
+  </body>
+</html>

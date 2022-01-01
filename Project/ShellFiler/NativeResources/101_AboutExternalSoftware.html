@@ -1,0 +1,85 @@
+<html>
+  <header>
+    <meta http-equiv="Content-Type" content="text/html; charset=Shift_JIS">
+    <style type="text/css">
+      h1 {
+        font-size: 14pt;
+        font-weight: bold;
+        color: #0000ff;
+        background-color: #c0f0f0;
+        line-height: 28px;
+        margin: 10px 5px 10px 5px;
+      }
+      h2 {
+        font-size: 11pt;
+        font-weight: bold;
+        color: #0000ff;
+        line-height: 13px;
+        margin: 35px 5px 5px 5px;
+      }
+      h {
+        font-size: 10pt;
+        background-color: #e0e0e0;
+      }
+      td {
+        font-size: 10pt;
+      }
+      th {
+        font-size: 10pt;
+      }
+      p.copyright {
+        font-size: 10pt;
+        line-height: 10px;
+        color: #606060;
+        right: 0px;
+        text-align: right;
+        margin: 0px 5px 0px 5px;
+      }
+      p {
+        font-size: 10pt;
+        margin: 8px 5px 8px 5px;
+      }
+    </style>
+  </header>
+  <body>
+    <h1>サポートする外部ツール/ライブラリ</h1>
+    <p>次のソフトウェアをダウンロードしてインストールすると、ShellFilerの機能を拡張することができます。<br>開発者の皆様に感謝します。</p>
+
+    <h2>SharpSSH</h2>
+    <p class="copyright">Copyright (c) 2008 TamirGal.com</p>
+    <p>SharpSSHをインストールすると、ShellFilerからSSH/SFTPプロトコルを使って、LinuxなどのSSHサーバーにあるファイルを操作することができます。</p>
+    <p>SharpSSHには64bit/32bitの区別はありません。<br>ダウンロードしたSharpSSHは一度展開し、付属のDLL3つをShellFiler.exeと同じフォルダにインストールします。</p>
+    <p><a href="http://www.tamirgal.com/blog/page/SharpSSH.aspx" target="_blank"><img src="201" border="0">ダウンロードページ</a></p>
+
+    <h2>7-Zip</h2>
+    <p class="copyright">Copyright (c) 2011 Igor Pavlov</p>
+    <p>7-Zipをインストールすると、ShellFilerから圧縮ファイルの作成と展開ができるようになります。</p>
+    <p>ShellFilerからの操作でサポートする形式は次のとおりです。<br>圧縮：7z、tar.gz、tar.bz2、tar、zip<br>展開：7z、tar.gz、tar.bz2、tar、zip（jarとwarを含む）、arj、cab、iso、lzh、rar<br></p>
+    <p>ShellFilerが64bit版のときは64bit版の7-Zipを、32bit版のときは32bit版の7-Zipをインストールします。<br>レジストリからDLLの場所を自動的に認識するため、インストール後の特別な設定は必要ありません。</p>
+    <p><a href="http://sevenzip.sourceforge.jp/" target="_blank"><img src="201" border="0">ダウンロードページ</a></p>
+
+    <h2>差分表示ツール</h2>
+    <p>お好みの差分表示ツールをインストールすると、ShellFilerで選択されたファイルやフォルダの差分を簡単に表示させることができます。ShellFilerのUIとは完全に統合されていませんが、ShellFilerから差分表示ツールをすばやく起動できます。</p>
+    <p>対応するツールは、ShellFilerのWebページをご覧ください。コマンドラインに比較対象のファイルを指定すると差分が比較できるツール全般に対応しています。</p>
+    <p>ShellFilerの32bit/64bitの種類によらず、32bit/64bitのいずれのツールでも動作します。<br>インストール後は、メニューの[オプション-オプション]の「インストール情報＞差分表示ツール」で設定する必要があります。</p>
+
+    <h2>エクスプローラ拡張</h2>
+    <p>TortoiseSVN（(c)CollabNet）などによって、エクスプローラのメニューやプロパティの機能を拡張している場合、ShellFilerでもそれらの機能を使用することができます。</p>
+    <p>いずれも64bit版にだけ対応しています。</p>
+
+    <p><br><br><br></p>
+    <h1>内蔵しているライブラリ</h1>
+    <p>次のライブラリは、そのまま、または、それぞれ改変した状態でShellFilerに組み込んでいます。<br>改変したソースはShellFiler以下のlibフォルダに格納しています。</p>
+    <p>開発者の皆様に感謝します。</p>
+
+    <h2>SpHeader</h2>
+    <p class="copyright">Copyright (c) 2004 by Sergei Pavlovsky</p>
+    <p>SpHeaderは、.NET Frameworkからヘッダコントロールを制御するために使用しているライブラリです。<br>64bit版のWindowsで動作するように、一部のソースを変更しています。</p>
+    <p><a href="http://www.codeproject.com/KB/miscctrl/CS_Header_Control.aspx" target="_blank"><img src="201" border="0">関連ページ</a></p>
+
+    <h2>C# (.net) interface for 7-Zip archive dlls</h2>
+    <p class="copyright">Copyright 2008 by Eugene Sichkar</p>
+    <p>ShellFilerに組み込んでいる、C#から7-Zipの機能を使用するためのライブラリです。<br>64bit対応や圧縮/展開の処理中にキャンセル対応などで、一部のソースを変更しています。</p>
+    <p><a href="http://www.codeproject.com/KB/DLL/cs_interface_7zip.aspx" target="_blank"><img src="201" border="0">関連ページ</a></p>
+  </body>
+</html>

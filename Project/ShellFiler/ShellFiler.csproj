@@ -1,0 +1,3240 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{001AA02E-ED22-4748-9B46-B46DBB08E0F3}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>ShellFiler</RootNamespace>
+    <AssemblyName>ShellFiler</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>..\bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>..\bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <Win32Resource>.\NativeResources\ResTempl.res</Win32Resource>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>ShellFiler.Program</StartupObject>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System">
+      <HintPath>C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.8\System.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Tamir.SharpSSH">
+      <HintPath>..\bin\Debug\Tamir.SharpSSH.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="libsrc\SevenZip\Ole32.cs" />
+    <Compile Include="libsrc\SevenZip\SevenZipFormat.cs" />
+    <Compile Include="libsrc\SevenZip\SevenZipInterface.cs" />
+    <Compile Include="libsrc\SpHeader\Header.cs" />
+    <Compile Include="libsrc\SpHeader\NativeWrappers.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="src\Api\BackgroundTaskID.cs" />
+    <Compile Include="src\Api\BufferRange.cs" />
+    <Compile Include="src\Api\CancelFlag.cs" />
+    <Compile Include="src\Api\CancelReason.cs" />
+    <Compile Include="src\Api\ChangeDirectoryMode.cs" />
+    <Compile Include="src\Api\ChangeDirectoryStatus.cs" />
+    <Compile Include="src\Api\CharCode.cs" />
+    <Compile Include="src\Api\ClipboardCopyNameAsSetting.cs" />
+    <Compile Include="src\Api\CombineDefaultFileType.cs" />
+    <Compile Include="src\Api\CommandRetType.cs" />
+    <Compile Include="src\Api\DateInfo.cs" />
+    <Compile Include="src\Api\DateTimeInfo.cs" />
+    <Compile Include="src\Api\DeleteFileFolderFlag.cs" />
+    <Compile Include="src\Api\FileAttribute.cs" />
+    <Compile Include="src\Api\FileAttributeLinux.cs" />
+    <Compile Include="src\Api\FileListLoadingStatus.cs" />
+    <Compile Include="src\Api\FileOperationRequestContext.cs" />
+    <Compile Include="src\Api\FileOperationStatus.cs" />
+    <Compile Include="src\Api\FileOperationType.cs" />
+    <Compile Include="src\Api\FileProgressEventArgs.cs" />
+    <Compile Include="src\Api\FileProgressEventHandler.cs" />
+    <Compile Include="src\Api\FileSystemID.cs" />
+    <Compile Include="src\Api\IconSize.cs" />
+    <Compile Include="src\Api\IdImpl.cs" />
+    <Compile Include="src\Api\IFile.cs" />
+    <Compile Include="src\Api\IFileList.cs" />
+    <Compile Include="src\Api\IFileListContext.cs" />
+    <Compile Include="src\Api\IFileSystem.cs" />
+    <Compile Include="src\Api\IFileSystemToFileSystem.cs" />
+    <Compile Include="src\Api\IKeyEventIntegrator.cs" />
+    <Compile Include="src\Api\IncrementalSearchOperation.cs" />
+    <Compile Include="src\Api\ITwoStrokeKeyForm.cs" />
+    <Compile Include="src\Api\IUICommandTarget.cs" />
+    <Compile Include="src\Api\KeyCommand.cs" />
+    <Compile Include="src\Api\MarkAllFileMode.cs" />
+    <Compile Include="src\Api\MarkMouseAction.cs" />
+    <Compile Include="src\Api\MarkOperation.cs" />
+    <Compile Include="src\Api\NumericRadix.cs" />
+    <Compile Include="src\Api\RenameFilePathInfo.cs" />
+    <Compile Include="src\Api\SfCancelException.cs" />
+    <Compile Include="src\Api\SfException.cs" />
+    <Compile Include="src\Api\ShellExecuteRelayMode.cs" />
+    <Compile Include="src\Api\ShortcutType.cs" />
+    <Compile Include="src\Api\SSHProtocolType.cs" />
+    <Compile Include="src\Api\SymbolicLinkTarget.cs" />
+    <Compile Include="src\Api\TerminalCloseConfirmMode.cs" />
+    <Compile Include="src\Api\TerminalLogType.cs" />
+    <Compile Include="src\Api\TerminalShellChannelID.cs" />
+    <Compile Include="src\Api\TimeInfo.cs" />
+    <Compile Include="src\Api\TransferModeType.cs" />
+    <Compile Include="src\Api\TwoStrokeType.cs" />
+    <Compile Include="src\Api\UICommandItem.cs" />
+    <Compile Include="src\Api\UICommandSender.cs" />
+    <Compile Include="src\Api\UIEnableCondition.cs" />
+    <Compile Include="src\Api\UIFileListId.cs" />
+    <Compile Include="src\Api\Ver.cs" />
+    <Compile Include="src\Archive\ArchiveExecuteMethod.cs" />
+    <Compile Include="src\Archive\ArchiveFactory.cs" />
+    <Compile Include="src\Archive\ArchiveFileDirectoryInfo.cs" />
+    <Compile Include="src\Archive\ArchiveParameter.cs" />
+    <Compile Include="src\Archive\ArchivePasswordSource.cs" />
+    <Compile Include="src\Archive\ArchiveSettingLocal7zOption.cs" />
+    <Compile Include="src\Archive\ArchiveSettingRemoteShellOption.cs" />
+    <Compile Include="src\Archive\ArchiveType.cs" />
+    <Compile Include="src\Archive\ArchiveUtils.cs" />
+    <Compile Include="src\Archive\ExtractPathMode.cs" />
+    <Compile Include="src\Archive\IArchiveContentsFileInfo.cs" />
+    <Compile Include="src\Archive\IArchiveCreate.cs" />
+    <Compile Include="src\Archive\IArchiveExtract.cs" />
+    <Compile Include="src\Archive\IArchiveVirtualExtract.cs" />
+    <Compile Include="src\Archive\IArchiveVirtualFileList.cs" />
+    <Compile Include="src\Archive\RemoteShellCommandFactory.cs" />
+    <Compile Include="src\Archive\RemoveShellArchiveFeature.cs" />
+    <Compile Include="src\Archive\SevenZipArchiveFeature.cs" />
+    <Compile Include="src\Archive\SevenZipArchiveOpenCallback.cs" />
+    <Compile Include="src\Archive\SevenZipArchiveUpdateCallback.cs" />
+    <Compile Include="src\Archive\SevenZipContentsFileInfo.cs" />
+    <Compile Include="src\Archive\SevenZipContentsPasswordTest.cs" />
+    <Compile Include="src\Archive\SevenZipCreate.cs" />
+    <Compile Include="src\Archive\SevenZipCreateSetOption.cs" />
+    <Compile Include="src\Archive\SevenZipExtract.cs" />
+    <Compile Include="src\Archive\SevenZipPasswordTestImpl.cs" />
+    <Compile Include="src\Archive\SevenZipTarOuterCreate.cs" />
+    <Compile Include="src\Archive\SevenZipTarOuterExtract.cs" />
+    <Compile Include="src\Archive\SevenZipUtils.cs" />
+    <Compile Include="src\Archive\SevenZipVirtualExtract.cs" />
+    <Compile Include="src\Archive\SevenZipVirtualFileList.cs" />
+    <Compile Include="src\Archive\VirtualArchiveFileMapping.cs" />
+    <Compile Include="src\Archive\VirtualFileCopySrcMaster.cs" />
+    <Compile Include="src\Archive\VirtualTemporaryExtractMaster.cs" />
+    <Compile Include="src\Command\ActionCommand.cs" />
+    <Compile Include="src\Command\ActionCommandMoniker.cs" />
+    <Compile Include="src\Command\ActionCommandOption.cs" />
+    <Compile Include="src\Command\ActionCommandUtils.cs" />
+    <Compile Include="src\Command\FileList\ChangeDir\00ChdirCursorFolderCommand.cs" />
+    <Compile Include="src\Command\FileList\ChangeDir\01BothChdirCursorFolderCommand.cs" />
+    <Compile Include="src\Command\FileList\ChangeDir\02ChdirParentCommand.cs" />
+    <Compile Include="src\Command\FileList\ChangeDir\03BothChdirParentCommand.cs" />
+    <Compile Include="src\Command\FileList\ChangeDir\04ChdirRootCommand.cs" />
+    <Compile Include="src\Command\FileList\ChangeDir\05ChdirHomeCommand.cs" />
+    <Compile Include="src\Command\FileList\ChangeDir\06ChdirTargetToOppositeCommand.cs" />
+    <Compile Include="src\Command\FileList\ChangeDir\07ChdirOppositeToTargetCommand.cs" />
+    <Compile Include="src\Command\FileList\ChangeDir\08ChdirSwapTargetOppositeCommand.cs" />
+    <Compile Include="src\Command\FileList\ChangeDir\09PathHistoryNextCommand.cs" />
+    <Compile Include="src\Command\FileList\ChangeDir\10PathHistoryPrevCommand.cs" />
+    <Compile Include="src\Command\FileList\ChangeDir\20RefreshCommand.cs" />
+    <Compile Include="src\Command\FileList\ChangeDir\30ChdirCommand.cs" />
+    <Compile Include="src\Command\FileList\ChangeDir\31ChdirSpecialCommand.cs" />
+    <Compile Include="src\Command\FileList\ChangeDir\40ChdirDriveCommand.cs" />
+    <Compile Include="src\Command\FileList\ChangeDir\41ChdirBookmarkFolderCommand.cs" />
+    <Compile Include="src\Command\FileList\ChangeDir\43ChdirInputCommand.cs" />
+    <Compile Include="src\Command\FileList\ChangeDir\44ChdirFolderHistoryCommand.cs" />
+    <Compile Include="src\Command\FileList\ChangeDir\50ChdirSpecifiedPartCommand.cs" />
+    <Compile Include="src\Command\FileList\ChangeDir\51ChdirSpecifiedPartReverseCommand.cs" />
+    <Compile Include="src\Command\FileList\ChangeDir\60ChdirVirtualFolderCommand.cs" />
+    <Compile Include="src\Command\FileList\ChangeDir\61PrepareVirtualFolderCommand.cs" />
+    <Compile Include="src\Command\FileList\FileListActionCommand.cs" />
+    <Compile Include="src\Command\FileList\FileListCommandRuntime.cs" />
+    <Compile Include="src\Command\FileList\FileList\00SortMenuCommand.cs" />
+    <Compile Include="src\Command\FileList\FileList\01SortClearCommand.cs" />
+    <Compile Include="src\Command\FileList\FileList\10FileListFilterMenuCommand.cs" />
+    <Compile Include="src\Command\FileList\FileList\11ClearFileListFilterCommand.cs" />
+    <Compile Include="src\Command\FileList\FileList\20FileListColorSettingCommand.cs" />
+    <Compile Include="src\Command\FileList\FileList\40FileListViewModeSettingCommand.cs" />
+    <Compile Include="src\Command\FileList\FileList\41FileListViewModeDetailCommand.cs" />
+    <Compile Include="src\Command\FileList\FileList\42FileListViewModeThumbnailCommand.cs" />
+    <Compile Include="src\Command\FileList\FileList\43FileListViewModeToggleCommand.cs" />
+    <Compile Include="src\Command\FileList\FileList\44FileListViewModeLargerCommand.cs" />
+    <Compile Include="src\Command\FileList\FileList\45FileListViewModeSmallerCommand.cs" />
+    <Compile Include="src\Command\FileList\FileList\50FileListViewModeThumbnailCommand32.cs" />
+    <Compile Include="src\Command\FileList\FileList\51FileListViewModeThumbnailCommand48.cs" />
+    <Compile Include="src\Command\FileList\FileList\52FileListViewModeThumbnailCommand64.cs" />
+    <Compile Include="src\Command\FileList\FileList\53FileListViewModeThumbnailCommand128.cs" />
+    <Compile Include="src\Command\FileList\FileList\54FileListViewModeThumbnailCommand256.cs" />
+    <Compile Include="src\Command\FileList\FileList\60IncrementalSearchCommand.cs" />
+    <Compile Include="src\Command\FileList\FileList\61IncrementalSearchExCommand.cs" />
+    <Compile Include="src\Command\FileList\FileList\70FileCompareCommand.cs" />
+    <Compile Include="src\Command\FileList\FileList\90RetrieveFolderSizeCommand.cs" />
+    <Compile Include="src\Command\FileList\FileList\91ClearFolderSizeCommand.cs" />
+    <Compile Include="src\Command\FileList\FileOperationEtc\10ClipboardCopyCommand.cs" />
+    <Compile Include="src\Command\FileList\FileOperationEtc\11ClipboardCutCommand.cs" />
+    <Compile Include="src\Command\FileList\FileOperationEtc\12ClipboardNameCopyCommand.cs" />
+    <Compile Include="src\Command\FileList\FileOperationEtc\13ClipboardNameCopyAsCommand.cs" />
+    <Compile Include="src\Command\FileList\FileOperationEtc\20ArchiveCommand.cs" />
+    <Compile Include="src\Command\FileList\FileOperationEtc\21ExtractCommand.cs" />
+    <Compile Include="src\Command\FileList\FileOperationEtc\30UnwrapFolderCommand.cs" />
+    <Compile Include="src\Command\FileList\FileOperationEtc\40DiffMarkCommand.cs" />
+    <Compile Include="src\Command\FileList\FileOperationEtc\41DiffFolderCompareCommand.cs" />
+    <Compile Include="src\Command\FileList\FileOperationEtc\42DiffOppositeCommand.cs" />
+    <Compile Include="src\Command\FileList\FileOperationEtc\50FilterCopyCommand.cs" />
+    <Compile Include="src\Command\FileList\FileOperationEtc\62GitAddCommand.cs" />
+    <Compile Include="src\Command\FileList\FileOperationEtc\61GitRenameCommand.cs" />
+    <Compile Include="src\Command\FileList\FileOperationEtc\60GitMoveCommand.cs" />
+    <Compile Include="src\Command\FileList\FileOperation\00CopyCommand.cs" />
+    <Compile Include="src\Command\FileList\FileOperation\01CopyExCommand.cs" />
+    <Compile Include="src\Command\FileList\FileOperation\02MoveCommand.cs" />
+    <Compile Include="src\Command\FileList\FileOperation\03MoveExCommand.cs" />
+    <Compile Include="src\Command\FileList\FileOperation\04DeleteCommand.cs" />
+    <Compile Include="src\Command\FileList\FileOperation\05HighspeedDeleteCommand.cs" />
+    <Compile Include="src\Command\FileList\FileOperation\06DeleteExCommand.cs" />
+    <Compile Include="src\Command\FileList\FileOperation\07CreateShortcutCommand.cs" />
+    <Compile Include="src\Command\FileList\FileOperation\08MirrorCopyCommand.cs" />
+    <Compile Include="src\Command\FileList\FileOperation\09DuplicateCommand.cs" />
+    <Compile Include="src\Command\FileList\FileOperation\10RenameCommand.cs" />
+    <Compile Include="src\Command\FileList\FileOperation\11RenameSelectedFileInfoCommand.cs" />
+    <Compile Include="src\Command\FileList\FileOperation\12MakeFolderCommand.cs" />
+    <Compile Include="src\Command\FileList\Internal\AddressBarChdirCommand.cs" />
+    <Compile Include="src\Command\FileList\Internal\CopyDirectInternalCommand.cs" />
+    <Compile Include="src\Command\FileList\Internal\CopyRetryInternalCommand.cs" />
+    <Compile Include="src\Command\FileList\Internal\CreateShortcutDirectInternalCommand.cs" />
+    <Compile Include="src\Command\FileList\Internal\CreateShortcutRetryInternalCommand.cs" />
+    <Compile Include="src\Command\FileList\Internal\DeleteRetryInternalCommand.cs" />
+    <Compile Include="src\Command\FileList\Internal\InternalLocalEditCommand.cs" />
+    <Compile Include="src\Command\FileList\Internal\InternalSortDirectCommand.cs" />
+    <Compile Include="src\Command\FileList\Internal\MoveDirectInternalCommand.cs" />
+    <Compile Include="src\Command\FileList\Internal\MoveRetryInternalCommand.cs" />
+    <Compile Include="src\Command\FileList\Internal\NopCommand.cs" />
+    <Compile Include="src\Command\FileList\Mouse\AbstractMouseActionCommand.cs" />
+    <Compile Include="src\Command\FileList\Mouse\AbstractMouseMarkCommand.cs" />
+    <Compile Include="src\Command\FileList\Mouse\MouseContextMenuCommand.cs" />
+    <Compile Include="src\Command\FileList\Mouse\MouseDragMarkCommand.cs" />
+    <Compile Include="src\Command\FileList\Mouse\MouseDragSelectCommand.cs" />
+    <Compile Include="src\Command\FileList\Mouse\MouseExplorerSelectCommand.cs" />
+    <Compile Include="src\Command\FileList\MoveCursor\00CursorUpCommand.cs" />
+    <Compile Include="src\Command\FileList\MoveCursor\01CursorDownCommand.cs" />
+    <Compile Include="src\Command\FileList\MoveCursor\02CursorRollupCommand.cs" />
+    <Compile Include="src\Command\FileList\MoveCursor\03CursorRolldownCommand.cs" />
+    <Compile Include="src\Command\FileList\MoveCursor\10CursorLeftCommand.cs" />
+    <Compile Include="src\Command\FileList\MoveCursor\11CursorRightCommand.cs" />
+    <Compile Include="src\Command\FileList\MoveCursor\12CursorLeftWindowCommand.cs" />
+    <Compile Include="src\Command\FileList\MoveCursor\13CursorRightWindowCommand.cs" />
+    <Compile Include="src\Command\FileList\MoveCursor\20CursorTopCommand.cs" />
+    <Compile Include="src\Command\FileList\MoveCursor\21CursorBottomCommand.cs" />
+    <Compile Include="src\Command\FileList\MoveCursor\30MarkCommand.cs" />
+    <Compile Include="src\Command\FileList\MoveCursor\31CursorUpMarkCommand.cs" />
+    <Compile Include="src\Command\FileList\MoveCursor\32CursorDownMarkCommand.cs" />
+    <Compile Include="src\Command\FileList\MoveCursor\33CursorRollupMarkCommand.cs" />
+    <Compile Include="src\Command\FileList\MoveCursor\34CursorRolldownMarkCommand.cs" />
+    <Compile Include="src\Command\FileList\MoveCursor\35CursorLeftMarkCommand.cs" />
+    <Compile Include="src\Command\FileList\MoveCursor\36CursorRightMarkCommand.cs" />
+    <Compile Include="src\Command\FileList\MoveCursor\50SelectAllMarkFileCommand.cs" />
+    <Compile Include="src\Command\FileList\MoveCursor\51SelectAllMarkFolderCommand.cs" />
+    <Compile Include="src\Command\FileList\MoveCursor\52SelectAllMarkCommand.cs" />
+    <Compile Include="src\Command\FileList\MoveCursor\60ClearAllMarkFileCommand.cs" />
+    <Compile Include="src\Command\FileList\MoveCursor\61ClearAllMarkFolderCommand.cs" />
+    <Compile Include="src\Command\FileList\MoveCursor\62ClearAllMarkCommand.cs" />
+    <Compile Include="src\Command\FileList\MoveCursor\70ReverseAllMarkFileCommand.cs" />
+    <Compile Include="src\Command\FileList\MoveCursor\71ReverseAllMarkFolderCommand.cs" />
+    <Compile Include="src\Command\FileList\MoveCursor\73ReverseAllMarkCommand.cs" />
+    <Compile Include="src\Command\FileList\MoveCursor\80MarkWithConditionsCommand.cs" />
+    <Compile Include="src\Command\FileList\MoveCursor\90TwoStrokeKey1Command.cs" />
+    <Compile Include="src\Command\FileList\MoveCursor\91TwoStrokeKey2Command.cs" />
+    <Compile Include="src\Command\FileList\MoveCursor\92TwoStrokeKey3Command.cs" />
+    <Compile Include="src\Command\FileList\MoveCursor\93TwoStrokeKey4Command.cs" />
+    <Compile Include="src\Command\FileList\Open\00ExecuteOrViewerCommand.cs" />
+    <Compile Include="src\Command\FileList\Open\01ShellExecuteCommand.cs" />
+    <Compile Include="src\Command\FileList\Open\20OpenApplicationFileCommand.cs" />
+    <Compile Include="src\Command\FileList\Open\30OpenFileAssociate1Command.cs" />
+    <Compile Include="src\Command\FileList\Open\31OpenFileAssociate2Command.cs" />
+    <Compile Include="src\Command\FileList\Open\32OpenFileAssociate3Command.cs" />
+    <Compile Include="src\Command\FileList\Open\33OpenFileAssociate4Command.cs" />
+    <Compile Include="src\Command\FileList\Open\34OpenFileAssociate5Command.cs" />
+    <Compile Include="src\Command\FileList\Open\35OpenFileAssociate6Command.cs" />
+    <Compile Include="src\Command\FileList\Open\36OpenFileAssociate7Command.cs" />
+    <Compile Include="src\Command\FileList\Open\37OpenFileAssociate8Command.cs" />
+    <Compile Include="src\Command\FileList\Open\40LocalExecuteCommand.cs" />
+    <Compile Include="src\Command\FileList\Open\50ShowPropertyCommand.cs" />
+    <Compile Include="src\Command\FileList\Open\51ShowPropertyFolderCommand.cs" />
+    <Compile Include="src\Command\FileList\Open\52ContextMenuCommand.cs" />
+    <Compile Include="src\Command\FileList\Open\53ContextMenuFolderCommand.cs" />
+    <Compile Include="src\Command\FileList\Setting\00ArchiveAutoPasswordOptionCommand.cs" />
+    <Compile Include="src\Command\FileList\Setting\01BookmarkSettingCommand.cs" />
+    <Compile Include="src\Command\FileList\Setting\02DeleteUserFolderCommand.cs" />
+    <Compile Include="src\Command\FileList\Setting\10FileListKeySettingCommand.cs" />
+    <Compile Include="src\Command\FileList\Setting\11FileViewerKeySettingCommand.cs" />
+    <Compile Include="src\Command\FileList\Setting\12GraphicsViewerKeySettingCommand.cs" />
+    <Compile Include="src\Command\FileList\Setting\13OptionSettingCommand.cs" />
+    <Compile Include="src\Command\FileList\Setting\14DeleteHistoryCommand.cs" />
+    <Compile Include="src\Command\FileList\Setting\15AssociateSettingCommand.cs" />
+    <Compile Include="src\Command\FileList\Setting\20FileListMenuSettingCommand.cs" />
+    <Compile Include="src\Command\FileList\Setting\30KeyHelpMenuCommand.cs" />
+    <Compile Include="src\Command\FileList\Setting\31KeyBindHelpCommand.cs" />
+    <Compile Include="src\Command\FileList\Setting\40AboutShellFilerCommand.cs" />
+    <Compile Include="src\Command\FileList\Setting\41AboutExternalSoftwareCommand.cs" />
+    <Compile Include="src\Command\FileList\Setting\42MouseHelpCommand.cs" />
+    <Compile Include="src\Command\FileList\Setting\43ShellFilerWebPageCommand.cs" />
+    <Compile Include="src\Command\FileList\Setting\50CommandListHelpCommand.cs" />
+    <Compile Include="src\Command\FileList\Setting\51MenuListHelpCommand.cs" />
+    <Compile Include="src\Command\FileList\Setting\52KeyListHelpCommand.cs" />
+    <Compile Include="src\Command\FileList\SSH\00ChdirSSHFolderCommand.cs" />
+    <Compile Include="src\Command\FileList\SSH\01LogoutAllSSHSession.cs" />
+    <Compile Include="src\Command\FileList\SSH\02CloseCurrentSSHSession.cs" />
+    <Compile Include="src\Command\FileList\SSH\10CreateSSHTerminal.cs" />
+    <Compile Include="src\Command\FileList\SSH\11SelectSSHTerminal.cs" />
+    <Compile Include="src\Command\FileList\SSH\20SSHProcessMonitorCommand.cs" />
+    <Compile Include="src\Command\FileList\SSH\21SSHNetworkMonitorCommand.cs" />
+    <Compile Include="src\Command\FileList\SSH\30SSHChangeUserCommand.cs" />
+    <Compile Include="src\Command\FileList\Tools\01FileViewerCommand.cs" />
+    <Compile Include="src\Command\FileList\Tools\02GraphicsViewerCommand.cs" />
+    <Compile Include="src\Command\FileList\Tools\03SlideShowCommand.cs" />
+    <Compile Include="src\Command\FileList\Tools\04SlideShowMarkResultCommand.cs" />
+    <Compile Include="src\Command\FileList\Tools\20ExecuteMenuCommand.cs" />
+    <Compile Include="src\Command\FileList\Tools\21PopupMenuCommand.cs" />
+    <Compile Include="src\Command\FileList\Tools\24LocalEditCommand.cs" />
+    <Compile Include="src\Command\FileList\Tools\31ShellCommandCommand.cs" />
+    <Compile Include="src\Command\FileList\Tools\32PowerShellCommand.cs" />
+    <Compile Include="src\Command\FileList\Tools\33OpenExplorerFolderCommand.cs" />
+    <Compile Include="src\Command\FileList\Tools\34OpenControlPanelCommand.cs" />
+    <Compile Include="src\Command\FileList\Tools\35OpenRecycleBinCommand.cs" />
+    <Compile Include="src\Command\FileList\Tools\36CleanupRecycleBinCommand.cs" />
+    <Compile Include="src\Command\FileList\Tools\40ClipboardViewerCommand.cs" />
+    <Compile Include="src\Command\FileList\Tools\41ClipboardFilterCommand.cs" />
+    <Compile Include="src\Command\FileList\Tools\42HTTPResponseViewerCommand.cs" />
+    <Compile Include="src\Command\FileList\Tools\50CombineFileCommand.cs" />
+    <Compile Include="src\Command\FileList\Tools\51SplitFileCommand.cs" />
+    <Compile Include="src\Command\FileList\Window\00MoveFileListBorder.cs" />
+    <Compile Include="src\Command\FileList\Window\01SetFileListBorderCommand.cs" />
+    <Compile Include="src\Command\FileList\Window\02ClearLogCommand.cs" />
+    <Compile Include="src\Command\FileList\Window\03ToggleLogSizeCommand.cs" />
+    <Compile Include="src\Command\FileList\Window\04CopyLogCommand.cs" />
+    <Compile Include="src\Command\FileList\Window\05ShowLatestLogLineCommand.cs" />
+    <Compile Include="src\Command\FileList\Window\06SelectAllLogLineCommand.cs" />
+    <Compile Include="src\Command\FileList\Window\07SetFocusStatePanelCommand.cs" />
+    <Compile Include="src\Command\FileList\Window\10TaskManagerCommand.cs" />
+    <Compile Include="src\Command\FileList\Window\11CloseAllViewer.cs" />
+    <Compile Include="src\Command\FileList\Window\12ExitCommand.cs" />
+    <Compile Include="src\Command\FileList\Window\13QuickExit.cs" />
+    <Compile Include="src\Command\FileList\Window\20TabCreateCommand.cs" />
+    <Compile Include="src\Command\FileList\Window\21TabDeleteCommand.cs" />
+    <Compile Include="src\Command\FileList\Window\22TabDeleteOtherCommand.cs" />
+    <Compile Include="src\Command\FileList\Window\23TabDeleteLeftCommand.cs" />
+    <Compile Include="src\Command\FileList\Window\24TabDeleteRightCommand.cs" />
+    <Compile Include="src\Command\FileList\Window\25TabReopenCommand.cs" />
+    <Compile Include="src\Command\FileList\Window\26TabSelectLeftCommand.cs" />
+    <Compile Include="src\Command\FileList\Window\27TabSelectRightCommand.cs" />
+    <Compile Include="src\Command\FileList\Window\28TabSelectDirectCommand.cs" />
+    <Compile Include="src\Command\FileViewer\Cursor\00V_CursorUpCommand.cs" />
+    <Compile Include="src\Command\FileViewer\Cursor\01V_CursorDownCommand.cs" />
+    <Compile Include="src\Command\FileViewer\Cursor\02V_CursorRollupCommand.cs" />
+    <Compile Include="src\Command\FileViewer\Cursor\03V_CursorRolldownCommand.cs" />
+    <Compile Include="src\Command\FileViewer\Cursor\04V_JumpTopLineCommand.cs" />
+    <Compile Include="src\Command\FileViewer\Cursor\05V_JumpBottomLineCommand.cs" />
+    <Compile Include="src\Command\FileViewer\Cursor\06V_JumpDirectCommand.cs" />
+    <Compile Include="src\Command\FileViewer\Edit\00V_CopyTextCommand.cs" />
+    <Compile Include="src\Command\FileViewer\Edit\01V_CopyTextAsCommand.cs" />
+    <Compile Include="src\Command\FileViewer\Edit\02V_SelectAllCommand.cs" />
+    <Compile Include="src\Command\FileViewer\Edit\03V_EditFileCommand.cs" />
+    <Compile Include="src\Command\FileViewer\Edit\10V_SearchCommand.cs" />
+    <Compile Include="src\Command\FileViewer\Edit\11V_SearchForwardNextCommand.cs" />
+    <Compile Include="src\Command\FileViewer\Edit\12V_SearchReverseNextCommand.cs" />
+    <Compile Include="src\Command\FileViewer\Edit\13V_SearchDirectCommand.cs" />
+    <Compile Include="src\Command\FileViewer\Edit\20V_SelectionCompareLeftCommand.cs" />
+    <Compile Include="src\Command\FileViewer\Edit\21V_SelectionCompareRightCommand.cs" />
+    <Compile Include="src\Command\FileViewer\Edit\22V_SelectionCompareDisplayCommand.cs" />
+    <Compile Include="src\Command\FileViewer\Edit\30V_TwoStrokeKey1Command.cs" />
+    <Compile Include="src\Command\FileViewer\Edit\31V_TwoStrokeKey2Command.cs" />
+    <Compile Include="src\Command\FileViewer\Edit\32V_TwoStrokeKey3Command.cs" />
+    <Compile Include="src\Command\FileViewer\Edit\33V_TwoStrokeKey4Command.cs" />
+    <Compile Include="src\Command\FileViewer\FileViewerActionCommand.cs" />
+    <Compile Include="src\Command\FileViewer\MonitoringViewerCommandRuntime.cs" />
+    <Compile Include="src\Command\FileViewer\View\00V_ExitViewCommand.cs" />
+    <Compile Include="src\Command\FileViewer\View\01V_SaveTextAsCommand.cs" />
+    <Compile Include="src\Command\FileViewer\View\02V_ReturnFileListCommand.cs" />
+    <Compile Include="src\Command\FileViewer\View\10V_ChangeTextModeCommand.cs" />
+    <Compile Include="src\Command\FileViewer\View\11V_ChangeDumpModeCommand.cs" />
+    <Compile Include="src\Command\FileViewer\View\12V_ToggleViewModeCommand.cs" />
+    <Compile Include="src\Command\FileViewer\View\20V_FullScreenCommand.cs" />
+    <Compile Include="src\Command\FileViewer\View\21V_FullScreenMultiCommand.cs" />
+    <Compile Include="src\Command\FileViewer\View\30V_SetTabCommand.cs" />
+    <Compile Include="src\Command\FileViewer\View\31V_SetTextEncodingCommand.cs" />
+    <Compile Include="src\Command\FileViewer\View\32V_RotateTextModeCommand.cs" />
+    <Compile Include="src\Command\FileViewer\View\33V_SetLineWidthCommand.cs" />
+    <Compile Include="src\Command\GraphicsViewer\Edit\00G_CopyImageCommand.cs" />
+    <Compile Include="src\Command\GraphicsViewer\Edit\10G_MirrorHorizontalCommand.cs" />
+    <Compile Include="src\Command\GraphicsViewer\Edit\11G_MirrorVerticalCommand.cs" />
+    <Compile Include="src\Command\GraphicsViewer\Edit\12G_RotateCCWCommand.cs" />
+    <Compile Include="src\Command\GraphicsViewer\Edit\13G_RotateCWCommand.cs" />
+    <Compile Include="src\Command\GraphicsViewer\Edit\20G_ClearMarkCommand.cs" />
+    <Compile Include="src\Command\GraphicsViewer\Edit\21G_MarkFile1Command.cs" />
+    <Compile Include="src\Command\GraphicsViewer\Edit\22G_MarkFile2Command.cs" />
+    <Compile Include="src\Command\GraphicsViewer\Edit\23G_MarkFile3Command.cs" />
+    <Compile Include="src\Command\GraphicsViewer\Edit\24G_MarkFile4Command.cs" />
+    <Compile Include="src\Command\GraphicsViewer\Edit\25G_MarkFile5Command.cs" />
+    <Compile Include="src\Command\GraphicsViewer\Edit\26G_MarkFile6Command.cs" />
+    <Compile Include="src\Command\GraphicsViewer\Edit\27G_MarkFile7Command.cs" />
+    <Compile Include="src\Command\GraphicsViewer\Edit\28G_MarkFile8Command.cs" />
+    <Compile Include="src\Command\GraphicsViewer\Edit\29G_MarkFile9Command.cs" />
+    <Compile Include="src\Command\GraphicsViewer\Edit\30G_MarkFileHelpCommand.cs" />
+    <Compile Include="src\Command\GraphicsViewer\Edit\31G_MarkFileListCommand.cs" />
+    <Compile Include="src\Command\GraphicsViewer\Edit\40G_TwoStrokeKey1Command.cs" />
+    <Compile Include="src\Command\GraphicsViewer\Edit\41G_TwoStrokeKey2Command.cs" />
+    <Compile Include="src\Command\GraphicsViewer\Edit\42G_TwoStrokeKey3Command.cs" />
+    <Compile Include="src\Command\GraphicsViewer\Edit\43G_TwoStrokeKey4Command.cs" />
+    <Compile Include="src\Command\GraphicsViewer\File\00G_ExitViewCommand.cs" />
+    <Compile Include="src\Command\GraphicsViewer\File\01G_SaveImageAsCommand.cs" />
+    <Compile Include="src\Command\GraphicsViewer\File\02G_ReturnFileListCommand.cs" />
+    <Compile Include="src\Command\GraphicsViewer\File\10G_SlideShowNextCommand.cs" />
+    <Compile Include="src\Command\GraphicsViewer\File\11G_SlideShowPrevCommand.cs" />
+    <Compile Include="src\Command\GraphicsViewer\File\12G_ExitViewOrSlideNextCommand.cs" />
+    <Compile Include="src\Command\GraphicsViewer\File\13G_ExitViewOrSlidePrevCommand.cs" />
+    <Compile Include="src\Command\GraphicsViewer\Filter\00G_FilterSettingCommand.cs" />
+    <Compile Include="src\Command\GraphicsViewer\Filter\01G_FilterResetCommand.cs" />
+    <Compile Include="src\Command\GraphicsViewer\Filter\02G_FilterOffCommand.cs" />
+    <Compile Include="src\Command\GraphicsViewer\Filter\10G_FilterBrightCommand.cs" />
+    <Compile Include="src\Command\GraphicsViewer\Filter\11G_FilterHsvModifyCommand.cs" />
+    <Compile Include="src\Command\GraphicsViewer\Filter\12G_FilterMonochromeCommand.cs" />
+    <Compile Include="src\Command\GraphicsViewer\Filter\13G_FilterNegativeCommand.cs" />
+    <Compile Include="src\Command\GraphicsViewer\Filter\14G_FilterSepiaCommand.cs" />
+    <Compile Include="src\Command\GraphicsViewer\Filter\15G_FilterBlurCommand.cs" />
+    <Compile Include="src\Command\GraphicsViewer\Filter\16G_FilterSharpCommand.cs" />
+    <Compile Include="src\Command\GraphicsViewer\Filter\17G_FilterReliefCommand.cs" />
+    <Compile Include="src\Command\GraphicsViewer\GraphicsViewerActionCommand.cs" />
+    <Compile Include="src\Command\GraphicsViewer\View\01G_ScrollUpCommand.cs" />
+    <Compile Include="src\Command\GraphicsViewer\View\02G_ScrollDownCommand.cs" />
+    <Compile Include="src\Command\GraphicsViewer\View\03G_ScrollLeftCommand.cs" />
+    <Compile Include="src\Command\GraphicsViewer\View\04G_ScrollRightCommand.cs" />
+    <Compile Include="src\Command\GraphicsViewer\View\10G_ViewCenterCommand.cs" />
+    <Compile Include="src\Command\GraphicsViewer\View\11G_ViewTopCommand.cs" />
+    <Compile Include="src\Command\GraphicsViewer\View\12G_ViewBottomCommand.cs" />
+    <Compile Include="src\Command\GraphicsViewer\View\13G_ViewLeftCommand.cs" />
+    <Compile Include="src\Command\GraphicsViewer\View\14G_ViewRightCommand.cs" />
+    <Compile Include="src\Command\GraphicsViewer\View\20G_ZoomInCommand.cs" />
+    <Compile Include="src\Command\GraphicsViewer\View\21G_ZoomInExCommand.cs" />
+    <Compile Include="src\Command\GraphicsViewer\View\22G_ZoomOutCommand.cs" />
+    <Compile Include="src\Command\GraphicsViewer\View\23G_ZoomOutExCommand.cs" />
+    <Compile Include="src\Command\GraphicsViewer\View\24G_ZoomDirectCommand.cs" />
+    <Compile Include="src\Command\GraphicsViewer\View\30G_ZoomDirect20Command.cs" />
+    <Compile Include="src\Command\GraphicsViewer\View\31G_ZoomDirect50Command.cs" />
+    <Compile Include="src\Command\GraphicsViewer\View\32G_ZoomDirect100Command.cs" />
+    <Compile Include="src\Command\GraphicsViewer\View\33G_ZoomDirect150Command.cs" />
+    <Compile Include="src\Command\GraphicsViewer\View\34G_ZoomDirect200Command.cs" />
+    <Compile Include="src\Command\GraphicsViewer\View\35G_ZoomDirect500Command.cs" />
+    <Compile Include="src\Command\GraphicsViewer\View\36G_FitImageToScreenCommand.cs" />
+    <Compile Include="src\Command\GraphicsViewer\View\37G_FitShortEdgeToScreenCommand.cs" />
+    <Compile Include="src\Command\GraphicsViewer\View\40G_FullScreenCommand.cs" />
+    <Compile Include="src\Command\GraphicsViewer\View\41G_FullScreenMultiCommand.cs" />
+    <Compile Include="src\Command\GraphicsViewer\View\50G_InterpolationHighQualityCommand.cs" />
+    <Compile Include="src\Command\GraphicsViewer\View\51G_InterpolationNeighborCommand.cs" />
+    <Compile Include="src\Command\GraphicsViewer\View\60G_SetBackGroundBlackCommand.cs" />
+    <Compile Include="src\Command\GraphicsViewer\View\61G_SetBackGroundWhiteCommand.cs" />
+    <Compile Include="src\Command\GraphicsViewer\View\62G_ToggleBackGroundColorCommand.cs" />
+    <Compile Include="src\Command\MonikerVersionConverter.cs" />
+    <Compile Include="src\Command\MonitoringViewer\Edit\00M_CopyAsCommand.cs" />
+    <Compile Include="src\Command\MonitoringViewer\Edit\02M_ReturnFileListCommand.cs" />
+    <Compile Include="src\Command\MonitoringViewer\Edit\10M_SearchCommand.cs" />
+    <Compile Include="src\Command\MonitoringViewer\Edit\11M_SearchForwardNextCommand.cs" />
+    <Compile Include="src\Command\MonitoringViewer\Edit\12M_SearchReverseCommand.cs" />
+    <Compile Include="src\Command\MonitoringViewer\Edit\20M_JumpTopLineCommand.cs" />
+    <Compile Include="src\Command\MonitoringViewer\Edit\21M_JumpBottomLineCommand.cs" />
+    <Compile Include="src\Command\MonitoringViewer\Edit\30M_RefreshCommand.cs" />
+    <Compile Include="src\Command\MonitoringViewer\ExecutePs\00M_PsKillCommand.cs" />
+    <Compile Include="src\Command\MonitoringViewer\ExecutePs\01M_PsForceTerminateCommand.cs" />
+    <Compile Include="src\Command\MonitoringViewer\ExecutePs\10M_PsDetailCommand.cs" />
+    <Compile Include="src\Command\MonitoringViewer\File\00M_ExitViewCommand.cs" />
+    <Compile Include="src\Command\MonitoringViewer\File\01M_SaveAsCommand.cs" />
+    <Compile Include="src\Command\MonitoringViewer\MonitoringViewerActionCommand.cs" />
+    <Compile Include="src\Command\Terminal\Console\00T_SendEscapeCommand.cs" />
+    <Compile Include="src\Command\Terminal\Console\10T_SendCursorUpCommand.cs" />
+    <Compile Include="src\Command\Terminal\Console\11T_SendCursorDownCommand.cs" />
+    <Compile Include="src\Command\Terminal\Console\12T_SendCursorLeftCommand.cs" />
+    <Compile Include="src\Command\Terminal\Console\13T_SendCursorRightCommand.cs" />
+    <Compile Include="src\Command\Terminal\Console\20T_SendKeyInsertCommand.cs" />
+    <Compile Include="src\Command\Terminal\Console\21T_SendKeyDeleteCommand.cs" />
+    <Compile Include="src\Command\Terminal\Console\22T_SendKeyHomeCommand.cs" />
+    <Compile Include="src\Command\Terminal\Console\23T_SendKeyEndCommand.cs" />
+    <Compile Include="src\Command\Terminal\Console\24T_SendKeyPageUpCommand.cs" />
+    <Compile Include="src\Command\Terminal\Console\25T_SendKeyPageDownCommand.cs" />
+    <Compile Include="src\Command\Terminal\Console\26T_SendKeyFunctionCommand.cs" />
+    <Compile Include="src\Command\Terminal\Edit\00T_CopyClipboardCommand.cs" />
+    <Compile Include="src\Command\Terminal\Edit\01T_PasteClipboardCommand.cs" />
+    <Compile Include="src\Command\Terminal\Edit\02T_SelectAllCommand.cs" />
+    <Compile Include="src\Command\Terminal\File\00T_ExitTerminalCommand.cs" />
+    <Compile Include="src\Command\Terminal\File\01T_SaveAsCommand.cs" />
+    <Compile Include="src\Command\Terminal\File\02T_ReturnFileListCommand.cs" />
+    <Compile Include="src\Command\Terminal\File\03T_NewTerminalCommand.cs" />
+    <Compile Include="src\Command\Terminal\File\04T_EditDisplayNameCommand.cs" />
+    <Compile Include="src\Command\Terminal\TerminalActionCommand.cs" />
+    <Compile Include="src\Command\Terminal\TerminalCommandRuntime.cs" />
+    <Compile Include="src\Command\Terminal\View\00T_ScrollUpCommand.cs" />
+    <Compile Include="src\Command\Terminal\View\01T_ScrollDownCommand.cs" />
+    <Compile Include="src\Command\Terminal\View\02T_ScrollRollUpCommand.cs" />
+    <Compile Include="src\Command\Terminal\View\03T_ScrollRollDownCommand.cs" />
+    <Compile Include="src\Command\Terminal\View\10T_ScrollUpCurrentCommand.cs" />
+    <Compile Include="src\Command\Terminal\View\11T_ScrollDownCurrentCommand.cs" />
+    <Compile Include="src\Command\Terminal\View\12T_ScrollRollUpCurrentCommand.cs" />
+    <Compile Include="src\Command\Terminal\View\13T_ScrollRollDownCommand.cs" />
+    <Compile Include="src\Command\Terminal\View\20T_ToggleBackLogViewCommand.cs" />
+    <Compile Include="src\Command\Terminal\View\21T_ClearBackLogCommand.cs" />
+    <Compile Include="src\Document\CommandFactory.cs" />
+    <Compile Include="src\Document\Configuration.cs" />
+    <Compile Include="src\Document\DirectoryManager.cs" />
+    <Compile Include="src\Document\DummyFileListContext.cs" />
+    <Compile Include="src\Document\FileIcon.cs" />
+    <Compile Include="src\Document\FileIconID.cs" />
+    <Compile Include="src\Document\FileIconManager.cs" />
+    <Compile Include="src\Document\FileIconPool.cs" />
+    <Compile Include="src\Document\OSSpec\IOSSpecTokenParser.cs" />
+    <Compile Include="src\Document\OSSpec\OSSpecColumnExpect.cs" />
+    <Compile Include="src\Document\OSSpec\OSSpecCommandGroup.cs" />
+    <Compile Include="src\Document\OSSpec\OSSpecLineExpect.cs" />
+    <Compile Include="src\Document\OSSpec\OSSpecLineType.cs" />
+    <Compile Include="src\Document\OSSpec\OSSpecSetting.cs" />
+    <Compile Include="src\Document\OSSpec\OSSpecTokenType.cs" />
+    <Compile Include="src\Document\OSSpec\ShellCommandDictionary.cs" />
+    <Compile Include="src\Document\OSSpec\ShellUploadEncoding.cs" />
+    <Compile Include="src\Document\RetrieveFolderSizeCondition.cs" />
+    <Compile Include="src\Document\RetrieveFolderSizeResult.cs" />
+    <Compile Include="src\Document\Setting\AddressBarSetting.cs" />
+    <Compile Include="src\Document\Setting\AddressBarSettingItem.cs" />
+    <Compile Include="src\Document\Setting\AddressBarSettingRuntimeItem.cs" />
+    <Compile Include="src\Document\Setting\ArchiveAutoPasswordItem.cs" />
+    <Compile Include="src\Document\Setting\ArchiveAutoPasswordSetting.cs" />
+    <Compile Include="src\Document\Setting\ArchiveSetting.cs" />
+    <Compile Include="src\Document\Setting\AssociateKeySetting.cs" />
+    <Compile Include="src\Document\Setting\AssociateSetting.cs" />
+    <Compile Include="src\Document\Setting\AttributeSetMode.cs" />
+    <Compile Include="src\Document\Setting\BookmarkGroup.cs" />
+    <Compile Include="src\Document\Setting\BookmarkItem.cs" />
+    <Compile Include="src\Document\Setting\BookmarkSetting.cs" />
+    <Compile Include="src\Document\Setting\CommandHistory.cs" />
+    <Compile Include="src\Document\Setting\CommandHistoryItem.cs" />
+    <Compile Include="src\Document\Setting\CommandNameDictionary.cs" />
+    <Compile Include="src\Document\Setting\CommandNameDictionaryItem.cs" />
+    <Compile Include="src\Document\Setting\DeleteFileOption.cs" />
+    <Compile Include="src\Document\Setting\DumpClipboardSetting.cs" />
+    <Compile Include="src\Document\Setting\FileCompareSetting.cs" />
+    <Compile Include="src\Document\Setting\FileFilterClipboardSetting.cs" />
+    <Compile Include="src\Document\Setting\FileFilterDefinedMode.cs" />
+    <Compile Include="src\Document\Setting\FileFilterItem.cs" />
+    <Compile Include="src\Document\Setting\FileFilterListClipboard.cs" />
+    <Compile Include="src\Document\Setting\FileFilterListTransfer.cs" />
+    <Compile Include="src\Document\Setting\FileFilterListTransferOtherMode.cs" />
+    <Compile Include="src\Document\Setting\FileFilterMode.cs" />
+    <Compile Include="src\Document\Setting\FileFilterSetting.cs" />
+    <Compile Include="src\Document\Setting\FileFilterTransferDefinedSetting.cs" />
+    <Compile Include="src\Document\Setting\FileFilterTransferQuickSetting.cs" />
+    <Compile Include="src\Document\Setting\FileFilterTransferSetting.cs" />
+    <Compile Include="src\Document\Setting\FileListFilterMode.cs" />
+    <Compile Include="src\Document\Setting\FileListSortMode.cs" />
+    <Compile Include="src\Document\Setting\FileListViewIconSize.cs" />
+    <Compile Include="src\Document\Setting\FileListViewMode.cs" />
+    <Compile Include="src\Document\Setting\FileListViewModeAutoSetting.cs" />
+    <Compile Include="src\Document\Setting\FileListViewThumbnailName.cs" />
+    <Compile Include="src\Document\Setting\FolderHistoryWhole.cs" />
+    <Compile Include="src\Document\Setting\GraphicsViewerFilterItem.cs" />
+    <Compile Include="src\Document\Setting\GraphicsViewerFilterSetting.cs" />
+    <Compile Include="src\Document\Setting\InitialSetting.cs" />
+    <Compile Include="src\Document\Setting\KeyItemSetting.cs" />
+    <Compile Include="src\Document\Setting\KeyItemSettingList.cs" />
+    <Compile Include="src\Document\Setting\KeySetting.cs" />
+    <Compile Include="src\Document\Setting\KeySettingMergeDiff.cs" />
+    <Compile Include="src\Document\Setting\KeyState.cs" />
+    <Compile Include="src\Document\Setting\MarkConditionsDialogInfo.cs" />
+    <Compile Include="src\Document\Setting\MenuItemCustomRoot.cs" />
+    <Compile Include="src\Document\Setting\MenuItemCustomSetting.cs" />
+    <Compile Include="src\Document\Setting\MenuItemSetting.cs" />
+    <Compile Include="src\Document\Setting\MenuSetting.cs" />
+    <Compile Include="src\Document\Setting\MirrorCopyOption.cs" />
+    <Compile Include="src\Document\Setting\MonitoringViewerMenuItemSetting.cs" />
+    <Compile Include="src\Document\Setting\MonitoringViewerToolbarItemSetting.cs" />
+    <Compile Include="src\Document\Setting\PathHistory.cs" />
+    <Compile Include="src\Document\Setting\PathHistoryItem.cs" />
+    <Compile Include="src\Document\Setting\SameFileOption.cs" />
+    <Compile Include="src\Document\Setting\SettingFileVersion.cs" />
+    <Compile Include="src\Document\Setting\SettingLoader.cs" />
+    <Compile Include="src\Document\Setting\SettingSaver.cs" />
+    <Compile Include="src\Document\Setting\SettingSaverBasic.cs" />
+    <Compile Include="src\Document\Setting\SettingTag.cs" />
+    <Compile Include="src\Document\Setting\SettingTagType.cs" />
+    <Compile Include="src\Document\Setting\SettingWarningList.cs" />
+    <Compile Include="src\Document\Setting\SSHUserAuthenticateSetting.cs" />
+    <Compile Include="src\Document\Setting\SSHUserAuthenticateSettingItem.cs" />
+    <Compile Include="src\Document\Setting\TextClipboardSetting.cs" />
+    <Compile Include="src\Document\Setting\TextSearchOption.cs" />
+    <Compile Include="src\Document\Setting\TextViewerLineBreakSetting.cs" />
+    <Compile Include="src\Document\Setting\ToolbarItemSetting.cs" />
+    <Compile Include="src\Document\Setting\ToolbarSetting.cs" />
+    <Compile Include="src\Document\Setting\UserGeneralSetting.cs" />
+    <Compile Include="src\Document\Setting\UserSetting.cs" />
+    <Compile Include="src\Document\Setting\ViewerSearchHistory.cs" />
+    <Compile Include="src\Document\SfDocument.cs" />
+    <Compile Include="src\Document\SfHelperDecoder.cs" />
+    <Compile Include="src\Document\SimpleFileDirectoryPath.cs" />
+    <Compile Include="src\Document\SSH\CksumCRC32.cs" />
+    <Compile Include="src\Document\SSH\SSHConnection.cs" />
+    <Compile Include="src\Document\SSH\SSHConnectionManager.cs" />
+    <Compile Include="src\Document\SSH\SSHUtils.cs" />
+    <Compile Include="src\Document\SSH\UIConnectionPoolInfo.cs" />
+    <Compile Include="src\Document\TabPageInfo.cs" />
+    <Compile Include="src\Document\TabPageList.cs" />
+    <Compile Include="src\Document\TwoStrokeKeyState.cs" />
+    <Compile Include="src\Document\UIFile.cs" />
+    <Compile Include="src\Document\UIFileList.cs" />
+    <Compile Include="src\Document\UIFileListWatcher.cs" />
+    <Compile Include="src\Document\UIFileSorter.cs" />
+    <Compile Include="src\Document\UIFileWithIndex.cs" />
+    <Compile Include="src\Document\UIMarkFileSorter.cs" />
+    <Compile Include="src\Document\UIResource.cs" />
+    <Compile Include="src\Document\UserLicenseInfo.cs" />
+    <Compile Include="src\FileSystem\AbstractProcedure.cs" />
+    <Compile Include="src\FileSystem\AbstractProcedureArg.cs" />
+    <Compile Include="src\FileSystem\Dummy\DummyFileSystem.cs" />
+    <Compile Include="src\FileSystem\FileSystemFactory.cs" />
+    <Compile Include="src\FileSystem\GenericFileStringUtils.cs" />
+    <Compile Include="src\FileSystem\SFTP\AbstractSFTPBackgroundProcedure.cs" />
+    <Compile Include="src\FileSystem\SFTP\ChannelCommandExec.cs" />
+    <Compile Include="src\FileSystem\SFTP\ChannelLsHelper.cs" />
+    <Compile Include="src\FileSystem\SFTP\ChannelProgress.cs" />
+    <Compile Include="src\FileSystem\SFTP\ConnectionPool.cs" />
+    <Compile Include="src\FileSystem\SFTP\CreateShortcutProcedure.cs" />
+    <Compile Include="src\FileSystem\SFTP\InitializeTerminalArg.cs" />
+    <Compile Include="src\FileSystem\SFTP\InitializeTerminalProcedure.cs" />
+    <Compile Include="src\FileSystem\SFTP\NopArg.cs" />
+    <Compile Include="src\FileSystem\SFTP\SFTPCombineFileProcedure.cs" />
+    <Compile Include="src\FileSystem\SFTP\SFTPCreateDirectoryProcedure.cs" />
+    <Compile Include="src\FileSystem\SFTP\SFTPDeleteFileProcedure.cs" />
+    <Compile Include="src\FileSystem\SFTP\SFTPDownloadFileProcedure.cs" />
+    <Compile Include="src\FileSystem\SFTP\SFTPFile.cs" />
+    <Compile Include="src\FileSystem\SFTP\SFTPFileList.cs" />
+    <Compile Include="src\FileSystem\SFTP\SFTPFileListContext.cs" />
+    <Compile Include="src\FileSystem\SFTP\SFTPFileSystem.cs" />
+    <Compile Include="src\FileSystem\SFTP\SFTPGetFileInfoProcedure.cs" />
+    <Compile Include="src\FileSystem\SFTP\SFTPGetFileListProcedure.cs" />
+    <Compile Include="src\FileSystem\SFTP\SFTPGetUIFileListArg.cs" />
+    <Compile Include="src\FileSystem\SFTP\SFTPGetUIFileListProcedure.cs" />
+    <Compile Include="src\FileSystem\SFTP\SFTPGetVolumeInfoProcedure.cs" />
+    <Compile Include="src\FileSystem\SFTP\SFTPProcedure.cs" />
+    <Compile Include="src\FileSystem\SFTP\SFTPProcedureControler.cs" />
+    <Compile Include="src\FileSystem\SFTP\SFTPProcedureDualControler.cs" />
+    <Compile Include="src\FileSystem\SFTP\SFTPRemoteFileTransferProcedure.cs" />
+    <Compile Include="src\FileSystem\SFTP\SFTPRenameProcedure.cs" />
+    <Compile Include="src\FileSystem\SFTP\SFTPRequestContext.cs" />
+    <Compile Include="src\FileSystem\SFTP\SFTPRetrieveFileChunkProcedure.cs" />
+    <Compile Include="src\FileSystem\SFTP\SFTPRetrieveFolderSizeProcedure.cs" />
+    <Compile Include="src\FileSystem\SFTP\SFTPRetrieveImageProcedure.cs" />
+    <Compile Include="src\FileSystem\SFTP\SFTPSetFileInfoProcedure.cs" />
+    <Compile Include="src\FileSystem\SFTP\SFTPShellExecuteProcedure.cs" />
+    <Compile Include="src\FileSystem\SFTP\SFTPSplitFileProcedure.cs" />
+    <Compile Include="src\FileSystem\SFTP\SFTPSymbolicLinkResolver.cs" />
+    <Compile Include="src\FileSystem\SFTP\SFTPTransferUploadProcedure.cs" />
+    <Compile Include="src\FileSystem\SFTP\SSHModifyFileInfoProcedure.cs" />
+    <Compile Include="src\FileSystem\Shell\AbstractShellBackgroundProcedure.cs" />
+    <Compile Include="src\FileSystem\Shell\RetrieveImageProcedure.cs" />
+    <Compile Include="src\FileSystem\Shell\ShellCombineFileProcedure.cs" />
+    <Compile Include="src\FileSystem\Shell\ShellCreateDirectoryProcedure.cs" />
+    <Compile Include="src\FileSystem\Shell\ShellDeleteProcedure.cs" />
+    <Compile Include="src\FileSystem\Shell\ShellFile.cs" />
+    <Compile Include="src\FileSystem\Shell\ShellFileList.cs" />
+    <Compile Include="src\FileSystem\Shell\ShellFileListContext.cs" />
+    <Compile Include="src\FileSystem\Shell\ShellFileSystem.cs" />
+    <Compile Include="src\FileSystem\Shell\ShellGetFileInfoProcedure.cs" />
+    <Compile Include="src\FileSystem\Shell\ShellGetFileListProcedure.cs" />
+    <Compile Include="src\FileSystem\Shell\ShellGetUIFileListArg.cs" />
+    <Compile Include="src\FileSystem\Shell\ShellGetUIFileListProcedure.cs" />
+    <Compile Include="src\FileSystem\Shell\ShellModifyFileInfoProcedure.cs" />
+    <Compile Include="src\FileSystem\Shell\ShellProcedure.cs" />
+    <Compile Include="src\FileSystem\Shell\ShellProcedureControler.cs" />
+    <Compile Include="src\FileSystem\Shell\ShellRemoteFileTransferProcedure.cs" />
+    <Compile Include="src\FileSystem\Shell\ShellRenameProcedure.cs" />
+    <Compile Include="src\FileSystem\Shell\ShellRequestContext.cs" />
+    <Compile Include="src\FileSystem\Shell\ShellRetrieveFileChunkProcedure.cs" />
+    <Compile Include="src\FileSystem\Shell\ShellRetrieveFolderSizeProcedure.cs" />
+    <Compile Include="src\FileSystem\Shell\ShellRetrieveImageProcedure.cs" />
+    <Compile Include="src\FileSystem\Shell\ShellSetFileInfoProcedure.cs" />
+    <Compile Include="src\FileSystem\Shell\ShellShellExecuteProcedure.cs" />
+    <Compile Include="src\FileSystem\Shell\ShellSplitFileProcedure.cs" />
+    <Compile Include="src\FileSystem\Shell\ShellSymbolicLinkResolver.cs" />
+    <Compile Include="src\FileSystem\Shell\ShellTransferDownloadProcedure.cs" />
+    <Compile Include="src\FileSystem\Shell\ShellTransferUploadProcedure.cs" />
+    <Compile Include="src\FileSystem\Shell\ShellUtils.cs" />
+    <Compile Include="src\FileSystem\SimpleFile.cs" />
+    <Compile Include="src\FileSystem\Transfer\DownloadUploadFileSystem.cs" />
+    <Compile Include="src\FileSystem\Transfer\DummyTransferSystem.cs" />
+    <Compile Include="src\FileSystem\Transfer\SFTPToSFTPFileSystem.cs" />
+    <Compile Include="src\FileSystem\Transfer\ShellToShellFileSystem.cs" />
+    <Compile Include="src\FileSystem\Transfer\WindowsToWindowsFileSystem.cs" />
+    <Compile Include="src\FileSystem\UIRequestBackgroundThread.cs" />
+    <Compile Include="src\FileSystem\Virtual\GetVirtualUIFileListArg.cs" />
+    <Compile Include="src\FileSystem\Virtual\GetVirtualUIFileListProcedure.cs" />
+    <Compile Include="src\FileSystem\Virtual\SubPathExistFlag.cs" />
+    <Compile Include="src\FileSystem\Virtual\UniqueVirtualFileArray.cs" />
+    <Compile Include="src\FileSystem\Virtual\VirtualExtractFileProcedure.cs" />
+    <Compile Include="src\FileSystem\Virtual\VirtualFile.cs" />
+    <Compile Include="src\FileSystem\Virtual\VirtualFileList.cs" />
+    <Compile Include="src\FileSystem\Virtual\VirtualFileListContext.cs" />
+    <Compile Include="src\FileSystem\Virtual\VirtualFileSystem.cs" />
+    <Compile Include="src\FileSystem\Virtual\VirtualFolderArchiveInfo.cs" />
+    <Compile Include="src\FileSystem\Virtual\VirtualFolderInfo.cs" />
+    <Compile Include="src\FileSystem\Virtual\VirtualGetFileInfoProcedure.cs" />
+    <Compile Include="src\FileSystem\Virtual\VirtualGetFileListProcedureProcedure.cs" />
+    <Compile Include="src\FileSystem\Virtual\VirtualProcedureUtils.cs" />
+    <Compile Include="src\FileSystem\Virtual\VirtualRequestContext.cs" />
+    <Compile Include="src\FileSystem\Virtual\VirtualRetrieveFileChunkProcedure.cs" />
+    <Compile Include="src\FileSystem\Virtual\VirtualRetrieveImageProcedure.cs" />
+    <Compile Include="src\FileSystem\Windows\CombineFileProcedure.cs" />
+    <Compile Include="src\FileSystem\Windows\DriveTypeUtil.cs" />
+    <Compile Include="src\FileSystem\Windows\FilterCopyProcedure.cs" />
+    <Compile Include="src\FileSystem\Windows\ModifyFileInfoProcedure.cs" />
+    <Compile Include="src\FileSystem\Windows\RenameProcedure.cs" />
+    <Compile Include="src\FileSystem\Windows\RetrieveFolderSizeProcedure.cs" />
+    <Compile Include="src\FileSystem\Windows\SplitFileProcedure.cs" />
+    <Compile Include="src\FileSystem\Windows\WindowsFile.cs" />
+    <Compile Include="src\FileSystem\Windows\WindowsFileFolderSelectUtils.cs" />
+    <Compile Include="src\FileSystem\Windows\WindowsFileList.cs" />
+    <Compile Include="src\FileSystem\Windows\WindowsFileListContext.cs" />
+    <Compile Include="src\FileSystem\Windows\WindowsFileSystem.cs" />
+    <Compile Include="src\FileSystem\Windows\WindowsFileUtils.cs" />
+    <Compile Include="src\FileSystem\Windows\WindowsRetrieveFileChunkProcedure.cs" />
+    <Compile Include="src\FileSystem\Windows\WindowsRetrieveImageProcedure.cs" />
+    <Compile Include="src\FileSystem\Windows\WindowsShellExecuteProcedure.cs" />
+    <Compile Include="src\FileTask\AbstractFileBackgroundTask.cs" />
+    <Compile Include="src\FileTask\ArgumentConverter\ArgumentElement.cs" />
+    <Compile Include="src\FileTask\ArgumentConverter\ArgumentElementDecorator.cs" />
+    <Compile Include="src\FileTask\ArgumentConverter\ArgumentElementType.cs" />
+    <Compile Include="src\FileTask\ArgumentConverter\LocalExecuteUseFile.cs" />
+    <Compile Include="src\FileTask\ArgumentConverter\ParseError.cs" />
+    <Compile Include="src\FileTask\ArgumentConverter\ShellCommandArgument.cs" />
+    <Compile Include="src\FileTask\BackgroundTaskCommandUtil.cs" />
+    <Compile Include="src\FileTask\BackgroundWaitCallback.cs" />
+    <Compile Include="src\FileTask\BridgeLogOutStream.cs" />
+    <Compile Include="src\FileTask\CombineFileBackgroundTask.cs" />
+    <Compile Include="src\FileTask\Condition\CompareCondition.cs" />
+    <Compile Include="src\FileTask\Condition\ConditionToString.cs" />
+    <Compile Include="src\FileTask\Condition\DateTimeCondition.cs" />
+    <Compile Include="src\FileTask\Condition\DateTimeType.cs" />
+    <Compile Include="src\FileTask\Condition\FileConditionDialogInfo.cs" />
+    <Compile Include="src\FileTask\Condition\FileConditionItem.cs" />
+    <Compile Include="src\FileTask\Condition\FileConditionItemDefined.cs" />
+    <Compile Include="src\FileTask\Condition\FileConditionItemSSH.cs" />
+    <Compile Include="src\FileTask\Condition\FileConditionItemWindows.cs" />
+    <Compile Include="src\FileTask\Condition\FileConditionSetting.cs" />
+    <Compile Include="src\FileTask\Condition\FileConditionTarget.cs" />
+    <Compile Include="src\FileTask\Condition\FileNameType.cs" />
+    <Compile Include="src\FileTask\Condition\FileSizeCondition.cs" />
+    <Compile Include="src\FileTask\Condition\FileSizeType.cs" />
+    <Compile Include="src\FileTask\Condition\TargetConditionComparetor.cs" />
+    <Compile Include="src\FileTask\Condition\WildCardConverter.cs" />
+    <Compile Include="src\FileTask\ConsoleResultLineSplitter.cs" />
+    <Compile Include="src\FileTask\CopyBackgroundTask.cs" />
+    <Compile Include="src\FileTask\CopyMoveDeleteOption.cs" />
+    <Compile Include="src\FileTask\CreateShortcutBackgroundTask.cs" />
+    <Compile Include="src\FileTask\DataObject\AccessibleFile.cs" />
+    <Compile Include="src\FileTask\DataObject\AccessibleFileStatusChangedEventArgs.cs" />
+    <Compile Include="src\FileTask\DataObject\AccessibleFileStatusChangedEventHandler.cs" />
+    <Compile Include="src\FileTask\DataObject\ClipboardDataSource.cs" />
+    <Compile Include="src\FileTask\DataObject\DuplicateFileInfo.cs" />
+    <Compile Include="src\FileTask\DataObject\IFileViewerDataSource.cs" />
+    <Compile Include="src\FileTask\DataObject\IRetrieveFileDataTarget.cs" />
+    <Compile Include="src\FileTask\DataObject\ModifyFileInfoContext.cs" />
+    <Compile Include="src\FileTask\DataObject\RenameFileInfo.cs" />
+    <Compile Include="src\FileTask\DataObject\RenameNumberingInfo.cs" />
+    <Compile Include="src\FileTask\DataObject\RenameSelectedFileInfo.cs" />
+    <Compile Include="src\FileTask\DataObject\RetrieveDataLoadStatus.cs" />
+    <Compile Include="src\FileTask\DataObject\SplitFileInfo.cs" />
+    <Compile Include="src\FileTask\DataObject\VolumeInfo.cs" />
+    <Compile Include="src\FileTask\DeleteBackgroundTask.cs" />
+    <Compile Include="src\FileTask\DuplicateFileBackgroundTask.cs" />
+    <Compile Include="src\FileTask\FileBackgroundTaskUtil.cs" />
+    <Compile Include="src\FileTask\FileErrorInfo.cs" />
+    <Compile Include="src\FileTask\FileErrorInfoItem.cs" />
+    <Compile Include="src\FileTask\FileErrorRetryInfo.cs" />
+    <Compile Include="src\FileTask\FileFilter\FileFilterBase64Decode.cs" />
+    <Compile Include="src\FileTask\FileFilter\FileFilterBase64Encode.cs" />
+    <Compile Include="src\FileTask\FileFilter\FileFilterCharsetConvert.cs" />
+    <Compile Include="src\FileTask\FileFilter\FileFilterConvertCrLf.cs" />
+    <Compile Include="src\FileTask\FileFilter\FileFilterConvertTabSpace.cs" />
+    <Compile Include="src\FileTask\FileFilter\FileFilterCustom.cs" />
+    <Compile Include="src\FileTask\FileFilter\FileFilterDeleteMultiCrLf.cs" />
+    <Compile Include="src\FileTask\FileFilter\FileFilterHttpHeaderBody.cs" />
+    <Compile Include="src\FileTask\FileFilter\FileFilterLogic.cs" />
+    <Compile Include="src\FileTask\FileFilter\FileFilterManager.cs" />
+    <Compile Include="src\FileTask\FileFilter\FileFilterShellFilerDump.cs" />
+    <Compile Include="src\FileTask\FileFilter\FileFilterTrimLastSpace.cs" />
+    <Compile Include="src\FileTask\FileFilter\IFileFilterComponent.cs" />
+    <Compile Include="src\FileTask\FileFilter\SettingUIItem.cs" />
+    <Compile Include="src\FileTask\FileOperationApiType.cs" />
+    <Compile Include="src\FileTask\GetFileInfoThread.cs" />
+    <Compile Include="src\FileTask\GitAddBackgroundTask .cs" />
+    <Compile Include="src\FileTask\GitMoveBackgroundTask.cs" />
+    <Compile Include="src\FileTask\GraphicsViewerBackgroundTask.cs" />
+    <Compile Include="src\FileTask\HttpResponseViewerBackgroundTask.cs" />
+    <Compile Include="src\FileTask\IBackgroundTask.cs" />
+    <Compile Include="src\FileTask\IBackgroundWaitNotify.cs" />
+    <Compile Include="src\FileTask\IRetryInfo.cs" />
+    <Compile Include="src\FileTask\LocalArchiveBackgroundTask.cs" />
+    <Compile Include="src\FileTask\LocalDownloadControler.cs" />
+    <Compile Include="src\FileTask\LocalExecuteBackgroundTask.cs" />
+    <Compile Include="src\FileTask\LocalUploadBackgroundTask.cs" />
+    <Compile Include="src\FileTask\LocalUploadControler.cs" />
+    <Compile Include="src\FileTask\MakeDirectoryBackgroundTask.cs" />
+    <Compile Include="src\FileTask\Management\BackgroundTaskManager.cs" />
+    <Compile Include="src\FileTask\Management\BackgroundTaskPathInfo.cs" />
+    <Compile Include="src\FileTask\Management\BackgroundTaskRunningType.cs" />
+    <Compile Include="src\FileTask\Management\BackgroundTaskType.cs" />
+    <Compile Include="src\FileTask\Management\FileTaskDisplayInfo.cs" />
+    <Compile Include="src\FileTask\Management\GraphicsViewerTaskManager.cs" />
+    <Compile Include="src\FileTask\Management\SuspendFlag.cs" />
+    <Compile Include="src\FileTask\MirrorCopyBackgroundTask.cs" />
+    <Compile Include="src\FileTask\MoveBackgroundTask.cs" />
+    <Compile Include="src\FileTask\Provider\FileProviderDestDummy.cs" />
+    <Compile Include="src\FileTask\Provider\FileProviderDestMarked.cs" />
+    <Compile Include="src\FileTask\Provider\FileProviderDestSimple.cs" />
+    <Compile Include="src\FileTask\Provider\FileProviderSrcDummy.cs" />
+    <Compile Include="src\FileTask\Provider\FileProviderSrcMarked.cs" />
+    <Compile Include="src\FileTask\Provider\FileProviderSrcSpecified.cs" />
+    <Compile Include="src\FileTask\Provider\FileProviderSrcWindowsAll.cs" />
+    <Compile Include="src\FileTask\Provider\IFileProviderDest.cs" />
+    <Compile Include="src\FileTask\Provider\IFileProviderDestFiles.cs" />
+    <Compile Include="src\FileTask\Provider\IFileProviderSrc.cs" />
+    <Compile Include="src\FileTask\RefreshUITarget.cs" />
+    <Compile Include="src\FileTask\GitRenameBackgroundTask.cs" />
+    <Compile Include="src\FileTask\RenameBackgroundTask.cs" />
+    <Compile Include="src\FileTask\RenameSelectedFileInfoBackgroundTask.cs" />
+    <Compile Include="src\FileTask\RetrieveFileBackgroundTask.cs" />
+    <Compile Include="src\FileTask\RetrieveFileDataTargetDirect.cs" />
+    <Compile Include="src\FileTask\RetrieveFileDataTargetShellExecute.cs" />
+    <Compile Include="src\FileTask\RetrieveFileDataTargetShellExecuteDummy.cs" />
+    <Compile Include="src\FileTask\RetrieveFolderSizeBackgroundTask.cs" />
+    <Compile Include="src\FileTask\RetryInfoSrcDest.cs" />
+    <Compile Include="src\FileTask\SameFileOperation.cs" />
+    <Compile Include="src\FileTask\SameNameFileTransfer.cs" />
+    <Compile Include="src\FileTask\SameNameTargetFileDetail.cs" />
+    <Compile Include="src\FileTask\ShellExecuteBackgroundTask.cs" />
+    <Compile Include="src\FileTask\SplitFileBackgroundTask.cs" />
+    <Compile Include="src\FileViewer\AbstractBridgeStream.cs" />
+    <Compile Include="src\FileViewer\BridgeStdErrStream.cs" />
+    <Compile Include="src\FileViewer\BridgeStdOutStream.cs" />
+    <Compile Include="src\FileViewer\DumpClipboardFormatter.cs" />
+    <Compile Include="src\FileViewer\DumpHexFormatter.cs" />
+    <Compile Include="src\FileViewer\DumpSearchCondition.cs" />
+    <Compile Include="src\FileViewer\DumpSearchCore.cs" />
+    <Compile Include="src\FileViewer\DumpSearchHitPosition.cs" />
+    <Compile Include="src\FileViewer\DumpSearchHitStateList.cs" />
+    <Compile Include="src\FileViewer\DumpSearchThread.cs" />
+    <Compile Include="src\FileViewer\DumpUtils.cs" />
+    <Compile Include="src\FileViewer\DumpViewerComponent.cs" />
+    <Compile Include="src\FileViewer\DumpViewerSelectionRange.cs" />
+    <Compile Include="src\FileViewer\FileViewerForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\FileViewer\FileViewerForm.designer.cs">
+      <DependentUpon>FileViewerForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\FileViewer\FileViewerMenuStrip.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="src\FileViewer\FileViewerMenuStrip.Designer.cs">
+      <DependentUpon>FileViewerMenuStrip.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\FileViewer\FileViewerSelectionCompareBuffer.cs" />
+    <Compile Include="src\FileViewer\FileViewerStatusBar.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="src\FileViewer\FileViewerStatusBar.Designer.cs">
+      <DependentUpon>FileViewerStatusBar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\FileViewer\FileViewerToolbarStrip.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="src\FileViewer\FileViewerToolbarStrip.Designer.cs">
+      <DependentUpon>FileViewerToolbarStrip.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\FileViewer\HitDiffPoint.cs" />
+    <Compile Include="src\FileViewer\HTTPResponseViewer\HTTPHeaderItem.cs" />
+    <Compile Include="src\FileViewer\HTTPResponseViewer\ResponseViewerHttpRequest.cs" />
+    <Compile Include="src\FileViewer\HTTPResponseViewer\ResponseViewerMode.cs" />
+    <Compile Include="src\FileViewer\HTTPResponseViewer\ResponseViewerRequest.cs" />
+    <Compile Include="src\FileViewer\HTTPResponseViewer\ResponseViewerRequestSetting.cs" />
+    <Compile Include="src\FileViewer\HTTPResponseViewer\ResponseViewerTcpRequest.cs" />
+    <Compile Include="src\FileViewer\IViewerComponent.cs" />
+    <Compile Include="src\FileViewer\LineBreakChar.cs" />
+    <Compile Include="src\FileViewer\RadarBar.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="src\FileViewer\RadarBar.Designer.cs">
+      <DependentUpon>RadarBar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\FileViewer\RadarBarGraphics.cs" />
+    <Compile Include="src\FileViewer\SearchHitState.cs" />
+    <Compile Include="src\FileViewer\TextBufferLineInfoList.cs" />
+    <Compile Include="src\FileViewer\TextBufferLogicalLineInfo.cs" />
+    <Compile Include="src\FileViewer\TextFileViewer.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="src\FileViewer\TextFileViewer.Designer.cs">
+      <DependentUpon>TextFileViewer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\FileViewer\TextSearchCondition.cs" />
+    <Compile Include="src\FileViewer\TextSearchCore.cs" />
+    <Compile Include="src\FileViewer\TextSearchEngine.cs" />
+    <Compile Include="src\FileViewer\TextSearchMode.cs" />
+    <Compile Include="src\FileViewer\TextSearchThread.cs" />
+    <Compile Include="src\FileViewer\TextSelectionInfoCache.cs" />
+    <Compile Include="src\FileViewer\TextViewerComponent.cs" />
+    <Compile Include="src\FileViewer\TextViewerGraphics.cs" />
+    <Compile Include="src\FileViewer\TextViewerSelectionRange.cs" />
+    <Compile Include="src\FileViewer\ViewerScrollImpl.cs" />
+    <Compile Include="src\GraphicsViewer\AutoZoomMode.cs" />
+    <Compile Include="src\GraphicsViewer\DraggingMouseAccelaration.cs" />
+    <Compile Include="src\GraphicsViewer\DraggingMousePosition.cs" />
+    <Compile Include="src\GraphicsViewer\DragInertiaType.cs" />
+    <Compile Include="src\GraphicsViewer\Filter\ComponentBlur.cs" />
+    <Compile Include="src\GraphicsViewer\Filter\ComponentBright.cs" />
+    <Compile Include="src\GraphicsViewer\Filter\ComponentHsvModify.cs" />
+    <Compile Include="src\GraphicsViewer\Filter\ComponentMonochrome.cs" />
+    <Compile Include="src\GraphicsViewer\Filter\ComponentNegative.cs" />
+    <Compile Include="src\GraphicsViewer\Filter\ComponentRelief.cs" />
+    <Compile Include="src\GraphicsViewer\Filter\ComponentSepia.cs" />
+    <Compile Include="src\GraphicsViewer\Filter\ComponentSharp.cs" />
+    <Compile Include="src\GraphicsViewer\Filter\FilterMetaInfo.cs" />
+    <Compile Include="src\GraphicsViewer\Filter\FilterThread.cs" />
+    <Compile Include="src\GraphicsViewer\Filter\IFilterComponent.cs" />
+    <Compile Include="src\GraphicsViewer\Filter\ImageFilter.cs" />
+    <Compile Include="src\GraphicsViewer\FullScreenImpl.cs" />
+    <Compile Include="src\GraphicsViewer\GraphicsViewerColor.cs" />
+    <Compile Include="src\GraphicsViewer\GraphicsViewerFilterMode.cs" />
+    <Compile Include="src\GraphicsViewer\GraphicsViewerForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\GraphicsViewer\GraphicsViewerForm.Designer.cs">
+      <DependentUpon>GraphicsViewerForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\GraphicsViewer\GraphicsViewerGraphics.cs" />
+    <Compile Include="src\GraphicsViewer\GraphicsViewerImageLoadRequest.cs" />
+    <Compile Include="src\GraphicsViewer\GraphicsViewerMenuStrip.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="src\GraphicsViewer\GraphicsViewerMenuStrip.Designer.cs">
+      <DependentUpon>GraphicsViewerMenuStrip.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\GraphicsViewer\GraphicsViewerMode.cs" />
+    <Compile Include="src\GraphicsViewer\GraphicsViewerPanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="src\GraphicsViewer\GraphicsViewerPanel.Designer.cs">
+      <DependentUpon>GraphicsViewerPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\GraphicsViewer\GraphicsViewerParameter.cs" />
+    <Compile Include="src\GraphicsViewer\GraphicsViewerStatusBar.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="src\GraphicsViewer\GraphicsViewerStatusBar.Designer.cs">
+      <DependentUpon>GraphicsViewerStatusBar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\GraphicsViewer\GraphicsViewerToolbarStrip.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="src\GraphicsViewer\GraphicsViewerToolbarStrip.Designer.cs">
+      <DependentUpon>GraphicsViewerToolbarStrip.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\GraphicsViewer\ImageInfo.cs" />
+    <Compile Include="src\GraphicsViewer\ImageLoader.cs" />
+    <Compile Include="src\GraphicsViewer\ImageState.cs" />
+    <Compile Include="src\GraphicsViewer\ImageView.cs" />
+    <Compile Include="src\GraphicsViewer\SlideShowClipboard.cs" />
+    <Compile Include="src\GraphicsViewer\SlideShowFolderList.cs" />
+    <Compile Include="src\GraphicsViewer\SlideShowList.cs" />
+    <Compile Include="src\GraphicsViewer\SlideShowMarkResult.cs" />
+    <Compile Include="src\GraphicsViewer\StatusBarFormatter.cs" />
+    <Compile Include="src\GraphicsViewer\ZoomLevel.cs" />
+    <Compile Include="src\Locale\CharWidth.cs" />
+    <Compile Include="src\Locale\CharWidthUtils.cs" />
+    <Compile Include="src\Locale\DateTimeFormatter.cs" />
+    <Compile Include="src\Locale\DumpTextFormatter.cs" />
+    <Compile Include="src\Locale\EncodingChecker.cs" />
+    <Compile Include="src\Locale\EncodingType.cs" />
+    <Compile Include="src\Locale\EncodingTypeChecker.cs" />
+    <Compile Include="src\Locale\KeyNameUtils.cs" />
+    <Compile Include="src\Locale\KnownUrl.cs" />
+    <Compile Include="src\Locale\StringCategory.cs" />
+    <Compile Include="src\Locale\UILocale.cs" />
+    <Compile Include="src\Locale\ViewerCharType.cs" />
+    <Compile Include="src\MonitoringViewer\CommandRetryInfo.cs" />
+    <Compile Include="src\MonitoringViewer\IMonitoringViewer.cs" />
+    <Compile Include="src\MonitoringViewer\IncrementalSearchLogic.cs" />
+    <Compile Include="src\MonitoringViewer\LinuxCommandResult.cs" />
+    <Compile Include="src\MonitoringViewer\LinuxSpaceSeparateValueStore.cs" />
+    <Compile Include="src\MonitoringViewer\MatrixData.cs" />
+    <Compile Include="src\MonitoringViewer\MatrixDataSaver.cs" />
+    <Compile Include="src\MonitoringViewer\MatrixDataView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="src\MonitoringViewer\MatrixDataView.Designer.cs">
+      <DependentUpon>MatrixDataView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\MonitoringViewer\MatrixDataViewGraphics.cs" />
+    <Compile Include="src\MonitoringViewer\MatrixFormatter.cs" />
+    <Compile Include="src\MonitoringViewer\MatrixItemSorter.cs" />
+    <Compile Include="src\MonitoringViewer\MonitoringSearchCondition.cs" />
+    <Compile Include="src\MonitoringViewer\MonitoringViewerForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\MonitoringViewer\MonitoringViewerForm.designer.cs">
+      <DependentUpon>MonitoringViewerForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\MonitoringViewer\MonitoringViewerMenuStrip.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="src\MonitoringViewer\MonitoringViewerMenuStrip.Designer.cs">
+      <DependentUpon>MonitoringViewerMenuStrip.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\MonitoringViewer\MonitoringViewerMode.cs" />
+    <Compile Include="src\MonitoringViewer\MonitoringViewerStatusBar.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="src\MonitoringViewer\MonitoringViewerStatusBar.Designer.cs">
+      <DependentUpon>MonitoringViewerStatusBar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\MonitoringViewer\MonitoringViewerToolbarStrip.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="src\MonitoringViewer\MonitoringViewerToolbarStrip.Designer.cs">
+      <DependentUpon>MonitoringViewerToolbarStrip.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\MonitoringViewer\NetStatInetMonitor\NetStatInetHeader.cs" />
+    <Compile Include="src\MonitoringViewer\NetStatInetMonitor\NetStatInetHeaderKind.cs" />
+    <Compile Include="src\MonitoringViewer\NetStatInetMonitor\NetStatInetMonitoringViewer.cs" />
+    <Compile Include="src\MonitoringViewer\NetStatInetMonitor\NetStatInetResultParser.cs" />
+    <Compile Include="src\MonitoringViewer\ProcessMonitor\ProcessMonitoringViewer.cs" />
+    <Compile Include="src\MonitoringViewer\ProcessMonitor\PsHeader.cs" />
+    <Compile Include="src\MonitoringViewer\ProcessMonitor\PsHeaderKind.cs" />
+    <Compile Include="src\MonitoringViewer\ProcessMonitor\PsResultParser.cs" />
+    <Compile Include="src\NativeResource.cs" />
+    <Compile Include="src\Program.cs" />
+    <Compile Include="src\Terminal\TerminalSession\CommandEmulator\CommandReplyChecker.cs" />
+    <Compile Include="src\Terminal\TerminalSession\CommandEmulator\ConsoleResultCleaner.cs" />
+    <Compile Include="src\Terminal\TerminalSession\CommandEmulator\EscapeSequenceEraser.cs" />
+    <Compile Include="src\Terminal\TerminalSession\CommandEmulator\IShellEmulatorEngine.cs" />
+    <Compile Include="src\Terminal\TerminalSession\CommandEmulator\OSSpecParserLsAttr.cs" />
+    <Compile Include="src\Terminal\TerminalSession\CommandEmulator\OSSpecParserLsTimeFullIso.cs" />
+    <Compile Include="src\Terminal\TerminalSession\CommandEmulator\OSSpecParserQuotedPath.cs" />
+    <Compile Include="src\Terminal\TerminalSession\CommandEmulator\OSSpecParserSp.cs" />
+    <Compile Include="src\Terminal\TerminalSession\CommandEmulator\OSSpecParserSpecify.cs" />
+    <Compile Include="src\Terminal\TerminalSession\CommandEmulator\OSSpecParserSpN.cs" />
+    <Compile Include="src\Terminal\TerminalSession\CommandEmulator\OSSpecParserString.cs" />
+    <Compile Include="src\Terminal\TerminalSession\CommandEmulator\OSSpecParserStringAll.cs" />
+    <Compile Include="src\Terminal\TerminalSession\CommandEmulator\OSSpecParserUInt.cs" />
+    <Compile Include="src\Terminal\TerminalSession\CommandEmulator\OSSpecParserUInt32.cs" />
+    <Compile Include="src\Terminal\TerminalSession\CommandEmulator\OSSpecParserUIntPercent.cs" />
+    <Compile Include="src\Terminal\TerminalSession\CommandEmulator\OSSpecParserULong.cs" />
+    <Compile Include="src\Terminal\TerminalSession\CommandEmulator\ResultBytesParser.cs" />
+    <Compile Include="src\Terminal\TerminalSession\CommandEmulator\ResultLineParser.cs" />
+    <Compile Include="src\Terminal\TerminalSession\CommandEmulator\ShellCommandEmulator.cs" />
+    <Compile Include="src\Terminal\TerminalSession\CommandEmulator\ShellEngineComputeChecksum.cs" />
+    <Compile Include="src\Terminal\TerminalSession\CommandEmulator\ShellEngineDelete.cs" />
+    <Compile Include="src\Terminal\TerminalSession\CommandEmulator\ShellEngineDownload.cs" />
+    <Compile Include="src\Terminal\TerminalSession\CommandEmulator\ShellEngineError.cs" />
+    <Compile Include="src\Terminal\TerminalSession\CommandEmulator\ShellEngineGetCurrentDirectory.cs" />
+    <Compile Include="src\Terminal\TerminalSession\CommandEmulator\ShellEngineGetFileInfo.cs" />
+    <Compile Include="src\Terminal\TerminalSession\CommandEmulator\ShellEngineGetFileList.cs" />
+    <Compile Include="src\Terminal\TerminalSession\CommandEmulator\ShellEngineGetVolumeInfo.cs" />
+    <Compile Include="src\Terminal\TerminalSession\CommandEmulator\ShellEngineInitializeConsole.cs" />
+    <Compile Include="src\Terminal\TerminalSession\CommandEmulator\ShellEngineInternalExecute.cs" />
+    <Compile Include="src\Terminal\TerminalSession\CommandEmulator\ShellEnginelExecuteByStream.cs" />
+    <Compile Include="src\Terminal\TerminalSession\CommandEmulator\ShellEngineRecovery.cs" />
+    <Compile Include="src\Terminal\TerminalSession\CommandEmulator\ShellEngineRetrieveChunk.cs" />
+    <Compile Include="src\Terminal\TerminalSession\CommandEmulator\ShellEngineRetrieveData.cs" />
+    <Compile Include="src\Terminal\TerminalSession\CommandEmulator\ShellEngineRetrieveFolderSize.cs" />
+    <Compile Include="src\Terminal\TerminalSession\CommandEmulator\ShellEngineUpload.cs" />
+    <Compile Include="src\Terminal\TerminalSession\ConsoleDecoration.cs" />
+    <Compile Include="src\Terminal\TerminalSession\ConsoleScreen.cs" />
+    <Compile Include="src\Terminal\TerminalSession\ConsoleScreenEventDispatcher.cs" />
+    <Compile Include="src\Terminal\TerminalSession\EscapeSequenceParser.cs" />
+    <Compile Include="src\Terminal\TerminalSession\EscapeType.cs" />
+    <Compile Include="src\Terminal\TerminalSession\IConsoleScreenEvent.cs" />
+    <Compile Include="src\Terminal\TerminalSession\LogLineChangeLog.cs" />
+    <Compile Include="src\Terminal\TerminalSession\SSHChageUserInfo.cs" />
+    <Compile Include="src\Terminal\TerminalSession\SSHTerminalLogger.cs" />
+    <Compile Include="src\Terminal\TerminalSession\TerminalModeType.cs" />
+    <Compile Include="src\Terminal\TerminalSession\TerminalShellChannel.cs" />
+    <Compile Include="src\Terminal\TerminalSession\TerminalSSHToWindowsStream.cs" />
+    <Compile Include="src\Terminal\TerminalSession\TerminalWindowsToSSHStream.cs" />
+    <Compile Include="src\Terminal\UI\ITerminalWindow.cs" />
+    <Compile Include="src\Terminal\UI\LogLineTerminal.cs" />
+    <Compile Include="src\Terminal\UI\TerminalForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\Terminal\UI\TerminalForm.designer.cs">
+      <DependentUpon>TerminalForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\Terminal\UI\TerminalLineRenderer.cs" />
+    <Compile Include="src\Terminal\UI\TerminalMenuStrip.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="src\Terminal\UI\TerminalMenuStrip.Designer.cs">
+      <DependentUpon>TerminalMenuStrip.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\Terminal\UI\TerminalPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="src\Terminal\UI\TerminalPanel.Designer.cs">
+      <DependentUpon>TerminalPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\Terminal\UI\TerminalStatusBar.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="src\Terminal\UI\TerminalStatusBar.Designer.cs">
+      <DependentUpon>TerminalStatusBar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\Terminal\UI\TerminalToolBarStrip.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="src\Terminal\UI\TerminalToolBarStrip.Designer.cs">
+      <DependentUpon>TerminalToolBarStrip.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\Terminal\UI\TerminalView.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="src\Terminal\UI\TerminalView.Designer.cs">
+      <DependentUpon>TerminalView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\UI\ControlBar\DriveItem.cs" />
+    <Compile Include="src\UI\ControlBar\FunctionBar.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="src\UI\ControlBar\FunctionBar.Designer.cs">
+      <DependentUpon>FunctionBar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\UI\ControlBar\FunctionBarGraphics.cs" />
+    <Compile Include="src\UI\ControlBar\IconButton.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="src\UI\ControlBar\IconButton.Designer.cs">
+      <DependentUpon>IconButton.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\UI\ControlBar\MainMenuStrip.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="src\UI\ControlBar\MainMenuStrip.Designer.cs">
+      <DependentUpon>MainMenuStrip.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\UI\ControlBar\MainToolbarStrip.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="src\UI\ControlBar\MainToolbarStrip.Designer.cs">
+      <DependentUpon>MainToolbarStrip.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\UI\ControlBar\MainToolbarTaskManagerButton.cs" />
+    <Compile Include="src\UI\ControlBar\MenuImpl.cs" />
+    <Compile Include="src\UI\ControlBar\MenuItemDropDownEventHandler.cs" />
+    <Compile Include="src\UI\ControlBar\ToolBarImpl.cs" />
+    <Compile Include="src\UI\ControlBar\TwoStrokeButton.cs" />
+    <Compile Include="src\UI\ControlBar\TwoStrokeButtonGraphics.cs" />
+    <Compile Include="src\UI\ControlBar\UIItemRefreshContext.cs" />
+    <Compile Include="src\UI\Dialog\AboutDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\UI\Dialog\AboutDialog.Designer.cs">
+      <DependentUpon>AboutDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\UI\Dialog\ArchiveDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\UI\Dialog\ArchiveDialog.Designer.cs">
+      <DependentUpon>ArchiveDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\UI\Dialog\ArchiveDownloadDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\UI\Dialog\ArchiveDownloadDialog.Designer.cs">
+      <DependentUpon>ArchiveDownloadDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\UI\Dialog\ArchivePasswordAddDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\UI\Dialog\ArchivePasswordAddDialog.Designer.cs">
+      <DependentUpon>ArchivePasswordAddDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\UI\Dialog\ArchivePasswordDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\UI\Dialog\ArchivePasswordDialog.Designer.cs">
+      <DependentUpon>ArchivePasswordDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\UI\Dialog\ArchivePasswordManageDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\UI\Dialog\ArchivePasswordManageDialog.Designer.cs">
+      <DependentUpon>ArchivePasswordManageDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\UI\Dialog\ArchivePasswordNewDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\UI\Dialog\ArchivePasswordNewDialog.Designer.cs">
+      <DependentUpon>ArchivePasswordNewDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\UI\Dialog\AttributeDisplayDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\UI\Dialog\AttributeDisplayDialog.Designer.cs">
+      <DependentUpon>AttributeDisplayDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\UI\Dialog\BookmarkSettingDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\UI\Dialog\BookmarkSettingDialog.Designer.cs">
+      <DependentUpon>BookmarkSettingDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\UI\Dialog\ChdirErrorDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\UI\Dialog\ChdirErrorDialog.Designer.cs">
+      <DependentUpon>ChdirErrorDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\UI\Dialog\ClipboardCopyTextAsDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\UI\Dialog\ClipboardCopyTextAsDialog.Designer.cs">
+      <DependentUpon>ClipboardCopyTextAsDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\UI\Dialog\CombineFileDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\UI\Dialog\CombineFileDialog.Designer.cs">
+      <DependentUpon>CombineFileDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\UI\Dialog\CommandInputDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\UI\Dialog\CommandInputDialog.Designer.cs">
+      <DependentUpon>CommandInputDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\UI\Dialog\CopyExStartDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\UI\Dialog\CopyExStartDialog.Designer.cs">
+      <DependentUpon>CopyExStartDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\UI\Dialog\CreateShortcutDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\UI\Dialog\CreateShortcutDialog.Designer.cs">
+      <DependentUpon>CreateShortcutDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\UI\Dialog\DeleteConfirmDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\UI\Dialog\DeleteConfirmDialog.Designer.cs">
+      <DependentUpon>DeleteConfirmDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\UI\Dialog\DeleteExStartDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\UI\Dialog\DeleteExStartDialog.Designer.cs">
+      <DependentUpon>DeleteExStartDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\UI\Dialog\DeleteStartDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\UI\Dialog\DeleteStartDialog.Designer.cs">
+      <DependentUpon>DeleteStartDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\UI\Dialog\DeleteTemporaryDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\UI\Dialog\DeleteTemporaryDialog.Designer.cs">
+      <DependentUpon>DeleteTemporaryDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\UI\Dialog\DeleteUserFolderDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\UI\Dialog\DeleteUserFolderDialog.Designer.cs">
+      <DependentUpon>DeleteUserFolderDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\UI\Dialog\DiffToolDownloadDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\UI\Dialog\DiffToolDownloadDialog.Designer.cs">
+      <DependentUpon>DiffToolDownloadDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\UI\Dialog\DiffToolOppositeTargetDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\UI\Dialog\DiffToolOppositeTargetDialog.Designer.cs">
+      <DependentUpon>DiffToolOppositeTargetDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\UI\Dialog\DropActionExternalDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\UI\Dialog\DropActionExternalDialog.Designer.cs">
+      <DependentUpon>DropActionExternalDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\UI\Dialog\DropActionInternalDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\UI\Dialog\DropActionInternalDialog.Designer.cs">
+      <DependentUpon>DropActionInternalDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\UI\Dialog\DuplicateDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\UI\Dialog\DuplicateDialog.Designer.cs">
+      <DependentUpon>DuplicateDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\UI\Dialog\FileCompareDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\UI\Dialog\FileCompareDialog.Designer.cs">
+      <DependentUpon>FileCompareDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\UI\Dialog\FileConditionDateControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="src\UI\Dialog\FileConditionDateControl.Designer.cs">
+      <DependentUpon>FileConditionDateControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\UI\Dialog\FileConditionNoneControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="src\UI\Dialog\FileConditionNoneControl.Designer.cs">
+      <DependentUpon>FileConditionNoneControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\UI\Dialog\FileConditionRelativeDateControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="src\UI\Dialog\FileConditionRelativeDateControl.Designer.cs">
+      <DependentUpon>FileConditionRelativeDateControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\UI\Dialog\FileConditionSettingDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\UI\Dialog\FileConditionSettingDialog.Designer.cs">
+      <DependentUpon>FileConditionSettingDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\UI\Dialog\FileConditionSizeControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="src\UI\Dialog\FileConditionSizeControl.Designer.cs">
+      <DependentUpon>FileConditionSizeControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\UI\Dialog\FileConditionSSHDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\UI\Dialog\FileConditionSSHDialog.Designer.cs">
+      <DependentUpon>FileConditionSSHDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\UI\Dialog\FileConditionTimeControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="src\UI\Dialog\FileConditionTimeControl.Designer.cs">
+      <DependentUpon>FileConditionTimeControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\UI\Dialog\FileConditionWindowsDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\UI\Dialog\FileConditionWindowsDialog.Designer.cs">
+      <DependentUpon>FileConditionWindowsDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\UI\Dialog\FileFilterClipboardDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\UI\Dialog\FileFilterClipboardDialog.Designer.cs">
+      <DependentUpon>FileFilterClipboardDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\UI\Dialog\FileFilterQuickDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\UI\Dialog\FileFilterQuickDialog.Designer.cs">
+      <DependentUpon>FileFilterQuickDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\UI\Dialog\FileFilterQuickRenameDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\UI\Dialog\FileFilterQuickRenameDialog.Designer.cs">
+      <DependentUpon>FileFilterQuickRenameDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\UI\Dialog\FileFilterSettingComponent.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="src\UI\Dialog\FileFilterSettingComponent.Designer.cs">
+      <DependentUpon>FileFilterSettingComponent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\UI\Dialog\FileFilterTransferDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\UI\Dialog\FileFilterTransferDialog.Designer.cs">
+      <DependentUpon>FileFilterTransferDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\UI\Dialog\FileFilterTransferEditDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\UI\Dialog\FileFilterTransferEditDialog.Designer.cs">
+      <DependentUpon>FileFilterTransferEditDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\UI\Dialog\FileIncrementalSearchDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\UI\Dialog\FileIncrementalSearchDialog.Designer.cs">
+      <DependentUpon>FileIncrementalSearchDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\UI\Dialog\FileListFilterMessageDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\UI\Dialog\FileListFilterMessageDialog.Designer.cs">
+      <DependentUpon>FileListFilterMessageDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\UI\Dialog\FileListOptionDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\UI\Dialog\FileListOptionDialog.Designer.cs">
+      <DependentUpon>FileListOptionDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\UI\Dialog\FileOperationErrorListDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\UI\Dialog\FileOperationErrorListDialog.Designer.cs">
+      <DependentUpon>FileOperationErrorListDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\UI\Dialog\FileOperationErrorRetryNgDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\UI\Dialog\FileOperationErrorRetryNgDialog.Designer.cs">
+      <DependentUpon>FileOperationErrorRetryNgDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\UI\Dialog\FileViewer\HttpViewerFileRefControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="src\UI\Dialog\FileViewer\HttpViewerFileRefControl.Designer.cs">
+      <DependentUpon>HttpViewerFileRefControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\UI\Dialog\FileViewer\HttpViewerRequestParamDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\UI\Dialog\FileViewer\HttpViewerRequestParamDialog.Designer.cs">
+      <DependentUpon>HttpViewerRequestParamDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\UI\Dialog\FileViewer\HttpViewerTextControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="src\UI\Dialog\FileViewer\HttpViewerTextControl.Designer.cs">
+      <DependentUpon>HttpViewerTextControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\UI\Dialog\FileViewer\ViewerCompareDisplayDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\UI\Dialog\FileViewer\ViewerCompareDisplayDialog.Designer.cs">
+      <DependentUpon>ViewerCompareDisplayDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\UI\Dialog\FileViewer\ViewerCompareSuccessDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\UI\Dialog\FileViewer\ViewerCompareSuccessDialog.Designer.cs">
+      <DependentUpon>ViewerCompareSuccessDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\UI\Dialog\FileViewer\ViewerDumpCopyAsDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\UI\Dialog\FileViewer\ViewerDumpCopyAsDialog.Designer.cs">
+      <DependentUpon>ViewerDumpCopyAsDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\UI\Dialog\FileViewer\ViewerDumpSearchDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\UI\Dialog\FileViewer\ViewerDumpSearchDialog.Designer.cs">
+      <DependentUpon>ViewerDumpSearchDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\UI\Dialog\FileViewer\ViewerDumpWidthDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\UI\Dialog\FileViewer\ViewerDumpWidthDialog.Designer.cs">
+      <DependentUpon>ViewerDumpWidthDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\UI\Dialog\FileViewer\ViewerJumpAddressDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\UI\Dialog\FileViewer\ViewerJumpAddressDialog.Designer.cs">
+      <DependentUpon>ViewerJumpAddressDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\UI\Dialog\FileViewer\ViewerJumpLineDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\UI\Dialog\FileViewer\ViewerJumpLineDialog.Designer.cs">
+      <DependentUpon>ViewerJumpLineDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\UI\Dialog\FileViewer\ViewerLineWidthDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\UI\Dialog\FileViewer\ViewerLineWidthDialog.Designer.cs">
+      <DependentUpon>ViewerLineWidthDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\UI\Dialog\FileViewer\ViewerTextCopyAsDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\UI\Dialog\FileViewer\ViewerTextCopyAsDialog.Designer.cs">
+      <DependentUpon>ViewerTextCopyAsDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\UI\Dialog\FileViewer\ViewerTextSearchDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\UI\Dialog\FileViewer\ViewerTextSearchDialog.Designer.cs">
+      <DependentUpon>ViewerTextSearchDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\UI\Dialog\GitRenameDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\UI\Dialog\GitRenameDialog.Designer.cs">
+      <DependentUpon>GitRenameDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\UI\Dialog\GraphicsViewer\FilterPropertyPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="src\UI\Dialog\GraphicsViewer\FilterPropertyPanel.Designer.cs">
+      <DependentUpon>FilterPropertyPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\UI\Dialog\GraphicsViewer\FilterPropertyPanelDummy.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="src\UI\Dialog\GraphicsViewer\FilterPropertyPanelDummy.Designer.cs">
+      <DependentUpon>FilterPropertyPanelDummy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\UI\Dialog\GraphicsViewer\MarkFileListDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\UI\Dialog\GraphicsViewer\MarkFileListDialog.Designer.cs">
+      <DependentUpon>MarkFileListDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\UI\Dialog\GraphicsViewer\SelectFilterDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\UI\Dialog\GraphicsViewer\SelectFilterDialog.Designer.cs">
+      <DependentUpon>SelectFilterDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\UI\Dialog\GraphicsViewer\SelectFilterDialogItem.cs" />
+    <Compile Include="src\UI\Dialog\GraphicsViewer\SelectFilterDialogItemList.cs" />
+    <Compile Include="src\UI\Dialog\HelpMessageDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\UI\Dialog\HelpMessageDialog.Designer.cs">
+      <DependentUpon>HelpMessageDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\UI\Dialog\HttpViewerRequestDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\UI\Dialog\HttpViewerRequestDialog.Designer.cs">
+      <DependentUpon>HttpViewerRequestDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\UI\Dialog\IntelliSensePopup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\UI\Dialog\IntelliSensePopup.Designer.cs">
+      <DependentUpon>IntelliSensePopup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\UI\Dialog\KeyBindHelpDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\UI\Dialog\KeyBindHelpDialog.Designer.cs">
+      <DependentUpon>KeyBindHelpDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\UI\Dialog\KeyBindHelpInputDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\UI\Dialog\KeyBindHelpInputDialog.Designer.cs">
+      <DependentUpon>KeyBindHelpInputDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\UI\Dialog\KeyOption\AssociateDetailDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\UI\Dialog\KeyOption\AssociateDetailDialog.Designer.cs">
+      <DependentUpon>AssociateDetailDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\UI\Dialog\KeyOption\AssociateSettingDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\UI\Dialog\KeyOption\AssociateSettingDialog.Designer.cs">
+      <DependentUpon>AssociateSettingDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\UI\Dialog\KeyOption\CommandApi.cs" />
+    <Compile Include="src\UI\Dialog\KeyOption\CommandApiLoader.cs" />
+    <Compile Include="src\UI\Dialog\KeyOption\CommandArgument.cs" />
+    <Compile Include="src\UI\Dialog\KeyOption\CommandArgumentHelp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\UI\Dialog\KeyOption\CommandArgumentHelp.Designer.cs">
+      <DependentUpon>CommandArgumentHelp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\UI\Dialog\KeyOption\CommandGroup.cs" />
+    <Compile Include="src\UI\Dialog\KeyOption\CommandScene.cs" />
+    <Compile Include="src\UI\Dialog\KeyOption\CommandSpec.cs" />
+    <Compile Include="src\UI\Dialog\KeyOption\CommandUsingSceneType.cs" />
+    <Compile Include="src\UI\Dialog\KeyOption\KeyItemSettingSorter.cs" />
+    <Compile Include="src\UI\Dialog\KeyOption\KeySettingDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\UI\Dialog\KeyOption\KeySettingDialog.Designer.cs">
+      <DependentUpon>KeySettingDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\UI\Dialog\KeyOption\KeySettingGraphics.cs" />
+    <Compile Include="src\UI\Dialog\KeyOption\KeySettingOptionDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\UI\Dialog\KeyOption\KeySettingOptionDialog.Designer.cs">
+      <DependentUpon>KeySettingOptionDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\UI\Dialog\KeyOption\KeySettingResetConfirmDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\UI\Dialog\KeyOption\KeySettingResetConfirmDialog.Designer.cs">
+      <DependentUpon>KeySettingResetConfirmDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\UI\Dialog\KeyOption\MenuGraphics.cs" />
+    <Compile Include="src\UI\Dialog\KeyOption\MenuGroupDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\UI\Dialog\KeyOption\MenuGroupDialog.Designer.cs">
+      <DependentUpon>MenuGroupDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\UI\Dialog\KeyOption\MenuItemDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\UI\Dialog\KeyOption\MenuItemDialog.Designer.cs">
+      <DependentUpon>MenuItemDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\UI\Dialog\KeyOption\MenuListSettingDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\UI\Dialog\KeyOption\MenuListSettingDialog.Designer.cs">
+      <DependentUpon>MenuListSettingDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\UI\Dialog\KeyOption\MenuSamplePanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="src\UI\Dialog\KeyOption\MenuSamplePanel.Designer.cs">
+      <DependentUpon>MenuSamplePanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\UI\Dialog\KeyOption\MenuSettingDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\UI\Dialog\KeyOption\MenuSettingDialog.Designer.cs">
+      <DependentUpon>MenuSettingDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\UI\Dialog\KeyOption\SettingFileWarningDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\UI\Dialog\KeyOption\SettingFileWarningDialog.Designer.cs">
+      <DependentUpon>SettingFileWarningDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\UI\Dialog\KeyOption\VersionupKeyDiffDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\UI\Dialog\KeyOption\VersionupKeyDiffDialog.Designer.cs">
+      <DependentUpon>VersionupKeyDiffDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\UI\Dialog\LicenseAgreeDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\UI\Dialog\LicenseAgreeDialog.Designer.cs">
+      <DependentUpon>LicenseAgreeDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\UI\Dialog\LocalExecuteEditEndDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\UI\Dialog\LocalExecuteEditEndDialog.Designer.cs">
+      <DependentUpon>LocalExecuteEditEndDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\UI\Dialog\LocalExecuteProcessErrorDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\UI\Dialog\LocalExecuteProcessErrorDialog.Designer.cs">
+      <DependentUpon>LocalExecuteProcessErrorDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\UI\Dialog\LogInDirectoryDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\UI\Dialog\LogInDirectoryDialog.Designer.cs">
+      <DependentUpon>LogInDirectoryDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\UI\Dialog\MakeDirectoryDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\UI\Dialog\MakeDirectoryDialog.designer.cs">
+      <DependentUpon>MakeDirectoryDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\UI\Dialog\MarkWithConditionsDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\UI\Dialog\MarkWithConditionsDialog.Designer.cs">
+      <DependentUpon>MarkWithConditionsDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\UI\Dialog\MirrorCopyDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\UI\Dialog\MirrorCopyDialog.Designer.cs">
+      <DependentUpon>MirrorCopyDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\UI\Dialog\MonitoringViewer\KillComfirmDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\UI\Dialog\MonitoringViewer\KillComfirmDialog.Designer.cs">
+      <DependentUpon>KillComfirmDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\UI\Dialog\MonitoringViewer\MonitoringCommandWaitDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\UI\Dialog\MonitoringViewer\MonitoringCommandWaitDialog.Designer.cs">
+      <DependentUpon>MonitoringCommandWaitDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\UI\Dialog\MonitoringViewer\MonitoringResultCopyAsDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\UI\Dialog\MonitoringViewer\MonitoringResultCopyAsDialog.Designer.cs">
+      <DependentUpon>MonitoringResultCopyAsDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\UI\Dialog\MonitoringViewer\MonitoringResultSaveAsDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\UI\Dialog\MonitoringViewer\MonitoringResultSaveAsDialog.Designer.cs">
+      <DependentUpon>MonitoringResultSaveAsDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\UI\Dialog\MonitoringViewer\MonitoringSearchDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\UI\Dialog\MonitoringViewer\MonitoringSearchDialog.Designer.cs">
+      <DependentUpon>MonitoringSearchDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\UI\Dialog\MonitoringViewer\PsDetailDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\UI\Dialog\MonitoringViewer\PsDetailDialog.Designer.cs">
+      <DependentUpon>PsDetailDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\UI\Dialog\MoveExStartDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\UI\Dialog\MoveExStartDialog.Designer.cs">
+      <DependentUpon>MoveExStartDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\UI\Dialog\Option\ConfirmSettingUpdatedDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\UI\Dialog\Option\ConfirmSettingUpdatedDialog.Designer.cs">
+      <DependentUpon>ConfirmSettingUpdatedDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\UI\Dialog\Option\DeleteHistoryProcedure.cs" />
+    <Compile Include="src\UI\Dialog\Option\FileListActionPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="src\UI\Dialog\Option\FileListActionPage.Designer.cs">
+      <DependentUpon>FileListActionPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\UI\Dialog\Option\FileListComparePage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="src\UI\Dialog\Option\FileListComparePage.Designer.cs">
+      <DependentUpon>FileListComparePage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\UI\Dialog\Option\FileListFolderSizePage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="src\UI\Dialog\Option\FileListFolderSizePage.Designer.cs">
+      <DependentUpon>FileListFolderSizePage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\UI\Dialog\Option\FileListGeneralPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="src\UI\Dialog\Option\FileListGeneralPage.Designer.cs">
+      <DependentUpon>FileListGeneralPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\UI\Dialog\Option\FileListInitialPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="src\UI\Dialog\Option\FileListInitialPage.Designer.cs">
+      <DependentUpon>FileListInitialPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\UI\Dialog\Option\FileListSortPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="src\UI\Dialog\Option\FileListSortPage.Designer.cs">
+      <DependentUpon>FileListSortPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\UI\Dialog\Option\FileListViewModeEditDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\UI\Dialog\Option\FileListViewModeEditDialog.Designer.cs">
+      <DependentUpon>FileListViewModeEditDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\UI\Dialog\Option\FileListViewModeInitPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="src\UI\Dialog\Option\FileListViewModeInitPage.Designer.cs">
+      <DependentUpon>FileListViewModeInitPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\UI\Dialog\Option\FileListViewModePage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="src\UI\Dialog\Option\FileListViewModePage.Designer.cs">
+      <DependentUpon>FileListViewModePage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\UI\Dialog\Option\FileOperationArchivePage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="src\UI\Dialog\Option\FileOperationArchivePage.Designer.cs">
+      <DependentUpon>FileOperationArchivePage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\UI\Dialog\Option\FileOperationClipbordPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="src\UI\Dialog\Option\FileOperationClipbordPage.Designer.cs">
+      <DependentUpon>FileOperationClipbordPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\UI\Dialog\Option\FileOperationCopyAttributePage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="src\UI\Dialog\Option\FileOperationCopyAttributePage.Designer.cs">
+      <DependentUpon>FileOperationCopyAttributePage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\UI\Dialog\Option\FileOperationEtcPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="src\UI\Dialog\Option\FileOperationEtcPage.Designer.cs">
+      <DependentUpon>FileOperationEtcPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\UI\Dialog\Option\FileOperationExtractPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="src\UI\Dialog\Option\FileOperationExtractPage.Designer.cs">
+      <DependentUpon>FileOperationExtractPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\UI\Dialog\Option\FileOperationGeneralPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="src\UI\Dialog\Option\FileOperationGeneralPage.Designer.cs">
+      <DependentUpon>FileOperationGeneralPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\UI\Dialog\Option\FileOperationMarklessPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="src\UI\Dialog\Option\FileOperationMarklessPage.Designer.cs">
+      <DependentUpon>FileOperationMarklessPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\UI\Dialog\Option\FileOperationTransferPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="src\UI\Dialog\Option\FileOperationTransferPage.Designer.cs">
+      <DependentUpon>FileOperationTransferPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\UI\Dialog\Option\FuncGeneralPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="src\UI\Dialog\Option\FuncGeneralPage.Designer.cs">
+      <DependentUpon>FuncGeneralPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\UI\Dialog\Option\GraphicsViewerGeneneralPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="src\UI\Dialog\Option\GraphicsViewerGeneneralPage.Designer.cs">
+      <DependentUpon>GraphicsViewerGeneneralPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\UI\Dialog\Option\GraphicsViewerViewPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="src\UI\Dialog\Option\GraphicsViewerViewPage.Designer.cs">
+      <DependentUpon>GraphicsViewerViewPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\UI\Dialog\Option\InstallDiffPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="src\UI\Dialog\Option\InstallDiffPage.Designer.cs">
+      <DependentUpon>InstallDiffPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\UI\Dialog\Option\InstallEditorPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="src\UI\Dialog\Option\InstallEditorPage.Designer.cs">
+      <DependentUpon>InstallEditorPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\UI\Dialog\Option\InstallWorkingDirPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="src\UI\Dialog\Option\InstallWorkingDirPage.Designer.cs">
+      <DependentUpon>InstallWorkingDirPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\UI\Dialog\Option\IOptionDialogPage.cs" />
+    <Compile Include="src\UI\Dialog\Option\LogGeneralPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="src\UI\Dialog\Option\LogGeneralPage.Designer.cs">
+      <DependentUpon>LogGeneralPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\UI\Dialog\Option\OptionSettingDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\UI\Dialog\Option\OptionSettingDialog.Designer.cs">
+      <DependentUpon>OptionSettingDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\UI\Dialog\Option\OptionSettingDialogUtils.cs" />
+    <Compile Include="src\UI\Dialog\Option\OptionStructure.cs" />
+    <Compile Include="src\UI\Dialog\Option\OptionStructureItem.cs" />
+    <Compile Include="src\UI\Dialog\Option\PrivacyCommandLinePage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="src\UI\Dialog\Option\PrivacyCommandLinePage.Designer.cs">
+      <DependentUpon>PrivacyCommandLinePage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\UI\Dialog\Option\PrivacyFileViewerPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="src\UI\Dialog\Option\PrivacyFileViewerPage.Designer.cs">
+      <DependentUpon>PrivacyFileViewerPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\UI\Dialog\Option\PrivacyFolderPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="src\UI\Dialog\Option\PrivacyFolderPage.Designer.cs">
+      <DependentUpon>PrivacyFolderPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\UI\Dialog\Option\PrivacyGeneralPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="src\UI\Dialog\Option\PrivacyGeneralPage.Designer.cs">
+      <DependentUpon>PrivacyGeneralPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\UI\Dialog\Option\SSHGeneralPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="src\UI\Dialog\Option\SSHGeneralPage.Designer.cs">
+      <DependentUpon>SSHGeneralPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\UI\Dialog\Option\SSHTerminalLogPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="src\UI\Dialog\Option\SSHTerminalLogPage.Designer.cs">
+      <DependentUpon>SSHTerminalLogPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\UI\Dialog\Option\SSHTerminalPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="src\UI\Dialog\Option\SSHTerminalPage.Designer.cs">
+      <DependentUpon>SSHTerminalPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\UI\Dialog\Option\TextViewerDumpClipboardPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="src\UI\Dialog\Option\TextViewerDumpClipboardPage.Designer.cs">
+      <DependentUpon>TextViewerDumpClipboardPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\UI\Dialog\Option\TextViewerGeneneralPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="src\UI\Dialog\Option\TextViewerGeneneralPage.Designer.cs">
+      <DependentUpon>TextViewerGeneneralPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\UI\Dialog\Option\TextViewerLineBreakPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="src\UI\Dialog\Option\TextViewerLineBreakPage.Designer.cs">
+      <DependentUpon>TextViewerLineBreakPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\UI\Dialog\Option\TextViewerSearchPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="src\UI\Dialog\Option\TextViewerSearchPage.Designer.cs">
+      <DependentUpon>TextViewerSearchPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\UI\Dialog\Option\TextViewerTextClipboardPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="src\UI\Dialog\Option\TextViewerTextClipboardPage.Designer.cs">
+      <DependentUpon>TextViewerTextClipboardPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\UI\Dialog\Option\TextViewerViewPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="src\UI\Dialog\Option\TextViewerViewPage.Designer.cs">
+      <DependentUpon>TextViewerViewPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\UI\Dialog\Option\WindowSizeInputForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\UI\Dialog\Option\WindowSizeInputForm.Designer.cs">
+      <DependentUpon>WindowSizeInputForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\UI\Dialog\OwnerDrawListBoxGraphics.cs" />
+    <Compile Include="src\UI\Dialog\RegexTestDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\UI\Dialog\RegexTestDialog.Designer.cs">
+      <DependentUpon>RegexTestDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\UI\Dialog\RenameSelectedExtensionDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\UI\Dialog\RenameSelectedExtensionDialog.Designer.cs">
+      <DependentUpon>RenameSelectedExtensionDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\UI\Dialog\RenameSelectedFilesSSHDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\UI\Dialog\RenameSelectedFilesSSHDialog.Designer.cs">
+      <DependentUpon>RenameSelectedFilesSSHDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\UI\Dialog\RenameSelectedFilesWindowsDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\UI\Dialog\RenameSelectedFilesWindowsDialog.Designer.cs">
+      <DependentUpon>RenameSelectedFilesWindowsDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\UI\Dialog\RenameSelectedSequenceDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\UI\Dialog\RenameSelectedSequenceDialog.Designer.cs">
+      <DependentUpon>RenameSelectedSequenceDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\UI\Dialog\RenameSSHDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\UI\Dialog\RenameSSHDialog.Designer.cs">
+      <DependentUpon>RenameSSHDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\UI\Dialog\RenameWindowsDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\UI\Dialog\RenameWindowsDialog.Designer.cs">
+      <DependentUpon>RenameWindowsDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\UI\Dialog\RetrieveFolderSizeDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\UI\Dialog\RetrieveFolderSizeDialog.Designer.cs">
+      <DependentUpon>RetrieveFolderSizeDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\UI\Dialog\SameNameFileDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\UI\Dialog\SameNameFileDialog.Designer.cs">
+      <DependentUpon>SameNameFileDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\UI\Dialog\SameNameFileInfoControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="src\UI\Dialog\SameNameFileInfoControl.Designer.cs">
+      <DependentUpon>SameNameFileInfoControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\UI\Dialog\SelectClipboardViewerTypeDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\UI\Dialog\SelectClipboardViewerTypeDialog.Designer.cs">
+      <DependentUpon>SelectClipboardViewerTypeDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\UI\Dialog\ShellArgumentInputDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\UI\Dialog\ShellArgumentInputDialog.Designer.cs">
+      <DependentUpon>ShellArgumentInputDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\UI\Dialog\ShellGetFileInfoDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\UI\Dialog\ShellGetFileInfoDialog.Designer.cs">
+      <DependentUpon>ShellGetFileInfoDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\UI\Dialog\SlideShowMarkResultDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\UI\Dialog\SlideShowMarkResultDialog.Designer.cs">
+      <DependentUpon>SlideShowMarkResultDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\UI\Dialog\SplitFileDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\UI\Dialog\SplitFileDialog.Designer.cs">
+      <DependentUpon>SplitFileDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\UI\Dialog\SSHChangeUserDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\UI\Dialog\SSHChangeUserDialog.Designer.cs">
+      <DependentUpon>SSHChangeUserDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\UI\Dialog\SSHConnectionDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\UI\Dialog\SSHConnectionDialog.Designer.cs">
+      <DependentUpon>SSHConnectionDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\UI\Dialog\SSHInputPasswordDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\UI\Dialog\SSHInputPasswordDialog.Designer.cs">
+      <DependentUpon>SSHInputPasswordDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\UI\Dialog\SSHSelectChannelDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\UI\Dialog\SSHSelectChannelDialog.Designer.cs">
+      <DependentUpon>SSHSelectChannelDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\UI\Dialog\TaskManagerDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\UI\Dialog\TaskManagerDialog.Designer.cs">
+      <DependentUpon>TaskManagerDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\UI\Dialog\Terminal\TerminalCloseConfirmDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\UI\Dialog\Terminal\TerminalCloseConfirmDialog.Designer.cs">
+      <DependentUpon>TerminalCloseConfirmDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\UI\Dialog\Terminal\TerminalEditTitleDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\UI\Dialog\Terminal\TerminalEditTitleDialog.Designer.cs">
+      <DependentUpon>TerminalEditTitleDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\UI\Dialog\Terminal\TerminalSaveTypeDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\UI\Dialog\Terminal\TerminalSaveTypeDialog.Designer.cs">
+      <DependentUpon>TerminalSaveTypeDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\UI\Dialog\Terminal\TerminalSelectConsoleDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\UI\Dialog\Terminal\TerminalSelectConsoleDialog.Designer.cs">
+      <DependentUpon>TerminalSelectConsoleDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\UI\Dialog\UnexpectedExceptionDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\UI\Dialog\UnexpectedExceptionDialog.Designer.cs">
+      <DependentUpon>UnexpectedExceptionDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\UI\Dialog\VirtualExtractWaitDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\UI\Dialog\VirtualExtractWaitDialog.Designer.cs">
+      <DependentUpon>VirtualExtractWaitDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\UI\Dialog\VirtualPrepareErrorDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\UI\Dialog\VirtualPrepareErrorDialog.Designer.cs">
+      <DependentUpon>VirtualPrepareErrorDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\UI\FileList\AddressBarDropDown.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="src\UI\FileList\AddressBarStrip.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="src\UI\FileList\AddressBarStrip.Designer.cs">
+      <DependentUpon>AddressBarStrip.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\UI\FileList\ContextMenuImpl.cs" />
+    <Compile Include="src\UI\FileList\ContextMenuPosition.cs" />
+    <Compile Include="src\UI\FileList\Crawler\CrawlType.cs" />
+    <Compile Include="src\UI\FileList\Crawler\FileCrawler.cs" />
+    <Compile Include="src\UI\FileList\Crawler\FileCrawlerCreateThumbnail.cs" />
+    <Compile Include="src\UI\FileList\Crawler\FileCrawlerCreateThumbnailRequestParam.cs" />
+    <Compile Include="src\UI\FileList\Crawler\FileCrawlerExtractIcon.cs" />
+    <Compile Include="src\UI\FileList\Crawler\FileCrawlRequest.cs" />
+    <Compile Include="src\UI\FileList\Crawler\FileCrawlThread.cs" />
+    <Compile Include="src\UI\FileList\DefaultList\DefaultFileListViewComponent.cs" />
+    <Compile Include="src\UI\FileList\DefaultList\DefaultFileListViewState.cs" />
+    <Compile Include="src\UI\FileList\DefaultList\FileLineRenderer.cs" />
+    <Compile Include="src\UI\FileList\DefaultList\FilePanelHeader.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="src\UI\FileList\DefaultList\FilePanelHeaderPosition.cs" />
+    <Compile Include="src\UI\FileList\FileListGraphics.cs" />
+    <Compile Include="src\UI\FileList\FileListHeaderItem.cs" />
+    <Compile Include="src\UI\FileList\FileListView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="src\UI\FileList\FileListView.Designer.cs">
+      <DependentUpon>FileListView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\UI\FileList\FileListViewCommandUtils.cs" />
+    <Compile Include="src\UI\FileList\FileListViewUtils.cs" />
+    <Compile Include="src\UI\FileList\FilePanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="src\UI\FileList\FilePanel.Designer.cs">
+      <DependentUpon>FilePanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\UI\FileList\FileStatusBar.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="src\UI\FileList\FileStatusBar.Designer.cs">
+      <DependentUpon>FileStatusBar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\UI\FileList\IFileListViewComponent.cs" />
+    <Compile Include="src\UI\FileList\IFileListViewState.cs" />
+    <Compile Include="src\UI\FileList\IncrementalSearchImpl.cs" />
+    <Compile Include="src\UI\FileList\ThumbList\ThumbListRenderer.cs" />
+    <Compile Include="src\UI\FileList\ThumbList\ThumbListViewComponent.cs" />
+    <Compile Include="src\UI\FileList\ThumbList\ThumbListViewState.cs" />
+    <Compile Include="src\UI\FileList\ThumbList\ThumbnailLoadManager.cs" />
+    <Compile Include="src\UI\IconImageListID.cs" />
+    <Compile Include="src\UI\Log\DrawingLogLineSelectInfo.cs" />
+    <Compile Include="src\UI\Log\ILogViewContainer.cs" />
+    <Compile Include="src\UI\Log\ITaskLogger.cs" />
+    <Compile Include="src\UI\Log\LogBuffer.cs" />
+    <Compile Include="src\UI\Log\LogColor.cs" />
+    <Compile Include="src\UI\Log\Logger\AutoTaskLogger.cs" />
+    <Compile Include="src\UI\Log\Logger\FileLogLineManager.cs" />
+    <Compile Include="src\UI\Log\Logger\LogLineArchiveDetail.cs" />
+    <Compile Include="src\UI\Log\Logger\LogLineFile.cs" />
+    <Compile Include="src\UI\Log\Logger\LogLineRenderer.cs" />
+    <Compile Include="src\UI\Log\Logger\LogLineSimple.cs" />
+    <Compile Include="src\UI\Log\Logger\LogLineTaskError.cs" />
+    <Compile Include="src\UI\Log\Logger\LogPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="src\UI\Log\Logger\LogPanel.Designer.cs">
+      <DependentUpon>LogPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\UI\Log\LogGraphics.cs" />
+    <Compile Include="src\UI\Log\LogLine.cs" />
+    <Compile Include="src\UI\Log\LogViewContainerStatusType.cs" />
+    <Compile Include="src\UI\Log\LogViewImpl.cs" />
+    <Compile Include="src\UI\Log\LogViewSelectionRange.cs" />
+    <Compile Include="src\UI\MainWindowForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\UI\MainWindowForm.Designer.cs">
+      <DependentUpon>MainWindowForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\UI\SplashWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\UI\SplashWindow.Designer.cs">
+      <DependentUpon>SplashWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\UI\SplashWindowGraphics.cs" />
+    <Compile Include="src\UI\StateList\HeaderColorTable.cs" />
+    <Compile Include="src\UI\StateList\HeaderRenderer.cs" />
+    <Compile Include="src\UI\StateList\HeaderRendererGraphics.cs" />
+    <Compile Include="src\UI\StateList\SSHNodeImpl.cs" />
+    <Compile Include="src\UI\StateList\StateListPanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="src\UI\StateList\StateListPanel.Designer.cs">
+      <DependentUpon>StateListPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\UI\StateList\StateMenu.cs" />
+    <Compile Include="src\UI\StateList\TaskNodeImpl.cs" />
+    <Compile Include="src\UI\StateList\TemporaryNodeImpl.cs" />
+    <Compile Include="src\UI\StateList\TreeViewRenderer.cs" />
+    <Compile Include="src\UI\StatusBarErrorMessageImpl.cs" />
+    <Compile Include="src\UI\TabControlImpl.cs" />
+    <Compile Include="src\UI\UIIconManager.cs" />
+    <Compile Include="src\UI\WindowManager.cs" />
+    <Compile Include="src\Util\ArrayUtils.cs" />
+    <Compile Include="src\Util\BaseThread.cs" />
+    <Compile Include="src\Util\BooleanFlag.cs" />
+    <Compile Include="src\Util\BufferedImage.cs" />
+    <Compile Include="src\Util\BufferedListView.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="src\Util\CaretRedraw.cs" />
+    <Compile Include="src\Util\ChangeLog.cs" />
+    <Compile Include="src\Util\ClassPoint.cs" />
+    <Compile Include="src\Util\CopyFileEx.cs" />
+    <Compile Include="src\Util\DataInputStream.cs" />
+    <Compile Include="src\Util\DataOutputStream.cs" />
+    <Compile Include="src\Util\DoubleBuffer.cs" />
+    <Compile Include="src\Util\EncryptUtils.cs" />
+    <Compile Include="src\Util\FileUtils.cs" />
+    <Compile Include="src\Util\FormUtils.cs" />
+    <Compile Include="src\Util\GraphicsUtils.cs" />
+    <Compile Include="src\Util\InfoBox.cs" />
+    <Compile Include="src\Util\LasyComboBoxImpl.cs" />
+    <Compile Include="src\Util\ObjectUtils.cs" />
+    <Compile Include="src\Util\OSUtils.cs" />
+    <Compile Include="src\Util\RECT.cs" />
+    <Compile Include="src\Util\SfHelper.cs" />
+    <Compile Include="src\Util\StringUtils.cs" />
+    <Compile Include="src\Util\TabControlEx.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="src\Util\TextRendererUtils.cs" />
+    <Compile Include="src\Util\ThumbNailBuilder.cs" />
+    <Compile Include="src\Util\TimeSpanWait.cs" />
+    <Compile Include="src\Util\UniqueList.cs" />
+    <Compile Include="src\Util\WaitCursor.cs" />
+    <Compile Include="src\Util\WaitEventList.cs" />
+    <Compile Include="src\Util\Win32API.cs" />
+    <Compile Include="src\Util\Win32Caret.cs" />
+    <Compile Include="src\Util\Win32IconUtils.cs" />
+    <Compile Include="src\Util\Win32ShellLink.cs" />
+    <Compile Include="src\Util\Win32VariantArray.cs" />
+    <Compile Include="src\Virtual\ExtractRuntime.cs" />
+    <Compile Include="src\Virtual\ExtractThread.cs" />
+    <Compile Include="src\Virtual\LocalExecuteTemporarySpace.cs" />
+    <Compile Include="src\Virtual\LocalFileInfo.cs" />
+    <Compile Include="src\Virtual\LocalTemporaryDirectory.cs" />
+    <Compile Include="src\Virtual\TempFileHolder.cs" />
+    <Compile Include="src\Virtual\TemporaryManager.cs" />
+    <Compile Include="src\Virtual\TemporarySpaceDisplayName.cs" />
+    <Compile Include="src\Virtual\TemporaryWatcher.cs" />
+    <Compile Include="src\Virtual\VirtualExtractArg.cs" />
+    <Compile Include="src\Virtual\VirtualExtractMarkedArg.cs" />
+    <Compile Include="src\Virtual\VirtualFolderTemporatyDirectory.cs" />
+    <Compile Include="src\Virtual\VirtualManager.cs" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\FileViewer\FileViewerForm.resx">
+      <DependentUpon>FileViewerForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\FileViewer\FileViewerStatusBar.resx">
+      <DependentUpon>FileViewerStatusBar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\FileViewer\FileViewerToolbarStrip.resx">
+      <DependentUpon>FileViewerToolbarStrip.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\FileViewer\RadarBar.resx">
+      <DependentUpon>RadarBar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\FileViewer\TextFileViewer.resx">
+      <DependentUpon>TextFileViewer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\GraphicsViewer\GraphicsViewerPanel.resx">
+      <DependentUpon>GraphicsViewerPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\GraphicsViewer\GraphicsViewerToolbarStrip.resx">
+      <DependentUpon>GraphicsViewerToolbarStrip.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\MonitoringViewer\MatrixDataView.resx">
+      <DependentUpon>MatrixDataView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\MonitoringViewer\MonitoringViewerForm.resx">
+      <DependentUpon>MonitoringViewerForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\MonitoringViewer\MonitoringViewerStatusBar.resx">
+      <DependentUpon>MonitoringViewerStatusBar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\MonitoringViewer\MonitoringViewerToolbarStrip.resx">
+      <DependentUpon>MonitoringViewerToolbarStrip.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\Terminal\UI\TerminalForm.resx">
+      <DependentUpon>TerminalForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\Terminal\UI\TerminalPanel.resx">
+      <DependentUpon>TerminalPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\Terminal\UI\TerminalStatusBar.resx">
+      <DependentUpon>TerminalStatusBar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\Terminal\UI\TerminalToolBarStrip.resx">
+      <DependentUpon>TerminalToolBarStrip.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\Terminal\UI\TerminalView.resx">
+      <DependentUpon>TerminalView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\UI\ControlBar\FunctionBar.resx">
+      <DependentUpon>FunctionBar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\UI\ControlBar\IconButton.resx">
+      <DependentUpon>IconButton.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\UI\Dialog\AboutDialog.resx">
+      <DependentUpon>AboutDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\UI\Dialog\ArchiveDialog.resx">
+      <DependentUpon>ArchiveDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\UI\Dialog\ArchiveDownloadDialog.resx">
+      <DependentUpon>ArchiveDownloadDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\UI\Dialog\ArchivePasswordAddDialog.resx">
+      <DependentUpon>ArchivePasswordAddDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\UI\Dialog\ArchivePasswordDialog.resx">
+      <DependentUpon>ArchivePasswordDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\UI\Dialog\ArchivePasswordManageDialog.resx">
+      <DependentUpon>ArchivePasswordManageDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\UI\Dialog\ArchivePasswordNewDialog.resx">
+      <DependentUpon>ArchivePasswordNewDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\UI\Dialog\AttributeDisplayDialog.resx">
+      <DependentUpon>AttributeDisplayDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\UI\Dialog\BookmarkSettingDialog.resx">
+      <DependentUpon>BookmarkSettingDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\UI\Dialog\ChdirErrorDialog.resx">
+      <DependentUpon>ChdirErrorDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\UI\Dialog\ClipboardCopyTextAsDialog.resx">
+      <DependentUpon>ClipboardCopyTextAsDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\UI\Dialog\CombineFileDialog.resx">
+      <DependentUpon>CombineFileDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\UI\Dialog\CommandInputDialog.resx">
+      <DependentUpon>CommandInputDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\UI\Dialog\CopyExStartDialog.resx">
+      <DependentUpon>CopyExStartDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\UI\Dialog\CreateShortcutDialog.resx">
+      <DependentUpon>CreateShortcutDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\UI\Dialog\DeleteConfirmDialog.resx">
+      <DependentUpon>DeleteConfirmDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\UI\Dialog\DeleteExStartDialog.resx">
+      <DependentUpon>DeleteExStartDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\UI\Dialog\DeleteStartDialog.resx">
+      <DependentUpon>DeleteStartDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\UI\Dialog\DeleteTemporaryDialog.resx">
+      <DependentUpon>DeleteTemporaryDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\UI\Dialog\DeleteUserFolderDialog.resx">
+      <DependentUpon>DeleteUserFolderDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\UI\Dialog\DiffToolDownloadDialog.resx">
+      <DependentUpon>DiffToolDownloadDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\UI\Dialog\DiffToolOppositeTargetDialog.resx">
+      <DependentUpon>DiffToolOppositeTargetDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\UI\Dialog\DropActionExternalDialog.resx">
+      <DependentUpon>DropActionExternalDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\UI\Dialog\DropActionInternalDialog.resx">
+      <DependentUpon>DropActionInternalDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\UI\Dialog\DuplicateDialog.resx">
+      <DependentUpon>DuplicateDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\UI\Dialog\FileCompareDialog.resx">
+      <DependentUpon>FileCompareDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\UI\Dialog\FileConditionDateControl.resx">
+      <DependentUpon>FileConditionDateControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\UI\Dialog\FileConditionNoneControl.resx">
+      <DependentUpon>FileConditionNoneControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\UI\Dialog\FileConditionRelativeDateControl.resx">
+      <DependentUpon>FileConditionRelativeDateControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\UI\Dialog\FileConditionSettingDialog.resx">
+      <DependentUpon>FileConditionSettingDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\UI\Dialog\FileConditionSizeControl.resx">
+      <DependentUpon>FileConditionSizeControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\UI\Dialog\FileConditionSSHDialog.resx">
+      <DependentUpon>FileConditionSSHDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\UI\Dialog\FileConditionTimeControl.resx">
+      <DependentUpon>FileConditionTimeControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\UI\Dialog\FileConditionWindowsDialog.resx">
+      <DependentUpon>FileConditionWindowsDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\UI\Dialog\FileFilterClipboardDialog.resx">
+      <DependentUpon>FileFilterClipboardDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\UI\Dialog\FileFilterQuickDialog.resx">
+      <DependentUpon>FileFilterQuickDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\UI\Dialog\FileFilterQuickRenameDialog.resx">
+      <DependentUpon>FileFilterQuickRenameDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\UI\Dialog\FileFilterSettingComponent.resx">
+      <DependentUpon>FileFilterSettingComponent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\UI\Dialog\FileFilterTransferDialog.resx">
+      <DependentUpon>FileFilterTransferDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\UI\Dialog\FileFilterTransferEditDialog.resx">
+      <DependentUpon>FileFilterTransferEditDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\UI\Dialog\FileIncrementalSearchDialog.resx">
+      <DependentUpon>FileIncrementalSearchDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\UI\Dialog\FileListFilterMessageDialog.resx">
+      <DependentUpon>FileListFilterMessageDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\UI\Dialog\FileListOptionDialog.resx">
+      <DependentUpon>FileListOptionDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\UI\Dialog\FileOperationErrorListDialog.resx">
+      <DependentUpon>FileOperationErrorListDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\UI\Dialog\FileOperationErrorRetryNgDialog.resx">
+      <DependentUpon>FileOperationErrorRetryNgDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\UI\Dialog\FileViewer\HttpViewerFileRefControl.resx">
+      <DependentUpon>HttpViewerFileRefControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\UI\Dialog\FileViewer\HttpViewerRequestParamDialog.resx">
+      <DependentUpon>HttpViewerRequestParamDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\UI\Dialog\FileViewer\HttpViewerTextControl.resx">
+      <DependentUpon>HttpViewerTextControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\UI\Dialog\FileViewer\ViewerCompareDisplayDialog.resx">
+      <DependentUpon>ViewerCompareDisplayDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\UI\Dialog\FileViewer\ViewerCompareSuccessDialog.resx">
+      <DependentUpon>ViewerCompareSuccessDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\UI\Dialog\FileViewer\ViewerDumpCopyAsDialog.resx">
+      <DependentUpon>ViewerDumpCopyAsDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\UI\Dialog\FileViewer\ViewerDumpSearchDialog.resx">
+      <DependentUpon>ViewerDumpSearchDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\UI\Dialog\FileViewer\ViewerDumpWidthDialog.resx">
+      <DependentUpon>ViewerDumpWidthDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\UI\Dialog\FileViewer\ViewerJumpAddressDialog.resx">
+      <DependentUpon>ViewerJumpAddressDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\UI\Dialog\FileViewer\ViewerJumpLineDialog.resx">
+      <DependentUpon>ViewerJumpLineDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\UI\Dialog\FileViewer\ViewerLineWidthDialog.resx">
+      <DependentUpon>ViewerLineWidthDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\UI\Dialog\FileViewer\ViewerTextCopyAsDialog.resx">
+      <DependentUpon>ViewerTextCopyAsDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\UI\Dialog\FileViewer\ViewerTextSearchDialog.resx">
+      <DependentUpon>ViewerTextSearchDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\UI\Dialog\GitRenameDialog.resx">
+      <DependentUpon>GitRenameDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\UI\Dialog\GraphicsViewer\FilterPropertyPanel.resx">
+      <DependentUpon>FilterPropertyPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\UI\Dialog\GraphicsViewer\FilterPropertyPanelDummy.resx">
+      <DependentUpon>FilterPropertyPanelDummy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\UI\Dialog\GraphicsViewer\MarkFileListDialog.resx">
+      <DependentUpon>MarkFileListDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\UI\Dialog\GraphicsViewer\SelectFilterDialog.resx">
+      <DependentUpon>SelectFilterDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\UI\Dialog\HelpMessageDialog.resx">
+      <DependentUpon>HelpMessageDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\UI\Dialog\HttpViewerRequestDialog.resx">
+      <DependentUpon>HttpViewerRequestDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\UI\Dialog\IntelliSensePopup.resx">
+      <DependentUpon>IntelliSensePopup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\UI\Dialog\KeyBindHelpDialog.resx">
+      <DependentUpon>KeyBindHelpDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\UI\Dialog\KeyBindHelpInputDialog.resx">
+      <DependentUpon>KeyBindHelpInputDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\UI\Dialog\KeyOption\AssociateDetailDialog.resx">
+      <DependentUpon>AssociateDetailDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\UI\Dialog\KeyOption\AssociateSettingDialog.resx">
+      <DependentUpon>AssociateSettingDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\UI\Dialog\KeyOption\CommandArgumentHelp.resx">
+      <DependentUpon>CommandArgumentHelp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\UI\Dialog\KeyOption\KeySettingDialog.resx">
+      <DependentUpon>KeySettingDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\UI\Dialog\KeyOption\KeySettingOptionDialog.resx">
+      <DependentUpon>KeySettingOptionDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\UI\Dialog\KeyOption\KeySettingResetConfirmDialog.resx">
+      <DependentUpon>KeySettingResetConfirmDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\UI\Dialog\KeyOption\MenuGroupDialog.resx">
+      <DependentUpon>MenuGroupDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\UI\Dialog\KeyOption\MenuItemDialog.resx">
+      <DependentUpon>MenuItemDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\UI\Dialog\KeyOption\MenuListSettingDialog.resx">
+      <DependentUpon>MenuListSettingDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\UI\Dialog\KeyOption\MenuSamplePanel.resx">
+      <DependentUpon>MenuSamplePanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\UI\Dialog\KeyOption\MenuSettingDialog.resx">
+      <DependentUpon>MenuSettingDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\UI\Dialog\KeyOption\SettingFileWarningDialog.resx">
+      <DependentUpon>SettingFileWarningDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\UI\Dialog\KeyOption\VersionupKeyDiffDialog.resx">
+      <DependentUpon>VersionupKeyDiffDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\UI\Dialog\LicenseAgreeDialog.resx">
+      <DependentUpon>LicenseAgreeDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\UI\Dialog\LocalExecuteEditEndDialog.resx">
+      <DependentUpon>LocalExecuteEditEndDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\UI\Dialog\LocalExecuteProcessErrorDialog.resx">
+      <DependentUpon>LocalExecuteProcessErrorDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\UI\Dialog\LogInDirectoryDialog.resx">
+      <DependentUpon>LogInDirectoryDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\UI\Dialog\MakeDirectoryDialog.resx">
+      <DependentUpon>MakeDirectoryDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\UI\Dialog\MarkWithConditionsDialog.resx">
+      <DependentUpon>MarkWithConditionsDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\UI\Dialog\MirrorCopyDialog.resx">
+      <DependentUpon>MirrorCopyDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\UI\Dialog\MonitoringViewer\KillComfirmDialog.resx">
+      <DependentUpon>KillComfirmDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\UI\Dialog\MonitoringViewer\MonitoringCommandWaitDialog.resx">
+      <DependentUpon>MonitoringCommandWaitDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\UI\Dialog\MonitoringViewer\MonitoringResultCopyAsDialog.resx">
+      <DependentUpon>MonitoringResultCopyAsDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\UI\Dialog\MonitoringViewer\MonitoringResultSaveAsDialog.resx">
+      <DependentUpon>MonitoringResultSaveAsDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\UI\Dialog\MonitoringViewer\MonitoringSearchDialog.resx">
+      <DependentUpon>MonitoringSearchDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\UI\Dialog\MonitoringViewer\PsDetailDialog.resx">
+      <DependentUpon>PsDetailDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\UI\Dialog\MoveExStartDialog.resx">
+      <DependentUpon>MoveExStartDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\UI\Dialog\Option\ConfirmSettingUpdatedDialog.resx">
+      <DependentUpon>ConfirmSettingUpdatedDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\UI\Dialog\Option\FileListActionPage.resx">
+      <DependentUpon>FileListActionPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\UI\Dialog\Option\FileListComparePage.resx">
+      <DependentUpon>FileListComparePage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\UI\Dialog\Option\FileListFolderSizePage.resx">
+      <DependentUpon>FileListFolderSizePage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\UI\Dialog\Option\FileListGeneralPage.resx">
+      <DependentUpon>FileListGeneralPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\UI\Dialog\Option\FileListInitialPage.resx">
+      <DependentUpon>FileListInitialPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\UI\Dialog\Option\FileListSortPage.resx">
+      <DependentUpon>FileListSortPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\UI\Dialog\Option\FileListViewModeEditDialog.resx">
+      <DependentUpon>FileListViewModeEditDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\UI\Dialog\Option\FileListViewModeInitPage.resx">
+      <DependentUpon>FileListViewModeInitPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\UI\Dialog\Option\FileListViewModePage.resx">
+      <DependentUpon>FileListViewModePage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\UI\Dialog\Option\FileOperationArchivePage.resx">
+      <DependentUpon>FileOperationArchivePage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\UI\Dialog\Option\FileOperationClipbordPage.resx">
+      <DependentUpon>FileOperationClipbordPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\UI\Dialog\Option\FileOperationCopyAttributePage.resx">
+      <DependentUpon>FileOperationCopyAttributePage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\UI\Dialog\Option\FileOperationEtcPage.resx">
+      <DependentUpon>FileOperationEtcPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\UI\Dialog\Option\FileOperationExtractPage.resx">
+      <DependentUpon>FileOperationExtractPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\UI\Dialog\Option\FileOperationGeneralPage.resx">
+      <DependentUpon>FileOperationGeneralPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\UI\Dialog\Option\FileOperationMarklessPage.resx">
+      <DependentUpon>FileOperationMarklessPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\UI\Dialog\Option\FileOperationTransferPage.resx">
+      <DependentUpon>FileOperationTransferPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\UI\Dialog\Option\FuncGeneralPage.resx">
+      <DependentUpon>FuncGeneralPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\UI\Dialog\Option\GraphicsViewerGeneneralPage.resx">
+      <DependentUpon>GraphicsViewerGeneneralPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\UI\Dialog\Option\GraphicsViewerViewPage.resx">
+      <DependentUpon>GraphicsViewerViewPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\UI\Dialog\Option\InstallDiffPage.resx">
+      <DependentUpon>InstallDiffPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\UI\Dialog\Option\InstallEditorPage.resx">
+      <DependentUpon>InstallEditorPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\UI\Dialog\Option\InstallWorkingDirPage.resx">
+      <DependentUpon>InstallWorkingDirPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\UI\Dialog\Option\LogGeneralPage.resx">
+      <DependentUpon>LogGeneralPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\UI\Dialog\Option\OptionSettingDialog.resx">
+      <DependentUpon>OptionSettingDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\UI\Dialog\Option\PrivacyCommandLinePage.resx">
+      <DependentUpon>PrivacyCommandLinePage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\UI\Dialog\Option\PrivacyFileViewerPage.resx">
+      <DependentUpon>PrivacyFileViewerPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\UI\Dialog\Option\PrivacyFolderPage.resx">
+      <DependentUpon>PrivacyFolderPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\UI\Dialog\Option\PrivacyGeneralPage.resx">
+      <DependentUpon>PrivacyGeneralPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\UI\Dialog\Option\SSHGeneralPage.resx">
+      <DependentUpon>SSHGeneralPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\UI\Dialog\Option\SSHTerminalLogPage.resx">
+      <DependentUpon>SSHTerminalLogPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\UI\Dialog\Option\SSHTerminalPage.resx">
+      <DependentUpon>SSHTerminalPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\UI\Dialog\Option\TextViewerDumpClipboardPage.resx">
+      <DependentUpon>TextViewerDumpClipboardPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\UI\Dialog\Option\TextViewerGeneneralPage.resx">
+      <DependentUpon>TextViewerGeneneralPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\UI\Dialog\Option\TextViewerLineBreakPage.resx">
+      <DependentUpon>TextViewerLineBreakPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\UI\Dialog\Option\TextViewerSearchPage.resx">
+      <DependentUpon>TextViewerSearchPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\UI\Dialog\Option\TextViewerTextClipboardPage.resx">
+      <DependentUpon>TextViewerTextClipboardPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\UI\Dialog\Option\TextViewerViewPage.resx">
+      <DependentUpon>TextViewerViewPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\UI\Dialog\Option\WindowSizeInputForm.resx">
+      <DependentUpon>WindowSizeInputForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\UI\Dialog\RegexTestDialog.resx">
+      <DependentUpon>RegexTestDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\UI\Dialog\RenameSelectedExtensionDialog.resx">
+      <DependentUpon>RenameSelectedExtensionDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\UI\Dialog\RenameSelectedFilesSSHDialog.resx">
+      <DependentUpon>RenameSelectedFilesSSHDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\UI\Dialog\RenameSelectedFilesWindowsDialog.resx">
+      <DependentUpon>RenameSelectedFilesWindowsDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\UI\Dialog\RenameSelectedSequenceDialog.resx">
+      <DependentUpon>RenameSelectedSequenceDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\UI\Dialog\RenameSSHDialog.resx">
+      <DependentUpon>RenameSSHDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\UI\Dialog\RenameWindowsDialog.resx">
+      <DependentUpon>RenameWindowsDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\UI\Dialog\RetrieveFolderSizeDialog.resx">
+      <DependentUpon>RetrieveFolderSizeDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\UI\Dialog\SameNameFileDialog.resx">
+      <DependentUpon>SameNameFileDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\UI\Dialog\SameNameFileInfoControl.resx">
+      <DependentUpon>SameNameFileInfoControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\UI\Dialog\SelectClipboardViewerTypeDialog.resx">
+      <DependentUpon>SelectClipboardViewerTypeDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\UI\Dialog\ShellArgumentInputDialog.resx">
+      <DependentUpon>ShellArgumentInputDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\UI\Dialog\ShellGetFileInfoDialog.resx">
+      <DependentUpon>ShellGetFileInfoDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\UI\Dialog\SlideShowMarkResultDialog.resx">
+      <DependentUpon>SlideShowMarkResultDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\UI\Dialog\SplitFileDialog.resx">
+      <DependentUpon>SplitFileDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\UI\Dialog\SSHChangeUserDialog.resx">
+      <DependentUpon>SSHChangeUserDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\UI\Dialog\SSHConnectionDialog.resx">
+      <DependentUpon>SSHConnectionDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\UI\Dialog\SSHInputPasswordDialog.resx">
+      <DependentUpon>SSHInputPasswordDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\UI\Dialog\SSHSelectChannelDialog.resx">
+      <DependentUpon>SSHSelectChannelDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\UI\Dialog\TaskManagerDialog.resx">
+      <DependentUpon>TaskManagerDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\UI\Dialog\Terminal\TerminalCloseConfirmDialog.resx">
+      <DependentUpon>TerminalCloseConfirmDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\UI\Dialog\Terminal\TerminalEditTitleDialog.resx">
+      <DependentUpon>TerminalEditTitleDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\UI\Dialog\Terminal\TerminalSaveTypeDialog.resx">
+      <DependentUpon>TerminalSaveTypeDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\UI\Dialog\Terminal\TerminalSelectConsoleDialog.resx">
+      <DependentUpon>TerminalSelectConsoleDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\UI\Dialog\UnexpectedExceptionDialog.resx">
+      <DependentUpon>UnexpectedExceptionDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\UI\Dialog\VirtualExtractWaitDialog.resx">
+      <DependentUpon>VirtualExtractWaitDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\UI\Dialog\VirtualPrepareErrorDialog.resx">
+      <DependentUpon>VirtualPrepareErrorDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\UI\FileList\AddressBarStrip.resx">
+      <DependentUpon>AddressBarStrip.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\UI\FileList\FileListView.resx">
+      <DependentUpon>FileListView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\UI\FileList\FilePanel.resx">
+      <DependentUpon>FilePanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\UI\FileList\FileStatusBar.resx">
+      <DependentUpon>FileStatusBar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\UI\Log\Logger\LogPanel.resx">
+      <DependentUpon>LogPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\UI\MainWindowForm.resx">
+      <DependentUpon>MainWindowForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\UI\SplashWindow.resx">
+      <DependentUpon>SplashWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\UI\StateList\StateListPanel.resx">
+      <DependentUpon>StateListPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="libsrc\SevenZip\7zIntf20.zip" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="doc\Credit.txt" />
+    <Content Include="doc\ShellFiler.txt" />
+    <Content Include="libsrc\SevenZip\license-7zInf20.txt" />
+    <Content Include="libsrc\SpHeader\readme.txt" />
+    <Content Include="NativeResources\ResTempl.res" />
+    <Content Include="Resources\ButtonFace_Down.png" />
+    <Content Include="Resources\ButtonFace_PopupMenu.png" />
+    <Content Include="Resources\ButtonFace_Up.png" />
+    <Content Include="Resources\Delete.png" />
+    <Content Include="Resources\DlgIntelliHddDir.png" />
+    <Content Include="Resources\DlgIntelliHddFile.png" />
+    <Content Include="Resources\DlgIntelliListDir.png" />
+    <Content Include="Resources\DlgIntelliListFile.png" />
+    <Content Include="Resources\DlgIntelliShell.png" />
+    <EmbeddedResource Include="Resources\embedded\hand.cur" />
+    <EmbeddedResource Include="Resources\embedded\null.cur" />
+    <Content Include="Resources\FileCondition_Or1.png" />
+    <Content Include="Resources\FileCondition_Or2.png" />
+    <Content Include="Resources\GraphicsViewer_FilterArrow1.png" />
+    <Content Include="Resources\GraphicsViewer_FilterArrow2.png" />
+    <Content Include="Resources\GraphicsViewer_FilterSample.png" />
+    <Content Include="Resources\GraphicsViewer_FilterSampleZoom.png" />
+    <Content Include="Resources\HtmlTemplateCommandList.html" />
+    <Content Include="Resources\HtmlTemplateKeyList.html" />
+    <Content Include="Resources\HtmlTemplateMenuList.html" />
+    <Content Include="Resources\IconOperationFailed.png" />
+    <Content Include="Resources\IconSshSetting.png" />
+    <Content Include="Resources\ImageListBGManagerAnimation.png" />
+    <Content Include="Resources\ImageListBGManagerAnimation\BGManager01.png" />
+    <Content Include="Resources\ImageListBGManagerAnimation\BGManager02.png" />
+    <Content Include="Resources\ImageListBGManagerAnimation\BGManager03.png" />
+    <Content Include="Resources\ImageListBGManagerAnimation\BGManager04.png" />
+    <Content Include="Resources\ImageListBGManagerAnimation\BGManager05.png" />
+    <Content Include="Resources\ImageListBGManagerAnimation\BGManager06.png" />
+    <Content Include="Resources\ImageListBGManagerAnimation\BGManager07.png" />
+    <Content Include="Resources\ImageListBGManagerAnimation\BGManager08.png" />
+    <Content Include="Resources\ImageListBGManagerAnimation\BGManager09.png" />
+    <Content Include="Resources\ImageListBGManagerAnimation\BGManager10.png" />
+    <Content Include="Resources\ImageListBGManagerAnimation\BGManager11.png" />
+    <Content Include="Resources\ImageListBGManagerAnimation\BGManager12.png" />
+    <Content Include="Resources\ImageListBGManagerAnimation\BGManager13.png" />
+    <Content Include="Resources\ImageListBGManagerAnimation\BGManager14.png" />
+    <Content Include="Resources\ImageListBGManagerAnimation\BGManager15.png" />
+    <Content Include="Resources\ImageListBGManagerAnimation\BGManager16.png" />
+    <Content Include="Resources\ImageListBGManagerAnimation\BGManager17.png" />
+    <Content Include="Resources\ImageListBGManagerAnimation\BGManager18.png" />
+    <Content Include="Resources\ImageListBGManagerAnimation\BGManager19.png" />
+    <Content Include="Resources\ImageListBGManagerAnimation\BGManager20.png" />
+    <Content Include="Resources\ImageListBGManagerAnimation\BGManager21.png" />
+    <Content Include="Resources\ImageListBGManagerAnimation\BGManager22.png" />
+    <Content Include="Resources\ImageListBGManagerAnimation\BGManager23.png" />
+    <Content Include="Resources\ImageListBGManagerAnimation\BGManager24.png" />
+    <Content Include="Resources\ImageListIcon.png" />
+    <Content Include="Resources\ImageListIcon\000_None.png" />
+    <Content Include="Resources\ImageListIcon\001_FileList_Copy.png" />
+    <Content Include="Resources\ImageListIcon\002_FileList_Copy_.png" />
+    <Content Include="Resources\ImageListIcon\003_FileList_Move.png" />
+    <Content Include="Resources\ImageListIcon\004_FileList_Move_.png" />
+    <Content Include="Resources\ImageListIcon\005_FileList_Shortcut.png" />
+    <Content Include="Resources\ImageListIcon\006_FileList_Shortcut_.png" />
+    <Content Include="Resources\ImageListIcon\007_FileList_Delete.png" />
+    <Content Include="Resources\ImageListIcon\008_FileList_MirrorCopy.png" />
+    <Content Include="Resources\ImageListIcon\009_FileList_MirrorCopy_.png" />
+    <Content Include="Resources\ImageListIcon\010_FileList_Rename.png" />
+    <Content Include="Resources\ImageListIcon\011_FileList_RenameSelected.png" />
+    <Content Include="Resources\ImageListIcon\012_FileList_MakeDirectory.png" />
+    <Content Include="Resources\ImageListIcon\013_FileList_SortMenu.png" />
+    <Content Include="Resources\ImageListIcon\014_FileList_SortClear.png" />
+    <Content Include="Resources\ImageListIcon\015_FileList_RetrieveFolderSize.png" />
+    <Content Include="Resources\ImageListIcon\016_FileList_DuplicateFile.png" />
+    <Content Include="Resources\ImageListIcon\020_FileList_Refresh.png" />
+    <Content Include="Resources\ImageListIcon\021_FileList_LocalEdit.png" />
+    <Content Include="Resources\ImageListIcon\022_FileList_FileViewer.png" />
+    <Content Include="Resources\ImageListIcon\023_FileList_GraphicsViewer.png" />
+    <Content Include="Resources\ImageListIcon\024_FileList_SlideShow.png" />
+    <Content Include="Resources\ImageListIcon\025_FileList_ContextMenu.png" />
+    <Content Include="Resources\ImageListIcon\026_FileList_Archive.png" />
+    <Content Include="Resources\ImageListIcon\027_FileList_Extract.png" />
+    <Content Include="Resources\ImageListIcon\028_FileList_Filter.png" />
+    <Content Include="Resources\ImageListIcon\029_FileList_FilterClear.png" />
+    <Content Include="Resources\ImageListIcon\030_FileList_FilterMini.png" />
+    <Content Include="Resources\ImageListIcon\031_FileList_ViewModeSetting.png" />
+    <Content Include="Resources\ImageListIcon\032_FileList_ViewModeDetail.png" />
+    <Content Include="Resources\ImageListIcon\033_FileList_ViewMode32.png" />
+    <Content Include="Resources\ImageListIcon\034_FileList_ViewMode48.png" />
+    <Content Include="Resources\ImageListIcon\035_FileList_ViewMode64.png" />
+    <Content Include="Resources\ImageListIcon\036_FileList_ViewMode128.png" />
+    <Content Include="Resources\ImageListIcon\037_FileList_ViewMode256.png" />
+    <Content Include="Resources\ImageListIcon\040_FileList_ReverseMarkFile.png" />
+    <Content Include="Resources\ImageListIcon\041_FileList_ClearMarkAll.png" />
+    <Content Include="Resources\ImageListIcon\050_FileList_ChdirBookmarkFolder.png" />
+    <Content Include="Resources\ImageListIcon\051_FileList_ChdirParent.png" />
+    <Content Include="Resources\ImageListIcon\052_FileList_ChdirSpecial.png" />
+    <Content Include="Resources\ImageListIcon\053_FileList_ChdirSSHFolder.png" />
+    <Content Include="Resources\ImageListIcon\054_FileList_PathHistoryPrev.png" />
+    <Content Include="Resources\ImageListIcon\055_FileList_PathHistoryNext.png" />
+    <Content Include="Resources\ImageListIcon\060_FileList_Exit.png" />
+    <Content Include="Resources\ImageListIcon\061_FileList_ShellCommand.png" />
+    <Content Include="Resources\ImageListIcon\062_FileList_PowerShell.png" />
+    <Content Include="Resources\ImageListIcon\063_FileList_ShellExecute.png" />
+    <Content Include="Resources\ImageListIcon\064_FileList_WinMergeFolder.png" />
+    <Content Include="Resources\ImageListIcon\065_FileList_WinMergeMark.png" />
+    <Content Include="Resources\ImageListIcon\066_FileList_WinMergeOpposite.png" />
+    <Content Include="Resources\ImageListIcon\070_FileList_CombineFile.png" />
+    <Content Include="Resources\ImageListIcon\071_FileList_CombineFile_.png" />
+    <Content Include="Resources\ImageListIcon\072_FileList_SplitFile.png" />
+    <Content Include="Resources\ImageListIcon\073_FileList_SplitFile_.png" />
+    <Content Include="Resources\ImageListIcon\080_FileList_OptionSetting.png" />
+    <Content Include="Resources\ImageListIcon\081_FileList_KeyListMenu.png" />
+    <Content Include="Resources\ImageListIcon\090_FileList_SSHChangeUser.png" />
+    <Content Include="Resources\ImageListIcon\100_FileViewer_ExitView.png" />
+    <Content Include="Resources\ImageListIcon\101_FileViewer_CopyText.png" />
+    <Content Include="Resources\ImageListIcon\102_FileViewer_JumpBottomLine.png" />
+    <Content Include="Resources\ImageListIcon\103_FileViewer_JumpTopLine.png" />
+    <Content Include="Resources\ImageListIcon\104_FileViewer_JumpDirect.png" />
+    <Content Include="Resources\ImageListIcon\105_FileViewer_FullScreen.png" />
+    <Content Include="Resources\ImageListIcon\106_FileViewer_SelectAll.png" />
+    <Content Include="Resources\ImageListIcon\107_FileViewer_Save.png" />
+    <Content Include="Resources\ImageListIcon\108_FileViewer_Return.png" />
+    <Content Include="Resources\ImageListIcon\110_FileViewer_ChangeText.png" />
+    <Content Include="Resources\ImageListIcon\111_FileViewer_ChangeDump.png" />
+    <Content Include="Resources\ImageListIcon\112_FileViewer_EditFile.png" />
+    <Content Include="Resources\ImageListIcon\120_FileViewer_Search.png" />
+    <Content Include="Resources\ImageListIcon\121_FileViewer_SearchForwardNext.png" />
+    <Content Include="Resources\ImageListIcon\122_FileViewer_SearchReverseNext.png" />
+    <Content Include="Resources\ImageListIcon\123_FileViewer_SearchGeneric.png" />
+    <Content Include="Resources\ImageListIcon\200_GraphicsViewer_ExitView.png" />
+    <Content Include="Resources\ImageListIcon\201_GraphicsViewer_CopyImage.png" />
+    <Content Include="Resources\ImageListIcon\202_GraphicsViewer_FullScreen.png" />
+    <Content Include="Resources\ImageListIcon\203_GraphicsViewer_SlideShowNext.png" />
+    <Content Include="Resources\ImageListIcon\204_GraphicsViewer_SlideShowPrev.png" />
+    <Content Include="Resources\ImageListIcon\205_GraphicsViewer_ZoomIn.png" />
+    <Content Include="Resources\ImageListIcon\206_GraphicsViewer_ZoomOut.png" />
+    <Content Include="Resources\ImageListIcon\207_GraphicsViewer_Save.png" />
+    <Content Include="Resources\ImageListIcon\208_GraphicsViewer_Return.png" />
+    <Content Include="Resources\ImageListIcon\210_GraphicsViewer_ViewTop.png" />
+    <Content Include="Resources\ImageListIcon\211_GraphicsViewer_ViewBottom.png" />
+    <Content Include="Resources\ImageListIcon\212_GraphicsViewer_ViewLeft.png" />
+    <Content Include="Resources\ImageListIcon\213_GraphicsViewer_ViewRight.png" />
+    <Content Include="Resources\ImageListIcon\220_GraphicsViewer_MarkFile1.png" />
+    <Content Include="Resources\ImageListIcon\221_GraphicsViewer_MarkFile2.png" />
+    <Content Include="Resources\ImageListIcon\222_GraphicsViewer_MarkFile3.png" />
+    <Content Include="Resources\ImageListIcon\223_GraphicsViewer_MarkFile4.png" />
+    <Content Include="Resources\ImageListIcon\224_GraphicsViewer_MarkFile5.png" />
+    <Content Include="Resources\ImageListIcon\225_GraphicsViewer_MarkFile6.png" />
+    <Content Include="Resources\ImageListIcon\226_GraphicsViewer_MarkFile7.png" />
+    <Content Include="Resources\ImageListIcon\227_GraphicsViewer_MarkFile8.png" />
+    <Content Include="Resources\ImageListIcon\228_GraphicsViewer_MarkFile9.png" />
+    <Content Include="Resources\ImageListIcon\250_GraphicsViewer_MirrorHorz.png" />
+    <Content Include="Resources\ImageListIcon\251_GraphicsViewer_MirrorVert.png" />
+    <Content Include="Resources\ImageListIcon\252_GraphicsViewer_RotateCCW.png" />
+    <Content Include="Resources\ImageListIcon\253_GraphicsViewer_RotateCW.png" />
+    <Content Include="Resources\ImageListIcon\260_GraphicsViewer_ZoomDirect20.png" />
+    <Content Include="Resources\ImageListIcon\261_GraphicsViewer_ZoomDirect50.png" />
+    <Content Include="Resources\ImageListIcon\262_GraphicsViewer_ZoomDirect100.png" />
+    <Content Include="Resources\ImageListIcon\263_GraphicsViewer_ZoomDirect150.png" />
+    <Content Include="Resources\ImageListIcon\264_GraphicsViewer_ZoomDirect200.png" />
+    <Content Include="Resources\ImageListIcon\265_GraphicsViewer_ZoomDirect500.png" />
+    <Content Include="Resources\ImageListIcon\266_GraphicsViewer_ZoomFitImage.png" />
+    <Content Include="Resources\ImageListIcon\267_GraphicsViewer_ZoomFitEdge.png" />
+    <Content Include="Resources\ImageListIcon\300_MonitoringViewer_ExitView.png" />
+    <Content Include="Resources\ImageListIcon\301_MonitoringViewer_Save.png" />
+    <Content Include="Resources\ImageListIcon\303_MonitoringViewer_Return.png" />
+    <Content Include="Resources\ImageListIcon\310_MonitoringViewer_Search.png" />
+    <Content Include="Resources\ImageListIcon\311_MonitoringViewer_SearchForwardNext.png" />
+    <Content Include="Resources\ImageListIcon\312_MonitoringViewer_SearchReverseNext.png" />
+    <Content Include="Resources\ImageListIcon\313_MonitoringViewer_JumpTopLine.png" />
+    <Content Include="Resources\ImageListIcon\314_MonitoringViewer_JumpBottomLine.png" />
+    <Content Include="Resources\ImageListIcon\315_MonitoringViewer_Refresh.png" />
+    <Content Include="Resources\ImageListIcon\320_MonitoringViewer_PsMyProcess.png" />
+    <Content Include="Resources\ImageListIcon\321_MonitoringViewer_PsOtherProcess.png" />
+    <Content Include="Resources\ImageListIcon\322_MonitoringViewer_PsKill.png" />
+    <Content Include="Resources\ImageListIcon\323_MonitoringViewer_PsForceTerminate.png" />
+    <Content Include="Resources\ImageListIcon\324_MonitoringViewer_NetTcp.png" />
+    <Content Include="Resources\ImageListIcon\325_MonitoringViewer_NetUdp.png" />
+    <Content Include="Resources\ImageListIcon\400_Terminal_ExitView.png" />
+    <Content Include="Resources\ImageListIcon\401_Terminal_Save.png" />
+    <Content Include="Resources\ImageListIcon\402_Terminal_Return.png" />
+    <Content Include="Resources\ImageListIcon\410_Terminal_CopyText.png" />
+    <Content Include="Resources\ImageListIcon\411_Terminal_PasteText.png" />
+    <Content Include="Resources\ImageListIcon\412_Terminal_SelectAll.png" />
+    <Content Include="Resources\ImageListIcon\420_Terminal_BackLog.png" />
+    <Content Include="Resources\ImageListIcon\421_Terminal_ClearBackLog.png" />
+    <Content Include="Resources\ImageListIcon\430_Terminal_Window.png" />
+    <Content Include="Resources\ImageListIcon\431_Terminal_WindowNew.png" />
+    <Content Include="Resources\ImageListIcon\500_Icon_DriveCD.png" />
+    <Content Include="Resources\ImageListIcon\501_Icon_DriveHDD.png" />
+    <Content Include="Resources\ImageListIcon\502_Icon_DriveNet.png" />
+    <Content Include="Resources\ImageListIcon\503_Icon_DriveRam.png" />
+    <Content Include="Resources\ImageListIcon\504_Icon_DriveRemovable.png" />
+    <Content Include="Resources\ImageListIcon\510_Icon_DriveNameA.png" />
+    <Content Include="Resources\ImageListIcon\511_Icon_DriveNameB.png" />
+    <Content Include="Resources\ImageListIcon\512_Icon_DriveNameC.png" />
+    <Content Include="Resources\ImageListIcon\513_Icon_DriveNameD.png" />
+    <Content Include="Resources\ImageListIcon\514_Icon_DriveNameE.png" />
+    <Content Include="Resources\ImageListIcon\515_Icon_DriveNameF.png" />
+    <Content Include="Resources\ImageListIcon\516_Icon_DriveNameG.png" />
+    <Content Include="Resources\ImageListIcon\517_Icon_DriveNameH.png" />
+    <Content Include="Resources\ImageListIcon\518_Icon_DriveNameI.png" />
+    <Content Include="Resources\ImageListIcon\519_Icon_DriveNameJ.png" />
+    <Content Include="Resources\ImageListIcon\520_Icon_DriveNameK.png" />
+    <Content Include="Resources\ImageListIcon\521_Icon_DriveNameL.png" />
+    <Content Include="Resources\ImageListIcon\522_Icon_DriveNameM.png" />
+    <Content Include="Resources\ImageListIcon\523_Icon_DriveNameN.png" />
+    <Content Include="Resources\ImageListIcon\524_Icon_DriveNameO.png" />
+    <Content Include="Resources\ImageListIcon\525_Icon_DriveNameP.png" />
+    <Content Include="Resources\ImageListIcon\526_Icon_DriveNameQ.png" />
+    <Content Include="Resources\ImageListIcon\527_Icon_DriveNameR.png" />
+    <Content Include="Resources\ImageListIcon\528_Icon_DriveNameS.png" />
+    <Content Include="Resources\ImageListIcon\529_Icon_DriveNameT.png" />
+    <Content Include="Resources\ImageListIcon\530_Icon_DriveNameU.png" />
+    <Content Include="Resources\ImageListIcon\531_Icon_DriveNameV.png" />
+    <Content Include="Resources\ImageListIcon\532_Icon_DriveNameW.png" />
+    <Content Include="Resources\ImageListIcon\533_Icon_DriveNameX.png" />
+    <Content Include="Resources\ImageListIcon\534_Icon_DriveNameY.png" />
+    <Content Include="Resources\ImageListIcon\535_Icon_DriveNameZ.png" />
+    <Content Include="Resources\ImageListIcon\540_Icon_Func01.png" />
+    <Content Include="Resources\ImageListIcon\541_Icon_Func02.png" />
+    <Content Include="Resources\ImageListIcon\542_Icon_Func03.png" />
+    <Content Include="Resources\ImageListIcon\543_Icon_Func04.png" />
+    <Content Include="Resources\ImageListIcon\544_Icon_Func05.png" />
+    <Content Include="Resources\ImageListIcon\545_Icon_Func06.png" />
+    <Content Include="Resources\ImageListIcon\546_Icon_Func07.png" />
+    <Content Include="Resources\ImageListIcon\547_Icon_Func08.png" />
+    <Content Include="Resources\ImageListIcon\548_Icon_Func09.png" />
+    <Content Include="Resources\ImageListIcon\549_Icon_Func10.png" />
+    <Content Include="Resources\ImageListIcon\550_Icon_Func11.png" />
+    <Content Include="Resources\ImageListIcon\551_Icon_Func12.png" />
+    <Content Include="Resources\ImageListIcon\560_Icon_TaskWait.png" />
+    <Content Include="Resources\ImageListIcon\600_Image_Error.png" />
+    <Content Include="Resources\ImageListIcon\601_Icon_BookmarkGroup.png" />
+    <Content Include="Resources\ImageListIcon\602_Icon_BookmarkItem.png" />
+    <Content Include="Resources\ImageListIcon\610_Icon_ArchivePassword.png" />
+    <Content Include="Resources\ImageListIcon\611_Icon_BackgroundTaskFinish.png" />
+    <Content Include="Resources\ImageListIcon\612_Icon_BackgroundTaskSSH.png" />
+    <Content Include="Resources\ImageListIcon\613_Icon_FileAttributeDetailNo.png" />
+    <Content Include="Resources\ImageListIcon\614_Icon_FileAttributeDetailYes.png" />
+    <Content Include="Resources\ImageListIcon\620_Icon_KeySettingApi.png" />
+    <Content Include="Resources\ImageListIcon\621_Icon_KeySettingApiGroup.png" />
+    <Content Include="Resources\ImageListIcon\622_Icon_KeySettingApiNone.png" />
+    <Content Include="Resources\ImageListIcon\623_Icon_KeySettingCategory.png" />
+    <Content Include="Resources\ImageListIcon\624_Icon_KeySettingKey.png" />
+    <Content Include="Resources\ImageListIcon\625_Icon_KeySettingKeyGroup.png" />
+    <Content Include="Resources\ImageListIcon\630_Icon_TerminalNotAssigned.png" />
+    <Content Include="Resources\ImageListIcon\631_Icon_TerminalAssigned.png" />
+    <Content Include="Resources\ImageListIcon\632_Icon_TerminalNew.png" />
+    <Content Include="Resources\ImageListIcon\650_Icon_OperationFailed.png" />
+    <Content Include="Resources\ImageListIcon\700_StatusWait01.png" />
+    <Content Include="Resources\ImageListIcon\701_StatusWait02.png" />
+    <Content Include="Resources\ImageListIcon\702_StatusWait03.png" />
+    <Content Include="Resources\ImageListIcon\703_StatusWait04.png" />
+    <Content Include="Resources\ImageListIcon\704_StatusWait05.png" />
+    <Content Include="Resources\ImageListIcon\705_StatusWait06.png" />
+    <Content Include="Resources\ImageListIcon\706_StatusWait07.png" />
+    <Content Include="Resources\ImageListIcon\707_StatusWait08.png" />
+    <Content Include="Resources\ImageListIcon\708_StatusWait09.png" />
+    <Content Include="Resources\ImageListIcon\709_StatusWait10.png" />
+    <Content Include="Resources\ImageListIcon\710_StatusWait11.png" />
+    <Content Include="Resources\ImageListIcon\711_StatusWait12.png" />
+    <Content Include="Resources\ImageListIcon\712_StatusWait13.png" />
+    <Content Include="Resources\ImageListIcon\713_StatusWait14.png" />
+    <Content Include="Resources\ImageListIcon\714_StatusWait15.png" />
+    <Content Include="Resources\ImageListIcon\715_StatusWait16.png" />
+    <Content Include="Resources\ImageListIcon\800_ButtonRenameTimeSame1.png" />
+    <Content Include="Resources\ImageListIcon\801_ButtonRenameTimeSame2.png" />
+    <Content Include="Resources\ImageListIcon\802_ButtonRenameTimeSame3.png" />
+    <Content Include="Resources\ImageListIcon\803_ButtonRenameTimeSame4.png" />
+    <Content Include="Resources\ImageListIcon\804_ButtonRenameTimeSame5.png" />
+    <Content Include="Resources\MainIcon48.png" />
+    <Content Include="Resources\SameDialogInfoArrow.png" />
+    <Content Include="Resources\ShellFilerFView.ico" />
+    <Content Include="Resources\ShellFilerGView.ico" />
+    <Content Include="Resources\ShellFilerMain.ico" />
+    <Content Include="Resources\ShellFilerMView.ico" />
+    <Content Include="Resources\ShellFilerTerm.ico" />
+    <Content Include="Resources\TabClose_Focus.png" />
+    <Content Include="Resources\TabClose_Normal.png" />
+    <Content Include="Resources\TitleLogo.png" />
+    <Content Include="Resources\TwoStrokeKeyAlt.png" />
+    <Content Include="Resources\TwoStrokeKeyCtrl.png" />
+    <Content Include="Resources\TwoStrokeKeyCtrlAlt.png" />
+    <Content Include="Resources\TwoStrokeKeyNormal.png" />
+    <Content Include="Resources\TwoStrokeKeyShift.png" />
+    <Content Include="Resources\TwoStrokeKeyShiftAlt.png" />
+    <Content Include="Resources\TwoStrokeKeyShiftCtrl.png" />
+    <Content Include="Resources\TwoStrokeKeyShiftCtrlAlt.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="IWshRuntimeLibrary">
+      <Guid>{F935DC20-1CF0-11D0-ADB9-00C04FD58A0B}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 および x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

@@ -1,0 +1,67 @@
+<html>
+  <header>
+    <meta http-equiv="Content-Type" content="text/html; charset=Shift_JIS">
+    <style type="text/css">
+      h1 {
+        font-size: 14pt;
+        font-weight: bold;
+        color: #0000ff;
+        background-color: #c0f0f0;
+        line-height: 28px;
+        margin: 10px 5px 10px 5px;
+      }
+      h2 {
+        font-size: 11pt;
+        font-weight: bold;
+        color: #0000ff;
+        line-height: 13px;
+        margin: 0px 5px 5px 5px;
+      }
+      h3 {
+        font-size: 10pt;
+        font-weight: bold;
+        line-height: 12px;
+        margin: 5px 5px 5px 5px;
+      }
+      td {
+        font-size: 10pt;
+        margin: 2px 2px 2px 5px;
+      }
+      li {
+        font-size: 10pt;
+        margin: 2px 2px 2px 25px;
+      }
+      p.copyright {
+        font-size: 10pt;
+        color: #808080;
+        margin: 5px 5px 0px 20px;
+      }
+      p {
+        font-size: 10pt;
+        margin: 8px 5px 8px 5px;
+      }
+    </style>
+  </header>
+  <body>
+    <h1>SSH用のエディタとは</h1>
+    <p>SSHサーバにあるファイルを編集するときには特別な要件が求められるため、普段から使うテキストエディタとは別に、SSH専用のテキストエディタを指定することができます。</p>
+    <p>SSHのファイルを編集するときには次の要件を満たすテキストエディタを使用すると便利です。</p>
+    <table border="0">
+      <tr>
+        <td colspan="2"><b>改行コードLFへの対応</b></td>
+      </tr>
+      <tr>
+        <td>&nbsp;&nbsp;&nbsp;</td>
+        <td>SSHサーバにあるファイルの改行コードは、通常LFだけです。<br>保存したとき、Windowsの改行コードの仕様に合わせてCR+LFで保存するエディタを使うとトラブルの原因になります。<br><br></td>
+      </tr>
+      <tr>
+        <td colspan="2"><b>別プロセスでの起動</b></td>
+      </tr>
+      <tr>
+        <td>&nbsp;&nbsp;&nbsp;</td>
+        <td>ShellFilerから編集する場合はファイルごとに別プロセスで起動できるエディタをおすすめします。<br>エディタで複数のファイルを開いたとき、１つのプロセスに集約して編集するエディタでは、編集終了のタイミングを検出できないため、手操作によって編集結果をアップロードする必要があります（ShellFiler右下の[編集中]の一覧から[編集結果を反映]）。<br>１つのファイルを１つのプロセスで編集できるエディタでは、編集終了のタイミングを検出して、ShellFilerで反映確認のダイアログを自動的に開きます。</td>
+      </tr>
+    </table>
+    <p>※これらに非対応のエディタでも編集できますが、上記の特性を理解した上で使用する必要があります。</p>
+  </body>
+</html>

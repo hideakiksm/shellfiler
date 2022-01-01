@@ -1,0 +1,551 @@
+﻿using System;
+using System.Collections.Generic;
+using System.IO;
+using System.Text;
+using System.Text.RegularExpressions;
+using System.Drawing;
+using ShellFiler.Api;
+using ShellFiler.Document;
+using ShellFiler.Document.Setting;
+using ShellFiler.Document.OSSpec;
+using ShellFiler.FileTask.DataObject;
+using ShellFiler.FileSystem;
+using ShellFiler.FileSystem.SFTP;
+using ShellFiler.FileSystem.Shell;
+using ShellFiler.FileSystem.Windows;
+using ShellFiler.Locale;
+using ShellFiler.Properties;
+using ShellFiler.UI.FileList;
+using ShellFiler.UI.Dialog;
+using ShellFiler.Util;
+using ShellFiler.Virtual;
+
+namespace ShellFiler.FileSystem.Virtual {
+
+    //=========================================================================================
+    // クラス：仮想ディレクトリのファイル操作API
+    //=========================================================================================
+    class VirtualFileSystem : IFileSystem {
+        // このクラスはsingletonで動作する
+
+        // Windowsファイルシステム
+        private WindowsFileSystem m_windowsFileSystem;
+
+        // SFTPファイルシステム（SSHが有効でないときも有効なインスタンス）
+        private SFTPFileSystem m_sftpFileSystem;
+        
+        // SSHシェルファイルシステム（SSHが有効でないときも有効なインスタンス）
+        private ShellFileSystem m_shellFileSystem;
+
+        //=========================================================================================
+        // 機　能：コンストラクタ
+        // 引　数：[in]windowsFileSystem  Windowsファイルシステム
+        // 　　　　[in]sftpFileSystem     SFTPファイルシステム（SSHが有効でないときも有効なインスタンス）
+        // 　　　　[in]shellFileSystem    SSHシェルファイルシステム（SSHが有効でないときも有効なインスタンス）
+        // 戻り値：なし
+        //=========================================================================================
+        public VirtualFileSystem(WindowsFileSystem windowsFileSystem, SFTPFileSystem sftpFileSystem, ShellFileSystem shellFileSystem) {
+            m_windowsFileSystem = windowsFileSystem;
+            m_sftpFileSystem = sftpFileSystem;
+            m_shellFileSystem = shellFileSystem;
+        }
+
+        //=========================================================================================
+        // 機　能：ファイル操作を開始する
+        // 引　数：[in]cache     キャッシュ情報
+        // 　　　　[in]dirRoot   ルートディレクトリを含むディレクトリ
+        // 戻り値：なし
+        //=========================================================================================
+        public void BeginFileOperation(FileOperationRequestContext cache, string dirRoot) {
+        }
+
+        //=========================================================================================
+        // 機　能：ファイル操作を終了する
+        // 引　数：[in]context     コンテキスト情報
+        // 戻り値：なし
+        //=========================================================================================
+        public void EndFileOperation(FileOperationRequestContext context) {
+            context.Dispose();
+        }
+
+        //=========================================================================================
+        // 機　能：ファイル一覧を取得する
+        // 引　数：[in]context     コンテキスト情報
+        // 　　　　[in]directory   取得ディレクトリ
+        // 　　　　[out]fileList   ファイル一覧を取得する変数への参照
+        // 戻り値：ステータス（成功のときSuccess）
+        //=========================================================================================
+        public FileOperationStatus GetFileList(FileOperationRequestContext context, string directory, out List<IFile> fileList) {
+            VirtualGetFileListProcedure procedure = new VirtualGetFileListProcedure();
+            FileOperationStatus status = procedure.Execute(context, directory, out fileList);
+            return status;
+        }
+
+        //=========================================================================================
+        // 機　能：このファイルシステムの新しいファイル一覧を作成する
+        // 引　数：[in]directory     一覧を作成するディレクトリ
+        // 　　　　[in]isLeftWindow  左画面の一覧を作成するときtrue
+        // 　　　　[in]fileListCtx   使用中のファイル一覧のコンテキスト情報
+        // 戻り値：ファイル一覧（作成できなかったときnull）
+        //=========================================================================================
+        public IFileList CreateFileListFromExisting(string directory, bool isLeftWindow, IFileListContext fileListCtx) {
+            if (!(fileListCtx is VirtualFileListContext)) {
+                return null;
+            }
+            VirtualFolderInfo virtualFolder = ((VirtualFileListContext)fileListCtx).VirtualFolderInfo;
+            VirtualFolderArchiveInfo item = virtualFolder.GetVirtualFolderItem(directory);
+            if (item == null) {
+                return null;
+            }
+            IFileList fileList = VirtualFileList.CreateFromExistingVirtualFolder(this, directory, isLeftWindow, virtualFolder);
+            return fileList;
+        }
+
+        //=========================================================================================
+        // 機　能：ファイルアイコンを取得する
+        // 引　数：[in]filePath  ファイルパス
+        // 　　　　[in]isDir     ディレクトリのときtrue
+        // 　　　　[in]tryReal   実ファイルを取得するときtrue
+        // 　　　　[in]width     取得するアイコンの幅
+        // 　　　　[in]height    取得するアイコンの高さ
+        // 戻り値：アイコン（失敗したとき、デフォルトアイコンを使用するときnull）
+        //=========================================================================================
+        public Icon ExtractFileIcon(string filePath, bool isDir, bool tryReal, int width, int height) {
+            // 仮想フォルダ/SSHで同じ実装
+            return GenericFileStringUtils.ExtractFileIcon(filePath, isDir, tryReal, width, height);
+        }
+
+        //=========================================================================================
+        // 機　能：ファイル転送用に転送元ファイルをダウンロードする
+        // 引　数：[in]context           コンテキスト情報
+        // 　　　　[in]srcLogicalPath    転送元ファイルのファイルパス
+        // 　　　　[in]destLogicalPath   転送先ファイルのファイルパス
+        // 　　　　[in]destPhysicalPath  転送先ファイルとしてWindows上にダウンロードするときの物理パス
+        // 　　　　[in]srcFileInfo       転送元のファイル情報
+        // 　　　　[in]progress          進捗状態を通知するdelegate
+        // 戻り値：ステータスコード（成功のときSuccess）
+        //=========================================================================================
+        public FileOperationStatus TransferDownload(FileOperationRequestContext context, string srcLogicalPath, string destLogicalPath, string destPhysicalPath, IFile srcFileInfo, FileProgressEventHandler progress) {
+            VirtualExtractFileProcedure procedure = new VirtualExtractFileProcedure();
+            FileOperationStatus status = procedure.Execute(context, srcLogicalPath, destPhysicalPath, progress);
+            return status;
+        }
+
+        //=========================================================================================
+        // 機　能：ファイル転送用に転送元ファイルをアップロードする
+        // 引　数：[in]context           コンテキスト情報
+        // 　　　　[in]srcLogicalPath    転送元ファイルのファイルパス
+        // 　　　　[in]destLogicalPath   転送先ファイルのファイルパス
+        // 　　　　[in]srcPhysicalPath   転送元ファイルとしてWindows上に用意されているファイルの物理パス
+        // 　　　　[in]progress          進捗状態を通知するdelegate
+        // 戻り値：ステータスコード（成功のときSuccess）
+        //=========================================================================================
+        public FileOperationStatus TransferUpload(FileOperationRequestContext context, string srcLogicalPath, string destLogicalPath, string srcPhysicalPath, FileProgressEventHandler progress) {
+            // 転送先にはなれない
+            return FileOperationStatus.Fail;
+        }
+
+        //=========================================================================================
+        // 機　能：ファイルの情報を返す
+        // 引　数：[in]context       コンテキスト情報
+        // 　　　　[in]directory     ファイルパス
+        // 　　　　[in]isTarget      対象パスの一覧のときtrue、反対パスのときfalse
+        // 　　　　[out]fileInfo     ファイルの情報（失敗したときはnull）
+        // 戻り値：ステータス（成功のときSuccess、存在しないときはSuccessでfileInfo=null）
+        //=========================================================================================
+        public FileOperationStatus GetFileInfo(FileOperationRequestContext context, string directory, bool isTarget, out IFile fileInfo) {
+            VirtualGetFileInfoProcedure procedure = new VirtualGetFileInfoProcedure();
+            FileOperationStatus status = procedure.Execute(context, directory, out fileInfo);
+            return status;
+        }
+
+        //=========================================================================================
+        // 機　能：ファイル属性を設定する
+        // 引　数：[in]context       コンテキスト情報
+        // 　　　　[in]srcFileInfo   転送元のファイル情報
+        // 　　　　[in]destFilePath  転送先のフルパス
+        // 　　　　[in]baseAttr      属性の基本部分を設定するときtrue
+        // 　　　　[in]allAttr       すべての属性を設定するときtrue
+        // 戻り値：エラーコード
+        //=========================================================================================
+        public FileOperationStatus SetFileInfo(FileOperationRequestContext context, IFile srcFileInfo, string destFilePath, bool baseAttr, bool allAttr) {
+            return FileOperationStatus.Fail;
+        }
+
+        //=========================================================================================
+        // 機　能：ファイルの存在を確認する
+        // 引　数：[in]cache     コンテキスト情報
+        // 　　　　[in]filePath  ファイルパス
+        // 　　　　[in]isTarget  対象パスの一覧のときtrue、反対パスのときfalse
+        // 　　　　[in]isFile    ファイルの存在を調べるときtrue、フォルダはfalse、両方はnull
+        // 　　　　[out]isExist  ファイルが存在するときtrueを返す領域への参照
+        // 戻り値：ステータス（成功のときSuccess、存在しないときはSuccessでisExist=false）
+        //=========================================================================================
+        public FileOperationStatus CheckFileExist(FileOperationRequestContext cache, string filePath, bool isTarget, BooleanFlag isFile, out bool isExist) {
+            isExist = false;
+            return FileOperationStatus.Fail;
+        }
+
+        //=========================================================================================
+        // 機　能：ディレクトリを作成する
+        // 引　数：[in]context    コンテキスト情報
+        // 　　　　[in]basePath   ディレクトリを作成する場所のパス
+        // 　　　　[in]newName    作成するディレクトリ名
+        // 　　　　[in]isTarget   対象パスの一覧のときtrue、反対パスのときfalse
+        // 戻り値：ステータス（成功のときSuccessMkDir）
+        //=========================================================================================
+        public FileOperationStatus CreateDirectory(FileOperationRequestContext context, string basePath, string newName, bool isTarget) {
+            return FileOperationStatus.Fail;
+        }
+
+        //=========================================================================================
+        // 機　能：ファイル/フォルダを削除する
+        // 引　数：[in]context     コンテキスト情報
+        // 　　　　[in]filePath    削除するファイルのパス
+        // 　　　　[in]isTarget    対象パスを削除するときtrue、反対パスのときfalse
+        // 　　　　[in]flag        削除フラグ
+        // 戻り値：ステータス（成功のときSuccessDelete）
+        //=========================================================================================
+        public FileOperationStatus DeleteFileFolder(FileOperationRequestContext context, string filePath, bool isTarget, DeleteFileFolderFlag flag) {
+            return FileOperationStatus.Fail;
+        }
+        
+        //=========================================================================================
+        // 機　能：ファイルの名前と属性を変更する
+        // 引　数：[in]cache      キャッシュ情報
+        // 　　　　[in]path       属性を変更するファイルやディレクトリのフルパス
+        // 　　　　[in]orgInfo    変更前のファイル情報
+        // 　　　　[in]newInfo    変更後のファイル情報
+        // 戻り値：ステータス（成功のときSuccessRename）
+        //=========================================================================================
+        public FileOperationStatus Rename(FileOperationRequestContext cache, string path, RenameFileInfo orgInfo, RenameFileInfo newInfo) {
+            return FileOperationStatus.Fail;
+        }
+
+        //=========================================================================================
+        // 機　能：ファイルの名前と属性を一括変更のルールで変更する
+        // 引　数：[in]cache      キャッシュ情報
+        // 　　　　[in]path       属性を変更するファイルやディレクトリのフルパス
+        // 　　　　[in]renameInfo 変更ルール
+        // 　　　　[in]modifyCtx  名前変更のコンテキスト情報
+        // 戻り値：ステータス（成功のときSuccessRename）
+        //=========================================================================================
+        public FileOperationStatus ModifyFileInfo(FileOperationRequestContext cache, string path, RenameSelectedFileInfo renameInfo, ModifyFileInfoContext modifyCtx) {
+            return FileOperationStatus.Fail;
+        }
+
+        //=========================================================================================
+        // 機　能：画像を読み込む
+        // 引　数：[in]context   コンテキスト情報
+        // 　　　　[in]filePath  読み込み対象のファイルパス
+        // 　　　　[in]maxSize   読み込む最大サイズ
+        // 　　　　[out]image    読み込んだ画像を返す変数
+        // 戻り値：ステータス（成功のときSuccess）
+        //=========================================================================================
+        public FileOperationStatus RetrieveImage(FileOperationRequestContext context, string filePath, long maxSize, out BufferedImage image) {
+            VirtualRetrieveImageProcedure procedure = new VirtualRetrieveImageProcedure();
+            FileOperationStatus status = procedure.Execute(context, filePath, maxSize, out image);
+            return status;
+        }
+
+        //=========================================================================================
+        // 機　能：ファイルアクセスのためファイルを準備する（チャンクで読み込み）
+        // 引　数：[in]context  コンテキスト情報
+        // 　　　　[in]file     アクセスしたいファイルの情報
+        // 戻り値：ステータス（成功のときSuccess）
+        //=========================================================================================
+        public FileOperationStatus RetrieveFileChunk(FileOperationRequestContext context, AccessibleFile file) {
+            VirtualRetrieveFileChunkProcedure procedure = new VirtualRetrieveFileChunkProcedure();
+            FileOperationStatus status = procedure.Execute(context, file);
+            return status;
+        }
+
+        //=========================================================================================
+        // 機　能：リモートでコマンドを実行する
+        // 引　数：[in]cache       キャッシュ情報
+        // 　　　　[in]dirName     カレントディレクトリ名
+        // 　　　　[in]command     コマンドライン
+        // 　　　　[in]errorExpect エラーの期待値
+        // 　　　　[in]relayOutLog 標準出力の結果をログ出力するときtrue
+        // 　　　　[in]relayErrLog 標準エラーの結果をログ出力するときtrue
+        // 　　　　[in]dataTarget  取得データの格納先
+        // 戻り値：ステータス（成功のときSuccess）
+        //=========================================================================================
+        public FileOperationStatus RemoteExecute(FileOperationRequestContext cache, string dirName, string command, List<OSSpecLineExpect> errorExpect, bool relayOutLog, bool relayErrLog, IRetrieveFileDataTarget dataTarget) {
+            return FileOperationStatus.Fail;
+        }
+
+        //=========================================================================================
+        // 機　能：ファイルを関連づけ実行する
+        // 引　数：[in]filePath      実行するファイルのローカルパス
+        // 　　　　[in]currentDir    カレントパス
+        // 　　　　[in]allFile       すべてのファイルを実行するときtrue、実行ファイルだけのときfalse
+        // 　　　　[in]fileListCtx   ファイル一覧のコンテキスト情報
+        // 戻り値：ステータス（成功のときSuccess）
+        // メ　モ：仮想フォルダに展開後、実行する。
+        // 　　　　同時実行の問題を避けるためUIスレッドからの呼び出しが必須。
+        //=========================================================================================
+        public FileOperationStatus OpenShellFile(string filePath, string currentDir, bool allFile, IFileListContext fileListCtx) {
+            VirtualFolderInfo virtualFolder = ((VirtualFileListContext)fileListCtx).VirtualFolderInfo;
+            int executeId = virtualFolder.VirtualExecuteId;
+            string tempFilePath = virtualFolder.GetExecuteLocalPath(filePath);
+            string tempCurrentDir = virtualFolder.GetExecuteLocalPath(currentDir);
+            if (tempFilePath == null) {
+                Program.Abort("仮想フォルダ内のコンテンツを仮想フォルダパスに変換できません。temp={0}, file={1}, tempList={2}", tempFilePath, filePath, StringUtils.CombineStringArray(virtualFolder.GetManagedTemporaryList(), ", "));
+            }
+            if (tempCurrentDir == null) {
+                Program.Abort("仮想フォルダ内のコンテンツを仮想フォルダパスに変換できません。temp={0}, file={1}, tempList={2}", tempCurrentDir, currentDir, StringUtils.CombineStringArray(virtualFolder.GetManagedTemporaryList(), ", "));
+            }
+            return m_windowsFileSystem.OpenShellFile(tempFilePath, tempCurrentDir, allFile, fileListCtx);
+        }
+
+        //=========================================================================================
+        // 機　能：指定したフォルダ以下のファイルサイズ合計を取得する
+        // 引　数：[in]context     コンテキスト情報
+        // 　　　　[in]directory   対象ディレクトリのルート
+        // 　　　　[in]condition   取得条件
+        // 　　　　[in]result      取得結果を返す変数
+        // 　　　　[in]progress    進捗状態を通知するdelegate
+        // 戻り値：ステータス（成功のときSuccess）
+        //=========================================================================================
+        public FileOperationStatus RetrieveFolderSize(FileOperationRequestContext context, string directory, RetrieveFolderSizeCondition condition, RetrieveFolderSizeResult result, FileProgressEventHandler progress) {
+            result = null;
+            return FileOperationStatus.Fail;
+        }
+
+        //=========================================================================================
+        // 機　能：このファイルシステムのパス同士で、同じサーバ空間のパスかどうかを調べる
+        // 引　数：[in]path1  パス１
+        // 　　　　[in]path2  パス２
+        // 戻り値：パス１とパス２が同じサーバ空間にあるときtrue
+        //=========================================================================================
+        public bool IsSameServerSpace(string path1, string path2) {
+            bool result;
+            if (m_sftpFileSystem.IsAbsolutePath(path1, null) && m_sftpFileSystem.IsAbsolutePath(path2, null)) {
+                result = m_sftpFileSystem.IsSameServerSpace(path1, path2);
+            } else if (m_shellFileSystem.IsAbsolutePath(path1, null) && m_shellFileSystem.IsAbsolutePath(path2, null)) {
+                result = m_sftpFileSystem.IsSameServerSpace(path1, path2);
+            } else if (m_windowsFileSystem.IsAbsolutePath(path1, null) && m_windowsFileSystem.IsAbsolutePath(path2, null)) {
+                result = m_windowsFileSystem.IsSameServerSpace(path1, path2);
+            } else {
+                result = false;
+            }
+            return result;
+        }
+
+        //=========================================================================================
+        // 機　能：パスとファイルを連結する
+        // 引　数：[in]dir  ディレクトリ名
+        // 　　　　[in]file ファイル名
+        // 戻り値：連結したファイル名
+        //=========================================================================================
+        public string CombineFilePath(string dir, string file) {
+            string result;
+            if (m_sftpFileSystem.IsAbsolutePath(dir, null)) {
+                result = m_sftpFileSystem.CombineFilePath(dir, file);
+            } else if (m_shellFileSystem.IsAbsolutePath(dir, null)) {
+                result = m_shellFileSystem.CombineFilePath(dir, file);
+            } else {
+                result = m_windowsFileSystem.CombineFilePath(dir, file);
+            }
+            return result;
+        }
+
+        //=========================================================================================
+        // 機　能：ディレクトリ名の最後を'\'または'/'にする
+        // 引　数：[in]dir  ディレクトリ名
+        // 戻り値：'\'または'/'を補完したディレクトリ名
+        //=========================================================================================
+        public string CompleteDirectoryName(string dir) {
+            string result;
+            if (m_sftpFileSystem.IsAbsolutePath(dir, null)) {
+                result = m_sftpFileSystem.CompleteDirectoryName(dir);
+            } else if (m_shellFileSystem.IsAbsolutePath(dir, null)) {
+                result = m_shellFileSystem.CompleteDirectoryName(dir);
+            } else {
+                result = m_windowsFileSystem.CompleteDirectoryName(dir);
+            }
+            return result;
+        }
+
+        //=========================================================================================
+        // 機　能：このファイルシステムの絶対パス表現かどうかを調べる
+        // 引　数：[in]directory     ディレクトリ名
+        // 　　　　[in]fileListCtx   ファイル一覧のコンテキスト情報
+        // 戻り値：絶対パスのときtrue(trueでも実際にファイルアクセスできるかどうかは不明)
+        //=========================================================================================
+        public bool IsAbsolutePath(string directory, IFileListContext fileListCtx) {
+            VirtualFolderInfo virtualFolder = ((VirtualFileListContext)fileListCtx).VirtualFolderInfo; 
+            if (virtualFolder == null) {
+                return false;
+            } else {
+                VirtualFolderArchiveInfo item = virtualFolder.GetVirtualFolderItem(directory);
+                return (item != null);
+            }
+        }
+
+        //=========================================================================================
+        // 機　能：指定されたパス名をルートとそれ以外に分割する
+        // 引　数：[in]path   パス名
+        // 　　　　[out]root  ルート部分を返す文字列（最後はセパレータ）
+        // 　　　　[out]sub   サブディレクトリ部分を返す文字列
+        // 戻り値：なし
+        //=========================================================================================
+        public void SplitRootPath(string path, out string root, out string sub) {
+            if (m_sftpFileSystem.IsAbsolutePath(path, null)) {
+                m_sftpFileSystem.SplitRootPath(path, out root, out sub);
+            } else if (m_shellFileSystem.IsAbsolutePath(path, null)) {
+                m_shellFileSystem.SplitRootPath(path, out root, out sub);
+            } else {
+                m_windowsFileSystem.SplitRootPath(path, out root, out sub);
+            }
+        }
+
+        //=========================================================================================
+        // 機　能：指定されたパス名のホームディレクトリを取得する
+        // 引　数：[in]path  パス名
+        // 戻り値：ホームディレクトリ（取得できないときnull）
+        //=========================================================================================
+        public string GetHomePath(string path) {
+            string result;
+            if (m_sftpFileSystem.IsAbsolutePath(path, null)) {
+                result = m_sftpFileSystem.GetHomePath(path);
+            } else if (m_shellFileSystem.IsAbsolutePath(path, null)) {
+                result = m_shellFileSystem.GetHomePath(path);
+            } else {
+                result = m_windowsFileSystem.GetHomePath(path);
+            }
+            return result;
+        }
+
+        //=========================================================================================
+        // 機　能：ファイルパスからファイル名を返す
+        // 引　数：[in]filePath  ファイルパス
+        // 戻り値：ファイルパス中のファイル名
+        //=========================================================================================
+        public string GetFileName(string filePath) {
+            int idxEn = filePath.LastIndexOf('\\');
+            if (idxEn == -1) {
+                int idxSlash = filePath.LastIndexOf('/');
+                if (idxSlash == -1) {
+                    return filePath;
+                } else {
+                    return filePath.Substring(idxSlash + 1);
+                }
+            } else {
+                return filePath.Substring(idxEn + 1);
+            }
+        }
+
+        //=========================================================================================
+        // 機　能：指定されたパス名の絶対パス表現を取得する
+        // 引　数：[in]path  パス名
+        // 戻り値：絶対パス
+        //=========================================================================================
+        public string GetFullPath(string path) {
+            string result;
+            if (m_sftpFileSystem.IsAbsolutePath(path, null)) {
+                path.Replace('\\', '/');
+                result = m_sftpFileSystem.GetFullPath(path);
+            } else if (m_shellFileSystem.IsAbsolutePath(path, null)) {
+                path.Replace('\\', '/');
+                result = m_shellFileSystem.GetFullPath(path);
+            } else {
+                result = m_windowsFileSystem.GetFullPath(path);
+            }
+            return result;
+        }
+
+        //=========================================================================================
+        // 機　能：指定されたパスからディレクトリ名部分を返す
+        // 引　数：[in]path     パス名
+        // 戻り値：パス名のディレクトリ部分
+        //=========================================================================================
+        public string GetDirectoryName(string path) {
+            int idxEn = path.LastIndexOf('\\');
+            int idxSlash = path.LastIndexOf('/');
+            int idx = Math.Max(idxEn, idxSlash);
+            if (idx == -1) {
+                return path;
+            } else {
+                return path.Substring(0, idx + 1);
+            }
+        }
+
+        //========================================================================================
+        // 機　能：パスの区切り文字を返す
+        // 引　数：[in]fileListCtx   ファイル一覧のコンテキスト情報
+        // 戻り値：パスの区切り文字
+        //=========================================================================================
+        public string GetPathSeparator(IFileListContext fileListCtx) {
+            VirtualFolderInfo virtualInfo = ((VirtualFileListContext)fileListCtx).VirtualFolderInfo;
+            FileSystemID fileSystem = virtualInfo.BaseFileSystem.FileSystemId;
+            if (FileSystemID.IsWindows(fileSystem)) {
+                return "\\";
+            } else if (FileSystemID.IsSSH(fileSystem)) {
+                return "/";
+            } else {
+                FileSystemID.NotSupportError(fileSystem);
+                return "\\";
+            }
+        }
+        
+        //=========================================================================================
+        // 機　能：後始末を行う
+        // 引　数：なし
+        // 戻り値：なし
+        //=========================================================================================
+        public void Dispose() {
+        }
+
+        //=========================================================================================
+        // プロパティ：ファイルシステムID
+        //=========================================================================================
+        public FileSystemID FileSystemId {
+            get {
+                return FileSystemID.Virtual;
+            }
+        }
+
+        //=========================================================================================
+        // プロパティ：サポートするショートカットの種類
+        //=========================================================================================
+        public ShortcutType[] SupportedShortcutType {
+            get {
+                ShortcutType[] list = new ShortcutType[0];
+                return list;
+            }
+        }
+        
+        //=========================================================================================
+        // プロパティ：ローカル実行の際、ダウンロードとアップロードが必要なときtrue
+        //=========================================================================================
+        public bool LocalExecuteDownloadRequired {
+            get {
+                return false;
+            }
+        }
+
+        //=========================================================================================
+        // プロパティ：表示の際の項目一覧
+        //=========================================================================================
+        public FileListHeaderItem[] FileListHeaderItemList {
+            get {
+                FileListHeaderItem[] list = new FileListHeaderItem[3];
+                list[0] = new FileListHeaderItem(FileListHeaderItem.FileListHeaderItemId.FileName,     Resources.FileListItemFileName,   "WWWWWWWWWW.WWW", true);      // ファイル名
+                list[1] = new FileListHeaderItem(FileListHeaderItem.FileListHeaderItemId.FileSize,     Resources.FileListItemSize,       "999.999W",       false);     // ファイルサイズ
+                list[2] = new FileListHeaderItem(FileListHeaderItem.FileListHeaderItemId.ModifiedTime, Resources.FileListItemUpdateDate, "99/99/99 99:99", false);     // 更新日時
+                return list;
+            }
+        }
+
+        //=========================================================================================
+        // プロパティ：通常使用するエンコード方式
+        //=========================================================================================
+        public EncodingType DefaultEncoding {
+            get {
+                return EncodingType.SJIS;
+            }
+        }
+    }
+}

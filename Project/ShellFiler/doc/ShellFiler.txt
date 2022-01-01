@@ -1,0 +1,44 @@
+ShellFiler Ver.3.0.0
+Copyright (c) 2011-2022 Hideaki KISHIMOTO
+
+【概要】
+ShellFilerはWindows用のファイル管理ソフトです。
+Windows上のファイルのコピーや移動、実行、ファイルの閲覧などを迅速に行うことが
+できます。
+キーボードを使っての迅速なファイル操作、マウスを使っての自由な操作のいずれでも
+お使いいただけます。
+
+次のソフトウェアをダウンロードしてインストールすることで、機能を拡張できます。
+
+・SharpSSH：SSHサーバーのファイルを操作できます。
+・7-Zip：圧縮ファイルを扱えるようになります。
+・お好みの差分表示ツール：差分比較のためアプリケーションを簡単に起動できます。
+
+導入方法などの詳細は、ShellFilerを起動した後、[ヘルプ]メニューの[拡張ソフト
+ウェアの導入]からご覧ください。
+
+【オープンソース】
+ShellFilerのソースコードは以下のGitHub上で公開しています。
+https://github.com/hideakiksm/shellfiler
+
+
+【関連ソフトウェア】
+ShellFilerは以下のライブラリを使用しています。
+一部改変しているライブラリがあります。改変したソースは上記GitHubをご覧ください。
+SpHeader
+   Copyright (c) 2004 by Sergei Pavlovsky
+   http://www.codeproject.com/KB/miscctrl/CS_Header_Control.aspx
+C# (.net) interface for 7-Zip archive dlls
+   Copyright 2008 by Eugene Sichkar
+   http://www.codeproject.com/KB/DLL/cs_interface_7zip.aspx
+
+ShellFilerでは以下のソフトウェア仕様に依存した連携処理を組み込んでいます。
+導入するには以下のURLを参考にしてダウンロードしてください。
+SharpSSH
+   Copyright (c) 2008 TamirGal.com
+   http://www.tamirgal.com/blog/page/SharpSSH.aspx
+7-Zip
+   Copyright (c) 2011 Igor Pavlov
+   http://sevenzip.sourceforge.jp/
+
+                                                                           以上

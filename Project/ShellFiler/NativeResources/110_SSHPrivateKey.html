@@ -1,0 +1,88 @@
+<html>
+  <header>
+    <meta http-equiv="Content-Type" content="text/html; charset=Shift_JIS">
+    <style type="text/css">
+      h1 {
+        font-size: 14pt;
+        font-weight: bold;
+        color: #0000ff;
+        background-color: #c0f0f0;
+        line-height: 28px;
+        margin: 10px 5px 10px 5px;
+      }
+      h2 {
+        font-size: 11pt;
+        font-weight: bold;
+        color: #0000ff;
+        line-height: 13px;
+        margin: 0px 5px 5px 5px;
+      }
+      h3 {
+        font-size: 10pt;
+        font-weight: bold;
+        line-height: 12px;
+        margin: 5px 5px 5px 5px;
+      }
+      ul {
+        font-size: 10pt;
+        margin: 2px 2px 2px 5px;
+      }
+      li {
+        font-size: 10pt;
+        margin: 2px 2px 2px 25px;
+      }
+      p.copyright {
+        font-size: 10pt;
+        color: #808080;
+        margin: 5px 5px 0px 20px;
+      }
+      p {
+        font-size: 10pt;
+        margin: 8px 5px 8px 5px;
+      }
+    </style>
+  </header>
+  <body>
+    <h1>鍵の生成とテスト</h1>
+    <p>SSHでは、ユーザー名とパスワードによるログインのほか、公開鍵暗号を使ったログインもサポートしています。<br>ここでは鍵の動作実績についての限定した情報をまとめています。公開鍵によるログインの一般的な情報については、ネット上で「SSH 公開鍵」などを検索してください。</p>
+    <br>
+    <p>ShellFilerで秘密鍵として指定できるファイルの形式は、OpenSSH形式で、かつ、SharpSSHで読み込める形式だけです。SSHの公開鍵暗号によるログインは、各ツールで生成できる鍵の形式や、読み込める形式が異なるため、注意が必要です。<br>ShellFilerでは、以下の方法で鍵の生成と接続テストができることを確認しています。</p>
+
+    <br><br>
+
+    <h2>鍵の生成</h2>
+    <p>ShellFilerで読み込める形式の秘密鍵は、「PuTTY」に付属の鍵生成ツール「PuTTYgen」を使って作成できます。<br>PuTTYgenで鍵を生成した後、[Conversions(変換)]メニューから[Export OpenSSH Key(OpenSSH形式へエクスポート)]を実行すると、ShellFilerから読み込める形式で秘密鍵を保存できます。</p>
+    <p>※対応する公開鍵はSSHサーバの所定の位置に格納します。</p>
+    <p>暗号形式としては、最低限、RSA1024bitで動作することを確認しています。</p>
+
+    <br><br>
+
+    <h2>接続テスト</h2>
+    <p>生成した秘密鍵の接続テストを行いたい場合、「Tera Term」を利用できます。<br>PuTTYではPuTTYgenで生成したOpenSSH形式の鍵そのものを使って接続できないため、Tera Termを使用します。</p>
+    <p>Tera Termで接続先を入力した後、[SSH認証]ダイアログで[RSA/DSA鍵を使う]に秘密鍵（OpenSSH形式）のファイルを指定し、[パスフレーズ]にPuTTYgenで指定した鍵のパスフレーズを指定します。</p>
+    <br>
+    <p>もし、Tera Termでも接続できない場合は、SSHサーバー側の設定もあわせて確認してください。一般的な確認事項は次の通りです。</p>
+    <ul>
+      <li>公開鍵~/.ssh/authorized_keysには、生成した秘密鍵に対応した公開鍵が指定されていますか？</li>
+      <li>authorized_keysのパーミッションは600に設定されていますか？</li>
+      <li>homeディレクトリのの書き込み権は所有者だけに制限されていますか？</li>
+    </ul>
+
+    <br><br>
+
+    <h2>その他の注意</h2>
+    <p>ShellFilerでは指定された秘密鍵のファイルを内部情報として取り込まないため、指定した秘密鍵のファイルは認証ごとに毎回参照します（内部情報として持つのは秘密鍵のファイルパスとパスフレーズです）。</p>
+    <p>秘密鍵は一時フォルダではなく、恒久的に参照できるフォルダに置いてから、ダイアログで指定してください。</p>
+
+    <br>
+
+    <hr>
+    <p>PuTTYは、Simon Tatham氏作成のTelnet/SSHクライアントです。</p>
+    <p class="copyright">(c)1997-2011 Simon Tatham. All rights reserved.</p>
+    <br>
+    <p>Tera Termは、T. Teranishi氏作成のものをオリジナルとし、Tera Term Projectで開発されているTelnet/SSHクライアントです。</p>
+    <p class="copyright">Copyright (C) 1994-1998 T. Teranishi<br>(C)2004-2012 Tera Term Project All rights reserved.</p>
+    <br>
+    <p>これらの著作権は各ソフトウェアの作者または団体に帰属します。また、利用条件は各ソフトウェアの条件に基づきます。</p>
+  </body>
+</html>

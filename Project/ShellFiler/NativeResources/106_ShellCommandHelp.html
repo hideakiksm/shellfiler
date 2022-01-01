@@ -1,0 +1,60 @@
+<html>
+  <header>
+    <meta http-equiv="Content-Type" content="text/html; charset=Shift_JIS">
+    <style type="text/css">
+      h1 {
+        font-size: 10pt;
+        font-weight: bold;
+        color: #0000ff;
+        background-color: #c0f0f0;
+        line-height: 20px;
+        margin: 5px 0px 5px 0px;
+      }
+      h2 {
+        font-size: 9pt;
+        font-weight: bold;
+        color: #0000ff;
+        line-height: 13px;
+        margin: 10px 0px 5px 0px;
+      }
+      td {
+        font-size: 9pt;
+      }
+      body {
+        font-size: 9pt;
+      }
+    </style>
+  </header>
+  <body bgcolor="#ffffc0">
+    <h1>コマンド引数</h1>
+    コマンドラインに渡す引数には、オプションなどの固定文字列のほか、ファイル一覧中でマークされているファイル名や、ダイアログで入力した項目を埋め込むことができます。<br>埋め込み部分は<b>変数</b>とそれを加工する<b>修飾子</b>で構成されます。<br>
+    例 editor $&lt;オプション&gt; $P:al
+    <h2>変数</h2>
+    <table border="1" cellspacing="0" cellpadding="2">
+      <tr><td>$F</td><td>対象パスのカーソル上のファイルのファイル名（例 MyFile.txt）</td></tr>
+      <tr><td>$P</td><td>対象パスのカーソル上のファイルのフルパス名（例 C:\data\MyFile.txt）</td></tr>
+      <tr><td>$M</td><td>対象パスのマークファイル名（例　C:\data\MyFile.txt C:\data\sample.jpg）
+      <tr><td>$D</td><td>対象パスのフォルダ名（例 C:）</td></tr>
+      <tr><td>$OF</td><td>反対パスのカーソル上のファイルのファイル名</td></tr>
+      <tr><td>$OP</td><td>反対パスのカーソル上のファイルのフルパス名</td></tr>
+      <tr><td>$OM</td><td>反対パスのマークファイル名</td></tr>
+      <tr><td>$OD</td><td>反対パスのフォルダ名</td></tr>
+      <tr><td>$$</td><td>「$」1文字</td></tr>
+      <tr><td nowrap>$&lt;msg&gt;</td><td>ダイアログでパラメータを入力します。msgに最大10文字程度で入力時の項目説明を記述します。</td></tr>
+    </table>
+    <h2>修飾子</h2>
+    例は「C:\Data\LOG.txt」に対する結果です。修飾子の連続実行はできません。
+    <table border="1" cellspacing="0" cellpadding="2">
+      <tr><td>:e</td><td>拡張子（例：txt）</td></tr>
+      <tr><td>:r</td><td>拡張子をのぞいた部分（例：LOG）</td></tr>
+      <tr><td>:d</td><td>ドライブ名（例：C）ネットワークの場合、空文字列となります。</td></tr>
+      <tr><td>:h</td><td>パス名（例：C:Data）</td></tr>
+      <tr><td>:t</td><td>ファイル名本体（例：LOG.txt）</td></tr>
+      <tr><td>:n</td><td>クォーティングがある場合にはずす（例：C:\DAT\LOG.txt）</td></tr>
+      <tr><td>:q</td><td>クォーティングがない場合に付ける（例：C:\DAT\LOG.txt）</td></tr>
+      <tr><td>:au</td><td>大文字化（例：C:\DATA\LOG.TXT）</td></tr>
+      <tr><td>:al</td><td>小文字化（例：c:\data\log.txt）</td></tr>
+      <tr><td nowrap>:ac&nbsp;&nbsp;</td><td>先頭大文字化（例：C:\Data\Log.Sys）</td></tr>
+    </table>
+  </body>
+</html>

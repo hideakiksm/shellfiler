@@ -1,0 +1,13 @@
+; SfHelper.def : DLL のモジュール パラメータを宣言します。
+
+LIBRARY      "SfHelper"
+
+EXPORTS
+    ; 明示的なエクスポートはここへ記述できます
+	InitializeExplorerMenu
+	ShowExplorerMenu
+	ExecuteExplorerMenuItem
+	DeleteExplorerMenu
+	HandleMenuMessage
+	GetPasswordSalt
+	
