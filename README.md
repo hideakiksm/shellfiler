@@ -16,6 +16,8 @@ Windows 10以降の64bit環境に対応しています。
 
 安定版：[shellfiler3.0.0.msi](Release/shellfiler3.0.0.msi)
 
+※リンク先の右側にあるDownloadボタンをクリック
+
 オープンソース版では、それ以前のキー設定とメニュー設定は引き継ぐことができません。
 
 Ver.3.0.0以前のバージョンは一旦アンインストールすることをおすすめします。
@@ -25,12 +27,15 @@ Ver.3.0.0以前のバージョンは一旦アンインストールすること�
 ShellFiler単体でも使用できますが、ダウンロード後は連携ソフトウェアをインストールすることをおすすめします。
 
 * [SharpSSH](https://ja.osdn.net/projects/sfnet_sharpssh/)
+
     SharpSSHをインストールすると、ShellFilerからSSH/SFTPプロトコルを使って、LinuxなどのSSHサーバーにあるファイルを操作することができます。
 
 * [7-Zip](https://sevenzip.osdn.jp/)
+
     7-Zipをインストールすると、ShellFilerから圧縮ファイルの作成と展開ができるようになります。
 
 * [WinMerge](https://winmerge.org/?lang=ja)
+
     お好みの差分表示ツールをインストールすると、ファイルやフォルダの差分を簡単に確認できます。
     WinMerge以外にもコマンドラインに比較対象のファイルを指定すると差分が比較できるツール全般に対応しています。
     メニューの[オプション-オプション]の[インストール情報＞差分表示ツール]で設定します。
@@ -47,13 +52,14 @@ ShellFilerの設定情報は以下に格納されています。
 2. Windowsの設定（コントロールパネル）からアプリ一覧のShellFilerをアンインストールしてます。
 
 3. インストーラ外で書き込まれる以下の３つのフォルダを削除します。
-   ①C:\Program Files\ShellFiler
+
+   C:\Program Files\ShellFiler
    SharpSSHなどを手動でコピーすると、フォルダが残ることがあります。
 
-   ②C:\Users\○○\AppData\Local\ShellFiler
+   C:\Users\○○\AppData\Local\ShellFiler
     内部処理でテンポラリとして使用します。
 
-   ③C:\Users\○○\AppData\Roaming\ShellFiler
+   C:\Users\○○\AppData\Roaming\ShellFiler
    設定ファイルが残ります。削除すると設定がリセットされます。
 
 ## ビルド方法
@@ -82,10 +88,15 @@ ShellFilerは以下のライブラリを使用しています。
 利用条件の詳細については、インストール後のCredit.txtをご覧ください。
 
 - SpHeader
+
   Copyright (c) 2004 by Sergei Pavlovsky
+
   http://www.codeproject.com/KB/miscctrl/CS_Header_Control.aspx
+
 - C# (.net) interface for 7-Zip archive dlls
+
   Copyright 2008 by Eugene Sichkar
+
   http://www.codeproject.com/KB/DLL/cs_interface_7zip.aspx
 
 ---
