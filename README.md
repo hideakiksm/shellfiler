@@ -14,9 +14,7 @@ ShellFilerはWindows PC上のファイルを軽快に操作できるだけでな
 
 Windows 10以降の64bit環境に対応しています。
 
-安定版：[shellfiler3.0.0.msi](Release/shellfiler3.0.0.msi)
-
-※リンク先の右側にあるDownloadボタンをクリック
+安定版：[shellfiler3.0.0.msi](https://github.com/hideakiksm/shellfiler-release/raw/main/release/shellfiler3.0.0.msi)
 
 オープンソース版では、それ以前のキー設定とメニュー設定は引き継ぐことができません。
 
