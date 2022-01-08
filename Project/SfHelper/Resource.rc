@@ -69,12 +69,12 @@ BEGIN
         BEGIN
             VALUE "CompanyName", "Hideaki Kishimoto"
             VALUE "FileDescription", "ShellFiler Helper DLL"
-            VALUE "FileVersion", "3.0.0.16"
+            VALUE "FileVersion", "3.0.1.18"
             VALUE "InternalName", "SfHelper.dll"
             VALUE "LegalCopyright", "Copyright (c) 2011-2022 Hideaki Kishimoto"
             VALUE "OriginalFilename", "SfHelper.dll"
             VALUE "ProductName", "ShellFiler"
-            VALUE "ProductVersion", "3.0.0.16"
+            VALUE "ProductVersion", "3.0.1.18"
         END
     END
     BLOCK "VarFileInfo"

@@ -14,7 +14,11 @@ ShellFilerはWindows PC上のファイルを軽快に操作できるだけでな
 
 Windows 10以降の64bit環境に対応しています。
 
-安定版：[shellfiler3.0.0.msi](https://github.com/hideakiksm/shellfiler-release/raw/main/release/shellfiler3.0.0.msi)
+安定版：[shellfiler3.0.1.msi](https://github.com/hideakiksm/shellfiler-release/raw/main/release/shellfiler3.0.1.msi)
+
+旧バージョン（[更新履歴](Doc/history.md)）：
+
+*[shellfiler3.0.0.msi](https://github.com/hideakiksm/shellfiler-release/raw/main/release/shellfiler3.0.0.msi)
 
 オープンソース版では、それ以前のキー設定とメニュー設定は引き継ぐことができません。
 
@@ -66,6 +70,7 @@ Visual Studio 2022でのビルドに対応しています。
 
 cloneしたあと、`Project`フォルダの.slnファイルを開きます。
 
+* ShellFiler\Project\bin\Debug\（出力フォルダ）にSharpSSHのDLLをコピーしておきます。または、ShellFilerのプロジェクトの右クリック後に[追加][参照]から、別途インストールしたTamir.SharpSSH.dllを追加します。
 * ビルドするとReleaseフォルダに実行ファイルができます。
 * 本体が`Project\ShellFiler`、C#で実現できない機能を提供するDLLを作成するC++プロジェクトが`Project\SfHelper`です。
 * `Util_CommandXmlConverter`は、キーやメニューに割り当てる機能の説明をソースコードから自動生成するツールです。`Project\ShellFiler\src\Command`フォルダにあるC#ソースのコメントから`Project\release\CommandList.dat`を作成します。コマンドを更新した場合に実行します。
