@@ -1,4 +1,4 @@
-ShellFiler Ver.3.0.0
+ShellFiler Ver.3.0.1
 Copyright (c) 2011-2022 Hideaki KISHIMOTO
 
 ÅyäTóvÅz
