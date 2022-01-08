@@ -18,7 +18,7 @@ Windows 10以降の64bit環境に対応しています。
 
 旧バージョン（[更新履歴](Doc/history.md)）：
 
-*[shellfiler3.0.0.msi](https://github.com/hideakiksm/shellfiler-release/raw/main/release/shellfiler3.0.0.msi)
+* [shellfiler3.0.0.msi](https://github.com/hideakiksm/shellfiler-release/raw/main/release/shellfiler3.0.0.msi)
 
 オープンソース版では、それ以前のキー設定とメニュー設定は引き継ぐことができません。
 
