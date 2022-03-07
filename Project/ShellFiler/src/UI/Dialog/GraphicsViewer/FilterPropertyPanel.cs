@@ -35,7 +35,7 @@ namespace ShellFiler.UI.Dialog.GraphicsViewer {
             m_parentDialog = parentDialog;
 
             // 適用前イメージ
-            Bitmap bmp = Resources.GraphicsViewer_FilterSample;
+            Bitmap bmp = UIIconManager.GraphicsViewer_FilterSample;
             this.pictureBoxSrc.Image = bmp;
         }
 
@@ -132,7 +132,7 @@ namespace ShellFiler.UI.Dialog.GraphicsViewer {
             componentList[0] = component;
 
             // 適用後イメージ
-            Bitmap bmp = Resources.GraphicsViewer_FilterSample;
+            Bitmap bmp = UIIconManager.GraphicsViewer_FilterSample;
             Bitmap filtered = new Bitmap(bmp);
             ImageFilter imageFilter = new ImageFilter();
             imageFilter.SetFilter(componentList);

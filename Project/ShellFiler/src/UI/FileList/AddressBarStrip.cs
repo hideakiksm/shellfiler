@@ -35,6 +35,9 @@ namespace ShellFiler.UI.FileList {
         // ツールバーの実装
         private ToolBarImpl m_toolbarImpl;
 
+        // 直前のコンボボックスの幅
+        private int m_cxComboBoxPrev = -1;
+
         //=========================================================================================
         // 機　能：コンストラクタ
         // 引　数：なし
@@ -63,7 +66,7 @@ namespace ShellFiler.UI.FileList {
 
             // コンボボックス
             List<ToolbarItemSetting> itemSettingList = Program.Document.ToolbarSetting.AddressBarItemList;
-            int cxComboBox = ClientRectangle.Width - itemSettingList.Count * ToolbarItemSetting.CX_ICON_BUTTON;
+            int cxComboBox = ClientRectangle.Width - itemSettingList.Count * ToolbarItemSetting.CxIconButton;
             m_addressBarDropDown = new AddressBarDropDown(isLeft, view, this);
             m_toolbarImpl.AddExternalItem(m_addressBarDropDown);
 
@@ -120,6 +123,10 @@ namespace ShellFiler.UI.FileList {
 
             const int CX_COMBO_BOX_MARGIN = 8;
             int cxComboBox = DisplayRectangle.Width - CX_COMBO_BOX_MARGIN;
+            if (m_cxComboBoxPrev == cxComboBox) {
+                return;
+            }
+            m_cxComboBoxPrev = cxComboBox;
             cxComboBox -= m_toolbarImpl.ButtonWidth;
             cxComboBox = Math.Max(CX_MIN_COMBO_BOX, cxComboBox);
             m_addressBarDropDown.SetSize(cxComboBox, CY_COMBO_BOX);

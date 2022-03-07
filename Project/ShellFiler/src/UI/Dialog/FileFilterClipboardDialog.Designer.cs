@@ -62,7 +62,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(12, 84);
+            this.label5.Location = new System.Drawing.Point(12, 82);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(108, 12);
             this.label5.TabIndex = 8;
@@ -71,7 +71,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(327, 84);
+            this.label6.Location = new System.Drawing.Point(327, 82);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(105, 12);
             this.label6.TabIndex = 14;

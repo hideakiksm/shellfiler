@@ -76,7 +76,6 @@ namespace ShellFiler.Document {
         public void ClearAll() {
             lock (this) {
                 foreach (FileIcon icon in m_iconIdToIcon.Values) {
-//System.Diagnostics.Debug.WriteLine("dispose:" + icon.FileIconId.IdValue);
                     icon.Dispose();
                 }
                 m_hashToIconList.Clear();

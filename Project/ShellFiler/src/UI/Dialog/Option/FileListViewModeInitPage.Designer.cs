@@ -66,18 +66,18 @@
             // 
             this.comboBoxLeftThumbName.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxLeftThumbName.FormattingEnabled = true;
-            this.comboBoxLeftThumbName.Location = new System.Drawing.Point(48, 135);
+            this.comboBoxLeftThumbName.Location = new System.Drawing.Point(48, 138);
             this.comboBoxLeftThumbName.Name = "comboBoxLeftThumbName";
-            this.comboBoxLeftThumbName.Size = new System.Drawing.Size(155, 20);
+            this.comboBoxLeftThumbName.Size = new System.Drawing.Size(155, 23);
             this.comboBoxLeftThumbName.TabIndex = 6;
             // 
             // comboBoxLeftThumbSize
             // 
             this.comboBoxLeftThumbSize.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxLeftThumbSize.FormattingEnabled = true;
-            this.comboBoxLeftThumbSize.Location = new System.Drawing.Point(48, 97);
+            this.comboBoxLeftThumbSize.Location = new System.Drawing.Point(48, 98);
             this.comboBoxLeftThumbSize.Name = "comboBoxLeftThumbSize";
-            this.comboBoxLeftThumbSize.Size = new System.Drawing.Size(155, 20);
+            this.comboBoxLeftThumbSize.Size = new System.Drawing.Size(155, 23);
             this.comboBoxLeftThumbSize.TabIndex = 4;
             // 
             // panelLeftViewSample
@@ -93,7 +93,7 @@
             this.radioButtonLeftThumb.AutoSize = true;
             this.radioButtonLeftThumb.Location = new System.Drawing.Point(6, 62);
             this.radioButtonLeftThumb.Name = "radioButtonLeftThumb";
-            this.radioButtonLeftThumb.Size = new System.Drawing.Size(164, 16);
+            this.radioButtonLeftThumb.Size = new System.Drawing.Size(169, 19);
             this.radioButtonLeftThumb.TabIndex = 2;
             this.radioButtonLeftThumb.TabStop = true;
             this.radioButtonLeftThumb.Text = "サムネイル表示で起動する(&T)";
@@ -102,9 +102,9 @@
             // labelViewName
             // 
             this.labelViewName.AutoSize = true;
-            this.labelViewName.Location = new System.Drawing.Point(31, 120);
+            this.labelViewName.Location = new System.Drawing.Point(31, 122);
             this.labelViewName.Name = "labelViewName";
-            this.labelViewName.Size = new System.Drawing.Size(127, 12);
+            this.labelViewName.Size = new System.Drawing.Size(135, 15);
             this.labelViewName.TabIndex = 5;
             this.labelViewName.Text = "ファイル名の表示方法(&N):";
             // 
@@ -113,7 +113,7 @@
             this.labelViewThumbSize.AutoSize = true;
             this.labelViewThumbSize.Location = new System.Drawing.Point(31, 82);
             this.labelViewThumbSize.Name = "labelViewThumbSize";
-            this.labelViewThumbSize.Size = new System.Drawing.Size(134, 12);
+            this.labelViewThumbSize.Size = new System.Drawing.Size(142, 15);
             this.labelViewThumbSize.TabIndex = 3;
             this.labelViewThumbSize.Text = "サムネイル画像の大きさ(S):";
             // 
@@ -122,7 +122,7 @@
             this.radioButtonLeftDetail.AutoSize = true;
             this.radioButtonLeftDetail.Location = new System.Drawing.Point(6, 40);
             this.radioButtonLeftDetail.Name = "radioButtonLeftDetail";
-            this.radioButtonLeftDetail.Size = new System.Drawing.Size(140, 16);
+            this.radioButtonLeftDetail.Size = new System.Drawing.Size(145, 19);
             this.radioButtonLeftDetail.TabIndex = 1;
             this.radioButtonLeftDetail.TabStop = true;
             this.radioButtonLeftDetail.Text = "詳細表示で起動する(&D)";
@@ -133,7 +133,7 @@
             this.radioButtonLeftPrev.AutoSize = true;
             this.radioButtonLeftPrev.Location = new System.Drawing.Point(6, 18);
             this.radioButtonLeftPrev.Name = "radioButtonLeftPrev";
-            this.radioButtonLeftPrev.Size = new System.Drawing.Size(131, 16);
+            this.radioButtonLeftPrev.Size = new System.Drawing.Size(136, 19);
             this.radioButtonLeftPrev.TabIndex = 0;
             this.radioButtonLeftPrev.TabStop = true;
             this.radioButtonLeftPrev.Text = "前回終了時の状態(&L)";
@@ -160,9 +160,9 @@
             // 
             this.comboBoxRightThumbName.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxRightThumbName.FormattingEnabled = true;
-            this.comboBoxRightThumbName.Location = new System.Drawing.Point(48, 135);
+            this.comboBoxRightThumbName.Location = new System.Drawing.Point(48, 138);
             this.comboBoxRightThumbName.Name = "comboBoxRightThumbName";
-            this.comboBoxRightThumbName.Size = new System.Drawing.Size(155, 20);
+            this.comboBoxRightThumbName.Size = new System.Drawing.Size(155, 23);
             this.comboBoxRightThumbName.TabIndex = 14;
             // 
             // panelRightViewSample
@@ -177,9 +177,9 @@
             // 
             this.comboBoxRightThumbSize.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxRightThumbSize.FormattingEnabled = true;
-            this.comboBoxRightThumbSize.Location = new System.Drawing.Point(48, 97);
+            this.comboBoxRightThumbSize.Location = new System.Drawing.Point(48, 98);
             this.comboBoxRightThumbSize.Name = "comboBoxRightThumbSize";
-            this.comboBoxRightThumbSize.Size = new System.Drawing.Size(155, 20);
+            this.comboBoxRightThumbSize.Size = new System.Drawing.Size(155, 23);
             this.comboBoxRightThumbSize.TabIndex = 12;
             // 
             // radioButtonRightPrev
@@ -187,7 +187,7 @@
             this.radioButtonRightPrev.AutoSize = true;
             this.radioButtonRightPrev.Location = new System.Drawing.Point(6, 18);
             this.radioButtonRightPrev.Name = "radioButtonRightPrev";
-            this.radioButtonRightPrev.Size = new System.Drawing.Size(133, 16);
+            this.radioButtonRightPrev.Size = new System.Drawing.Size(137, 19);
             this.radioButtonRightPrev.TabIndex = 8;
             this.radioButtonRightPrev.TabStop = true;
             this.radioButtonRightPrev.Text = "前回終了時の状態(&R)";
@@ -198,7 +198,7 @@
             this.radioButtonRightDetail.AutoSize = true;
             this.radioButtonRightDetail.Location = new System.Drawing.Point(6, 40);
             this.radioButtonRightDetail.Name = "radioButtonRightDetail";
-            this.radioButtonRightDetail.Size = new System.Drawing.Size(135, 16);
+            this.radioButtonRightDetail.Size = new System.Drawing.Size(141, 19);
             this.radioButtonRightDetail.TabIndex = 9;
             this.radioButtonRightDetail.TabStop = true;
             this.radioButtonRightDetail.Text = "詳細表示で起動する(&I)";
@@ -209,7 +209,7 @@
             this.radioButtonRightThumb.AutoSize = true;
             this.radioButtonRightThumb.Location = new System.Drawing.Point(6, 62);
             this.radioButtonRightThumb.Name = "radioButtonRightThumb";
-            this.radioButtonRightThumb.Size = new System.Drawing.Size(165, 16);
+            this.radioButtonRightThumb.Size = new System.Drawing.Size(170, 19);
             this.radioButtonRightThumb.TabIndex = 10;
             this.radioButtonRightThumb.TabStop = true;
             this.radioButtonRightThumb.Text = "サムネイル表示で起動する(&H)";
@@ -220,25 +220,26 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(31, 82);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(134, 12);
+            this.label2.Size = new System.Drawing.Size(142, 15);
             this.label2.TabIndex = 11;
             this.label2.Text = "サムネイル画像の大きさ(Z):";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(31, 120);
+            this.label1.Location = new System.Drawing.Point(31, 122);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(127, 12);
+            this.label1.Size = new System.Drawing.Size(134, 15);
             this.label1.TabIndex = 13;
             this.label1.Text = "ファイル名の表示方法(&A):";
             // 
             // FileListViewModeInitPage
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
+            this.Font = new System.Drawing.Font("Yu Gothic UI", 9F);
             this.Name = "FileListViewModeInitPage";
             this.Size = new System.Drawing.Size(520, 370);
             this.groupBox1.ResumeLayout(false);

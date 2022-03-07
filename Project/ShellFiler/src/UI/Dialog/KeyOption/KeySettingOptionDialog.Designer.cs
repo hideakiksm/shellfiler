@@ -42,7 +42,7 @@
             this.checkBoxNextCursor.AutoSize = true;
             this.checkBoxNextCursor.Location = new System.Drawing.Point(6, 18);
             this.checkBoxNextCursor.Name = "checkBoxNextCursor";
-            this.checkBoxNextCursor.Size = new System.Drawing.Size(183, 16);
+            this.checkBoxNextCursor.Size = new System.Drawing.Size(187, 19);
             this.checkBoxNextCursor.TabIndex = 0;
             this.checkBoxNextCursor.Text = "実行後、カーソルを次に進める(&C)";
             this.checkBoxNextCursor.UseVisualStyleBackColor = true;
@@ -83,7 +83,7 @@
             // 
             this.textBoxDisplayName.Location = new System.Drawing.Point(142, 41);
             this.textBoxDisplayName.Name = "textBoxDisplayName";
-            this.textBoxDisplayName.Size = new System.Drawing.Size(131, 19);
+            this.textBoxDisplayName.Size = new System.Drawing.Size(131, 23);
             this.textBoxDisplayName.TabIndex = 2;
             // 
             // label3
@@ -91,7 +91,7 @@
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(6, 44);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(130, 12);
+            this.label3.Size = new System.Drawing.Size(135, 15);
             this.label3.TabIndex = 1;
             this.label3.Text = "ファンクションバーの表示名:";
             // 
@@ -110,7 +110,7 @@
             this.labelParameter.AutoSize = true;
             this.labelParameter.Location = new System.Drawing.Point(7, 19);
             this.labelParameter.Name = "labelParameter";
-            this.labelParameter.Size = new System.Drawing.Size(166, 12);
+            this.labelParameter.Size = new System.Drawing.Size(168, 15);
             this.labelParameter.TabIndex = 0;
             this.labelParameter.Text = "設定できるパラメータはありません。";
             // 
@@ -129,15 +129,15 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(12, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(31, 12);
+            this.label1.Size = new System.Drawing.Size(36, 15);
             this.label1.TabIndex = 0;
             this.label1.Text = "説明:";
             // 
             // KeySettingOptionDialog
             // 
             this.AcceptButton = this.buttonOk;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.CancelButton = this.buttonCancel;
             this.ClientSize = new System.Drawing.Size(521, 253);
             this.Controls.Add(this.label1);
@@ -146,6 +146,7 @@
             this.Controls.Add(this.groupBoxOption);
             this.Controls.Add(this.buttonCancel);
             this.Controls.Add(this.buttonOk);
+            this.Font = new System.Drawing.Font("Yu Gothic UI", 9F);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
@@ -154,8 +155,8 @@
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "割り当てのオプション";
-            this.Load += new System.EventHandler(this.KeySettingOptionDialog_Load);
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.KeySettingOptionDialog_FormClosed);
+            this.Load += new System.EventHandler(this.KeySettingOptionDialog_Load);
             this.groupBoxOption.ResumeLayout(false);
             this.groupBoxOption.PerformLayout();
             this.groupBoxParameter.ResumeLayout(false);

@@ -33,10 +33,10 @@
             // 
             // textBoxName
             // 
-            this.textBoxName.Location = new System.Drawing.Point(102, 12);
+            this.textBoxName.Location = new System.Drawing.Point(106, 12);
             this.textBoxName.MaxLength = 20;
             this.textBoxName.Name = "textBoxName";
-            this.textBoxName.Size = new System.Drawing.Size(113, 19);
+            this.textBoxName.Size = new System.Drawing.Size(113, 23);
             this.textBoxName.TabIndex = 1;
             // 
             // label1
@@ -44,7 +44,7 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(12, 15);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(84, 12);
+            this.label1.Size = new System.Drawing.Size(92, 15);
             this.label1.TabIndex = 0;
             this.label1.Text = "ボタンの名前(&N):";
             // 
@@ -53,16 +53,16 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(12, 45);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(308, 12);
+            this.label2.Size = new System.Drawing.Size(311, 15);
             this.label2.TabIndex = 2;
             this.label2.Text = "クイック設定のボタンの名前を全角6文字程度までで指定します。";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(12, 57);
+            this.label3.Location = new System.Drawing.Point(12, 61);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(138, 12);
+            this.label3.Size = new System.Drawing.Size(140, 15);
             this.label3.TabIndex = 3;
             this.label3.Text = "長すぎると表示が乱れます。";
             // 
@@ -89,8 +89,8 @@
             // FileFilterQuickRenameDialog
             // 
             this.AcceptButton = this.buttonOk;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.CancelButton = this.buttonCancel;
             this.ClientSize = new System.Drawing.Size(332, 117);
             this.Controls.Add(this.buttonOk);
@@ -99,6 +99,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.textBoxName);
+            this.Font = new System.Drawing.Font("Yu Gothic UI", 9F);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.MaximizeBox = false;
             this.MinimizeBox = false;

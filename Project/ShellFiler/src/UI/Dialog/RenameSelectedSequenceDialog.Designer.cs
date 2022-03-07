@@ -51,16 +51,16 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(12, 16);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(68, 12);
+            this.label1.Size = new System.Drawing.Size(75, 15);
             this.label1.TabIndex = 0;
             this.label1.Text = "ファイル名(&F):";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(33, 35);
+            this.label2.Location = new System.Drawing.Point(33, 37);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(170, 12);
+            this.label2.Size = new System.Drawing.Size(173, 15);
             this.label2.TabIndex = 2;
             this.label2.Text = "「?」の箇所に連番を埋め込みます。";
             // 
@@ -68,24 +68,24 @@
             // 
             this.textBoxFileName.Location = new System.Drawing.Point(88, 13);
             this.textBoxFileName.Name = "textBoxFileName";
-            this.textBoxFileName.Size = new System.Drawing.Size(171, 19);
+            this.textBoxFileName.Size = new System.Drawing.Size(171, 23);
             this.textBoxFileName.TabIndex = 1;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(10, 96);
+            this.label3.Location = new System.Drawing.Point(10, 102);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(81, 12);
+            this.label3.Size = new System.Drawing.Size(89, 15);
             this.label3.TabIndex = 6;
             this.label3.Text = "数値の桁数(&D):";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(10, 71);
+            this.label4.Location = new System.Drawing.Point(10, 75);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(47, 12);
+            this.label4.Size = new System.Drawing.Size(54, 15);
             this.label4.TabIndex = 4;
             this.label4.Text = "基数(&R):";
             // 
@@ -93,32 +93,32 @@
             // 
             this.comboBoxWidth.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxWidth.FormattingEnabled = true;
-            this.comboBoxWidth.Location = new System.Drawing.Point(103, 93);
+            this.comboBoxWidth.Location = new System.Drawing.Point(103, 99);
             this.comboBoxWidth.Name = "comboBoxWidth";
-            this.comboBoxWidth.Size = new System.Drawing.Size(134, 20);
+            this.comboBoxWidth.Size = new System.Drawing.Size(134, 23);
             this.comboBoxWidth.TabIndex = 7;
             // 
             // comboBoxRadix
             // 
             this.comboBoxRadix.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxRadix.FormattingEnabled = true;
-            this.comboBoxRadix.Location = new System.Drawing.Point(103, 68);
+            this.comboBoxRadix.Location = new System.Drawing.Point(103, 72);
             this.comboBoxRadix.Name = "comboBoxRadix";
-            this.comboBoxRadix.Size = new System.Drawing.Size(134, 20);
+            this.comboBoxRadix.Size = new System.Drawing.Size(134, 23);
             this.comboBoxRadix.TabIndex = 5;
             // 
             // numericStart
             // 
             this.numericStart.Location = new System.Drawing.Point(103, 18);
             this.numericStart.Name = "numericStart";
-            this.numericStart.Size = new System.Drawing.Size(134, 19);
+            this.numericStart.Size = new System.Drawing.Size(134, 23);
             this.numericStart.TabIndex = 1;
             // 
             // numericIncrease
             // 
-            this.numericIncrease.Location = new System.Drawing.Point(103, 43);
+            this.numericIncrease.Location = new System.Drawing.Point(103, 45);
             this.numericIncrease.Name = "numericIncrease";
-            this.numericIncrease.Size = new System.Drawing.Size(134, 19);
+            this.numericIncrease.Size = new System.Drawing.Size(134, 23);
             this.numericIncrease.TabIndex = 3;
             // 
             // label5
@@ -126,16 +126,16 @@
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(10, 20);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(70, 12);
+            this.label5.Size = new System.Drawing.Size(78, 15);
             this.label5.TabIndex = 0;
             this.label5.Text = "開始番号(&S):";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(10, 45);
+            this.label6.Location = new System.Drawing.Point(10, 47);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(42, 12);
+            this.label6.Size = new System.Drawing.Size(51, 15);
             this.label6.TabIndex = 2;
             this.label6.Text = "増分(&I):";
             // 
@@ -150,9 +150,9 @@
             this.groupBox1.Controls.Add(this.numericStart);
             this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Controls.Add(this.label5);
-            this.groupBox1.Location = new System.Drawing.Point(14, 74);
+            this.groupBox1.Location = new System.Drawing.Point(14, 80);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(245, 149);
+            this.groupBox1.Size = new System.Drawing.Size(245, 162);
             this.groupBox1.TabIndex = 4;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "連番の設定";
@@ -160,27 +160,27 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(6, 126);
+            this.label7.Location = new System.Drawing.Point(6, 137);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(204, 12);
+            this.label7.Size = new System.Drawing.Size(206, 15);
             this.label7.TabIndex = 8;
             this.label7.Text = "マークした順番に番号が割り当てられます。";
             // 
             // textBoxSample
             // 
-            this.textBoxSample.Location = new System.Drawing.Point(290, 28);
+            this.textBoxSample.Location = new System.Drawing.Point(296, 31);
             this.textBoxSample.Multiline = true;
             this.textBoxSample.Name = "textBoxSample";
             this.textBoxSample.ReadOnly = true;
             this.textBoxSample.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.textBoxSample.Size = new System.Drawing.Size(215, 195);
+            this.textBoxSample.Size = new System.Drawing.Size(215, 211);
             this.textBoxSample.TabIndex = 5;
             this.textBoxSample.WordWrap = false;
             // 
             // buttonCancel
             // 
             this.buttonCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.buttonCancel.Location = new System.Drawing.Point(430, 229);
+            this.buttonCancel.Location = new System.Drawing.Point(436, 248);
             this.buttonCancel.Name = "buttonCancel";
             this.buttonCancel.Size = new System.Drawing.Size(75, 23);
             this.buttonCancel.TabIndex = 7;
@@ -190,7 +190,7 @@
             // buttonOk
             // 
             this.buttonOk.DialogResult = System.Windows.Forms.DialogResult.OK;
-            this.buttonOk.Location = new System.Drawing.Point(349, 229);
+            this.buttonOk.Location = new System.Drawing.Point(355, 248);
             this.buttonOk.Name = "buttonOk";
             this.buttonOk.Size = new System.Drawing.Size(75, 23);
             this.buttonOk.TabIndex = 6;
@@ -201,9 +201,9 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(33, 47);
+            this.label8.Location = new System.Drawing.Point(33, 53);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(103, 12);
+            this.label8.Size = new System.Drawing.Size(105, 15);
             this.label8.TabIndex = 3;
             this.label8.Text = "拡張子は不要です。";
             // 
@@ -212,17 +212,17 @@
             this.label9.AutoSize = true;
             this.label9.Location = new System.Drawing.Point(288, 13);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(137, 12);
+            this.label9.Size = new System.Drawing.Size(144, 15);
             this.label9.TabIndex = 0;
             this.label9.Text = "ファイル名20件分のサンプル:";
             // 
             // RenameSelectedSequenceDialog
             // 
             this.AcceptButton = this.buttonOk;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.CancelButton = this.buttonCancel;
-            this.ClientSize = new System.Drawing.Size(517, 265);
+            this.ClientSize = new System.Drawing.Size(523, 283);
             this.Controls.Add(this.buttonOk);
             this.Controls.Add(this.buttonCancel);
             this.Controls.Add(this.textBoxSample);
@@ -232,6 +232,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label1);
+            this.Font = new System.Drawing.Font("Yu Gothic UI", 9F);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.MaximizeBox = false;
             this.MinimizeBox = false;

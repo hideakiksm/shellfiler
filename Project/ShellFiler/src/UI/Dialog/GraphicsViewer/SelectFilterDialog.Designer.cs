@@ -113,7 +113,7 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(12, 262);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(217, 12);
+            this.label1.Size = new System.Drawing.Size(219, 15);
             this.label1.TabIndex = 7;
             this.label1.Text = "この画面の表示中にもビューアを操作できます";
             // 
@@ -150,10 +150,10 @@
             // 
             // SelectFilterDialog
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.CancelButton = this.buttonCancel;
-            this.ClientSize = new System.Drawing.Size(512, 297);
+            this.ClientSize = new System.Drawing.Size(512, 299);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.buttonCancel);
             this.Controls.Add(this.panelProperty);
@@ -165,6 +165,7 @@
             this.Controls.Add(this.buttonAdd);
             this.Controls.Add(this.listBoxNotUse);
             this.Controls.Add(this.listBoxUseFilter);
+            this.Font = new System.Drawing.Font("Yu Gothic UI", 9F);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.MaximizeBox = false;
             this.MinimizeBox = false;

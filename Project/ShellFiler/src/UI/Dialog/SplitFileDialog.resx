@@ -112,21 +112,20 @@
     <value>2.0</value>
   </resheader>
   <resheader name="reader">
-    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <resheader name="writer">
-    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="pictureBoxArrow.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAADAAAAAQCAYAAABQrvyxAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
-        DAAACwwBP0AiyAAAACp0RVh0Q3JlYXRpb24gVGltZQCW2CAyNSAxMSAyMDEwIDE2OjMyOjMxICswOTAw
-        1Hpw2QAAAAd0SU1FB9sHDA81IanfsDEAAADOSURBVEhL1c89CgIxFATgvaxX8BhWXsDKykqwsFEQtNBC
-        0EJBEIstBG0s9l+UFJHHOrqZ3URi8TUDmcwLuqOokVa786gL9bFgyFBDLrc7zasDwmtB8+qA47mgeXXA
-        PsxpXh2wOeU0rw5YHTKaswNUMWu+y2iop0p5q/IWaPLhdJv+nPwf7dNgWKaLxuvUOZPREgw/0eXKcJlY
-        I3vRv9/A0IT8dLBIaPI96jcFQ5Ye0p/FlWyMlmBYlx6n9Cbxi8zRuyZgaIPL0RIM/0cUPAFgrMxgByAL
-        IAAAAABJRU5ErkJggg==
+        DAAACwwBP0AiyAAAAAd0SU1FB9sHDA81IanfsDEAAADOSURBVEhL1c89CgIxFATgvaxX8BhWXsDKykqw
+        sFEQtNBC0EJBEIstBG0s9l+UFJHHOrqZ3URi8TUDmcwLuqOokVa786gL9bFgyFBDLrc7zasDwmtB8+qA
+        47mgeXXAPsxpXh2wOeU0rw5YHTKaswNUMWu+y2iop0p5q/IWaPLhdJv+nPwf7dNgWKaLxuvUOZPREgw/
+        0eXKcJlYI3vRv9/A0IT8dLBIaPI96jcFQ5Ye0p/FlWyMlmBYlx6n9Cbxi8zRuyZgaIPL0RIM/0cUPAFg
+        rMxgByALIAAAAABJRU5ErkJggg==
 </value>
   </data>
 </root>

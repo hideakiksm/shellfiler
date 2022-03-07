@@ -83,9 +83,10 @@
             // checkBoxWindowsAttr
             // 
             this.checkBoxWindowsAttr.AutoSize = true;
-            this.checkBoxWindowsAttr.Location = new System.Drawing.Point(14, 38);
+            this.checkBoxWindowsAttr.Location = new System.Drawing.Point(24, 66);
+            this.checkBoxWindowsAttr.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.checkBoxWindowsAttr.Name = "checkBoxWindowsAttr";
-            this.checkBoxWindowsAttr.Size = new System.Drawing.Size(204, 16);
+            this.checkBoxWindowsAttr.Size = new System.Drawing.Size(352, 34);
             this.checkBoxWindowsAttr.TabIndex = 2;
             this.checkBoxWindowsAttr.Text = "転送後にすべての属性をコピーする(&W)";
             this.checkBoxWindowsAttr.UseVisualStyleBackColor = true;
@@ -95,18 +96,20 @@
             // 
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Location = new System.Drawing.Point(3, 20);
+            this.label1.Location = new System.Drawing.Point(5, 33);
+            this.label1.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(81, 12);
+            this.label1.Size = new System.Drawing.Size(145, 30);
             this.label1.TabIndex = 1;
             this.label1.Text = "転送したファイル";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(130, 20);
+            this.label2.Location = new System.Drawing.Point(228, 33);
+            this.label2.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(53, 12);
+            this.label2.Size = new System.Drawing.Size(94, 30);
             this.label2.TabIndex = 1;
             this.label2.Text = "常にコピー";
             // 
@@ -114,9 +117,10 @@
             // 
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Location = new System.Drawing.Point(3, 40);
+            this.label3.Location = new System.Drawing.Point(5, 68);
+            this.label3.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(82, 12);
+            this.label3.Size = new System.Drawing.Size(147, 30);
             this.label3.TabIndex = 1;
             this.label3.Text = "転送したフォルダ";
             // 
@@ -124,9 +128,10 @@
             // 
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.Color.Transparent;
-            this.label4.Location = new System.Drawing.Point(3, 60);
+            this.label4.Location = new System.Drawing.Point(5, 103);
+            this.label4.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(113, 12);
+            this.label4.Size = new System.Drawing.Size(198, 30);
             this.label4.TabIndex = 1;
             this.label4.Text = "フォルダ一括コピー時の";
             // 
@@ -134,9 +139,10 @@
             // 
             this.label5.AutoSize = true;
             this.label5.BackColor = System.Drawing.Color.Transparent;
-            this.label5.Location = new System.Drawing.Point(3, 72);
+            this.label5.Location = new System.Drawing.Point(5, 126);
+            this.label5.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(80, 12);
+            this.label5.Size = new System.Drawing.Size(147, 30);
             this.label5.TabIndex = 1;
             this.label5.Text = "配下オブジェクト";
             // 
@@ -144,9 +150,10 @@
             // 
             this.label6.AutoSize = true;
             this.label6.BackColor = System.Drawing.Color.Transparent;
-            this.label6.Location = new System.Drawing.Point(3, 90);
+            this.label6.Location = new System.Drawing.Point(5, 156);
+            this.label6.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(110, 12);
+            this.label6.Size = new System.Drawing.Size(196, 30);
             this.label6.TabIndex = 1;
             this.label6.Text = "フォルダ一括移動時の";
             // 
@@ -154,9 +161,10 @@
             // 
             this.label7.AutoSize = true;
             this.label7.BackColor = System.Drawing.Color.Transparent;
-            this.label7.Location = new System.Drawing.Point(3, 102);
+            this.label7.Location = new System.Drawing.Point(5, 178);
+            this.label7.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(80, 12);
+            this.label7.Size = new System.Drawing.Size(147, 30);
             this.label7.TabIndex = 1;
             this.label7.Text = "配下オブジェクト";
             // 
@@ -164,9 +172,10 @@
             // 
             this.label8.AutoSize = true;
             this.label8.BackColor = System.Drawing.Color.Transparent;
-            this.label8.Location = new System.Drawing.Point(130, 3);
+            this.label8.Location = new System.Drawing.Point(228, 3);
+            this.label8.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(53, 12);
+            this.label8.Size = new System.Drawing.Size(97, 30);
             this.label8.TabIndex = 1;
             this.label8.Text = "更新日時";
             // 
@@ -174,9 +183,10 @@
             // 
             this.label9.AutoSize = true;
             this.label9.BackColor = System.Drawing.Color.Transparent;
-            this.label9.Location = new System.Drawing.Point(220, 3);
+            this.label9.Location = new System.Drawing.Point(385, 3);
+            this.label9.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(53, 12);
+            this.label9.Size = new System.Drawing.Size(97, 30);
             this.label9.TabIndex = 1;
             this.label9.Text = "作成日時";
             // 
@@ -184,9 +194,10 @@
             // 
             this.label10.AutoSize = true;
             this.label10.BackColor = System.Drawing.Color.Transparent;
-            this.label10.Location = new System.Drawing.Point(310, 3);
+            this.label10.Location = new System.Drawing.Point(542, 3);
+            this.label10.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(65, 12);
+            this.label10.Size = new System.Drawing.Size(120, 30);
             this.label10.TabIndex = 1;
             this.label10.Text = "アクセス日時";
             // 
@@ -216,9 +227,10 @@
             this.panelWindows.Controls.Add(this.label2);
             this.panelWindows.Controls.Add(this.label5);
             this.panelWindows.Controls.Add(this.label7);
-            this.panelWindows.Location = new System.Drawing.Point(35, 60);
+            this.panelWindows.Location = new System.Drawing.Point(61, 103);
+            this.panelWindows.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.panelWindows.Name = "panelWindows";
-            this.panelWindows.Size = new System.Drawing.Size(482, 119);
+            this.panelWindows.Size = new System.Drawing.Size(842, 207);
             this.panelWindows.TabIndex = 3;
             this.panelWindows.Paint += new System.Windows.Forms.PaintEventHandler(this.panelWindows_Paint);
             // 
@@ -226,144 +238,160 @@
             // 
             this.label11.AutoSize = true;
             this.label11.BackColor = System.Drawing.Color.Transparent;
-            this.label11.Location = new System.Drawing.Point(400, 3);
+            this.label11.Location = new System.Drawing.Point(700, 3);
+            this.label11.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(63, 12);
+            this.label11.Size = new System.Drawing.Size(114, 30);
             this.label11.TabIndex = 1;
             this.label11.Text = "ファイル属性";
             // 
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(130, 66);
+            this.label13.Location = new System.Drawing.Point(228, 114);
+            this.label13.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(265, 12);
+            this.label13.Size = new System.Drawing.Size(474, 30);
             this.label13.TabIndex = 1;
             this.label13.Text = "Windowsではフォルダごと一括コピーすることはできません";
             // 
             // labelWindows11
             // 
             this.labelWindows11.AutoSize = true;
-            this.labelWindows11.Location = new System.Drawing.Point(310, 96);
+            this.labelWindows11.Location = new System.Drawing.Point(542, 166);
+            this.labelWindows11.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.labelWindows11.Name = "labelWindows11";
-            this.labelWindows11.Size = new System.Drawing.Size(53, 12);
+            this.labelWindows11.Size = new System.Drawing.Size(94, 30);
             this.labelWindows11.TabIndex = 1;
             this.labelWindows11.Text = "常にコピー";
             // 
             // labelWindows10
             // 
             this.labelWindows10.AutoSize = true;
-            this.labelWindows10.Location = new System.Drawing.Point(220, 96);
+            this.labelWindows10.Location = new System.Drawing.Point(385, 166);
+            this.labelWindows10.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.labelWindows10.Name = "labelWindows10";
-            this.labelWindows10.Size = new System.Drawing.Size(53, 12);
+            this.labelWindows10.Size = new System.Drawing.Size(94, 30);
             this.labelWindows10.TabIndex = 1;
             this.labelWindows10.Text = "常にコピー";
             // 
             // labelWindows4
             // 
             this.labelWindows4.AutoSize = true;
-            this.labelWindows4.Location = new System.Drawing.Point(310, 40);
+            this.labelWindows4.Location = new System.Drawing.Point(542, 68);
+            this.labelWindows4.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.labelWindows4.Name = "labelWindows4";
-            this.labelWindows4.Size = new System.Drawing.Size(60, 12);
+            this.labelWindows4.Size = new System.Drawing.Size(105, 30);
             this.labelWindows4.TabIndex = 1;
             this.labelWindows4.Text = "コピーします";
             // 
             // label21
             // 
             this.label21.AutoSize = true;
-            this.label21.Location = new System.Drawing.Point(400, 96);
+            this.label21.Location = new System.Drawing.Point(700, 166);
+            this.label21.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(53, 12);
+            this.label21.Size = new System.Drawing.Size(94, 30);
             this.label21.TabIndex = 1;
             this.label21.Text = "常にコピー";
             // 
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(130, 96);
+            this.label14.Location = new System.Drawing.Point(228, 166);
+            this.label14.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(53, 12);
+            this.label14.Size = new System.Drawing.Size(94, 30);
             this.label14.TabIndex = 1;
             this.label14.Text = "常にコピー";
             // 
             // labelWindows3
             // 
             this.labelWindows3.AutoSize = true;
-            this.labelWindows3.Location = new System.Drawing.Point(310, 20);
+            this.labelWindows3.Location = new System.Drawing.Point(542, 33);
+            this.labelWindows3.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.labelWindows3.Name = "labelWindows3";
-            this.labelWindows3.Size = new System.Drawing.Size(60, 12);
+            this.labelWindows3.Size = new System.Drawing.Size(105, 30);
             this.labelWindows3.TabIndex = 1;
             this.labelWindows3.Text = "コピーします";
             // 
             // labelWindows2
             // 
             this.labelWindows2.AutoSize = true;
-            this.labelWindows2.Location = new System.Drawing.Point(220, 40);
+            this.labelWindows2.Location = new System.Drawing.Point(385, 68);
+            this.labelWindows2.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.labelWindows2.Name = "labelWindows2";
-            this.labelWindows2.Size = new System.Drawing.Size(60, 12);
+            this.labelWindows2.Size = new System.Drawing.Size(105, 30);
             this.labelWindows2.TabIndex = 1;
             this.labelWindows2.Text = "コピーします";
             // 
             // label20
             // 
             this.label20.AutoSize = true;
-            this.label20.Location = new System.Drawing.Point(400, 40);
+            this.label20.Location = new System.Drawing.Point(700, 68);
+            this.label20.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(53, 12);
+            this.label20.Size = new System.Drawing.Size(94, 30);
             this.label20.TabIndex = 1;
             this.label20.Text = "常にコピー";
             // 
             // labelWindows1
             // 
             this.labelWindows1.AutoSize = true;
-            this.labelWindows1.Location = new System.Drawing.Point(220, 20);
+            this.labelWindows1.Location = new System.Drawing.Point(385, 33);
+            this.labelWindows1.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.labelWindows1.Name = "labelWindows1";
-            this.labelWindows1.Size = new System.Drawing.Size(60, 12);
+            this.labelWindows1.Size = new System.Drawing.Size(105, 30);
             this.labelWindows1.TabIndex = 1;
             this.labelWindows1.Text = "コピーします";
             // 
             // label19
             // 
             this.label19.AutoSize = true;
-            this.label19.Location = new System.Drawing.Point(400, 20);
+            this.label19.Location = new System.Drawing.Point(700, 33);
+            this.label19.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(53, 12);
+            this.label19.Size = new System.Drawing.Size(94, 30);
             this.label19.TabIndex = 1;
             this.label19.Text = "常にコピー";
             // 
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(130, 40);
+            this.label12.Location = new System.Drawing.Point(228, 68);
+            this.label12.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(53, 12);
+            this.label12.Size = new System.Drawing.Size(94, 30);
             this.label12.TabIndex = 1;
             this.label12.Text = "常にコピー";
             // 
             // label43
             // 
             this.label43.AutoSize = true;
-            this.label43.Location = new System.Drawing.Point(3, 19);
+            this.label43.Location = new System.Drawing.Point(5, 33);
+            this.label43.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label43.Name = "label43";
-            this.label43.Size = new System.Drawing.Size(164, 12);
+            this.label43.Size = new System.Drawing.Size(299, 30);
             this.label43.TabIndex = 0;
             this.label43.Text = "転送先がWindowsフォルダの場合";
             // 
             // label44
             // 
             this.label44.AutoSize = true;
-            this.label44.Location = new System.Drawing.Point(3, 201);
+            this.label44.Location = new System.Drawing.Point(5, 352);
+            this.label44.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label44.Name = "label44";
-            this.label44.Size = new System.Drawing.Size(142, 12);
+            this.label44.Size = new System.Drawing.Size(251, 30);
             this.label44.TabIndex = 4;
             this.label44.Text = "転送先がSSHフォルダの場合";
             // 
             // checkBoxSSHAttr
             // 
             this.checkBoxSSHAttr.AutoSize = true;
-            this.checkBoxSSHAttr.Location = new System.Drawing.Point(14, 216);
+            this.checkBoxSSHAttr.Location = new System.Drawing.Point(24, 378);
+            this.checkBoxSSHAttr.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.checkBoxSSHAttr.Name = "checkBoxSSHAttr";
-            this.checkBoxSSHAttr.Size = new System.Drawing.Size(163, 16);
+            this.checkBoxSSHAttr.Size = new System.Drawing.Size(276, 34);
             this.checkBoxSSHAttr.TabIndex = 6;
             this.checkBoxSSHAttr.Text = "転送後に属性をコピーする(&S)";
             this.checkBoxSSHAttr.UseVisualStyleBackColor = true;
@@ -393,9 +421,10 @@
             this.panelSSH.Controls.Add(this.labelSSHAttr1);
             this.panelSSH.Controls.Add(this.label41);
             this.panelSSH.Controls.Add(this.label42);
-            this.panelSSH.Location = new System.Drawing.Point(35, 238);
+            this.panelSSH.Location = new System.Drawing.Point(61, 416);
+            this.panelSSH.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.panelSSH.Name = "panelSSH";
-            this.panelSSH.Size = new System.Drawing.Size(390, 119);
+            this.panelSSH.Size = new System.Drawing.Size(681, 207);
             this.panelSSH.TabIndex = 8;
             this.panelSSH.Paint += new System.Windows.Forms.PaintEventHandler(this.panelSSH_Paint);
             // 
@@ -403,9 +432,10 @@
             // 
             this.label15.AutoSize = true;
             this.label15.BackColor = System.Drawing.Color.Transparent;
-            this.label15.Location = new System.Drawing.Point(3, 20);
+            this.label15.Location = new System.Drawing.Point(5, 34);
+            this.label15.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(81, 12);
+            this.label15.Size = new System.Drawing.Size(145, 30);
             this.label15.TabIndex = 1;
             this.label15.Text = "転送したファイル";
             // 
@@ -413,9 +443,10 @@
             // 
             this.label16.AutoSize = true;
             this.label16.BackColor = System.Drawing.Color.Transparent;
-            this.label16.Location = new System.Drawing.Point(310, 3);
+            this.label16.Location = new System.Drawing.Point(542, 4);
+            this.label16.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(64, 12);
+            this.label16.Size = new System.Drawing.Size(117, 30);
             this.label16.TabIndex = 1;
             this.label16.Text = "パーミッション";
             // 
@@ -423,9 +454,10 @@
             // 
             this.label17.AutoSize = true;
             this.label17.BackColor = System.Drawing.Color.Transparent;
-            this.label17.Location = new System.Drawing.Point(220, 3);
+            this.label17.Location = new System.Drawing.Point(385, 4);
+            this.label17.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(65, 12);
+            this.label17.Size = new System.Drawing.Size(120, 30);
             this.label17.TabIndex = 1;
             this.label17.Text = "アクセス日時";
             // 
@@ -433,9 +465,10 @@
             // 
             this.label22.AutoSize = true;
             this.label22.BackColor = System.Drawing.Color.Transparent;
-            this.label22.Location = new System.Drawing.Point(3, 40);
+            this.label22.Location = new System.Drawing.Point(5, 69);
+            this.label22.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(82, 12);
+            this.label22.Size = new System.Drawing.Size(147, 30);
             this.label22.TabIndex = 1;
             this.label22.Text = "転送したフォルダ";
             // 
@@ -443,9 +476,10 @@
             // 
             this.label24.AutoSize = true;
             this.label24.BackColor = System.Drawing.Color.Transparent;
-            this.label24.Location = new System.Drawing.Point(3, 60);
+            this.label24.Location = new System.Drawing.Point(5, 104);
+            this.label24.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(113, 12);
+            this.label24.Size = new System.Drawing.Size(198, 30);
             this.label24.TabIndex = 1;
             this.label24.Text = "フォルダ一括コピー時の";
             // 
@@ -453,9 +487,10 @@
             // 
             this.label25.AutoSize = true;
             this.label25.BackColor = System.Drawing.Color.Transparent;
-            this.label25.Location = new System.Drawing.Point(130, 3);
+            this.label25.Location = new System.Drawing.Point(228, 4);
+            this.label25.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(53, 12);
+            this.label25.Size = new System.Drawing.Size(97, 30);
             this.label25.TabIndex = 1;
             this.label25.Text = "更新日時";
             // 
@@ -463,117 +498,130 @@
             // 
             this.label26.AutoSize = true;
             this.label26.BackColor = System.Drawing.Color.Transparent;
-            this.label26.Location = new System.Drawing.Point(3, 90);
+            this.label26.Location = new System.Drawing.Point(5, 157);
+            this.label26.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(110, 12);
+            this.label26.Size = new System.Drawing.Size(196, 30);
             this.label26.TabIndex = 1;
             this.label26.Text = "フォルダ一括移動時の";
             // 
             // label28
             // 
             this.label28.AutoSize = true;
-            this.label28.Location = new System.Drawing.Point(220, 96);
+            this.label28.Location = new System.Drawing.Point(385, 167);
+            this.label28.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(53, 12);
+            this.label28.Size = new System.Drawing.Size(94, 30);
             this.label28.TabIndex = 1;
             this.label28.Text = "常にコピー";
             // 
             // labelSSHAttr6
             // 
             this.labelSSHAttr6.AutoSize = true;
-            this.labelSSHAttr6.Location = new System.Drawing.Point(220, 66);
+            this.labelSSHAttr6.Location = new System.Drawing.Point(385, 115);
+            this.labelSSHAttr6.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.labelSSHAttr6.Name = "labelSSHAttr6";
-            this.labelSSHAttr6.Size = new System.Drawing.Size(60, 12);
+            this.labelSSHAttr6.Size = new System.Drawing.Size(105, 30);
             this.labelSSHAttr6.TabIndex = 1;
             this.labelSSHAttr6.Text = "コピーします";
             // 
             // labelSSHAttr4
             // 
             this.labelSSHAttr4.AutoSize = true;
-            this.labelSSHAttr4.Location = new System.Drawing.Point(220, 40);
+            this.labelSSHAttr4.Location = new System.Drawing.Point(385, 69);
+            this.labelSSHAttr4.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.labelSSHAttr4.Name = "labelSSHAttr4";
-            this.labelSSHAttr4.Size = new System.Drawing.Size(60, 12);
+            this.labelSSHAttr4.Size = new System.Drawing.Size(105, 30);
             this.labelSSHAttr4.TabIndex = 1;
             this.labelSSHAttr4.Text = "コピーします";
             // 
             // label31
             // 
             this.label31.AutoSize = true;
-            this.label31.Location = new System.Drawing.Point(310, 96);
+            this.label31.Location = new System.Drawing.Point(542, 167);
+            this.label31.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label31.Name = "label31";
-            this.label31.Size = new System.Drawing.Size(53, 12);
+            this.label31.Size = new System.Drawing.Size(94, 30);
             this.label31.TabIndex = 1;
             this.label31.Text = "常にコピー";
             // 
             // label33
             // 
             this.label33.AutoSize = true;
-            this.label33.Location = new System.Drawing.Point(130, 96);
+            this.label33.Location = new System.Drawing.Point(228, 167);
+            this.label33.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label33.Name = "label33";
-            this.label33.Size = new System.Drawing.Size(53, 12);
+            this.label33.Size = new System.Drawing.Size(94, 30);
             this.label33.TabIndex = 1;
             this.label33.Text = "常にコピー";
             // 
             // labelSSHAttr2
             // 
             this.labelSSHAttr2.AutoSize = true;
-            this.labelSSHAttr2.Location = new System.Drawing.Point(220, 20);
+            this.labelSSHAttr2.Location = new System.Drawing.Point(385, 34);
+            this.labelSSHAttr2.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.labelSSHAttr2.Name = "labelSSHAttr2";
-            this.labelSSHAttr2.Size = new System.Drawing.Size(60, 12);
+            this.labelSSHAttr2.Size = new System.Drawing.Size(105, 30);
             this.labelSSHAttr2.TabIndex = 1;
             this.labelSSHAttr2.Text = "コピーします";
             // 
             // label29
             // 
             this.label29.AutoSize = true;
-            this.label29.Location = new System.Drawing.Point(310, 66);
+            this.label29.Location = new System.Drawing.Point(542, 115);
+            this.label29.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label29.Name = "label29";
-            this.label29.Size = new System.Drawing.Size(53, 12);
+            this.label29.Size = new System.Drawing.Size(94, 30);
             this.label29.TabIndex = 1;
             this.label29.Text = "常にコピー";
             // 
             // label34
             // 
             this.label34.AutoSize = true;
-            this.label34.Location = new System.Drawing.Point(310, 40);
+            this.label34.Location = new System.Drawing.Point(542, 69);
+            this.label34.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label34.Name = "label34";
-            this.label34.Size = new System.Drawing.Size(53, 12);
+            this.label34.Size = new System.Drawing.Size(94, 30);
             this.label34.TabIndex = 1;
             this.label34.Text = "常にコピー";
             // 
             // labelSSHAttr5
             // 
             this.labelSSHAttr5.AutoSize = true;
-            this.labelSSHAttr5.Location = new System.Drawing.Point(130, 66);
+            this.labelSSHAttr5.Location = new System.Drawing.Point(228, 115);
+            this.labelSSHAttr5.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.labelSSHAttr5.Name = "labelSSHAttr5";
-            this.labelSSHAttr5.Size = new System.Drawing.Size(60, 12);
+            this.labelSSHAttr5.Size = new System.Drawing.Size(105, 30);
             this.labelSSHAttr5.TabIndex = 1;
             this.labelSSHAttr5.Text = "コピーします";
             // 
             // label30
             // 
             this.label30.AutoSize = true;
-            this.label30.Location = new System.Drawing.Point(310, 20);
+            this.label30.Location = new System.Drawing.Point(542, 34);
+            this.label30.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label30.Name = "label30";
-            this.label30.Size = new System.Drawing.Size(53, 12);
+            this.label30.Size = new System.Drawing.Size(94, 30);
             this.label30.TabIndex = 1;
             this.label30.Text = "常にコピー";
             // 
             // labelSSHAttr3
             // 
             this.labelSSHAttr3.AutoSize = true;
-            this.labelSSHAttr3.Location = new System.Drawing.Point(130, 40);
+            this.labelSSHAttr3.Location = new System.Drawing.Point(228, 69);
+            this.labelSSHAttr3.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.labelSSHAttr3.Name = "labelSSHAttr3";
-            this.labelSSHAttr3.Size = new System.Drawing.Size(60, 12);
+            this.labelSSHAttr3.Size = new System.Drawing.Size(105, 30);
             this.labelSSHAttr3.TabIndex = 1;
             this.labelSSHAttr3.Text = "コピーします";
             // 
             // labelSSHAttr1
             // 
             this.labelSSHAttr1.AutoSize = true;
-            this.labelSSHAttr1.Location = new System.Drawing.Point(130, 20);
+            this.labelSSHAttr1.Location = new System.Drawing.Point(228, 34);
+            this.labelSSHAttr1.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.labelSSHAttr1.Name = "labelSSHAttr1";
-            this.labelSSHAttr1.Size = new System.Drawing.Size(60, 12);
+            this.labelSSHAttr1.Size = new System.Drawing.Size(105, 30);
             this.labelSSHAttr1.TabIndex = 1;
             this.labelSSHAttr1.Text = "コピーします";
             // 
@@ -581,9 +629,10 @@
             // 
             this.label41.AutoSize = true;
             this.label41.BackColor = System.Drawing.Color.Transparent;
-            this.label41.Location = new System.Drawing.Point(3, 72);
+            this.label41.Location = new System.Drawing.Point(5, 127);
+            this.label41.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label41.Name = "label41";
-            this.label41.Size = new System.Drawing.Size(80, 12);
+            this.label41.Size = new System.Drawing.Size(147, 30);
             this.label41.TabIndex = 1;
             this.label41.Text = "配下オブジェクト";
             // 
@@ -591,41 +640,45 @@
             // 
             this.label42.AutoSize = true;
             this.label42.BackColor = System.Drawing.Color.Transparent;
-            this.label42.Location = new System.Drawing.Point(3, 102);
+            this.label42.Location = new System.Drawing.Point(5, 179);
+            this.label42.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label42.Name = "label42";
-            this.label42.Size = new System.Drawing.Size(80, 12);
+            this.label42.Size = new System.Drawing.Size(147, 30);
             this.label42.TabIndex = 1;
             this.label42.Text = "配下オブジェクト";
             // 
             // label23
             // 
             this.label23.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label23.Location = new System.Drawing.Point(152, 206);
+            this.label23.Location = new System.Drawing.Point(266, 360);
+            this.label23.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(365, 3);
+            this.label23.Size = new System.Drawing.Size(639, 5);
             this.label23.TabIndex = 5;
             // 
             // label27
             // 
             this.label27.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label27.Location = new System.Drawing.Point(172, 24);
+            this.label27.Location = new System.Drawing.Point(301, 42);
+            this.label27.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(345, 3);
+            this.label27.Size = new System.Drawing.Size(604, 5);
             this.label27.TabIndex = 1;
             // 
             // label35
             // 
             this.label35.AutoSize = true;
-            this.label35.Location = new System.Drawing.Point(3, 3);
+            this.label35.Location = new System.Drawing.Point(5, 5);
+            this.label35.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label35.Name = "label35";
-            this.label35.Size = new System.Drawing.Size(374, 12);
+            this.label35.Size = new System.Drawing.Size(653, 30);
             this.label35.TabIndex = 0;
             this.label35.Text = "ファイルをコピーまたは移動するとき、その属性もコピーするかどうかを指定します。";
             // 
             // FileOperationCopyAttributePage
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(168F, 168F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.Controls.Add(this.label27);
             this.Controls.Add(this.label23);
             this.Controls.Add(this.label44);
@@ -635,8 +688,10 @@
             this.Controls.Add(this.panelWindows);
             this.Controls.Add(this.checkBoxSSHAttr);
             this.Controls.Add(this.checkBoxWindowsAttr);
+            this.Font = new System.Drawing.Font("Yu Gothic UI", 9F);
+            this.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.Name = "FileOperationCopyAttributePage";
-            this.Size = new System.Drawing.Size(520, 370);
+            this.Size = new System.Drawing.Size(910, 648);
             this.panelWindows.ResumeLayout(false);
             this.panelWindows.PerformLayout();
             this.panelSSH.ResumeLayout(false);

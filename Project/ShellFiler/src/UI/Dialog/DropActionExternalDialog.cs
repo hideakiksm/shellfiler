@@ -85,7 +85,7 @@ namespace ShellFiler.UI.Dialog {
 
             // 一覧をUIに反映
             FileIconManager manager = Program.Document.FileIconManager;
-            m_imageList.ImageSize = new Size(UIIconManager.CX_DEFAULT_ICON, UIIconManager.CY_DEFAULT_ICON);
+            m_imageList.ImageSize = new Size(UIIconManager.CxDefaultIcon, UIIconManager.CyDefaultIcon);
             m_imageList.Images.Add(manager.GetFileIcon(manager.DefaultFileIconId, manager.DefaultFileIconId, FileListViewIconSize.IconSize16).IconImage);
             m_imageList.Images.Add(manager.GetFileIcon(manager.DefaultFolderIconId, manager.DefaultFolderIconId, FileListViewIconSize.IconSize16).IconImage);
             this.listViewFiles.SmallImageList = m_imageList;

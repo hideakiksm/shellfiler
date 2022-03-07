@@ -458,7 +458,7 @@
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(14, 61);
+            this.label13.Location = new System.Drawing.Point(14, 63);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(80, 12);
             this.label13.TabIndex = 3;
@@ -468,7 +468,7 @@
             // 
             this.comboBoxTarget.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxTarget.FormattingEnabled = true;
-            this.comboBoxTarget.Location = new System.Drawing.Point(108, 58);
+            this.comboBoxTarget.Location = new System.Drawing.Point(108, 60);
             this.comboBoxTarget.Name = "comboBoxTarget";
             this.comboBoxTarget.Size = new System.Drawing.Size(154, 20);
             this.comboBoxTarget.TabIndex = 4;
@@ -476,7 +476,7 @@
             // linkLabelHelp
             // 
             this.linkLabelHelp.AutoSize = true;
-            this.linkLabelHelp.Location = new System.Drawing.Point(267, 61);
+            this.linkLabelHelp.Location = new System.Drawing.Point(267, 63);
             this.linkLabelHelp.Name = "linkLabelHelp";
             this.linkLabelHelp.Size = new System.Drawing.Size(63, 12);
             this.linkLabelHelp.TabIndex = 5;

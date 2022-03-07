@@ -45,7 +45,7 @@
             this.dateTimeStart.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dateTimeStart.Location = new System.Drawing.Point(3, 3);
             this.dateTimeStart.Name = "dateTimeStart";
-            this.dateTimeStart.Size = new System.Drawing.Size(145, 19);
+            this.dateTimeStart.Size = new System.Drawing.Size(145, 23);
             this.dateTimeStart.TabIndex = 0;
             this.dateTimeStart.ValueChanged += new System.EventHandler(this.dateTimeStartEnd_ValueChanged);
             // 
@@ -54,7 +54,7 @@
             this.checkBoxStart.AutoSize = true;
             this.checkBoxStart.Location = new System.Drawing.Point(150, 5);
             this.checkBoxStart.Name = "checkBoxStart";
-            this.checkBoxStart.Size = new System.Drawing.Size(46, 16);
+            this.checkBoxStart.Size = new System.Drawing.Size(48, 19);
             this.checkBoxStart.TabIndex = 1;
             this.checkBoxStart.Text = "含む";
             this.checkBoxStart.UseVisualStyleBackColor = true;
@@ -66,7 +66,7 @@
             this.dateTimeEnd.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dateTimeEnd.Location = new System.Drawing.Point(206, 3);
             this.dateTimeEnd.Name = "dateTimeEnd";
-            this.dateTimeEnd.Size = new System.Drawing.Size(145, 19);
+            this.dateTimeEnd.Size = new System.Drawing.Size(145, 23);
             this.dateTimeEnd.TabIndex = 2;
             this.dateTimeEnd.ValueChanged += new System.EventHandler(this.dateTimeStartEnd_ValueChanged);
             // 
@@ -75,7 +75,7 @@
             this.checkBoxEnd.AutoSize = true;
             this.checkBoxEnd.Location = new System.Drawing.Point(353, 5);
             this.checkBoxEnd.Name = "checkBoxEnd";
-            this.checkBoxEnd.Size = new System.Drawing.Size(46, 16);
+            this.checkBoxEnd.Size = new System.Drawing.Size(48, 19);
             this.checkBoxEnd.TabIndex = 3;
             this.checkBoxEnd.Text = "含む";
             this.checkBoxEnd.UseVisualStyleBackColor = true;
@@ -83,8 +83,8 @@
             // 
             // FileConditionDateControl
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.SystemColors.Window;
             this.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.Controls.Add(this.checkBoxEnd);
@@ -92,6 +92,7 @@
             this.Controls.Add(this.checkBoxStart);
             this.Controls.Add(this.dateTimeStart);
             this.Controls.Add(this.panelRange);
+            this.Font = new System.Drawing.Font("Yu Gothic UI", 9F);
             this.Name = "FileConditionDateControl";
             this.Size = new System.Drawing.Size(398, 48);
             this.ResumeLayout(false);

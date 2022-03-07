@@ -29,7 +29,7 @@ namespace ShellFiler.UI.Dialog {
             this.pictureBoxIcon = new System.Windows.Forms.PictureBox();
             this.buttonOk = new System.Windows.Forms.Button();
             this.listViewLocalFile = new System.Windows.Forms.ListView();
-            this.columnHeader = new System.Windows.Forms.ColumnHeader();
+            this.columnHeader = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxIcon)).BeginInit();
@@ -38,9 +38,9 @@ namespace ShellFiler.UI.Dialog {
             // labelTitle
             // 
             this.labelTitle.AutoSize = true;
-            this.labelTitle.Location = new System.Drawing.Point(80, 24);
+            this.labelTitle.Location = new System.Drawing.Point(80, 27);
             this.labelTitle.Name = "labelTitle";
-            this.labelTitle.Size = new System.Drawing.Size(68, 12);
+            this.labelTitle.Size = new System.Drawing.Size(76, 15);
             this.labelTitle.TabIndex = 0;
             this.labelTitle.Text = "編集:XXX 他";
             // 
@@ -49,16 +49,16 @@ namespace ShellFiler.UI.Dialog {
             this.labelErrorLine.AutoSize = true;
             this.labelErrorLine.Location = new System.Drawing.Point(63, 50);
             this.labelErrorLine.Name = "labelErrorLine";
-            this.labelErrorLine.Size = new System.Drawing.Size(267, 12);
+            this.labelErrorLine.Size = new System.Drawing.Size(278, 15);
             this.labelErrorLine.TabIndex = 1;
             this.labelErrorLine.Text = "編集用のアプリケーション{0}が起動直後に終了しました。";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(63, 62);
+            this.label1.Location = new System.Drawing.Point(63, 64);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(443, 12);
+            this.label1.Size = new System.Drawing.Size(445, 15);
             this.label1.TabIndex = 2;
             this.label1.Text = "編集を破棄または反映するには、画面右下の「編集終了待ち」の一覧を右クリックしてください。";
             // 
@@ -85,6 +85,7 @@ namespace ShellFiler.UI.Dialog {
             this.listViewLocalFile.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader});
             this.listViewLocalFile.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.None;
+            this.listViewLocalFile.HideSelection = false;
             this.listViewLocalFile.Location = new System.Drawing.Point(12, 120);
             this.listViewLocalFile.Name = "listViewLocalFile";
             this.listViewLocalFile.Size = new System.Drawing.Size(544, 101);
@@ -99,9 +100,9 @@ namespace ShellFiler.UI.Dialog {
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(10, 105);
+            this.label2.Location = new System.Drawing.Point(10, 103);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(65, 12);
+            this.label2.Size = new System.Drawing.Size(70, 15);
             this.label2.TabIndex = 3;
             this.label2.Text = "作業ファイル:";
             // 
@@ -110,15 +111,15 @@ namespace ShellFiler.UI.Dialog {
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(61, 12);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(162, 12);
+            this.label3.Size = new System.Drawing.Size(164, 15);
             this.label3.TabIndex = 6;
             this.label3.Text = "ファイルの更新を監視できません。";
             // 
             // LocalExecuteProcessErrorDialog
             // 
             this.AcceptButton = this.buttonOk;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.CancelButton = this.buttonOk;
             this.ClientSize = new System.Drawing.Size(573, 263);
             this.Controls.Add(this.label3);
@@ -129,6 +130,7 @@ namespace ShellFiler.UI.Dialog {
             this.Controls.Add(this.label1);
             this.Controls.Add(this.labelErrorLine);
             this.Controls.Add(this.labelTitle);
+            this.Font = new System.Drawing.Font("Yu Gothic UI", 9F);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.MinimizeBox = false;

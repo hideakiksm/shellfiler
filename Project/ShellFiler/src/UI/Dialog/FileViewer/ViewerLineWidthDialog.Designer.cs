@@ -49,7 +49,7 @@
             this.radioButtonChar.AutoSize = true;
             this.radioButtonChar.Location = new System.Drawing.Point(12, 13);
             this.radioButtonChar.Name = "radioButtonChar";
-            this.radioButtonChar.Size = new System.Drawing.Size(99, 16);
+            this.radioButtonChar.Size = new System.Drawing.Size(103, 19);
             this.radioButtonChar.TabIndex = 0;
             this.radioButtonChar.TabStop = true;
             this.radioButtonChar.Text = "文字数指定(&C)";
@@ -59,9 +59,9 @@
             // radioButtonPixel
             // 
             this.radioButtonPixel.AutoSize = true;
-            this.radioButtonPixel.Location = new System.Drawing.Point(12, 94);
+            this.radioButtonPixel.Location = new System.Drawing.Point(12, 98);
             this.radioButtonPixel.Name = "radioButtonPixel";
-            this.radioButtonPixel.Size = new System.Drawing.Size(111, 16);
+            this.radioButtonPixel.Size = new System.Drawing.Size(115, 19);
             this.radioButtonPixel.TabIndex = 6;
             this.radioButtonPixel.TabStop = true;
             this.radioButtonPixel.Text = "ピクセル数指定(&P)";
@@ -71,9 +71,9 @@
             // radioButtonNone
             // 
             this.radioButtonNone.AutoSize = true;
-            this.radioButtonNone.Location = new System.Drawing.Point(12, 175);
+            this.radioButtonNone.Location = new System.Drawing.Point(12, 183);
             this.radioButtonNone.Name = "radioButtonNone";
-            this.radioButtonNone.Size = new System.Drawing.Size(99, 16);
+            this.radioButtonNone.Size = new System.Drawing.Size(104, 19);
             this.radioButtonNone.TabIndex = 12;
             this.radioButtonNone.TabStop = true;
             this.radioButtonNone.Text = "折り返しなし(&N)";
@@ -89,7 +89,7 @@
             0,
             0});
             this.numericChar.Name = "numericChar";
-            this.numericChar.Size = new System.Drawing.Size(76, 19);
+            this.numericChar.Size = new System.Drawing.Size(76, 23);
             this.numericChar.TabIndex = 1;
             // 
             // label2
@@ -97,88 +97,88 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(109, 36);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(29, 12);
+            this.label2.Size = new System.Drawing.Size(31, 15);
             this.label2.TabIndex = 2;
             this.label2.Text = "文字";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(26, 57);
+            this.label3.Location = new System.Drawing.Point(26, 59);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(130, 12);
+            this.label3.Size = new System.Drawing.Size(132, 15);
             this.label3.TabIndex = 4;
             this.label3.Text = "タブ幅の指定が有効です。";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(26, 69);
+            this.label4.Location = new System.Drawing.Point(26, 73);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(257, 12);
+            this.label4.Size = new System.Drawing.Size(258, 15);
             this.label4.TabIndex = 5;
             this.label4.Text = "表示幅が半角/全角サイズの文字だけ表示できます。";
             // 
             // numericPixel
             // 
-            this.numericPixel.Location = new System.Drawing.Point(28, 116);
+            this.numericPixel.Location = new System.Drawing.Point(28, 120);
             this.numericPixel.Maximum = new decimal(new int[] {
             10000,
             0,
             0,
             0});
             this.numericPixel.Name = "numericPixel";
-            this.numericPixel.Size = new System.Drawing.Size(77, 19);
+            this.numericPixel.Size = new System.Drawing.Size(77, 23);
             this.numericPixel.TabIndex = 7;
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(109, 118);
+            this.label7.Location = new System.Drawing.Point(109, 122);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(42, 12);
+            this.label7.Size = new System.Drawing.Size(44, 15);
             this.label7.TabIndex = 8;
             this.label7.Text = "ピクセル";
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(26, 138);
+            this.label8.Location = new System.Drawing.Point(26, 144);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(164, 12);
+            this.label8.Size = new System.Drawing.Size(167, 15);
             this.label8.TabIndex = 10;
             this.label8.Text = "タブ文字は空白1文字になります。";
             // 
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(26, 150);
+            this.label10.Location = new System.Drawing.Point(26, 158);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(147, 12);
+            this.label10.Size = new System.Drawing.Size(149, 15);
             this.label10.TabIndex = 11;
             this.label10.Text = "すべての文字を表示できます。";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(26, 194);
+            this.label5.Location = new System.Drawing.Point(26, 202);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(164, 12);
+            this.label5.Size = new System.Drawing.Size(167, 15);
             this.label5.TabIndex = 13;
             this.label5.Text = "タブ文字は空白1文字になります。";
             // 
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(26, 206);
+            this.label9.Location = new System.Drawing.Point(26, 216);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(147, 12);
+            this.label9.Size = new System.Drawing.Size(149, 15);
             this.label9.TabIndex = 14;
             this.label9.Text = "すべての文字を表示できます。";
             // 
             // buttonOk
             // 
-            this.buttonOk.Location = new System.Drawing.Point(196, 226);
+            this.buttonOk.Location = new System.Drawing.Point(215, 235);
             this.buttonOk.Name = "buttonOk";
             this.buttonOk.Size = new System.Drawing.Size(75, 23);
             this.buttonOk.TabIndex = 15;
@@ -189,7 +189,7 @@
             // buttonCancel
             // 
             this.buttonCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.buttonCancel.Location = new System.Drawing.Point(277, 226);
+            this.buttonCancel.Location = new System.Drawing.Point(296, 235);
             this.buttonCancel.Name = "buttonCancel";
             this.buttonCancel.Size = new System.Drawing.Size(75, 23);
             this.buttonCancel.TabIndex = 16;
@@ -201,26 +201,26 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(142, 35);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(192, 12);
+            this.label1.Size = new System.Drawing.Size(207, 15);
             this.label1.TabIndex = 3;
             this.label1.Text = "(0:ウィンドウ幅、1:画面幅、2:全画面幅)";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(157, 118);
+            this.label6.Location = new System.Drawing.Point(157, 122);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(192, 12);
+            this.label6.Size = new System.Drawing.Size(207, 15);
             this.label6.TabIndex = 9;
             this.label6.Text = "(0:ウィンドウ幅、1:画面幅、2:全画面幅)";
             // 
             // ViewerLineWidthDialog
             // 
             this.AcceptButton = this.buttonOk;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.CancelButton = this.buttonCancel;
-            this.ClientSize = new System.Drawing.Size(364, 261);
+            this.ClientSize = new System.Drawing.Size(383, 270);
             this.Controls.Add(this.buttonCancel);
             this.Controls.Add(this.buttonOk);
             this.Controls.Add(this.label9);
@@ -238,6 +238,7 @@
             this.Controls.Add(this.radioButtonNone);
             this.Controls.Add(this.radioButtonPixel);
             this.Controls.Add(this.radioButtonChar);
+            this.Font = new System.Drawing.Font("Yu Gothic UI", 9F);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.MaximizeBox = false;
             this.MinimizeBox = false;

@@ -214,7 +214,7 @@ namespace ShellFiler.UI.FileList.DefaultList {
         private void DrawFileNameSeparate(FileListGraphics g) {
             // 描画位置を決定
             int xPos, cx;
-            GetItemPosition(FileListHeaderItem.FileListHeaderItemId.FileName, out xPos, out cx);
+            GetItemPosition(g, FileListHeaderItem.FileListHeaderItemId.FileName, out xPos, out cx);
             int xPosName, xPosExt, cxName, cxExt;
             UIFileList fileList = m_view.FileList;
             if (fileList.CxViewExtension == 0) {
@@ -252,7 +252,7 @@ namespace ShellFiler.UI.FileList.DefaultList {
         private void DrawFileNameCombine(FileListGraphics g) {
             // 描画位置を決定
             int xPos, cx;
-            GetItemPosition(FileListHeaderItem.FileListHeaderItemId.FileName, out xPos, out cx);
+            GetItemPosition(g, FileListHeaderItem.FileListHeaderItemId.FileName, out xPos, out cx);
             int yPos = m_lineYPos + m_lineYPosFont;
 
             // 描画内容を決定
@@ -270,7 +270,7 @@ namespace ShellFiler.UI.FileList.DefaultList {
         private void DrawFileSize(FileListGraphics g) {
             // 描画位置を決定
             int xPos, cx;
-            GetItemPosition(FileListHeaderItem.FileListHeaderItemId.FileSize, out xPos, out cx);
+            GetItemPosition(g, FileListHeaderItem.FileListHeaderItemId.FileSize, out xPos, out cx);
             int yPos = m_lineYPos + m_lineYPosFont;
 
             // 描画内容を決定
@@ -297,7 +297,7 @@ namespace ShellFiler.UI.FileList.DefaultList {
         private void DrawFileModifiedTime(FileListGraphics g) {
             // 描画位置を決定
             int xPos, cx;
-            GetItemPosition(FileListHeaderItem.FileListHeaderItemId.ModifiedTime, out xPos, out cx);
+            GetItemPosition(g, FileListHeaderItem.FileListHeaderItemId.ModifiedTime, out xPos, out cx);
             int yPos = m_lineYPos + m_lineYPosFont;
 
             // 描画内容を決定
@@ -316,7 +316,7 @@ namespace ShellFiler.UI.FileList.DefaultList {
         private void DrawFileAttribute(FileListGraphics g) {
             // 描画位置を決定
             int xPos, cx;
-            GetItemPosition(FileListHeaderItem.FileListHeaderItemId.Attribute, out xPos, out cx);
+            GetItemPosition(g, FileListHeaderItem.FileListHeaderItemId.Attribute, out xPos, out cx);
             int yPos = m_lineYPos + m_lineYPosFont;
 
             // 描画内容を決定
@@ -328,23 +328,24 @@ namespace ShellFiler.UI.FileList.DefaultList {
 
         //=========================================================================================
         // 機　能：指定項目の表示位置を取得する
-        // 引　数：[in]itemId  表示する項目
+        // 引　数：[in]g       グラフィックス（DPI計算用）
+        // 　　　　[in]itemId  表示する項目
         // 　　　　[out]xPos   X位置を返す変数
         // 　　　　[out]cx     表示幅を返す変数
         // 戻り値：なし
         //=========================================================================================
-        private void GetItemPosition(FileListHeaderItem.FileListHeaderItemId itemId, out int xPos, out int cx) {
+        private void GetItemPosition(FileListGraphics g, FileListHeaderItem.FileListHeaderItemId itemId, out int xPos, out int cx) {
             xPos = m_filePanelHeader.GetItemXPos(itemId);
             cx = m_filePanelHeader.GetItemWidth(itemId);
             if (m_itemIndex == 0) {
-                xPos += IconSize.Small16.CxIconSize + MARGIN_ICON_LEFT + MARGIN_ICON_RIGHT;
-                cx -= IconSize.Small16.CxIconSize + MARGIN_ICON_LEFT + MARGIN_ICON_RIGHT + ITEM_MARGIN;
+                xPos += g.X(IconSize.Small16.CxIconSize + MARGIN_ICON_LEFT + MARGIN_ICON_RIGHT);
+                cx -= IconSize.Small16.CxIconSize + g.X(MARGIN_ICON_LEFT + MARGIN_ICON_RIGHT + ITEM_MARGIN);
             } else if (m_itemIndex == m_filePanelHeader.FileListHeaderItemList.Length - 1) {
-                xPos += ITEM_MARGIN;
-                cx -= ITEM_MARGIN;
+                xPos += g.X(ITEM_MARGIN);
+                cx -= g.X(ITEM_MARGIN);
             } else {
-                xPos += ITEM_MARGIN;
-                cx -= ITEM_MARGIN;
+                xPos += g.X(ITEM_MARGIN);
+                cx -= g.X(ITEM_MARGIN);
             }
         }
 
@@ -457,9 +458,10 @@ namespace ShellFiler.UI.FileList.DefaultList {
                     return false;
                 }
                 Bitmap bmp = icon.IconImage;
-                Rectangle rcDest = new Rectangle(xPos, yPos, bmp.Width, bmp.Height);
+            //                int sizeImage = LineHeight - CY_ICON_ADJUST * 2;
+            Rectangle rcDest = new Rectangle(g.X(xPos), yPos, bmp.Width, bmp.Height);//, sizeImage);
                 if (IsActiveDraw) {
-                    g.Graphics.DrawImage(bmp, xPos, yPos);
+                    g.Graphics.DrawImage(bmp, rcDest, 0, 0, bmp.Width, bmp.Height, GraphicsUnit.Pixel);
                 } else {
                     g.Graphics.DrawImage(bmp, rcDest, 0, 0, bmp.Width, bmp.Height, GraphicsUnit.Pixel, g.MonochromeAttributes);
                 }

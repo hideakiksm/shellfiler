@@ -17,7 +17,7 @@ namespace ShellFiler.UI {
     //=========================================================================================
     // クラス：スプラッシュウィンドウの描画用グラフィックス
     //=========================================================================================
-    public class SplashWindowGraphics {
+    public class SplashWindowGraphics : HighDpiGraphics {
         // グラフィック（null:未初期化）
         private Graphics m_graphics;
 
@@ -44,7 +44,7 @@ namespace ShellFiler.UI {
         // 引　数：[in]graphics  グラフィックス
         // 戻り値：なし
         //=========================================================================================
-        public SplashWindowGraphics(Graphics graphics) {
+        public SplashWindowGraphics(Graphics graphics) : base(graphics) {
             m_graphics = graphics;
         }
 
@@ -53,7 +53,8 @@ namespace ShellFiler.UI {
         // 引　数：なし
         // 戻り値：なし
         //=========================================================================================
-        public void Dispose() {
+        public new void Dispose() {
+            base.Dispose();
             if (m_etcFont != null) {
                 m_etcFont.Dispose();
                 m_etcFont = null;
@@ -81,15 +82,6 @@ namespace ShellFiler.UI {
         }
 
         //=========================================================================================
-        // プロパティ：グラフィックス
-        //=========================================================================================
-        public Graphics Graphics {
-            get {
-                return m_graphics;
-            }
-        }
-
-        //=========================================================================================
         // プロパティ：各種描画用のフォント
         //=========================================================================================
         public Font EtcFont {
@@ -107,7 +99,7 @@ namespace ShellFiler.UI {
         public Font LicenseFont {
             get {
                 if (m_licenseFont == null) {
-                    m_licenseFont = new Font(FontFamily.GenericSansSerif, 9.0f);
+                    m_licenseFont = new Font("Yu Gothic UI", 9.0f);
                 }
                 return m_licenseFont;
             }

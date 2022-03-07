@@ -35,7 +35,7 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(13, 13);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(126, 12);
+            this.label1.Size = new System.Drawing.Size(133, 15);
             this.label1.TabIndex = 0;
             this.label1.Text = "コマンドを実行しています...";
             // 
@@ -52,7 +52,7 @@
             this.labelCommandName.AutoSize = true;
             this.labelCommandName.Location = new System.Drawing.Point(39, 44);
             this.labelCommandName.Name = "labelCommandName";
-            this.labelCommandName.Size = new System.Drawing.Size(0, 12);
+            this.labelCommandName.Size = new System.Drawing.Size(0, 15);
             this.labelCommandName.TabIndex = 0;
             // 
             // buttonCancel
@@ -67,13 +67,14 @@
             // 
             // MonitoringCommandWaitDialog
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.ClientSize = new System.Drawing.Size(320, 109);
             this.Controls.Add(this.buttonCancel);
             this.Controls.Add(this.pictureBox);
             this.Controls.Add(this.labelCommandName);
             this.Controls.Add(this.label1);
+            this.Font = new System.Drawing.Font("Yu Gothic UI", 9F);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.MinimizeBox = false;

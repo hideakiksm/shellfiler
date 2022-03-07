@@ -41,16 +41,17 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(11, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(222, 12);
+            this.label1.Size = new System.Drawing.Size(223, 15);
             this.label1.TabIndex = 0;
             this.label1.Text = "次のファイルまたはフォルダがドロップされました。";
             // 
             // listViewFiles
             // 
             this.listViewFiles.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.None;
-            this.listViewFiles.Location = new System.Drawing.Point(13, 24);
+            this.listViewFiles.HideSelection = false;
+            this.listViewFiles.Location = new System.Drawing.Point(13, 26);
             this.listViewFiles.Name = "listViewFiles";
-            this.listViewFiles.Size = new System.Drawing.Size(529, 141);
+            this.listViewFiles.Size = new System.Drawing.Size(529, 132);
             this.listViewFiles.TabIndex = 1;
             this.listViewFiles.UseCompatibleStateImageBehavior = false;
             this.listViewFiles.View = System.Windows.Forms.View.Details;
@@ -110,16 +111,16 @@
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(450, 171);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(53, 12);
+            this.label3.Size = new System.Drawing.Size(58, 15);
             this.label3.TabIndex = 7;
             this.label3.Text = "ファイル数:";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(450, 183);
+            this.label4.Location = new System.Drawing.Point(450, 185);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(54, 12);
+            this.label4.Size = new System.Drawing.Size(59, 15);
             this.label4.TabIndex = 9;
             this.label4.Text = "フォルダ数:";
             // 
@@ -134,17 +135,17 @@
             // 
             // labelFolderCount
             // 
-            this.labelFolderCount.Location = new System.Drawing.Point(504, 183);
+            this.labelFolderCount.Location = new System.Drawing.Point(504, 185);
             this.labelFolderCount.Name = "labelFolderCount";
             this.labelFolderCount.Size = new System.Drawing.Size(38, 12);
             this.labelFolderCount.TabIndex = 10;
             this.labelFolderCount.Text = "0";
             this.labelFolderCount.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // DropActionDialog
+            // DropActionExternalDialog
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.CancelButton = this.buttonCancel;
             this.ClientSize = new System.Drawing.Size(554, 293);
             this.Controls.Add(this.labelFolderCount);
@@ -158,16 +159,17 @@
             this.Controls.Add(this.buttonCancel);
             this.Controls.Add(this.listViewFiles);
             this.Controls.Add(this.label1);
+            this.Font = new System.Drawing.Font("Yu Gothic UI", 9F);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "DropActionDialog";
+            this.Name = "DropActionExternalDialog";
             this.ShowIcon = false;
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "ドロップ";
-            this.Load += new System.EventHandler(this.DropActionDialog_Load);
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.DropActionDialog_FormClosed);
+            this.Load += new System.EventHandler(this.DropActionDialog_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

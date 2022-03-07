@@ -88,7 +88,7 @@
             // buttonClose
             // 
             this.buttonClose.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.buttonClose.Location = new System.Drawing.Point(458, 324);
+            this.buttonClose.Location = new System.Drawing.Point(464, 337);
             this.buttonClose.Name = "buttonClose";
             this.buttonClose.Size = new System.Drawing.Size(83, 23);
             this.buttonClose.TabIndex = 1;
@@ -106,7 +106,7 @@
             // 
             // buttonCancel
             // 
-            this.buttonCancel.Location = new System.Drawing.Point(441, 18);
+            this.buttonCancel.Location = new System.Drawing.Point(441, 20);
             this.buttonCancel.Name = "buttonCancel";
             this.buttonCancel.Size = new System.Drawing.Size(83, 23);
             this.buttonCancel.TabIndex = 2;
@@ -119,7 +119,7 @@
             this.listViewTask.FullRowSelect = true;
             this.listViewTask.HideSelection = false;
             this.listViewTask.HoverSelection = true;
-            this.listViewTask.Location = new System.Drawing.Point(3, 18);
+            this.listViewTask.Location = new System.Drawing.Point(3, 20);
             this.listViewTask.MultiSelect = false;
             this.listViewTask.Name = "listViewTask";
             this.listViewTask.Size = new System.Drawing.Size(404, 90);
@@ -134,7 +134,7 @@
             this.tabControl.Location = new System.Drawing.Point(13, 13);
             this.tabControl.Name = "tabControl";
             this.tabControl.SelectedIndex = 0;
-            this.tabControl.Size = new System.Drawing.Size(538, 304);
+            this.tabControl.Size = new System.Drawing.Size(538, 318);
             this.tabControl.TabIndex = 0;
             // 
             // tabPageBackground
@@ -155,10 +155,10 @@
             this.tabPageBackground.Controls.Add(this.buttonCancel);
             this.tabPageBackground.Controls.Add(this.listViewWait);
             this.tabPageBackground.Controls.Add(this.listViewTask);
-            this.tabPageBackground.Location = new System.Drawing.Point(4, 22);
+            this.tabPageBackground.Location = new System.Drawing.Point(4, 24);
             this.tabPageBackground.Name = "tabPageBackground";
             this.tabPageBackground.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageBackground.Size = new System.Drawing.Size(530, 278);
+            this.tabPageBackground.Size = new System.Drawing.Size(530, 290);
             this.tabPageBackground.TabIndex = 0;
             this.tabPageBackground.Text = "バックグラウンドタスク";
             this.tabPageBackground.UseVisualStyleBackColor = true;
@@ -166,18 +166,18 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(3, 256);
+            this.label3.Location = new System.Drawing.Point(3, 262);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(409, 12);
+            this.label3.Size = new System.Drawing.Size(410, 15);
             this.label3.TabIndex = 14;
             this.label3.Text = "プロセスの実行やファイルの取得など、ファイル操作以外のタスクは待機中にできません。";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(3, 244);
+            this.label2.Location = new System.Drawing.Point(3, 246);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(388, 12);
+            this.label2.Size = new System.Drawing.Size(391, 15);
             this.label2.TabIndex = 13;
             this.label2.Text = "ファイル操作のタスクが終了すると、待機中のタスクの1つが自動的に再開されます。";
             // 
@@ -186,49 +186,49 @@
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(3, 3);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(43, 12);
+            this.label4.Size = new System.Drawing.Size(48, 15);
             this.label4.TabIndex = 0;
             this.label4.Text = "実行中:";
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(408, 225);
+            this.label7.Location = new System.Drawing.Point(408, 231);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(17, 12);
+            this.label7.Size = new System.Drawing.Size(19, 15);
             this.label7.TabIndex = 9;
             this.label7.Text = "低";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(408, 143);
+            this.label6.Location = new System.Drawing.Point(408, 149);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(17, 12);
+            this.label6.Size = new System.Drawing.Size(19, 15);
             this.label6.TabIndex = 8;
             this.label6.Text = "高";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(394, 128);
+            this.label5.Location = new System.Drawing.Point(394, 130);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(41, 12);
+            this.label5.Size = new System.Drawing.Size(43, 15);
             this.label5.TabIndex = 7;
             this.label5.Text = "優先度";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(3, 128);
+            this.label1.Location = new System.Drawing.Point(3, 130);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(43, 12);
+            this.label1.Size = new System.Drawing.Size(48, 15);
             this.label1.TabIndex = 5;
             this.label1.Text = "待機中:";
             // 
             // buttonPriorityMinus
             // 
-            this.buttonPriorityMinus.Location = new System.Drawing.Point(441, 201);
+            this.buttonPriorityMinus.Location = new System.Drawing.Point(441, 207);
             this.buttonPriorityMinus.Name = "buttonPriorityMinus";
             this.buttonPriorityMinus.Size = new System.Drawing.Size(83, 23);
             this.buttonPriorityMinus.TabIndex = 12;
@@ -237,7 +237,7 @@
             // 
             // buttonPriorityPlus
             // 
-            this.buttonPriorityPlus.Location = new System.Drawing.Point(441, 172);
+            this.buttonPriorityPlus.Location = new System.Drawing.Point(441, 178);
             this.buttonPriorityPlus.Name = "buttonPriorityPlus";
             this.buttonPriorityPlus.Size = new System.Drawing.Size(83, 23);
             this.buttonPriorityPlus.TabIndex = 11;
@@ -246,7 +246,7 @@
             // 
             // buttonResume
             // 
-            this.buttonResume.Location = new System.Drawing.Point(221, 114);
+            this.buttonResume.Location = new System.Drawing.Point(221, 118);
             this.buttonResume.Name = "buttonResume";
             this.buttonResume.Size = new System.Drawing.Size(83, 23);
             this.buttonResume.TabIndex = 4;
@@ -255,7 +255,7 @@
             // 
             // buttonSuspend
             // 
-            this.buttonSuspend.Location = new System.Drawing.Point(132, 114);
+            this.buttonSuspend.Location = new System.Drawing.Point(132, 118);
             this.buttonSuspend.Name = "buttonSuspend";
             this.buttonSuspend.Size = new System.Drawing.Size(83, 23);
             this.buttonSuspend.TabIndex = 3;
@@ -264,7 +264,7 @@
             // 
             // buttonCancelWait
             // 
-            this.buttonCancelWait.Location = new System.Drawing.Point(441, 143);
+            this.buttonCancelWait.Location = new System.Drawing.Point(441, 149);
             this.buttonCancelWait.Name = "buttonCancelWait";
             this.buttonCancelWait.Size = new System.Drawing.Size(83, 23);
             this.buttonCancelWait.TabIndex = 10;
@@ -275,7 +275,7 @@
             // 
             this.listViewWait.FullRowSelect = true;
             this.listViewWait.HideSelection = false;
-            this.listViewWait.Location = new System.Drawing.Point(3, 143);
+            this.listViewWait.Location = new System.Drawing.Point(3, 149);
             this.listViewWait.MultiSelect = false;
             this.listViewWait.Name = "listViewWait";
             this.listViewWait.Size = new System.Drawing.Size(404, 94);
@@ -288,10 +288,10 @@
             this.tabPageSSHConnection.Controls.Add(this.buttonDisconnectAll);
             this.tabPageSSHConnection.Controls.Add(this.listViewSSH);
             this.tabPageSSHConnection.Controls.Add(this.buttonSSHDisconnect);
-            this.tabPageSSHConnection.Location = new System.Drawing.Point(4, 22);
+            this.tabPageSSHConnection.Location = new System.Drawing.Point(4, 24);
             this.tabPageSSHConnection.Name = "tabPageSSHConnection";
             this.tabPageSSHConnection.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageSSHConnection.Size = new System.Drawing.Size(530, 278);
+            this.tabPageSSHConnection.Size = new System.Drawing.Size(530, 290);
             this.tabPageSSHConnection.TabIndex = 1;
             this.tabPageSSHConnection.Text = "SSHセッション";
             this.tabPageSSHConnection.UseVisualStyleBackColor = true;
@@ -299,12 +299,13 @@
             // TaskManagerDialog
             // 
             this.AcceptButton = this.buttonClose;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.CancelButton = this.buttonClose;
-            this.ClientSize = new System.Drawing.Size(563, 359);
+            this.ClientSize = new System.Drawing.Size(563, 372);
             this.Controls.Add(this.tabControl);
             this.Controls.Add(this.buttonClose);
+            this.Font = new System.Drawing.Font("Yu Gothic UI", 9F);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.MinimizeBox = false;

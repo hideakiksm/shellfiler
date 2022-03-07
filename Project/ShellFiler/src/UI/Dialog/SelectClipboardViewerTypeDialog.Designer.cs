@@ -44,16 +44,16 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(62, 12);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(205, 12);
+            this.label1.Size = new System.Drawing.Size(206, 15);
             this.label1.TabIndex = 0;
             this.label1.Text = "クリップボードでは複数の形式が有効です。";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(62, 24);
+            this.label2.Location = new System.Drawing.Point(62, 26);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(114, 12);
+            this.label2.Size = new System.Drawing.Size(115, 15);
             this.label2.TabIndex = 1;
             this.label2.Text = "どちらを表示しますか？";
             // 
@@ -79,14 +79,15 @@
             // 
             // SelectClipboardViewerTypeDialog
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.ClientSize = new System.Drawing.Size(319, 90);
             this.Controls.Add(this.buttonText);
             this.Controls.Add(this.buttonImage);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBoxIcon);
+            this.Font = new System.Drawing.Font("Yu Gothic UI", 9F);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.MaximizeBox = false;
             this.MinimizeBox = false;

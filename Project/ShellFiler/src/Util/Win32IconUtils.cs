@@ -4,6 +4,7 @@ using System.Text;
 using System.Drawing;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
+using ShellFiler.UI;
 using ShellFiler.FileSystem;
 
 namespace ShellFiler.Util {
@@ -202,8 +203,9 @@ namespace ShellFiler.Util {
             if ((iconMode & ICONMODE_EXTENSION_ONLY) != 0) {
                 flag |= SHGFI_USEFILEATTRIBUTES;
             }
-            Bitmap bmp = new Bitmap(iconSize.CxIconSize, iconSize.CyIconSize);
+            Bitmap bmp = new Bitmap(MainWindowForm.X(iconSize.CxIconSize), MainWindowForm.Y(iconSize.CxIconSize));
             Graphics g = Graphics.FromImage(bmp);
+ g.FillRectangle(Brushes.AliceBlue, 0, 0, iconSize.CxIconSize, iconSize.CyIconSize);
             try {
                 // シェルからアイコンを取得
                 SHFILEINFO shinfo = new SHFILEINFO();

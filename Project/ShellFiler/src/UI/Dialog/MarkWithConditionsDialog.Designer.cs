@@ -49,7 +49,7 @@
             this.radioButtonSetting.AutoSize = true;
             this.radioButtonSetting.Location = new System.Drawing.Point(10, 18);
             this.radioButtonSetting.Name = "radioButtonSetting";
-            this.radioButtonSetting.Size = new System.Drawing.Size(154, 16);
+            this.radioButtonSetting.Size = new System.Drawing.Size(158, 19);
             this.radioButtonSetting.TabIndex = 0;
             this.radioButtonSetting.TabStop = true;
             this.radioButtonSetting.Text = "設定済みの条件で選択(&C)";
@@ -58,9 +58,9 @@
             // radioButtonWild
             // 
             this.radioButtonWild.AutoSize = true;
-            this.radioButtonWild.Location = new System.Drawing.Point(10, 134);
+            this.radioButtonWild.Location = new System.Drawing.Point(10, 136);
             this.radioButtonWild.Name = "radioButtonWild";
-            this.radioButtonWild.Size = new System.Drawing.Size(218, 16);
+            this.radioButtonWild.Size = new System.Drawing.Size(221, 19);
             this.radioButtonWild.TabIndex = 3;
             this.radioButtonWild.TabStop = true;
             this.radioButtonWild.Text = "ファイル名のワイルドカードで簡易指定(&Q)";
@@ -84,7 +84,7 @@
             this.radioButtonSelectClear.AutoSize = true;
             this.radioButtonSelectClear.Location = new System.Drawing.Point(11, 63);
             this.radioButtonSelectClear.Name = "radioButtonSelectClear";
-            this.radioButtonSelectClear.Size = new System.Drawing.Size(118, 16);
+            this.radioButtonSelectClear.Size = new System.Drawing.Size(123, 19);
             this.radioButtonSelectClear.TabIndex = 2;
             this.radioButtonSelectClear.TabStop = true;
             this.radioButtonSelectClear.Text = "選択状態をクリア(&L)";
@@ -95,7 +95,7 @@
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(6, 95);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(178, 12);
+            this.label5.Size = new System.Drawing.Size(180, 15);
             this.label5.TabIndex = 6;
             this.label5.Text = "ファイルとフォルダの両方が対象です。";
             // 
@@ -104,7 +104,7 @@
             this.radioButtonSelectSet.AutoSize = true;
             this.radioButtonSelectSet.Location = new System.Drawing.Point(11, 41);
             this.radioButtonSelectSet.Name = "radioButtonSelectSet";
-            this.radioButtonSelectSet.Size = new System.Drawing.Size(119, 16);
+            this.radioButtonSelectSet.Size = new System.Drawing.Size(124, 19);
             this.radioButtonSelectSet.TabIndex = 1;
             this.radioButtonSelectSet.TabStop = true;
             this.radioButtonSelectSet.Text = "選択状態に設定(&T)";
@@ -115,7 +115,7 @@
             this.radioButtonSelectRevert.AutoSize = true;
             this.radioButtonSelectRevert.Location = new System.Drawing.Point(11, 19);
             this.radioButtonSelectRevert.Name = "radioButtonSelectRevert";
-            this.radioButtonSelectRevert.Size = new System.Drawing.Size(120, 16);
+            this.radioButtonSelectRevert.Size = new System.Drawing.Size(124, 19);
             this.radioButtonSelectRevert.TabIndex = 0;
             this.radioButtonSelectRevert.TabStop = true;
             this.radioButtonSelectRevert.Text = "選択状態を反転(&R)";
@@ -125,7 +125,7 @@
             // 
             this.checkedListCondition.CheckOnClick = true;
             this.checkedListCondition.FormattingEnabled = true;
-            this.checkedListCondition.Location = new System.Drawing.Point(30, 40);
+            this.checkedListCondition.Location = new System.Drawing.Point(30, 42);
             this.checkedListCondition.Name = "checkedListCondition";
             this.checkedListCondition.Size = new System.Drawing.Size(325, 88);
             this.checkedListCondition.TabIndex = 1;
@@ -141,9 +141,9 @@
             // 
             // textBoxWildCard
             // 
-            this.textBoxWildCard.Location = new System.Drawing.Point(30, 157);
+            this.textBoxWildCard.Location = new System.Drawing.Point(30, 159);
             this.textBoxWildCard.Name = "textBoxWildCard";
-            this.textBoxWildCard.Size = new System.Drawing.Size(325, 19);
+            this.textBoxWildCard.Size = new System.Drawing.Size(325, 23);
             this.textBoxWildCard.TabIndex = 4;
             // 
             // buttonCancel
@@ -171,7 +171,7 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(275, 142);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(80, 12);
+            this.label1.Size = new System.Drawing.Size(82, 15);
             this.label1.TabIndex = 5;
             this.label1.Text = "↑↓で切り替え";
             // 
@@ -186,7 +186,7 @@
             this.groupBox2.Controls.Add(this.checkedListCondition);
             this.groupBox2.Location = new System.Drawing.Point(15, 44);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(369, 198);
+            this.groupBox2.Size = new System.Drawing.Size(369, 210);
             this.groupBox2.TabIndex = 0;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "選択状態を変えるファイルの条件";
@@ -194,9 +194,9 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(28, 179);
+            this.label2.Location = new System.Drawing.Point(26, 185);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(252, 12);
+            this.label2.Size = new System.Drawing.Size(257, 15);
             this.label2.TabIndex = 6;
             this.label2.Text = "「:」区切りで複数指定可能、ファイルとフォルダが対象";
             // 
@@ -205,24 +205,24 @@
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(13, 9);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(297, 12);
+            this.label3.Size = new System.Drawing.Size(299, 15);
             this.label3.TabIndex = 6;
             this.label3.Text = "指定の条件に一致するファイルをまとめて選択状態にできます。";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(13, 21);
+            this.label4.Location = new System.Drawing.Point(13, 23);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(364, 12);
+            this.label4.Size = new System.Drawing.Size(374, 15);
             this.label4.TabIndex = 6;
             this.label4.Text = "たとえば、今日の12時以降に更新された*.bakだけをマークすることができます。";
             // 
             // MarkWithConditionsDialog
             // 
             this.AcceptButton = this.buttonOk;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.CancelButton = this.buttonCancel;
             this.ClientSize = new System.Drawing.Size(604, 284);
             this.Controls.Add(this.groupBox2);
@@ -231,6 +231,7 @@
             this.Controls.Add(this.buttonOk);
             this.Controls.Add(this.buttonCancel);
             this.Controls.Add(this.groupBox1);
+            this.Font = new System.Drawing.Font("Yu Gothic UI", 9F);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.MaximizeBox = false;
             this.MinimizeBox = false;

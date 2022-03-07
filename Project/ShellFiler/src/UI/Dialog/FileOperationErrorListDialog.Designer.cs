@@ -28,10 +28,10 @@
             this.buttonMark = new System.Windows.Forms.Button();
             this.buttonCancel = new System.Windows.Forms.Button();
             this.listViewErrorList = new System.Windows.Forms.ListView();
-            this.columnHeader1 = new System.Windows.Forms.ColumnHeader();
-            this.columnHeader2 = new System.Windows.Forms.ColumnHeader();
-            this.columnHeader3 = new System.Windows.Forms.ColumnHeader();
-            this.columnHeader4 = new System.Windows.Forms.ColumnHeader();
+            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.SuspendLayout();
             // 
             // labelTitle
@@ -39,7 +39,7 @@
             this.labelTitle.AutoSize = true;
             this.labelTitle.Location = new System.Drawing.Point(13, 13);
             this.labelTitle.Name = "labelTitle";
-            this.labelTitle.Size = new System.Drawing.Size(132, 12);
+            this.labelTitle.Size = new System.Drawing.Size(143, 15);
             this.labelTitle.TabIndex = 0;
             this.labelTitle.Text = "{0}でエラーが発生しました。";
             // 
@@ -79,19 +79,20 @@
             // 
             // listViewErrorList
             // 
-            this.listViewErrorList.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-                        | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.listViewErrorList.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.listViewErrorList.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader1,
             this.columnHeader2,
             this.columnHeader3,
             this.columnHeader4});
             this.listViewErrorList.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
-            this.listViewErrorList.Location = new System.Drawing.Point(12, 28);
+            this.listViewErrorList.HideSelection = false;
+            this.listViewErrorList.Location = new System.Drawing.Point(12, 32);
             this.listViewErrorList.Name = "listViewErrorList";
             this.listViewErrorList.ShowItemToolTips = true;
-            this.listViewErrorList.Size = new System.Drawing.Size(651, 222);
+            this.listViewErrorList.Size = new System.Drawing.Size(651, 218);
             this.listViewErrorList.TabIndex = 1;
             this.listViewErrorList.UseCompatibleStateImageBehavior = false;
             this.listViewErrorList.View = System.Windows.Forms.View.Details;
@@ -119,8 +120,8 @@
             // FileOperationErrorListDialog
             // 
             this.AcceptButton = this.buttonCancel;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.CancelButton = this.buttonCancel;
             this.ClientSize = new System.Drawing.Size(675, 291);
             this.Controls.Add(this.listViewErrorList);
@@ -128,6 +129,7 @@
             this.Controls.Add(this.buttonMark);
             this.Controls.Add(this.buttonRetry);
             this.Controls.Add(this.labelTitle);
+            this.Font = new System.Drawing.Font("Yu Gothic UI", 9F);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.MinimumSize = new System.Drawing.Size(320, 200);

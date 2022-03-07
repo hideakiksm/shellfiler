@@ -45,12 +45,12 @@
             this.listViewTarget = new System.Windows.Forms.ListView();
             this.pictureBoxIcon = new System.Windows.Forms.PictureBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.labelAttrCopy = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.checkBoxAttrCopy = new System.Windows.Forms.CheckBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.checkBoxSuspend = new System.Windows.Forms.CheckBox();
+            this.labelAttrCopy = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.checkBoxAttrCopy = new System.Windows.Forms.CheckBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxIcon)).BeginInit();
             this.groupBox2.SuspendLayout();
@@ -106,7 +106,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(25, 183);
+            this.label2.Location = new System.Drawing.Point(25, 185);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(228, 12);
             this.label2.TabIndex = 14;
@@ -150,7 +150,7 @@
             // 
             // buttonSetting
             // 
-            this.buttonSetting.Location = new System.Drawing.Point(277, 18);
+            this.buttonSetting.Location = new System.Drawing.Point(277, 16);
             this.buttonSetting.Name = "buttonSetting";
             this.buttonSetting.Size = new System.Drawing.Size(75, 23);
             this.buttonSetting.TabIndex = 10;
@@ -196,6 +196,7 @@
             // listViewTarget
             // 
             this.listViewTarget.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.None;
+            this.listViewTarget.HideSelection = false;
             this.listViewTarget.Location = new System.Drawing.Point(12, 32);
             this.listViewTarget.Name = "listViewTarget";
             this.listViewTarget.Size = new System.Drawing.Size(602, 108);
@@ -222,15 +223,43 @@
             this.groupBox2.Controls.Add(this.checkBoxAttrCopy);
             this.groupBox2.Location = new System.Drawing.Point(382, 171);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(232, 132);
+            this.groupBox2.Size = new System.Drawing.Size(232, 139);
             this.groupBox2.TabIndex = 5;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "その他の設定";
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(19, 113);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(163, 12);
+            this.label5.TabIndex = 5;
+            this.label5.Text = "その処理の完了後に開始します。";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(19, 99);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(165, 12);
+            this.label4.TabIndex = 4;
+            this.label4.Text = "ほかに実行中の処理がある場合、";
+            // 
+            // checkBoxSuspend
+            // 
+            this.checkBoxSuspend.AutoSize = true;
+            this.checkBoxSuspend.Location = new System.Drawing.Point(7, 78);
+            this.checkBoxSuspend.Name = "checkBoxSuspend";
+            this.checkBoxSuspend.Size = new System.Drawing.Size(157, 16);
+            this.checkBoxSuspend.TabIndex = 3;
+            this.checkBoxSuspend.Text = "待機状態のタスクを作成(&W)";
+            this.checkBoxSuspend.UseVisualStyleBackColor = true;
+            // 
             // labelAttrCopy
             // 
             this.labelAttrCopy.AutoSize = true;
-            this.labelAttrCopy.Location = new System.Drawing.Point(19, 50);
+            this.labelAttrCopy.Location = new System.Drawing.Point(19, 52);
             this.labelAttrCopy.Name = "labelAttrCopy";
             this.labelAttrCopy.Size = new System.Drawing.Size(144, 12);
             this.labelAttrCopy.TabIndex = 2;
@@ -255,34 +284,6 @@
             this.checkBoxAttrCopy.Text = "転送後にすべての属性をコピー(&A)";
             this.checkBoxAttrCopy.ThreeState = true;
             this.checkBoxAttrCopy.UseVisualStyleBackColor = true;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(19, 107);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(163, 12);
-            this.label5.TabIndex = 5;
-            this.label5.Text = "その処理の完了後に開始します。";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(19, 95);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(165, 12);
-            this.label4.TabIndex = 4;
-            this.label4.Text = "ほかに実行中の処理がある場合、";
-            // 
-            // checkBoxSuspend
-            // 
-            this.checkBoxSuspend.AutoSize = true;
-            this.checkBoxSuspend.Location = new System.Drawing.Point(7, 76);
-            this.checkBoxSuspend.Name = "checkBoxSuspend";
-            this.checkBoxSuspend.Size = new System.Drawing.Size(157, 16);
-            this.checkBoxSuspend.TabIndex = 3;
-            this.checkBoxSuspend.Text = "待機状態のタスクを作成(&W)";
-            this.checkBoxSuspend.UseVisualStyleBackColor = true;
             // 
             // MoveExStartDialog
             // 

@@ -48,7 +48,7 @@
             this.radioFileIntegrate.AutoSize = true;
             this.radioFileIntegrate.Location = new System.Drawing.Point(6, 40);
             this.radioFileIntegrate.Name = "radioFileIntegrate";
-            this.radioFileIntegrate.Size = new System.Drawing.Size(267, 16);
+            this.radioFileIntegrate.Size = new System.Drawing.Size(282, 19);
             this.radioFileIntegrate.TabIndex = 1;
             this.radioFileIntegrate.TabStop = true;
             this.radioFileIntegrate.Text = "ShellFilerのプロセスごとに１つのログファイルに出力(&I)";
@@ -71,7 +71,7 @@
             this.radioFileEachSession.AutoSize = true;
             this.radioFileEachSession.Location = new System.Drawing.Point(6, 62);
             this.radioFileEachSession.Name = "radioFileEachSession";
-            this.radioFileEachSession.Size = new System.Drawing.Size(213, 16);
+            this.radioFileEachSession.Size = new System.Drawing.Size(217, 19);
             this.radioFileEachSession.TabIndex = 2;
             this.radioFileEachSession.TabStop = true;
             this.radioFileEachSession.Text = "セッションごとに別のログファイルに出力(&E)";
@@ -82,7 +82,7 @@
             this.radioFileNone.AutoSize = true;
             this.radioFileNone.Location = new System.Drawing.Point(6, 18);
             this.radioFileNone.Name = "radioFileNone";
-            this.radioFileNone.Size = new System.Drawing.Size(153, 16);
+            this.radioFileNone.Size = new System.Drawing.Size(158, 19);
             this.radioFileNone.TabIndex = 0;
             this.radioFileNone.TabStop = true;
             this.radioFileNone.Text = "ログファイルを出力しない(&N)";
@@ -97,23 +97,23 @@
             this.groupBox2.Controls.Add(this.label1);
             this.groupBox2.Location = new System.Drawing.Point(6, 95);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(511, 70);
+            this.groupBox2.Size = new System.Drawing.Size(511, 75);
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "ローテーション";
             // 
             // numericRotationCount
             // 
-            this.numericRotationCount.Location = new System.Drawing.Point(165, 42);
+            this.numericRotationCount.Location = new System.Drawing.Point(165, 44);
             this.numericRotationCount.Name = "numericRotationCount";
-            this.numericRotationCount.Size = new System.Drawing.Size(120, 19);
+            this.numericRotationCount.Size = new System.Drawing.Size(120, 23);
             this.numericRotationCount.TabIndex = 4;
             // 
             // numericRotationSize
             // 
             this.numericRotationSize.Location = new System.Drawing.Point(165, 17);
             this.numericRotationSize.Name = "numericRotationSize";
-            this.numericRotationSize.Size = new System.Drawing.Size(120, 19);
+            this.numericRotationSize.Size = new System.Drawing.Size(120, 23);
             this.numericRotationSize.TabIndex = 1;
             // 
             // label6
@@ -121,16 +121,16 @@
             this.label6.AutoSize = true;
             this.label6.Location = new System.Drawing.Point(291, 19);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(20, 12);
+            this.label6.Size = new System.Drawing.Size(23, 15);
             this.label6.TabIndex = 2;
             this.label6.Text = "KB";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(7, 44);
+            this.label2.Location = new System.Drawing.Point(7, 46);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(93, 12);
+            this.label2.Size = new System.Drawing.Size(100, 15);
             this.label2.TabIndex = 3;
             this.label2.Text = "最大ファイル数(&C):";
             // 
@@ -139,29 +139,29 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(7, 19);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(152, 12);
+            this.label1.Size = new System.Drawing.Size(161, 15);
             this.label1.TabIndex = 0;
             this.label1.Text = "1ファイルあたりの最大サイズ(&S):";
             // 
             // textBoxFolder
             // 
-            this.textBoxFolder.Location = new System.Drawing.Point(35, 188);
+            this.textBoxFolder.Location = new System.Drawing.Point(35, 194);
             this.textBoxFolder.Name = "textBoxFolder";
-            this.textBoxFolder.Size = new System.Drawing.Size(401, 19);
+            this.textBoxFolder.Size = new System.Drawing.Size(401, 23);
             this.textBoxFolder.TabIndex = 3;
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(4, 173);
+            this.label7.Location = new System.Drawing.Point(4, 177);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(99, 12);
+            this.label7.Size = new System.Drawing.Size(106, 15);
             this.label7.TabIndex = 2;
             this.label7.Text = "ログ出力フォルダ(&F):";
             // 
             // buttonFolderRef
             // 
-            this.buttonFolderRef.Location = new System.Drawing.Point(442, 186);
+            this.buttonFolderRef.Location = new System.Drawing.Point(442, 194);
             this.buttonFolderRef.Name = "buttonFolderRef";
             this.buttonFolderRef.Size = new System.Drawing.Size(75, 23);
             this.buttonFolderRef.TabIndex = 4;
@@ -171,22 +171,23 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(33, 210);
+            this.label3.Location = new System.Drawing.Point(33, 218);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(439, 12);
+            this.label3.Size = new System.Drawing.Size(470, 15);
             this.label3.TabIndex = 5;
             this.label3.Text = "指定がない場合は既定の出力先(AppData\\Local\\ShellFiler\\TerminalLog)に出力します。";
             // 
             // SSHTerminalLogPage
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.Controls.Add(this.buttonFolderRef);
             this.Controls.Add(this.textBoxFolder);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.groupBox1);
+            this.Font = new System.Drawing.Font("Yu Gothic UI", 9F);
             this.Name = "SSHTerminalLogPage";
             this.Size = new System.Drawing.Size(520, 370);
             this.groupBox1.ResumeLayout(false);

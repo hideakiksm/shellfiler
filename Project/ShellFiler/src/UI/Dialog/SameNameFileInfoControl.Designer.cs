@@ -23,6 +23,7 @@
         /// コード エディターで変更しないでください。
         /// </summary>
         private void InitializeComponent() {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SameNameFileInfoControl));
             this.labelDest = new System.Windows.Forms.Label();
             this.textBoxSrcPath = new System.Windows.Forms.TextBox();
             this.labelSrcSize = new System.Windows.Forms.Label();
@@ -44,9 +45,10 @@
             // labelDest
             // 
             this.labelDest.AutoSize = true;
-            this.labelDest.Location = new System.Drawing.Point(5, 188);
+            this.labelDest.Location = new System.Drawing.Point(9, 329);
+            this.labelDest.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.labelDest.Name = "labelDest";
-            this.labelDest.Size = new System.Drawing.Size(43, 12);
+            this.labelDest.Size = new System.Drawing.Size(81, 30);
             this.labelDest.TabIndex = 1;
             this.labelDest.Text = "転送先:";
             // 
@@ -54,18 +56,20 @@
             // 
             this.textBoxSrcPath.BackColor = System.Drawing.SystemColors.Control;
             this.textBoxSrcPath.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBoxSrcPath.Location = new System.Drawing.Point(54, 58);
+            this.textBoxSrcPath.Location = new System.Drawing.Point(94, 102);
+            this.textBoxSrcPath.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.textBoxSrcPath.Name = "textBoxSrcPath";
             this.textBoxSrcPath.ReadOnly = true;
-            this.textBoxSrcPath.Size = new System.Drawing.Size(160, 12);
+            this.textBoxSrcPath.Size = new System.Drawing.Size(280, 28);
             this.textBoxSrcPath.TabIndex = 0;
             // 
             // labelSrcSize
             // 
             this.labelSrcSize.AutoSize = true;
-            this.labelSrcSize.Location = new System.Drawing.Point(4, 73);
+            this.labelSrcSize.Location = new System.Drawing.Point(7, 128);
+            this.labelSrcSize.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.labelSrcSize.Name = "labelSrcSize";
-            this.labelSrcSize.Size = new System.Drawing.Size(36, 12);
+            this.labelSrcSize.Size = new System.Drawing.Size(67, 30);
             this.labelSrcSize.TabIndex = 1;
             this.labelSrcSize.Text = "サイズ:";
             // 
@@ -73,18 +77,20 @@
             // 
             this.textBoxSrcSize.BackColor = System.Drawing.SystemColors.Control;
             this.textBoxSrcSize.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBoxSrcSize.Location = new System.Drawing.Point(54, 73);
+            this.textBoxSrcSize.Location = new System.Drawing.Point(94, 128);
+            this.textBoxSrcSize.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.textBoxSrcSize.Name = "textBoxSrcSize";
             this.textBoxSrcSize.ReadOnly = true;
-            this.textBoxSrcSize.Size = new System.Drawing.Size(160, 12);
+            this.textBoxSrcSize.Size = new System.Drawing.Size(280, 28);
             this.textBoxSrcSize.TabIndex = 2;
             // 
             // labelSrcTime
             // 
             this.labelSrcTime.AutoSize = true;
-            this.labelSrcTime.Location = new System.Drawing.Point(4, 88);
+            this.labelSrcTime.Location = new System.Drawing.Point(7, 154);
+            this.labelSrcTime.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.labelSrcTime.Name = "labelSrcTime";
-            this.labelSrcTime.Size = new System.Drawing.Size(31, 12);
+            this.labelSrcTime.Size = new System.Drawing.Size(60, 30);
             this.labelSrcTime.TabIndex = 1;
             this.labelSrcTime.Text = "更新:";
             // 
@@ -92,18 +98,20 @@
             // 
             this.textBoxSrcTime.BackColor = System.Drawing.SystemColors.Control;
             this.textBoxSrcTime.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBoxSrcTime.Location = new System.Drawing.Point(54, 88);
+            this.textBoxSrcTime.Location = new System.Drawing.Point(94, 154);
+            this.textBoxSrcTime.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.textBoxSrcTime.Name = "textBoxSrcTime";
             this.textBoxSrcTime.ReadOnly = true;
-            this.textBoxSrcTime.Size = new System.Drawing.Size(160, 12);
+            this.textBoxSrcTime.Size = new System.Drawing.Size(280, 28);
             this.textBoxSrcTime.TabIndex = 2;
             // 
             // labelSrc
             // 
             this.labelSrc.AutoSize = true;
-            this.labelSrc.Location = new System.Drawing.Point(4, 58);
+            this.labelSrc.Location = new System.Drawing.Point(7, 102);
+            this.labelSrc.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.labelSrc.Name = "labelSrc";
-            this.labelSrc.Size = new System.Drawing.Size(43, 12);
+            this.labelSrc.Size = new System.Drawing.Size(81, 30);
             this.labelSrc.TabIndex = 1;
             this.labelSrc.Text = "転送元:";
             // 
@@ -111,18 +119,20 @@
             // 
             this.textBoxDestPath.BackColor = System.Drawing.SystemColors.Control;
             this.textBoxDestPath.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBoxDestPath.Location = new System.Drawing.Point(54, 188);
+            this.textBoxDestPath.Location = new System.Drawing.Point(94, 329);
+            this.textBoxDestPath.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.textBoxDestPath.Name = "textBoxDestPath";
             this.textBoxDestPath.ReadOnly = true;
-            this.textBoxDestPath.Size = new System.Drawing.Size(160, 12);
+            this.textBoxDestPath.Size = new System.Drawing.Size(280, 28);
             this.textBoxDestPath.TabIndex = 0;
             // 
             // labelDestSize
             // 
             this.labelDestSize.AutoSize = true;
-            this.labelDestSize.Location = new System.Drawing.Point(4, 203);
+            this.labelDestSize.Location = new System.Drawing.Point(7, 355);
+            this.labelDestSize.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.labelDestSize.Name = "labelDestSize";
-            this.labelDestSize.Size = new System.Drawing.Size(36, 12);
+            this.labelDestSize.Size = new System.Drawing.Size(67, 30);
             this.labelDestSize.TabIndex = 1;
             this.labelDestSize.Text = "サイズ:";
             // 
@@ -130,18 +140,20 @@
             // 
             this.textBoxDestSize.BackColor = System.Drawing.SystemColors.Control;
             this.textBoxDestSize.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBoxDestSize.Location = new System.Drawing.Point(54, 203);
+            this.textBoxDestSize.Location = new System.Drawing.Point(94, 355);
+            this.textBoxDestSize.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.textBoxDestSize.Name = "textBoxDestSize";
             this.textBoxDestSize.ReadOnly = true;
-            this.textBoxDestSize.Size = new System.Drawing.Size(160, 12);
+            this.textBoxDestSize.Size = new System.Drawing.Size(280, 28);
             this.textBoxDestSize.TabIndex = 2;
             // 
             // labelDestTime
             // 
             this.labelDestTime.AutoSize = true;
-            this.labelDestTime.Location = new System.Drawing.Point(4, 218);
+            this.labelDestTime.Location = new System.Drawing.Point(7, 382);
+            this.labelDestTime.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.labelDestTime.Name = "labelDestTime";
-            this.labelDestTime.Size = new System.Drawing.Size(31, 12);
+            this.labelDestTime.Size = new System.Drawing.Size(60, 30);
             this.labelDestTime.TabIndex = 1;
             this.labelDestTime.Text = "更新:";
             // 
@@ -149,42 +161,46 @@
             // 
             this.textBoxDestTime.BackColor = System.Drawing.SystemColors.Control;
             this.textBoxDestTime.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBoxDestTime.Location = new System.Drawing.Point(54, 218);
+            this.textBoxDestTime.Location = new System.Drawing.Point(94, 382);
+            this.textBoxDestTime.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.textBoxDestTime.Name = "textBoxDestTime";
             this.textBoxDestTime.ReadOnly = true;
-            this.textBoxDestTime.Size = new System.Drawing.Size(160, 12);
+            this.textBoxDestTime.Size = new System.Drawing.Size(280, 28);
             this.textBoxDestTime.TabIndex = 2;
             // 
             // pictureBoxArrow
             // 
-            this.pictureBoxArrow.Image = UIIconManager.SameDialogInfoArrow;
+            this.pictureBoxArrow.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxArrow.Image")));
             this.pictureBoxArrow.InitialImage = null;
-            this.pictureBoxArrow.Location = new System.Drawing.Point(86, 110);
+            this.pictureBoxArrow.Location = new System.Drawing.Point(150, 192);
+            this.pictureBoxArrow.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.pictureBoxArrow.Name = "pictureBoxArrow";
-            this.pictureBoxArrow.Size = new System.Drawing.Size(48, 16);
+            this.pictureBoxArrow.Size = new System.Drawing.Size(84, 28);
             this.pictureBoxArrow.TabIndex = 3;
             this.pictureBoxArrow.TabStop = false;
             // 
             // labelSrcCompare
             // 
             this.labelSrcCompare.AutoSize = true;
-            this.labelSrcCompare.Location = new System.Drawing.Point(115, 23);
+            this.labelSrcCompare.Location = new System.Drawing.Point(201, 40);
+            this.labelSrcCompare.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.labelSrcCompare.Name = "labelSrcCompare";
-            this.labelSrcCompare.Size = new System.Drawing.Size(0, 12);
+            this.labelSrcCompare.Size = new System.Drawing.Size(0, 30);
             this.labelSrcCompare.TabIndex = 1;
             // 
             // labelDestCompare
             // 
             this.labelDestCompare.AutoSize = true;
-            this.labelDestCompare.Location = new System.Drawing.Point(115, 157);
+            this.labelDestCompare.Location = new System.Drawing.Point(201, 275);
+            this.labelDestCompare.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.labelDestCompare.Name = "labelDestCompare";
-            this.labelDestCompare.Size = new System.Drawing.Size(0, 12);
+            this.labelDestCompare.Size = new System.Drawing.Size(0, 30);
             this.labelDestCompare.TabIndex = 1;
             // 
             // SameNameFileInfoControl
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(168F, 168F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.Controls.Add(this.pictureBoxArrow);
             this.Controls.Add(this.textBoxDestTime);
@@ -201,8 +217,10 @@
             this.Controls.Add(this.labelDest);
             this.Controls.Add(this.textBoxDestPath);
             this.Controls.Add(this.textBoxSrcPath);
+            this.Font = new System.Drawing.Font("Yu Gothic UI", 9F);
+            this.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.Name = "SameNameFileInfoControl";
-            this.Size = new System.Drawing.Size(220, 244);
+            this.Size = new System.Drawing.Size(385, 427);
             this.Paint += new System.Windows.Forms.PaintEventHandler(this.SameNameFileInfoControl_Paint);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxArrow)).EndInit();
             this.ResumeLayout(false);

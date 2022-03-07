@@ -39,7 +39,7 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(61, 12);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(131, 12);
+            this.label1.Size = new System.Drawing.Size(161, 15);
             this.label1.TabIndex = 0;
             this.label1.Text = "差分表示ツールを起動しました。";
             // 
@@ -54,9 +54,9 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(61, 24);
+            this.label2.Location = new System.Drawing.Point(61, 28);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(325, 12);
+            this.label2.Size = new System.Drawing.Size(327, 15);
             this.label2.TabIndex = 1;
             this.label2.Text = "このダイアログを閉じると、比較に使用した一時ファイルを削除します。";
             // 
@@ -65,7 +65,7 @@
             this.radioButtonDispose.AutoSize = true;
             this.radioButtonDispose.Location = new System.Drawing.Point(9, 18);
             this.radioButtonDispose.Name = "radioButtonDispose";
-            this.radioButtonDispose.Size = new System.Drawing.Size(160, 16);
+            this.radioButtonDispose.Size = new System.Drawing.Size(165, 19);
             this.radioButtonDispose.TabIndex = 0;
             this.radioButtonDispose.TabStop = true;
             this.radioButtonDispose.Text = "登録された文字列を破棄(&D)";
@@ -76,7 +76,7 @@
             this.radioButtonNextUse.AutoSize = true;
             this.radioButtonNextUse.Location = new System.Drawing.Point(9, 40);
             this.radioButtonNextUse.Name = "radioButtonNextUse";
-            this.radioButtonNextUse.Size = new System.Drawing.Size(206, 16);
+            this.radioButtonNextUse.Size = new System.Drawing.Size(211, 19);
             this.radioButtonNextUse.TabIndex = 1;
             this.radioButtonNextUse.TabStop = true;
             this.radioButtonNextUse.Text = "そのまま残して次回の比較にも使用(&N)";
@@ -86,7 +86,7 @@
             // 
             this.groupBox1.Controls.Add(this.radioButtonDispose);
             this.groupBox1.Controls.Add(this.radioButtonNextUse);
-            this.groupBox1.Location = new System.Drawing.Point(63, 54);
+            this.groupBox1.Location = new System.Drawing.Point(63, 58);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(240, 63);
             this.groupBox1.TabIndex = 2;
@@ -96,7 +96,7 @@
             // buttonClose
             // 
             this.buttonClose.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.buttonClose.Location = new System.Drawing.Point(321, 128);
+            this.buttonClose.Location = new System.Drawing.Point(321, 137);
             this.buttonClose.Name = "buttonClose";
             this.buttonClose.Size = new System.Drawing.Size(75, 23);
             this.buttonClose.TabIndex = 3;
@@ -107,15 +107,16 @@
             // ViewerCompareSuccessDialog
             // 
             this.AcceptButton = this.buttonClose;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.CancelButton = this.buttonClose;
-            this.ClientSize = new System.Drawing.Size(408, 163);
+            this.ClientSize = new System.Drawing.Size(408, 172);
             this.Controls.Add(this.buttonClose);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.pictureBoxIcon);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.Font = new System.Drawing.Font("Yu Gothic UI", 9F);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.MaximizeBox = false;
             this.MinimizeBox = false;

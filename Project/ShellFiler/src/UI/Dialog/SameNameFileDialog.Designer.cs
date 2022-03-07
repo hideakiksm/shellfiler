@@ -47,7 +47,7 @@
             this.radioButtonForce.AutoSize = true;
             this.radioButtonForce.Location = new System.Drawing.Point(13, 18);
             this.radioButtonForce.Name = "radioButtonForce";
-            this.radioButtonForce.Size = new System.Drawing.Size(117, 16);
+            this.radioButtonForce.Size = new System.Drawing.Size(122, 19);
             this.radioButtonForce.TabIndex = 0;
             this.radioButtonForce.TabStop = true;
             this.radioButtonForce.Text = "強制的に上書き(&O)";
@@ -59,7 +59,7 @@
             this.radioButtonIfNewer.AutoSize = true;
             this.radioButtonIfNewer.Location = new System.Drawing.Point(13, 38);
             this.radioButtonIfNewer.Name = "radioButtonIfNewer";
-            this.radioButtonIfNewer.Size = new System.Drawing.Size(158, 16);
+            this.radioButtonIfNewer.Size = new System.Drawing.Size(163, 19);
             this.radioButtonIfNewer.TabIndex = 0;
             this.radioButtonIfNewer.Text = "自分が新しければ上書き(&U)";
             this.radioButtonIfNewer.UseVisualStyleBackColor = true;
@@ -70,7 +70,7 @@
             this.radioButtonRename.AutoSize = true;
             this.radioButtonRename.Location = new System.Drawing.Point(13, 58);
             this.radioButtonRename.Name = "radioButtonRename";
-            this.radioButtonRename.Size = new System.Drawing.Size(138, 16);
+            this.radioButtonRename.Size = new System.Drawing.Size(142, 19);
             this.radioButtonRename.TabIndex = 0;
             this.radioButtonRename.Text = "名前を変更して転送(&R)";
             this.radioButtonRename.UseVisualStyleBackColor = true;
@@ -96,7 +96,7 @@
             this.radioButtonNotOverwrite.AutoSize = true;
             this.radioButtonNotOverwrite.Location = new System.Drawing.Point(13, 104);
             this.radioButtonNotOverwrite.Name = "radioButtonNotOverwrite";
-            this.radioButtonNotOverwrite.Size = new System.Drawing.Size(92, 16);
+            this.radioButtonNotOverwrite.Size = new System.Drawing.Size(97, 19);
             this.radioButtonNotOverwrite.TabIndex = 0;
             this.radioButtonNotOverwrite.Text = "転送しない(&N)";
             this.radioButtonNotOverwrite.UseVisualStyleBackColor = true;
@@ -107,7 +107,7 @@
             this.radioButtonAuto.AutoSize = true;
             this.radioButtonAuto.Location = new System.Drawing.Point(13, 124);
             this.radioButtonAuto.Name = "radioButtonAuto";
-            this.radioButtonAuto.Size = new System.Drawing.Size(205, 16);
+            this.radioButtonAuto.Size = new System.Drawing.Size(209, 19);
             this.radioButtonAuto.TabIndex = 0;
             this.radioButtonAuto.Text = "ファイル名を自動的に変更して転送(&A)";
             this.radioButtonAuto.UseVisualStyleBackColor = true;
@@ -118,7 +118,7 @@
             this.radioButtonFullAuto.AutoSize = true;
             this.radioButtonFullAuto.Location = new System.Drawing.Point(13, 146);
             this.radioButtonFullAuto.Name = "radioButtonFullAuto";
-            this.radioButtonFullAuto.Size = new System.Drawing.Size(262, 16);
+            this.radioButtonFullAuto.Size = new System.Drawing.Size(266, 19);
             this.radioButtonFullAuto.TabIndex = 0;
             this.radioButtonFullAuto.Text = "状況判断でファイル名を自動的に変更して転送(&F)";
             this.radioButtonFullAuto.UseVisualStyleBackColor = true;
@@ -128,31 +128,31 @@
             // 
             this.comboBoxAutoRename.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxAutoRename.FormattingEnabled = true;
-            this.comboBoxAutoRename.Location = new System.Drawing.Point(30, 205);
+            this.comboBoxAutoRename.Location = new System.Drawing.Point(30, 207);
             this.comboBoxAutoRename.Name = "comboBoxAutoRename";
-            this.comboBoxAutoRename.Size = new System.Drawing.Size(272, 20);
+            this.comboBoxAutoRename.Size = new System.Drawing.Size(272, 23);
             this.comboBoxAutoRename.TabIndex = 2;
             // 
             // textBoxRename
             // 
             this.textBoxRename.Location = new System.Drawing.Point(30, 91);
             this.textBoxRename.Name = "textBoxRename";
-            this.textBoxRename.Size = new System.Drawing.Size(272, 19);
+            this.textBoxRename.Size = new System.Drawing.Size(272, 23);
             this.textBoxRename.TabIndex = 1;
             // 
             // checkBoxApplyAll
             // 
             this.checkBoxApplyAll.AutoSize = true;
-            this.checkBoxApplyAll.Location = new System.Drawing.Point(12, 234);
+            this.checkBoxApplyAll.Location = new System.Drawing.Point(12, 239);
             this.checkBoxApplyAll.Name = "checkBoxApplyAll";
-            this.checkBoxApplyAll.Size = new System.Drawing.Size(145, 16);
+            this.checkBoxApplyAll.Size = new System.Drawing.Size(150, 19);
             this.checkBoxApplyAll.TabIndex = 3;
             this.checkBoxApplyAll.Text = "すべてのファイルに適用(&Z)";
             this.checkBoxApplyAll.UseVisualStyleBackColor = true;
             // 
             // buttonOk
             // 
-            this.buttonOk.Location = new System.Drawing.Point(383, 287);
+            this.buttonOk.Location = new System.Drawing.Point(406, 317);
             this.buttonOk.Name = "buttonOk";
             this.buttonOk.Size = new System.Drawing.Size(75, 23);
             this.buttonOk.TabIndex = 4;
@@ -163,7 +163,7 @@
             // buttonCancel
             // 
             this.buttonCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.buttonCancel.Location = new System.Drawing.Point(464, 287);
+            this.buttonCancel.Location = new System.Drawing.Point(487, 317);
             this.buttonCancel.Name = "buttonCancel";
             this.buttonCancel.Size = new System.Drawing.Size(75, 23);
             this.buttonCancel.TabIndex = 4;
@@ -175,16 +175,16 @@
             this.labelAutoRename.AutoSize = true;
             this.labelAutoRename.Location = new System.Drawing.Point(12, 189);
             this.labelAutoRename.Name = "labelAutoRename";
-            this.labelAutoRename.Size = new System.Drawing.Size(172, 12);
+            this.labelAutoRename.Size = new System.Drawing.Size(174, 15);
             this.labelAutoRename.TabIndex = 6;
             this.labelAutoRename.Text = "ファイル名を自動的に変更する方法";
             // 
             // linkLabelFullAuto
             // 
             this.linkLabelFullAuto.AutoSize = true;
-            this.linkLabelFullAuto.Location = new System.Drawing.Point(289, 160);
+            this.linkLabelFullAuto.Location = new System.Drawing.Point(292, 160);
             this.linkLabelFullAuto.Name = "linkLabelFullAuto";
-            this.linkLabelFullAuto.Size = new System.Drawing.Size(10, 12);
+            this.linkLabelFullAuto.Size = new System.Drawing.Size(13, 15);
             this.linkLabelFullAuto.TabIndex = 2;
             this.linkLabelFullAuto.TabStop = true;
             this.linkLabelFullAuto.Text = "?";
@@ -194,28 +194,28 @@
             // 
             this.sameNameFileInfo.BackColor = System.Drawing.SystemColors.Control;
             this.sameNameFileInfo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.sameNameFileInfo.Location = new System.Drawing.Point(319, 12);
+            this.sameNameFileInfo.Location = new System.Drawing.Point(342, 12);
             this.sameNameFileInfo.Name = "sameNameFileInfo";
-            this.sameNameFileInfo.Size = new System.Drawing.Size(220, 262);
+            this.sameNameFileInfo.Size = new System.Drawing.Size(220, 298);
             this.sameNameFileInfo.TabIndex = 5;
             this.sameNameFileInfo.TabStop = false;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(14, 262);
+            this.label1.Location = new System.Drawing.Point(14, 263);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(293, 12);
+            this.label1.Size = new System.Drawing.Size(321, 15);
             this.label1.TabIndex = 7;
             this.label1.Text = "O,U,N,A,F:操作を決定   SHIFT+決定:すべてのファイルに適用";
             // 
             // SameNameFileDialog
             // 
             this.AcceptButton = this.buttonOk;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.CancelButton = this.buttonCancel;
-            this.ClientSize = new System.Drawing.Size(551, 322);
+            this.ClientSize = new System.Drawing.Size(576, 352);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.textBoxRename);
             this.Controls.Add(this.linkLabelFullAuto);
@@ -226,6 +226,7 @@
             this.Controls.Add(this.buttonCancel);
             this.Controls.Add(this.sameNameFileInfo);
             this.Controls.Add(this.groupBox1);
+            this.Font = new System.Drawing.Font("Yu Gothic UI", 9F);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.KeyPreview = true;
             this.MaximizeBox = false;

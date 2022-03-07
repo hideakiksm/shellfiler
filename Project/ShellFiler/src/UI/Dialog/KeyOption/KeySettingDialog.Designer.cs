@@ -54,10 +54,10 @@
             this.treeViewAllKey.HideSelection = false;
             this.treeViewAllKey.Location = new System.Drawing.Point(3, 3);
             this.treeViewAllKey.Name = "treeViewAllKey";
-            this.treeViewAllKey.Size = new System.Drawing.Size(259, 300);
+            this.treeViewAllKey.Size = new System.Drawing.Size(259, 298);
             this.treeViewAllKey.TabIndex = 0;
-            this.treeViewAllKey.DrawNode += new System.Windows.Forms.DrawTreeNodeEventHandler(this.treeViewKeyList_DrawNode);
             this.treeViewAllKey.BeforeExpand += new System.Windows.Forms.TreeViewCancelEventHandler(this.treeViewKeyList_BeforeExpand);
+            this.treeViewAllKey.DrawNode += new System.Windows.Forms.DrawTreeNodeEventHandler(this.treeViewKeyList_DrawNode);
             this.treeViewAllKey.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.treeViewKeyList_AfterSelect);
             // 
             // tabControlKeyList
@@ -81,7 +81,7 @@
             this.tabPageAll.Location = new System.Drawing.Point(4, 4);
             this.tabPageAll.Name = "tabPageAll";
             this.tabPageAll.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageAll.Size = new System.Drawing.Size(265, 306);
+            this.tabPageAll.Size = new System.Drawing.Size(265, 304);
             this.tabPageAll.TabIndex = 0;
             this.tabPageAll.Text = "すべてのキー";
             this.tabPageAll.UseVisualStyleBackColor = true;
@@ -140,8 +140,8 @@
             this.treeViewCommand.Name = "treeViewCommand";
             this.treeViewCommand.Size = new System.Drawing.Size(327, 207);
             this.treeViewCommand.TabIndex = 0;
-            this.treeViewCommand.DrawNode += new System.Windows.Forms.DrawTreeNodeEventHandler(this.treeViewCommand_DrawNode);
             this.treeViewCommand.BeforeExpand += new System.Windows.Forms.TreeViewCancelEventHandler(this.treeViewCommand_BeforeExpand);
+            this.treeViewCommand.DrawNode += new System.Windows.Forms.DrawTreeNodeEventHandler(this.treeViewCommand_DrawNode);
             this.treeViewCommand.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.treeViewCommand_AfterSelect);
             // 
             // groupBox1
@@ -160,7 +160,7 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(8, 353);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(218, 12);
+            this.label2.Size = new System.Drawing.Size(220, 15);
             this.label2.TabIndex = 1;
             this.label2.Text = "太字のキーには機能が割り当てられています。";
             // 
@@ -215,7 +215,7 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(6, 237);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(87, 12);
+            this.label1.Size = new System.Drawing.Size(89, 15);
             this.label1.TabIndex = 1;
             this.label1.Text = "機能の詳細説明";
             // 
@@ -234,14 +234,14 @@
             this.labelFreeware.AutoSize = true;
             this.labelFreeware.Location = new System.Drawing.Point(12, 386);
             this.labelFreeware.Name = "labelFreeware";
-            this.labelFreeware.Size = new System.Drawing.Size(0, 12);
+            this.labelFreeware.Size = new System.Drawing.Size(0, 15);
             this.labelFreeware.TabIndex = 7;
             // 
             // KeySettingDialog
             // 
             this.AcceptButton = this.buttonOk;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.CancelButton = this.buttonCancel;
             this.ClientSize = new System.Drawing.Size(655, 422);
             this.Controls.Add(this.labelFreeware);
@@ -250,6 +250,7 @@
             this.Controls.Add(this.buttonDefault);
             this.Controls.Add(this.buttonOk);
             this.Controls.Add(this.buttonCancel);
+            this.Font = new System.Drawing.Font("Yu Gothic UI", 9F);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.MaximizeBox = false;
             this.MinimizeBox = false;

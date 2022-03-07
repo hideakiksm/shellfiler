@@ -57,16 +57,17 @@
             // labelMessage
             // 
             this.labelMessage.AutoSize = true;
-            this.labelMessage.Location = new System.Drawing.Point(34, 13);
+            this.labelMessage.Location = new System.Drawing.Point(40, 13);
             this.labelMessage.Name = "labelMessage";
-            this.labelMessage.Size = new System.Drawing.Size(50, 12);
+            this.labelMessage.Size = new System.Drawing.Size(59, 15);
             this.labelMessage.TabIndex = 0;
             this.labelMessage.Text = "message";
             // 
             // listViewTarget
             // 
             this.listViewTarget.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.None;
-            this.listViewTarget.Location = new System.Drawing.Point(12, 40);
+            this.listViewTarget.HideSelection = false;
+            this.listViewTarget.Location = new System.Drawing.Point(12, 44);
             this.listViewTarget.Name = "listViewTarget";
             this.listViewTarget.Size = new System.Drawing.Size(602, 108);
             this.listViewTarget.TabIndex = 2;
@@ -78,7 +79,7 @@
             this.radioButtonSizeDate.AutoSize = true;
             this.radioButtonSizeDate.Location = new System.Drawing.Point(13, 78);
             this.radioButtonSizeDate.Name = "radioButtonSizeDate";
-            this.radioButtonSizeDate.Size = new System.Drawing.Size(198, 16);
+            this.radioButtonSizeDate.Size = new System.Drawing.Size(204, 19);
             this.radioButtonSizeDate.TabIndex = 3;
             this.radioButtonSizeDate.Text = "サイズまたは日付が違うとき上書き(&S)";
             this.radioButtonSizeDate.UseVisualStyleBackColor = true;
@@ -88,7 +89,7 @@
             this.radioButtonNotOverwrite.AutoSize = true;
             this.radioButtonNotOverwrite.Location = new System.Drawing.Point(13, 58);
             this.radioButtonNotOverwrite.Name = "radioButtonNotOverwrite";
-            this.radioButtonNotOverwrite.Size = new System.Drawing.Size(92, 16);
+            this.radioButtonNotOverwrite.Size = new System.Drawing.Size(97, 19);
             this.radioButtonNotOverwrite.TabIndex = 2;
             this.radioButtonNotOverwrite.Text = "転送しない(&N)";
             this.radioButtonNotOverwrite.UseVisualStyleBackColor = true;
@@ -98,7 +99,7 @@
             this.radioButtonIfNewer.AutoSize = true;
             this.radioButtonIfNewer.Location = new System.Drawing.Point(13, 38);
             this.radioButtonIfNewer.Name = "radioButtonIfNewer";
-            this.radioButtonIfNewer.Size = new System.Drawing.Size(158, 16);
+            this.radioButtonIfNewer.Size = new System.Drawing.Size(163, 19);
             this.radioButtonIfNewer.TabIndex = 1;
             this.radioButtonIfNewer.Text = "自分が新しければ上書き(&U)";
             this.radioButtonIfNewer.UseVisualStyleBackColor = true;
@@ -108,7 +109,7 @@
             this.radioButtonForce.AutoSize = true;
             this.radioButtonForce.Location = new System.Drawing.Point(13, 18);
             this.radioButtonForce.Name = "radioButtonForce";
-            this.radioButtonForce.Size = new System.Drawing.Size(117, 16);
+            this.radioButtonForce.Size = new System.Drawing.Size(122, 19);
             this.radioButtonForce.TabIndex = 0;
             this.radioButtonForce.TabStop = true;
             this.radioButtonForce.Text = "強制的に上書き(&O)";
@@ -120,9 +121,9 @@
             this.groupBox1.Controls.Add(this.radioButtonIfNewer);
             this.groupBox1.Controls.Add(this.radioButtonNotOverwrite);
             this.groupBox1.Controls.Add(this.radioButtonSizeDate);
-            this.groupBox1.Location = new System.Drawing.Point(14, 179);
+            this.groupBox1.Location = new System.Drawing.Point(14, 185);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(226, 118);
+            this.groupBox1.Size = new System.Drawing.Size(226, 126);
             this.groupBox1.TabIndex = 5;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "上書き条件";
@@ -134,26 +135,26 @@
             this.groupBox2.Controls.Add(this.checkBoxAttrCopy);
             this.groupBox2.Controls.Add(this.label4);
             this.groupBox2.Controls.Add(this.label3);
-            this.groupBox2.Location = new System.Drawing.Point(246, 179);
+            this.groupBox2.Location = new System.Drawing.Point(246, 185);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(370, 118);
+            this.groupBox2.Size = new System.Drawing.Size(370, 126);
             this.groupBox2.TabIndex = 6;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "コピー条件";
             // 
             // textBoxExcept
             // 
-            this.textBoxExcept.Location = new System.Drawing.Point(8, 76);
+            this.textBoxExcept.Location = new System.Drawing.Point(8, 80);
             this.textBoxExcept.Name = "textBoxExcept";
-            this.textBoxExcept.Size = new System.Drawing.Size(358, 19);
+            this.textBoxExcept.Size = new System.Drawing.Size(358, 23);
             this.textBoxExcept.TabIndex = 3;
             // 
             // labelAttrMessage
             // 
             this.labelAttrMessage.AutoSize = true;
-            this.labelAttrMessage.Location = new System.Drawing.Point(21, 36);
+            this.labelAttrMessage.Location = new System.Drawing.Point(21, 38);
             this.labelAttrMessage.Name = "labelAttrMessage";
-            this.labelAttrMessage.Size = new System.Drawing.Size(253, 12);
+            this.labelAttrMessage.Size = new System.Drawing.Size(264, 15);
             this.labelAttrMessage.TabIndex = 1;
             this.labelAttrMessage.Text = "未設定のときはオプションの設定「{0}」にしたがいます。";
             // 
@@ -162,7 +163,7 @@
             this.checkBoxAttrCopy.AutoSize = true;
             this.checkBoxAttrCopy.Location = new System.Drawing.Point(7, 19);
             this.checkBoxAttrCopy.Name = "checkBoxAttrCopy";
-            this.checkBoxAttrCopy.Size = new System.Drawing.Size(184, 16);
+            this.checkBoxAttrCopy.Size = new System.Drawing.Size(188, 19);
             this.checkBoxAttrCopy.TabIndex = 0;
             this.checkBoxAttrCopy.Text = "転送後にすべての属性をコピー(&A)";
             this.checkBoxAttrCopy.ThreeState = true;
@@ -171,18 +172,18 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(183, 98);
+            this.label4.Location = new System.Drawing.Point(163, 104);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(205, 12);
+            this.label4.Size = new System.Drawing.Size(210, 15);
             this.label4.TabIndex = 2;
             this.label4.Text = "「:」区切り、オプションで既定値を指定可能";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(6, 61);
+            this.label3.Location = new System.Drawing.Point(6, 63);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(311, 12);
+            this.label3.Size = new System.Drawing.Size(318, 15);
             this.label3.TabIndex = 2;
             this.label3.Text = "次のファイルやフォルダが転送元にあっても存在しないことにする(&E):";
             // 
@@ -193,9 +194,9 @@
             this.groupBox3.Controls.Add(this.checkBoxDirectory);
             this.groupBox3.Controls.Add(this.labelAttr);
             this.groupBox3.Controls.Add(this.labelDirectory);
-            this.groupBox3.Location = new System.Drawing.Point(14, 303);
+            this.groupBox3.Location = new System.Drawing.Point(15, 320);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(604, 80);
+            this.groupBox3.Size = new System.Drawing.Size(604, 89);
             this.groupBox3.TabIndex = 7;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "反対パスからの削除条件";
@@ -205,9 +206,9 @@
             this.checkBoxWithRecycle.AutoSize = true;
             this.checkBoxWithRecycle.Checked = true;
             this.checkBoxWithRecycle.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkBoxWithRecycle.Location = new System.Drawing.Point(6, 54);
+            this.checkBoxWithRecycle.Location = new System.Drawing.Point(6, 58);
             this.checkBoxWithRecycle.Name = "checkBoxWithRecycle";
-            this.checkBoxWithRecycle.Size = new System.Drawing.Size(134, 16);
+            this.checkBoxWithRecycle.Size = new System.Drawing.Size(138, 19);
             this.checkBoxWithRecycle.TabIndex = 2;
             this.checkBoxWithRecycle.Text = "ごみ箱を使って削除(&R)";
             this.checkBoxWithRecycle.UseVisualStyleBackColor = true;
@@ -215,9 +216,9 @@
             // checkBoxAttr
             // 
             this.checkBoxAttr.AutoSize = true;
-            this.checkBoxAttr.Location = new System.Drawing.Point(6, 36);
+            this.checkBoxAttr.Location = new System.Drawing.Point(6, 38);
             this.checkBoxAttr.Name = "checkBoxAttr";
-            this.checkBoxAttr.Size = new System.Drawing.Size(313, 16);
+            this.checkBoxAttr.Size = new System.Drawing.Size(316, 19);
             this.checkBoxAttr.TabIndex = 1;
             this.checkBoxAttr.Text = "読み込み/システム属性のファイルを確認なしですべて削除(&A)";
             this.checkBoxAttr.UseVisualStyleBackColor = true;
@@ -228,7 +229,7 @@
             this.checkBoxDirectory.AutoSize = true;
             this.checkBoxDirectory.Location = new System.Drawing.Point(6, 18);
             this.checkBoxDirectory.Name = "checkBoxDirectory";
-            this.checkBoxDirectory.Size = new System.Drawing.Size(190, 16);
+            this.checkBoxDirectory.Size = new System.Drawing.Size(195, 19);
             this.checkBoxDirectory.TabIndex = 0;
             this.checkBoxDirectory.Text = "フォルダを確認なしですべて削除(&D)";
             this.checkBoxDirectory.UseVisualStyleBackColor = true;
@@ -238,9 +239,9 @@
             // 
             this.labelAttr.AutoSize = true;
             this.labelAttr.BackColor = System.Drawing.Color.Yellow;
-            this.labelAttr.Location = new System.Drawing.Point(328, 37);
+            this.labelAttr.Location = new System.Drawing.Point(328, 39);
             this.labelAttr.Name = "labelAttr";
-            this.labelAttr.Size = new System.Drawing.Size(244, 12);
+            this.labelAttr.Size = new System.Drawing.Size(246, 15);
             this.labelAttr.TabIndex = 4;
             this.labelAttr.Text = "削除中に確認メッセージが表示されることがあります";
             // 
@@ -250,14 +251,14 @@
             this.labelDirectory.BackColor = System.Drawing.Color.Yellow;
             this.labelDirectory.Location = new System.Drawing.Point(328, 19);
             this.labelDirectory.Name = "labelDirectory";
-            this.labelDirectory.Size = new System.Drawing.Size(244, 12);
+            this.labelDirectory.Size = new System.Drawing.Size(246, 15);
             this.labelDirectory.TabIndex = 3;
             this.labelDirectory.Text = "削除中に確認メッセージが表示されることがあります";
             // 
             // buttonCancel
             // 
             this.buttonCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.buttonCancel.Location = new System.Drawing.Point(543, 394);
+            this.buttonCancel.Location = new System.Drawing.Point(541, 415);
             this.buttonCancel.Name = "buttonCancel";
             this.buttonCancel.Size = new System.Drawing.Size(75, 23);
             this.buttonCancel.TabIndex = 9;
@@ -266,7 +267,7 @@
             // 
             // buttonOk
             // 
-            this.buttonOk.Location = new System.Drawing.Point(462, 394);
+            this.buttonOk.Location = new System.Drawing.Point(460, 415);
             this.buttonOk.Name = "buttonOk";
             this.buttonOk.Size = new System.Drawing.Size(75, 23);
             this.buttonOk.TabIndex = 8;
@@ -276,18 +277,18 @@
             // 
             // textBoxDest
             // 
-            this.textBoxDest.Location = new System.Drawing.Point(78, 154);
+            this.textBoxDest.Location = new System.Drawing.Point(78, 158);
             this.textBoxDest.Name = "textBoxDest";
             this.textBoxDest.ReadOnly = true;
-            this.textBoxDest.Size = new System.Drawing.Size(536, 19);
+            this.textBoxDest.Size = new System.Drawing.Size(536, 23);
             this.textBoxDest.TabIndex = 4;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 157);
+            this.label1.Location = new System.Drawing.Point(12, 161);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(58, 12);
+            this.label1.Size = new System.Drawing.Size(66, 15);
             this.label1.TabIndex = 3;
             this.label1.Text = "転送先(&T):";
             // 
@@ -296,26 +297,26 @@
             this.pictureBoxIcon.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBoxIcon.Location = new System.Drawing.Point(12, 12);
             this.pictureBoxIcon.Name = "pictureBoxIcon";
-            this.pictureBoxIcon.Size = new System.Drawing.Size(16, 16);
+            this.pictureBoxIcon.Size = new System.Drawing.Size(28, 26);
             this.pictureBoxIcon.TabIndex = 10;
             this.pictureBoxIcon.TabStop = false;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(34, 25);
+            this.label2.Location = new System.Drawing.Point(40, 27);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(493, 12);
+            this.label2.Size = new System.Drawing.Size(495, 15);
             this.label2.TabIndex = 1;
             this.label2.Text = "フォルダをコピーしたとき、そのフォルダ配下で転送元にないファイルやフォルダは、転送先から削除されます。";
             // 
             // MirrorCopyDialog
             // 
             this.AcceptButton = this.buttonOk;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.CancelButton = this.buttonCancel;
-            this.ClientSize = new System.Drawing.Size(628, 429);
+            this.ClientSize = new System.Drawing.Size(628, 450);
             this.Controls.Add(this.pictureBoxIcon);
             this.Controls.Add(this.textBoxDest);
             this.Controls.Add(this.label1);
@@ -327,6 +328,7 @@
             this.Controls.Add(this.listViewTarget);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.labelMessage);
+            this.Font = new System.Drawing.Font("Yu Gothic UI", 9F);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.MaximizeBox = false;
             this.MinimizeBox = false;

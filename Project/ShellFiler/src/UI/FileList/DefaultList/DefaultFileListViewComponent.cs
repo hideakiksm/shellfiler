@@ -527,11 +527,11 @@ DebugCheckConsistency();
             FileListGraphics g = CreateFileListGraphics();
             try {
                 int yPos = m_cyHeader + scrLine * m_fileLineRenderer.LineHeight;
-                Bitmap bmpBuffer = new Bitmap(IconSize.Small16.CxIconSize, m_fileLineRenderer.LineHeight);
+                Bitmap bmpBuffer = new Bitmap(MainWindowForm.X(IconSize.Small16.CxIconSize), m_fileLineRenderer.LineHeight);
                 Graphics gBmp = Graphics.FromImage(bmpBuffer);
                 FileListGraphics gDraw = new FileListGraphics(gBmp, 0, m_fileLineRenderer.LineHeight);
                 try {
-                    m_fileLineRenderer.FillBack(gDraw, index, 0, 0, IconSize.Small16.CxIconSize, m_fileLineRenderer.LineHeight);
+                    m_fileLineRenderer.FillBack(gDraw, index, 0, 0, MainWindowForm.X(IconSize.Small16.CxIconSize), m_fileLineRenderer.LineHeight);
                     m_fileLineRenderer.DrawFileIcon(gDraw, 0, 0, index);
                     // カーソルを描画
                     if (m_parent.HasCursor && scrLine == m_cursorScreenLine) {
@@ -541,8 +541,8 @@ DebugCheckConsistency();
                 } finally {
                     gDraw.Dispose();
                     gBmp.Dispose();
-                    Rectangle srcRect = new Rectangle(0, FileLineRenderer.CY_ICON_ADJUST, IconSize.Small16.CxIconSize, IconSize.Small16.CyIconSize);
-                    int xPos = m_filePanelHeader.GetItemXPos(m_filePanelHeader.FileListHeaderItemList[0].ItemID) + FileLineRenderer.MARGIN_ICON_LEFT;
+                    Rectangle srcRect = new Rectangle(0, FileLineRenderer.CY_ICON_ADJUST, MainWindowForm.X(IconSize.Small16.CxIconSize), MainWindowForm.Y(IconSize.Small16.CyIconSize));
+                    int xPos = m_filePanelHeader.GetItemXPos(m_filePanelHeader.FileListHeaderItemList[0].ItemID) + MainWindowForm.X(FileLineRenderer.MARGIN_ICON_LEFT);
                     g.Graphics.DrawImage(bmpBuffer, xPos, yPos + FileLineRenderer.CY_ICON_ADJUST, srcRect, GraphicsUnit.Pixel);
                     bmpBuffer.Dispose();
                 }

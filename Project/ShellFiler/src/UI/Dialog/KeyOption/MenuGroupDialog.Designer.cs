@@ -58,33 +58,33 @@
             // 
             this.comboBoxShortcut.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxShortcut.FormattingEnabled = true;
-            this.comboBoxShortcut.Location = new System.Drawing.Point(127, 69);
+            this.comboBoxShortcut.Location = new System.Drawing.Point(127, 73);
             this.comboBoxShortcut.Name = "comboBoxShortcut";
-            this.comboBoxShortcut.Size = new System.Drawing.Size(121, 20);
+            this.comboBoxShortcut.Size = new System.Drawing.Size(121, 23);
             this.comboBoxShortcut.TabIndex = 19;
             // 
             // textBoxGroupName
             // 
-            this.textBoxGroupName.Location = new System.Drawing.Point(127, 44);
+            this.textBoxGroupName.Location = new System.Drawing.Point(127, 46);
             this.textBoxGroupName.Name = "textBoxGroupName";
-            this.textBoxGroupName.Size = new System.Drawing.Size(229, 19);
+            this.textBoxGroupName.Size = new System.Drawing.Size(229, 23);
             this.textBoxGroupName.TabIndex = 17;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(21, 72);
+            this.label4.Location = new System.Drawing.Point(21, 76);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(100, 12);
+            this.label4.Size = new System.Drawing.Size(108, 15);
             this.label4.TabIndex = 18;
             this.label4.Text = "ショートカットキー(&S):";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(21, 47);
+            this.label1.Location = new System.Drawing.Point(21, 49);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(71, 12);
+            this.label1.Size = new System.Drawing.Size(79, 15);
             this.label1.TabIndex = 16;
             this.label1.Text = "メニュー名(&M):";
             // 
@@ -93,16 +93,16 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(12, 9);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(285, 12);
+            this.label2.Size = new System.Drawing.Size(288, 15);
             this.label2.TabIndex = 18;
             this.label2.Text = "メニューの項目のうち、サブメニューを持つ項目を設定します。";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(12, 21);
+            this.label3.Location = new System.Drawing.Point(12, 23);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(287, 12);
+            this.label3.Size = new System.Drawing.Size(289, 15);
             this.label3.TabIndex = 18;
             this.label3.Text = "ここで指定した項目の配下にサブメニューの項目が並びます。";
             // 
@@ -110,17 +110,17 @@
             // 
             this.labelShortcutWarning.AutoSize = true;
             this.labelShortcutWarning.BackColor = System.Drawing.Color.Yellow;
-            this.labelShortcutWarning.Location = new System.Drawing.Point(254, 72);
+            this.labelShortcutWarning.Location = new System.Drawing.Point(254, 76);
             this.labelShortcutWarning.Name = "labelShortcutWarning";
-            this.labelShortcutWarning.Size = new System.Drawing.Size(172, 12);
+            this.labelShortcutWarning.Size = new System.Drawing.Size(174, 15);
             this.labelShortcutWarning.TabIndex = 22;
             this.labelShortcutWarning.Text = "ショートカットキーの重複があります。";
             // 
             // MenuGroupDialog
             // 
             this.AcceptButton = this.buttonOk;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.CancelButton = this.buttonCancel;
             this.ClientSize = new System.Drawing.Size(445, 143);
             this.Controls.Add(this.labelShortcutWarning);
@@ -132,6 +132,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label1);
+            this.Font = new System.Drawing.Font("Yu Gothic UI", 9F);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.MaximizeBox = false;
             this.MinimizeBox = false;

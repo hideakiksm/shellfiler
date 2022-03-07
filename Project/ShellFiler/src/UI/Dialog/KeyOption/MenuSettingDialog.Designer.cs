@@ -47,7 +47,7 @@
             this.labelFreeware.AutoSize = true;
             this.labelFreeware.Location = new System.Drawing.Point(12, 276);
             this.labelFreeware.Name = "labelFreeware";
-            this.labelFreeware.Size = new System.Drawing.Size(0, 12);
+            this.labelFreeware.Size = new System.Drawing.Size(0, 15);
             this.labelFreeware.TabIndex = 7;
             // 
             // buttonOk
@@ -75,22 +75,22 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(12, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(116, 12);
+            this.label1.Size = new System.Drawing.Size(124, 15);
             this.label1.TabIndex = 0;
             this.label1.Text = "定義済みのメニュー(&M):";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(12, 227);
+            this.label2.Location = new System.Drawing.Point(12, 229);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(372, 12);
+            this.label2.Size = new System.Drawing.Size(388, 15);
             this.label2.TabIndex = 5;
             this.label2.Text = "チェックをONにするとメインメニューに表示します（オプションメニューは常に表示）。";
             // 
             // buttonAdd
             // 
-            this.buttonAdd.Location = new System.Drawing.Point(461, 24);
+            this.buttonAdd.Location = new System.Drawing.Point(461, 26);
             this.buttonAdd.Name = "buttonAdd";
             this.buttonAdd.Size = new System.Drawing.Size(75, 23);
             this.buttonAdd.TabIndex = 2;
@@ -100,7 +100,7 @@
             // 
             // buttonEdit
             // 
-            this.buttonEdit.Location = new System.Drawing.Point(461, 53);
+            this.buttonEdit.Location = new System.Drawing.Point(461, 55);
             this.buttonEdit.Name = "buttonEdit";
             this.buttonEdit.Size = new System.Drawing.Size(75, 23);
             this.buttonEdit.TabIndex = 3;
@@ -110,7 +110,7 @@
             // 
             // buttonDelete
             // 
-            this.buttonDelete.Location = new System.Drawing.Point(461, 82);
+            this.buttonDelete.Location = new System.Drawing.Point(461, 84);
             this.buttonDelete.Name = "buttonDelete";
             this.buttonDelete.Size = new System.Drawing.Size(75, 23);
             this.buttonDelete.TabIndex = 4;
@@ -121,15 +121,15 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(12, 239);
+            this.label3.Location = new System.Drawing.Point(12, 243);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(357, 12);
+            this.label3.Size = new System.Drawing.Size(360, 15);
             this.label3.TabIndex = 6;
             this.label3.Text = "チェックがOFFの場合でもキー設定でポップアップメニューとして使用できます。";
             // 
             // buttonUp
             // 
-            this.buttonUp.Location = new System.Drawing.Point(461, 172);
+            this.buttonUp.Location = new System.Drawing.Point(461, 174);
             this.buttonUp.Name = "buttonUp";
             this.buttonUp.Size = new System.Drawing.Size(75, 23);
             this.buttonUp.TabIndex = 4;
@@ -139,7 +139,7 @@
             // 
             // buttonDown
             // 
-            this.buttonDown.Location = new System.Drawing.Point(461, 201);
+            this.buttonDown.Location = new System.Drawing.Point(461, 203);
             this.buttonDown.Name = "buttonDown";
             this.buttonDown.Size = new System.Drawing.Size(75, 23);
             this.buttonDown.TabIndex = 4;
@@ -151,7 +151,7 @@
             // 
             this.panelSample.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panelSample.Cursor = System.Windows.Forms.Cursors.Default;
-            this.panelSample.Location = new System.Drawing.Point(263, 24);
+            this.panelSample.Location = new System.Drawing.Point(263, 26);
             this.panelSample.Name = "panelSample";
             this.panelSample.Size = new System.Drawing.Size(192, 200);
             this.panelSample.TabIndex = 11;
@@ -167,7 +167,7 @@
             this.ColumnCheck,
             this.ColumnMenu,
             this.ColumnType});
-            this.dataGridView.Location = new System.Drawing.Point(13, 24);
+            this.dataGridView.Location = new System.Drawing.Point(13, 26);
             this.dataGridView.MultiSelect = false;
             this.dataGridView.Name = "dataGridView";
             this.dataGridView.RowHeadersVisible = false;
@@ -204,8 +204,8 @@
             // MenuSettingDialog
             // 
             this.AcceptButton = this.buttonOk;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.CancelButton = this.buttonCancel;
             this.ClientSize = new System.Drawing.Size(548, 306);
             this.Controls.Add(this.dataGridView);
@@ -221,6 +221,7 @@
             this.Controls.Add(this.labelFreeware);
             this.Controls.Add(this.buttonOk);
             this.Controls.Add(this.buttonCancel);
+            this.Font = new System.Drawing.Font("Yu Gothic UI", 9F);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.MaximizeBox = false;
             this.MinimizeBox = false;

@@ -89,11 +89,13 @@ namespace ShellFiler.UI.ControlBar {
         // 戻り値：作成したアイコンのビットマップ（Disposeが必要）
         //=========================================================================================
         public static Bitmap CreateDriveOverrayIcon(IconImageListID iconBase, IconImageListID iconOverray) {
-            Bitmap icon = new Bitmap(UIIconManager.CX_DEFAULT_ICON, UIIconManager.CY_DEFAULT_ICON);
+            Bitmap icon = new Bitmap(UIIconManager.CxDefaultIcon, UIIconManager.CyDefaultIcon);
             Graphics g = Graphics.FromImage(icon);
             try {
                 UIIconManager.IconImageList.Draw(g, 0, 0, (int)iconBase);
-                UIIconManager.IconImageList.Draw(g, 0, 0, (int)iconOverray);
+                int cx = UIIconManager.CxDefaultIcon;
+                int cy = UIIconManager.CyDefaultIcon;
+                g.DrawImage(UIIconManager.ImageListIcon, new Rectangle(0, 0, cx, cy), new Rectangle(cx * (int)iconOverray, 0, cx, cy), GraphicsUnit.Pixel);
             } finally {
                 g.Dispose();
             }

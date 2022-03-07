@@ -83,20 +83,20 @@ namespace ShellFiler.UI.FileList {
             this.ComboBox.DrawMode = DrawMode.OwnerDrawFixed;
             this.ComboBox.DropDownStyle = ComboBoxStyle.DropDownList;
 
-            int x = m_parent.Location.X + this.ComboBox.Location.X + X_MARGIN_TEXT;
-            int y = m_parent.Location.Y + this.ComboBox.Location.Y + Y_MARGIN_TEXT;
+            int x = m_parent.Location.X + this.ComboBox.Location.X + MainWindowForm.X(X_MARGIN_TEXT);
+            int y = m_parent.Location.Y + this.ComboBox.Location.Y + MainWindowForm.Y(Y_MARGIN_TEXT);
             int cx = this.ComboBox.Size.Width;
             int cy = this.ComboBox.Size.Height;
             m_textBoxInput = new TextBox();
             m_textBoxInput.Location = new Point(x, y);
-            m_textBoxInput.Size = new Size(cx - CX_MARGIN_TEXT, cy);
+            m_textBoxInput.Size = new Size(cx - MainWindowForm.X(CX_MARGIN_TEXT), cy);
             m_textBoxInput.BorderStyle = BorderStyle.None;
             m_textBoxInput.KeyDown += new KeyEventHandler(this.ComboBoxDirectory_KeyDown);
             m_textBoxInput.LostFocus += new EventHandler(this.ComboBoxDirectory_LostFocus);
             this.ComboBox.Controls.Add(m_textBoxInput);
 
             m_buttonFileListFilter = new IconButton(UIIconManager.IconImageList, (int)(IconImageListID.FileList_FilterMini));
-            m_buttonFileListFilter.Size = new Size(CX_ICON_BUTTON, CY_ICON_BUTTON);
+            m_buttonFileListFilter.Size = new Size(MainWindowForm.X(CX_ICON_BUTTON), MainWindowForm.Y(CY_ICON_BUTTON));
             this.ComboBox.Controls.Add(m_buttonFileListFilter);
 
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.ComboBoxDirectory_KeyDown);
@@ -116,9 +116,9 @@ namespace ShellFiler.UI.FileList {
         //=========================================================================================
         public void SetSize(int cx, int cy) {
             this.Size = new Size(cx, cy);
-            m_textBoxInput.Size = new Size(cx - CX_MARGIN_TEXT - CX_ICON_BUTTON, cy);
+            m_textBoxInput.Size = new Size(cx - MainWindowForm.X(CX_MARGIN_TEXT) - MainWindowForm.X(CX_ICON_BUTTON), cy);
             cy = this.ComboBox.Size.Height;
-            m_buttonFileListFilter.Location = new Point(m_textBoxInput.Location.X + cx - CX_MARGIN_TEXT - CX_ICON_BUTTON, (cy - CY_ICON_BUTTON) / 2 + ((cy > CY_ICON_BUTTON + 2) ? 1 : 0));
+            m_buttonFileListFilter.Location = new Point(m_textBoxInput.Location.X + cx - MainWindowForm.X(CX_MARGIN_TEXT) - MainWindowForm.X(CX_ICON_BUTTON), (cy - MainWindowForm.Y(CY_ICON_BUTTON)) / 2 + ((cy > MainWindowForm.X(CY_ICON_BUTTON + 2)) ? 1 : 0));
             m_buttonFileListFilter.Invalidate();
         }
 

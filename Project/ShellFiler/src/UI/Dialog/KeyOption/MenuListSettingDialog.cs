@@ -426,8 +426,8 @@ namespace ShellFiler.UI.Dialog.KeyOption {
                     // 項目
                     g.Graphics.DrawString(menuName, this.treeView.Font, textBrush, new Point(xPos, yFont));
                     if (idIcon != 0) {
-                        int xPosIcon = xPos - CX_LEFT_AREA - CX_MENU_MARGIN + (CX_LEFT_AREA - UIIconManager.CX_DEFAULT_ICON) / 2;
-                        int yPosIcon = (cyItem - UIIconManager.CY_DEFAULT_ICON) / 2;
+                        int xPosIcon = xPos - CX_LEFT_AREA - CX_MENU_MARGIN + (CX_LEFT_AREA - UIIconManager.CxDefaultIcon) / 2;
+                        int yPosIcon = (cyItem - UIIconManager.CyDefaultIcon) / 2;
                         UIIconManager.IconImageList.Draw(g.Graphics, new Point(xPosIcon, yPosIcon), idIcon);
                     }
 

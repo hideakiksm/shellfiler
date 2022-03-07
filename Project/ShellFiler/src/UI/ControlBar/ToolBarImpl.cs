@@ -57,6 +57,12 @@ namespace ShellFiler.UI.ControlBar {
         // ボタンの状態（直後のパスヒストリが有効として更新されているときtrue）
         private bool m_uiStatusPathHisNext = true;
 
+        // ボタンサイズ
+        private Size m_buttonSize;
+
+        // ボタンのpadding
+        private Padding m_buttonPadding;
+
         // 作成しようとしているルート項目の追加が適切なときtrueを返すdelegate
         public delegate bool IsValidToolBarItemDelegate(ToolbarItemSetting item);
 
@@ -76,8 +82,15 @@ namespace ShellFiler.UI.ControlBar {
             m_uiStatusMarked = true;
             m_uiStatusPathHisPrev = true;
             m_uiStatusPathHisNext = true;
+    
+            m_buttonSize = new Size(ToolbarItemSetting.CxIconButton, ToolbarItemSetting.CyIconButton);
+            if (MainWindowForm.XDpiRatio > 100) {
+                m_buttonPadding = new Padding(MainWindowForm.X(2), MainWindowForm.Y(2), MainWindowForm.X(4), MainWindowForm.Y(2));
+            } else {
+                m_buttonPadding = new Padding(0, 0, 0, 0);
+            }
         }
-        
+
         //=========================================================================================
         // 機　能：設定からボタンを追加する
         // 引　数：[in]itemSettingList  ボタンの設定
@@ -121,12 +134,15 @@ namespace ShellFiler.UI.ControlBar {
             ToolbarItemTag tag;
             CreateToolButtonComponent(itemSetting, keySetting, out icon, out toolHint, out tag);
 
+            int padding = MainWindowForm.X(2);
             if (itemSetting.SubMenuList.Count == 0) {
                 ToolStripButton button = new ToolStripButton();
                 button.ImageIndex = (int)icon;
                 button.Text = toolHint;
                 button.DisplayStyle = ToolStripItemDisplayStyle.Image;
-                button.Size = new Size(ToolbarItemSetting.CX_ICON_BUTTON, ToolbarItemSetting.CY_ICON_BUTTON);
+                button.Size = m_buttonSize;
+                button.ImageScaling = ToolStripItemImageScaling.None;
+                button.Margin = m_buttonPadding;
                 button.Tag = tag;
                 button.Click += new EventHandler(toolbarIconClicked);
                 m_toolButtonList.Add(button);
@@ -136,7 +152,9 @@ namespace ShellFiler.UI.ControlBar {
                 button.ImageIndex = (int)icon;
                 button.Text = toolHint;
                 button.DisplayStyle = ToolStripItemDisplayStyle.Image;
-                button.Size = new Size(ToolbarItemSetting.CX_ICON_BUTTON, ToolbarItemSetting.CY_ICON_BUTTON);
+                button.Size = m_buttonSize;
+                button.ImageScaling = ToolStripItemImageScaling.None;
+                button.Margin = m_buttonPadding;
                 button.Tag = tag;
                 button.ButtonClick += new EventHandler(toolbarIconClicked);
                 button.DropDown.ImageList = UIIconManager.IconImageList;
@@ -259,7 +277,9 @@ namespace ShellFiler.UI.ControlBar {
                 ToolStripButton button = new ToolStripButton();
                 button.Image = icon;
                 button.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-                button.Size = new System.Drawing.Size(ToolbarItemSetting.CX_ICON_BUTTON, ToolbarItemSetting.CY_ICON_BUTTON);
+                button.Size = m_buttonSize;
+                button.ImageScaling = ToolStripItemImageScaling.None;
+                button.Margin = m_buttonPadding;
                 button.Text = buttonText;
                 button.Tag = new ToolbarItemTag(itemSetting, IconImageListID.None, IconImageListID.None, icon, true);
                 button.Click += new EventHandler(toolbarIconClicked);

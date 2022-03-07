@@ -294,7 +294,7 @@ namespace ShellFiler.UI.ControlBar {
             int dispMargin = iconMargin + 4;
             int iconX = rc.X + 2 + offset;
             int iconY = rc.Y + 1 + offset;
-            int cx = UIIconManager.CX_DEFAULT_ICON;
+            int cx = UIIconManager.CxDefaultIcon;
             if (GetButtonItemInfo(index).Enabled) {
                 if (icon != IconImageListID.None) {
                     UIIconManager.IconImageList.Draw(g.Graphics, iconX + iconMargin, iconY, (int)icon);
@@ -352,8 +352,9 @@ namespace ShellFiler.UI.ControlBar {
             if (funcButton != 0) {
                 separatorCount = 2;
             }
-            int y1 = ClientRectangle.Height - CY_FUNCTION_BAR;
-            int cyButton = CY_FUNCTION_BAR;
+            int cyFunctionBar = MainWindowForm.Y(CY_FUNCTION_BAR);
+            int y1 = ClientRectangle.Height - cyFunctionBar;
+            int cyButton = cyFunctionBar;
             float cxButtonF = (float)(ClientRectangle.Width - 1 - CX_SEPARATOR_MINIMUM * separatorCount) / FUNCTION_COUNT;
             int cxButton = (int)cxButtonF;
             float x = 0;

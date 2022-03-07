@@ -135,8 +135,8 @@ namespace ShellFiler.MonitoringViewer {
                 // 領域を計算
                 Rectangle rc;
                 if (columnIndex == 0) {
-                    rc = new Rectangle(evt.Bounds.Left + UIIconManager.CX_DEFAULT_ICON + 4, evt.Bounds.Top,
-                                       evt.Bounds.Width - (UIIconManager.CX_DEFAULT_ICON + 4), evt.Bounds.Height);
+                    rc = new Rectangle(evt.Bounds.Left + UIIconManager.CxDefaultIcon + 4, evt.Bounds.Top,
+                                       evt.Bounds.Width - (UIIconManager.CyDefaultIcon + 4), evt.Bounds.Height);
                 } else {
                     rc = evt.Bounds;
                 }
@@ -168,7 +168,7 @@ namespace ShellFiler.MonitoringViewer {
 
                 // アイコン
                 if (columnIndex == 0) {
-                    Point pt = new Point(evt.Bounds.Left + 2, evt.Bounds.Top + evt.Bounds.Height - UIIconManager.CY_DEFAULT_ICON);
+                    Point pt = new Point(evt.Bounds.Left + 2, evt.Bounds.Top + evt.Bounds.Height - UIIconManager.CyDefaultIcon);
                     UIIconManager.IconImageList.Draw(evt.Graphics, pt, evt.Item.ImageIndex);
                 }
             } finally {

@@ -28,10 +28,10 @@
             this.label1 = new System.Windows.Forms.Label();
             this.textBoxTarget = new System.Windows.Forms.TextBox();
             this.listView = new System.Windows.Forms.ListView();
-            this.columnHeaderName = new System.Windows.Forms.ColumnHeader();
-            this.columnHeaderUser = new System.Windows.Forms.ColumnHeader();
-            this.columnHeaderStart = new System.Windows.Forms.ColumnHeader();
-            this.columnHeaderUsed = new System.Windows.Forms.ColumnHeader();
+            this.columnHeaderName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeaderUser = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeaderStart = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeaderUsed = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.linkLabelChannel = new System.Windows.Forms.LinkLabel();
@@ -62,7 +62,7 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(12, 34);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(43, 12);
+            this.label1.Size = new System.Drawing.Size(48, 15);
             this.label1.TabIndex = 3;
             this.label1.Text = "接続先:";
             // 
@@ -72,7 +72,7 @@
             this.textBoxTarget.Location = new System.Drawing.Point(64, 34);
             this.textBoxTarget.Name = "textBoxTarget";
             this.textBoxTarget.ReadOnly = true;
-            this.textBoxTarget.Size = new System.Drawing.Size(528, 12);
+            this.textBoxTarget.Size = new System.Drawing.Size(528, 16);
             this.textBoxTarget.TabIndex = 4;
             // 
             // listView
@@ -114,9 +114,9 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(12, 60);
+            this.label2.Location = new System.Drawing.Point(12, 58);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(103, 12);
+            this.label2.Size = new System.Drawing.Size(110, 15);
             this.label2.TabIndex = 5;
             this.label2.Text = "使用するチャネル(&C):";
             // 
@@ -125,7 +125,7 @@
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(12, 9);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(278, 12);
+            this.label3.Size = new System.Drawing.Size(283, 15);
             this.label3.TabIndex = 0;
             this.label3.Text = "SSHシェルでの操作対象となるチャネルを指定してください。";
             // 
@@ -134,7 +134,7 @@
             this.linkLabelChannel.AutoSize = true;
             this.linkLabelChannel.Location = new System.Drawing.Point(297, 9);
             this.linkLabelChannel.Name = "linkLabelChannel";
-            this.linkLabelChannel.Size = new System.Drawing.Size(113, 12);
+            this.linkLabelChannel.Size = new System.Drawing.Size(115, 15);
             this.linkLabelChannel.TabIndex = 9;
             this.linkLabelChannel.TabStop = true;
             this.linkLabelChannel.Text = "チャネルの選択について";
@@ -143,8 +143,8 @@
             // SSHSelectChannelDialog
             // 
             this.AcceptButton = this.buttonOk;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.CancelButton = this.buttonCancel;
             this.ClientSize = new System.Drawing.Size(604, 264);
             this.Controls.Add(this.linkLabelChannel);
@@ -155,6 +155,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.buttonCancel);
             this.Controls.Add(this.buttonOk);
+            this.Font = new System.Drawing.Font("Yu Gothic UI", 9F);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.MaximizeBox = false;
             this.MinimizeBox = false;

@@ -36,15 +36,15 @@
             this.buttonCancel = new System.Windows.Forms.Button();
             this.buttonOk = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.radioButtonPrev = new System.Windows.Forms.RadioButton();
             this.radioButtonRoot = new System.Windows.Forms.RadioButton();
+            this.radioButtonPrev = new System.Windows.Forms.RadioButton();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxIcon)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // textBoxFail
             // 
-            this.textBoxFail.Location = new System.Drawing.Point(116, 34);
+            this.textBoxFail.Location = new System.Drawing.Point(127, 34);
             this.textBoxFail.Name = "textBoxFail";
             this.textBoxFail.ReadOnly = true;
             this.textBoxFail.Size = new System.Drawing.Size(345, 19);
@@ -53,7 +53,7 @@
             // labelMessage
             // 
             this.labelMessage.AutoSize = true;
-            this.labelMessage.Location = new System.Drawing.Point(51, 13);
+            this.labelMessage.Location = new System.Drawing.Point(56, 13);
             this.labelMessage.Name = "labelMessage";
             this.labelMessage.Size = new System.Drawing.Size(157, 12);
             this.labelMessage.TabIndex = 0;
@@ -117,7 +117,7 @@
             // 
             // textBoxNext
             // 
-            this.textBoxNext.Location = new System.Drawing.Point(115, 57);
+            this.textBoxNext.Location = new System.Drawing.Point(126, 60);
             this.textBoxNext.Name = "textBoxNext";
             this.textBoxNext.Size = new System.Drawing.Size(345, 19);
             this.textBoxNext.TabIndex = 4;
@@ -125,7 +125,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(52, 37);
+            this.label2.Location = new System.Drawing.Point(57, 37);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(35, 12);
             this.label2.TabIndex = 1;
@@ -134,7 +134,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(51, 60);
+            this.label3.Location = new System.Drawing.Point(56, 63);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(58, 12);
             this.label3.TabIndex = 3;
@@ -143,7 +143,7 @@
             // buttonCancel
             // 
             this.buttonCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.buttonCancel.Location = new System.Drawing.Point(385, 241);
+            this.buttonCancel.Location = new System.Drawing.Point(396, 241);
             this.buttonCancel.Name = "buttonCancel";
             this.buttonCancel.Size = new System.Drawing.Size(75, 23);
             this.buttonCancel.TabIndex = 7;
@@ -152,7 +152,7 @@
             // 
             // buttonOk
             // 
-            this.buttonOk.Location = new System.Drawing.Point(304, 241);
+            this.buttonOk.Location = new System.Drawing.Point(315, 241);
             this.buttonOk.Name = "buttonOk";
             this.buttonOk.Size = new System.Drawing.Size(75, 23);
             this.buttonOk.TabIndex = 6;
@@ -168,24 +168,12 @@
             this.groupBox1.Controls.Add(this.radioButtonParent);
             this.groupBox1.Controls.Add(this.radioButtonHome);
             this.groupBox1.Controls.Add(this.radioButtonDesktop);
-            this.groupBox1.Location = new System.Drawing.Point(13, 82);
+            this.groupBox1.Location = new System.Drawing.Point(13, 86);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(219, 149);
             this.groupBox1.TabIndex = 5;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "操作";
-            // 
-            // radioButtonPrev
-            // 
-            this.radioButtonPrev.AutoSize = true;
-            this.radioButtonPrev.Location = new System.Drawing.Point(6, 40);
-            this.radioButtonPrev.Name = "radioButtonPrev";
-            this.radioButtonPrev.Size = new System.Drawing.Size(142, 16);
-            this.radioButtonPrev.TabIndex = 1;
-            this.radioButtonPrev.TabStop = true;
-            this.radioButtonPrev.Text = "直前のフォルダへ移動(&V)";
-            this.radioButtonPrev.UseVisualStyleBackColor = true;
-            this.radioButtonPrev.CheckedChanged += new System.EventHandler(this.RadioButton_CheckedChanged);
             // 
             // radioButtonRoot
             // 
@@ -199,13 +187,25 @@
             this.radioButtonRoot.UseVisualStyleBackColor = true;
             this.radioButtonRoot.CheckedChanged += new System.EventHandler(this.RadioButton_CheckedChanged);
             // 
+            // radioButtonPrev
+            // 
+            this.radioButtonPrev.AutoSize = true;
+            this.radioButtonPrev.Location = new System.Drawing.Point(6, 40);
+            this.radioButtonPrev.Name = "radioButtonPrev";
+            this.radioButtonPrev.Size = new System.Drawing.Size(142, 16);
+            this.radioButtonPrev.TabIndex = 1;
+            this.radioButtonPrev.TabStop = true;
+            this.radioButtonPrev.Text = "直前のフォルダへ移動(&V)";
+            this.radioButtonPrev.UseVisualStyleBackColor = true;
+            this.radioButtonPrev.CheckedChanged += new System.EventHandler(this.RadioButton_CheckedChanged);
+            // 
             // ChdirErrorDialog
             // 
             this.AcceptButton = this.buttonOk;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.buttonCancel;
-            this.ClientSize = new System.Drawing.Size(472, 276);
+            this.ClientSize = new System.Drawing.Size(483, 276);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.buttonOk);
             this.Controls.Add(this.buttonCancel);

@@ -18,7 +18,7 @@ namespace ShellFiler.UI.FileList {
     //=========================================================================================
     // クラス：ファイル一覧の描画用グラフィックス
     //=========================================================================================
-    public class FileListGraphics {
+    public class FileListGraphics : HighDpiGraphics {
         // グラフィック（null:未初期化）
         private Graphics m_graphics;
 
@@ -119,7 +119,7 @@ namespace ShellFiler.UI.FileList {
         // 　　　　[in]lineHeight 一覧の行の高さ
         // 戻り値：なし
         //=========================================================================================
-        public FileListGraphics(Graphics graphics, int lineStart, int lineHeight) {
+        public FileListGraphics(Graphics graphics, int lineStart, int lineHeight) : base(graphics) {
             m_control = null;
             m_graphics = graphics;
             m_lineStart = lineStart;
@@ -133,7 +133,7 @@ namespace ShellFiler.UI.FileList {
         // 　　　　[in]lineHeight 一覧の行の高さ
         // 戻り値：なし
         //=========================================================================================
-        public FileListGraphics(Control control, int lineStart, int lineHeight) {
+        public FileListGraphics(Control control, int lineStart, int lineHeight) : base(null) {
             m_control = control;
             m_graphics = null;
             m_lineStart = lineStart;
@@ -145,7 +145,7 @@ namespace ShellFiler.UI.FileList {
         // 引　数：なし
         // 戻り値：なし
         //=========================================================================================
-        public void Dispose() {
+        public new void Dispose() {
             if (m_control != null && m_graphics != null) {
                 m_graphics.Dispose();
             }
@@ -262,7 +262,7 @@ namespace ShellFiler.UI.FileList {
         //=========================================================================================
         // プロパティ：グラフィックス
         //=========================================================================================
-        public Graphics Graphics {
+        public new Graphics Graphics {
             get {
                 if (m_graphics == null) {
                     m_graphics = m_control.CreateGraphics();
@@ -277,7 +277,8 @@ namespace ShellFiler.UI.FileList {
         public Pen FileListCursorPen {
             get {
                 if (m_fileListCursorPen == null) {
-                    m_fileListCursorPen = new Pen(Configuration.Current.FileListCursorColor);
+                    int size = (int) (MainWindowForm.Xf(1.0f) + 0.5f);
+                    m_fileListCursorPen = new Pen(Configuration.Current.FileListCursorColor, size);
                 }
                 return m_fileListCursorPen;
             }
@@ -289,7 +290,8 @@ namespace ShellFiler.UI.FileList {
         public Pen FileListCursorDisablePen {
             get {
                 if (m_fileListCursorDisablePen == null) {
-                    m_fileListCursorDisablePen = new Pen(Configuration.Current.FileListCursorDisableColor);
+                    int size = (int)(MainWindowForm.Xf(1.0f) + 0.5f);
+                    m_fileListCursorDisablePen = new Pen(Configuration.Current.FileListCursorDisableColor, size);
                 }
                 return m_fileListCursorDisablePen;
             }
@@ -301,7 +303,8 @@ namespace ShellFiler.UI.FileList {
         public Pen FileListBackPen {
             get {
                 if (m_fileListBackPen == null) {
-                    m_fileListBackPen = new Pen(Configuration.Current.FileListBackColor);
+                    int size = (int)(MainWindowForm.Xf(1.0f) + 0.5f);
+                    m_fileListBackPen = new Pen(Configuration.Current.FileListBackColor, size);
                 }
                 return m_fileListBackPen;
             }

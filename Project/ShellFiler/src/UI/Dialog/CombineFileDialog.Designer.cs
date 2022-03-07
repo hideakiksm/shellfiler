@@ -60,7 +60,7 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(13, 13);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(102, 12);
+            this.label1.Size = new System.Drawing.Size(110, 15);
             this.label1.TabIndex = 0;
             this.label1.Text = "ファイルの結合順(&S):";
             // 
@@ -107,23 +107,23 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(10, 228);
+            this.label2.Location = new System.Drawing.Point(10, 236);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(105, 12);
+            this.label2.Size = new System.Drawing.Size(113, 15);
             this.label2.TabIndex = 8;
             this.label2.Text = "結合先ファイル名(&D):";
             // 
             // textBoxDestName
             // 
-            this.textBoxDestName.Location = new System.Drawing.Point(122, 225);
+            this.textBoxDestName.Location = new System.Drawing.Point(122, 233);
             this.textBoxDestName.Name = "textBoxDestName";
-            this.textBoxDestName.Size = new System.Drawing.Size(391, 19);
+            this.textBoxDestName.Size = new System.Drawing.Size(391, 23);
             this.textBoxDestName.TabIndex = 9;
             // 
             // buttonCancel
             // 
             this.buttonCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.buttonCancel.Location = new System.Drawing.Point(437, 250);
+            this.buttonCancel.Location = new System.Drawing.Point(437, 266);
             this.buttonCancel.Name = "buttonCancel";
             this.buttonCancel.Size = new System.Drawing.Size(75, 23);
             this.buttonCancel.TabIndex = 11;
@@ -132,7 +132,7 @@
             // 
             // buttonOk
             // 
-            this.buttonOk.Location = new System.Drawing.Point(357, 250);
+            this.buttonOk.Location = new System.Drawing.Point(357, 266);
             this.buttonOk.Name = "buttonOk";
             this.buttonOk.Size = new System.Drawing.Size(75, 23);
             this.buttonOk.TabIndex = 10;
@@ -143,25 +143,25 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(10, 203);
+            this.label3.Location = new System.Drawing.Point(10, 206);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(105, 12);
+            this.label3.Size = new System.Drawing.Size(112, 15);
             this.label3.TabIndex = 6;
             this.label3.Text = "結合先フォルダ名(&F):";
             // 
             // textBoxDestFolder
             // 
-            this.textBoxDestFolder.Location = new System.Drawing.Point(121, 200);
+            this.textBoxDestFolder.Location = new System.Drawing.Point(121, 203);
             this.textBoxDestFolder.Name = "textBoxDestFolder";
             this.textBoxDestFolder.ReadOnly = true;
-            this.textBoxDestFolder.Size = new System.Drawing.Size(391, 19);
+            this.textBoxDestFolder.Size = new System.Drawing.Size(391, 23);
             this.textBoxDestFolder.TabIndex = 7;
             // 
             // pictureBoxArrow
             // 
             this.pictureBoxArrow.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxArrow.Image")));
             this.pictureBoxArrow.InitialImage = null;
-            this.pictureBoxArrow.Location = new System.Drawing.Point(226, 181);
+            this.pictureBoxArrow.Location = new System.Drawing.Point(226, 182);
             this.pictureBoxArrow.Name = "pictureBoxArrow";
             this.pictureBoxArrow.Size = new System.Drawing.Size(48, 16);
             this.pictureBoxArrow.TabIndex = 12;
@@ -170,10 +170,10 @@
             // CombineFileDialog
             // 
             this.AcceptButton = this.buttonOk;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.CancelButton = this.buttonCancel;
-            this.ClientSize = new System.Drawing.Size(524, 285);
+            this.ClientSize = new System.Drawing.Size(527, 301);
             this.Controls.Add(this.pictureBoxArrow);
             this.Controls.Add(this.textBoxDestFolder);
             this.Controls.Add(this.textBoxDestName);
@@ -187,6 +187,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.listViewTarget);
+            this.Font = new System.Drawing.Font("Yu Gothic UI", 9F);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.MaximizeBox = false;
             this.MinimizeBox = false;

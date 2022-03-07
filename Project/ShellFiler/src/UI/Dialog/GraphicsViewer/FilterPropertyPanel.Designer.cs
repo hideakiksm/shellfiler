@@ -67,7 +67,7 @@
             this.labelParam1.AutoSize = true;
             this.labelParam1.Location = new System.Drawing.Point(242, 12);
             this.labelParam1.Name = "labelParam1";
-            this.labelParam1.Size = new System.Drawing.Size(55, 12);
+            this.labelParam1.Size = new System.Drawing.Size(57, 15);
             this.labelParam1.TabIndex = 2;
             this.labelParam1.Text = "コントラスト";
             // 
@@ -85,7 +85,7 @@
             this.labelFilterName.AutoSize = true;
             this.labelFilterName.Location = new System.Drawing.Point(3, 4);
             this.labelFilterName.Name = "labelFilterName";
-            this.labelFilterName.Size = new System.Drawing.Size(85, 12);
+            this.labelFilterName.Size = new System.Drawing.Size(99, 15);
             this.labelFilterName.TabIndex = 0;
             this.labelFilterName.Text = "labelFilterName";
             // 
@@ -131,7 +131,7 @@
             this.labelParam2.AutoSize = true;
             this.labelParam2.Location = new System.Drawing.Point(242, 51);
             this.labelParam2.Name = "labelParam2";
-            this.labelParam2.Size = new System.Drawing.Size(55, 12);
+            this.labelParam2.Size = new System.Drawing.Size(57, 15);
             this.labelParam2.TabIndex = 6;
             this.labelParam2.Text = "コントラスト";
             // 
@@ -140,7 +140,7 @@
             this.labelParam3.AutoSize = true;
             this.labelParam3.Location = new System.Drawing.Point(242, 90);
             this.labelParam3.Name = "labelParam3";
-            this.labelParam3.Size = new System.Drawing.Size(55, 12);
+            this.labelParam3.Size = new System.Drawing.Size(57, 15);
             this.labelParam3.TabIndex = 10;
             this.labelParam3.Text = "コントラスト";
             // 
@@ -191,8 +191,8 @@
             // 
             // FilterPropertyPanel
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.Controls.Add(this.labelLevelLeft3);
             this.Controls.Add(this.labelLevelRight3);
             this.Controls.Add(this.trackBarParam3);
@@ -209,6 +209,7 @@
             this.Controls.Add(this.pictureBoxSrc);
             this.Controls.Add(this.trackBarParam2);
             this.Controls.Add(this.trackBarParam1);
+            this.Font = new System.Drawing.Font("Yu Gothic UI", 9F);
             this.Name = "FilterPropertyPanel";
             this.Size = new System.Drawing.Size(487, 122);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxSrc)).EndInit();

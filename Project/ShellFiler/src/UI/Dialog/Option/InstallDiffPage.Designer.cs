@@ -41,7 +41,7 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(3, 116);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(470, 12);
+            this.label2.Size = new System.Drawing.Size(477, 15);
             this.label2.TabIndex = 3;
             this.label2.Text = "差分表示ツールをShellFilerと別にインストールして登録しておくと、ファイル一覧やファイルビューアから";
             // 
@@ -50,7 +50,7 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(3, 4);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(128, 12);
+            this.label1.Size = new System.Drawing.Size(130, 15);
             this.label1.TabIndex = 0;
             this.label1.Text = "ファイル用差分表示ツール";
             // 
@@ -68,42 +68,42 @@
             // 
             this.textBoxDiffCommand.Location = new System.Drawing.Point(19, 19);
             this.textBoxDiffCommand.Name = "textBoxDiffCommand";
-            this.textBoxDiffCommand.Size = new System.Drawing.Size(399, 19);
+            this.textBoxDiffCommand.Size = new System.Drawing.Size(399, 23);
             this.textBoxDiffCommand.TabIndex = 1;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(3, 128);
+            this.label3.Location = new System.Drawing.Point(3, 132);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(244, 12);
+            this.label3.Size = new System.Drawing.Size(246, 15);
             this.label3.TabIndex = 4;
             this.label3.Text = "簡単にテキストの相違点を表示することができます。";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(3, 148);
+            this.label4.Location = new System.Drawing.Point(3, 152);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(422, 12);
+            this.label4.Size = new System.Drawing.Size(433, 15);
             this.label4.TabIndex = 5;
             this.label4.Text = "入力文字列の{0}の位置に、比較対象のファイルやフォルダを複数個指定して起動します。";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(3, 184);
+            this.label5.Location = new System.Drawing.Point(3, 192);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(478, 12);
+            this.label5.Size = new System.Drawing.Size(493, 15);
             this.label5.TabIndex = 6;
             this.label5.Text = "差分表示ツールの指定がない場合、ShellFiler\\binフォルダにdiff.lnkというショートカットを作っておくと、";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(3, 196);
+            this.label6.Location = new System.Drawing.Point(3, 208);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(380, 12);
+            this.label6.Size = new System.Drawing.Size(394, 15);
             this.label6.TabIndex = 7;
             this.label6.Text = "リンク先を差分表示ツールとして起動します（無料版ではこちらをお使いください）。";
             // 
@@ -111,7 +111,7 @@
             // 
             this.textBoxDiffDirectoryCommand.Location = new System.Drawing.Point(19, 72);
             this.textBoxDiffDirectoryCommand.Name = "textBoxDiffDirectoryCommand";
-            this.textBoxDiffDirectoryCommand.Size = new System.Drawing.Size(399, 19);
+            this.textBoxDiffDirectoryCommand.Size = new System.Drawing.Size(399, 23);
             this.textBoxDiffDirectoryCommand.TabIndex = 9;
             // 
             // buttonDiffDirectoryRef
@@ -129,14 +129,14 @@
             this.label7.AutoSize = true;
             this.label7.Location = new System.Drawing.Point(3, 57);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(143, 12);
+            this.label7.Size = new System.Drawing.Size(145, 15);
             this.label7.TabIndex = 8;
             this.label7.Text = "ディレクトリ用差分表示ツール";
             // 
             // InstallDiffPage
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.Controls.Add(this.textBoxDiffDirectoryCommand);
             this.Controls.Add(this.buttonDiffDirectoryRef);
             this.Controls.Add(this.label7);
@@ -148,6 +148,7 @@
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
+            this.Font = new System.Drawing.Font("Yu Gothic UI", 9F);
             this.Name = "InstallDiffPage";
             this.Size = new System.Drawing.Size(520, 370);
             this.ResumeLayout(false);

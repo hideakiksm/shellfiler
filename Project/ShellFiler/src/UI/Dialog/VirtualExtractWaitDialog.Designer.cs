@@ -35,7 +35,7 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(13, 13);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(125, 12);
+            this.label1.Size = new System.Drawing.Size(133, 15);
             this.label1.TabIndex = 0;
             this.label1.Text = "実行の準備をしています...";
             // 
@@ -48,7 +48,7 @@
             // 
             // buttonCancel
             // 
-            this.buttonCancel.Location = new System.Drawing.Point(314, 105);
+            this.buttonCancel.Location = new System.Drawing.Point(314, 85);
             this.buttonCancel.Name = "buttonCancel";
             this.buttonCancel.Size = new System.Drawing.Size(75, 23);
             this.buttonCancel.TabIndex = 2;
@@ -62,7 +62,7 @@
             this.textBoxCurrent.Location = new System.Drawing.Point(15, 32);
             this.textBoxCurrent.Name = "textBoxCurrent";
             this.textBoxCurrent.ReadOnly = true;
-            this.textBoxCurrent.Size = new System.Drawing.Size(374, 12);
+            this.textBoxCurrent.Size = new System.Drawing.Size(374, 16);
             this.textBoxCurrent.TabIndex = 3;
             // 
             // labelRatio
@@ -70,20 +70,21 @@
             this.labelRatio.AutoSize = true;
             this.labelRatio.Location = new System.Drawing.Point(284, 61);
             this.labelRatio.Name = "labelRatio";
-            this.labelRatio.Size = new System.Drawing.Size(23, 12);
+            this.labelRatio.Size = new System.Drawing.Size(33, 15);
             this.labelRatio.TabIndex = 0;
             this.labelRatio.Text = "99%";
             // 
             // VirtualExtractWaitDialog
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(401, 140);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
+            this.ClientSize = new System.Drawing.Size(401, 120);
             this.Controls.Add(this.textBoxCurrent);
             this.Controls.Add(this.buttonCancel);
             this.Controls.Add(this.progressBar);
             this.Controls.Add(this.labelRatio);
             this.Controls.Add(this.label1);
+            this.Font = new System.Drawing.Font("Yu Gothic UI", 9F);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.MaximizeBox = false;
             this.MinimizeBox = false;

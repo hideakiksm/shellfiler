@@ -50,23 +50,23 @@
             this.treeView.FullRowSelect = true;
             this.treeView.HideSelection = false;
             this.treeView.ItemHeight = 18;
-            this.treeView.Location = new System.Drawing.Point(14, 110);
+            this.treeView.Location = new System.Drawing.Point(14, 130);
             this.treeView.Name = "treeView";
             this.treeView.ShowLines = false;
             this.treeView.ShowPlusMinus = false;
             this.treeView.ShowRootLines = false;
             this.treeView.Size = new System.Drawing.Size(453, 249);
             this.treeView.TabIndex = 7;
-            this.treeView.DrawNode += new System.Windows.Forms.DrawTreeNodeEventHandler(this.treeView_DrawNode);
             this.treeView.BeforeCollapse += new System.Windows.Forms.TreeViewCancelEventHandler(this.treeView_BeforeCollapse);
+            this.treeView.DrawNode += new System.Windows.Forms.DrawTreeNodeEventHandler(this.treeView_DrawNode);
             this.treeView.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.treeView_AfterSelect);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 41);
+            this.label1.Location = new System.Drawing.Point(12, 49);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(99, 12);
+            this.label1.Size = new System.Drawing.Size(107, 15);
             this.label1.TabIndex = 0;
             this.label1.Text = "ルートメニュー名(&M):";
             // 
@@ -75,33 +75,33 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(12, 9);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(191, 12);
+            this.label2.Size = new System.Drawing.Size(193, 15);
             this.label2.TabIndex = 2;
             this.label2.Text = "メインメニューに表示される項目名です。";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(12, 21);
+            this.label3.Location = new System.Drawing.Point(12, 25);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(274, 12);
+            this.label3.Size = new System.Drawing.Size(276, 15);
             this.label3.TabIndex = 3;
             this.label3.Text = "ポップアップメニューをキーに割り当てるときにも使用します。";
             // 
             // textBoxRootMenu
             // 
-            this.textBoxRootMenu.Location = new System.Drawing.Point(118, 38);
+            this.textBoxRootMenu.Location = new System.Drawing.Point(118, 46);
             this.textBoxRootMenu.Name = "textBoxRootMenu";
-            this.textBoxRootMenu.Size = new System.Drawing.Size(229, 19);
+            this.textBoxRootMenu.Size = new System.Drawing.Size(229, 23);
             this.textBoxRootMenu.TabIndex = 1;
             this.textBoxRootMenu.TextChanged += new System.EventHandler(this.textBoxRootMenu_TextChanged);
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(12, 66);
+            this.label4.Location = new System.Drawing.Point(12, 78);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(100, 12);
+            this.label4.Size = new System.Drawing.Size(108, 15);
             this.label4.TabIndex = 4;
             this.label4.Text = "ショートカットキー(&S):";
             // 
@@ -109,23 +109,23 @@
             // 
             this.comboBoxShortcut.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxShortcut.FormattingEnabled = true;
-            this.comboBoxShortcut.Location = new System.Drawing.Point(118, 63);
+            this.comboBoxShortcut.Location = new System.Drawing.Point(118, 75);
             this.comboBoxShortcut.Name = "comboBoxShortcut";
-            this.comboBoxShortcut.Size = new System.Drawing.Size(121, 20);
+            this.comboBoxShortcut.Size = new System.Drawing.Size(121, 23);
             this.comboBoxShortcut.TabIndex = 5;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(12, 95);
+            this.label5.Location = new System.Drawing.Point(12, 111);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(80, 12);
+            this.label5.Size = new System.Drawing.Size(88, 15);
             this.label5.TabIndex = 6;
             this.label5.Text = "メニュー項目(&L):";
             // 
             // buttonAddItem
             // 
-            this.buttonAddItem.Location = new System.Drawing.Point(473, 110);
+            this.buttonAddItem.Location = new System.Drawing.Point(473, 130);
             this.buttonAddItem.Name = "buttonAddItem";
             this.buttonAddItem.Size = new System.Drawing.Size(108, 23);
             this.buttonAddItem.TabIndex = 8;
@@ -135,7 +135,7 @@
             // 
             // buttonAddGroup
             // 
-            this.buttonAddGroup.Location = new System.Drawing.Point(473, 139);
+            this.buttonAddGroup.Location = new System.Drawing.Point(473, 159);
             this.buttonAddGroup.Name = "buttonAddGroup";
             this.buttonAddGroup.Size = new System.Drawing.Size(108, 23);
             this.buttonAddGroup.TabIndex = 9;
@@ -145,7 +145,7 @@
             // 
             // buttonEdit
             // 
-            this.buttonEdit.Location = new System.Drawing.Point(473, 197);
+            this.buttonEdit.Location = new System.Drawing.Point(473, 217);
             this.buttonEdit.Name = "buttonEdit";
             this.buttonEdit.Size = new System.Drawing.Size(108, 23);
             this.buttonEdit.TabIndex = 10;
@@ -155,7 +155,7 @@
             // 
             // buttonDelete
             // 
-            this.buttonDelete.Location = new System.Drawing.Point(473, 226);
+            this.buttonDelete.Location = new System.Drawing.Point(473, 246);
             this.buttonDelete.Name = "buttonDelete";
             this.buttonDelete.Size = new System.Drawing.Size(108, 23);
             this.buttonDelete.TabIndex = 11;
@@ -165,7 +165,7 @@
             // 
             // buttonUp
             // 
-            this.buttonUp.Location = new System.Drawing.Point(473, 307);
+            this.buttonUp.Location = new System.Drawing.Point(473, 327);
             this.buttonUp.Name = "buttonUp";
             this.buttonUp.Size = new System.Drawing.Size(108, 23);
             this.buttonUp.TabIndex = 12;
@@ -175,7 +175,7 @@
             // 
             // buttonDown
             // 
-            this.buttonDown.Location = new System.Drawing.Point(473, 336);
+            this.buttonDown.Location = new System.Drawing.Point(473, 356);
             this.buttonDown.Name = "buttonDown";
             this.buttonDown.Size = new System.Drawing.Size(108, 23);
             this.buttonDown.TabIndex = 13;
@@ -185,7 +185,7 @@
             // 
             // buttonOk
             // 
-            this.buttonOk.Location = new System.Drawing.Point(425, 373);
+            this.buttonOk.Location = new System.Drawing.Point(425, 386);
             this.buttonOk.Name = "buttonOk";
             this.buttonOk.Size = new System.Drawing.Size(75, 23);
             this.buttonOk.TabIndex = 14;
@@ -196,7 +196,7 @@
             // buttonCancel
             // 
             this.buttonCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.buttonCancel.Location = new System.Drawing.Point(506, 373);
+            this.buttonCancel.Location = new System.Drawing.Point(506, 386);
             this.buttonCancel.Name = "buttonCancel";
             this.buttonCancel.Size = new System.Drawing.Size(75, 23);
             this.buttonCancel.TabIndex = 15;
@@ -205,7 +205,7 @@
             // 
             // buttonBorder
             // 
-            this.buttonBorder.Location = new System.Drawing.Point(473, 168);
+            this.buttonBorder.Location = new System.Drawing.Point(473, 188);
             this.buttonBorder.Name = "buttonBorder";
             this.buttonBorder.Size = new System.Drawing.Size(108, 23);
             this.buttonBorder.TabIndex = 9;
@@ -217,9 +217,9 @@
             // 
             this.labelShortcutWarning.AutoSize = true;
             this.labelShortcutWarning.BackColor = System.Drawing.Color.Yellow;
-            this.labelShortcutWarning.Location = new System.Drawing.Point(255, 66);
+            this.labelShortcutWarning.Location = new System.Drawing.Point(255, 78);
             this.labelShortcutWarning.Name = "labelShortcutWarning";
-            this.labelShortcutWarning.Size = new System.Drawing.Size(172, 12);
+            this.labelShortcutWarning.Size = new System.Drawing.Size(174, 15);
             this.labelShortcutWarning.TabIndex = 16;
             this.labelShortcutWarning.Text = "ショートカットキーの重複があります。";
             // 
@@ -236,10 +236,10 @@
             // MenuListSettingDialog
             // 
             this.AcceptButton = this.buttonOk;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.CancelButton = this.buttonCancel;
-            this.ClientSize = new System.Drawing.Size(593, 408);
+            this.ClientSize = new System.Drawing.Size(593, 421);
             this.Controls.Add(this.labelShortcutWarning);
             this.Controls.Add(this.buttonCancel);
             this.Controls.Add(this.buttonTest);
@@ -259,6 +259,7 @@
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.treeView);
+            this.Font = new System.Drawing.Font("Yu Gothic UI", 9F);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.MaximizeBox = false;
             this.MinimizeBox = false;

@@ -41,23 +41,23 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(12, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(139, 12);
+            this.label1.Size = new System.Drawing.Size(146, 15);
             this.label1.TabIndex = 0;
             this.label1.Text = "設定可能な条件の一覧(C):";
             // 
             // listBoxQuickSetting
             // 
             this.listBoxQuickSetting.FormattingEnabled = true;
-            this.listBoxQuickSetting.ItemHeight = 12;
-            this.listBoxQuickSetting.Location = new System.Drawing.Point(12, 24);
+            this.listBoxQuickSetting.ItemHeight = 15;
+            this.listBoxQuickSetting.Location = new System.Drawing.Point(12, 26);
             this.listBoxQuickSetting.Name = "listBoxQuickSetting";
-            this.listBoxQuickSetting.Size = new System.Drawing.Size(317, 160);
+            this.listBoxQuickSetting.Size = new System.Drawing.Size(317, 154);
             this.listBoxQuickSetting.TabIndex = 2;
             this.listBoxQuickSetting.SelectedIndexChanged += new System.EventHandler(this.listBoxQuickSetting_SelectedIndexChanged);
             // 
             // buttonAdd
             // 
-            this.buttonAdd.Location = new System.Drawing.Point(335, 23);
+            this.buttonAdd.Location = new System.Drawing.Point(335, 25);
             this.buttonAdd.Name = "buttonAdd";
             this.buttonAdd.Size = new System.Drawing.Size(75, 23);
             this.buttonAdd.TabIndex = 3;
@@ -67,7 +67,7 @@
             // 
             // buttonEdit
             // 
-            this.buttonEdit.Location = new System.Drawing.Point(335, 52);
+            this.buttonEdit.Location = new System.Drawing.Point(335, 54);
             this.buttonEdit.Name = "buttonEdit";
             this.buttonEdit.Size = new System.Drawing.Size(75, 23);
             this.buttonEdit.TabIndex = 4;
@@ -77,7 +77,7 @@
             // 
             // buttonDelete
             // 
-            this.buttonDelete.Location = new System.Drawing.Point(335, 81);
+            this.buttonDelete.Location = new System.Drawing.Point(335, 83);
             this.buttonDelete.Name = "buttonDelete";
             this.buttonDelete.Size = new System.Drawing.Size(75, 23);
             this.buttonDelete.TabIndex = 5;
@@ -88,7 +88,7 @@
             // buttonOk
             // 
             this.buttonOk.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.buttonOk.Location = new System.Drawing.Point(336, 213);
+            this.buttonOk.Location = new System.Drawing.Point(336, 220);
             this.buttonOk.Name = "buttonOk";
             this.buttonOk.Size = new System.Drawing.Size(75, 23);
             this.buttonOk.TabIndex = 8;
@@ -98,7 +98,7 @@
             // 
             // buttonUp
             // 
-            this.buttonUp.Location = new System.Drawing.Point(335, 131);
+            this.buttonUp.Location = new System.Drawing.Point(335, 133);
             this.buttonUp.Name = "buttonUp";
             this.buttonUp.Size = new System.Drawing.Size(75, 23);
             this.buttonUp.TabIndex = 6;
@@ -108,7 +108,7 @@
             // 
             // buttonDown
             // 
-            this.buttonDown.Location = new System.Drawing.Point(335, 160);
+            this.buttonDown.Location = new System.Drawing.Point(335, 162);
             this.buttonDown.Name = "buttonDown";
             this.buttonDown.Size = new System.Drawing.Size(75, 23);
             this.buttonDown.TabIndex = 7;
@@ -121,34 +121,34 @@
             this.labelFreeware.AutoSize = true;
             this.labelFreeware.Location = new System.Drawing.Point(12, 225);
             this.labelFreeware.Name = "labelFreeware";
-            this.labelFreeware.Size = new System.Drawing.Size(0, 12);
+            this.labelFreeware.Size = new System.Drawing.Size(0, 15);
             this.labelFreeware.TabIndex = 10;
             // 
             // labelMessage1
             // 
             this.labelMessage1.AutoSize = true;
-            this.labelMessage1.Location = new System.Drawing.Point(12, 187);
+            this.labelMessage1.Location = new System.Drawing.Point(12, 188);
             this.labelMessage1.Name = "labelMessage1";
-            this.labelMessage1.Size = new System.Drawing.Size(137, 12);
+            this.labelMessage1.Size = new System.Drawing.Size(148, 15);
             this.labelMessage1.TabIndex = 0;
             this.labelMessage1.Text = "表示中の条件は{0}用です。";
             // 
             // labelMessage2
             // 
             this.labelMessage2.AutoSize = true;
-            this.labelMessage2.Location = new System.Drawing.Point(12, 199);
+            this.labelMessage2.Location = new System.Drawing.Point(12, 202);
             this.labelMessage2.Name = "labelMessage2";
-            this.labelMessage2.Size = new System.Drawing.Size(304, 12);
+            this.labelMessage2.Size = new System.Drawing.Size(324, 15);
             this.labelMessage2.TabIndex = 0;
             this.labelMessage2.Text = "{0}用の条件は、{0}のフォルダを表示しているときに編集できます。";
             // 
             // FileConditionSettingDialog
             // 
             this.AcceptButton = this.buttonOk;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.CancelButton = this.buttonOk;
-            this.ClientSize = new System.Drawing.Size(423, 248);
+            this.ClientSize = new System.Drawing.Size(423, 255);
             this.Controls.Add(this.labelFreeware);
             this.Controls.Add(this.buttonOk);
             this.Controls.Add(this.buttonDown);
@@ -160,6 +160,7 @@
             this.Controls.Add(this.labelMessage2);
             this.Controls.Add(this.labelMessage1);
             this.Controls.Add(this.label1);
+            this.Font = new System.Drawing.Font("Yu Gothic UI", 9F);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.MaximizeBox = false;
             this.MinimizeBox = false;

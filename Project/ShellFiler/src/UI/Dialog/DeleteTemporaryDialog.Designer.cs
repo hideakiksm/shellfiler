@@ -46,7 +46,7 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(62, 12);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(266, 12);
+            this.label1.Size = new System.Drawing.Size(268, 15);
             this.label1.TabIndex = 0;
             this.label1.Text = "次のフォルダに使用されていない一時ファイルがあります。";
             // 
@@ -55,13 +55,13 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(61, 38);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(400, 12);
+            this.label2.Size = new System.Drawing.Size(406, 15);
             this.label2.TabIndex = 1;
             this.label2.Text = "ShellFilerが異常終了した場合などに作業していたファイルを抽出することができます。";
             // 
             // buttonDelete
             // 
-            this.buttonDelete.Location = new System.Drawing.Point(267, 181);
+            this.buttonDelete.Location = new System.Drawing.Point(267, 186);
             this.buttonDelete.Name = "buttonDelete";
             this.buttonDelete.Size = new System.Drawing.Size(106, 23);
             this.buttonDelete.TabIndex = 4;
@@ -72,7 +72,7 @@
             // buttonClose
             // 
             this.buttonClose.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.buttonClose.Location = new System.Drawing.Point(379, 181);
+            this.buttonClose.Location = new System.Drawing.Point(379, 186);
             this.buttonClose.Name = "buttonClose";
             this.buttonClose.Size = new System.Drawing.Size(107, 23);
             this.buttonClose.TabIndex = 5;
@@ -83,29 +83,29 @@
             // listBoxFolder
             // 
             this.listBoxFolder.FormattingEnabled = true;
-            this.listBoxFolder.ItemHeight = 12;
-            this.listBoxFolder.Location = new System.Drawing.Point(12, 75);
+            this.listBoxFolder.ItemHeight = 15;
+            this.listBoxFolder.Location = new System.Drawing.Point(12, 80);
             this.listBoxFolder.Name = "listBoxFolder";
-            this.listBoxFolder.Size = new System.Drawing.Size(474, 100);
+            this.listBoxFolder.Size = new System.Drawing.Size(474, 94);
             this.listBoxFolder.TabIndex = 3;
             this.listBoxFolder.DoubleClick += new System.EventHandler(this.listBoxFolder_DoubleClick);
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(61, 54);
+            this.label3.Location = new System.Drawing.Point(61, 56);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(239, 12);
+            this.label3.Size = new System.Drawing.Size(241, 15);
             this.label3.TabIndex = 2;
             this.label3.Text = "一覧をダブルクリックすると作業フォルダを開きます。";
             // 
             // DeleteTemporaryDialog
             // 
             this.AcceptButton = this.buttonDelete;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.CancelButton = this.buttonClose;
-            this.ClientSize = new System.Drawing.Size(498, 216);
+            this.ClientSize = new System.Drawing.Size(498, 221);
             this.Controls.Add(this.listBoxFolder);
             this.Controls.Add(this.buttonClose);
             this.Controls.Add(this.buttonDelete);
@@ -113,6 +113,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBoxIcon);
+            this.Font = new System.Drawing.Font("Yu Gothic UI", 9F);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.MaximizeBox = false;
             this.MinimizeBox = false;

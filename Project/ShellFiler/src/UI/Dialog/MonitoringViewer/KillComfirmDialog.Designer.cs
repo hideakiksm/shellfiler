@@ -42,7 +42,7 @@
             this.labelMessageKill.AutoSize = true;
             this.labelMessageKill.Location = new System.Drawing.Point(36, 12);
             this.labelMessageKill.Name = "labelMessageKill";
-            this.labelMessageKill.Size = new System.Drawing.Size(131, 12);
+            this.labelMessageKill.Size = new System.Drawing.Size(132, 15);
             this.labelMessageKill.TabIndex = 0;
             this.labelMessageKill.Text = "次のコマンドを終了します。";
             // 
@@ -79,33 +79,33 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(12, 55);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(25, 12);
+            this.label2.Size = new System.Drawing.Size(33, 15);
             this.label2.TabIndex = 2;
             this.label2.Text = "PID:";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(12, 80);
+            this.label3.Location = new System.Drawing.Point(12, 82);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(65, 12);
+            this.label3.Size = new System.Drawing.Size(75, 15);
             this.label3.TabIndex = 4;
             this.label3.Text = "COMMAND:";
             // 
             // textBoxPid
             // 
-            this.textBoxPid.Location = new System.Drawing.Point(84, 52);
+            this.textBoxPid.Location = new System.Drawing.Point(90, 52);
             this.textBoxPid.Name = "textBoxPid";
             this.textBoxPid.ReadOnly = true;
-            this.textBoxPid.Size = new System.Drawing.Size(322, 19);
+            this.textBoxPid.Size = new System.Drawing.Size(322, 23);
             this.textBoxPid.TabIndex = 3;
             // 
             // textBoxCommand
             // 
-            this.textBoxCommand.Location = new System.Drawing.Point(83, 77);
+            this.textBoxCommand.Location = new System.Drawing.Point(89, 79);
             this.textBoxCommand.Name = "textBoxCommand";
             this.textBoxCommand.ReadOnly = true;
-            this.textBoxCommand.Size = new System.Drawing.Size(323, 19);
+            this.textBoxCommand.Size = new System.Drawing.Size(323, 23);
             this.textBoxCommand.TabIndex = 5;
             // 
             // label4
@@ -113,7 +113,7 @@
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(36, 31);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(84, 12);
+            this.label4.Size = new System.Drawing.Size(86, 15);
             this.label4.TabIndex = 1;
             this.label4.Text = "よろしいですか？";
             // 
@@ -122,7 +122,7 @@
             this.labelMessageForce.AutoSize = true;
             this.labelMessageForce.Location = new System.Drawing.Point(36, 12);
             this.labelMessageForce.Name = "labelMessageForce";
-            this.labelMessageForce.Size = new System.Drawing.Size(155, 12);
+            this.labelMessageForce.Size = new System.Drawing.Size(156, 15);
             this.labelMessageForce.TabIndex = 0;
             this.labelMessageForce.Text = "次のコマンドを強制終了します。";
             // 
@@ -130,16 +130,16 @@
             // 
             this.labelMessageForce2.AutoSize = true;
             this.labelMessageForce2.BackColor = System.Drawing.Color.Yellow;
-            this.labelMessageForce2.Location = new System.Drawing.Point(12, 107);
+            this.labelMessageForce2.Location = new System.Drawing.Point(12, 109);
             this.labelMessageForce2.Name = "labelMessageForce2";
-            this.labelMessageForce2.Size = new System.Drawing.Size(399, 12);
+            this.labelMessageForce2.Size = new System.Drawing.Size(400, 15);
             this.labelMessageForce2.TabIndex = 1;
             this.labelMessageForce2.Text = "強制終了する前に「プロセス終了」コマンドで通常の終了ができないか試してください。";
             // 
             // KillConfirmDialog
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.CancelButton = this.buttonNo;
             this.ClientSize = new System.Drawing.Size(428, 165);
             this.Controls.Add(this.textBoxCommand);
@@ -153,6 +153,7 @@
             this.Controls.Add(this.label4);
             this.Controls.Add(this.labelMessageForce);
             this.Controls.Add(this.labelMessageKill);
+            this.Font = new System.Drawing.Font("Yu Gothic UI", 9F);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.MinimizeBox = false;

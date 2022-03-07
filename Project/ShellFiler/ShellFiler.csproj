@@ -50,10 +50,18 @@
     <Prefer32Bit>true</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup>
-    <Win32Resource>.\NativeResources\ResTempl.res</Win32Resource>
+    <Win32Resource>
+    </Win32Resource>
   </PropertyGroup>
   <PropertyGroup>
     <StartupObject>ShellFiler.Program</StartupObject>
+  </PropertyGroup>
+  <PropertyGroup />
+  <PropertyGroup>
+    <ApplicationIcon>ShellFilerMain.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System">
@@ -86,6 +94,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <Compile Include="src\Api\HighDpiGraphics.cs" />
     <Compile Include="src\Api\BackgroundTaskID.cs" />
     <Compile Include="src\Api\BufferRange.cs" />
     <Compile Include="src\Api\CancelFlag.cs" />
@@ -2343,8 +2352,8 @@
     <Compile Include="src\Virtual\VirtualManager.cs" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="src\FileViewer\FileViewerForm.resx">
       <DependentUpon>FileViewerForm.cs</DependentUpon>
@@ -2910,6 +2919,7 @@
     <EmbeddedResource Include="src\UI\StateList\StateListPanel.resx">
       <DependentUpon>StateListPanel.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="app.manifest" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -2933,12 +2943,126 @@
     <Content Include="Resources\ButtonFace_Down.png" />
     <Content Include="Resources\ButtonFace_PopupMenu.png" />
     <Content Include="Resources\ButtonFace_Up.png" />
-    <Content Include="Resources\Delete.png" />
-    <Content Include="Resources\DlgIntelliHddDir.png" />
+    <None Include="Resources\DlgIntelliHddDir.png" />
     <Content Include="Resources\DlgIntelliHddFile.png" />
     <Content Include="Resources\DlgIntelliListDir.png" />
     <Content Include="Resources\DlgIntelliListFile.png" />
     <Content Include="Resources\DlgIntelliShell.png" />
+    <None Include="Resources\I2_TitleLogo.png" />
+    <None Include="Resources\I1_TitleLogo.png" />
+    <None Include="Resources\I4_TitleLogo.png" />
+    <None Include="Resources\I4_MainIcon48.png" />
+    <None Include="Resources\I2_MainIcon48.png" />
+    <None Include="Resources\I1_MainIcon48.png" />
+    <None Include="Resources\I1_SameDialogInfoArrow.png" />
+    <None Include="Resources\I2_SameDialogInfoArrow.png" />
+    <None Include="Resources\I3_SameDialogInfoArrow.png" />
+    <None Include="Resources\I1_Delete.png" />
+    <None Include="Resources\I2_Delete.png" />
+    <None Include="Resources\I4_Delete.png" />
+    <None Include="Resources\I1_ImageListIcon.png" />
+    <None Include="Resources\I2_ImageListIcon.png" />
+    <None Include="Resources\I4_ImageListIcon.png" />
+    <None Include="Resources\I1_ImageListBGManagerAnimation.png" />
+    <None Include="Resources\I2_ImageListBGManagerAnimation.png" />
+    <None Include="Resources\I4_ImageListBGManagerAnimation.png" />
+    <None Include="Resources\I100_ButtonFace_Down.png" />
+    <None Include="Resources\I100_ButtonFace_PopupMenu.png" />
+    <None Include="Resources\I100_ButtonFace_Up.png" />
+    <None Include="Resources\I100_Delete.png" />
+    <None Include="Resources\I100_DlgIntelliHddDir.png" />
+    <None Include="Resources\I100_DlgIntelliHddFile.png" />
+    <None Include="Resources\I100_DlgIntelliListDir.png" />
+    <None Include="Resources\I100_DlgIntelliListFile.png" />
+    <None Include="Resources\I100_DlgIntelliShell.png" />
+    <None Include="Resources\I100_FileCondition_Or1.png" />
+    <None Include="Resources\I100_FileCondition_Or2.png" />
+    <None Include="Resources\I100_GraphicsViewer_FilterArrow1.png" />
+    <None Include="Resources\I100_GraphicsViewer_FilterArrow2.png" />
+    <None Include="Resources\I100_GraphicsViewer_FilterSample.png" />
+    <None Include="Resources\I100_GraphicsViewer_FilterSampleZoom.png" />
+    <None Include="Resources\I100_IconOperationFailed.png" />
+    <None Include="Resources\I100_IconSshSetting.png" />
+    <None Include="Resources\I100_ImageListBGManagerAnimation.png" />
+    <None Include="Resources\I100_ImageListIcon.png" />
+    <None Include="Resources\I100_MainIcon48.png" />
+    <None Include="Resources\I100_SameDialogInfoArrow.png" />
+    <None Include="Resources\I100_TabClose_Focus.png" />
+    <None Include="Resources\I100_TabClose_Normal.png" />
+    <None Include="Resources\I100_TitleLogo.png" />
+    <None Include="Resources\I100_TwoStrokeKeyAlt.png" />
+    <None Include="Resources\I100_TwoStrokeKeyCtrl.png" />
+    <None Include="Resources\I100_TwoStrokeKeyCtrlAlt.png" />
+    <None Include="Resources\I100_TwoStrokeKeyNormal.png" />
+    <None Include="Resources\I100_TwoStrokeKeyShift.png" />
+    <None Include="Resources\I100_TwoStrokeKeyShiftAlt.png" />
+    <None Include="Resources\I100_TwoStrokeKeyShiftCtrl.png" />
+    <None Include="Resources\I100_TwoStrokeKeyShiftCtrlAlt.png" />
+    <None Include="Resources\I200_ButtonFace_Down.png" />
+    <None Include="Resources\I200_ButtonFace_PopupMenu.png" />
+    <None Include="Resources\I200_ButtonFace_Up.png" />
+    <None Include="Resources\I200_Delete.png" />
+    <None Include="Resources\I200_DlgIntelliHddDir.png" />
+    <None Include="Resources\I200_DlgIntelliHddFile.png" />
+    <None Include="Resources\I200_DlgIntelliListDir.png" />
+    <None Include="Resources\I200_DlgIntelliListFile.png" />
+    <None Include="Resources\I200_DlgIntelliShell.png" />
+    <None Include="Resources\I200_FileCondition_Or1.png" />
+    <None Include="Resources\I200_FileCondition_Or2.png" />
+    <None Include="Resources\I200_GraphicsViewer_FilterArrow1.png" />
+    <None Include="Resources\I200_GraphicsViewer_FilterArrow2.png" />
+    <None Include="Resources\I200_GraphicsViewer_FilterSample.png" />
+    <None Include="Resources\I200_GraphicsViewer_FilterSampleZoom.png" />
+    <None Include="Resources\I200_IconOperationFailed.png" />
+    <None Include="Resources\I200_IconSshSetting.png" />
+    <None Include="Resources\I200_ImageListBGManagerAnimation.png" />
+    <None Include="Resources\I200_ImageListIcon.png" />
+    <None Include="Resources\I200_MainIcon48.png" />
+    <None Include="Resources\I200_SameDialogInfoArrow.png" />
+    <None Include="Resources\I200_TabClose_Focus.png" />
+    <None Include="Resources\I200_TabClose_Normal.png" />
+    <None Include="Resources\I200_TitleLogo.png" />
+    <None Include="Resources\I200_TwoStrokeKeyAlt.png" />
+    <None Include="Resources\I200_TwoStrokeKeyCtrl.png" />
+    <None Include="Resources\I200_TwoStrokeKeyCtrlAlt.png" />
+    <None Include="Resources\I200_TwoStrokeKeyNormal.png" />
+    <None Include="Resources\I200_TwoStrokeKeyShift.png" />
+    <None Include="Resources\I200_TwoStrokeKeyShiftAlt.png" />
+    <None Include="Resources\I200_TwoStrokeKeyShiftCtrl.png" />
+    <None Include="Resources\I200_TwoStrokeKeyShiftCtrlAlt.png" />
+    <None Include="Resources\I400_ButtonFace_Down.png" />
+    <None Include="Resources\I400_ButtonFace_PopupMenu.png" />
+    <None Include="Resources\I400_ButtonFace_Up.png" />
+    <None Include="Resources\I400_Delete.png" />
+    <None Include="Resources\I400_DlgIntelliHddDir.png" />
+    <None Include="Resources\I400_DlgIntelliHddFile.png" />
+    <None Include="Resources\I400_DlgIntelliListDir.png" />
+    <None Include="Resources\I400_DlgIntelliListFile.png" />
+    <None Include="Resources\I400_DlgIntelliShell.png" />
+    <None Include="Resources\I400_FileCondition_Or1.png" />
+    <None Include="Resources\I400_FileCondition_Or2.png" />
+    <None Include="Resources\I400_GraphicsViewer_FilterArrow1.png" />
+    <None Include="Resources\I400_GraphicsViewer_FilterArrow2.png" />
+    <None Include="Resources\I400_GraphicsViewer_FilterSample.png" />
+    <None Include="Resources\I400_GraphicsViewer_FilterSampleZoom.png" />
+    <None Include="Resources\I400_IconOperationFailed.png" />
+    <None Include="Resources\I400_IconSshSetting.png" />
+    <None Include="Resources\I400_ImageListBGManagerAnimation.png" />
+    <None Include="Resources\I400_ImageListIcon.png" />
+    <None Include="Resources\I400_MainIcon48.png" />
+    <None Include="Resources\I400_SameDialogInfoArrow.png" />
+    <None Include="Resources\I400_TabClose_Focus.png" />
+    <None Include="Resources\I400_TabClose_Normal.png" />
+    <None Include="Resources\I400_TitleLogo.png" />
+    <None Include="Resources\I400_TwoStrokeKeyAlt.png" />
+    <None Include="Resources\I400_TwoStrokeKeyCtrl.png" />
+    <None Include="Resources\I400_TwoStrokeKeyCtrlAlt.png" />
+    <None Include="Resources\I400_TwoStrokeKeyNormal.png" />
+    <None Include="Resources\I400_TwoStrokeKeyShift.png" />
+    <None Include="Resources\I400_TwoStrokeKeyShiftAlt.png" />
+    <None Include="Resources\I400_TwoStrokeKeyShiftCtrl.png" />
+    <None Include="Resources\I400_TwoStrokeKeyShiftCtrlAlt.png" />
+    <Content Include="ShellFilerMain.ico" />
     <EmbeddedResource Include="Resources\embedded\hand.cur" />
     <EmbeddedResource Include="Resources\embedded\null.cur" />
     <Content Include="Resources\FileCondition_Or1.png" />
@@ -3193,8 +3317,6 @@
     <Content Include="Resources\ImageListIcon\802_ButtonRenameTimeSame3.png" />
     <Content Include="Resources\ImageListIcon\803_ButtonRenameTimeSame4.png" />
     <Content Include="Resources\ImageListIcon\804_ButtonRenameTimeSame5.png" />
-    <Content Include="Resources\MainIcon48.png" />
-    <Content Include="Resources\SameDialogInfoArrow.png" />
     <Content Include="Resources\ShellFilerFView.ico" />
     <Content Include="Resources\ShellFilerGView.ico" />
     <Content Include="Resources\ShellFilerMain.ico" />
@@ -3202,7 +3324,6 @@
     <Content Include="Resources\ShellFilerTerm.ico" />
     <Content Include="Resources\TabClose_Focus.png" />
     <Content Include="Resources\TabClose_Normal.png" />
-    <Content Include="Resources\TitleLogo.png" />
     <Content Include="Resources\TwoStrokeKeyAlt.png" />
     <Content Include="Resources\TwoStrokeKeyCtrl.png" />
     <Content Include="Resources\TwoStrokeKeyCtrlAlt.png" />
