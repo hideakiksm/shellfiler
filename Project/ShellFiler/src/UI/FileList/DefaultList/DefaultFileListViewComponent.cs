@@ -293,6 +293,7 @@ DebugCheckConsistency();
             if (m_completeLineSize >= fileCount) {
                 m_cursorScreenLine = m_topLine + m_cursorScreenLine;
                 m_topLine = 0;
+                m_cursorScreenLine = Math.Min(m_cursorScreenLine, fileCount - 1);
                 DebugCheckConsistency();
             } else if (m_cursorScreenLine > m_completeLineSize) {
                 int cursor = m_topLine + m_cursorScreenLine;
