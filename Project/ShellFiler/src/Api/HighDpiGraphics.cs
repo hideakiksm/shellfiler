@@ -33,13 +33,13 @@ namespace ShellFiler.Api {
         // 引　数：なし
         // 戻り値：なし
         //=========================================================================================
-        public void Dispose() {
+        public virtual void Dispose() {
         }
 
         //=========================================================================================
         // プロパティ：グラフィックス
         //=========================================================================================
-        public Graphics Graphics {
+        public virtual Graphics Graphics {
             get {
                 return m_graphics;
             }
@@ -51,7 +51,7 @@ namespace ShellFiler.Api {
         // 戻り値：高解像度対応のX座標
         //=========================================================================================
         public int X(int x) {
-            int xHighDpi = (int)(m_graphics.DpiX / STANDARD_DPI_X * x);
+            int xHighDpi = (int)(Graphics.DpiX / STANDARD_DPI_X * x);
             return xHighDpi;
         }
 
@@ -61,7 +61,7 @@ namespace ShellFiler.Api {
         // 戻り値：高解像度対応のX座標
         //=========================================================================================
         public float Xf(float x) {
-            float xHighDpi = m_graphics.DpiX / STANDARD_DPI_X * x;
+            float xHighDpi = Graphics.DpiX / STANDARD_DPI_X * x;
             return xHighDpi;
         }
 
@@ -71,7 +71,7 @@ namespace ShellFiler.Api {
         // 戻り値：高解像度対応のY座標
         //=========================================================================================
         public int Y(int y) {
-            int yHighDpi = (int)(m_graphics.DpiY / STANDARD_DPI_Y * y);
+            int yHighDpi = (int)(Graphics.DpiY / STANDARD_DPI_Y * y);
             return yHighDpi;
         }
 
@@ -81,7 +81,7 @@ namespace ShellFiler.Api {
         // 戻り値：高解像度対応のY座標
         //=========================================================================================
         public float Yf(float y) {
-            float yHighDpi = m_graphics.DpiY / STANDARD_DPI_Y * y;
+            float yHighDpi = Graphics.DpiY / STANDARD_DPI_Y * y;
             return yHighDpi;
         }
 
@@ -91,52 +91,52 @@ namespace ShellFiler.Api {
         // 戻り値：高解像度対応のRectangle
         //=========================================================================================
         public Rectangle Rect(Rectangle rect) {
-            int left = (int)(m_graphics.DpiX / STANDARD_DPI_X * rect.Left);
-            int right = (int)(m_graphics.DpiX / STANDARD_DPI_X * rect.Right);
-            int top = (int)(m_graphics.DpiY / STANDARD_DPI_X * rect.Top);
-            int bottom = (int)(m_graphics.DpiY / STANDARD_DPI_X * rect.Bottom);
+            int left = (int)(Graphics.DpiX / STANDARD_DPI_X * rect.Left);
+            int right = (int)(Graphics.DpiX / STANDARD_DPI_X * rect.Right);
+            int top = (int)(Graphics.DpiY / STANDARD_DPI_X * rect.Top);
+            int bottom = (int)(Graphics.DpiY / STANDARD_DPI_X * rect.Bottom);
             return new Rectangle(left, top, right, bottom);
         }
 
         public void DrawLine(Pen pen, int x1, int y1, int x2, int y2) {
-            m_graphics.DrawLine(pen, X(x1), Y(y1), X(x2), Y(y2));
+            Graphics.DrawLine(pen, X(x1), Y(y1), X(x2), Y(y2));
         }
 
         public void DrawLine(Pen pen, Point pt1, Point pt2) {
-            m_graphics.DrawLine(pen, new Point(X(pt1.X), Y(pt1.Y)), new Point(X(pt2.X), Y(pt2.Y)));
+            Graphics.DrawLine(pen, new Point(X(pt1.X), Y(pt1.Y)), new Point(X(pt2.X), Y(pt2.Y)));
         }
 
         public void DrawRectangle(Pen pen, Rectangle rect) {
-            m_graphics.DrawRectangle(pen, new Rectangle(X(rect.X), Y(rect.Y), X(rect.Right), Y(rect.Bottom)));
+            Graphics.DrawRectangle(pen, new Rectangle(X(rect.X), Y(rect.Y), X(rect.Right), Y(rect.Bottom)));
         }
 
         public void DrawRectangle(Pen pen, int x, int y, int width, int height) {
-            m_graphics.DrawRectangle(pen, new Rectangle(X(x), Y(y), X(x + width), Y(y + height)));
+            Graphics.DrawRectangle(pen, new Rectangle(X(x), Y(y), X(x + width), Y(y + height)));
         }
 
         public void DrawString(string s, Font font, Brush brush, float x, float y) {
-            m_graphics.DrawString(s, font, brush, Xf(x), Yf(y));
+            Graphics.DrawString(s, font, brush, Xf(x), Yf(y));
         }
 
         public void DrawString(string s, Font font, Brush brush, PointF point) {
-            m_graphics.DrawString(s, font, brush, new PointF(Xf(point.X), Yf(point.Y)));
+            Graphics.DrawString(s, font, brush, new PointF(Xf(point.X), Yf(point.Y)));
         }
 
         public void DrawString(string s, Font font, Brush brush, float x, float y, StringFormat format) {
-            m_graphics.DrawString(s, font, brush, Xf(x), Yf(y));
+            Graphics.DrawString(s, font, brush, Xf(x), Yf(y));
         }
 
         public void DrawString(string s, Font font, Brush brush, PointF point, StringFormat format) {
-            m_graphics.DrawString(s, font, brush, new PointF(Xf(point.X), Yf(point.Y)), format);
+            Graphics.DrawString(s, font, brush, new PointF(Xf(point.X), Yf(point.Y)), format);
         }
 
         public void DrawString(string s, Font font, Brush brush, RectangleF layoutRectangle) {
-            m_graphics.DrawString(s, font, brush,
+            Graphics.DrawString(s, font, brush,
                 new RectangleF(Xf(layoutRectangle.X), Yf(layoutRectangle.Y), Xf(layoutRectangle.Right), Yf(layoutRectangle.Bottom)));
         }
 
         public void DrawString(string s, Font font, Brush brush, RectangleF layoutRectangle, StringFormat format) {
-            m_graphics.DrawString(s, font, brush,
+            Graphics.DrawString(s, font, brush,
                 new RectangleF(Xf(layoutRectangle.X), Yf(layoutRectangle.Y), Xf(layoutRectangle.Right), Yf(layoutRectangle.Bottom)),
                 format);
         }

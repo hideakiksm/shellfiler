@@ -110,21 +110,21 @@ namespace ShellFiler.Util {
         // 　　　　[in]imageIndex  描画対象のイメージ
         // 　　　　[in]xPos        描画X位置
         // 　　　　[in]yPos        描画Y位置
+        // 　　　　[in]width       画像の幅
+        // 　　　　[in]height      画像の高さ
         // 　　　　[in]colorBase   イメージの背景の色
         // 戻り値：なし
         //=========================================================================================
-        public static void DrawDisabledImageList(Graphics g, ImageList imageList, int imageIndex, int xPos, int yPos, Color colorBase) {
-            Bitmap bmp = new Bitmap(imageList.ImageSize.Width, imageList.ImageSize.Height, PixelFormat.Format32bppArgb);
-            try {
-                Graphics gBmp = Graphics.FromImage(bmp);
-                try {
-                    imageList.Draw(gBmp, 0, 0, imageIndex);
-                } finally {
-                    gBmp.Dispose();
+        public static void DrawDisabledImageList(Graphics g, ImageList imageList, int imageIndex, int xPos, int yPos, int width, int height, Color colorBase) {
+            using (Bitmap bmp = new Bitmap(width, height, PixelFormat.Format32bppArgb)) {
+                using (Graphics gBmp = Graphics.FromImage(bmp)) {
+                    if (width == imageList.ImageSize.Width && height == imageList.ImageSize.Height) {
+                        imageList.Draw(gBmp, 0, 0, imageIndex);
+                    } else {
+                        g.DrawImage(imageList.Images[imageIndex], 0, 0, width, height);
+                    }
                 }
                 ControlPaint.DrawImageDisabled(g, bmp, xPos, yPos, colorBase);
-            } finally {
-                bmp.Dispose();
             }
         }
 

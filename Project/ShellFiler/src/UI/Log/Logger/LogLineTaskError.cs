@@ -45,7 +45,7 @@ namespace ShellFiler.UI.Log.Logger {
         // 戻り値：なし
         //=========================================================================================
         public override void DrawLogLine(LogGraphics g, int scrLine, ILogViewContainer logPanel, DrawingLogLineContext lineContext) {
-            LogLineRenderer renderer = new LogLineRenderer(m_message, Resources.LogLine_TaskError, g.Graphics, g.LogWindowLinkFont);
+            LogLineRenderer renderer = new LogLineRenderer(m_message, Resources.LogLine_TaskError, g, g.LogWindowLinkFont);
             renderer.DrawLogLine(g, g.LogErrorTextBrush, scrLine, logPanel, lineContext);
             m_rcLink = renderer.LinkRectangle;
         }
@@ -91,7 +91,7 @@ namespace ShellFiler.UI.Log.Logger {
         // 戻り値：なし
         //=========================================================================================
         public override void GetMouseHitColumn(ILogViewContainer logPanel, LogGraphics g, Point cursorPos, out int column, out bool onChar) {
-            LogLineRenderer renderer = new LogLineRenderer(m_message, Resources.LogLine_TaskError, g.Graphics, g.LogWindowLinkFont);
+            LogLineRenderer renderer = new LogLineRenderer(m_message, Resources.LogLine_TaskError, g, g.LogWindowLinkFont);
             renderer.GetMouseHitColumn(logPanel, g, cursorPos, out column, out onChar);
         }
 

@@ -75,7 +75,6 @@ namespace ShellFiler.UI.FileList {
             m_toolbarImpl.AddButtonsFromSetting(itemSettingList, keySetting, null);
         }
 
-
         //=========================================================================================
         // 機　能：ディレクトリ情報を設定する
         // 引　数：[in]directory  ディレクトリ名

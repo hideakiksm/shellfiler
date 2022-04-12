@@ -26,6 +26,9 @@ namespace ShellFiler.UI {
         // I1_ImageListIcon.pngの構成画像1つ分の幅
         private const int CX_IMAGE_LIST_ICON = 16;
 
+        // I1_ImageListIcon.pngの構成画像1つ分の幅
+        private const int CX_IMAGE_LIST_ICON_SMALL = 13;
+
         // I1_ImageListBGManagerAnimation.pngの構成画像1つ分の幅
         private const int CX_IMAGE_LIST_BG_MANAGER = 40;
 
@@ -228,8 +231,7 @@ namespace ShellFiler.UI {
             s_iconImageList = new ImageList();
             s_iconImageList.ColorDepth = ColorDepth.Depth32Bit;
             s_iconImageList.ImageSize = new Size(iconSize, iconSize);
-            s_iconImageList.TransparentColor = Color.Transparent;
-            s_iconImageList.Images.AddStrip(LoadImageListResource(UIIconManager.ImageListIcon, "ImageListIcon"));
+            s_iconImageList.Images.AddStrip(s_bmpImageListIcon);
         }
 
         //=========================================================================================
@@ -301,16 +303,17 @@ namespace ShellFiler.UI {
         }
 
         //=========================================================================================
-        // 機　能：アイコンを取得する
-        // 引　数：[in]resource   リソースのビットマップ
-        // 　　　　[in,out]member 取得済みキャッシュを保持するクラスメンバ
-        // 　　　　[in]nameBody   カスタマイズ用アイコンのファイル名本体
+        // 機　能：画像をオリジナルサイズのまま取得する
+        // 引　数：[in,out]member 取得済みキャッシュを保持するクラスメンバ
+        // 　　　　[in]nameBody   リソース名またはカスタマイズ用アイコンのファイル名本体
         // 戻り値：使用するビットマップ
         //=========================================================================================
-        public static Bitmap GetResource(Bitmap resource, ref Bitmap member, string nameBody) {
+        public static Bitmap GetResourceOriginal(ref Bitmap member, string nameBody) {
             if (member != null) {
                 return member;
             }
+
+            // カスタマイズから取得
             string name = s_bmpPrefix + nameBody;
             string bmpPath = s_customizePath + name + ".png";
             if (File.Exists(bmpPath)) {
@@ -318,16 +321,24 @@ namespace ShellFiler.UI {
                     member = new Bitmap(bmpPath);
                     s_customizedIcon.Add(member);
                 } catch (Exception) {
-                    member = resource;
                 }
-            } else {
+            }
 
-                member = resource;
+            // リソースから取得
+            if (member == null) {
+                member = (Bitmap)Resources.ResourceManager.GetObject(name, Resources.Culture);
             }
             return member;
         }
 
-        public static Bitmap GetResource(ref Bitmap member, string nameBody, int cxStep = -1) {
+        //=========================================================================================
+        // 機　能：画像をモニター解像度に合わせて取得する
+        // 引　数：[in,out]member 取得済みキャッシュを保持するクラスメンバ
+        // 　　　　[in]nameBody   リソース名またはカスタマイズ用アイコンのファイル名本体
+        //         [in]cxStepSrc  複合画像の１つ当たりのサイズ
+        // 戻り値：使用するビットマップ
+        //=========================================================================================
+        public static Bitmap GetResource(ref Bitmap member, string nameBody, int cxStepSrc = -1) {
             if (member != null) {
                 return member;
             }
@@ -351,7 +362,7 @@ namespace ShellFiler.UI {
                 return member;
             } else {
                 // 元画像が400pxでdpiRatio=150、dpiRatioFrom=200なら400*150/200=300
-                if (cxStep == -1) {
+                if (cxStepSrc == -1) {
                     // 単独画像の場合はそのまま縮小
                     Bitmap bitmapFrom = member;
                     int width = bitmapFrom.Width * s_dpiRatio / s_dpiRatioFrom;
@@ -366,15 +377,16 @@ namespace ShellFiler.UI {
                 } else {
                     // ImageList用の複数画像で構成されている場合は1つずつ縮小
                     Bitmap bitmapFrom = member;
-                    int cxElementSrc = cxStep * s_dpiRatioFrom / 100;
+                    int cxElementSrc = cxStepSrc * s_dpiRatioFrom / 100;
                     int cxElementDest = cxElementSrc * s_dpiRatio / s_dpiRatioFrom;
                     int cyElementDest = bitmapFrom.Height * s_dpiRatio / s_dpiRatioFrom;
-                    int countElement = member.Width * 100 / s_dpiRatioFrom / cxStep;
+                    int countElement = member.Width * 100 / s_dpiRatioFrom / cxStepSrc;
 
-                    member = new Bitmap(cxElementDest * countElement, cyElementDest);
+                    member = new Bitmap(cxElementDest * countElement, cyElementDest, PixelFormat.Format32bppArgb);
                     member.MakeTransparent();
                     using (Graphics graphics = Graphics.FromImage(member))
                     using (ImageAttributes wrapMode = new ImageAttributes()) {
+                        graphics.FillRectangle(Brushes.Transparent, 0, 0, member.Width, member.Height);
                         wrapMode.SetWrapMode(WrapMode.TileFlipXY);
                         for (int i = 0; i < countElement; i++) {
                             graphics.DrawImage(bitmapFrom, new Rectangle(cxElementDest * i, 0, cxElementDest, cyElementDest), cxElementSrc * i, 0, cxElementSrc, bitmapFrom.Height, GraphicsUnit.Pixel, wrapMode);
@@ -522,7 +534,7 @@ namespace ShellFiler.UI {
 
         public static Bitmap ImageListIcon {
             get {
-                return GetResource(ref s_bmpImageListIcon, "ImageListIcon", CX_IMAGE_LIST_ICON);
+                return GetResourceOriginal(ref s_bmpImageListIcon, "ImageListIcon");
             }
         }
 

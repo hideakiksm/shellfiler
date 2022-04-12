@@ -82,8 +82,9 @@ namespace ShellFiler.UI.ControlBar {
             m_uiStatusMarked = true;
             m_uiStatusPathHisPrev = true;
             m_uiStatusPathHisNext = true;
-    
+
             m_buttonSize = new Size(ToolbarItemSetting.CxIconButton, ToolbarItemSetting.CyIconButton);
+            m_toolStrip.ImageScalingSize = m_buttonSize;
             if (MainWindowForm.XDpiRatio > 100) {
                 m_buttonPadding = new Padding(MainWindowForm.X(2), MainWindowForm.Y(2), MainWindowForm.X(4), MainWindowForm.Y(2));
             } else {
@@ -141,7 +142,7 @@ namespace ShellFiler.UI.ControlBar {
                 button.Text = toolHint;
                 button.DisplayStyle = ToolStripItemDisplayStyle.Image;
                 button.Size = m_buttonSize;
-                button.ImageScaling = ToolStripItemImageScaling.None;
+                button.ImageScaling = ToolStripItemImageScaling.SizeToFit;
                 button.Margin = m_buttonPadding;
                 button.Tag = tag;
                 button.Click += new EventHandler(toolbarIconClicked);
@@ -153,7 +154,7 @@ namespace ShellFiler.UI.ControlBar {
                 button.Text = toolHint;
                 button.DisplayStyle = ToolStripItemDisplayStyle.Image;
                 button.Size = m_buttonSize;
-                button.ImageScaling = ToolStripItemImageScaling.None;
+                button.ImageScaling = ToolStripItemImageScaling.SizeToFit;
                 button.Margin = m_buttonPadding;
                 button.Tag = tag;
                 button.ButtonClick += new EventHandler(toolbarIconClicked);
@@ -278,7 +279,7 @@ namespace ShellFiler.UI.ControlBar {
                 button.Image = icon;
                 button.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
                 button.Size = m_buttonSize;
-                button.ImageScaling = ToolStripItemImageScaling.None;
+                button.ImageScaling = ToolStripItemImageScaling.SizeToFit;
                 button.Margin = m_buttonPadding;
                 button.Text = buttonText;
                 button.Tag = new ToolbarItemTag(itemSetting, IconImageListID.None, IconImageListID.None, icon, true);

@@ -12,7 +12,7 @@ namespace ShellFiler.UI.Log {
     //=========================================================================================
     // クラス：ログウィンドウの描画用グラフィックス
     //=========================================================================================
-    public class LogGraphics {
+    public class LogGraphics : HighDpiGraphics {
         // グラフィック（null:未初期化）
         private Graphics m_graphics;
 
@@ -92,7 +92,7 @@ namespace ShellFiler.UI.Log {
         // 　　　　[in]backColor   背景色の表示モード
         // 戻り値：なし
         //=========================================================================================
-        public LogGraphics(Graphics graphics, LogViewImpl.LogMode logMode, BackColorMode backColor) {
+        public LogGraphics(Graphics graphics, LogViewImpl.LogMode logMode, BackColorMode backColor) : base(graphics) {
             m_control = null;
             m_graphics = graphics;
             m_backColorMode = backColor;
@@ -108,7 +108,7 @@ namespace ShellFiler.UI.Log {
         // 引　数：[in]control    描画対象のコントロール
         // 戻り値：なし
         //=========================================================================================
-        public LogGraphics(Control control, LogViewImpl.LogMode logMode) {
+        public LogGraphics(Control control, LogViewImpl.LogMode logMode) : base(null) {
             m_control = control;
             m_graphics = null;
             if (logMode == LogViewImpl.LogMode.LogWindow) {
@@ -123,7 +123,7 @@ namespace ShellFiler.UI.Log {
         // 引　数：なし
         // 戻り値：なし
         //=========================================================================================
-        public void Dispose() {
+        public new void Dispose() {
             if (m_control != null && m_graphics != null) {
                 m_graphics.Dispose();
             }
@@ -315,7 +315,7 @@ namespace ShellFiler.UI.Log {
         //=========================================================================================
         // プロパティ：グラフィックス
         //=========================================================================================
-        public Graphics Graphics {
+        public override Graphics Graphics {
             get {
                 if (m_graphics == null) {
                     m_graphics = m_control.CreateGraphics();

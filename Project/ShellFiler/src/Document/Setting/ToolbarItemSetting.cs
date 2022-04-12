@@ -11,10 +11,10 @@ namespace ShellFiler.Document.Setting {
     //=========================================================================================
     class ToolbarItemSetting {
         // アイコンボタンの幅
-        private const int CX_ICON_BUTTON = 23;
+        private const int CX_ICON_BUTTON = 16;
 
         // アイコンボタンの高さ
-        private const int CY_ICON_BUTTON = 22;
+        private const int CY_ICON_BUTTON = 16;
 
         // 項目の種類
         private ItemType m_itemType;

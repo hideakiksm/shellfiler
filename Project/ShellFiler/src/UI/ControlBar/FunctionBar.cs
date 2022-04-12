@@ -25,6 +25,12 @@ namespace ShellFiler.UI.ControlBar {
         // ファンクションバーの最小高
         private const int CY_FUNCTION_BAR = 19;
 
+        // アイコンの幅
+        private const int CX_ICON_IMAGE = 14;
+
+        // アイコンの高さ
+        private const int CY_ICON_IMAGE = 14;
+
         // ファンクションキーの定義
         private static readonly Keys[] KEY_LIST = { Keys.F1, Keys.F2, Keys.F3, Keys.F4, Keys.F5, Keys.F6, Keys.F7, Keys.F8, Keys.F9, Keys.F10, Keys.F11, Keys.F12};
 
@@ -224,7 +230,7 @@ namespace ShellFiler.UI.ControlBar {
                 g.Graphics.DrawLine(SystemPens.ControlLightLight, rc.Right - 1, rc.Top + 1, rc.Right - 1, rc.Bottom - 1);
             }
 
-            int offset = (isPush) ? 1 : 0;
+            int offset = g.X((isPush) ? 1 : 0);
 
             // アイコンを用意
             ActionCommand command = null;
@@ -289,31 +295,33 @@ namespace ShellFiler.UI.ControlBar {
             }
             int iconMargin = 0;
             if (Configuration.Current.FunctionBarUseOverrayIcon) {
-                iconMargin = 5;
+                iconMargin = g.X(5);
             }
-            int dispMargin = iconMargin + 4;
-            int iconX = rc.X + 2 + offset;
-            int iconY = rc.Y + 1 + offset;
-            int cx = UIIconManager.CxDefaultIcon;
+            int dispMargin = iconMargin + g.X(4);
+            int cxIcon = g.X(CX_ICON_IMAGE);
+            int cyIcon = g.Y(CY_ICON_IMAGE);
+            int iconX = rc.X + g.X(2) + offset;
+            int iconY = rc.Y + g.Y(1) + offset + (rc.Height - cyIcon) / 2;
+
             if (GetButtonItemInfo(index).Enabled) {
                 if (icon != IconImageListID.None) {
-                    UIIconManager.IconImageList.Draw(g.Graphics, iconX + iconMargin, iconY, (int)icon);
+                    g.Graphics.DrawImage(UIIconManager.IconImageList.Images[(int)icon], iconX, iconY, cxIcon, cyIcon);
                 }
                 if (overrayIcon != IconImageListID.None) {
-                    UIIconManager.IconImageList.Draw(g.Graphics, iconX, iconY, (int)overrayIcon);
+                    g.Graphics.DrawImage(UIIconManager.IconImageList.Images[(int)overrayIcon], iconX, iconY, cxIcon, cyIcon);
                 }
                 if (setting != null) {
-                    g.Graphics.DrawString(disp, g.FunctionBarFont, Brushes.Black, new Point(rc.Left + dispMargin + cx + offset, (rc.Height - g.FunctionBarFont.Height) / 2 + offset), g.StringFormat);
+                    g.Graphics.DrawString(disp, g.FunctionBarFont, Brushes.Black, new Point(rc.Left + dispMargin + offset + cxIcon, (rc.Height - g.FunctionBarFont.Height) / 2 + offset), g.StringFormat);
                 }
             } else {
                 if (icon != IconImageListID.None) {
-                    GraphicsUtils.DrawDisabledImageList(g.Graphics, UIIconManager.IconImageList, (int)icon, iconX + iconMargin, iconY, SystemColors.Control);
+                    GraphicsUtils.DrawDisabledImageList(g.Graphics, UIIconManager.IconImageList, (int)icon, iconX + iconMargin, iconY, cxIcon, cyIcon, SystemColors.Control);
                 }
                 if (overrayIcon != IconImageListID.None) {
-                    GraphicsUtils.DrawDisabledImageList(g.Graphics, UIIconManager.IconImageList, (int)overrayIcon, iconX + iconMargin, iconY, SystemColors.Control);
+                    GraphicsUtils.DrawDisabledImageList(g.Graphics, UIIconManager.IconImageList, (int)overrayIcon, iconX + iconMargin, iconY, cxIcon, cyIcon, SystemColors.Control);
                 }
                 if (setting != null) {
-                    g.Graphics.DrawString(disp, g.FunctionBarFont, Brushes.Gray, new Point(rc.Left + dispMargin + cx + offset, (rc.Height - g.FunctionBarFont.Height) / 2 + offset), g.StringFormat);
+                    g.Graphics.DrawString(disp, g.FunctionBarFont, Brushes.Gray, new Point(rc.Left + dispMargin + cxIcon + offset, (rc.Height - g.FunctionBarFont.Height) / 2 + offset), g.StringFormat);
                 }
             }
         }
