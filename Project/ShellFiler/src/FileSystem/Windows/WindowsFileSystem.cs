@@ -685,7 +685,7 @@ namespace ShellFiler.FileSystem.Windows {
                 return;
             }
             // \\xxx\形式
-            Regex regex2 = new Regex("\\\\\\\\[a-zA-Z0-9\\.]+\\\\");
+            Regex regex2 = new Regex("\\\\\\\\[a-zA-Z0-9\\.\\-]+\\\\");
             if (regex2.IsMatch(path)) {
                 string[] fileFolder = path.Substring(2).Split('\\');
                 if (fileFolder.Length >= 3) {
