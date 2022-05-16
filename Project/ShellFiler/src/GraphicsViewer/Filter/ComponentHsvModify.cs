@@ -166,7 +166,8 @@ namespace ShellFiler.GraphicsViewer.Filter {
                     m_destImage[pos] = (byte)(b * 255.0);
                     m_destImage[pos + 1] = (byte)(g * 255.0);
                     m_destImage[pos + 2] = (byte)(r * 255.0);
-                    pos += 3;
+                    m_destImage[pos + 3] = m_srcImage[pos + 3];
+                    pos += 4;
                 }
                 if (cancelEvent.Value) {
                     return;

@@ -90,7 +90,8 @@ namespace ShellFiler.GraphicsViewer.Filter {
                     m_destImage[pos] = m;
                     m_destImage[pos + 1] = m;
                     m_destImage[pos + 2] = m;
-                    pos += 3;
+                    m_destImage[pos + 3] = m_srcImage[pos + 3];
+                    pos += 4;
                 }
                 if (cancelEvent.Value) {
                     return;
