@@ -103,6 +103,8 @@ namespace ShellFiler.GraphicsViewer.Filter {
                     m_destImage[pos++] = m_convertTable[srcG];
                     int srcR = m_srcImage[pos];
                     m_destImage[pos++] = m_convertTable[srcR];
+                    m_destImage[pos] = m_srcImage[pos];
+                    pos++;
                 }
                 if (cancelEvent.Value) {
                     return;
