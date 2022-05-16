@@ -109,22 +109,30 @@ namespace ShellFiler.UI.ControlBar {
 
             int cx = m_rcTaskManagerButton.Width - 1;
             int cy = Math.Min(m_parent.Height - 1, m_rcTaskManagerButton.Height - 1);
+            Bitmap icon = UIIconManager.ImageListBGManager[m_currentTaskManagerIndex];
+            int cxIcon = icon.Width;
+            int cyIcon = icon.Height;
+            int cyTarget = cy;
+            int cxTarget = cxIcon * cyTarget / cyIcon;
+            Rectangle src = new Rectangle(0, 0, cxIcon, cyIcon);
+            Rectangle dest = new Rectangle((cx - cxTarget) / 2, (cy - cyTarget) / 2, cxTarget, cyTarget);
             using (Bitmap bmp = new Bitmap(cx, cy)) {
                 using (Graphics gBmp = Graphics.FromImage(bmp)) {
                     ToolStripManager.Renderer.DrawToolStripBackground(new ToolStripRenderEventArgs(gBmp, m_parent));
                     switch (m_taskManagerButtonState) {
                         case TaskManagerButtonState.None:               // 通常状態
-                            gBmp.DrawImage(UIIconManager.ImageListBGManager[m_currentTaskManagerIndex], 0, 0);
+                            gBmp.DrawImage(icon, dest, src, GraphicsUnit.Pixel);
                             break;
                         case TaskManagerButtonState.DrawingFrame:       // 枠を描画中
-                            gBmp.DrawImage(UIIconManager.ImageListBGManager[m_currentTaskManagerIndex], 0, 0);
+                            gBmp.DrawImage(icon, dest, src, GraphicsUnit.Pixel);
                             gBmp.DrawLine(SystemPens.ControlLightLight, 0, 0, cx - 1, 0);
                             gBmp.DrawLine(SystemPens.ControlLightLight, 0, 0, 0, cy - 1);
                             gBmp.DrawLine(SystemPens.ControlDark, 0, cy - 1, cx - 1, cy - 1);
                             gBmp.DrawLine(SystemPens.ControlDark, cx - 1, 0, cx - 1, cy - 1);
                             break;
                         case TaskManagerButtonState.ButtonDown:        // ボタンを押している状態
-                            gBmp.DrawImage(UIIconManager.ImageListBGManager[m_currentTaskManagerIndex], 1, 1);
+                            dest.Offset(1, 1);
+                            gBmp.DrawImage(icon, dest, src, GraphicsUnit.Pixel);
                             gBmp.DrawLine(SystemPens.ControlDark, 0, 0, cx - 1, 0);
                             gBmp.DrawLine(SystemPens.ControlDark, 0, 0, 0, cy - 1);
                             gBmp.DrawLine(SystemPens.ControlLightLight, 0, cy - 1, cx - 1, cy - 1);
