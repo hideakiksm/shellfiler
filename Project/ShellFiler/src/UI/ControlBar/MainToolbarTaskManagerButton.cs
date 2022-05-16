@@ -45,7 +45,6 @@ namespace ShellFiler.UI.ControlBar {
             m_timerAnimation.Interval = 100;
             m_timerAnimation.Tick += new EventHandler(this.TimerAnimation_Tick);
             m_timerAnimation.Stop();
-            UIIconManager.InitializeBgManager(parent);
         }
 
         //=========================================================================================
@@ -77,8 +76,8 @@ namespace ShellFiler.UI.ControlBar {
             if (taskCount == 0 && m_timerAnimation.Enabled) {
                 m_timerAnimation.Stop();
                 m_currentTaskManagerIndex = DEFAULT_TASK_MANAGER_INDEX;
-                Graphics g = m_parent.CreateGraphics();
-                DrawButton(g);
+                m_parent.Invalidate();
+                m_parent.Update();
             } else if (taskCount > 0 && !m_timerAnimation.Enabled) {
                 m_timerAnimation.Start();
                 m_timerAnimation.Enabled = true;
@@ -92,8 +91,10 @@ namespace ShellFiler.UI.ControlBar {
         // 戻り値：なし
         //=========================================================================================
         private void TimerAnimation_Tick(object sender, EventArgs e) {
-            m_currentTaskManagerIndex = (m_currentTaskManagerIndex + 1) % (UIIconManager.BGManagerAnimationImageList.Images.Count - 1) + 1;
-            DrawButton(null);
+            using (Graphics g = m_parent.CreateGraphics()) {
+                m_currentTaskManagerIndex = (m_currentTaskManagerIndex + 1) % (UIIconManager.ImageListBGManager.Length - 1) + 1;
+                DrawButton(g);
+            }
         }
 
         //=========================================================================================
@@ -105,33 +106,33 @@ namespace ShellFiler.UI.ControlBar {
             if (m_rcTaskManagerButton == null) {
                 return;     // デザイナーでの表示
             }
-            if (g == null) {
-                g = m_parent.CreateGraphics();
-            }
-            switch (m_taskManagerButtonState) {
-                case TaskManagerButtonState.None:               // 通常状態
-                    UIIconManager.BGManagerAnimationImageList.Draw(g, m_rcTaskManagerButton.Left, m_rcTaskManagerButton.Top, m_currentTaskManagerIndex);
-                    break;
-                case TaskManagerButtonState.DrawingFrame:       // 枠を描画中
-                    UIIconManager.BGManagerAnimationImageList.Draw(g, m_rcTaskManagerButton.Left, m_rcTaskManagerButton.Top, m_currentTaskManagerIndex);
-                    g.DrawLine(SystemPens.ControlLightLight, m_rcTaskManagerButton.Left, m_rcTaskManagerButton.Top, m_rcTaskManagerButton.Right-1, m_rcTaskManagerButton.Top);
-                    g.DrawLine(SystemPens.ControlLightLight, m_rcTaskManagerButton.Left, m_rcTaskManagerButton.Top, m_rcTaskManagerButton.Left, m_rcTaskManagerButton.Bottom-1);
-                    g.DrawLine(SystemPens.ControlDark, m_rcTaskManagerButton.Left, m_rcTaskManagerButton.Bottom-1, m_rcTaskManagerButton.Right-1, m_rcTaskManagerButton.Bottom-1);
-                    g.DrawLine(SystemPens.ControlDark, m_rcTaskManagerButton.Right-1, m_rcTaskManagerButton.Top, m_rcTaskManagerButton.Right-1, m_rcTaskManagerButton.Bottom-1);
-                    break;
-                case TaskManagerButtonState.ButtonDown: {       // ボタンを押している状態
-                    Bitmap bmp = new Bitmap(m_rcTaskManagerButton.Width - 1, m_rcTaskManagerButton.Height - 1);
-                    Graphics gbmp = Graphics.FromImage(bmp);
-                    UIIconManager.BGManagerAnimationImageList.Draw(gbmp, 0, 0, m_currentTaskManagerIndex);
-                    g.DrawImage(bmp, m_rcTaskManagerButton.Left + 1, m_rcTaskManagerButton.Top + 1);
-                    gbmp.Dispose();
-                    bmp.Dispose();
-                    g.DrawLine(SystemPens.ControlDark, m_rcTaskManagerButton.Left, m_rcTaskManagerButton.Top, m_rcTaskManagerButton.Right - 1, m_rcTaskManagerButton.Top);
-                    g.DrawLine(SystemPens.ControlDark, m_rcTaskManagerButton.Left, m_rcTaskManagerButton.Top, m_rcTaskManagerButton.Left, m_rcTaskManagerButton.Bottom - 1);
-                    g.DrawLine(SystemPens.ControlLightLight, m_rcTaskManagerButton.Left, m_rcTaskManagerButton.Bottom - 1, m_rcTaskManagerButton.Right - 1, m_rcTaskManagerButton.Bottom - 1);
-                    g.DrawLine(SystemPens.ControlLightLight, m_rcTaskManagerButton.Right - 1, m_rcTaskManagerButton.Top, m_rcTaskManagerButton.Right - 1, m_rcTaskManagerButton.Bottom - 1);
-                    break;
+
+            int cx = m_rcTaskManagerButton.Width - 1;
+            int cy = Math.Min(m_parent.Height - 1, m_rcTaskManagerButton.Height - 1);
+            using (Bitmap bmp = new Bitmap(cx, cy)) {
+                using (Graphics gBmp = Graphics.FromImage(bmp)) {
+                    ToolStripManager.Renderer.DrawToolStripBackground(new ToolStripRenderEventArgs(gBmp, m_parent));
+                    switch (m_taskManagerButtonState) {
+                        case TaskManagerButtonState.None:               // 通常状態
+                            gBmp.DrawImage(UIIconManager.ImageListBGManager[m_currentTaskManagerIndex], 0, 0);
+                            break;
+                        case TaskManagerButtonState.DrawingFrame:       // 枠を描画中
+                            gBmp.DrawImage(UIIconManager.ImageListBGManager[m_currentTaskManagerIndex], 0, 0);
+                            gBmp.DrawLine(SystemPens.ControlLightLight, 0, 0, cx - 1, 0);
+                            gBmp.DrawLine(SystemPens.ControlLightLight, 0, 0, 0, cy - 1);
+                            gBmp.DrawLine(SystemPens.ControlDark, 0, cy - 1, cx - 1, cy - 1);
+                            gBmp.DrawLine(SystemPens.ControlDark, cx - 1, 0, cx - 1, cy - 1);
+                            break;
+                        case TaskManagerButtonState.ButtonDown:        // ボタンを押している状態
+                            gBmp.DrawImage(UIIconManager.ImageListBGManager[m_currentTaskManagerIndex], 1, 1);
+                            gBmp.DrawLine(SystemPens.ControlDark, 0, 0, cx - 1, 0);
+                            gBmp.DrawLine(SystemPens.ControlDark, 0, 0, 0, cy - 1);
+                            gBmp.DrawLine(SystemPens.ControlLightLight, 0, cy - 1, cx - 1, cy - 1);
+                            gBmp.DrawLine(SystemPens.ControlLightLight, cx - 1, 0, cx - 1, cy - 1);
+                            break;
+                    }
                 }
+                g.DrawImage(bmp, m_rcTaskManagerButton.Left, m_rcTaskManagerButton.Top);
             }
         }
         
@@ -153,7 +154,8 @@ namespace ShellFiler.UI.ControlBar {
             OnMouseMove(evt, false);
             if (m_rcTaskManagerButton.Contains(evt.X, evt.Y)) {
                 m_taskManagerButtonState = TaskManagerButtonState.None;
-                DrawButton(null);
+                m_parent.Invalidate();
+                m_parent.Update();
                 Program.MainWindow.OnUICommand(UICommandSender.MainToolbar, UICommandItem.TaskManager);
             }
         }
@@ -184,7 +186,8 @@ namespace ShellFiler.UI.ControlBar {
                 }
             }
             if (oldState != m_taskManagerButtonState) {
-                DrawButton(null);
+                m_parent.Invalidate();
+                m_parent.Update();
             }
         }
 

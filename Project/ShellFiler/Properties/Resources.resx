@@ -7219,4 +7219,121 @@ SSH用のエディタを設定しない場合はチェックボックスをOFF�
   <data name="I400_TwoStrokeKeyShiftCtrlAlt" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\I400_TwoStrokeKeyShiftCtrlAlt.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="I100_BGManager00" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\I100_BGManager00.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="I100_BGManager01" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\I100_BGManager01.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="I100_BGManager02" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\I100_BGManager02.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="I100_BGManager03" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\I100_BGManager03.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="I100_BGManager04" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\I100_BGManager04.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="I100_BGManager05" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\I100_BGManager05.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="I100_BGManager06" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\I100_BGManager06.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="I100_BGManager07" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\I100_BGManager07.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="I100_BGManager08" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\I100_BGManager08.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="I100_BGManager09" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\I100_BGManager09.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="I100_BGManager10" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\I100_BGManager10.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="I100_BGManager11" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\I100_BGManager11.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="I100_BGManager12" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\I100_BGManager12.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="I200_BGManager00" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\I200_BGManager00.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="I200_BGManager01" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\I200_BGManager01.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="I200_BGManager02" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\I200_BGManager02.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="I200_BGManager03" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\I200_BGManager03.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="I200_BGManager04" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\I200_BGManager04.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="I200_BGManager05" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\I200_BGManager05.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="I200_BGManager06" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\I200_BGManager06.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="I200_BGManager07" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\I200_BGManager07.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="I200_BGManager08" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\I200_BGManager08.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="I200_BGManager09" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\I200_BGManager09.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="I200_BGManager10" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\I200_BGManager10.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="I200_BGManager11" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\I200_BGManager11.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="I200_BGManager12" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\I200_BGManager12.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="I400_BGManager00" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\I400_BGManager00.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="I400_BGManager01" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\I400_BGManager01.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="I400_BGManager02" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\I400_BGManager02.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="I400_BGManager03" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\I400_BGManager03.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="I400_BGManager04" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\I400_BGManager04.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="I400_BGManager05" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\I400_BGManager05.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="I400_BGManager06" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\I400_BGManager06.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="I400_BGManager07" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\I400_BGManager07.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="I400_BGManager08" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\I400_BGManager08.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="I400_BGManager09" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\I400_BGManager09.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="I400_BGManager10" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\I400_BGManager10.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="I400_BGManager11" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\I400_BGManager11.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="I400_BGManager12" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\I400_BGManager12.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
 </root>

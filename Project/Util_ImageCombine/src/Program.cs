@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Drawing;
@@ -24,7 +24,6 @@ namespace ImageCombine {
             workspacePath = Path.GetDirectoryName(workspacePath) + @"\..\..\..\..\";
 
             CombineImage(workspacePath + @"ShellFiler\Resources\", "ImageListIcon");
-            CombineImage(workspacePath + @"ShellFiler\Resources\", "ImageListBGManagerAnimation");
         }
 
         //=========================================================================================

@@ -938,10 +938,12 @@ DebugCheckConsistency();
             mouseX += m_horzScrollPosition;
             int fileCount = m_parent.FileList.Files.Count;
             int line = (mouseY - m_cyHeader) / m_fileLineRenderer.LineHeight + m_topLine;
-            if (line < fileCount && mouseX < FileLineRenderer.IconRegionRight) {
-                return true;
-            } else {
-                return false;
+            using (HighDpiGraphics g = new HighDpiGraphics(m_parent)) {
+                if (line < fileCount && mouseX < g.X(FileLineRenderer.IconRegionRight)) {
+                    return true;
+                } else {
+                    return false;
+                }
             }
         }
 

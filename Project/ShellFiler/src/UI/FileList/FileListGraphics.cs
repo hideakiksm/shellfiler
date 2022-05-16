@@ -19,12 +19,6 @@ namespace ShellFiler.UI.FileList {
     // クラス：ファイル一覧の描画用グラフィックス
     //=========================================================================================
     public class FileListGraphics : HighDpiGraphics {
-        // グラフィック（null:未初期化）
-        private Graphics m_graphics;
-
-        // 描画対象のコントロール（null:グラフィック指定）
-        private Control m_control;
-
         // 一覧の行の開始Y位置
         private int m_lineStart;
 
@@ -120,8 +114,6 @@ namespace ShellFiler.UI.FileList {
         // 戻り値：なし
         //=========================================================================================
         public FileListGraphics(Graphics graphics, int lineStart, int lineHeight) : base(graphics) {
-            m_control = null;
-            m_graphics = graphics;
             m_lineStart = lineStart;
             m_lineHeight = lineHeight;
         }
@@ -133,9 +125,7 @@ namespace ShellFiler.UI.FileList {
         // 　　　　[in]lineHeight 一覧の行の高さ
         // 戻り値：なし
         //=========================================================================================
-        public FileListGraphics(Control control, int lineStart, int lineHeight) : base(null) {
-            m_control = control;
-            m_graphics = null;
+        public FileListGraphics(Control control, int lineStart, int lineHeight) : base(control) {
             m_lineStart = lineStart;
             m_lineHeight = lineHeight;
         }
@@ -146,9 +136,6 @@ namespace ShellFiler.UI.FileList {
         // 戻り値：なし
         //=========================================================================================
         public new void Dispose() {
-            if (m_control != null && m_graphics != null) {
-                m_graphics.Dispose();
-            }
             if (m_fileListCursorPen != null) {
                 m_fileListCursorPen.Dispose();
                 m_fileListCursorPen = null;
@@ -256,18 +243,6 @@ namespace ShellFiler.UI.FileList {
             if (m_monochromeAttributes != null) {
                 m_monochromeAttributes.Dispose();
                 m_monochromeAttributes = null;
-            }
-        }
-
-        //=========================================================================================
-        // プロパティ：グラフィックス
-        //=========================================================================================
-        public new Graphics Graphics {
-            get {
-                if (m_graphics == null) {
-                    m_graphics = m_control.CreateGraphics();
-                }
-                return m_graphics;
             }
         }
 

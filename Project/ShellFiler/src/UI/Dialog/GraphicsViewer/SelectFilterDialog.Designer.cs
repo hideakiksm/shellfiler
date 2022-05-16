@@ -40,9 +40,11 @@
             // 
             this.listBoxUseFilter.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
             this.listBoxUseFilter.FormattingEnabled = true;
-            this.listBoxUseFilter.Location = new System.Drawing.Point(13, 13);
+            this.listBoxUseFilter.Location = new System.Drawing.Point(23, 23);
+            this.listBoxUseFilter.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.listBoxUseFilter.Name = "listBoxUseFilter";
-            this.listBoxUseFilter.Size = new System.Drawing.Size(200, 114);
+            this.listBoxUseFilter.ScrollAlwaysVisible = true;
+            this.listBoxUseFilter.Size = new System.Drawing.Size(347, 196);
             this.listBoxUseFilter.TabIndex = 0;
             this.listBoxUseFilter.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.listBoxUseFilter_DrawItem);
             this.listBoxUseFilter.MeasureItem += new System.Windows.Forms.MeasureItemEventHandler(this.listBoxUseFilter_MeasureItem);
@@ -52,18 +54,21 @@
             // 
             this.listBoxNotUse.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
             this.listBoxNotUse.FormattingEnabled = true;
-            this.listBoxNotUse.Location = new System.Drawing.Point(300, 13);
+            this.listBoxNotUse.Location = new System.Drawing.Point(525, 23);
+            this.listBoxNotUse.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.listBoxNotUse.Name = "listBoxNotUse";
-            this.listBoxNotUse.Size = new System.Drawing.Size(200, 114);
+            this.listBoxNotUse.ScrollAlwaysVisible = true;
+            this.listBoxNotUse.Size = new System.Drawing.Size(347, 196);
             this.listBoxNotUse.TabIndex = 5;
             this.listBoxNotUse.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.listBoxNotUse_DrawItem);
             this.listBoxNotUse.MeasureItem += new System.Windows.Forms.MeasureItemEventHandler(this.listBoxNotUse_MeasureItem);
             // 
             // buttonAdd
             // 
-            this.buttonAdd.Location = new System.Drawing.Point(219, 13);
+            this.buttonAdd.Location = new System.Drawing.Point(383, 23);
+            this.buttonAdd.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.buttonAdd.Name = "buttonAdd";
-            this.buttonAdd.Size = new System.Drawing.Size(75, 23);
+            this.buttonAdd.Size = new System.Drawing.Size(131, 40);
             this.buttonAdd.TabIndex = 1;
             this.buttonAdd.Text = "<< 追加(&A)";
             this.buttonAdd.UseVisualStyleBackColor = true;
@@ -71,9 +76,10 @@
             // 
             // buttonDelete
             // 
-            this.buttonDelete.Location = new System.Drawing.Point(219, 42);
+            this.buttonDelete.Location = new System.Drawing.Point(383, 74);
+            this.buttonDelete.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.buttonDelete.Name = "buttonDelete";
-            this.buttonDelete.Size = new System.Drawing.Size(75, 23);
+            this.buttonDelete.Size = new System.Drawing.Size(131, 40);
             this.buttonDelete.TabIndex = 2;
             this.buttonDelete.Text = "削除(&L) >>";
             this.buttonDelete.UseVisualStyleBackColor = true;
@@ -81,9 +87,10 @@
             // 
             // buttonUp
             // 
-            this.buttonUp.Location = new System.Drawing.Point(219, 75);
+            this.buttonUp.Location = new System.Drawing.Point(383, 131);
+            this.buttonUp.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.buttonUp.Name = "buttonUp";
-            this.buttonUp.Size = new System.Drawing.Size(75, 23);
+            this.buttonUp.Size = new System.Drawing.Size(131, 40);
             this.buttonUp.TabIndex = 3;
             this.buttonUp.Text = "上へ(&U)";
             this.buttonUp.UseVisualStyleBackColor = true;
@@ -91,9 +98,10 @@
             // 
             // buttonDown
             // 
-            this.buttonDown.Location = new System.Drawing.Point(219, 104);
+            this.buttonDown.Location = new System.Drawing.Point(383, 182);
+            this.buttonDown.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.buttonDown.Name = "buttonDown";
-            this.buttonDown.Size = new System.Drawing.Size(75, 23);
+            this.buttonDown.Size = new System.Drawing.Size(131, 40);
             this.buttonDown.TabIndex = 4;
             this.buttonDown.Text = "下へ(&D)";
             this.buttonDown.UseVisualStyleBackColor = true;
@@ -103,26 +111,29 @@
             // 
             this.panelProperty.BackColor = System.Drawing.SystemColors.Window;
             this.panelProperty.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panelProperty.Location = new System.Drawing.Point(13, 134);
+            this.panelProperty.Location = new System.Drawing.Point(23, 234);
+            this.panelProperty.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.panelProperty.Name = "panelProperty";
-            this.panelProperty.Size = new System.Drawing.Size(487, 122);
+            this.panelProperty.Size = new System.Drawing.Size(851, 212);
             this.panelProperty.TabIndex = 6;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 262);
+            this.label1.Location = new System.Drawing.Point(21, 458);
+            this.label1.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(219, 15);
+            this.label1.Size = new System.Drawing.Size(381, 30);
             this.label1.TabIndex = 7;
             this.label1.Text = "この画面の表示中にもビューアを操作できます";
             // 
             // buttonCancel
             // 
             this.buttonCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.buttonCancel.Location = new System.Drawing.Point(425, 262);
+            this.buttonCancel.Location = new System.Drawing.Point(744, 458);
+            this.buttonCancel.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.buttonCancel.Name = "buttonCancel";
-            this.buttonCancel.Size = new System.Drawing.Size(75, 23);
+            this.buttonCancel.Size = new System.Drawing.Size(131, 40);
             this.buttonCancel.TabIndex = 10;
             this.buttonCancel.Text = "元に戻す(&U)";
             this.buttonCancel.UseVisualStyleBackColor = true;
@@ -130,9 +141,10 @@
             // 
             // buttonOn
             // 
-            this.buttonOn.Location = new System.Drawing.Point(263, 262);
+            this.buttonOn.Location = new System.Drawing.Point(460, 458);
+            this.buttonOn.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.buttonOn.Name = "buttonOn";
-            this.buttonOn.Size = new System.Drawing.Size(75, 23);
+            this.buttonOn.Size = new System.Drawing.Size(131, 40);
             this.buttonOn.TabIndex = 8;
             this.buttonOn.Text = "閉じる(&C)";
             this.buttonOn.UseVisualStyleBackColor = true;
@@ -140,9 +152,10 @@
             // 
             // buttonOff
             // 
-            this.buttonOff.Location = new System.Drawing.Point(344, 262);
+            this.buttonOff.Location = new System.Drawing.Point(602, 458);
+            this.buttonOff.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.buttonOff.Name = "buttonOff";
-            this.buttonOff.Size = new System.Drawing.Size(75, 23);
+            this.buttonOff.Size = new System.Drawing.Size(131, 40);
             this.buttonOff.TabIndex = 9;
             this.buttonOff.Text = "設定OFF(&F)";
             this.buttonOff.UseVisualStyleBackColor = true;
@@ -150,10 +163,10 @@
             // 
             // SelectFilterDialog
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(168F, 168F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.CancelButton = this.buttonCancel;
-            this.ClientSize = new System.Drawing.Size(512, 299);
+            this.ClientSize = new System.Drawing.Size(896, 523);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.buttonCancel);
             this.Controls.Add(this.panelProperty);
@@ -167,6 +180,7 @@
             this.Controls.Add(this.listBoxUseFilter);
             this.Font = new System.Drawing.Font("Yu Gothic UI", 9F);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "SelectFilterDialog";

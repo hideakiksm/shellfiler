@@ -29,8 +29,8 @@ namespace ShellFiler.UI {
         // I1_ImageListIcon.pngの構成画像1つ分の幅
         private const int CX_IMAGE_LIST_ICON_SMALL = 13;
 
-        // I1_ImageListBGManagerAnimation.pngの構成画像1つ分の幅
-        private const int CX_IMAGE_LIST_BG_MANAGER = 40;
+        // BGManagerのアニメーションの数
+        private const int BG_MANAGER_ANIMATION_COUNT = 13;
 
         // 大きいアイコンの幅
         private static int s_cxLargeIcon = 32;
@@ -51,10 +51,16 @@ namespace ShellFiler.UI {
         private static int s_cyListIcon = 12;
 
         // バックグラウンドマネージャイメージの幅
-        private static int s_cxBgManageAnimation = 40;
+        private static int s_cxBgManageAnimationFrom;
 
         // バックグラウンドマネージャイメージの高さ
-        private static int s_cyBgManageAnimation = 24;
+        private static int s_cyBgManageAnimationFrom;
+
+        // バックグラウンドマネージャイメージの幅
+        private static int s_cxBgManageAnimationTo;
+
+        // バックグラウンドマネージャイメージの高さ
+        private static int s_cyBgManageAnimationTo;
 
         //=========================================================================================
         // プロパティ：大きいアイコンの幅
@@ -110,24 +116,6 @@ namespace ShellFiler.UI {
             }
         }
 
-        //=========================================================================================
-        // プロパティ：バックグラウンドマネージャイメージの幅
-        //=========================================================================================
-        public static int CxBgManageAnimation {
-            get {
-                return s_cxBgManageAnimation;
-            }
-        }
-
-        //=========================================================================================
-        // プロパティ：バックグラウンドマネージャイメージの高さ
-        //=========================================================================================
-        public static int CyBgManageAnimation {
-            get {
-                return s_cyBgManageAnimation;
-            }
-        }
-
         // リストボックス用アイコンの幅
         public const int CX_LIST_ICON = 12;
 
@@ -154,9 +142,6 @@ namespace ShellFiler.UI {
         // アイコン用のイメージリスト
         private static ImageList s_iconImageList = null;
 
-        // バックグラウンドマネージャアニメーション用のイメージリスト
-        private static ImageList s_bgManagerAnimationImageList = null;
-
         // つかむカーソル
         public static Cursor s_handCursor = null;
 
@@ -177,7 +162,6 @@ namespace ShellFiler.UI {
         private static Bitmap s_bmpGraphicsViewer_FilterArrow2 = null;
         private static Bitmap s_bmpGraphicsViewer_FilterSample = null;
         private static Bitmap s_bmpGraphicsViewer_FilterSampleZoom = null;
-        private static Bitmap s_bmpImageListBGManagerAnimation = null;
         private static Bitmap s_bmpImageListIcon = null;
         private static Bitmap s_bmpIconOperationFailed = null;
         private static Bitmap s_bmpIconSshSetting = null;
@@ -194,6 +178,7 @@ namespace ShellFiler.UI {
         private static Bitmap s_bmpTwoStrokeKeyCtrlAlt = null;
         private static Bitmap s_bmpTwoStrokeKeyCtrl = null;
         private static Bitmap s_bmpTwoStrokeKeyAlt = null;
+        private static Bitmap[] s_bmpBgManager = null;
 
         //=========================================================================================
         // 機　能：汎用アイコンを初期化する
@@ -222,8 +207,10 @@ namespace ShellFiler.UI {
                 s_cyDefaultIcon = 16 * s_dpiRatio / 100;
                 s_cxListIcon = 12 * s_dpiRatio / 100;
                 s_cyListIcon = 12 * s_dpiRatio / 100;
-                s_cxBgManageAnimation = 40 * s_dpiRatio / 100;
-                s_cyBgManageAnimation = 24 * s_dpiRatio / 100;
+                s_cxBgManageAnimationFrom = 40 * s_dpiRatioFrom / 100;
+                s_cyBgManageAnimationFrom = 24 * s_dpiRatioFrom / 100;
+                s_cxBgManageAnimationTo = 40 * s_dpiRatio / 100;
+                s_cyBgManageAnimationTo = 24 * s_dpiRatio / 100;
             }
 
             // 汎用アイコン
@@ -232,39 +219,6 @@ namespace ShellFiler.UI {
             s_iconImageList.ColorDepth = ColorDepth.Depth32Bit;
             s_iconImageList.ImageSize = new Size(iconSize, iconSize);
             s_iconImageList.Images.AddStrip(s_bmpImageListIcon);
-        }
-
-        //=========================================================================================
-        // 機　能：待機アイコンを初期化する
-        // 引　数：[in]toolStrip  待機アイコンを表示するツールバー
-        // 戻り値：なし
-        //=========================================================================================
-        public static void InitializeBgManager(ToolStrip toolStrip) {
-            // 透過pngで入っている画像をツールバーの背景パターンに重ね合わせてImageListに設定
-            using (Bitmap bitmapTransparent = LoadImageListResource(UIIconManager.ImageListBGManagerAnimation, "ImageListBGManagerAnimation")) {
-                // ImageListに設定する画像
-                Bitmap bitmapModified = new Bitmap(bitmapTransparent.Width, bitmapTransparent.Height);
-                int iconCount = bitmapTransparent.Width / CxBgManageAnimation;
-                Rectangle rcAnimation = new Rectangle(0, 0, CxBgManageAnimation, CyBgManageAnimation);
-
-                // bitmapBack:ツールバーで描画した1個分の背景画像
-                using (Bitmap bitmapBack = new Bitmap(rcAnimation.Width, rcAnimation.Height)) {
-                    toolStrip.DrawToBitmap(bitmapBack, rcAnimation);
-                    using (Graphics g = Graphics.FromImage(bitmapModified)) {
-                        // ImageListに設定する画像に背景と透過画像を描画
-                        for (int i = 0; i < iconCount; i++) {
-                            g.DrawImage(bitmapBack, i * CxBgManageAnimation, 0);
-                        }
-                        g.DrawImage(bitmapTransparent, 0, 0);
-                    }
-                }
-
-                // イメージリストを設定
-                s_bgManagerAnimationImageList = new ImageList();
-                s_bgManagerAnimationImageList.ColorDepth = ColorDepth.Depth32Bit;
-                s_bgManagerAnimationImageList.ImageSize = new Size(CxBgManageAnimation, CyBgManageAnimation);
-                s_bgManagerAnimationImageList.Images.AddStrip(bitmapModified);
-            }
         }
 
         //=========================================================================================
@@ -279,7 +233,6 @@ namespace ShellFiler.UI {
             s_customizedIcon.Clear();
 
             s_iconImageList.Dispose();
-            s_bgManagerAnimationImageList.Dispose();
         }
 
         //=========================================================================================
@@ -432,16 +385,6 @@ namespace ShellFiler.UI {
             }
         }
 
-        //=========================================================================================
-        // プロパティ：バックグラウンドマネージャ用のアニメーション
-        //=========================================================================================
-        public static ImageList BGManagerAnimationImageList {
-            get {
-                return s_bgManagerAnimationImageList;
-            }
-        }
-
-
         public static Bitmap ButtonFace_Down {
             get {
                 return GetResource(ref s_bmpButtonFace_Down, "ButtonFace_Down");
@@ -523,12 +466,6 @@ namespace ShellFiler.UI {
         public static Bitmap GraphicsViewer_FilterSampleZoom {
             get {
                 return GetResource(ref s_bmpGraphicsViewer_FilterSampleZoom, "GraphicsViewer_FilterSampleZoom");
-            }
-        }
-
-        public static Bitmap ImageListBGManagerAnimation {
-            get {
-                return GetResource(ref s_bmpImageListBGManagerAnimation, "ImageListBGManagerAnimation", CX_IMAGE_LIST_BG_MANAGER);
             }
         }
 
@@ -625,6 +562,18 @@ namespace ShellFiler.UI {
         public static Bitmap TwoStrokeKeyAlt {
             get {
                 return GetResource(ref s_bmpTwoStrokeKeyAlt, "TwoStrokeKeyAlt");
+            }
+        }
+
+        public static Bitmap[] ImageListBGManager {
+            get {
+                if (s_bmpBgManager == null) {
+                    s_bmpBgManager = new Bitmap[BG_MANAGER_ANIMATION_COUNT];
+                    for (int i = 0; i < BG_MANAGER_ANIMATION_COUNT; i++) {
+                        GetResource(ref s_bmpBgManager[i], $"BGManager{i:00}");
+                    }
+                }
+                return s_bmpBgManager;
             }
         }
     }

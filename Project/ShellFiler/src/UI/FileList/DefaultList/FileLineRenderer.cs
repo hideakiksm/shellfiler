@@ -458,8 +458,8 @@ namespace ShellFiler.UI.FileList.DefaultList {
                     return false;
                 }
                 Bitmap bmp = icon.IconImage;
-            //                int sizeImage = LineHeight - CY_ICON_ADJUST * 2;
-            Rectangle rcDest = new Rectangle(g.X(xPos), yPos, bmp.Width, bmp.Height);//, sizeImage);
+                //                int sizeImage = LineHeight - CY_ICON_ADJUST * 2;
+                Rectangle rcDest = new Rectangle(g.X(xPos), yPos, bmp.Width, bmp.Height);//, sizeImage);
                 if (IsActiveDraw) {
                     g.Graphics.DrawImage(bmp, rcDest, 0, 0, bmp.Width, bmp.Height, GraphicsUnit.Pixel);
                 } else {

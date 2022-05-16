@@ -73,8 +73,8 @@ namespace ShellFiler.UI.ControlBar {
                 return;
             }
             const int MARGIN = 2;
-            int cxTask = UIIconManager.CxBgManageAnimation;
-            int cyTask = UIIconManager.CyBgManageAnimation;
+            int cxTask = UIIconManager.ImageListBGManager[0].Width;
+            int cyTask = UIIconManager.ImageListBGManager[0].Height;
             int cxTwo = UIIconManager.TwoStrokeKeyNormal.Width;
             int cyTwo = UIIconManager.TwoStrokeKeyNormal.Height;
 

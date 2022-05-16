@@ -205,7 +205,7 @@ namespace ShellFiler.Util {
             }
             Bitmap bmp = new Bitmap(MainWindowForm.X(iconSize.CxIconSize), MainWindowForm.Y(iconSize.CxIconSize));
             Graphics g = Graphics.FromImage(bmp);
- g.FillRectangle(Brushes.AliceBlue, 0, 0, iconSize.CxIconSize, iconSize.CyIconSize);
+            g.FillRectangle(Brushes.AliceBlue, 0, 0, iconSize.CxIconSize, iconSize.CyIconSize);
             try {
                 // シェルからアイコンを取得
                 SHFILEINFO shinfo = new SHFILEINFO();

@@ -48,7 +48,7 @@ namespace ShellFiler.UI.ControlBar {
         // 引　数：[in]control    描画対象のコントロール
         // 戻り値：なし
         //=========================================================================================
-        public FunctionBarGraphics(Control control) : base(null) {
+        public FunctionBarGraphics(Control control) : base(control) {
             m_control = control;
             m_graphics = null;
         }
@@ -94,18 +94,6 @@ namespace ShellFiler.UI.ControlBar {
         //=========================================================================================
         public void AddIconCache(FileIconID id, Bitmap bmp) {
             m_cacheMapIconIdToBmp.Add(id, bmp);
-        }
-
-        //=========================================================================================
-        // プロパティ：グラフィックス
-        //=========================================================================================
-        public override Graphics Graphics {
-            get {
-                if (m_graphics == null) {
-                    m_graphics = m_control.CreateGraphics();
-                }
-                return m_graphics;
-            }
         }
 
         //=========================================================================================

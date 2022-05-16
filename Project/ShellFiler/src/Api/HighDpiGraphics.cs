@@ -16,16 +16,27 @@ namespace ShellFiler.Api {
         public const float STANDARD_DPI_Y = 96f;
         // グラフィック
         private Graphics m_graphics;
+        // グラフィック（Dispose予定）
+        private Graphics m_graphicsForDispose;
 
         //=========================================================================================
         // 機　能：コンストラクタ（グラフィックス指定）
-        // 引　数：[in]control   描画対象のコントロール
-        // 　　　　[in]graphics  グラフィックス
-        //         [in]color     グラフィックビューアの色
+        // 引　数：[in]graphics  グラフィックス
         // 戻り値：なし
         //=========================================================================================
         public HighDpiGraphics(Graphics graphics) {
             m_graphics = graphics;
+            m_graphicsForDispose = null;
+        }
+
+        //=========================================================================================
+        // 機　能：コンストラクタ（コントロール指定）
+        // 引　数：[in]control   描画対象のコントロール
+        // 戻り値：なし
+        //=========================================================================================
+        public HighDpiGraphics(Control control) {
+            m_graphicsForDispose = control.CreateGraphics();
+            m_graphics = m_graphicsForDispose;
         }
 
         //=========================================================================================
@@ -34,6 +45,9 @@ namespace ShellFiler.Api {
         // 戻り値：なし
         //=========================================================================================
         public virtual void Dispose() {
+            if (m_graphicsForDispose != null) {
+                m_graphicsForDispose.Dispose();
+            }
         }
 
         //=========================================================================================

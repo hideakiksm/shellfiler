@@ -37,19 +37,23 @@
             this.label3 = new System.Windows.Forms.Label();
             this.textBoxDestFolder = new System.Windows.Forms.TextBox();
             this.pictureBoxArrow = new System.Windows.Forms.PictureBox();
+            this.panel1 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxArrow)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // listViewTarget
             // 
             this.listViewTarget.Activation = System.Windows.Forms.ItemActivation.OneClick;
+            this.listViewTarget.Dock = System.Windows.Forms.DockStyle.Fill;
             this.listViewTarget.FullRowSelect = true;
             this.listViewTarget.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.None;
             this.listViewTarget.HideSelection = false;
-            this.listViewTarget.Location = new System.Drawing.Point(12, 28);
+            this.listViewTarget.Location = new System.Drawing.Point(0, 0);
+            this.listViewTarget.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.listViewTarget.MultiSelect = false;
             this.listViewTarget.Name = "listViewTarget";
-            this.listViewTarget.Size = new System.Drawing.Size(420, 150);
+            this.listViewTarget.Size = new System.Drawing.Size(615, 220);
             this.listViewTarget.TabIndex = 1;
             this.listViewTarget.UseCompatibleStateImageBehavior = false;
             this.listViewTarget.View = System.Windows.Forms.View.Details;
@@ -58,17 +62,19 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(13, 13);
+            this.label1.Location = new System.Drawing.Point(20, 20);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(110, 15);
+            this.label1.Size = new System.Drawing.Size(156, 25);
             this.label1.TabIndex = 0;
             this.label1.Text = "ファイルの結合順(&S):";
             // 
             // buttonUp
             // 
-            this.buttonUp.Location = new System.Drawing.Point(438, 28);
+            this.buttonUp.Location = new System.Drawing.Point(657, 42);
+            this.buttonUp.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.buttonUp.Name = "buttonUp";
-            this.buttonUp.Size = new System.Drawing.Size(75, 23);
+            this.buttonUp.Size = new System.Drawing.Size(112, 34);
             this.buttonUp.TabIndex = 2;
             this.buttonUp.Text = "上へ(&U)";
             this.buttonUp.UseVisualStyleBackColor = true;
@@ -76,9 +82,10 @@
             // 
             // buttonDown
             // 
-            this.buttonDown.Location = new System.Drawing.Point(437, 57);
+            this.buttonDown.Location = new System.Drawing.Point(656, 86);
+            this.buttonDown.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.buttonDown.Name = "buttonDown";
-            this.buttonDown.Size = new System.Drawing.Size(75, 23);
+            this.buttonDown.Size = new System.Drawing.Size(112, 34);
             this.buttonDown.TabIndex = 3;
             this.buttonDown.Text = "下へ(&D)";
             this.buttonDown.UseVisualStyleBackColor = true;
@@ -86,9 +93,10 @@
             // 
             // buttonSortName
             // 
-            this.buttonSortName.Location = new System.Drawing.Point(438, 126);
+            this.buttonSortName.Location = new System.Drawing.Point(657, 189);
+            this.buttonSortName.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.buttonSortName.Name = "buttonSortName";
-            this.buttonSortName.Size = new System.Drawing.Size(75, 23);
+            this.buttonSortName.Size = new System.Drawing.Size(112, 34);
             this.buttonSortName.TabIndex = 4;
             this.buttonSortName.Text = "名前順(&N)";
             this.buttonSortName.UseVisualStyleBackColor = true;
@@ -96,9 +104,10 @@
             // 
             // buttonSortMark
             // 
-            this.buttonSortMark.Location = new System.Drawing.Point(438, 155);
+            this.buttonSortMark.Location = new System.Drawing.Point(657, 232);
+            this.buttonSortMark.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.buttonSortMark.Name = "buttonSortMark";
-            this.buttonSortMark.Size = new System.Drawing.Size(75, 23);
+            this.buttonSortMark.Size = new System.Drawing.Size(112, 34);
             this.buttonSortMark.TabIndex = 5;
             this.buttonSortMark.Text = "マーク順(&M)";
             this.buttonSortMark.UseVisualStyleBackColor = true;
@@ -107,34 +116,38 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(10, 236);
+            this.label2.Location = new System.Drawing.Point(15, 354);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(113, 15);
+            this.label2.Size = new System.Drawing.Size(162, 25);
             this.label2.TabIndex = 8;
             this.label2.Text = "結合先ファイル名(&D):";
             // 
             // textBoxDestName
             // 
-            this.textBoxDestName.Location = new System.Drawing.Point(122, 233);
+            this.textBoxDestName.Location = new System.Drawing.Point(183, 350);
+            this.textBoxDestName.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textBoxDestName.Name = "textBoxDestName";
-            this.textBoxDestName.Size = new System.Drawing.Size(391, 23);
+            this.textBoxDestName.Size = new System.Drawing.Size(584, 31);
             this.textBoxDestName.TabIndex = 9;
             // 
             // buttonCancel
             // 
             this.buttonCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.buttonCancel.Location = new System.Drawing.Point(437, 266);
+            this.buttonCancel.Location = new System.Drawing.Point(656, 399);
+            this.buttonCancel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.buttonCancel.Name = "buttonCancel";
-            this.buttonCancel.Size = new System.Drawing.Size(75, 23);
+            this.buttonCancel.Size = new System.Drawing.Size(112, 34);
             this.buttonCancel.TabIndex = 11;
             this.buttonCancel.Text = "キャンセル";
             this.buttonCancel.UseVisualStyleBackColor = true;
             // 
             // buttonOk
             // 
-            this.buttonOk.Location = new System.Drawing.Point(357, 266);
+            this.buttonOk.Location = new System.Drawing.Point(536, 399);
+            this.buttonOk.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.buttonOk.Name = "buttonOk";
-            this.buttonOk.Size = new System.Drawing.Size(75, 23);
+            this.buttonOk.Size = new System.Drawing.Size(112, 34);
             this.buttonOk.TabIndex = 10;
             this.buttonOk.Text = "OK";
             this.buttonOk.UseVisualStyleBackColor = true;
@@ -143,37 +156,50 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(10, 206);
+            this.label3.Location = new System.Drawing.Point(15, 309);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(112, 15);
+            this.label3.Size = new System.Drawing.Size(160, 25);
             this.label3.TabIndex = 6;
             this.label3.Text = "結合先フォルダ名(&F):";
             // 
             // textBoxDestFolder
             // 
-            this.textBoxDestFolder.Location = new System.Drawing.Point(121, 203);
+            this.textBoxDestFolder.Location = new System.Drawing.Point(182, 304);
+            this.textBoxDestFolder.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textBoxDestFolder.Name = "textBoxDestFolder";
             this.textBoxDestFolder.ReadOnly = true;
-            this.textBoxDestFolder.Size = new System.Drawing.Size(391, 23);
+            this.textBoxDestFolder.Size = new System.Drawing.Size(584, 31);
             this.textBoxDestFolder.TabIndex = 7;
             // 
             // pictureBoxArrow
             // 
             this.pictureBoxArrow.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxArrow.Image")));
             this.pictureBoxArrow.InitialImage = null;
-            this.pictureBoxArrow.Location = new System.Drawing.Point(226, 182);
+            this.pictureBoxArrow.Location = new System.Drawing.Point(339, 273);
+            this.pictureBoxArrow.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBoxArrow.Name = "pictureBoxArrow";
-            this.pictureBoxArrow.Size = new System.Drawing.Size(48, 16);
+            this.pictureBoxArrow.Size = new System.Drawing.Size(72, 24);
+            this.pictureBoxArrow.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBoxArrow.TabIndex = 12;
             this.pictureBoxArrow.TabStop = false;
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.listViewTarget);
+            this.panel1.Location = new System.Drawing.Point(20, 46);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(615, 220);
+            this.panel1.TabIndex = 13;
             // 
             // CombineFileDialog
             // 
             this.AcceptButton = this.buttonOk;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(144F, 144F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.CancelButton = this.buttonCancel;
-            this.ClientSize = new System.Drawing.Size(527, 301);
+            this.ClientSize = new System.Drawing.Size(790, 452);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.pictureBoxArrow);
             this.Controls.Add(this.textBoxDestFolder);
             this.Controls.Add(this.textBoxDestName);
@@ -186,9 +212,9 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.listViewTarget);
             this.Font = new System.Drawing.Font("Yu Gothic UI", 9F);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "CombineFileDialog";
@@ -197,6 +223,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "ファイルの結合";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxArrow)).EndInit();
+            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -217,5 +244,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox textBoxDestFolder;
         private System.Windows.Forms.PictureBox pictureBoxArrow;
+        private System.Windows.Forms.Panel panel1;
     }
 }

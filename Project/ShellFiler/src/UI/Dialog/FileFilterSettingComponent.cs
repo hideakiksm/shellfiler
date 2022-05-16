@@ -6,7 +6,7 @@ using System.Data;
 using System.Reflection;
 using System.Text;
 using System.Windows.Forms;
-using ShellFiler.Document;
+using ShellFiler.Api;
 using ShellFiler.Document.Setting;
 using ShellFiler.FileTask.FileFilter;
 using ShellFiler.Util;
@@ -90,94 +90,97 @@ namespace ShellFiler.UI.Dialog {
         // 戻り値：なし
         //=========================================================================================
         public void CreateComponent(SettingUIItem uiItem, Dictionary<string, object> param, int xPos, ref int yPos) {
-            if (uiItem is SettingUIItem.Space) {
-                yPos += 16;
-            } else if (uiItem is SettingUIItem.Label) {
-                SettingUIItem.Label settingLabel = (SettingUIItem.Label)uiItem;
-                Label label = new Label();
-                label.AutoSize = true;
-                label.Location = new Point(xPos + settingLabel.Indent * 16, yPos);
-                label.Size = new Size(35, 12);
-                label.TabIndex = 0;
-                label.Text = settingLabel.Text;
-                this.panelUI.Controls.Add(label);
-                yPos += 16;
-            } else if (uiItem is SettingUIItem.Combobox) {
-                SettingUIItem.Combobox settingCombobox = (SettingUIItem.Combobox)uiItem;
-                Label label = new Label();
-                label.AutoSize = true;
-                label.Location = new Point(xPos, yPos + 4);
-                label.Size = new Size(35, 12);
-                label.TabIndex = 0;
-                label.Text = settingCombobox.LabelText;
-                this.panelUI.Controls.Add(label);
+            using (Graphics g = CreateGraphics())
+            using (HighDpiGraphics graphics = new HighDpiGraphics(g)) {
+                if (uiItem is SettingUIItem.Space) {
+                    yPos += graphics.Y(16);
+                } else if (uiItem is SettingUIItem.Label) {
+                    SettingUIItem.Label settingLabel = (SettingUIItem.Label)uiItem;
+                    Label label = new Label();
+                    label.AutoSize = true;
+                    label.Location = new Point(xPos + graphics.X(settingLabel.Indent * 16), yPos);
+                    label.Size = new Size(graphics.X(35), graphics.Y(12));
+                    label.TabIndex = 0;
+                    label.Text = settingLabel.Text;
+                    this.panelUI.Controls.Add(label);
+                    yPos += graphics.Y(16);
+                } else if (uiItem is SettingUIItem.Combobox) {
+                    SettingUIItem.Combobox settingCombobox = (SettingUIItem.Combobox)uiItem;
+                    Label label = new Label();
+                    label.AutoSize = true;
+                    label.Location = new Point(xPos, yPos + graphics.Y(4));
+                    label.Size = new Size(graphics.X(35), graphics.Y(12));
+                    label.TabIndex = 0;
+                    label.Text = settingCombobox.LabelText;
+                    this.panelUI.Controls.Add(label);
 
-                string value = (string)(param[settingCombobox.ControlId]);
-                ComboBox combobox = new ComboBox();
-                combobox.DropDownStyle = ComboBoxStyle.DropDownList;
-                combobox.FormattingEnabled = true;
-                combobox.Location = new Point(xPos + 150, yPos);
-                combobox.Size = new Size(180, 20);
-                combobox.Items.AddRange(settingCombobox.ItemList);
-                combobox.Tag = settingCombobox;
-                combobox.SelectedIndex = StringUtils.SearchElementIndex(settingCombobox.IdList, value);
-                combobox.SelectedIndexChanged += new EventHandler(Combobox_SelectedIndexChanged);
-                this.panelUI.Controls.Add(combobox);
-                yPos += 24;
-            } else if (uiItem is SettingUIItem.TextBox) {
-                SettingUIItem.TextBox settingTextbox = (SettingUIItem.TextBox)uiItem;
-                Label label = new Label();
-                label.AutoSize = true;
-                label.Location = new Point(xPos, yPos + 4);
-                label.Size = new Size(35, 12);
-                label.TabIndex = 0;
-                label.Text = settingTextbox.LabelText;
-                this.panelUI.Controls.Add(label);
+                    string value = (string)(param[settingCombobox.ControlId]);
+                    ComboBox combobox = new ComboBox();
+                    combobox.DropDownStyle = ComboBoxStyle.DropDownList;
+                    combobox.FormattingEnabled = true;
+                    combobox.Location = new Point(xPos + graphics.X(150), yPos);
+                    combobox.Size = new Size(graphics.X(180), graphics.Y(20));
+                    combobox.Items.AddRange(settingCombobox.ItemList);
+                    combobox.Tag = settingCombobox;
+                    combobox.SelectedIndex = StringUtils.SearchElementIndex(settingCombobox.IdList, value);
+                    combobox.SelectedIndexChanged += new EventHandler(Combobox_SelectedIndexChanged);
+                    this.panelUI.Controls.Add(combobox);
+                    yPos += graphics.Y(24);
+                } else if (uiItem is SettingUIItem.TextBox) {
+                    SettingUIItem.TextBox settingTextbox = (SettingUIItem.TextBox)uiItem;
+                    Label label = new Label();
+                    label.AutoSize = true;
+                    label.Location = new Point(xPos, yPos + graphics.Y(4));
+                    label.Size = new Size(graphics.X(35), graphics.Y(12));
+                    label.TabIndex = 0;
+                    label.Text = settingTextbox.LabelText;
+                    this.panelUI.Controls.Add(label);
 
-                string value = (string)(param[settingTextbox.ControlId]);
-                TextBox textbox = new TextBox();
-                textbox.Location = new Point(xPos + 150, yPos);
-                textbox.Size = new Size(310, 19);
-                textbox.Tag = settingTextbox;
-                textbox.Text = value;
-                textbox.TextChanged += new EventHandler(Textbox_TextChanged);
-                this.panelUI.Controls.Add(textbox);
-                yPos += 24;
-            } else if (uiItem is SettingUIItem.Checkbox) {
-                SettingUIItem.Checkbox settingCheckbox = (SettingUIItem.Checkbox)uiItem;
-                bool value = (bool)(param[settingCheckbox.ControlId]);
-                CheckBox checkbox = new CheckBox();
-                checkbox.AutoSize = true;
-                checkbox.Location = new Point(xPos, yPos);
-                checkbox.Size = new System.Drawing.Size(107, 16);
-                checkbox.Text = settingCheckbox.LabelText;
-                checkbox.UseVisualStyleBackColor = true;
-                checkbox.Tag = settingCheckbox;
-                checkbox.Checked = value;
-                checkbox.CheckedChanged += new EventHandler(Checkbox_CheckedChanged);
-                this.panelUI.Controls.Add(checkbox);
-                yPos += 24;
-            } else if (uiItem is SettingUIItem.Numeric) {
-                SettingUIItem.Numeric settingNumeric = (SettingUIItem.Numeric)uiItem;
-                Label label = new Label();
-                label.AutoSize = true;
-                label.Location = new Point(xPos, yPos + 4);
-                label.Size = new Size(35, 12);
-                label.TabIndex = 0;
-                label.Text = settingNumeric.LabelText;
-                this.panelUI.Controls.Add(label);
+                    string value = (string)(param[settingTextbox.ControlId]);
+                    TextBox textbox = new TextBox();
+                    textbox.Location = new Point(xPos + graphics.X(150), yPos);
+                    textbox.Size = new Size(graphics.X(310), graphics.Y(19));
+                    textbox.Tag = settingTextbox;
+                    textbox.Text = value;
+                    textbox.TextChanged += new EventHandler(Textbox_TextChanged);
+                    this.panelUI.Controls.Add(textbox);
+                    yPos += graphics.Y(24);
+                } else if (uiItem is SettingUIItem.Checkbox) {
+                    SettingUIItem.Checkbox settingCheckbox = (SettingUIItem.Checkbox)uiItem;
+                    bool value = (bool)(param[settingCheckbox.ControlId]);
+                    CheckBox checkbox = new CheckBox();
+                    checkbox.AutoSize = true;
+                    checkbox.Location = new Point(xPos, yPos);
+                    checkbox.Size = new System.Drawing.Size(graphics.X(107), graphics.Y(16));
+                    checkbox.Text = settingCheckbox.LabelText;
+                    checkbox.UseVisualStyleBackColor = true;
+                    checkbox.Tag = settingCheckbox;
+                    checkbox.Checked = value;
+                    checkbox.CheckedChanged += new EventHandler(Checkbox_CheckedChanged);
+                    this.panelUI.Controls.Add(checkbox);
+                    yPos += graphics.Y(24);
+                } else if (uiItem is SettingUIItem.Numeric) {
+                    SettingUIItem.Numeric settingNumeric = (SettingUIItem.Numeric)uiItem;
+                    Label label = new Label();
+                    label.AutoSize = true;
+                    label.Location = new Point(xPos, yPos + graphics.Y(4));
+                    label.Size = new Size(graphics.X(35), graphics.Y(12));
+                    label.TabIndex = 0;
+                    label.Text = settingNumeric.LabelText;
+                    this.panelUI.Controls.Add(label);
 
-                int value = (int)(param[settingNumeric.ControlId]);
-                NumericUpDown numeric = new NumericUpDown();
-                numeric.Location = new Point(xPos + 150, yPos);
-                numeric.Size = new Size(180, 19);
-                numeric.Maximum = settingNumeric.MaxValue;
-                numeric.Minimum = settingNumeric.MinValue;
-                numeric.Value = value;
-                numeric.Tag = settingNumeric;
-                numeric.ValueChanged += new EventHandler(Numeric_ValueChanged);
-                this.panelUI.Controls.Add(numeric);
-                yPos += 24;
+                    int value = (int)(param[settingNumeric.ControlId]);
+                    NumericUpDown numeric = new NumericUpDown();
+                    numeric.Location = new Point(xPos + graphics.X(150), yPos);
+                    numeric.Size = new Size(graphics.X(180), graphics.Y(19));
+                    numeric.Maximum = settingNumeric.MaxValue;
+                    numeric.Minimum = settingNumeric.MinValue;
+                    numeric.Value = value;
+                    numeric.Tag = settingNumeric;
+                    numeric.ValueChanged += new EventHandler(Numeric_ValueChanged);
+                    this.panelUI.Controls.Add(numeric);
+                    yPos += graphics.Y(24);
+                }
             }
         }
 
