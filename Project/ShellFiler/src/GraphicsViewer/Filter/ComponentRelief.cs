@@ -136,27 +136,29 @@ namespace ShellFiler.GraphicsViewer.Filter {
             int x2 = x;
             int x3 = Math.Min(m_cxImage - 1, x + 1);
 
-            int srcB21 = m_srcImage[pos1 + x2 * 3];
-            int srcB12 = m_srcImage[pos2 + x1 * 3];
-            int srcB22 = m_srcImage[pos2 + x2 * 3];
-            int srcB32 = m_srcImage[pos2 + x3 * 3];
-            int srcB23 = m_srcImage[pos3 + x2 * 3];
+            const int next = 4;
+            int srcB21 = m_srcImage[pos1 + x2 * next];
+            int srcB12 = m_srcImage[pos2 + x1 * next];
+            int srcB22 = m_srcImage[pos2 + x2 * next];
+            int srcB32 = m_srcImage[pos2 + x3 * next];
+            int srcB23 = m_srcImage[pos3 + x2 * next];
 
-            int srcG21 = m_srcImage[pos1 + x2 * 3 + 1];
-            int srcG12 = m_srcImage[pos2 + x1 * 3 + 1];
-            int srcG22 = m_srcImage[pos2 + x2 * 3 + 1];
-            int srcG32 = m_srcImage[pos2 + x3 * 3 + 1];
-            int srcG23 = m_srcImage[pos3 + x2 * 3 + 1];
+            int srcG21 = m_srcImage[pos1 + x2 * next + 1];
+            int srcG12 = m_srcImage[pos2 + x1 * next + 1];
+            int srcG22 = m_srcImage[pos2 + x2 * next + 1];
+            int srcG32 = m_srcImage[pos2 + x3 * next + 1];
+            int srcG23 = m_srcImage[pos3 + x2 * next + 1];
 
-            int srcR21 = m_srcImage[pos1 + x2 * 3 + 2];
-            int srcR12 = m_srcImage[pos2 + x1 * 3 + 2];
-            int srcR22 = m_srcImage[pos2 + x2 * 3 + 2];
-            int srcR32 = m_srcImage[pos2 + x3 * 3 + 2];
-            int srcR23 = m_srcImage[pos3 + x2 * 3 + 2];
+            int srcR21 = m_srcImage[pos1 + x2 * next + 2];
+            int srcR12 = m_srcImage[pos2 + x1 * next + 2];
+            int srcR22 = m_srcImage[pos2 + x2 * next + 2];
+            int srcR32 = m_srcImage[pos2 + x3 * next + 2];
+            int srcR23 = m_srcImage[pos3 + x2 * next + 2];
 
-            m_destImage[pos2 + x * 3    ] = (byte)(Math.Min(255f, Math.Max(0f, (srcB21 + srcB12 - srcB32 - srcB23) * m_filterLevel + srcB22)));
-            m_destImage[pos2 + x * 3 + 1] = (byte)(Math.Min(255f, Math.Max(0f, (srcG21 + srcG12 - srcG32 - srcG23) * m_filterLevel + srcG22)));
-            m_destImage[pos2 + x * 3 + 2] = (byte)(Math.Min(255f, Math.Max(0f, (srcR21 + srcR12 - srcR32 - srcR23) * m_filterLevel + srcR22)));
+            m_destImage[pos2 + x * next    ] = (byte)(Math.Min(255f, Math.Max(0f, (srcB21 + srcB12 - srcB32 - srcB23) * m_filterLevel + srcB22)));
+            m_destImage[pos2 + x * next + 1] = (byte)(Math.Min(255f, Math.Max(0f, (srcG21 + srcG12 - srcG32 - srcG23) * m_filterLevel + srcG22)));
+            m_destImage[pos2 + x * next + 2] = (byte)(Math.Min(255f, Math.Max(0f, (srcR21 + srcR12 - srcR32 - srcR23) * m_filterLevel + srcR22)));
+            m_destImage[pos2 + next] = m_srcImage[pos2 + next];
         }
 
         //=========================================================================================
@@ -175,37 +177,39 @@ namespace ShellFiler.GraphicsViewer.Filter {
             // x=0位置の端数処理
             SetPixel(pos1, pos2, pos3, 0);
 
-            pos1 += 3;
-            pos2 += 3;
-            pos3 += 3;
+            const int next = 4;
+            pos1 += next;
+            pos2 += next;
+            pos3 += next;
 
             // x=中間ピクセルの処理
             for (int x = 1; x < m_cxImage - 1; x++) {
                 int srcB21 = m_srcImage[pos1];
-                int srcB12 = m_srcImage[pos2 - 3];
+                int srcB12 = m_srcImage[pos2 - next];
                 int srcB22 = m_srcImage[pos2];
-                int srcB32 = m_srcImage[pos2 + 3];
+                int srcB32 = m_srcImage[pos2 + next];
                 int srcB23 = m_srcImage[pos3];
 
-                int srcG21 = m_srcImage[pos1     + 1];
-                int srcG12 = m_srcImage[pos2 - 3 + 1];
-                int srcG22 = m_srcImage[pos2     + 1];
-                int srcG32 = m_srcImage[pos2 + 3 + 1];
-                int srcG23 = m_srcImage[pos3     + 1];
+                int srcG21 = m_srcImage[pos1        + 1];
+                int srcG12 = m_srcImage[pos2 - next + 1];
+                int srcG22 = m_srcImage[pos2        + 1];
+                int srcG32 = m_srcImage[pos2 + next + 1];
+                int srcG23 = m_srcImage[pos3        + 1];
 
-                int srcR21 = m_srcImage[pos1     + 2];
-                int srcR12 = m_srcImage[pos2 - 3 + 2];
-                int srcR22 = m_srcImage[pos2     + 2];
-                int srcR32 = m_srcImage[pos2 + 3 + 2];
-                int srcR23 = m_srcImage[pos3     + 2];
+                int srcR21 = m_srcImage[pos1        + 2];
+                int srcR12 = m_srcImage[pos2 - next + 2];
+                int srcR22 = m_srcImage[pos2        + 2];
+                int srcR32 = m_srcImage[pos2 + next + 2];
+                int srcR23 = m_srcImage[pos3        + 2];
 
                 m_destImage[pos2    ] = (byte)(Math.Min(255f, Math.Max(0f, (srcB21 + srcB12 - srcB32 - srcB23) * m_filterLevel + srcB22)));
                 m_destImage[pos2 + 1] = (byte)(Math.Min(255f, Math.Max(0f, (srcG21 + srcG12 - srcG32 - srcG23) * m_filterLevel + srcG22)));
                 m_destImage[pos2 + 2] = (byte)(Math.Min(255f, Math.Max(0f, (srcR21 + srcR12 - srcR32 - srcR23) * m_filterLevel + srcR22)));
+                m_destImage[pos2 + 3] = m_srcImage[pos2 + 3];
 
-                pos1 += 3;
-                pos2 += 3;
-                pos3 += 3;
+                pos1 += next;
+                pos2 += next;
+                pos3 += next;
             }
 
             // x=n-1位置の端数処理

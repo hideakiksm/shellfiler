@@ -87,14 +87,15 @@ namespace ShellFiler.GraphicsViewer.Filter {
                     int srcB = m_srcImage[pos];
                     int srcG = m_srcImage[pos + 1];
                     int srcR = m_srcImage[pos + 2];
-    			    float m = (srcB + srcG + srcR) / 3.0f;
+    			        float m = (srcB + srcG + srcR) / 3.0f;
                     byte destB = (byte)Math.Min(255f, Math.Max(0f, ((m * 0.6f + 55f * 0.4f) - 127f) * 160f / 127f + 127f));
                     byte destG = (byte)Math.Min(255f, Math.Max(0f, ((m * 0.6f + 145f * 0.4f) - 127f) * 160f / 127f + 127f));
                     byte destR = (byte)Math.Min(255f, Math.Max(0f, ((m * 0.6f + 175f * 0.4f) - 127f) * 160f / 127f + 127f));
                     m_destImage[pos] = destB;
                     m_destImage[pos + 1] = destG;
                     m_destImage[pos + 2] = destR;
-                    pos += 3;
+                    m_destImage[pos + 3] = m_srcImage[pos + 3];
+                    pos += 4;
                 }
                 if (cancelEvent.Value) {
                     return;
