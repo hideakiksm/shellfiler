@@ -45,7 +45,7 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(62, 12);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(270, 12);
+            this.label1.Size = new System.Drawing.Size(272, 15);
             this.label1.TabIndex = 3;
             this.label1.Text = "フィルターで使用中の条件が以下の通り変更されました。";
             // 
@@ -54,22 +54,23 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(61, 38);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(396, 12);
+            this.label2.Size = new System.Drawing.Size(398, 15);
             this.label2.TabIndex = 3;
             this.label2.Text = "このメッセージを閉じた後、フィルターを指定すると、新しい定義で条件を適用します。";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(61, 50);
+            this.label3.Location = new System.Drawing.Point(61, 53);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(363, 12);
+            this.label3.Size = new System.Drawing.Size(365, 15);
             this.label3.TabIndex = 3;
             this.label3.Text = "現在の条件を使用したい場合は、そのままダイアログをキャンセルしてください。";
             // 
             // listViewMessage
             // 
             this.listViewMessage.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.None;
+            this.listViewMessage.HideSelection = false;
             this.listViewMessage.Location = new System.Drawing.Point(12, 79);
             this.listViewMessage.Name = "listViewMessage";
             this.listViewMessage.Size = new System.Drawing.Size(470, 102);
@@ -90,8 +91,8 @@
             // FileListFilterMessageDialog
             // 
             this.AcceptButton = this.buttonClose;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.CancelButton = this.buttonClose;
             this.ClientSize = new System.Drawing.Size(494, 225);
             this.Controls.Add(this.buttonClose);
@@ -100,6 +101,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBoxIcon);
+            this.Font = new System.Drawing.Font("Yu Gothic UI", 9F);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.MaximizeBox = false;
             this.MinimizeBox = false;

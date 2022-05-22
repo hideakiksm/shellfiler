@@ -41,23 +41,23 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(12, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(78, 12);
+            this.label1.Size = new System.Drawing.Size(86, 15);
             this.label1.TabIndex = 0;
             this.label1.Text = "新しい名前(&N):";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(12, 53);
+            this.label2.Location = new System.Drawing.Point(12, 55);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(63, 12);
+            this.label2.Size = new System.Drawing.Size(65, 15);
             this.label2.TabIndex = 2;
             this.label2.Text = "現在の名前";
             // 
             // textBoxFileNameCurrent
             // 
             this.textBoxFileNameCurrent.Font = new System.Drawing.Font("MS UI Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.textBoxFileNameCurrent.Location = new System.Drawing.Point(27, 69);
+            this.textBoxFileNameCurrent.Location = new System.Drawing.Point(27, 73);
             this.textBoxFileNameCurrent.Name = "textBoxFileNameCurrent";
             this.textBoxFileNameCurrent.ReadOnly = true;
             this.textBoxFileNameCurrent.Size = new System.Drawing.Size(403, 20);
@@ -66,7 +66,7 @@
             // textBoxFileName
             // 
             this.textBoxFileName.Font = new System.Drawing.Font("MS UI Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.textBoxFileName.Location = new System.Drawing.Point(27, 24);
+            this.textBoxFileName.Location = new System.Drawing.Point(27, 26);
             this.textBoxFileName.Name = "textBoxFileName";
             this.textBoxFileName.Size = new System.Drawing.Size(403, 20);
             this.textBoxFileName.TabIndex = 1;
@@ -74,7 +74,7 @@
             // buttonCancel
             // 
             this.buttonCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.buttonCancel.Location = new System.Drawing.Point(355, 107);
+            this.buttonCancel.Location = new System.Drawing.Point(355, 112);
             this.buttonCancel.Name = "buttonCancel";
             this.buttonCancel.Size = new System.Drawing.Size(75, 23);
             this.buttonCancel.TabIndex = 4;
@@ -83,7 +83,7 @@
             // 
             // buttonOk
             // 
-            this.buttonOk.Location = new System.Drawing.Point(274, 107);
+            this.buttonOk.Location = new System.Drawing.Point(274, 112);
             this.buttonOk.Name = "buttonOk";
             this.buttonOk.Size = new System.Drawing.Size(75, 23);
             this.buttonOk.TabIndex = 3;
@@ -94,8 +94,8 @@
             // GitRenameDialog
             // 
             this.AcceptButton = this.buttonOk;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.CancelButton = this.buttonCancel;
             this.ClientSize = new System.Drawing.Size(442, 147);
             this.Controls.Add(this.textBoxFileNameCurrent);
@@ -104,6 +104,7 @@
             this.Controls.Add(this.buttonCancel);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label2);
+            this.Font = new System.Drawing.Font("Yu Gothic UI", 9F);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.MinimizeBox = false;

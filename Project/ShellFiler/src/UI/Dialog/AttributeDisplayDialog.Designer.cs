@@ -31,7 +31,7 @@
             // buttonOk
             // 
             this.buttonOk.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.buttonOk.Location = new System.Drawing.Point(479, 296);
+            this.buttonOk.Location = new System.Drawing.Point(480, 303);
             this.buttonOk.Name = "buttonOk";
             this.buttonOk.Size = new System.Drawing.Size(75, 23);
             this.buttonOk.TabIndex = 0;
@@ -41,7 +41,8 @@
             // listViewAttribute
             // 
             this.listViewAttribute.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
-            this.listViewAttribute.Location = new System.Drawing.Point(12, 28);
+            this.listViewAttribute.HideSelection = false;
+            this.listViewAttribute.Location = new System.Drawing.Point(12, 32);
             this.listViewAttribute.MultiSelect = false;
             this.listViewAttribute.Name = "listViewAttribute";
             this.listViewAttribute.Size = new System.Drawing.Size(542, 262);
@@ -54,20 +55,21 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(12, 13);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(87, 12);
+            this.label1.Size = new System.Drawing.Size(89, 15);
             this.label1.TabIndex = 2;
             this.label1.Text = "現在の詳細属性";
             // 
             // AttributeDisplayDialog
             // 
             this.AcceptButton = this.buttonOk;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.CancelButton = this.buttonOk;
-            this.ClientSize = new System.Drawing.Size(567, 331);
+            this.ClientSize = new System.Drawing.Size(567, 338);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.listViewAttribute);
             this.Controls.Add(this.buttonOk);
+            this.Font = new System.Drawing.Font("Yu Gothic UI", 9F);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.MinimizeBox = false;

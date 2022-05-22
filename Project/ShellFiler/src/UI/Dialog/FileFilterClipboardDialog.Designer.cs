@@ -48,105 +48,122 @@
             this.radioButtonFile = new System.Windows.Forms.RadioButton();
             this.textBoxDest = new System.Windows.Forms.TextBox();
             this.radioButtonClipboard = new System.Windows.Forms.RadioButton();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.panel1.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(10, 35);
+            this.label3.Location = new System.Drawing.Point(17, 52);
+            this.label3.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(43, 12);
+            this.label3.Size = new System.Drawing.Size(66, 18);
             this.label3.TabIndex = 3;
             this.label3.Text = "保存先:";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(12, 84);
+            this.label5.Location = new System.Drawing.Point(20, 123);
+            this.label5.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(108, 12);
+            this.label5.Size = new System.Drawing.Size(161, 18);
             this.label5.TabIndex = 8;
             this.label5.Text = "使用するフィルター(&F):";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(327, 84);
+            this.label6.Location = new System.Drawing.Point(545, 123);
+            this.label6.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(105, 12);
+            this.label6.Size = new System.Drawing.Size(157, 18);
             this.label6.TabIndex = 14;
             this.label6.Text = "すべてのフィルター(&N):";
             // 
             // listBoxUse
             // 
+            this.listBoxUse.Dock = System.Windows.Forms.DockStyle.Fill;
             this.listBoxUse.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
             this.listBoxUse.FormattingEnabled = true;
             this.listBoxUse.ItemHeight = 12;
-            this.listBoxUse.Location = new System.Drawing.Point(12, 99);
+            this.listBoxUse.Location = new System.Drawing.Point(0, 0);
+            this.listBoxUse.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.listBoxUse.Name = "listBoxUse";
-            this.listBoxUse.Size = new System.Drawing.Size(230, 148);
+            this.listBoxUse.Size = new System.Drawing.Size(385, 220);
             this.listBoxUse.TabIndex = 9;
             // 
             // buttonAdd
             // 
-            this.buttonAdd.Location = new System.Drawing.Point(248, 99);
+            this.buttonAdd.Location = new System.Drawing.Point(413, 148);
+            this.buttonAdd.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.buttonAdd.Name = "buttonAdd";
-            this.buttonAdd.Size = new System.Drawing.Size(75, 23);
+            this.buttonAdd.Size = new System.Drawing.Size(125, 34);
             this.buttonAdd.TabIndex = 10;
             this.buttonAdd.Text = "<< 追加(&A)";
             this.buttonAdd.UseVisualStyleBackColor = true;
             // 
             // buttonDelete
             // 
-            this.buttonDelete.Location = new System.Drawing.Point(248, 128);
+            this.buttonDelete.Location = new System.Drawing.Point(413, 192);
+            this.buttonDelete.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.buttonDelete.Name = "buttonDelete";
-            this.buttonDelete.Size = new System.Drawing.Size(75, 23);
+            this.buttonDelete.Size = new System.Drawing.Size(125, 34);
             this.buttonDelete.TabIndex = 11;
             this.buttonDelete.Text = "削除(&L) >>";
             this.buttonDelete.UseVisualStyleBackColor = true;
             // 
             // buttonUp
             // 
-            this.buttonUp.Location = new System.Drawing.Point(248, 195);
+            this.buttonUp.Location = new System.Drawing.Point(413, 292);
+            this.buttonUp.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.buttonUp.Name = "buttonUp";
-            this.buttonUp.Size = new System.Drawing.Size(75, 23);
+            this.buttonUp.Size = new System.Drawing.Size(125, 34);
             this.buttonUp.TabIndex = 12;
             this.buttonUp.Text = "上へ(&U)";
             this.buttonUp.UseVisualStyleBackColor = true;
             // 
             // buttonDown
             // 
-            this.buttonDown.Location = new System.Drawing.Point(248, 224);
+            this.buttonDown.Location = new System.Drawing.Point(413, 336);
+            this.buttonDown.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.buttonDown.Name = "buttonDown";
-            this.buttonDown.Size = new System.Drawing.Size(75, 23);
+            this.buttonDown.Size = new System.Drawing.Size(125, 34);
             this.buttonDown.TabIndex = 13;
             this.buttonDown.Text = "下へ(&D)";
             this.buttonDown.UseVisualStyleBackColor = true;
             // 
             // listBoxAllFilter
             // 
+            this.listBoxAllFilter.Dock = System.Windows.Forms.DockStyle.Fill;
             this.listBoxAllFilter.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.listBoxAllFilter.FormattingEnabled = true;
             this.listBoxAllFilter.ItemHeight = 16;
-            this.listBoxAllFilter.Location = new System.Drawing.Point(329, 99);
+            this.listBoxAllFilter.Location = new System.Drawing.Point(0, 0);
+            this.listBoxAllFilter.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.listBoxAllFilter.Name = "listBoxAllFilter";
-            this.listBoxAllFilter.Size = new System.Drawing.Size(230, 148);
+            this.listBoxAllFilter.Size = new System.Drawing.Size(387, 220);
             this.listBoxAllFilter.TabIndex = 15;
             // 
             // panelFilterProp
             // 
             this.panelFilterProp.BackColor = System.Drawing.SystemColors.Window;
             this.panelFilterProp.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panelFilterProp.Location = new System.Drawing.Point(12, 253);
+            this.panelFilterProp.Location = new System.Drawing.Point(20, 380);
+            this.panelFilterProp.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.panelFilterProp.Name = "panelFilterProp";
-            this.panelFilterProp.Size = new System.Drawing.Size(656, 156);
+            this.panelFilterProp.Size = new System.Drawing.Size(1092, 233);
             this.panelFilterProp.TabIndex = 21;
             // 
             // buttonRef
             // 
-            this.buttonRef.Location = new System.Drawing.Point(593, 30);
+            this.buttonRef.Location = new System.Drawing.Point(988, 45);
+            this.buttonRef.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.buttonRef.Name = "buttonRef";
-            this.buttonRef.Size = new System.Drawing.Size(75, 23);
+            this.buttonRef.Size = new System.Drawing.Size(125, 34);
             this.buttonRef.TabIndex = 6;
             this.buttonRef.Text = "参照(&R)...";
             this.buttonRef.UseVisualStyleBackColor = true;
@@ -154,9 +171,10 @@
             // 
             // buttonQuick1
             // 
-            this.buttonQuick1.Location = new System.Drawing.Point(565, 99);
+            this.buttonQuick1.Location = new System.Drawing.Point(942, 148);
+            this.buttonQuick1.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.buttonQuick1.Name = "buttonQuick1";
-            this.buttonQuick1.Size = new System.Drawing.Size(103, 23);
+            this.buttonQuick1.Size = new System.Drawing.Size(172, 34);
             this.buttonQuick1.TabIndex = 16;
             this.buttonQuick1.Text = "クイック1(&1)";
             this.buttonQuick1.UseVisualStyleBackColor = true;
@@ -164,9 +182,10 @@
             // 
             // buttonQuick2
             // 
-            this.buttonQuick2.Location = new System.Drawing.Point(565, 128);
+            this.buttonQuick2.Location = new System.Drawing.Point(942, 192);
+            this.buttonQuick2.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.buttonQuick2.Name = "buttonQuick2";
-            this.buttonQuick2.Size = new System.Drawing.Size(103, 23);
+            this.buttonQuick2.Size = new System.Drawing.Size(172, 34);
             this.buttonQuick2.TabIndex = 17;
             this.buttonQuick2.Text = "クイック2(&2)";
             this.buttonQuick2.UseVisualStyleBackColor = true;
@@ -174,9 +193,10 @@
             // 
             // buttonQuick3
             // 
-            this.buttonQuick3.Location = new System.Drawing.Point(565, 157);
+            this.buttonQuick3.Location = new System.Drawing.Point(942, 236);
+            this.buttonQuick3.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.buttonQuick3.Name = "buttonQuick3";
-            this.buttonQuick3.Size = new System.Drawing.Size(103, 23);
+            this.buttonQuick3.Size = new System.Drawing.Size(172, 34);
             this.buttonQuick3.TabIndex = 18;
             this.buttonQuick3.Text = "クイック3(&3)";
             this.buttonQuick3.UseVisualStyleBackColor = true;
@@ -184,9 +204,10 @@
             // 
             // buttonQuickSetting
             // 
-            this.buttonQuickSetting.Location = new System.Drawing.Point(565, 224);
+            this.buttonQuickSetting.Location = new System.Drawing.Point(942, 336);
+            this.buttonQuickSetting.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.buttonQuickSetting.Name = "buttonQuickSetting";
-            this.buttonQuickSetting.Size = new System.Drawing.Size(103, 23);
+            this.buttonQuickSetting.Size = new System.Drawing.Size(172, 34);
             this.buttonQuickSetting.TabIndex = 20;
             this.buttonQuickSetting.Text = "クイック設定(&S)...";
             this.buttonQuickSetting.UseVisualStyleBackColor = true;
@@ -195,18 +216,20 @@
             // buttonCancel
             // 
             this.buttonCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.buttonCancel.Location = new System.Drawing.Point(593, 415);
+            this.buttonCancel.Location = new System.Drawing.Point(988, 622);
+            this.buttonCancel.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.buttonCancel.Name = "buttonCancel";
-            this.buttonCancel.Size = new System.Drawing.Size(75, 23);
+            this.buttonCancel.Size = new System.Drawing.Size(125, 34);
             this.buttonCancel.TabIndex = 23;
             this.buttonCancel.Text = "キャンセル";
             this.buttonCancel.UseVisualStyleBackColor = true;
             // 
             // buttonOk
             // 
-            this.buttonOk.Location = new System.Drawing.Point(512, 415);
+            this.buttonOk.Location = new System.Drawing.Point(853, 622);
+            this.buttonOk.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.buttonOk.Name = "buttonOk";
-            this.buttonOk.Size = new System.Drawing.Size(75, 23);
+            this.buttonOk.Size = new System.Drawing.Size(125, 34);
             this.buttonOk.TabIndex = 22;
             this.buttonOk.Text = "OK";
             this.buttonOk.UseVisualStyleBackColor = true;
@@ -214,9 +237,10 @@
             // 
             // buttonQuick4
             // 
-            this.buttonQuick4.Location = new System.Drawing.Point(565, 186);
+            this.buttonQuick4.Location = new System.Drawing.Point(942, 279);
+            this.buttonQuick4.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.buttonQuick4.Name = "buttonQuick4";
-            this.buttonQuick4.Size = new System.Drawing.Size(103, 23);
+            this.buttonQuick4.Size = new System.Drawing.Size(172, 34);
             this.buttonQuick4.TabIndex = 19;
             this.buttonQuick4.Text = "クイック4(&4)";
             this.buttonQuick4.UseVisualStyleBackColor = true;
@@ -226,43 +250,48 @@
             // 
             this.comboBoxCharset.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxCharset.FormattingEnabled = true;
-            this.comboBoxCharset.Location = new System.Drawing.Point(94, 6);
+            this.comboBoxCharset.Location = new System.Drawing.Point(157, 9);
+            this.comboBoxCharset.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.comboBoxCharset.Name = "comboBoxCharset";
-            this.comboBoxCharset.Size = new System.Drawing.Size(112, 20);
+            this.comboBoxCharset.Size = new System.Drawing.Size(184, 26);
             this.comboBoxCharset.TabIndex = 1;
             // 
             // labelCharset
             // 
             this.labelCharset.AutoSize = true;
-            this.labelCharset.Location = new System.Drawing.Point(10, 9);
+            this.labelCharset.Location = new System.Drawing.Point(17, 14);
+            this.labelCharset.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.labelCharset.Name = "labelCharset";
-            this.labelCharset.Size = new System.Drawing.Size(74, 12);
+            this.labelCharset.Size = new System.Drawing.Size(110, 18);
             this.labelCharset.TabIndex = 0;
             this.labelCharset.Text = "文字コード(&C):";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(212, 9);
+            this.label2.Location = new System.Drawing.Point(353, 14);
+            this.label2.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(396, 12);
+            this.label2.Size = new System.Drawing.Size(595, 18);
             this.label2.TabIndex = 2;
             this.label2.Text = "クリップボードの文字列をこの文字コードにしてから、フィルターを適用して保存します。";
             // 
             // labelFreeware
             // 
             this.labelFreeware.AutoSize = true;
-            this.labelFreeware.Location = new System.Drawing.Point(12, 426);
+            this.labelFreeware.Location = new System.Drawing.Point(20, 639);
+            this.labelFreeware.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.labelFreeware.Name = "labelFreeware";
-            this.labelFreeware.Size = new System.Drawing.Size(0, 12);
+            this.labelFreeware.Size = new System.Drawing.Size(0, 18);
             this.labelFreeware.TabIndex = 24;
             // 
             // radioButtonFile
             // 
             this.radioButtonFile.AutoSize = true;
-            this.radioButtonFile.Location = new System.Drawing.Point(94, 33);
+            this.radioButtonFile.Location = new System.Drawing.Point(157, 50);
+            this.radioButtonFile.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.radioButtonFile.Name = "radioButtonFile";
-            this.radioButtonFile.Size = new System.Drawing.Size(68, 16);
+            this.radioButtonFile.Size = new System.Drawing.Size(98, 22);
             this.radioButtonFile.TabIndex = 4;
             this.radioButtonFile.TabStop = true;
             this.radioButtonFile.Text = "ファイル(&I)";
@@ -271,30 +300,50 @@
             // 
             // textBoxDest
             // 
-            this.textBoxDest.Location = new System.Drawing.Point(191, 32);
+            this.textBoxDest.Location = new System.Drawing.Point(318, 48);
+            this.textBoxDest.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.textBoxDest.Name = "textBoxDest";
-            this.textBoxDest.Size = new System.Drawing.Size(396, 19);
+            this.textBoxDest.Size = new System.Drawing.Size(657, 25);
             this.textBoxDest.TabIndex = 5;
             // 
             // radioButtonClipboard
             // 
             this.radioButtonClipboard.AutoSize = true;
-            this.radioButtonClipboard.Location = new System.Drawing.Point(94, 54);
+            this.radioButtonClipboard.Location = new System.Drawing.Point(157, 81);
+            this.radioButtonClipboard.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.radioButtonClipboard.Name = "radioButtonClipboard";
-            this.radioButtonClipboard.Size = new System.Drawing.Size(98, 16);
+            this.radioButtonClipboard.Size = new System.Drawing.Size(144, 22);
             this.radioButtonClipboard.TabIndex = 7;
             this.radioButtonClipboard.TabStop = true;
             this.radioButtonClipboard.Text = "クリップボード(&P)";
             this.radioButtonClipboard.UseVisualStyleBackColor = true;
             this.radioButtonClipboard.CheckedChanged += new System.EventHandler(this.RadioButton_CheckedChanged);
             // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.listBoxUse);
+            this.panel1.Location = new System.Drawing.Point(20, 148);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(385, 220);
+            this.panel1.TabIndex = 25;
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.listBoxAllFilter);
+            this.panel2.Location = new System.Drawing.Point(547, 148);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(387, 220);
+            this.panel2.TabIndex = 26;
+            // 
             // FileFilterClipboardDialog
             // 
             this.AcceptButton = this.buttonOk;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.buttonCancel;
-            this.ClientSize = new System.Drawing.Size(680, 448);
+            this.ClientSize = new System.Drawing.Size(1133, 672);
+            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.textBoxDest);
             this.Controls.Add(this.radioButtonClipboard);
             this.Controls.Add(this.radioButtonFile);
@@ -315,12 +364,11 @@
             this.Controls.Add(this.buttonUp);
             this.Controls.Add(this.buttonDelete);
             this.Controls.Add(this.buttonAdd);
-            this.Controls.Add(this.listBoxAllFilter);
-            this.Controls.Add(this.listBoxUse);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label3);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FileFilterClipboardDialog";
@@ -328,6 +376,8 @@
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "クリップボードをテキスト変換";
+            this.panel1.ResumeLayout(false);
+            this.panel2.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -360,5 +410,7 @@
         private System.Windows.Forms.RadioButton radioButtonFile;
         private System.Windows.Forms.TextBox textBoxDest;
         private System.Windows.Forms.RadioButton radioButtonClipboard;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panel2;
     }
 }

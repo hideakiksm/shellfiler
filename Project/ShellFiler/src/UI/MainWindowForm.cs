@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Drawing;
 using System.Windows.Forms;
 using ShellFiler.Api;
 using ShellFiler.Document.Setting;
@@ -49,6 +50,12 @@ namespace ShellFiler.UI {
         // フォーカスの位置
         private ActiveControlType m_activeControl = ActiveControlType.FileListView;
 
+        // X方向の96dpiに対する解像度の比
+        private static float s_dpiX = -1;
+
+        // Y方向の96dpiに対する解像度の比
+        private static float s_dpiY = -1;
+
         // カーソルの左右に変化が生じたときの通知用delegate
         public delegate void CursorLRChangedHandler(object sender, EventArgs evt); 
 
@@ -63,6 +70,10 @@ namespace ShellFiler.UI {
         public MainWindowForm() {
             InitializeComponent();
             this.Icon = Resources.ShellFilerMain;
+            using (Graphics g = CreateGraphics()) {
+                s_dpiX = g.DpiX / HighDpiGraphics.STANDARD_DPI_X;
+                s_dpiY = g.DpiY / HighDpiGraphics.STANDARD_DPI_Y;
+            }
         }
 
         //=========================================================================================
@@ -497,6 +508,57 @@ namespace ShellFiler.UI {
         //=========================================================================================
         public void TwoStrokeKeyStateChanged(TwoStrokeType newState) {
             this.toolStripMain.TwoStrokeKeyStateChanged(newState);
+        }
+
+        //=========================================================================================
+        // 機　能：X座標を解像度に合わせて座標変換する
+        // 引　数：[in]x    X座標
+        // 戻り値：高解像度対応のX座標
+        //=========================================================================================
+        public static int X(int x) {
+            int xHighDpi = (int)(s_dpiX * x);
+            return xHighDpi;
+        }
+
+        //=========================================================================================
+        // 機　能：X座標を解像度に合わせて座標変換する
+        // 引　数：[in]x    X座標
+        // 戻り値：高解像度対応のX座標
+        //=========================================================================================
+        public static float Xf(float x) {
+            float xHighDpi = s_dpiX * x;
+            return xHighDpi;
+        }
+
+        //=========================================================================================
+        // 機　能：X方向の解像度比率を返す
+        // 引　数：なし
+        // 戻り値：解像度比率[%]
+        //=========================================================================================
+        public static int XDpiRatio {
+            get {
+                return (int)(s_dpiX * 100);
+            }
+        }
+
+        //=========================================================================================
+        // 機　能：Y座標を解像度に合わせて座標変換する
+        // 引　数：[in]y    Y座標
+        // 戻り値：高解像度対応のY座標
+        //=========================================================================================
+        public static int Y(int y) {
+            int yHighDpi = (int)(s_dpiY * y);
+            return yHighDpi;
+        }
+
+        //=========================================================================================
+        // 機　能：Y座標を解像度に合わせて座標変換する
+        // 引　数：[in]y    Y座標
+        // 戻り値：高解像度対応のY座標
+        //=========================================================================================
+        public static float Yf(float y) {
+            float yHighDpi = s_dpiY * y;
+            return yHighDpi;
         }
 
         //=========================================================================================

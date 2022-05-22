@@ -68,7 +68,7 @@ namespace ShellFiler.UI.FileList.ThumbList {
 
             ThumbListViewState thumbViewState = (ThumbListViewState)viewState;
             FileListViewMode viewMode = thumbViewState.FileListViewMode;
-            m_fileLineRenderer = new ThumbListRenderer(viewMode);
+            m_fileLineRenderer = new ThumbListRenderer(fileListView, viewMode);
 
             OnRefreshDirectory(new ChangeDirectoryParam.Initial(m_parent.FileList.DisplayDirectoryName));
         }
@@ -257,7 +257,7 @@ namespace ShellFiler.UI.FileList.ThumbList {
         // 戻り値：なし
         //=========================================================================================
         public void RefreshViewMode(FileListViewMode viewMode) {
-            m_fileLineRenderer = new ThumbListRenderer(viewMode);
+            m_fileLineRenderer = new ThumbListRenderer(m_parent, viewMode);
             OnSizeChange();
             m_parent.Invalidate();
         }
@@ -273,7 +273,7 @@ namespace ShellFiler.UI.FileList.ThumbList {
             int cyHorzScrollbar = SystemInformation.HorizontalScrollBarHeight;
             int cxVerticalScrollbar = SystemInformation.VerticalScrollBarWidth;
 
-            Size itemSize = m_fileLineRenderer.FileItemSize;
+            Size itemSize = m_fileLineRenderer.FileItemSizeDpiModified;
             m_completeColumnSize = Math.Max(1, (m_parent.Width - cxVerticalScrollbar) / (itemSize.Width + ThumbListRenderer.MARGIN_ITEM));
             m_completeLineSize = Math.Max(1, (m_parent.Height - cyHorzScrollbar) / (itemSize.Height + ThumbListRenderer.MARGIN_ITEM));
 
@@ -371,7 +371,7 @@ namespace ShellFiler.UI.FileList.ThumbList {
         // 戻り値：なし
         //=========================================================================================
         public void OnPaint(Graphics gcs) {
-            FileListGraphics g = new FileListGraphics(gcs, 0, m_fileLineRenderer.FileItemSize.Height);
+            FileListGraphics g = new FileListGraphics(gcs, 0, m_fileLineRenderer.FileItemSizeDpiModified.Height);
             try {
                 // ファイル一覧を描画
                 g.Graphics.FillRectangle(g.FileListBackBrush, ScrollRectangle);
@@ -383,7 +383,7 @@ namespace ShellFiler.UI.FileList.ThumbList {
                     DrawNoFile(g);
                 } else {
                     // ファイルがあるとき
-                    int extendLine = SystemInformation.HorizontalScrollBarHeight / m_fileLineRenderer.ImageSize.Height + 1;
+                    int extendLine = SystemInformation.HorizontalScrollBarHeight / m_fileLineRenderer.ImageRawSize.Height + 1;
                     int cursorFileScreenX = CursorLineNo % m_completeColumnSize;
                     int cursorFileScreenY = CursorLineNo / m_completeColumnSize - m_topLine;
                     for (int y = 0; y < m_completeLineSize + extendLine; y++) {
@@ -407,7 +407,7 @@ namespace ShellFiler.UI.FileList.ThumbList {
         // 戻り値：なし
         //=========================================================================================
         private void RequestThumbnailLoading() {
-            ThumbnailLoadManager loadTarget = new ThumbnailLoadManager(m_fileLineRenderer.ImageSize);
+            ThumbnailLoadManager loadTarget = new ThumbnailLoadManager(m_fileLineRenderer.ImageRawSize);
             FileCrawlerCreateThumbnailRequestParam param = loadTarget.CreateLoadRequest(m_parent.FileList, m_topLine, m_cursorScreenX, m_cursorScreenY, m_completeColumnSize, m_completeLineSize);
             if (param != null) {
                 Program.Document.FileCrawlThread.RequestNewFileCrawl(m_parent.FileList, CrawlType.Thumbnail, param);
@@ -468,11 +468,11 @@ namespace ShellFiler.UI.FileList.ThumbList {
                 withCursor = false;
             }
 
-            Point pos = GetItemScreenPosition(scrColumn, scrLine);
+            Point pos = GetItemScreenPosition(g, scrColumn, scrLine);
             if (dblBuffer) {
-                Bitmap bmpBuffer = new Bitmap(m_fileLineRenderer.FileItemSize.Width, m_fileLineRenderer.FileItemSize.Height);
+                Bitmap bmpBuffer = new Bitmap(m_fileLineRenderer.FileItemSizeDpiModified.Width, m_fileLineRenderer.FileItemSizeDpiModified.Height);
                 Graphics gBmp = Graphics.FromImage(bmpBuffer);
-                FileListGraphics gDraw = new FileListGraphics(gBmp, 0, m_fileLineRenderer.FileItemSize.Height);
+                FileListGraphics gDraw = new FileListGraphics(gBmp, 0, m_fileLineRenderer.FileItemSizeDpiModified.Height);
                 try {
                     m_fileLineRenderer.DrawItem(gDraw, 0, 0, IsActiveDraw, m_parent.FileList.Files[idxTarget], withCursor);
                 } finally {
@@ -488,33 +488,34 @@ namespace ShellFiler.UI.FileList.ThumbList {
 
         //=========================================================================================
         // 機　能：項目の画面上での位置を返す
-        // 引　数：[in]scrColumn  描画する画面上の桁
+        // 引　数：[in]g          描画に使用するグラフィックス
+        // 　　　　[in]scrColumn  描画する画面上の桁
         // 　　　　[in]scrLine    描画する画面上の行
         // 戻り値：項目の画面上での位置
         //=========================================================================================
-        private Point GetItemScreenPosition(int scrColumn, int scrLine) {
+        private Point GetItemScreenPosition(FileListGraphics g, int scrColumn, int scrLine) {
             // X方向を判定
             int xPos;
             if (m_completeColumnSize == 1) {
                 xPos = 0;
             } else {
-                int xSpace = (m_parent.ClientRectangle.Width - (m_fileLineRenderer.FileItemSize.Width + ThumbListRenderer.MARGIN_ITEM) * m_completeColumnSize) / m_completeColumnSize;
-                xPos = (m_fileLineRenderer.FileItemSize.Width + ThumbListRenderer.MARGIN_ITEM + xSpace) * scrColumn;
+                int xSpace = (m_parent.ClientRectangle.Width - (m_fileLineRenderer.FileItemSizeDpiModified.Width + g.X(ThumbListRenderer.MARGIN_ITEM)) * m_completeColumnSize) / m_completeColumnSize;
+                xPos = (m_fileLineRenderer.FileItemSizeDpiModified.Width + g.X(ThumbListRenderer.MARGIN_ITEM) + xSpace) * scrColumn;
             }
 
             // Y方向を判定
-            int yPos = (m_fileLineRenderer.FileItemSize.Height + ThumbListRenderer.MARGIN_ITEM) * scrLine;
+            int yPos = (m_fileLineRenderer.FileItemSizeDpiModified.Height + g.Y(ThumbListRenderer.MARGIN_ITEM)) * scrLine;
             
             return new Point(xPos, yPos);
         }
 
         //=========================================================================================
         // 機　能：１行の高さを返す
-        // 引　数：なし
+        // 引　数：[in]g          描画に使用するグラフィックス
         // 戻り値：１行の高さ
         //=========================================================================================
-        private int GetLineHeight() {
-            int height = m_fileLineRenderer.FileItemSize.Height + ThumbListRenderer.MARGIN_ITEM;
+        private int GetLineHeight(FileListGraphics g) {
+            int height = m_fileLineRenderer.FileItemSizeDpiModified.Height + g.Y(ThumbListRenderer.MARGIN_ITEM);
             return height;
         }
 
@@ -527,53 +528,55 @@ namespace ShellFiler.UI.FileList.ThumbList {
         // 戻り値：項目の画面上での位置
         //=========================================================================================
         private void GetScreenItemIndexFromPosition(Point scrPos, out Point index, out bool hit, out bool centerHit) {
-            hit = true;
-            centerHit = true;
+            using (HighDpiGraphics g = new HighDpiGraphics(m_parent)) {
+                hit = true;
+                centerHit = true;
 
-            // X方向を判定
-            int xIndex;
-            int xItemStart;
-            int cxItem = m_fileLineRenderer.FileItemSize.Width;
-            int cxImage = m_fileLineRenderer.ImageSize.Width;
-            if (m_completeColumnSize == 1) {
-                xIndex = 0;
-                xItemStart = 0;
-            } else {
-                int xSpace = (m_parent.ClientRectangle.Width - (cxItem + ThumbListRenderer.MARGIN_ITEM) * m_completeColumnSize) / m_completeColumnSize;
-                xIndex = scrPos.X / (cxItem + ThumbListRenderer.MARGIN_ITEM + xSpace);
-                xItemStart = (cxItem + ThumbListRenderer.MARGIN_ITEM + xSpace) * xIndex;
-                if (xIndex >= m_completeColumnSize) {
-                    xIndex = m_completeColumnSize - 1;
+                // X方向を判定
+                int xIndex;
+                int xItemStart;
+                int cxItem = m_fileLineRenderer.FileItemSizeDpiModified.Width;
+                int cxImage = g.X(m_fileLineRenderer.ImageRawSize.Width);
+                if (m_completeColumnSize == 1) {
+                    xIndex = 0;
+                    xItemStart = 0;
+                } else {
+                    int xSpace = (m_parent.ClientRectangle.Width - (cxItem + g.X(ThumbListRenderer.MARGIN_ITEM)) * m_completeColumnSize) / m_completeColumnSize;
+                    xIndex = scrPos.X / (cxItem + g.X(ThumbListRenderer.MARGIN_ITEM) + xSpace);
+                    xItemStart = (cxItem + g.X(ThumbListRenderer.MARGIN_ITEM) + xSpace) * xIndex;
+                    if (xIndex >= m_completeColumnSize) {
+                        xIndex = m_completeColumnSize - 1;
+                        hit = false;
+                        centerHit = false;
+                    }
+                }
+                if (scrPos.X < xItemStart || scrPos.X > xItemStart + cxItem) {
                     hit = false;
+                }
+                if (scrPos.X < xItemStart + cxImage / 3 || scrPos.X > xItemStart + cxImage * 2 / 3) {
                     centerHit = false;
                 }
-            }
-            if (scrPos.X < xItemStart || scrPos.X > xItemStart + cxItem) {
-                hit = false;
-            }
-            if (scrPos.X < xItemStart + cxImage / 3 || scrPos.X > xItemStart + cxImage * 2 / 3) {
-                centerHit = false;
-            }
 
-            // Y方向を判定
-            int cyItem = m_fileLineRenderer.FileItemSize.Height;
-            int cyImage = m_fileLineRenderer.ImageSize.Height;
-            int yIndex = scrPos.Y / (cyItem + ThumbListRenderer.MARGIN_ITEM);
-            if (scrPos.Y < 0) {
-                yIndex--;
-            }
-            int yItemStart = (cyItem + ThumbListRenderer.MARGIN_ITEM) * yIndex;
-            if (scrPos.Y < yItemStart || scrPos.Y > yItemStart + cyItem) {
-                hit = false;
-            }
-            if (scrPos.Y < yItemStart + cyImage / 3 || scrPos.Y > yItemStart + cyImage * 2 / 3) {
-                centerHit = false;
-            }
+                // Y方向を判定
+                int cyItem = m_fileLineRenderer.FileItemSizeDpiModified.Height;
+                int cyImage = g.Y(m_fileLineRenderer.ImageRawSize.Height);
+                int yIndex = scrPos.Y / (cyItem + g.Y(ThumbListRenderer.MARGIN_ITEM));
+                if (scrPos.Y < 0) {
+                    yIndex--;
+                }
+                int yItemStart = (cyItem + g.Y(ThumbListRenderer.MARGIN_ITEM)) * yIndex;
+                if (scrPos.Y < yItemStart || scrPos.Y > yItemStart + cyItem) {
+                    hit = false;
+                }
+                if (scrPos.Y < yItemStart + cyImage / 3 || scrPos.Y > yItemStart + cyImage * 2 / 3) {
+                    centerHit = false;
+                }
 
-            // 結果を返す
-            index = new Point(xIndex, yIndex);
+                // 結果を返す
+                index = new Point(xIndex, yIndex);
+            }
         }
-        
+
         //=========================================================================================
         // 機　能：項目の画面上での大きさを返す
         // 引　数：[in]columns  項目の横方向の個数
@@ -581,7 +584,7 @@ namespace ShellFiler.UI.FileList.ThumbList {
         // 戻り値：項目の画面上での大きさ
         //=========================================================================================
         private Size GetScreenItemRegion(int columns, int lines) {
-            Size sizeItem = m_fileLineRenderer.FileItemSize;
+            Size sizeItem = m_fileLineRenderer.FileItemSizeDpiModified;
             int cx = (sizeItem.Width + ThumbListRenderer.MARGIN_ITEM) * columns;
             int cy = (sizeItem.Height + ThumbListRenderer.MARGIN_ITEM) * lines;
             Size size = new Size(cx, cy);
@@ -598,10 +601,10 @@ namespace ShellFiler.UI.FileList.ThumbList {
             try {
                 int itemX = index % m_completeColumnSize;
                 int itemY = index / m_completeColumnSize;
-                Point pos = GetItemScreenPosition(itemX, itemY - m_topLine);
-                Bitmap bmpBuffer = new Bitmap(m_fileLineRenderer.FileItemSize.Width, m_fileLineRenderer.FileItemSize.Height);
+                Point pos = GetItemScreenPosition(g, itemX, itemY - m_topLine);
+                Bitmap bmpBuffer = new Bitmap(m_fileLineRenderer.FileItemSizeDpiModified.Width, m_fileLineRenderer.FileItemSizeDpiModified.Height);
                 Graphics gBmp = Graphics.FromImage(bmpBuffer);
-                FileListGraphics gDraw = new FileListGraphics(gBmp, 0, m_fileLineRenderer.FileItemSize.Height);
+                FileListGraphics gDraw = new FileListGraphics(gBmp, 0, m_fileLineRenderer.FileItemSizeDpiModified.Height);
                 try {
                     bool withCursor = (m_parent.HasCursor && m_cursorScreenX == itemX && m_cursorScreenY + m_topLine == itemY);
                     m_fileLineRenderer.DrawItem(gDraw, 0, 0, IsActiveDraw, m_parent.FileList.Files[index], withCursor);
@@ -860,7 +863,7 @@ namespace ShellFiler.UI.FileList.ThumbList {
                         if (m_topLine > 0) {
                             DrawCursor(g, m_cursorScreenX, m_cursorScreenY, false);
                             int scrollLine = Math.Min(Math.Min(-scrIndex.Y, Configuration.Current.FileListDragMaxSpeed), m_topLine);
-                            Win32API.Win32ScrollWindow(m_parent.Handle, 0, scrollLine * GetLineHeight(), ScrollRectangle, ScrollRectangle);
+                            Win32API.Win32ScrollWindow(m_parent.Handle, 0, scrollLine * GetLineHeight(g), ScrollRectangle, ScrollRectangle);
                             m_cursorScreenX = newCursorX;
                             m_cursorScreenY = 0;
                             m_topLine -= scrollLine;
@@ -884,7 +887,7 @@ namespace ShellFiler.UI.FileList.ThumbList {
                         if (m_topLine < fileCount - m_completeLineSize) {
                             int scrollLine = Math.Min(Math.Min(scrIndex.Y - m_completeLineSize + 1, Configuration.Current.FileListDragMaxSpeed), lineCount - m_topLine - m_completeLineSize);
                             DrawCursor(g, m_cursorScreenX, m_cursorScreenY, false);
-                            Win32API.Win32ScrollWindow(m_parent.Handle, 0, -scrollLine * GetLineHeight(), ScrollRectangle, ScrollRectangle);
+                            Win32API.Win32ScrollWindow(m_parent.Handle, 0, -scrollLine * GetLineHeight(g), ScrollRectangle, ScrollRectangle);
                             m_cursorScreenX = newCursorX;
                             m_cursorScreenY = m_completeLineSize - 1;
                             m_topLine += scrollLine;
@@ -1051,7 +1054,7 @@ namespace ShellFiler.UI.FileList.ThumbList {
         // 戻り値：グラフィックス
         //=========================================================================================
         private FileListGraphics CreateFileListGraphics() {
-            return new FileListGraphics(m_parent, 0, m_fileLineRenderer.FileItemSize.Height);
+            return new FileListGraphics(m_parent, 0, m_fileLineRenderer.FileItemSizeDpiModified.Height);
         }
 
         //=========================================================================================
@@ -1587,7 +1590,7 @@ namespace ShellFiler.UI.FileList.ThumbList {
 
                 // 新しい位置を計算
                 int oldTopLine = m_topLine;
-            	int center = m_completeLineSize / 2;
+                int center = m_completeLineSize / 2;
 	            if (newIndexY < center) {
 		            m_topLine = 0;
                     m_cursorScreenX = newIndexX;
@@ -1608,7 +1611,7 @@ namespace ShellFiler.UI.FileList.ThumbList {
 
                 // 移動
                 if (oldTopLine != m_topLine) {
-                    int scrollY = (oldTopLine - m_topLine) * GetLineHeight();
+                    int scrollY = (oldTopLine - m_topLine) * GetLineHeight(g);
                     if (scrollY < m_parent.ClientRectangle.Height) {
                         Win32API.Win32ScrollWindow(m_parent.Handle, 0, scrollY, ScrollRectangle, ScrollRectangle);
                         m_parent.Update();
@@ -1640,9 +1643,11 @@ namespace ShellFiler.UI.FileList.ThumbList {
             Point ptMenu = Point.Empty;
             switch (menuPos) {
                 case ContextMenuPosition.OnFile: {
-                    Point pt = GetItemScreenPosition(m_cursorScreenX, m_cursorScreenY);
-                    int yPos = pt.Y + m_fileLineRenderer.ImageSize.Height / 2;
-                    ptMenu = m_parent.PointToScreen(new Point(pt.X + m_fileLineRenderer.ImageSize.Width + X_POS_MENU_ITEM, yPos));
+                    using (FileListGraphics g = CreateFileListGraphics()) {
+                        Point pt = GetItemScreenPosition(g, m_cursorScreenX, m_cursorScreenY);
+                        int yPos = pt.Y + m_fileLineRenderer.ImageRawSize.Height / 2;
+                        ptMenu = m_parent.PointToScreen(new Point(pt.X + m_fileLineRenderer.ImageRawSize.Width + X_POS_MENU_ITEM, yPos));
+                    }
                     break;
                 }
                 case ContextMenuPosition.FileListTop: {

@@ -52,7 +52,7 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(62, 13);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(200, 12);
+            this.label1.Size = new System.Drawing.Size(201, 15);
             this.label1.TabIndex = 0;
             this.label1.Text = "どちらのファイルとの差分を確認しますか？";
             // 
@@ -61,7 +61,7 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(62, 39);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(65, 12);
+            this.label2.Size = new System.Drawing.Size(70, 15);
             this.label2.TabIndex = 1;
             this.label2.Text = "対象ファイル:";
             // 
@@ -70,7 +70,7 @@
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(62, 63);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(65, 12);
+            this.label3.Size = new System.Drawing.Size(70, 15);
             this.label3.TabIndex = 3;
             this.label3.Text = "反対ファイル:";
             // 
@@ -79,7 +79,7 @@
             this.radioButtonName.AutoSize = true;
             this.radioButtonName.Location = new System.Drawing.Point(3, 3);
             this.radioButtonName.Name = "radioButtonName";
-            this.radioButtonName.Size = new System.Drawing.Size(91, 16);
+            this.radioButtonName.Size = new System.Drawing.Size(93, 19);
             this.radioButtonName.TabIndex = 0;
             this.radioButtonName.TabStop = true;
             this.radioButtonName.Text = "同名のファイル";
@@ -88,9 +88,9 @@
             // radioButtonMark
             // 
             this.radioButtonMark.AutoSize = true;
-            this.radioButtonMark.Location = new System.Drawing.Point(3, 28);
+            this.radioButtonMark.Location = new System.Drawing.Point(3, 30);
             this.radioButtonMark.Name = "radioButtonMark";
-            this.radioButtonMark.Size = new System.Drawing.Size(84, 16);
+            this.radioButtonMark.Size = new System.Drawing.Size(86, 19);
             this.radioButtonMark.TabIndex = 1;
             this.radioButtonMark.TabStop = true;
             this.radioButtonMark.Text = "マークファイル";
@@ -102,31 +102,31 @@
             this.textBoxTarget.Location = new System.Drawing.Point(185, 39);
             this.textBoxTarget.Name = "textBoxTarget";
             this.textBoxTarget.ReadOnly = true;
-            this.textBoxTarget.Size = new System.Drawing.Size(360, 19);
+            this.textBoxTarget.Size = new System.Drawing.Size(360, 23);
             this.textBoxTarget.TabIndex = 2;
             // 
             // textBoxOppositeName
             // 
             this.textBoxOppositeName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBoxOppositeName.Location = new System.Drawing.Point(185, 81);
+            this.textBoxOppositeName.Location = new System.Drawing.Point(185, 84);
             this.textBoxOppositeName.Name = "textBoxOppositeName";
             this.textBoxOppositeName.ReadOnly = true;
-            this.textBoxOppositeName.Size = new System.Drawing.Size(360, 19);
+            this.textBoxOppositeName.Size = new System.Drawing.Size(360, 23);
             this.textBoxOppositeName.TabIndex = 5;
             // 
             // textBoxOppositeMark
             // 
             this.textBoxOppositeMark.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBoxOppositeMark.Location = new System.Drawing.Point(185, 106);
+            this.textBoxOppositeMark.Location = new System.Drawing.Point(185, 111);
             this.textBoxOppositeMark.Name = "textBoxOppositeMark";
             this.textBoxOppositeMark.ReadOnly = true;
-            this.textBoxOppositeMark.Size = new System.Drawing.Size(360, 19);
+            this.textBoxOppositeMark.Size = new System.Drawing.Size(360, 23);
             this.textBoxOppositeMark.TabIndex = 6;
             // 
             // buttonCancel
             // 
             this.buttonCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.buttonCancel.Location = new System.Drawing.Point(472, 136);
+            this.buttonCancel.Location = new System.Drawing.Point(470, 151);
             this.buttonCancel.Name = "buttonCancel";
             this.buttonCancel.Size = new System.Drawing.Size(75, 23);
             this.buttonCancel.TabIndex = 8;
@@ -135,7 +135,7 @@
             // 
             // buttonOk
             // 
-            this.buttonOk.Location = new System.Drawing.Point(391, 136);
+            this.buttonOk.Location = new System.Drawing.Point(389, 151);
             this.buttonOk.Name = "buttonOk";
             this.buttonOk.Size = new System.Drawing.Size(75, 23);
             this.buttonOk.TabIndex = 7;
@@ -147,7 +147,7 @@
             // 
             this.panel1.Controls.Add(this.radioButtonName);
             this.panel1.Controls.Add(this.radioButtonMark);
-            this.panel1.Location = new System.Drawing.Point(75, 78);
+            this.panel1.Location = new System.Drawing.Point(75, 81);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(104, 52);
             this.panel1.TabIndex = 4;
@@ -155,10 +155,10 @@
             // DiffToolOppositeTargetDialog
             // 
             this.AcceptButton = this.buttonOk;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.CancelButton = this.buttonCancel;
-            this.ClientSize = new System.Drawing.Size(559, 171);
+            this.ClientSize = new System.Drawing.Size(559, 186);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.buttonOk);
             this.Controls.Add(this.buttonCancel);
@@ -169,6 +169,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBoxIcon);
+            this.Font = new System.Drawing.Font("Yu Gothic UI", 9F);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.MaximizeBox = false;
             this.MinimizeBox = false;

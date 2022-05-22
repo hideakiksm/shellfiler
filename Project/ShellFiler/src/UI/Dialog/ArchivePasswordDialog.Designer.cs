@@ -38,7 +38,7 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(12, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(218, 12);
+            this.label1.Size = new System.Drawing.Size(219, 15);
             this.label1.TabIndex = 0;
             this.label1.Text = "圧縮ファイルにパスワードが設定されています。";
             // 
@@ -46,10 +46,10 @@
             // 
             this.textBoxArchiveName.BackColor = System.Drawing.SystemColors.Control;
             this.textBoxArchiveName.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBoxArchiveName.Location = new System.Drawing.Point(27, 24);
+            this.textBoxArchiveName.Location = new System.Drawing.Point(27, 28);
             this.textBoxArchiveName.Name = "textBoxArchiveName";
             this.textBoxArchiveName.ReadOnly = true;
-            this.textBoxArchiveName.Size = new System.Drawing.Size(276, 12);
+            this.textBoxArchiveName.Size = new System.Drawing.Size(276, 16);
             this.textBoxArchiveName.TabIndex = 1;
             // 
             // label2
@@ -57,24 +57,24 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(12, 58);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(69, 12);
+            this.label2.Size = new System.Drawing.Size(75, 15);
             this.label2.TabIndex = 2;
             this.label2.Text = "パスワード(&P):";
             // 
             // textBoxPassword
             // 
-            this.textBoxPassword.Location = new System.Drawing.Point(27, 73);
+            this.textBoxPassword.Location = new System.Drawing.Point(27, 83);
             this.textBoxPassword.Name = "textBoxPassword";
             this.textBoxPassword.PasswordChar = '*';
-            this.textBoxPassword.Size = new System.Drawing.Size(195, 19);
+            this.textBoxPassword.Size = new System.Drawing.Size(195, 23);
             this.textBoxPassword.TabIndex = 3;
             // 
             // checkBoxShowPassword
             // 
             this.checkBoxShowPassword.AutoSize = true;
-            this.checkBoxShowPassword.Location = new System.Drawing.Point(14, 102);
+            this.checkBoxShowPassword.Location = new System.Drawing.Point(27, 114);
             this.checkBoxShowPassword.Name = "checkBoxShowPassword";
-            this.checkBoxShowPassword.Size = new System.Drawing.Size(197, 16);
+            this.checkBoxShowPassword.Size = new System.Drawing.Size(200, 19);
             this.checkBoxShowPassword.TabIndex = 4;
             this.checkBoxShowPassword.Text = "パスワードの入力内容を表示する(&V)";
             this.checkBoxShowPassword.UseVisualStyleBackColor = true;
@@ -82,7 +82,7 @@
             // 
             // buttonOk
             // 
-            this.buttonOk.Location = new System.Drawing.Point(147, 124);
+            this.buttonOk.Location = new System.Drawing.Point(166, 145);
             this.buttonOk.Name = "buttonOk";
             this.buttonOk.Size = new System.Drawing.Size(75, 23);
             this.buttonOk.TabIndex = 6;
@@ -93,7 +93,7 @@
             // buttonCancel
             // 
             this.buttonCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.buttonCancel.Location = new System.Drawing.Point(228, 124);
+            this.buttonCancel.Location = new System.Drawing.Point(247, 145);
             this.buttonCancel.Name = "buttonCancel";
             this.buttonCancel.Size = new System.Drawing.Size(75, 23);
             this.buttonCancel.TabIndex = 7;
@@ -102,7 +102,7 @@
             // 
             // buttonManage
             // 
-            this.buttonManage.Location = new System.Drawing.Point(228, 71);
+            this.buttonManage.Location = new System.Drawing.Point(228, 81);
             this.buttonManage.Name = "buttonManage";
             this.buttonManage.Size = new System.Drawing.Size(75, 23);
             this.buttonManage.TabIndex = 8;
@@ -113,10 +113,10 @@
             // ArchivePasswordDialog
             // 
             this.AcceptButton = this.buttonOk;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.CancelButton = this.buttonCancel;
-            this.ClientSize = new System.Drawing.Size(315, 157);
+            this.ClientSize = new System.Drawing.Size(334, 180);
             this.Controls.Add(this.buttonManage);
             this.Controls.Add(this.buttonCancel);
             this.Controls.Add(this.buttonOk);
@@ -125,6 +125,7 @@
             this.Controls.Add(this.textBoxArchiveName);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.Font = new System.Drawing.Font("Yu Gothic UI", 9F);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.MaximizeBox = false;
             this.MinimizeBox = false;

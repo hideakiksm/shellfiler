@@ -70,7 +70,7 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(13, 93);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(68, 12);
+            this.label1.Size = new System.Drawing.Size(75, 15);
             this.label1.TabIndex = 6;
             this.label1.Text = "ファイル名(&F):";
             // 
@@ -80,7 +80,7 @@
             this.comboBoxFileName.FormattingEnabled = true;
             this.comboBoxFileName.Location = new System.Drawing.Point(116, 90);
             this.comboBoxFileName.Name = "comboBoxFileName";
-            this.comboBoxFileName.Size = new System.Drawing.Size(154, 20);
+            this.comboBoxFileName.Size = new System.Drawing.Size(154, 23);
             this.comboBoxFileName.TabIndex = 7;
             // 
             // label2
@@ -88,7 +88,7 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(14, 121);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(72, 12);
+            this.label2.Size = new System.Drawing.Size(80, 15);
             this.label2.TabIndex = 10;
             this.label2.Text = "更新日時(&M):";
             // 
@@ -97,7 +97,7 @@
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(13, 177);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(83, 12);
+            this.label4.Size = new System.Drawing.Size(90, 15);
             this.label4.TabIndex = 13;
             this.label4.Text = "アクセス日時(&A):";
             // 
@@ -107,7 +107,7 @@
             this.comboBoxDateUpdate.FormattingEnabled = true;
             this.comboBoxDateUpdate.Location = new System.Drawing.Point(117, 118);
             this.comboBoxDateUpdate.Name = "comboBoxDateUpdate";
-            this.comboBoxDateUpdate.Size = new System.Drawing.Size(154, 20);
+            this.comboBoxDateUpdate.Size = new System.Drawing.Size(154, 23);
             this.comboBoxDateUpdate.TabIndex = 11;
             // 
             // comboBoxDateAccess
@@ -116,7 +116,7 @@
             this.comboBoxDateAccess.FormattingEnabled = true;
             this.comboBoxDateAccess.Location = new System.Drawing.Point(117, 174);
             this.comboBoxDateAccess.Name = "comboBoxDateAccess";
-            this.comboBoxDateAccess.Size = new System.Drawing.Size(154, 20);
+            this.comboBoxDateAccess.Size = new System.Drawing.Size(154, 23);
             this.comboBoxDateAccess.TabIndex = 14;
             // 
             // label5
@@ -124,7 +124,7 @@
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(14, 233);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(84, 12);
+            this.label5.Size = new System.Drawing.Size(92, 15);
             this.label5.TabIndex = 16;
             this.label5.Text = "ファイルサイズ(&L):";
             // 
@@ -134,7 +134,7 @@
             this.comboBoxSize.FormattingEnabled = true;
             this.comboBoxSize.Location = new System.Drawing.Point(117, 230);
             this.comboBoxSize.Name = "comboBoxSize";
-            this.comboBoxSize.Size = new System.Drawing.Size(154, 20);
+            this.comboBoxSize.Size = new System.Drawing.Size(154, 23);
             this.comboBoxSize.TabIndex = 17;
             // 
             // panelDateUpdate
@@ -162,7 +162,7 @@
             // 
             this.textBoxFileName.Location = new System.Drawing.Point(277, 90);
             this.textBoxFileName.Name = "textBoxFileName";
-            this.textBoxFileName.Size = new System.Drawing.Size(335, 19);
+            this.textBoxFileName.Size = new System.Drawing.Size(335, 23);
             this.textBoxFileName.TabIndex = 8;
             // 
             // label6
@@ -170,7 +170,7 @@
             this.label6.AutoSize = true;
             this.label6.Location = new System.Drawing.Point(14, 310);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(66, 12);
+            this.label6.Size = new System.Drawing.Size(73, 15);
             this.label6.TabIndex = 24;
             this.label6.Text = "読み取り(&R):";
             // 
@@ -179,7 +179,7 @@
             this.label7.AutoSize = true;
             this.label7.Location = new System.Drawing.Point(14, 336);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(68, 12);
+            this.label7.Size = new System.Drawing.Size(78, 15);
             this.label7.TabIndex = 28;
             this.label7.Text = "書き込み(&W):";
             // 
@@ -188,7 +188,7 @@
             this.label8.AutoSize = true;
             this.label8.Location = new System.Drawing.Point(14, 362);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(46, 12);
+            this.label8.Size = new System.Drawing.Size(54, 15);
             this.label8.TabIndex = 32;
             this.label8.Text = "実行(&X):";
             // 
@@ -215,9 +215,9 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(115, 253);
+            this.label10.Location = new System.Drawing.Point(115, 254);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(126, 12);
+            this.label10.Size = new System.Drawing.Size(128, 15);
             this.label10.TabIndex = 19;
             this.label10.Text = "バイト単位で指定します。";
             // 
@@ -226,25 +226,25 @@
             this.label11.AutoSize = true;
             this.label11.Location = new System.Drawing.Point(12, 9);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(344, 12);
+            this.label11.Size = new System.Drawing.Size(346, 15);
             this.label11.TabIndex = 0;
             this.label11.Text = "これらのすべての条件を同時に満たすファイルやフォルダが対象となります。";
             // 
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(115, 265);
+            this.label12.Location = new System.Drawing.Point(115, 268);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(123, 12);
+            this.label12.Size = new System.Drawing.Size(126, 15);
             this.label12.TabIndex = 20;
             this.label12.Text = "フォルダのサイズは0です。";
             // 
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(14, 61);
+            this.label13.Location = new System.Drawing.Point(14, 63);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(80, 12);
+            this.label13.Size = new System.Drawing.Size(88, 15);
             this.label13.TabIndex = 3;
             this.label13.Text = "条件の対象(&T):";
             // 
@@ -252,17 +252,17 @@
             // 
             this.comboBoxTarget.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxTarget.FormattingEnabled = true;
-            this.comboBoxTarget.Location = new System.Drawing.Point(116, 58);
+            this.comboBoxTarget.Location = new System.Drawing.Point(116, 60);
             this.comboBoxTarget.Name = "comboBoxTarget";
-            this.comboBoxTarget.Size = new System.Drawing.Size(154, 20);
+            this.comboBoxTarget.Size = new System.Drawing.Size(154, 23);
             this.comboBoxTarget.TabIndex = 4;
             // 
             // linkLabelHelp
             // 
             this.linkLabelHelp.AutoSize = true;
-            this.linkLabelHelp.Location = new System.Drawing.Point(275, 61);
+            this.linkLabelHelp.Location = new System.Drawing.Point(275, 63);
             this.linkLabelHelp.Name = "linkLabelHelp";
-            this.linkLabelHelp.Size = new System.Drawing.Size(63, 12);
+            this.linkLabelHelp.Size = new System.Drawing.Size(65, 15);
             this.linkLabelHelp.TabIndex = 5;
             this.linkLabelHelp.TabStop = true;
             this.linkLabelHelp.Text = "条件の説明";
@@ -273,7 +273,7 @@
             this.label14.AutoSize = true;
             this.label14.Location = new System.Drawing.Point(13, 37);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(93, 12);
+            this.label14.Size = new System.Drawing.Size(101, 15);
             this.label14.TabIndex = 1;
             this.label14.Text = "条件の表示名(&N):";
             // 
@@ -281,7 +281,7 @@
             // 
             this.textBoxDispName.Location = new System.Drawing.Point(116, 34);
             this.textBoxDispName.Name = "textBoxDispName";
-            this.textBoxDispName.Size = new System.Drawing.Size(222, 19);
+            this.textBoxDispName.Size = new System.Drawing.Size(222, 23);
             this.textBoxDispName.TabIndex = 2;
             // 
             // linkLabelFileName
@@ -289,7 +289,7 @@
             this.linkLabelFileName.AutoSize = true;
             this.linkLabelFileName.Location = new System.Drawing.Point(618, 93);
             this.linkLabelFileName.Name = "linkLabelFileName";
-            this.linkLabelFileName.Size = new System.Drawing.Size(63, 12);
+            this.linkLabelFileName.Size = new System.Drawing.Size(65, 15);
             this.linkLabelFileName.TabIndex = 9;
             this.linkLabelFileName.TabStop = true;
             this.linkLabelFileName.Text = "説明とテスト";
@@ -300,7 +300,7 @@
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(169, 292);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(41, 12);
+            this.label3.Size = new System.Drawing.Size(43, 15);
             this.label3.TabIndex = 21;
             this.label3.Text = "所有者";
             // 
@@ -309,7 +309,7 @@
             this.label9.AutoSize = true;
             this.label9.Location = new System.Drawing.Point(351, 292);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(43, 12);
+            this.label9.Size = new System.Drawing.Size(45, 15);
             this.label9.TabIndex = 22;
             this.label9.Text = "グループ";
             // 
@@ -318,7 +318,7 @@
             this.label15.AutoSize = true;
             this.label15.Location = new System.Drawing.Point(537, 292);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(29, 12);
+            this.label15.Size = new System.Drawing.Size(31, 15);
             this.label15.TabIndex = 23;
             this.label15.Text = "他人";
             // 
@@ -328,7 +328,7 @@
             this.comboBoxOwnerRead.FormattingEnabled = true;
             this.comboBoxOwnerRead.Location = new System.Drawing.Point(116, 307);
             this.comboBoxOwnerRead.Name = "comboBoxOwnerRead";
-            this.comboBoxOwnerRead.Size = new System.Drawing.Size(154, 20);
+            this.comboBoxOwnerRead.Size = new System.Drawing.Size(154, 23);
             this.comboBoxOwnerRead.TabIndex = 25;
             // 
             // comboBoxOwnerWrite
@@ -337,7 +337,7 @@
             this.comboBoxOwnerWrite.FormattingEnabled = true;
             this.comboBoxOwnerWrite.Location = new System.Drawing.Point(116, 333);
             this.comboBoxOwnerWrite.Name = "comboBoxOwnerWrite";
-            this.comboBoxOwnerWrite.Size = new System.Drawing.Size(154, 20);
+            this.comboBoxOwnerWrite.Size = new System.Drawing.Size(154, 23);
             this.comboBoxOwnerWrite.TabIndex = 29;
             // 
             // comboBoxOwnerExec
@@ -346,7 +346,7 @@
             this.comboBoxOwnerExec.FormattingEnabled = true;
             this.comboBoxOwnerExec.Location = new System.Drawing.Point(116, 359);
             this.comboBoxOwnerExec.Name = "comboBoxOwnerExec";
-            this.comboBoxOwnerExec.Size = new System.Drawing.Size(154, 20);
+            this.comboBoxOwnerExec.Size = new System.Drawing.Size(154, 23);
             this.comboBoxOwnerExec.TabIndex = 33;
             // 
             // comboBoxGroupRead
@@ -355,7 +355,7 @@
             this.comboBoxGroupRead.FormattingEnabled = true;
             this.comboBoxGroupRead.Location = new System.Drawing.Point(296, 307);
             this.comboBoxGroupRead.Name = "comboBoxGroupRead";
-            this.comboBoxGroupRead.Size = new System.Drawing.Size(154, 20);
+            this.comboBoxGroupRead.Size = new System.Drawing.Size(154, 23);
             this.comboBoxGroupRead.TabIndex = 26;
             // 
             // comboBoxGroupWrite
@@ -364,7 +364,7 @@
             this.comboBoxGroupWrite.FormattingEnabled = true;
             this.comboBoxGroupWrite.Location = new System.Drawing.Point(296, 333);
             this.comboBoxGroupWrite.Name = "comboBoxGroupWrite";
-            this.comboBoxGroupWrite.Size = new System.Drawing.Size(154, 20);
+            this.comboBoxGroupWrite.Size = new System.Drawing.Size(154, 23);
             this.comboBoxGroupWrite.TabIndex = 30;
             // 
             // comboBoxGroupExec
@@ -373,7 +373,7 @@
             this.comboBoxGroupExec.FormattingEnabled = true;
             this.comboBoxGroupExec.Location = new System.Drawing.Point(296, 359);
             this.comboBoxGroupExec.Name = "comboBoxGroupExec";
-            this.comboBoxGroupExec.Size = new System.Drawing.Size(154, 20);
+            this.comboBoxGroupExec.Size = new System.Drawing.Size(154, 23);
             this.comboBoxGroupExec.TabIndex = 34;
             // 
             // comboBoxOtherRead
@@ -382,7 +382,7 @@
             this.comboBoxOtherRead.FormattingEnabled = true;
             this.comboBoxOtherRead.Location = new System.Drawing.Point(476, 307);
             this.comboBoxOtherRead.Name = "comboBoxOtherRead";
-            this.comboBoxOtherRead.Size = new System.Drawing.Size(154, 20);
+            this.comboBoxOtherRead.Size = new System.Drawing.Size(154, 23);
             this.comboBoxOtherRead.TabIndex = 27;
             // 
             // comboBoxOtherWrite
@@ -391,7 +391,7 @@
             this.comboBoxOtherWrite.FormattingEnabled = true;
             this.comboBoxOtherWrite.Location = new System.Drawing.Point(476, 333);
             this.comboBoxOtherWrite.Name = "comboBoxOtherWrite";
-            this.comboBoxOtherWrite.Size = new System.Drawing.Size(154, 20);
+            this.comboBoxOtherWrite.Size = new System.Drawing.Size(154, 23);
             this.comboBoxOtherWrite.TabIndex = 31;
             // 
             // comboBoxOtherExec
@@ -400,7 +400,7 @@
             this.comboBoxOtherExec.FormattingEnabled = true;
             this.comboBoxOtherExec.Location = new System.Drawing.Point(476, 359);
             this.comboBoxOtherExec.Name = "comboBoxOtherExec";
-            this.comboBoxOtherExec.Size = new System.Drawing.Size(154, 20);
+            this.comboBoxOtherExec.Size = new System.Drawing.Size(154, 23);
             this.comboBoxOtherExec.TabIndex = 35;
             // 
             // label16
@@ -408,7 +408,7 @@
             this.label16.AutoSize = true;
             this.label16.Location = new System.Drawing.Point(14, 399);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(97, 12);
+            this.label16.Size = new System.Drawing.Size(105, 15);
             this.label16.TabIndex = 36;
             this.label16.Text = "シンボリックリンク(&Y):";
             // 
@@ -418,14 +418,14 @@
             this.comboBoxSymLink.FormattingEnabled = true;
             this.comboBoxSymLink.Location = new System.Drawing.Point(116, 396);
             this.comboBoxSymLink.Name = "comboBoxSymLink";
-            this.comboBoxSymLink.Size = new System.Drawing.Size(154, 20);
+            this.comboBoxSymLink.Size = new System.Drawing.Size(154, 23);
             this.comboBoxSymLink.TabIndex = 37;
             // 
             // FileConditionSSHDialog
             // 
             this.AcceptButton = this.buttonOk;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.CancelButton = this.buttonCancel;
             this.ClientSize = new System.Drawing.Size(692, 449);
             this.Controls.Add(this.linkLabelFileName);
@@ -468,6 +468,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label14);
             this.Controls.Add(this.label1);
+            this.Font = new System.Drawing.Font("Yu Gothic UI", 9F);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.MaximizeBox = false;
             this.MinimizeBox = false;

@@ -30,8 +30,8 @@
             this.buttonUp = new System.Windows.Forms.Button();
             this.buttonDown = new System.Windows.Forms.Button();
             this.listViewPasswordList = new System.Windows.Forms.ListView();
-            this.columnDisplayName = new System.Windows.Forms.ColumnHeader();
-            this.columnPassword = new System.Windows.Forms.ColumnHeader();
+            this.columnDisplayName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnPassword = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.linkLabelPassword = new System.Windows.Forms.LinkLabel();
             this.label2 = new System.Windows.Forms.Label();
             this.labelFreeware = new System.Windows.Forms.Label();
@@ -60,7 +60,7 @@
             // buttonCancel
             // 
             this.buttonCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.buttonCancel.Location = new System.Drawing.Point(396, 201);
+            this.buttonCancel.Location = new System.Drawing.Point(395, 209);
             this.buttonCancel.Name = "buttonCancel";
             this.buttonCancel.Size = new System.Drawing.Size(75, 23);
             this.buttonCancel.TabIndex = 8;
@@ -73,7 +73,7 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(10, 165);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(380, 12);
+            this.label1.Size = new System.Drawing.Size(380, 15);
             this.label1.TabIndex = 5;
             this.label1.Text = "パスワード付きの圧縮ファイルで、これら設定済みのパスワードを順に適用します。";
             // 
@@ -125,9 +125,9 @@
             // linkLabelPassword
             // 
             this.linkLabelPassword.AutoSize = true;
-            this.linkLabelPassword.Location = new System.Drawing.Point(10, 189);
+            this.linkLabelPassword.Location = new System.Drawing.Point(10, 198);
             this.linkLabelPassword.Name = "linkLabelPassword";
-            this.linkLabelPassword.Size = new System.Drawing.Size(110, 12);
+            this.linkLabelPassword.Size = new System.Drawing.Size(111, 15);
             this.linkLabelPassword.TabIndex = 7;
             this.linkLabelPassword.TabStop = true;
             this.linkLabelPassword.Text = "パスワード保存の注意";
@@ -136,9 +136,9 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(10, 177);
+            this.label2.Location = new System.Drawing.Point(10, 181);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(225, 12);
+            this.label2.Size = new System.Drawing.Size(226, 15);
             this.label2.TabIndex = 6;
             this.label2.Text = "クリップボードの文字列も自動的に適用します。";
             // 
@@ -147,16 +147,16 @@
             this.labelFreeware.AutoSize = true;
             this.labelFreeware.Location = new System.Drawing.Point(12, 208);
             this.labelFreeware.Name = "labelFreeware";
-            this.labelFreeware.Size = new System.Drawing.Size(0, 12);
+            this.labelFreeware.Size = new System.Drawing.Size(0, 15);
             this.labelFreeware.TabIndex = 9;
             // 
             // ArchivePasswordManageDialog
             // 
             this.AcceptButton = this.buttonCancel;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.CancelButton = this.buttonCancel;
-            this.ClientSize = new System.Drawing.Size(482, 236);
+            this.ClientSize = new System.Drawing.Size(482, 244);
             this.Controls.Add(this.labelFreeware);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.linkLabelPassword);
@@ -167,6 +167,7 @@
             this.Controls.Add(this.buttonUp);
             this.Controls.Add(this.buttonDelete);
             this.Controls.Add(this.buttonAdd);
+            this.Font = new System.Drawing.Font("Yu Gothic UI", 9F);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.MaximizeBox = false;
             this.MinimizeBox = false;

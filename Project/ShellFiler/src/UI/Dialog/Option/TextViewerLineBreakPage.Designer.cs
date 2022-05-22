@@ -57,26 +57,26 @@
             // 
             // textBoxTab4Ext
             // 
-            this.textBoxTab4Ext.Location = new System.Drawing.Point(32, 321);
+            this.textBoxTab4Ext.Location = new System.Drawing.Point(32, 323);
             this.textBoxTab4Ext.Name = "textBoxTab4Ext";
-            this.textBoxTab4Ext.Size = new System.Drawing.Size(288, 19);
+            this.textBoxTab4Ext.Size = new System.Drawing.Size(288, 23);
             this.textBoxTab4Ext.TabIndex = 6;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(326, 324);
+            this.label6.Location = new System.Drawing.Point(326, 326);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(61, 12);
+            this.label6.Size = new System.Drawing.Size(63, 15);
             this.label6.TabIndex = 8;
             this.label6.Text = "空白区切り";
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(30, 343);
+            this.label7.Location = new System.Drawing.Point(30, 347);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(421, 12);
+            this.label7.Size = new System.Drawing.Size(423, 15);
             this.label7.TabIndex = 7;
             this.label7.Text = "タブ幅は、「各行の折返し表示」の設定が「文字数指定」になっている場合だけ有効です。";
             // 
@@ -85,7 +85,7 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(2, 305);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(168, 12);
+            this.label1.Size = new System.Drawing.Size(176, 15);
             this.label1.TabIndex = 5;
             this.label1.Text = "4タブ表示するファイルの拡張子(&E):";
             // 
@@ -102,7 +102,7 @@
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(217, 114);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(244, 12);
+            this.label5.Size = new System.Drawing.Size(247, 15);
             this.label5.TabIndex = 11;
             this.label5.Text = "折返しなしでは、タブ文字が空白1文字になります。";
             // 
@@ -111,7 +111,7 @@
             this.label8.AutoSize = true;
             this.label8.Location = new System.Drawing.Point(217, 72);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(265, 12);
+            this.label8.Size = new System.Drawing.Size(268, 15);
             this.label8.TabIndex = 8;
             this.label8.Text = "ピクセル数指定では、タブ文字が空白1文字になります。";
             // 
@@ -120,7 +120,7 @@
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(217, 26);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(201, 12);
+            this.label3.Size = new System.Drawing.Size(203, 15);
             this.label3.TabIndex = 3;
             this.label3.Text = "文字数指定では、タブ幅を指定できます。";
             // 
@@ -133,7 +133,7 @@
             0,
             0});
             this.numericPixel.Name = "numericPixel";
-            this.numericPixel.Size = new System.Drawing.Size(77, 19);
+            this.numericPixel.Size = new System.Drawing.Size(77, 23);
             this.numericPixel.TabIndex = 6;
             // 
             // numericChar
@@ -145,7 +145,7 @@
             0,
             0});
             this.numericChar.Name = "numericChar";
-            this.numericChar.Size = new System.Drawing.Size(76, 19);
+            this.numericChar.Size = new System.Drawing.Size(76, 23);
             this.numericChar.TabIndex = 1;
             // 
             // radioButtonNone
@@ -153,7 +153,7 @@
             this.radioButtonNone.AutoSize = true;
             this.radioButtonNone.Location = new System.Drawing.Point(6, 109);
             this.radioButtonNone.Name = "radioButtonNone";
-            this.radioButtonNone.Size = new System.Drawing.Size(99, 16);
+            this.radioButtonNone.Size = new System.Drawing.Size(104, 19);
             this.radioButtonNone.TabIndex = 10;
             this.radioButtonNone.TabStop = true;
             this.radioButtonNone.Text = "折り返しなし(&N)";
@@ -165,7 +165,7 @@
             this.radioButtonPixel.AutoSize = true;
             this.radioButtonPixel.Location = new System.Drawing.Point(6, 63);
             this.radioButtonPixel.Name = "radioButtonPixel";
-            this.radioButtonPixel.Size = new System.Drawing.Size(111, 16);
+            this.radioButtonPixel.Size = new System.Drawing.Size(115, 19);
             this.radioButtonPixel.TabIndex = 5;
             this.radioButtonPixel.TabStop = true;
             this.radioButtonPixel.Text = "ピクセル数指定(&P)";
@@ -177,7 +177,7 @@
             this.radioButtonChar.AutoSize = true;
             this.radioButtonChar.Location = new System.Drawing.Point(6, 18);
             this.radioButtonChar.Name = "radioButtonChar";
-            this.radioButtonChar.Size = new System.Drawing.Size(99, 16);
+            this.radioButtonChar.Size = new System.Drawing.Size(103, 19);
             this.radioButtonChar.TabIndex = 0;
             this.radioButtonChar.TabStop = true;
             this.radioButtonChar.Text = "文字数指定(&C)";
@@ -186,7 +186,7 @@
             // 
             // numericByteCount
             // 
-            this.numericByteCount.Location = new System.Drawing.Point(144, 18);
+            this.numericByteCount.Location = new System.Drawing.Point(148, 18);
             this.numericByteCount.Maximum = new decimal(new int[] {
             64,
             0,
@@ -198,7 +198,7 @@
             0,
             0});
             this.numericByteCount.Name = "numericByteCount";
-            this.numericByteCount.Size = new System.Drawing.Size(92, 19);
+            this.numericByteCount.Size = new System.Drawing.Size(92, 23);
             this.numericByteCount.TabIndex = 1;
             this.numericByteCount.Value = new decimal(new int[] {
             8,
@@ -211,7 +211,7 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(6, 20);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(132, 12);
+            this.label2.Size = new System.Drawing.Size(140, 15);
             this.label2.TabIndex = 0;
             this.label2.Text = "1行に表示するバイト数(&B):";
             // 
@@ -220,7 +220,7 @@
             this.radioButtonLinePrev.AutoSize = true;
             this.radioButtonLinePrev.Location = new System.Drawing.Point(3, 24);
             this.radioButtonLinePrev.Name = "radioButtonLinePrev";
-            this.radioButtonLinePrev.Size = new System.Drawing.Size(243, 16);
+            this.radioButtonLinePrev.Size = new System.Drawing.Size(247, 19);
             this.radioButtonLinePrev.TabIndex = 1;
             this.radioButtonLinePrev.TabStop = true;
             this.radioButtonLinePrev.Text = "直前に指定された設定を初期値として使用(&R)";
@@ -232,7 +232,7 @@
             this.radioButtonLineFix.AutoSize = true;
             this.radioButtonLineFix.Location = new System.Drawing.Point(3, 46);
             this.radioButtonLineFix.Name = "radioButtonLineFix";
-            this.radioButtonLineFix.Size = new System.Drawing.Size(103, 16);
+            this.radioButtonLineFix.Size = new System.Drawing.Size(109, 19);
             this.radioButtonLineFix.TabIndex = 2;
             this.radioButtonLineFix.TabStop = true;
             this.radioButtonLineFix.Text = "初期値を指定(&I)";
@@ -264,45 +264,45 @@
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(103, 86);
+            this.label12.Location = new System.Drawing.Point(103, 88);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(94, 12);
+            this.label12.Size = new System.Drawing.Size(102, 15);
             this.label12.TabIndex = 7;
             this.label12.Text = "ピクセル(0:画面幅)";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(217, 38);
+            this.label4.Location = new System.Drawing.Point(217, 40);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(257, 12);
+            this.label4.Size = new System.Drawing.Size(258, 15);
             this.label4.TabIndex = 4;
             this.label4.Text = "表示幅が半角/全角サイズの文字だけ表示できます。";
             // 
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(103, 40);
+            this.label13.Location = new System.Drawing.Point(103, 42);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(81, 12);
+            this.label13.Size = new System.Drawing.Size(89, 15);
             this.label13.TabIndex = 2;
             this.label13.Text = "文字(0:画面幅)";
             // 
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(217, 126);
+            this.label10.Location = new System.Drawing.Point(217, 128);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(147, 12);
+            this.label10.Size = new System.Drawing.Size(149, 15);
             this.label10.TabIndex = 12;
             this.label10.Text = "すべての文字を表示できます。";
             // 
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(217, 84);
+            this.label9.Location = new System.Drawing.Point(217, 86);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(147, 12);
+            this.label9.Size = new System.Drawing.Size(149, 15);
             this.label9.TabIndex = 9;
             this.label9.Text = "すべての文字を表示できます。";
             // 
@@ -322,14 +322,14 @@
             this.label11.AutoSize = true;
             this.label11.Location = new System.Drawing.Point(2, 9);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(96, 12);
+            this.label11.Size = new System.Drawing.Size(98, 15);
             this.label11.TabIndex = 0;
             this.label11.Text = "各行の折返し表示";
             // 
             // TextViewerLineBreakPage
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.Controls.Add(this.label11);
             this.Controls.Add(this.groupBoxDump);
             this.Controls.Add(this.groupBoxText);
@@ -340,6 +340,7 @@
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label1);
+            this.Font = new System.Drawing.Font("Yu Gothic UI", 9F);
             this.Name = "TextViewerLineBreakPage";
             this.Size = new System.Drawing.Size(520, 370);
             ((System.ComponentModel.ISupportInitialize)(this.numericPixel)).EndInit();

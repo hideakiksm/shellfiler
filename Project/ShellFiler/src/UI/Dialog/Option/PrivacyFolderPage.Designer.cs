@@ -36,11 +36,11 @@ namespace ShellFiler.UI.Dialog.Option {
             this.label9 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.checkBoxFolderSave = new System.Windows.Forms.CheckBox();
             this.label5 = new System.Windows.Forms.Label();
             this.numericWholeFolder = new System.Windows.Forms.NumericUpDown();
             this.label6 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
-            this.checkBoxFolderSave = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.numericFolderNum)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -50,9 +50,9 @@ namespace ShellFiler.UI.Dialog.Option {
             // linkLabelInitFolder
             // 
             this.linkLabelInitFolder.AutoSize = true;
-            this.linkLabelInitFolder.Location = new System.Drawing.Point(26, 100);
+            this.linkLabelInitFolder.Location = new System.Drawing.Point(26, 104);
             this.linkLabelInitFolder.Name = "linkLabelInitFolder";
-            this.linkLabelInitFolder.Size = new System.Drawing.Size(130, 12);
+            this.linkLabelInitFolder.Size = new System.Drawing.Size(132, 15);
             this.linkLabelInitFolder.TabIndex = 6;
             this.linkLabelInitFolder.TabStop = true;
             this.linkLabelInitFolder.Text = "起動時のフォルダの設定へ";
@@ -63,7 +63,7 @@ namespace ShellFiler.UI.Dialog.Option {
             this.label8.AutoSize = true;
             this.label8.Location = new System.Drawing.Point(4, 89);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(502, 12);
+            this.label8.Size = new System.Drawing.Size(506, 15);
             this.label8.TabIndex = 5;
             this.label8.Text = "起動時のフォルダが[前回終了時のフォルダ]に設定されていると、終了時のフォルダが履歴となって残ります。";
             // 
@@ -82,7 +82,7 @@ namespace ShellFiler.UI.Dialog.Option {
             this.label7.AutoSize = true;
             this.label7.Location = new System.Drawing.Point(253, 60);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(140, 12);
+            this.label7.Size = new System.Drawing.Size(144, 15);
             this.label7.TabIndex = 4;
             this.label7.Text = "(変更は次回起動時に有効)";
             // 
@@ -91,7 +91,7 @@ namespace ShellFiler.UI.Dialog.Option {
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(6, 23);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(266, 12);
+            this.label4.Size = new System.Drawing.Size(268, 15);
             this.label4.TabIndex = 1;
             this.label4.Text = "フォルダの変更を行ったときに履歴を記憶する方法です。";
             // 
@@ -114,7 +114,7 @@ namespace ShellFiler.UI.Dialog.Option {
             0,
             0});
             this.numericFolderNum.Name = "numericFolderNum";
-            this.numericFolderNum.Size = new System.Drawing.Size(120, 19);
+            this.numericFolderNum.Size = new System.Drawing.Size(120, 23);
             this.numericFolderNum.TabIndex = 3;
             this.numericFolderNum.Value = new decimal(new int[] {
             1,
@@ -127,7 +127,7 @@ namespace ShellFiler.UI.Dialog.Option {
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(6, 60);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(94, 12);
+            this.label2.Size = new System.Drawing.Size(101, 15);
             this.label2.TabIndex = 2;
             this.label2.Text = "最大記憶件数(&F):";
             // 
@@ -136,7 +136,7 @@ namespace ShellFiler.UI.Dialog.Option {
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(6, 3);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(64, 12);
+            this.label1.Size = new System.Drawing.Size(66, 15);
             this.label1.TabIndex = 0;
             this.label1.Text = "フォルダ履歴";
             // 
@@ -161,16 +161,16 @@ namespace ShellFiler.UI.Dialog.Option {
             this.label10.AutoSize = true;
             this.label10.Location = new System.Drawing.Point(6, 15);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(213, 12);
+            this.label10.Size = new System.Drawing.Size(219, 15);
             this.label10.TabIndex = 0;
             this.label10.Text = "[次へ][戻る]で操作できるフォルダ履歴です。";
             // 
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(6, 27);
+            this.label9.Location = new System.Drawing.Point(6, 31);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(184, 12);
+            this.label9.Size = new System.Drawing.Size(186, 15);
             this.label9.TabIndex = 1;
             this.label9.Text = "左右それぞれの画面で記憶されます。";
             // 
@@ -179,7 +179,7 @@ namespace ShellFiler.UI.Dialog.Option {
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(6, 15);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(244, 12);
+            this.label3.Size = new System.Drawing.Size(233, 15);
             this.label3.TabIndex = 0;
             this.label3.Text = "ShellFiler全体で記憶されるフォルダ履歴です。";
             // 
@@ -198,12 +198,22 @@ namespace ShellFiler.UI.Dialog.Option {
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "全体での履歴";
             // 
+            // checkBoxFolderSave
+            // 
+            this.checkBoxFolderSave.AutoSize = true;
+            this.checkBoxFolderSave.Location = new System.Drawing.Point(6, 78);
+            this.checkBoxFolderSave.Name = "checkBoxFolderSave";
+            this.checkBoxFolderSave.Size = new System.Drawing.Size(199, 19);
+            this.checkBoxFolderSave.TabIndex = 5;
+            this.checkBoxFolderSave.Text = "フォルダ履歴をディスクに保存する(&D)";
+            this.checkBoxFolderSave.UseVisualStyleBackColor = true;
+            // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(251, 53);
+            this.label5.Location = new System.Drawing.Point(251, 55);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(140, 12);
+            this.label5.Size = new System.Drawing.Size(144, 15);
             this.label5.TabIndex = 4;
             this.label5.Text = "(変更は次回起動時に有効)";
             // 
@@ -214,7 +224,7 @@ namespace ShellFiler.UI.Dialog.Option {
             0,
             0,
             0});
-            this.numericWholeFolder.Location = new System.Drawing.Point(107, 51);
+            this.numericWholeFolder.Location = new System.Drawing.Point(107, 53);
             this.numericWholeFolder.Maximum = new decimal(new int[] {
             1000,
             0,
@@ -226,7 +236,7 @@ namespace ShellFiler.UI.Dialog.Option {
             0,
             0});
             this.numericWholeFolder.Name = "numericWholeFolder";
-            this.numericWholeFolder.Size = new System.Drawing.Size(120, 19);
+            this.numericWholeFolder.Size = new System.Drawing.Size(120, 23);
             this.numericWholeFolder.TabIndex = 3;
             this.numericWholeFolder.Value = new decimal(new int[] {
             1,
@@ -237,40 +247,31 @@ namespace ShellFiler.UI.Dialog.Option {
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(6, 53);
+            this.label6.Location = new System.Drawing.Point(6, 55);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(95, 12);
+            this.label6.Size = new System.Drawing.Size(102, 15);
             this.label6.TabIndex = 2;
             this.label6.Text = "最大記憶件数(&A):";
             // 
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(6, 27);
+            this.label11.Location = new System.Drawing.Point(6, 31);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(456, 12);
+            this.label11.Size = new System.Drawing.Size(459, 15);
             this.label11.TabIndex = 1;
             this.label11.Text = "[フォルダ履歴]コマンドでの一覧表示や、フォルダ切り替え時のカーソル位置の復元に使用します。";
             // 
-            // checkBoxFolderSave
-            // 
-            this.checkBoxFolderSave.AutoSize = true;
-            this.checkBoxFolderSave.Location = new System.Drawing.Point(6, 76);
-            this.checkBoxFolderSave.Name = "checkBoxFolderSave";
-            this.checkBoxFolderSave.Size = new System.Drawing.Size(194, 16);
-            this.checkBoxFolderSave.TabIndex = 5;
-            this.checkBoxFolderSave.Text = "フォルダ履歴をディスクに保存する(&D)";
-            this.checkBoxFolderSave.UseVisualStyleBackColor = true;
-            // 
             // PrivacyFolderPage
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.buttonFolderDel);
             this.Controls.Add(this.label4);
+            this.Font = new System.Drawing.Font("Yu Gothic UI", 9F);
             this.Name = "PrivacyFolderPage";
             this.Size = new System.Drawing.Size(520, 370);
             ((System.ComponentModel.ISupportInitialize)(this.numericFolderNum)).EndInit();

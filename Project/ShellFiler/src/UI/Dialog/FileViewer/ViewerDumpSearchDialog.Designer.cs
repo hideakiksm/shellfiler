@@ -41,13 +41,13 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(12, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(104, 12);
+            this.label1.Size = new System.Drawing.Size(112, 15);
             this.label1.TabIndex = 0;
             this.label1.Text = "検索するバイト列(&S):";
             // 
             // buttonInputHelp
             // 
-            this.buttonInputHelp.Location = new System.Drawing.Point(304, 25);
+            this.buttonInputHelp.Location = new System.Drawing.Point(304, 27);
             this.buttonInputHelp.Name = "buttonInputHelp";
             this.buttonInputHelp.Size = new System.Drawing.Size(26, 20);
             this.buttonInputHelp.TabIndex = 2;
@@ -58,7 +58,7 @@
             // buttonClose
             // 
             this.buttonClose.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.buttonClose.Location = new System.Drawing.Point(255, 146);
+            this.buttonClose.Location = new System.Drawing.Point(255, 161);
             this.buttonClose.Name = "buttonClose";
             this.buttonClose.Size = new System.Drawing.Size(75, 23);
             this.buttonClose.TabIndex = 7;
@@ -71,7 +71,7 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(190, 10);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(140, 12);
+            this.label2.Size = new System.Drawing.Size(144, 15);
             this.label2.TabIndex = 3;
             this.label2.Text = "16進数、カンマ等での区切り";
             // 
@@ -80,7 +80,7 @@
             this.panelParent.AutoScroll = true;
             this.panelParent.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panelParent.Controls.Add(this.panelScroll);
-            this.panelParent.Location = new System.Drawing.Point(12, 88);
+            this.panelParent.Location = new System.Drawing.Point(12, 98);
             this.panelParent.Name = "panelParent";
             this.panelParent.Size = new System.Drawing.Size(318, 54);
             this.panelParent.TabIndex = 6;
@@ -96,9 +96,9 @@
             // 
             // textBoxText
             // 
-            this.textBoxText.Location = new System.Drawing.Point(12, 63);
+            this.textBoxText.Location = new System.Drawing.Point(12, 69);
             this.textBoxText.Name = "textBoxText";
-            this.textBoxText.Size = new System.Drawing.Size(286, 19);
+            this.textBoxText.Size = new System.Drawing.Size(286, 23);
             this.textBoxText.TabIndex = 5;
             this.textBoxText.TextChanged += new System.EventHandler(this.textBoxText_TextChanged);
             this.textBoxText.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBoxInput_KeyDown);
@@ -106,26 +106,26 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(12, 48);
+            this.label3.Location = new System.Drawing.Point(12, 52);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(92, 12);
+            this.label3.Size = new System.Drawing.Size(100, 15);
             this.label3.TabIndex = 4;
             this.label3.Text = "文字列で指定(&T):";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(12, 153);
+            this.label4.Location = new System.Drawing.Point(12, 163);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(218, 12);
+            this.label4.Size = new System.Drawing.Size(234, 15);
             this.label4.TabIndex = 8;
             this.label4.Text = "F1:先頭、F2:末尾、↑↓:次候補、→:メニュー";
             // 
             // textBoxInput
             // 
-            this.textBoxInput.Location = new System.Drawing.Point(14, 25);
+            this.textBoxInput.Location = new System.Drawing.Point(14, 27);
             this.textBoxInput.Name = "textBoxInput";
-            this.textBoxInput.Size = new System.Drawing.Size(284, 19);
+            this.textBoxInput.Size = new System.Drawing.Size(284, 23);
             this.textBoxInput.TabIndex = 1;
             this.textBoxInput.TextChanged += new System.EventHandler(this.textBoxInput_TextChanged);
             this.textBoxInput.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBoxInput_KeyDown);
@@ -133,10 +133,10 @@
             // ViewerDumpSearchDialog
             // 
             this.AcceptButton = this.buttonClose;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.CancelButton = this.buttonClose;
-            this.ClientSize = new System.Drawing.Size(342, 183);
+            this.ClientSize = new System.Drawing.Size(342, 196);
             this.Controls.Add(this.textBoxInput);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.textBoxText);
@@ -146,6 +146,7 @@
             this.Controls.Add(this.buttonInputHelp);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label1);
+            this.Font = new System.Drawing.Font("Yu Gothic UI", 9F);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.MaximizeBox = false;
             this.MinimizeBox = false;

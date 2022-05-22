@@ -67,7 +67,7 @@
             this.labelOpposite.AutoSize = true;
             this.labelOpposite.Location = new System.Drawing.Point(180, 65);
             this.labelOpposite.Name = "labelOpposite";
-            this.labelOpposite.Size = new System.Drawing.Size(120, 12);
+            this.labelOpposite.Size = new System.Drawing.Size(135, 15);
             this.labelOpposite.TabIndex = 5;
             this.labelOpposite.Text = "{0}bytes単位に切り上げ";
             // 
@@ -76,7 +76,7 @@
             this.labelTarget.AutoSize = true;
             this.labelTarget.Location = new System.Drawing.Point(180, 43);
             this.labelTarget.Name = "labelTarget";
-            this.labelTarget.Size = new System.Drawing.Size(120, 12);
+            this.labelTarget.Size = new System.Drawing.Size(135, 15);
             this.labelTarget.TabIndex = 4;
             this.labelTarget.Text = "{0}bytes単位に切り上げ";
             // 
@@ -85,7 +85,7 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(291, 89);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(108, 12);
+            this.label1.Size = new System.Drawing.Size(114, 15);
             this.label1.TabIndex = 7;
             this.label1.Text = "bytes単位に切り上げ";
             // 
@@ -93,7 +93,7 @@
             // 
             this.numericSpecify.Location = new System.Drawing.Point(182, 85);
             this.numericSpecify.Name = "numericSpecify";
-            this.numericSpecify.Size = new System.Drawing.Size(103, 19);
+            this.numericSpecify.Size = new System.Drawing.Size(103, 23);
             this.numericSpecify.TabIndex = 6;
             // 
             // radioButtonSpecify
@@ -101,7 +101,7 @@
             this.radioButtonSpecify.AutoSize = true;
             this.radioButtonSpecify.Location = new System.Drawing.Point(7, 85);
             this.radioButtonSpecify.Name = "radioButtonSpecify";
-            this.radioButtonSpecify.Size = new System.Drawing.Size(115, 16);
+            this.radioButtonSpecify.Size = new System.Drawing.Size(120, 19);
             this.radioButtonSpecify.TabIndex = 3;
             this.radioButtonSpecify.TabStop = true;
             this.radioButtonSpecify.Text = "指定サイズ単位(&S)";
@@ -112,7 +112,7 @@
             this.radioButtonOpposite.AutoSize = true;
             this.radioButtonOpposite.Location = new System.Drawing.Point(7, 63);
             this.radioButtonOpposite.Name = "radioButtonOpposite";
-            this.radioButtonOpposite.Size = new System.Drawing.Size(154, 16);
+            this.radioButtonOpposite.Size = new System.Drawing.Size(159, 19);
             this.radioButtonOpposite.TabIndex = 2;
             this.radioButtonOpposite.TabStop = true;
             this.radioButtonOpposite.Text = "反対パスのクラスタサイズ(&O)";
@@ -123,7 +123,7 @@
             this.radioButtonTarget.AutoSize = true;
             this.radioButtonTarget.Location = new System.Drawing.Point(7, 41);
             this.radioButtonTarget.Name = "radioButtonTarget";
-            this.radioButtonTarget.Size = new System.Drawing.Size(153, 16);
+            this.radioButtonTarget.Size = new System.Drawing.Size(157, 19);
             this.radioButtonTarget.TabIndex = 1;
             this.radioButtonTarget.TabStop = true;
             this.radioButtonTarget.Text = "対象パスのクラスタサイズ(&P)";
@@ -134,7 +134,7 @@
             this.radioButtonOriginal.AutoSize = true;
             this.radioButtonOriginal.Location = new System.Drawing.Point(7, 19);
             this.radioButtonOriginal.Name = "radioButtonOriginal";
-            this.radioButtonOriginal.Size = new System.Drawing.Size(139, 16);
+            this.radioButtonOriginal.Size = new System.Drawing.Size(143, 19);
             this.radioButtonOriginal.TabIndex = 0;
             this.radioButtonOriginal.TabStop = true;
             this.radioButtonOriginal.Text = "ファイルサイズそのもの(&F)";
@@ -145,7 +145,7 @@
             this.checkBoxLowerCache.AutoSize = true;
             this.checkBoxLowerCache.Location = new System.Drawing.Point(13, 169);
             this.checkBoxLowerCache.Name = "checkBoxLowerCache";
-            this.checkBoxLowerCache.Size = new System.Drawing.Size(153, 16);
+            this.checkBoxLowerCache.Size = new System.Drawing.Size(158, 19);
             this.checkBoxLowerCache.TabIndex = 1;
             this.checkBoxLowerCache.Text = "下位階層の結果を保持(&L)";
             this.checkBoxLowerCache.UseVisualStyleBackColor = true;
@@ -153,34 +153,34 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(38, 188);
+            this.label4.Location = new System.Drawing.Point(38, 190);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(343, 12);
+            this.label4.Size = new System.Drawing.Size(347, 15);
             this.label4.TabIndex = 2;
             this.label4.Text = "サイズの取得後、[フォルダサイズ取得結果のクリア]を実行するまでの間、";
             // 
             // labelLowerMessage
             // 
             this.labelLowerMessage.AutoSize = true;
-            this.labelLowerMessage.Location = new System.Drawing.Point(38, 200);
+            this.labelLowerMessage.Location = new System.Drawing.Point(38, 206);
             this.labelLowerMessage.Name = "labelLowerMessage";
-            this.labelLowerMessage.Size = new System.Drawing.Size(296, 12);
+            this.labelLowerMessage.Size = new System.Drawing.Size(316, 15);
             this.labelLowerMessage.TabIndex = 3;
             this.labelLowerMessage.Text = "最大で{0}階層{1}フォルダ分のフォルダサイズをキャッシュします。";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(38, 212);
+            this.label6.Location = new System.Drawing.Point(38, 222);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(332, 12);
+            this.label6.Size = new System.Drawing.Size(334, 15);
             this.label6.TabIndex = 4;
             this.label6.Text = "フォルダを切り替えると、すぐに取得済みのフォルダサイズを表示します。";
             // 
             // buttonCancel
             // 
             this.buttonCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.buttonCancel.Location = new System.Drawing.Point(365, 257);
+            this.buttonCancel.Location = new System.Drawing.Point(365, 267);
             this.buttonCancel.Name = "buttonCancel";
             this.buttonCancel.Size = new System.Drawing.Size(75, 23);
             this.buttonCancel.TabIndex = 8;
@@ -189,7 +189,7 @@
             // 
             // buttonOk
             // 
-            this.buttonOk.Location = new System.Drawing.Point(284, 257);
+            this.buttonOk.Location = new System.Drawing.Point(284, 267);
             this.buttonOk.Name = "buttonOk";
             this.buttonOk.Size = new System.Drawing.Size(75, 23);
             this.buttonOk.TabIndex = 7;
@@ -202,13 +202,13 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(11, 9);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(313, 12);
+            this.label2.Size = new System.Drawing.Size(315, 15);
             this.label2.TabIndex = 2;
             this.label2.Text = "マークされたフォルダ配下にあるファイルサイズの合計を計算します。";
             // 
             // buttonDelete
             // 
-            this.buttonDelete.Location = new System.Drawing.Point(40, 227);
+            this.buttonDelete.Location = new System.Drawing.Point(40, 244);
             this.buttonDelete.Name = "buttonDelete";
             this.buttonDelete.Size = new System.Drawing.Size(95, 23);
             this.buttonDelete.TabIndex = 5;
@@ -219,20 +219,20 @@
             // textBoxDeleteShortcut
             // 
             this.textBoxDeleteShortcut.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBoxDeleteShortcut.Location = new System.Drawing.Point(141, 232);
+            this.textBoxDeleteShortcut.Location = new System.Drawing.Point(141, 249);
             this.textBoxDeleteShortcut.Name = "textBoxDeleteShortcut";
             this.textBoxDeleteShortcut.ReadOnly = true;
-            this.textBoxDeleteShortcut.Size = new System.Drawing.Size(299, 12);
+            this.textBoxDeleteShortcut.Size = new System.Drawing.Size(299, 16);
             this.textBoxDeleteShortcut.TabIndex = 6;
             this.textBoxDeleteShortcut.Text = "キー割り当て:{0}";
             // 
             // RetrieveFolderSizeDialog
             // 
             this.AcceptButton = this.buttonOk;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.CancelButton = this.buttonCancel;
-            this.ClientSize = new System.Drawing.Size(452, 292);
+            this.ClientSize = new System.Drawing.Size(452, 302);
             this.Controls.Add(this.textBoxDeleteShortcut);
             this.Controls.Add(this.buttonDelete);
             this.Controls.Add(this.buttonOk);
@@ -243,6 +243,7 @@
             this.Controls.Add(this.label4);
             this.Controls.Add(this.checkBoxLowerCache);
             this.Controls.Add(this.groupBox1);
+            this.Font = new System.Drawing.Font("Yu Gothic UI", 9F);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.MaximizeBox = false;
             this.MinimizeBox = false;

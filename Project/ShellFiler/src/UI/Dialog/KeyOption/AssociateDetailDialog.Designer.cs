@@ -47,7 +47,7 @@
             this.comboBoxExt.FormattingEnabled = true;
             this.comboBoxExt.Location = new System.Drawing.Point(136, 44);
             this.comboBoxExt.Name = "comboBoxExt";
-            this.comboBoxExt.Size = new System.Drawing.Size(435, 20);
+            this.comboBoxExt.Size = new System.Drawing.Size(435, 23);
             this.comboBoxExt.TabIndex = 3;
             // 
             // comboBoxFileSystem
@@ -56,7 +56,7 @@
             this.comboBoxFileSystem.FormattingEnabled = true;
             this.comboBoxFileSystem.Location = new System.Drawing.Point(136, 18);
             this.comboBoxFileSystem.Name = "comboBoxFileSystem";
-            this.comboBoxFileSystem.Size = new System.Drawing.Size(145, 20);
+            this.comboBoxFileSystem.Size = new System.Drawing.Size(145, 23);
             this.comboBoxFileSystem.TabIndex = 1;
             // 
             // label7
@@ -64,7 +64,7 @@
             this.label7.AutoSize = true;
             this.label7.Location = new System.Drawing.Point(577, 47);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(94, 12);
+            this.label7.Size = new System.Drawing.Size(99, 15);
             this.label7.TabIndex = 4;
             this.label7.Text = "セミコロン「;」区切り";
             // 
@@ -94,7 +94,7 @@
             this.label9.AutoSize = true;
             this.label9.Location = new System.Drawing.Point(6, 21);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(94, 12);
+            this.label9.Size = new System.Drawing.Size(102, 15);
             this.label9.TabIndex = 0;
             this.label9.Text = "ファイルシステム(&Y):";
             // 
@@ -103,7 +103,7 @@
             this.label6.AutoSize = true;
             this.label6.Location = new System.Drawing.Point(6, 47);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(102, 12);
+            this.label6.Size = new System.Drawing.Size(109, 15);
             this.label6.TabIndex = 2;
             this.label6.Text = "ファイルの拡張子(&E):";
             // 
@@ -112,7 +112,7 @@
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(8, 35);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(46, 12);
+            this.label3.Size = new System.Drawing.Size(53, 15);
             this.label3.TabIndex = 1;
             this.label3.Text = "機能(&F):";
             // 
@@ -121,7 +121,7 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(341, 37);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(31, 12);
+            this.label1.Size = new System.Drawing.Size(36, 15);
             this.label1.TabIndex = 3;
             this.label1.Text = "説明:";
             // 
@@ -133,8 +133,8 @@
             this.treeViewCommand.Name = "treeViewCommand";
             this.treeViewCommand.Size = new System.Drawing.Size(327, 192);
             this.treeViewCommand.TabIndex = 2;
-            this.treeViewCommand.DrawNode += new System.Windows.Forms.DrawTreeNodeEventHandler(this.treeViewCommand_DrawNode);
             this.treeViewCommand.BeforeExpand += new System.Windows.Forms.TreeViewCancelEventHandler(this.treeViewCommand_BeforeExpand);
+            this.treeViewCommand.DrawNode += new System.Windows.Forms.DrawTreeNodeEventHandler(this.treeViewCommand_DrawNode);
             this.treeViewCommand.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.treeViewCommand_AfterSelect);
             // 
             // buttonCancel
@@ -152,7 +152,7 @@
             this.labelFreeware.AutoSize = true;
             this.labelFreeware.Location = new System.Drawing.Point(10, 548);
             this.labelFreeware.Name = "labelFreeware";
-            this.labelFreeware.Size = new System.Drawing.Size(0, 12);
+            this.labelFreeware.Size = new System.Drawing.Size(0, 15);
             this.labelFreeware.TabIndex = 5;
             // 
             // groupBox1
@@ -188,14 +188,14 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(8, 15);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(352, 12);
+            this.label2.Size = new System.Drawing.Size(354, 15);
             this.label2.TabIndex = 0;
             this.label2.Text = "条件に一致するファイルで関連づけを実行すると、次の機能を実行します。";
             // 
             // AssociateDetailDialog
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.CancelButton = this.buttonCancel;
             this.ClientSize = new System.Drawing.Size(698, 388);
             this.Controls.Add(this.groupBox2);
@@ -203,6 +203,7 @@
             this.Controls.Add(this.labelFreeware);
             this.Controls.Add(this.buttonAssign);
             this.Controls.Add(this.buttonCancel);
+            this.Font = new System.Drawing.Font("Yu Gothic UI", 9F);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.MaximizeBox = false;
             this.MinimizeBox = false;

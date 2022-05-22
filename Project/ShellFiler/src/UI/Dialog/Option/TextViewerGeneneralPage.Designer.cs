@@ -45,16 +45,16 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(3, 6);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(175, 12);
+            this.label1.Size = new System.Drawing.Size(183, 15);
             this.label1.TabIndex = 0;
             this.label1.Text = "読み込めるテキストの最大サイズ(&S):";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(3, 31);
+            this.label2.Location = new System.Drawing.Point(3, 32);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(169, 12);
+            this.label2.Size = new System.Drawing.Size(177, 15);
             this.label2.TabIndex = 4;
             this.label2.Text = "読み込めるテキストの最大行数(&L):";
             // 
@@ -62,14 +62,14 @@
             // 
             this.numericMaxSize.Location = new System.Drawing.Point(200, 4);
             this.numericMaxSize.Name = "numericMaxSize";
-            this.numericMaxSize.Size = new System.Drawing.Size(120, 19);
+            this.numericMaxSize.Size = new System.Drawing.Size(120, 23);
             this.numericMaxSize.TabIndex = 1;
             // 
             // numericMaxLine
             // 
-            this.numericMaxLine.Location = new System.Drawing.Point(200, 29);
+            this.numericMaxLine.Location = new System.Drawing.Point(200, 30);
             this.numericMaxLine.Name = "numericMaxLine";
-            this.numericMaxLine.Size = new System.Drawing.Size(120, 19);
+            this.numericMaxLine.Size = new System.Drawing.Size(120, 23);
             this.numericMaxLine.TabIndex = 5;
             // 
             // label3
@@ -77,25 +77,25 @@
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(326, 6);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(22, 12);
+            this.label3.Size = new System.Drawing.Size(25, 15);
             this.label3.TabIndex = 2;
             this.label3.Text = "MB";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(326, 31);
+            this.label4.Location = new System.Drawing.Point(326, 32);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(17, 12);
+            this.label4.Size = new System.Drawing.Size(19, 15);
             this.label4.TabIndex = 6;
             this.label4.Text = "行";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(26, 60);
+            this.label6.Location = new System.Drawing.Point(26, 58);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(251, 12);
+            this.label6.Size = new System.Drawing.Size(253, 15);
             this.label6.TabIndex = 8;
             this.label6.Text = "設定されたサイズを超えた部分は読み込まれません。";
             // 
@@ -104,34 +104,34 @@
             this.labelMaxSize.AutoSize = true;
             this.labelMaxSize.Location = new System.Drawing.Point(354, 6);
             this.labelMaxSize.Name = "labelMaxSize";
-            this.labelMaxSize.Size = new System.Drawing.Size(58, 12);
+            this.labelMaxSize.Size = new System.Drawing.Size(79, 15);
             this.labelMaxSize.TabIndex = 3;
             this.labelMaxSize.Text = "{0}～{1}MB";
             // 
             // labelMaxLine
             // 
             this.labelMaxLine.AutoSize = true;
-            this.labelMaxLine.Location = new System.Drawing.Point(354, 31);
+            this.labelMaxLine.Location = new System.Drawing.Point(354, 32);
             this.labelMaxLine.Name = "labelMaxLine";
-            this.labelMaxLine.Size = new System.Drawing.Size(41, 12);
+            this.labelMaxLine.Size = new System.Drawing.Size(61, 15);
             this.labelMaxLine.TabIndex = 7;
             this.labelMaxLine.Text = "{0}～{1}";
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(26, 72);
+            this.label8.Location = new System.Drawing.Point(26, 74);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(397, 12);
+            this.label8.Size = new System.Drawing.Size(399, 15);
             this.label8.TabIndex = 9;
             this.label8.Text = "間違って大きなファイルを開いたとき、読み込みに時間がかかる問題を回避できます。";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(5, 114);
+            this.label5.Location = new System.Drawing.Point(5, 116);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(296, 12);
+            this.label5.Size = new System.Drawing.Size(332, 15);
             this.label5.TabIndex = 10;
             this.label5.Text = "選択範囲の比較で差分表示ツールを起動した後の登録テキスト(&S):";
             // 
@@ -139,23 +139,23 @@
             // 
             this.comboBoxCompare.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxCompare.FormattingEnabled = true;
-            this.comboBoxCompare.Location = new System.Drawing.Point(200, 130);
+            this.comboBoxCompare.Location = new System.Drawing.Point(200, 132);
             this.comboBoxCompare.Name = "comboBoxCompare";
-            this.comboBoxCompare.Size = new System.Drawing.Size(195, 20);
+            this.comboBoxCompare.Size = new System.Drawing.Size(195, 23);
             this.comboBoxCompare.TabIndex = 11;
             // 
             // label15
             // 
             this.label15.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label15.Location = new System.Drawing.Point(59, 97);
+            this.label15.Location = new System.Drawing.Point(59, 99);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(400, 3);
             this.label15.TabIndex = 12;
             // 
             // TextViewerGeneralPage
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.Controls.Add(this.label15);
             this.Controls.Add(this.comboBoxCompare);
             this.Controls.Add(this.label5);
@@ -169,6 +169,7 @@
             this.Controls.Add(this.labelMaxSize);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label1);
+            this.Font = new System.Drawing.Font("Yu Gothic UI", 9F);
             this.Name = "TextViewerGeneralPage";
             this.Size = new System.Drawing.Size(520, 370);
             ((System.ComponentModel.ISupportInitialize)(this.numericMaxSize)).EndInit();

@@ -35,13 +35,13 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(14, 15);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(132, 12);
+            this.label1.Size = new System.Drawing.Size(140, 15);
             this.label1.TabIndex = 0;
             this.label1.Text = "1行に表示するバイト数(&B):";
             // 
             // numericByteCount
             // 
-            this.numericByteCount.Location = new System.Drawing.Point(152, 13);
+            this.numericByteCount.Location = new System.Drawing.Point(155, 13);
             this.numericByteCount.Maximum = new decimal(new int[] {
             64,
             0,
@@ -53,7 +53,7 @@
             0,
             0});
             this.numericByteCount.Name = "numericByteCount";
-            this.numericByteCount.Size = new System.Drawing.Size(92, 19);
+            this.numericByteCount.Size = new System.Drawing.Size(92, 23);
             this.numericByteCount.TabIndex = 1;
             this.numericByteCount.Value = new decimal(new int[] {
             8,
@@ -64,7 +64,7 @@
             // buttonCancel
             // 
             this.buttonCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.buttonCancel.Location = new System.Drawing.Point(169, 38);
+            this.buttonCancel.Location = new System.Drawing.Point(172, 42);
             this.buttonCancel.Name = "buttonCancel";
             this.buttonCancel.Size = new System.Drawing.Size(75, 23);
             this.buttonCancel.TabIndex = 3;
@@ -73,7 +73,7 @@
             // 
             // buttonOk
             // 
-            this.buttonOk.Location = new System.Drawing.Point(88, 38);
+            this.buttonOk.Location = new System.Drawing.Point(91, 42);
             this.buttonOk.Name = "buttonOk";
             this.buttonOk.Size = new System.Drawing.Size(75, 23);
             this.buttonOk.TabIndex = 2;
@@ -84,14 +84,15 @@
             // ViewerDumpWidthDialog
             // 
             this.AcceptButton = this.buttonOk;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.CancelButton = this.buttonCancel;
-            this.ClientSize = new System.Drawing.Size(259, 72);
+            this.ClientSize = new System.Drawing.Size(259, 77);
             this.Controls.Add(this.buttonOk);
             this.Controls.Add(this.buttonCancel);
             this.Controls.Add(this.numericByteCount);
             this.Controls.Add(this.label1);
+            this.Font = new System.Drawing.Font("Yu Gothic UI", 9F);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.MaximizeBox = false;
             this.MinimizeBox = false;

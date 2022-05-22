@@ -42,18 +42,18 @@
             // 
             this.comboBoxThumbName.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxThumbName.FormattingEnabled = true;
-            this.comboBoxThumbName.Location = new System.Drawing.Point(48, 113);
+            this.comboBoxThumbName.Location = new System.Drawing.Point(48, 123);
             this.comboBoxThumbName.Name = "comboBoxThumbName";
-            this.comboBoxThumbName.Size = new System.Drawing.Size(155, 20);
+            this.comboBoxThumbName.Size = new System.Drawing.Size(155, 23);
             this.comboBoxThumbName.TabIndex = 5;
             // 
             // comboBoxThumbSize
             // 
             this.comboBoxThumbSize.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxThumbSize.FormattingEnabled = true;
-            this.comboBoxThumbSize.Location = new System.Drawing.Point(48, 75);
+            this.comboBoxThumbSize.Location = new System.Drawing.Point(48, 79);
             this.comboBoxThumbSize.Name = "comboBoxThumbSize";
-            this.comboBoxThumbSize.Size = new System.Drawing.Size(155, 20);
+            this.comboBoxThumbSize.Size = new System.Drawing.Size(155, 23);
             this.comboBoxThumbSize.TabIndex = 3;
             // 
             // panelViewSample
@@ -67,9 +67,9 @@
             // radioButtonThumb
             // 
             this.radioButtonThumb.AutoSize = true;
-            this.radioButtonThumb.Location = new System.Drawing.Point(6, 40);
+            this.radioButtonThumb.Location = new System.Drawing.Point(8, 40);
             this.radioButtonThumb.Name = "radioButtonThumb";
-            this.radioButtonThumb.Size = new System.Drawing.Size(163, 16);
+            this.radioButtonThumb.Size = new System.Drawing.Size(168, 19);
             this.radioButtonThumb.TabIndex = 1;
             this.radioButtonThumb.TabStop = true;
             this.radioButtonThumb.Text = "サムネイル表示に変更する(&T)";
@@ -78,27 +78,27 @@
             // labelViewName
             // 
             this.labelViewName.AutoSize = true;
-            this.labelViewName.Location = new System.Drawing.Point(31, 98);
+            this.labelViewName.Location = new System.Drawing.Point(31, 106);
             this.labelViewName.Name = "labelViewName";
-            this.labelViewName.Size = new System.Drawing.Size(127, 12);
+            this.labelViewName.Size = new System.Drawing.Size(135, 15);
             this.labelViewName.TabIndex = 4;
             this.labelViewName.Text = "ファイル名の表示方法(&N):";
             // 
             // labelViewThumbSize
             // 
             this.labelViewThumbSize.AutoSize = true;
-            this.labelViewThumbSize.Location = new System.Drawing.Point(31, 60);
+            this.labelViewThumbSize.Location = new System.Drawing.Point(31, 62);
             this.labelViewThumbSize.Name = "labelViewThumbSize";
-            this.labelViewThumbSize.Size = new System.Drawing.Size(134, 12);
+            this.labelViewThumbSize.Size = new System.Drawing.Size(142, 15);
             this.labelViewThumbSize.TabIndex = 2;
             this.labelViewThumbSize.Text = "サムネイル画像の大きさ(S):";
             // 
             // radioButtonDetail
             // 
             this.radioButtonDetail.AutoSize = true;
-            this.radioButtonDetail.Location = new System.Drawing.Point(6, 18);
+            this.radioButtonDetail.Location = new System.Drawing.Point(8, 18);
             this.radioButtonDetail.Name = "radioButtonDetail";
-            this.radioButtonDetail.Size = new System.Drawing.Size(139, 16);
+            this.radioButtonDetail.Size = new System.Drawing.Size(144, 19);
             this.radioButtonDetail.TabIndex = 0;
             this.radioButtonDetail.TabStop = true;
             this.radioButtonDetail.Text = "詳細表示に変更する(&D)";
@@ -129,7 +129,7 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(13, 13);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(81, 12);
+            this.label1.Size = new System.Drawing.Size(88, 15);
             this.label1.TabIndex = 0;
             this.label1.Text = "対象フォルダ(&F):";
             // 
@@ -144,7 +144,7 @@
             this.groupBox1.Controls.Add(this.comboBoxThumbSize);
             this.groupBox1.Location = new System.Drawing.Point(12, 38);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(519, 170);
+            this.groupBox1.Size = new System.Drawing.Size(519, 178);
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "使用する表示モード";
@@ -153,14 +153,14 @@
             // 
             this.textBoxTargetFolder.Location = new System.Drawing.Point(101, 10);
             this.textBoxTargetFolder.Name = "textBoxTargetFolder";
-            this.textBoxTargetFolder.Size = new System.Drawing.Size(430, 19);
+            this.textBoxTargetFolder.Size = new System.Drawing.Size(430, 23);
             this.textBoxTargetFolder.TabIndex = 1;
             // 
             // FileListViewModeEditDialog
             // 
             this.AcceptButton = this.buttonOk;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.CancelButton = this.buttonCancel;
             this.ClientSize = new System.Drawing.Size(543, 257);
             this.Controls.Add(this.textBoxTargetFolder);
@@ -168,6 +168,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.buttonCancel);
             this.Controls.Add(this.buttonOk);
+            this.Font = new System.Drawing.Font("Yu Gothic UI", 9F);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.MaximizeBox = false;
             this.MinimizeBox = false;

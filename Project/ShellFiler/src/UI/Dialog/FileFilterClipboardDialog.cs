@@ -45,6 +45,10 @@ namespace ShellFiler.UI.Dialog {
             m_setting = setting;
             m_saveFilePath = saveFilePath;
 
+            using (HighDpiGraphics graphics = new HighDpiGraphics(this)) {
+                this.listBoxAllFilter.ItemHeight = graphics.Y(16);
+            }
+
             // クリップボード用UI
             if (m_setting.TargetClipboard) {
                 this.radioButtonClipboard.Checked = true;
@@ -473,11 +477,11 @@ namespace ShellFiler.UI.Dialog {
                 }
 
                 // 文字情報
-                int x = evt.Bounds.Left + 2;
-                int y = evt.Bounds.Top + 2;
+                int x = evt.Bounds.Left + g.X(2);
+                int y = evt.Bounds.Top + g.Y(2);
                 g.Graphics.DrawString(component.FilterName, m_listBoxAllFilter.Font, SystemBrushes.WindowText, new Point(x, y));
                 for (int i = 0; i < itemDisplayLine.Length; i++) {
-                    g.Graphics.DrawString(itemDisplayLine[i], m_listBoxAllFilter.Font, SystemBrushes.WindowText, new Point(x + 8, y + i * 12 + 16));
+                    g.Graphics.DrawString(itemDisplayLine[i], m_listBoxAllFilter.Font, SystemBrushes.WindowText, new Point(x + g.X(8), y + g.X(i * 12 + 16)));
                 }
 
                 // フォーカス
@@ -514,10 +518,12 @@ namespace ShellFiler.UI.Dialog {
                 IFileFilterComponent component = (IFileFilterComponent)(componentType.InvokeMember(null, BindingFlags.CreateInstance, null, null, null));
 
                 string[] itemDisplayLine = component.GetDisplayParameter(false, item.PropertyList);
-                if (itemDisplayLine.Length > 0) {
-                    evt.ItemHeight = 24 + itemDisplayLine.Length * 12;
-                } else {
-                    evt.ItemHeight = 18;
+                using (HighDpiGraphics graphics = new HighDpiGraphics(m_parent)) {
+                    if (itemDisplayLine.Length > 0) {
+                        evt.ItemHeight = graphics.Y(24 + itemDisplayLine.Length * 12);
+                    } else {
+                        evt.ItemHeight = graphics.Y(18);
+                    }
                 }
             }
 

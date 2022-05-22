@@ -53,6 +53,7 @@
             this.labelFreeware = new System.Windows.Forms.Label();
             this.buttonReset = new System.Windows.Forms.Button();
             this.tabControl.SuspendLayout();
+            this.tabPage1.SuspendLayout();
             this.panelPage.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -102,44 +103,45 @@
             this.tabControl.Location = new System.Drawing.Point(12, 12);
             this.tabControl.Name = "tabControl";
             this.tabControl.SelectedIndex = 0;
-            this.tabControl.Size = new System.Drawing.Size(697, 429);
+            this.tabControl.Size = new System.Drawing.Size(697, 452);
             this.tabControl.TabIndex = 0;
             this.tabControl.SelectedIndexChanged += new System.EventHandler(this.tabControl_SelectedIndexChanged);
             // 
             // tabPage1
             // 
-            this.tabPage1.Location = new System.Drawing.Point(4, 22);
+            this.tabPage1.Controls.Add(this.panelPage);
+            this.tabPage1.Location = new System.Drawing.Point(4, 24);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(689, 403);
+            this.tabPage1.Size = new System.Drawing.Size(689, 424);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "tabPage1";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
             // tabPage2
             // 
-            this.tabPage2.Location = new System.Drawing.Point(4, 22);
+            this.tabPage2.Location = new System.Drawing.Point(4, 24);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(689, 403);
+            this.tabPage2.Size = new System.Drawing.Size(689, 401);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "tabPage2";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
             // tabPage3
             // 
-            this.tabPage3.Location = new System.Drawing.Point(4, 22);
+            this.tabPage3.Location = new System.Drawing.Point(4, 24);
             this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Size = new System.Drawing.Size(689, 403);
+            this.tabPage3.Size = new System.Drawing.Size(689, 401);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "tabPage3";
             this.tabPage3.UseVisualStyleBackColor = true;
             // 
             // tabPage4
             // 
-            this.tabPage4.Location = new System.Drawing.Point(4, 22);
+            this.tabPage4.Location = new System.Drawing.Point(4, 24);
             this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Size = new System.Drawing.Size(689, 403);
+            this.tabPage4.Size = new System.Drawing.Size(689, 401);
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "tabPage4";
             this.tabPage4.UseVisualStyleBackColor = true;
@@ -187,14 +189,14 @@
             this.textBoxKeyList.Location = new System.Drawing.Point(76, 84);
             this.textBoxKeyList.Name = "textBoxKeyList";
             this.textBoxKeyList.ReadOnly = true;
-            this.textBoxKeyList.Size = new System.Drawing.Size(526, 19);
+            this.textBoxKeyList.Size = new System.Drawing.Size(526, 23);
             this.textBoxKeyList.TabIndex = 5;
             // 
             // textBoxName
             // 
             this.textBoxName.Location = new System.Drawing.Point(76, 9);
             this.textBoxName.Name = "textBoxName";
-            this.textBoxName.Size = new System.Drawing.Size(182, 19);
+            this.textBoxName.Size = new System.Drawing.Size(182, 23);
             this.textBoxName.TabIndex = 1;
             this.textBoxName.TextChanged += new System.EventHandler(this.textBoxName_TextChanged);
             // 
@@ -203,7 +205,7 @@
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(4, 361);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(304, 12);
+            this.label5.Size = new System.Drawing.Size(306, 15);
             this.label5.TabIndex = 13;
             this.label5.Text = "関連づけは、拡張子とファイルシステムの組に対して定義します。";
             // 
@@ -212,7 +214,7 @@
             this.label8.AutoSize = true;
             this.label8.Location = new System.Drawing.Point(3, 69);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(157, 12);
+            this.label8.Size = new System.Drawing.Size(162, 15);
             this.label8.TabIndex = 4;
             this.label8.Text = "この機能に割り当られているキー:";
             // 
@@ -221,7 +223,7 @@
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(3, 12);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(47, 12);
+            this.label4.Size = new System.Drawing.Size(55, 15);
             this.label4.TabIndex = 0;
             this.label4.Text = "名前(&N):";
             // 
@@ -230,14 +232,14 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(3, 155);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(131, 12);
+            this.label2.Size = new System.Drawing.Size(139, 15);
             this.label2.TabIndex = 8;
             this.label2.Text = "拡張子ごとの関連付け(&S):";
             // 
             // buttonCancel
             // 
             this.buttonCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.buttonCancel.Location = new System.Drawing.Point(634, 447);
+            this.buttonCancel.Location = new System.Drawing.Point(633, 470);
             this.buttonCancel.Name = "buttonCancel";
             this.buttonCancel.Size = new System.Drawing.Size(75, 23);
             this.buttonCancel.TabIndex = 4;
@@ -246,7 +248,7 @@
             // 
             // buttonOk
             // 
-            this.buttonOk.Location = new System.Drawing.Point(553, 447);
+            this.buttonOk.Location = new System.Drawing.Point(552, 470);
             this.buttonOk.Name = "buttonOk";
             this.buttonOk.Size = new System.Drawing.Size(75, 23);
             this.buttonOk.TabIndex = 3;
@@ -272,7 +274,7 @@
             this.panelPage.Controls.Add(this.buttonDelete);
             this.panelPage.Controls.Add(this.listBoxAssoc);
             this.panelPage.Controls.Add(this.label2);
-            this.panelPage.Location = new System.Drawing.Point(1, 37);
+            this.panelPage.Location = new System.Drawing.Point(0, 3);
             this.panelPage.Name = "panelPage";
             this.panelPage.Size = new System.Drawing.Size(689, 394);
             this.panelPage.TabIndex = 1;
@@ -300,36 +302,36 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(74, 120);
+            this.label7.Location = new System.Drawing.Point(74, 124);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(393, 12);
+            this.label7.Size = new System.Drawing.Size(399, 15);
             this.label7.TabIndex = 7;
             this.label7.Text = "ここでは変更できません。変更は[オプション][ファイル一覧のキー設定]から行います。";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(74, 108);
+            this.label6.Location = new System.Drawing.Point(74, 110);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(227, 12);
+            this.label6.Size = new System.Drawing.Size(229, 15);
             this.label6.TabIndex = 6;
             this.label6.Text = "この関連付け設定を利用するキーの一覧です。";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(74, 33);
+            this.label1.Location = new System.Drawing.Point(74, 35);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(451, 12);
+            this.label1.Size = new System.Drawing.Size(452, 15);
             this.label1.TabIndex = 2;
             this.label1.Text = "このページで設定した関連付けに名前をつけておくと、メニューやツールヒントなどで表示されます。";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(3, 373);
+            this.label3.Location = new System.Drawing.Point(3, 375);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(598, 12);
+            this.label3.Size = new System.Drawing.Size(630, 15);
             this.label3.TabIndex = 14;
             this.label3.Text = "たとえば、関連付け「開く」に対して、「Windowsの*.txtを開くときは機能Ｘ」「SSHの*.txtを開くときは機能Ｙ」…などを設定します。";
             // 
@@ -338,12 +340,12 @@
             this.labelFreeware.AutoSize = true;
             this.labelFreeware.Location = new System.Drawing.Point(10, 548);
             this.labelFreeware.Name = "labelFreeware";
-            this.labelFreeware.Size = new System.Drawing.Size(0, 12);
+            this.labelFreeware.Size = new System.Drawing.Size(0, 15);
             this.labelFreeware.TabIndex = 5;
             // 
             // buttonReset
             // 
-            this.buttonReset.Location = new System.Drawing.Point(465, 447);
+            this.buttonReset.Location = new System.Drawing.Point(464, 470);
             this.buttonReset.Name = "buttonReset";
             this.buttonReset.Size = new System.Drawing.Size(82, 23);
             this.buttonReset.TabIndex = 2;
@@ -354,16 +356,16 @@
             // AssociateSettingDialog
             // 
             this.AcceptButton = this.buttonOk;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.CancelButton = this.buttonCancel;
-            this.ClientSize = new System.Drawing.Size(720, 482);
+            this.ClientSize = new System.Drawing.Size(720, 505);
             this.Controls.Add(this.buttonReset);
             this.Controls.Add(this.labelFreeware);
-            this.Controls.Add(this.panelPage);
             this.Controls.Add(this.tabControl);
             this.Controls.Add(this.buttonOk);
             this.Controls.Add(this.buttonCancel);
+            this.Font = new System.Drawing.Font("Yu Gothic UI", 9F);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
@@ -374,6 +376,7 @@
             this.Text = "関連付け設定";
             this.Load += new System.EventHandler(this.AssociateSettingDialog_Load);
             this.tabControl.ResumeLayout(false);
+            this.tabPage1.ResumeLayout(false);
             this.panelPage.ResumeLayout(false);
             this.panelPage.PerformLayout();
             this.ResumeLayout(false);

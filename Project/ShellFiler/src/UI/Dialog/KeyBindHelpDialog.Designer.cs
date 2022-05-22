@@ -34,10 +34,11 @@
             // listViewKey
             // 
             this.listViewKey.HideSelection = false;
-            this.listViewKey.Location = new System.Drawing.Point(12, 38);
+            this.listViewKey.Location = new System.Drawing.Point(21, 66);
+            this.listViewKey.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.listViewKey.MultiSelect = false;
             this.listViewKey.Name = "listViewKey";
-            this.listViewKey.Size = new System.Drawing.Size(347, 97);
+            this.listViewKey.Size = new System.Drawing.Size(724, 167);
             this.listViewKey.TabIndex = 0;
             this.listViewKey.UseCompatibleStateImageBehavior = false;
             this.listViewKey.View = System.Windows.Forms.View.Details;
@@ -47,27 +48,30 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 17);
+            this.label1.Location = new System.Drawing.Point(21, 30);
+            this.label1.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(130, 12);
+            this.label1.Size = new System.Drawing.Size(227, 30);
             this.label1.TabIndex = 1;
             this.label1.Text = "割り当てられているキー(&K):";
             // 
             // textBoxExplanation
             // 
-            this.textBoxExplanation.Location = new System.Drawing.Point(12, 141);
+            this.textBoxExplanation.Location = new System.Drawing.Point(21, 247);
+            this.textBoxExplanation.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.textBoxExplanation.Multiline = true;
             this.textBoxExplanation.Name = "textBoxExplanation";
             this.textBoxExplanation.ReadOnly = true;
             this.textBoxExplanation.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.textBoxExplanation.Size = new System.Drawing.Size(347, 62);
+            this.textBoxExplanation.Size = new System.Drawing.Size(724, 106);
             this.textBoxExplanation.TabIndex = 3;
             // 
             // buttonOk
             // 
-            this.buttonOk.Location = new System.Drawing.Point(203, 210);
+            this.buttonOk.Location = new System.Drawing.Point(472, 363);
+            this.buttonOk.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.buttonOk.Name = "buttonOk";
-            this.buttonOk.Size = new System.Drawing.Size(75, 23);
+            this.buttonOk.Size = new System.Drawing.Size(131, 40);
             this.buttonOk.TabIndex = 4;
             this.buttonOk.Text = "実行";
             this.buttonOk.UseVisualStyleBackColor = true;
@@ -76,18 +80,20 @@
             // buttonCancel
             // 
             this.buttonCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.buttonCancel.Location = new System.Drawing.Point(284, 210);
+            this.buttonCancel.Location = new System.Drawing.Point(614, 363);
+            this.buttonCancel.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.buttonCancel.Name = "buttonCancel";
-            this.buttonCancel.Size = new System.Drawing.Size(75, 23);
+            this.buttonCancel.Size = new System.Drawing.Size(131, 40);
             this.buttonCancel.TabIndex = 4;
             this.buttonCancel.Text = "キャンセル";
             this.buttonCancel.UseVisualStyleBackColor = true;
             // 
             // buttonRetry
             // 
-            this.buttonRetry.Location = new System.Drawing.Point(284, 9);
+            this.buttonRetry.Location = new System.Drawing.Point(614, 14);
+            this.buttonRetry.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.buttonRetry.Name = "buttonRetry";
-            this.buttonRetry.Size = new System.Drawing.Size(75, 23);
+            this.buttonRetry.Size = new System.Drawing.Size(131, 40);
             this.buttonRetry.TabIndex = 4;
             this.buttonRetry.Text = "再入力(&R)";
             this.buttonRetry.UseVisualStyleBackColor = true;
@@ -96,10 +102,10 @@
             // KeyBindHelpDialog
             // 
             this.AcceptButton = this.buttonOk;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(168F, 168F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.CancelButton = this.buttonCancel;
-            this.ClientSize = new System.Drawing.Size(371, 245);
+            this.ClientSize = new System.Drawing.Size(759, 429);
             this.Controls.Add(this.buttonRetry);
             this.Controls.Add(this.buttonCancel);
             this.Controls.Add(this.buttonOk);
@@ -107,7 +113,9 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.listViewKey);
             this.Cursor = System.Windows.Forms.Cursors.Default;
+            this.Font = new System.Drawing.Font("Yu Gothic UI", 9F);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "KeyBindHelpDialog";

@@ -42,7 +42,7 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(13, 13);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(113, 12);
+            this.label1.Size = new System.Drawing.Size(121, 15);
             this.label1.TabIndex = 0;
             this.label1.Text = "作成するフォルダ名(&N):";
             // 
@@ -59,7 +59,7 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(13, 62);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(54, 12);
+            this.label2.Size = new System.Drawing.Size(59, 15);
             this.label2.TabIndex = 2;
             this.label2.Text = "親フォルダ:";
             // 
@@ -78,7 +78,7 @@
             this.checkBoxMoveCurrent.AutoSize = true;
             this.checkBoxMoveCurrent.Location = new System.Drawing.Point(15, 101);
             this.checkBoxMoveCurrent.Name = "checkBoxMoveCurrent";
-            this.checkBoxMoveCurrent.Size = new System.Drawing.Size(145, 16);
+            this.checkBoxMoveCurrent.Size = new System.Drawing.Size(150, 19);
             this.checkBoxMoveCurrent.TabIndex = 4;
             this.checkBoxMoveCurrent.Text = "作成したフォルダを開く(&M)";
             this.checkBoxMoveCurrent.UseVisualStyleBackColor = true;
@@ -106,8 +106,8 @@
             // MakeDirectoryDialog
             // 
             this.AcceptButton = this.buttonOk;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.CancelButton = this.buttonCancel;
             this.ClientSize = new System.Drawing.Size(317, 163);
             this.Controls.Add(this.buttonCancel);
@@ -117,6 +117,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.textBoxDirName);
             this.Controls.Add(this.label1);
+            this.Font = new System.Drawing.Font("Yu Gothic UI", 9F);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.MinimizeBox = false;

@@ -31,7 +31,7 @@
             // 
             // buttonOk
             // 
-            this.buttonOk.Location = new System.Drawing.Point(85, 44);
+            this.buttonOk.Location = new System.Drawing.Point(94, 44);
             this.buttonOk.Name = "buttonOk";
             this.buttonOk.Size = new System.Drawing.Size(75, 23);
             this.buttonOk.TabIndex = 2;
@@ -42,7 +42,7 @@
             // buttonCancel
             // 
             this.buttonCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.buttonCancel.Location = new System.Drawing.Point(166, 44);
+            this.buttonCancel.Location = new System.Drawing.Point(175, 44);
             this.buttonCancel.Name = "buttonCancel";
             this.buttonCancel.Size = new System.Drawing.Size(75, 23);
             this.buttonCancel.TabIndex = 3;
@@ -54,28 +54,29 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(11, 16);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(105, 12);
+            this.label1.Size = new System.Drawing.Size(113, 15);
             this.label1.TabIndex = 0;
             this.label1.Text = "ジャンプ先行番号(&L):";
             // 
             // textBoxLineNo
             // 
-            this.textBoxLineNo.Location = new System.Drawing.Point(122, 13);
+            this.textBoxLineNo.Location = new System.Drawing.Point(131, 13);
             this.textBoxLineNo.Name = "textBoxLineNo";
-            this.textBoxLineNo.Size = new System.Drawing.Size(119, 19);
+            this.textBoxLineNo.Size = new System.Drawing.Size(119, 23);
             this.textBoxLineNo.TabIndex = 1;
             // 
             // ViewerJumpLineDialog
             // 
             this.AcceptButton = this.buttonOk;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.CancelButton = this.buttonCancel;
-            this.ClientSize = new System.Drawing.Size(253, 79);
+            this.ClientSize = new System.Drawing.Size(262, 79);
             this.Controls.Add(this.textBoxLineNo);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.buttonCancel);
             this.Controls.Add(this.buttonOk);
+            this.Font = new System.Drawing.Font("Yu Gothic UI", 9F);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.MinimizeBox = false;

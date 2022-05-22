@@ -53,9 +53,9 @@
             // 
             // textBoxEditor
             // 
-            this.textBoxEditor.Location = new System.Drawing.Point(150, 85);
+            this.textBoxEditor.Location = new System.Drawing.Point(159, 85);
             this.textBoxEditor.Name = "textBoxEditor";
-            this.textBoxEditor.Size = new System.Drawing.Size(277, 19);
+            this.textBoxEditor.Size = new System.Drawing.Size(268, 23);
             this.textBoxEditor.TabIndex = 4;
             // 
             // label5
@@ -63,7 +63,7 @@
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(26, 136);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(215, 12);
+            this.label5.Size = new System.Drawing.Size(216, 15);
             this.label5.TabIndex = 9;
             this.label5.Text = "テキストエディタのコマンドラインを指定します。";
             // 
@@ -83,7 +83,7 @@
             this.groupBox2.Controls.Add(this.label5);
             this.groupBox2.Location = new System.Drawing.Point(3, 3);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(514, 168);
+            this.groupBox2.Size = new System.Drawing.Size(514, 181);
             this.groupBox2.TabIndex = 0;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "テキストエディタ";
@@ -93,7 +93,7 @@
             this.checkBoxEditorSSH.AutoSize = true;
             this.checkBoxEditorSSH.Location = new System.Drawing.Point(28, 112);
             this.checkBoxEditorSSH.Name = "checkBoxEditorSSH";
-            this.checkBoxEditorSSH.Size = new System.Drawing.Size(116, 16);
+            this.checkBoxEditorSSH.Size = new System.Drawing.Size(124, 19);
             this.checkBoxEditorSSH.TabIndex = 6;
             this.checkBoxEditorSSH.Text = "SSHは別に指定(&S)";
             this.checkBoxEditorSSH.UseVisualStyleBackColor = true;
@@ -102,9 +102,9 @@
             // linkLabelSSHHelp
             // 
             this.linkLabelSSHHelp.AutoSize = true;
-            this.linkLabelSSHHelp.Location = new System.Drawing.Point(407, 134);
+            this.linkLabelSSHHelp.Location = new System.Drawing.Point(407, 136);
             this.linkLabelSSHHelp.Name = "linkLabelSSHHelp";
-            this.linkLabelSSHHelp.Size = new System.Drawing.Size(101, 12);
+            this.linkLabelSSHHelp.Size = new System.Drawing.Size(106, 15);
             this.linkLabelSSHHelp.TabIndex = 11;
             this.linkLabelSSHHelp.TabStop = true;
             this.linkLabelSSHHelp.Text = "SSH用のエディタとは";
@@ -115,7 +115,7 @@
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(26, 88);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(91, 12);
+            this.label3.Size = new System.Drawing.Size(99, 15);
             this.label3.TabIndex = 3;
             this.label3.Text = "通常のファイル(&G):";
             // 
@@ -124,7 +124,7 @@
             this.radioButtonEditorFix.AutoSize = true;
             this.radioButtonEditorFix.Location = new System.Drawing.Point(8, 65);
             this.radioButtonEditorFix.Name = "radioButtonEditorFix";
-            this.radioButtonEditorFix.Size = new System.Drawing.Size(212, 16);
+            this.radioButtonEditorFix.Size = new System.Drawing.Size(215, 19);
             this.radioButtonEditorFix.TabIndex = 2;
             this.radioButtonEditorFix.TabStop = true;
             this.radioButtonEditorFix.Text = "テキストエディタのコマンドラインを指定(&E)";
@@ -136,7 +136,7 @@
             this.textBoxEditorAuto.Location = new System.Drawing.Point(28, 40);
             this.textBoxEditorAuto.Name = "textBoxEditorAuto";
             this.textBoxEditorAuto.ReadOnly = true;
-            this.textBoxEditorAuto.Size = new System.Drawing.Size(399, 19);
+            this.textBoxEditorAuto.Size = new System.Drawing.Size(399, 23);
             this.textBoxEditorAuto.TabIndex = 1;
             // 
             // radioButtonEditorAuto
@@ -144,7 +144,7 @@
             this.radioButtonEditorAuto.AutoSize = true;
             this.radioButtonEditorAuto.Location = new System.Drawing.Point(8, 18);
             this.radioButtonEditorAuto.Name = "radioButtonEditorAuto";
-            this.radioButtonEditorAuto.Size = new System.Drawing.Size(179, 16);
+            this.radioButtonEditorAuto.Size = new System.Drawing.Size(189, 19);
             this.radioButtonEditorAuto.TabIndex = 0;
             this.radioButtonEditorAuto.TabStop = true;
             this.radioButtonEditorAuto.Text = "拡張子.txtの関連付けを使用(&T)";
@@ -153,14 +153,14 @@
             // 
             // textBoxEditorSSH
             // 
-            this.textBoxEditorSSH.Location = new System.Drawing.Point(150, 110);
+            this.textBoxEditorSSH.Location = new System.Drawing.Point(159, 110);
             this.textBoxEditorSSH.Name = "textBoxEditorSSH";
-            this.textBoxEditorSSH.Size = new System.Drawing.Size(277, 19);
+            this.textBoxEditorSSH.Size = new System.Drawing.Size(268, 23);
             this.textBoxEditorSSH.TabIndex = 7;
             // 
             // buttonEditorRefSSH
             // 
-            this.buttonEditorRefSSH.Location = new System.Drawing.Point(433, 108);
+            this.buttonEditorRefSSH.Location = new System.Drawing.Point(433, 110);
             this.buttonEditorRefSSH.Name = "buttonEditorRefSSH";
             this.buttonEditorRefSSH.Size = new System.Drawing.Size(75, 23);
             this.buttonEditorRefSSH.TabIndex = 8;
@@ -170,7 +170,7 @@
             // 
             // buttonEditorRef
             // 
-            this.buttonEditorRef.Location = new System.Drawing.Point(433, 83);
+            this.buttonEditorRef.Location = new System.Drawing.Point(433, 85);
             this.buttonEditorRef.Name = "buttonEditorRef";
             this.buttonEditorRef.Size = new System.Drawing.Size(75, 23);
             this.buttonEditorRef.TabIndex = 5;
@@ -181,9 +181,9 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(26, 148);
+            this.label6.Location = new System.Drawing.Point(26, 152);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(245, 12);
+            this.label6.Size = new System.Drawing.Size(256, 15);
             this.label6.TabIndex = 10;
             this.label6.Text = "{0}の位置に編集対象のファイル名を埋め込みます。";
             // 
@@ -201,7 +201,7 @@
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Location = new System.Drawing.Point(3, 190);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(514, 149);
+            this.groupBox1.Size = new System.Drawing.Size(514, 158);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "ファイルビューアからの編集";
@@ -211,7 +211,7 @@
             this.checkBoxLineSSH.AutoSize = true;
             this.checkBoxLineSSH.Location = new System.Drawing.Point(28, 89);
             this.checkBoxLineSSH.Name = "checkBoxLineSSH";
-            this.checkBoxLineSSH.Size = new System.Drawing.Size(117, 16);
+            this.checkBoxLineSSH.Size = new System.Drawing.Size(125, 19);
             this.checkBoxLineSSH.TabIndex = 5;
             this.checkBoxLineSSH.Text = "SSHは別に指定(&O)";
             this.checkBoxLineSSH.UseVisualStyleBackColor = true;
@@ -222,7 +222,7 @@
             this.radioButtonLineSpecify.AutoSize = true;
             this.radioButtonLineSpecify.Location = new System.Drawing.Point(8, 40);
             this.radioButtonLineSpecify.Name = "radioButtonLineSpecify";
-            this.radioButtonLineSpecify.Size = new System.Drawing.Size(198, 16);
+            this.radioButtonLineSpecify.Size = new System.Drawing.Size(202, 19);
             this.radioButtonLineSpecify.TabIndex = 1;
             this.radioButtonLineSpecify.TabStop = true;
             this.radioButtonLineSpecify.Text = "行番号付きのコマンドラインを指定(&L)";
@@ -234,7 +234,7 @@
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(26, 65);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(91, 12);
+            this.label4.Size = new System.Drawing.Size(98, 15);
             this.label4.TabIndex = 2;
             this.label4.Text = "通常のファイル(&A):";
             // 
@@ -243,7 +243,7 @@
             this.radioButtonLineNone.AutoSize = true;
             this.radioButtonLineNone.Location = new System.Drawing.Point(8, 18);
             this.radioButtonLineNone.Name = "radioButtonLineNone";
-            this.radioButtonLineNone.Size = new System.Drawing.Size(332, 16);
+            this.radioButtonLineNone.Size = new System.Drawing.Size(336, 19);
             this.radioButtonLineNone.TabIndex = 0;
             this.radioButtonLineNone.TabStop = true;
             this.radioButtonLineNone.Text = "テキストエディタと同じコマンドラインにして、行番号を指定しない(&N)";
@@ -253,22 +253,22 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(6, 128);
+            this.label1.Location = new System.Drawing.Point(6, 132);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(353, 12);
+            this.label1.Size = new System.Drawing.Size(373, 15);
             this.label1.TabIndex = 9;
             this.label1.Text = "{0}の位置に編集対象のファイル名を、{1}の位置に行番号を埋め込みます。";
             // 
             // textBoxEditorLineNumSSH
             // 
-            this.textBoxEditorLineNumSSH.Location = new System.Drawing.Point(150, 87);
+            this.textBoxEditorLineNumSSH.Location = new System.Drawing.Point(159, 87);
             this.textBoxEditorLineNumSSH.Name = "textBoxEditorLineNumSSH";
-            this.textBoxEditorLineNumSSH.Size = new System.Drawing.Size(277, 19);
+            this.textBoxEditorLineNumSSH.Size = new System.Drawing.Size(268, 23);
             this.textBoxEditorLineNumSSH.TabIndex = 6;
             // 
             // buttonEditorLineNumRefSSH
             // 
-            this.buttonEditorLineNumRefSSH.Location = new System.Drawing.Point(433, 85);
+            this.buttonEditorLineNumRefSSH.Location = new System.Drawing.Point(433, 87);
             this.buttonEditorLineNumRefSSH.Name = "buttonEditorLineNumRefSSH";
             this.buttonEditorLineNumRefSSH.Size = new System.Drawing.Size(75, 23);
             this.buttonEditorLineNumRefSSH.TabIndex = 7;
@@ -278,14 +278,14 @@
             // 
             // textBoxEditorLineNum
             // 
-            this.textBoxEditorLineNum.Location = new System.Drawing.Point(150, 62);
+            this.textBoxEditorLineNum.Location = new System.Drawing.Point(159, 62);
             this.textBoxEditorLineNum.Name = "textBoxEditorLineNum";
-            this.textBoxEditorLineNum.Size = new System.Drawing.Size(277, 19);
+            this.textBoxEditorLineNum.Size = new System.Drawing.Size(268, 23);
             this.textBoxEditorLineNum.TabIndex = 3;
             // 
             // buttonEditorLineNumRef
             // 
-            this.buttonEditorLineNumRef.Location = new System.Drawing.Point(433, 60);
+            this.buttonEditorLineNumRef.Location = new System.Drawing.Point(433, 62);
             this.buttonEditorLineNumRef.Name = "buttonEditorLineNumRef";
             this.buttonEditorLineNumRef.Size = new System.Drawing.Size(75, 23);
             this.buttonEditorLineNumRef.TabIndex = 4;
@@ -298,16 +298,17 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(6, 116);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(386, 12);
+            this.label2.Size = new System.Drawing.Size(387, 15);
             this.label2.TabIndex = 8;
             this.label2.Text = "ファイルビューアで表示中の行付近から編集するためのコマンドラインを指定します。";
             // 
             // InstallEditorPage
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.groupBox2);
+            this.Font = new System.Drawing.Font("Yu Gothic UI", 9F);
             this.Name = "InstallEditorPage";
             this.Size = new System.Drawing.Size(520, 370);
             this.groupBox2.ResumeLayout(false);

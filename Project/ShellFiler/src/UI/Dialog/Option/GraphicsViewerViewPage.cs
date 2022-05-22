@@ -150,27 +150,32 @@ namespace ShellFiler.UI.Dialog.Option {
             }
 
             // 描画
-            DoubleBuffer doubleBuffer = new DoubleBuffer(evt.Graphics, this.panelSample.Width, this.panelSample.Height);
-            try {
-                Graphics g = doubleBuffer.DrawingGraphics;
-                g.FillRectangle(Brushes.Black, doubleBuffer.DrawingRectangle);
-                if (zoomMode == GraphicsViewerAutoZoomMode.AlwaysOriginal) {
-                    Bitmap image = UIIconManager.GraphicsViewer_FilterSampleZoom;
-                    Rectangle rcImage = new Rectangle(0, 0, image.Width, image.Height);
-                    g.DrawImage(image, rcImage);
-                } else if (zoomMode == GraphicsViewerAutoZoomMode.AutoZoom) {
-                    Bitmap image = UIIconManager.GraphicsViewer_FilterSample;
-                    int width = (int)(((float)(this.panelSample.Height) / (float)(image.Height)) * ((float)(image.Width)));
-                    Rectangle rcImage = new Rectangle(0, 0, image.Width, image.Height);
-                    Rectangle rcDest = new Rectangle((this.panelSample.Width - width) / 2, 0, width, this.panelSample.Height);
-                    g.DrawImage(image, rcDest, rcImage, GraphicsUnit.Pixel);
-                } else {
-                    Bitmap image = UIIconManager.GraphicsViewer_FilterSample;
-                    Rectangle rcSrc = new Rectangle(0, 0, this.panelSample.Width, this.panelSample.Height);
-                    g.DrawImage(image, rcSrc, rcSrc, GraphicsUnit.Pixel);
+            using (HighDpiGraphics evtGraphics = new HighDpiGraphics(evt.Graphics)) {
+                DoubleBuffer doubleBuffer = new DoubleBuffer(evt.Graphics, evtGraphics.X(this.panelSample.Width), evtGraphics.Y(this.panelSample.Height));
+                try {
+                    using (HighDpiGraphics g = new HighDpiGraphics(doubleBuffer.DrawingGraphics)) {
+                        g.Graphics.FillRectangle(Brushes.Black, g.Rect(doubleBuffer.DrawingRectangle));
+                        if (zoomMode == GraphicsViewerAutoZoomMode.AlwaysOriginal) {
+                            Bitmap image = UIIconManager.GraphicsViewer_FilterSampleZoom;
+                            Rectangle rcImage = new Rectangle(0, 0, g.X(image.Width), g.Y(image.Height));
+                            g.Graphics.DrawImage(image, g.Rect(rcImage));
+                        } else if (zoomMode == GraphicsViewerAutoZoomMode.AutoZoom) {
+                            Bitmap image = UIIconManager.GraphicsViewer_FilterSample;
+                            int width = (int)(((float)(this.panelSample.Height) / (float)(image.Height)) * ((float)(image.Width)));
+                            Rectangle rcImage = new Rectangle(0, 0, g.X(image.Width), g.Y(image.Height));
+                            Rectangle rcDest = new Rectangle((this.panelSample.Width - width) / 2, g.Y(0), g.X(width), g.Y(this.panelSample.Height));
+                            g.Graphics.DrawImage(image, rcDest, rcImage, GraphicsUnit.Pixel);
+                        } else {
+                            Bitmap image = UIIconManager.GraphicsViewer_FilterSample;
+                            double scale = Math.Max((double) this.panelSample.Width / (double) image.Width, (double) this.panelSample.Height / (double) image.Height);
+                            Rectangle rcSrc = new Rectangle(0, 0, image.Width, image.Height);
+                            Rectangle rcDest = new Rectangle(0, 0, (int) (image.Width * scale), (int) (image.Height * scale));
+                            g.Graphics.DrawImage(image, rcDest, rcSrc, GraphicsUnit.Pixel);
+                        }
+                    }
+                } finally {
+                    doubleBuffer.FlushScreen(0, 0);
                 }
-            } finally {
-                doubleBuffer.FlushScreen(0, 0);
             }
         }
 

@@ -40,14 +40,14 @@ namespace ShellFiler.UI.Log.Logger {
         // 　　　　[in]fontLink    拡張となるリンクメッセージを出力するフォント（リンクメッセージを出力しないときnull）
         // 戻り値：なし
         //=========================================================================================
-        public LogLineRenderer(string message, string extendLink, Graphics g, Font fontLink) {
+        public LogLineRenderer(string message, string extendLink, HighDpiGraphics g, Font fontLink) {
             m_message = message;
             m_extendLink = extendLink;
 
             if (extendLink != null) {
-                const int CX_LINK_MARGIN = 8;
-                int xPosLink = CX_LEFT_RIGHT_MARGIN + (int)(GraphicsUtils.MeasureString(g, fontLink, m_message) + CX_LINK_MARGIN);
-                int cxLink = (int)(GraphicsUtils.MeasureString(g, fontLink, m_extendLink));
+                int cxLinkMargin = g.X(8);
+                int xPosLink = g.X(CX_LEFT_RIGHT_MARGIN + cxLinkMargin) + (int)(GraphicsUtils.MeasureString(g.Graphics, fontLink, m_message));
+                int cxLink = (int)(GraphicsUtils.MeasureString(g.Graphics, fontLink, m_extendLink));
                 m_rcLink = new Rectangle(xPosLink, 0, cxLink, 0);
             }
         }
@@ -67,8 +67,8 @@ namespace ShellFiler.UI.Log.Logger {
             Rectangle rcClient = logPanel.View.ClientRectangle;
             int logHeight = logPanel.LogLineHeight;
             int yPos = scrLine * logHeight;
-            int x1 = CX_LEFT_RIGHT_MARGIN;
-            int cx = logPanel.View.ClientRectangle.Width - CX_LEFT_RIGHT_MARGIN * 2;
+            int x1 = g.X(CX_LEFT_RIGHT_MARGIN);
+            int cx = logPanel.View.ClientRectangle.Width - g.X(CX_LEFT_RIGHT_MARGIN) * 2;
 
             for (int i = 0; i < 2; i++) {
                 // 0:通常、1:選択
@@ -98,8 +98,8 @@ namespace ShellFiler.UI.Log.Logger {
                 if (i == 0 && (lineContext.SelectionStart == -1 || lineContext.SelectionStart == lineContext.SelectionEnd)) {
                     ;
                 } else {
-                    int xStart = SelectToPoint(g.Graphics, font, lineContext.SelectionStart);
-                    int xEnd = SelectToPoint(g.Graphics, font, lineContext.SelectionEnd);
+                    int xStart = SelectToPoint(g, font, lineContext.SelectionStart);
+                    int xEnd = SelectToPoint(g, font, lineContext.SelectionEnd);
                     g.Graphics.SetClip(rcClient, CombineMode.Exclude);
                     if (i == 0) {
                         g.Graphics.SetClip(new Rectangle(0, yPos, xStart - 1, logHeight), CombineMode.Xor);
@@ -132,14 +132,14 @@ namespace ShellFiler.UI.Log.Logger {
         // 　　　　[in]select  選択した桁
         // 戻り値：選択位置の座標
         //=========================================================================================
-        private int SelectToPoint(Graphics g, Font font, int select) {
+        private int SelectToPoint(HighDpiGraphics g, Font font, int select) {
             int xPos;
             if (select <= m_message.Length) {
                 string sub = m_message.Substring(0, select);
-                xPos = CX_LEFT_RIGHT_MARGIN + TextRendererUtils.MeasureStringJustInt(g, font, sub);
+                xPos = g.X(CX_LEFT_RIGHT_MARGIN) + TextRendererUtils.MeasureStringJustInt(g, font, sub);
             } else {
                 if (m_extendLink == null) {
-                    xPos = CX_LEFT_RIGHT_MARGIN + TextRendererUtils.MeasureStringJustInt(g, font, m_message);
+                    xPos = g.X(CX_LEFT_RIGHT_MARGIN) + TextRendererUtils.MeasureStringJustInt(g, font, m_message);
                 } else {
                     if (select == m_message.Length + 1) {
                         xPos = m_rcLink.X;

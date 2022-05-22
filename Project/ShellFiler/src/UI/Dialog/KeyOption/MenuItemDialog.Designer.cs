@@ -50,7 +50,7 @@
             this.groupBox2.Controls.Add(this.textBoxExplanation);
             this.groupBox2.Location = new System.Drawing.Point(10, 142);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(677, 234);
+            this.groupBox2.Size = new System.Drawing.Size(677, 244);
             this.groupBox2.TabIndex = 2;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "実行する機能";
@@ -58,9 +58,9 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(6, 15);
+            this.label3.Location = new System.Drawing.Point(6, 19);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(46, 12);
+            this.label3.Size = new System.Drawing.Size(53, 15);
             this.label3.TabIndex = 0;
             this.label3.Text = "機能(&F):";
             // 
@@ -68,26 +68,26 @@
             // 
             this.treeViewCommand.DrawMode = System.Windows.Forms.TreeViewDrawMode.OwnerDrawText;
             this.treeViewCommand.HideSelection = false;
-            this.treeViewCommand.Location = new System.Drawing.Point(6, 30);
+            this.treeViewCommand.Location = new System.Drawing.Point(6, 38);
             this.treeViewCommand.Name = "treeViewCommand";
             this.treeViewCommand.Size = new System.Drawing.Size(327, 192);
             this.treeViewCommand.TabIndex = 1;
-            this.treeViewCommand.DrawNode += new System.Windows.Forms.DrawTreeNodeEventHandler(this.treeViewCommand_DrawNode);
             this.treeViewCommand.BeforeExpand += new System.Windows.Forms.TreeViewCancelEventHandler(this.treeViewCommand_BeforeExpand);
+            this.treeViewCommand.DrawNode += new System.Windows.Forms.DrawTreeNodeEventHandler(this.treeViewCommand_DrawNode);
             this.treeViewCommand.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.treeViewCommand_AfterSelect);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(339, 17);
+            this.label1.Location = new System.Drawing.Point(339, 21);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(31, 12);
+            this.label1.Size = new System.Drawing.Size(36, 15);
             this.label1.TabIndex = 2;
             this.label1.Text = "説明:";
             // 
             // textBoxExplanation
             // 
-            this.textBoxExplanation.Location = new System.Drawing.Point(339, 30);
+            this.textBoxExplanation.Location = new System.Drawing.Point(339, 38);
             this.textBoxExplanation.Multiline = true;
             this.textBoxExplanation.Name = "textBoxExplanation";
             this.textBoxExplanation.ReadOnly = true;
@@ -100,7 +100,7 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(12, 9);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(306, 12);
+            this.label2.Size = new System.Drawing.Size(308, 15);
             this.label2.TabIndex = 0;
             this.label2.Text = "メニューの項目名と、決定したときに実行する機能を設定します。";
             // 
@@ -124,7 +124,7 @@
             this.checkBoxItemName.AutoSize = true;
             this.checkBoxItemName.Location = new System.Drawing.Point(112, 20);
             this.checkBoxItemName.Name = "checkBoxItemName";
-            this.checkBoxItemName.Size = new System.Drawing.Size(142, 16);
+            this.checkBoxItemName.Size = new System.Drawing.Size(144, 19);
             this.checkBoxItemName.TabIndex = 1;
             this.checkBoxItemName.Text = "項目名をカスタマイズする";
             this.checkBoxItemName.UseVisualStyleBackColor = true;
@@ -133,9 +133,9 @@
             // 
             this.labelShortcutWarning.AutoSize = true;
             this.labelShortcutWarning.BackColor = System.Drawing.Color.Yellow;
-            this.labelShortcutWarning.Location = new System.Drawing.Point(239, 68);
+            this.labelShortcutWarning.Location = new System.Drawing.Point(239, 72);
             this.labelShortcutWarning.Name = "labelShortcutWarning";
-            this.labelShortcutWarning.Size = new System.Drawing.Size(172, 12);
+            this.labelShortcutWarning.Size = new System.Drawing.Size(174, 15);
             this.labelShortcutWarning.TabIndex = 5;
             this.labelShortcutWarning.Text = "ショートカットキーの重複があります。";
             // 
@@ -143,24 +143,24 @@
             // 
             this.comboBoxShortcut.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxShortcut.FormattingEnabled = true;
-            this.comboBoxShortcut.Location = new System.Drawing.Point(112, 65);
+            this.comboBoxShortcut.Location = new System.Drawing.Point(112, 69);
             this.comboBoxShortcut.Name = "comboBoxShortcut";
-            this.comboBoxShortcut.Size = new System.Drawing.Size(121, 20);
+            this.comboBoxShortcut.Size = new System.Drawing.Size(121, 23);
             this.comboBoxShortcut.TabIndex = 4;
             // 
             // textBoxItemName
             // 
             this.textBoxItemName.Location = new System.Drawing.Point(129, 40);
             this.textBoxItemName.Name = "textBoxItemName";
-            this.textBoxItemName.Size = new System.Drawing.Size(229, 19);
+            this.textBoxItemName.Size = new System.Drawing.Size(229, 23);
             this.textBoxItemName.TabIndex = 2;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(6, 68);
+            this.label6.Location = new System.Drawing.Point(6, 72);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(100, 12);
+            this.label6.Size = new System.Drawing.Size(108, 15);
             this.label6.TabIndex = 3;
             this.label6.Text = "ショートカットキー(&S):";
             // 
@@ -169,14 +169,14 @@
             this.label9.AutoSize = true;
             this.label9.Location = new System.Drawing.Point(6, 21);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(59, 12);
+            this.label9.Size = new System.Drawing.Size(67, 15);
             this.label9.TabIndex = 0;
             this.label9.Text = "項目名(&N):";
             // 
             // buttonAssign
             // 
             this.buttonAssign.Enabled = false;
-            this.buttonAssign.Location = new System.Drawing.Point(519, 382);
+            this.buttonAssign.Location = new System.Drawing.Point(519, 392);
             this.buttonAssign.Name = "buttonAssign";
             this.buttonAssign.Size = new System.Drawing.Size(87, 23);
             this.buttonAssign.TabIndex = 3;
@@ -187,7 +187,7 @@
             // buttonCancel
             // 
             this.buttonCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.buttonCancel.Location = new System.Drawing.Point(612, 382);
+            this.buttonCancel.Location = new System.Drawing.Point(612, 392);
             this.buttonCancel.Name = "buttonCancel";
             this.buttonCancel.Size = new System.Drawing.Size(75, 23);
             this.buttonCancel.TabIndex = 4;
@@ -197,15 +197,16 @@
             // MenuItemDialog
             // 
             this.AcceptButton = this.buttonAssign;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.CancelButton = this.buttonCancel;
-            this.ClientSize = new System.Drawing.Size(701, 418);
+            this.ClientSize = new System.Drawing.Size(701, 427);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.buttonAssign);
             this.Controls.Add(this.buttonCancel);
+            this.Font = new System.Drawing.Font("Yu Gothic UI", 9F);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.MaximizeBox = false;
             this.MinimizeBox = false;

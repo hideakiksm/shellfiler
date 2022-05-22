@@ -36,17 +36,20 @@ namespace ShellFiler.UI.FileList.ThumbList {
         // アイコン描画位置の調整用
         public const int CY_ICON_ADJUST = 1;
 
+        // 親ウィンドウ
+        private Control m_parent;
+
         // ファイルアイコンの管理クラス
         private FileIconManager m_fileIconManager;
 
         // ビューの表示モード
         private FileListViewMode m_fileListViewMode;
 
-        // ファイル1つ分の大きさ
+        // ファイル1つ分の大きさ（DPI補正済み）
         private Size m_fileItemSize;
 
-        // 画像の大きさ
-        private Size m_imageSize;
+        // 画像の大きさ（DPI補正なし）
+        private Size m_imageRawSize;
 
         // フォント描画位置までのYオフセット
         private int m_yFontOffset;
@@ -59,47 +62,52 @@ namespace ShellFiler.UI.FileList.ThumbList {
 
         //=========================================================================================
         // 機　能：コンストラクタ
-        // 引　数：[in]viewMode  ビューの表示モード
+        // 引　数：[in]parent    親ウィンドウ
+        // 　　　　[in]viewMode  ビューの表示モード
         // 戻り値：なし
         //=========================================================================================
-        public ThumbListRenderer(FileListViewMode viewMode) {
+        public ThumbListRenderer(Control parent, FileListViewMode viewMode) {
             m_fileIconManager = Program.Document.FileIconManager;
 
-            InitializeLayout(viewMode);
+            InitializeLayout(parent, viewMode);
 
             Refresh();
         }
 
         //=========================================================================================
         // 機　能：ビューのレイアウトを初期化する
-        // 引　数：[in]viewMode  ビューの表示モード
+        // 引　数：[in]parent    親ウィンドウ
+        // 　　　　[in]viewMode  ビューの表示モード
         // 戻り値：なし
         //=========================================================================================
-        private void InitializeLayout(FileListViewMode viewMode) {
-            m_fileListViewMode = viewMode;
-            if (viewMode.ThumbnailName == FileListViewThumbnailName.ThumbNameSpearate) {
-                Font font = new Font(Configuration.Current.ThumbFileListViewFontName, Configuration.Current.ThumbFileListViewFontSize);
-                m_cyFont = font.Height;
-                font.Dispose();
+        private void InitializeLayout(Control parent, FileListViewMode viewMode) {
+            m_parent = parent;
+            using (HighDpiGraphics g = new HighDpiGraphics(m_parent)) {
+                m_fileListViewMode = viewMode;
+                if (viewMode.ThumbnailName == FileListViewThumbnailName.ThumbNameSpearate) {
+                    Font font = new Font(Configuration.Current.ThumbFileListViewFontName, Configuration.Current.ThumbFileListViewFontSize);
+                    m_cyFont = font.Height;
+                    font.Dispose();
 
-                int size = viewMode.ThumbnailSize.ImageSize;
-                m_imageSize = new Size(size, size);
-                m_fileItemSize = new Size(m_imageSize.Width + MARGIN_IMAGE_BORDER * 2, m_imageSize.Height + MARGIN_IMAGE_BORDER * 2 + MARGIN_IMAGE_FONT + m_cyFont);
-                m_xFontOffset = 0;
-                m_yFontOffset = m_imageSize.Height + MARGIN_IMAGE_BORDER + MARGIN_IMAGE_FONT;
-            } else if (viewMode.ThumbnailName == FileListViewThumbnailName.ThumbNameOverray ||
-                       viewMode.ThumbnailName == FileListViewThumbnailName.ThumbNameNone) {
-                Font font = new Font(Configuration.Current.ThumbFileListViewFontName, Configuration.Current.ThumbFileListViewSmallFontSize);
-                m_cyFont = font.Height;
-                font.Dispose();
+                    int size = viewMode.ThumbnailSize.ImageSize;
+                    m_imageRawSize = new Size(size, size);
+                    m_fileItemSize = new Size(g.X(m_imageRawSize.Width + MARGIN_IMAGE_BORDER * 2), g.Y(m_imageRawSize.Height + MARGIN_IMAGE_BORDER * 2 + MARGIN_IMAGE_FONT) + m_cyFont);
+                    m_xFontOffset = 0;
+                    m_yFontOffset = g.Y(m_imageRawSize.Height + MARGIN_IMAGE_BORDER + MARGIN_IMAGE_FONT);
+                } else if (viewMode.ThumbnailName == FileListViewThumbnailName.ThumbNameOverray ||
+                           viewMode.ThumbnailName == FileListViewThumbnailName.ThumbNameNone) {
+                    Font font = new Font(Configuration.Current.ThumbFileListViewFontName, Configuration.Current.ThumbFileListViewSmallFontSize);
+                    m_cyFont = font.Height;
+                    font.Dispose();
 
-                int size = viewMode.ThumbnailSize.ImageSize;
-                m_imageSize = new Size(size, size);
-                m_fileItemSize = new Size(m_imageSize.Width + MARGIN_IMAGE_BORDER * 2, m_imageSize.Height + MARGIN_IMAGE_BORDER * 2);
-                m_xFontOffset = 2;
-                m_yFontOffset = m_imageSize.Height - m_cyFont + MARGIN_IMAGE_BORDER;
-            } else {
-                Program.Abort("サムネイルのファイル名表示モードが未定義です。");
+                    int size = viewMode.ThumbnailSize.ImageSize;
+                    m_imageRawSize = new Size(g.X(size), g.Y(size));
+                    m_fileItemSize = new Size(g.X(m_imageRawSize.Width + MARGIN_IMAGE_BORDER * 2), g.Y(m_imageRawSize.Height + MARGIN_IMAGE_BORDER * 2));
+                    m_xFontOffset = g.Y(2);
+                    m_yFontOffset = g.Y(m_imageRawSize.Height) - m_cyFont + g.Y(MARGIN_IMAGE_BORDER);
+                } else {
+                    Program.Abort("サムネイルのファイル名表示モードが未定義です。");
+                }
             }
         }
 
@@ -126,7 +134,7 @@ namespace ShellFiler.UI.FileList.ThumbList {
         // 戻り値：なし
         //=========================================================================================
         private void DrawCursor(FileListGraphics g, int xPos, int yPos, bool withCursor) {
-            Rectangle rect = new Rectangle(xPos, yPos, FileItemSize.Width - 1, FileItemSize.Height - 1);
+            Rectangle rect = new Rectangle(xPos, yPos, FileItemSizeDpiModified.Width - 1, FileItemSizeDpiModified.Height - 1);
             if (withCursor) {
                 g.Graphics.DrawRectangle(g.FileListCursorPen, rect);
             } else {
@@ -149,7 +157,7 @@ namespace ShellFiler.UI.FileList.ThumbList {
             m_lineFile = targetFile;
             m_lineFontBrush = GetTextDrawBrush(g, m_lineFile, isActive);
             try {
-                Rectangle rectItem = new Rectangle(xPos, yPos, FileItemSize.Width, FileItemSize.Height);
+                Rectangle rectItem = new Rectangle(xPos, yPos, FileItemSizeDpiModified.Width, FileItemSizeDpiModified.Height);
                 DrawItemImpl(g, rectItem, isActive);
                 DrawCursor(g, xPos, yPos, withCursor);
             } finally {
@@ -161,7 +169,7 @@ namespace ShellFiler.UI.FileList.ThumbList {
         //=========================================================================================
         // 機　能：描画処理の実装
         // 引　数：[in]g          描画に使用するグラフィックス
-        // 　　　　[in]rectItem   描画する１項目全体（FileItemSize相当）の領域
+        // 　　　　[in]rectItem   描画する１項目全体（FileItemSize相当）の領域、DPI補正済み
         // 　　　　[in]isActive   アクティブ状態で描画するときtrue
         // 戻り値：なし
         //=========================================================================================
@@ -170,7 +178,7 @@ namespace ShellFiler.UI.FileList.ThumbList {
             Brush backBrush = GetBackDrawBrush(g, m_lineFile, true, isActive);
             if (backBrush != null) {
                 if (m_lineFile.Marked) {
-                    Rectangle rect = new Rectangle(rectItem.Left, rectItem.Top, FileItemSize.Width - 1, FileItemSize.Height - 1);
+                    Rectangle rect = new Rectangle(rectItem.Left, rectItem.Top, FileItemSizeDpiModified.Width - 1, FileItemSizeDpiModified.Height - 1);
                     g.Graphics.DrawRectangle(g.FileListBackPen, rect);
                     Rectangle rectBack = new Rectangle(rectItem.Left + 2, rectItem.Top + 2, rectItem.Width - 4, rectItem.Height - 4);
                     g.Graphics.FillRectangle(backBrush, rectBack);
@@ -211,11 +219,11 @@ namespace ShellFiler.UI.FileList.ThumbList {
                 Program.Abort("サムネイルのファイル名表示モードが未定義です。");
             }
         }
-        
+
         //=========================================================================================
         // 機　能：サムネイル画像を描画する
         // 引　数：[in]g          描画に使用するグラフィックス
-        // 　　　　[in]rectItem   描画する１項目全体（FileItemSize相当）の領域
+        // 　　　　[in]rectItem   描画する１項目全体（FileItemSize相当）の領域、DPI補正済み
         // 　　　　[in]isActive   アクティブ状態で描画するときtrue
         // 戻り値：なし
         //=========================================================================================
@@ -223,16 +231,16 @@ namespace ShellFiler.UI.FileList.ThumbList {
             FileListViewIconSize iconSize = m_fileListViewMode.ThumbnailSize;
 
             // 画像を描画
-            int xImage = rectItem.X + MARGIN_IMAGE_BORDER;
-            int yImage = rectItem.Y + MARGIN_IMAGE_BORDER;
+            int xImage = rectItem.X + g.X(MARGIN_IMAGE_BORDER);
+            int yImage = rectItem.Y + g.Y(MARGIN_IMAGE_BORDER);
 
             FileIconManager.DrawIconDelegate drawDelegate = delegate(FileIcon icon) {
                 if (icon == null) {
                     return false;
                 }
                 Bitmap bmp = icon.IconImage;
-                int xPosIcon = xImage + (m_imageSize.Width - bmp.Width) / 2;
-                int yPosIcon = yImage + (m_imageSize.Height - bmp.Height) / 2;
+                int xPosIcon = xImage + (g.X(m_imageRawSize.Width) - bmp.Width) / 2;
+                int yPosIcon = yImage + (g.Y(m_imageRawSize.Height) - bmp.Height) / 2;
                 Rectangle rcDest = new Rectangle(xPosIcon, yPosIcon, bmp.Width, bmp.Height);
                 if (isActive) {
                     g.Graphics.DrawImage(bmp, xPosIcon, yPosIcon);
@@ -245,10 +253,10 @@ namespace ShellFiler.UI.FileList.ThumbList {
             Program.Document.FileIconManager.DrawFileIcon(m_lineFile.FileIconId, m_lineFile.DefaultFileIconId, iconSize, drawDelegate);
 
             // 枠を描画
-            g.Graphics.DrawLine(g.FileListThumbnailFramePen1, xImage, yImage, xImage + m_imageSize.Width - 1, yImage);
-            g.Graphics.DrawLine(g.FileListThumbnailFramePen1, xImage, yImage, xImage, yImage + m_imageSize.Height - 1);
-            g.Graphics.DrawLine(g.FileListThumbnailFramePen2, xImage, yImage + m_imageSize.Height - 1, xImage + m_imageSize.Width - 1, yImage + m_imageSize.Height - 1);
-            g.Graphics.DrawLine(g.FileListThumbnailFramePen2, xImage + m_imageSize.Width - 1, yImage, xImage + m_imageSize.Width - 1, yImage + m_imageSize.Height - 1);
+            g.Graphics.DrawLine(g.FileListThumbnailFramePen1, xImage, yImage, xImage + g.X(m_imageRawSize.Width) - 1, yImage);
+            g.Graphics.DrawLine(g.FileListThumbnailFramePen1, xImage, yImage, xImage, yImage + g.Y(m_imageRawSize.Height) - 1);
+            g.Graphics.DrawLine(g.FileListThumbnailFramePen2, xImage, yImage + g.Y(m_imageRawSize.Height) - 1, xImage + g.X(m_imageRawSize.Width) - 1, yImage + g.Y(m_imageRawSize.Height) - 1);
+            g.Graphics.DrawLine(g.FileListThumbnailFramePen2, xImage + g.X(m_imageRawSize.Width) - 1, yImage, xImage + g.X(m_imageRawSize.Width) - 1, yImage + g.Y(m_imageRawSize.Height) - 1);
         }
 
         //=========================================================================================
@@ -331,7 +339,7 @@ namespace ShellFiler.UI.FileList.ThumbList {
         //=========================================================================================
         // プロパティ：ファイル1つ分の大きさ
         //=========================================================================================
-        public Size FileItemSize {
+        public Size FileItemSizeDpiModified {
             get {
                 return m_fileItemSize;
             }
@@ -340,9 +348,9 @@ namespace ShellFiler.UI.FileList.ThumbList {
         //=========================================================================================
         // プロパティ：画像の大きさ
         //=========================================================================================
-        public Size ImageSize {
+        public Size ImageRawSize {
             get {
-                return m_imageSize;
+                return m_imageRawSize;
             }
         }
 

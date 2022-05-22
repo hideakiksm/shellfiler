@@ -461,7 +461,7 @@ namespace ShellFiler.UI {
             // タブに設定
             string title = string.Format(Resources.WindowTabTitle, left, right);
             title += "    ";                            // 閉じるボタン用
-            if (m_tabControlMain.SelectedTab != null) {
+            if (m_tabControlMain.SelectedTab != null && m_tabControlMain.SelectedTab.Text != title) {
                 m_tabControlMain.SelectedTab.Text = title;
             }
         }

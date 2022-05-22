@@ -53,7 +53,7 @@ namespace ShellFiler.UI.Dialog.KeyOption {
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(61, 12);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(306, 12);
+            this.label2.Size = new System.Drawing.Size(313, 15);
             this.label2.TabIndex = 0;
             this.label2.Text = "今までお使いのShellFilerから、次のキー設定が追加されました。";
             // 
@@ -70,7 +70,7 @@ namespace ShellFiler.UI.Dialog.KeyOption {
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(13, 138);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(80, 12);
+            this.label3.Size = new System.Drawing.Size(87, 15);
             this.label3.TabIndex = 4;
             this.label3.Text = "ファイル一覧(&F):";
             // 
@@ -108,7 +108,7 @@ namespace ShellFiler.UI.Dialog.KeyOption {
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(13, 241);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(92, 12);
+            this.label4.Size = new System.Drawing.Size(99, 15);
             this.label4.TabIndex = 6;
             this.label4.Text = "ファイルビューア(&V):";
             // 
@@ -117,16 +117,16 @@ namespace ShellFiler.UI.Dialog.KeyOption {
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(20, 344);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(105, 12);
+            this.label5.Size = new System.Drawing.Size(113, 15);
             this.label5.TabIndex = 8;
             this.label5.Text = "グラフィックビューア(&G):";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(61, 28);
+            this.label6.Location = new System.Drawing.Point(61, 30);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(443, 12);
+            this.label6.Size = new System.Drawing.Size(446, 15);
             this.label6.TabIndex = 1;
             this.label6.Text = "設定を自動でマージできなかった機能は、キー設定の変更またはリセットを行うと使用できます。";
             // 
@@ -214,7 +214,7 @@ namespace ShellFiler.UI.Dialog.KeyOption {
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(13, 58);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(58, 12);
+            this.label1.Size = new System.Drawing.Size(67, 15);
             this.label1.TabIndex = 2;
             this.label1.Text = "お知らせ(&I):";
             // 
@@ -230,8 +230,8 @@ namespace ShellFiler.UI.Dialog.KeyOption {
             // 
             // VersionupKeyDiffDialog
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.CancelButton = this.buttonClose;
             this.ClientSize = new System.Drawing.Size(667, 479);
             this.ControlBox = false;
@@ -248,6 +248,7 @@ namespace ShellFiler.UI.Dialog.KeyOption {
             this.Controls.Add(this.pictureBoxIcon);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label2);
+            this.Font = new System.Drawing.Font("Yu Gothic UI", 9F);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.MaximizeBox = false;
             this.MinimizeBox = false;

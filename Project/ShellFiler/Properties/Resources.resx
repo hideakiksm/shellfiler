@@ -3274,60 +3274,6 @@ Depends on
     <value>Version {0}.{1}.{2}</value>
     <comment>スプラッシュウィンドウ</comment>
   </data>
-  <data name="ButtonFace_Down" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\resources\buttonface_down.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="ButtonFace_Up" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\resources\buttonface_up.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="DlgIntelliHddDir" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\resources\dlgintellihdddir.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="DlgIntelliHddFile" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\resources\dlgintellihddfile.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="DlgIntelliListDir" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\resources\dlgintellilistdir.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="DlgIntelliListFile" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\resources\dlgintellilistfile.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="DlgIntelliShell" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\resources\dlgintellishell.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="GraphicsViewer_FilterArrow1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\resources\graphicsviewer_filterarrow1.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="GraphicsViewer_FilterArrow2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\resources\graphicsviewer_filterarrow2.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="GraphicsViewer_FilterSample" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\resources\graphicsviewer_filtersample.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="IconOperationFailed" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\resources\iconoperationfailed.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="IconSshSetting" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\resources\iconsshsetting.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="ImageListBGManagerAnimation" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\resources\imagelistbgmanageranimation.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="ImageListIcon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\resources\imagelisticon.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="SameDialogInfoArrow" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\resources\samedialoginfoarrow.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="TabClose_Focus" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\resources\tabclose_focus.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="TabClose_Normal" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\resources\tabclose_normal.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="TitleLogo" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\resources\titlelogo.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="SettingLoader_ErrorBoolFormat" xml:space="preserve">
     <value>bool型の数値の形式が不正です</value>
     <comment>設定の読み込み</comment>
@@ -3647,9 +3593,6 @@ Depends on
   <data name="DlgViewerSearch_IHelp_History" xml:space="preserve">
     <value>検索履歴</value>
     <comment>ビューア検索ダイアログ メニュー名</comment>
-  </data>
-  <data name="MainIcon48" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\resources\mainicon48.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="DlgMarkFileHelp_Title" xml:space="preserve">
     <value>マーク機能の使用方法</value>
@@ -5026,12 +4969,6 @@ Depends on
     <value>ファイル名（ワイルドカード)：{0}</value>
     <comment>ファイル転送条件の条件表示名</comment>
   </data>
-  <data name="FileCondition_Or1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\resources\filecondition_or1.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="FileCondition_Or2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\resources\filecondition_or2.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="DlgFileCondition_ErrorConditionName" xml:space="preserve">
     <value>条件の表示名が入力されていません</value>
     <comment>ファイル転送条件一覧ダイアログ</comment>
@@ -5359,9 +5296,6 @@ Depends on
     <value>サポート外の操作です</value>
     <comment>ログウィンドウステータス</comment>
   </data>
-  <data name="Delete" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Delete.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="GraphicsViewer_StatusFileNameSlideShow" xml:space="preserve">
     <value>[{0}/{1}]</value>
     <comment>グラフィックビューア</comment>
@@ -5602,9 +5536,6 @@ Depends on
     <value>ファイル一覧のメニュー設定,Menu設定</value>
     <comment>ツールバー/メニューの項目名</comment>
   </data>
-  <data name="ButtonFace_PopupMenu" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\resources\buttonface_popupmenu.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="DlgMenuSetting_CustomMenuRootName" xml:space="preserve">
     <value>カスタム</value>
     <comment>メニュー設定ダイアログ</comment>
@@ -5740,30 +5671,6 @@ Depends on
     <value>2ストロークキー#4</value>
     <comment>ツールバー/メニューの項目名</comment>
   </data>
-  <data name="TwoStrokeKeyAlt" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\resources\twostrokekeyalt.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="TwoStrokeKeyCtrl" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\resources\twostrokekeyctrl.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="TwoStrokeKeyCtrlAlt" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\resources\twostrokekeyctrlalt.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="TwoStrokeKeyNormal" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\resources\twostrokekeynormal.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="TwoStrokeKeyShift" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\resources\twostrokekeyshift.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="TwoStrokeKeyShiftAlt" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\resources\twostrokekeyshiftalt.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="TwoStrokeKeyShiftCtrl" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\resources\twostrokekeyshiftctrl.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="TwoStrokeKeyShiftCtrlAlt" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\resources\twostrokekeyshiftctrlalt.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="MenuName_G_TwoStrokeKey1" xml:space="preserve">
     <value>2ストロークキー#1</value>
     <comment>ツールバー/メニューの項目名</comment>
@@ -5779,9 +5686,6 @@ Depends on
   <data name="MenuName_G_TwoStrokeKey4" xml:space="preserve">
     <value>2ストロークキー#4</value>
     <comment>ツールバー/メニューの項目名</comment>
-  </data>
-  <data name="GraphicsViewer_FilterSampleZoom" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\resources\graphicsviewer_filtersamplezoom.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="OptionItem72_GraphicsViewerView" xml:space="preserve">
     <value>拡大表示</value>
@@ -7026,5 +6930,410 @@ SSH用のエディタを設定しない場合はチェックボックスをOFF�
   <data name="LogOperation_AddFile" xml:space="preserve">
     <value>Add File</value>
     <comment>ログ出力：操作</comment>
+  </data>
+  <data name="I100_ButtonFace_Down" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\I100_ButtonFace_Down.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="I100_ButtonFace_PopupMenu" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\I100_ButtonFace_PopupMenu.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="I100_ButtonFace_Up" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\I100_ButtonFace_Up.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="I100_Delete" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\I100_Delete.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="I100_DlgIntelliHddDir" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\I100_DlgIntelliHddDir.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="I100_DlgIntelliHddFile" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\I100_DlgIntelliHddFile.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="I100_DlgIntelliListDir" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\I100_DlgIntelliListDir.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="I100_DlgIntelliListFile" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\I100_DlgIntelliListFile.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="I100_DlgIntelliShell" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\I100_DlgIntelliShell.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="I100_FileCondition_Or1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\I100_FileCondition_Or1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="I100_FileCondition_Or2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\I100_FileCondition_Or2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="I100_GraphicsViewer_FilterArrow1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\I100_GraphicsViewer_FilterArrow1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="I100_GraphicsViewer_FilterArrow2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\I100_GraphicsViewer_FilterArrow2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="I100_GraphicsViewer_FilterSample" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\I100_GraphicsViewer_FilterSample.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="I100_GraphicsViewer_FilterSampleZoom" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\I100_GraphicsViewer_FilterSampleZoom.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="I100_IconOperationFailed" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\I100_IconOperationFailed.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="I100_IconSshSetting" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\I100_IconSshSetting.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="I100_ImageListBGManagerAnimation" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\I100_ImageListBGManagerAnimation.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="I100_ImageListIcon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\I100_ImageListIcon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="I100_MainIcon48" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\I100_MainIcon48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="I100_SameDialogInfoArrow" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\I100_SameDialogInfoArrow.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="I100_TabClose_Focus" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\I100_TabClose_Focus.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="I100_TabClose_Normal" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\I100_TabClose_Normal.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="I100_TitleLogo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\I100_TitleLogo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="I100_TwoStrokeKeyAlt" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\I100_TwoStrokeKeyAlt.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="I100_TwoStrokeKeyCtrl" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\I100_TwoStrokeKeyCtrl.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="I100_TwoStrokeKeyCtrlAlt" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\I100_TwoStrokeKeyCtrlAlt.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="I100_TwoStrokeKeyNormal" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\I100_TwoStrokeKeyNormal.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="I100_TwoStrokeKeyShift" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\I100_TwoStrokeKeyShift.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="I100_TwoStrokeKeyShiftAlt" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\I100_TwoStrokeKeyShiftAlt.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="I100_TwoStrokeKeyShiftCtrl" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\I100_TwoStrokeKeyShiftCtrl.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="I100_TwoStrokeKeyShiftCtrlAlt" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\I100_TwoStrokeKeyShiftCtrlAlt.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="I200_ButtonFace_Down" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\I200_ButtonFace_Down.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="I200_ButtonFace_PopupMenu" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\I200_ButtonFace_PopupMenu.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="I200_ButtonFace_Up" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\I200_ButtonFace_Up.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="I200_Delete" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\I200_Delete.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="I200_DlgIntelliHddDir" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\I200_DlgIntelliHddDir.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="I200_DlgIntelliHddFile" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\I200_DlgIntelliHddFile.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="I200_DlgIntelliListDir" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\I200_DlgIntelliListDir.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="I200_DlgIntelliListFile" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\I200_DlgIntelliListFile.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="I200_DlgIntelliShell" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\I200_DlgIntelliShell.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="I200_FileCondition_Or1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\I200_FileCondition_Or1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="I200_FileCondition_Or2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\I200_FileCondition_Or2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="I200_GraphicsViewer_FilterArrow1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\I200_GraphicsViewer_FilterArrow1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="I200_GraphicsViewer_FilterArrow2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\I200_GraphicsViewer_FilterArrow2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="I200_GraphicsViewer_FilterSample" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\I200_GraphicsViewer_FilterSample.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="I200_GraphicsViewer_FilterSampleZoom" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\I200_GraphicsViewer_FilterSampleZoom.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="I200_IconOperationFailed" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\I200_IconOperationFailed.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="I200_IconSshSetting" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\I200_IconSshSetting.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="I200_ImageListBGManagerAnimation" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\I200_ImageListBGManagerAnimation.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="I200_ImageListIcon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\I200_ImageListIcon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="I200_MainIcon48" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\I200_MainIcon48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="I200_SameDialogInfoArrow" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\I200_SameDialogInfoArrow.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="I200_TabClose_Focus" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\I200_TabClose_Focus.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="I200_TabClose_Normal" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\I200_TabClose_Normal.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="I200_TitleLogo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\I200_TitleLogo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="I200_TwoStrokeKeyAlt" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\I200_TwoStrokeKeyAlt.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="I200_TwoStrokeKeyCtrl" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\I200_TwoStrokeKeyCtrl.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="I200_TwoStrokeKeyCtrlAlt" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\I200_TwoStrokeKeyCtrlAlt.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="I200_TwoStrokeKeyNormal" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\I200_TwoStrokeKeyNormal.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="I200_TwoStrokeKeyShift" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\I200_TwoStrokeKeyShift.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="I200_TwoStrokeKeyShiftAlt" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\I200_TwoStrokeKeyShiftAlt.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="I200_TwoStrokeKeyShiftCtrl" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\I200_TwoStrokeKeyShiftCtrl.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="I200_TwoStrokeKeyShiftCtrlAlt" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\I200_TwoStrokeKeyShiftCtrlAlt.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="I400_ButtonFace_Down" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\I400_ButtonFace_Down.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="I400_ButtonFace_PopupMenu" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\I400_ButtonFace_PopupMenu.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="I400_ButtonFace_Up" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\I400_ButtonFace_Up.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="I400_Delete" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\I400_Delete.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="I400_DlgIntelliHddDir" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\I400_DlgIntelliHddDir.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="I400_DlgIntelliHddFile" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\I400_DlgIntelliHddFile.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="I400_DlgIntelliListDir" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\I400_DlgIntelliListDir.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="I400_DlgIntelliListFile" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\I400_DlgIntelliListFile.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="I400_DlgIntelliShell" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\I400_DlgIntelliShell.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="I400_FileCondition_Or1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\I400_FileCondition_Or1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="I400_FileCondition_Or2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\I400_FileCondition_Or2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="I400_GraphicsViewer_FilterArrow1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\I400_GraphicsViewer_FilterArrow1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="I400_GraphicsViewer_FilterArrow2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\I400_GraphicsViewer_FilterArrow2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="I400_GraphicsViewer_FilterSample" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\I400_GraphicsViewer_FilterSample.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="I400_GraphicsViewer_FilterSampleZoom" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\I400_GraphicsViewer_FilterSampleZoom.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="I400_IconOperationFailed" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\I400_IconOperationFailed.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="I400_IconSshSetting" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\I400_IconSshSetting.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="I400_ImageListBGManagerAnimation" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\I400_ImageListBGManagerAnimation.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="I400_ImageListIcon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\I400_ImageListIcon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="I400_MainIcon48" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\I400_MainIcon48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="I400_SameDialogInfoArrow" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\I400_SameDialogInfoArrow.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="I400_TabClose_Focus" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\I400_TabClose_Focus.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="I400_TabClose_Normal" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\I400_TabClose_Normal.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="I400_TitleLogo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\I400_TitleLogo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="I400_TwoStrokeKeyAlt" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\I400_TwoStrokeKeyAlt.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="I400_TwoStrokeKeyCtrl" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\I400_TwoStrokeKeyCtrl.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="I400_TwoStrokeKeyCtrlAlt" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\I400_TwoStrokeKeyCtrlAlt.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="I400_TwoStrokeKeyNormal" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\I400_TwoStrokeKeyNormal.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="I400_TwoStrokeKeyShift" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\I400_TwoStrokeKeyShift.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="I400_TwoStrokeKeyShiftAlt" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\I400_TwoStrokeKeyShiftAlt.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="I400_TwoStrokeKeyShiftCtrl" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\I400_TwoStrokeKeyShiftCtrl.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="I400_TwoStrokeKeyShiftCtrlAlt" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\I400_TwoStrokeKeyShiftCtrlAlt.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="I100_BGManager00" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\I100_BGManager00.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="I100_BGManager01" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\I100_BGManager01.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="I100_BGManager02" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\I100_BGManager02.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="I100_BGManager03" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\I100_BGManager03.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="I100_BGManager04" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\I100_BGManager04.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="I100_BGManager05" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\I100_BGManager05.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="I100_BGManager06" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\I100_BGManager06.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="I100_BGManager07" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\I100_BGManager07.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="I100_BGManager08" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\I100_BGManager08.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="I100_BGManager09" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\I100_BGManager09.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="I100_BGManager10" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\I100_BGManager10.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="I100_BGManager11" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\I100_BGManager11.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="I100_BGManager12" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\I100_BGManager12.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="I200_BGManager00" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\I200_BGManager00.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="I200_BGManager01" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\I200_BGManager01.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="I200_BGManager02" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\I200_BGManager02.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="I200_BGManager03" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\I200_BGManager03.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="I200_BGManager04" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\I200_BGManager04.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="I200_BGManager05" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\I200_BGManager05.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="I200_BGManager06" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\I200_BGManager06.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="I200_BGManager07" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\I200_BGManager07.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="I200_BGManager08" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\I200_BGManager08.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="I200_BGManager09" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\I200_BGManager09.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="I200_BGManager10" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\I200_BGManager10.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="I200_BGManager11" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\I200_BGManager11.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="I200_BGManager12" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\I200_BGManager12.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="I400_BGManager00" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\I400_BGManager00.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="I400_BGManager01" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\I400_BGManager01.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="I400_BGManager02" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\I400_BGManager02.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="I400_BGManager03" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\I400_BGManager03.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="I400_BGManager04" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\I400_BGManager04.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="I400_BGManager05" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\I400_BGManager05.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="I400_BGManager06" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\I400_BGManager06.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="I400_BGManager07" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\I400_BGManager07.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="I400_BGManager08" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\I400_BGManager08.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="I400_BGManager09" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\I400_BGManager09.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="I400_BGManager10" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\I400_BGManager10.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="I400_BGManager11" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\I400_BGManager11.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="I400_BGManager12" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\I400_BGManager12.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

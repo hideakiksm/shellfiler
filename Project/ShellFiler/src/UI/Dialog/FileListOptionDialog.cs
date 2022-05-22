@@ -1567,10 +1567,10 @@ namespace ShellFiler.UI.Dialog {
             //=========================================================================================
             private void DrawThumbnailMode(FileListSampleGraphics g, Rectangle rcDraw) {
                 g.Graphics.FillRectangle(g.FileListBackBrush, rcDraw);
-                ThumbListRenderer renderer = new ThumbListRenderer(m_viewMode);
-                int cxItemToItem = renderer.FileItemSize.Width + ThumbListRenderer.MARGIN_ITEM;
-                int cyItemToItem = renderer.FileItemSize.Height + ThumbListRenderer.MARGIN_ITEM;
-                FileListGraphics gFile = new FileListGraphics(g.Graphics, 0, renderer.FileItemSize.Height + ThumbListRenderer.MARGIN_ITEM);
+                ThumbListRenderer renderer = new ThumbListRenderer(m_targetPanel, m_viewMode);
+                int cxItemToItem = renderer.FileItemSizeDpiModified.Width + g.X(ThumbListRenderer.MARGIN_ITEM);
+                int cyItemToItem = renderer.FileItemSizeDpiModified.Height + g.Y(ThumbListRenderer.MARGIN_ITEM);
+                FileListGraphics gFile = new FileListGraphics(g.Graphics, 0, renderer.FileItemSizeDpiModified.Height + g.Y(ThumbListRenderer.MARGIN_ITEM));
                 int xCount = Math.Max(1, rcDraw.Width / cxItemToItem);
                 int yCount = rcDraw.Height / cyItemToItem + 1;
                 List<SampleLine> resultLineList = CreateSampleLines(g);
@@ -1602,7 +1602,7 @@ namespace ShellFiler.UI.Dialog {
         //=========================================================================================
         // クラス：ファイル一覧のサンプル描画用グラフィックス
         //=========================================================================================
-        private class FileListSampleGraphics {
+        private class FileListSampleGraphics : HighDpiGraphics {
             // グラフィック
             private Graphics m_graphics;
 
@@ -1648,7 +1648,7 @@ namespace ShellFiler.UI.Dialog {
             // 　　　　[in]colorSetting 色設定
             // 戻り値：なし
             //=========================================================================================
-            public FileListSampleGraphics(Graphics graphics, FileListColorSetting colorSetting) {
+            public FileListSampleGraphics(Graphics graphics, FileListColorSetting colorSetting) : base(graphics) {
                 m_graphics = graphics;
                 m_colorSetting = colorSetting;
             }
@@ -1658,7 +1658,7 @@ namespace ShellFiler.UI.Dialog {
             // 引　数：なし
             // 戻り値：なし
             //=========================================================================================
-            public void Dispose() {
+            public override void Dispose() {
                 if (m_fileListCursorPen != null) {
                     m_fileListCursorPen.Dispose();
                     m_fileListCursorPen = null;
@@ -1702,15 +1702,6 @@ namespace ShellFiler.UI.Dialog {
                 if (m_stringFormatRight != null) {
                     m_stringFormatRight.Dispose();
                     m_stringFormatRight = null;
-                }
-            }
-
-            //=========================================================================================
-            // プロパティ：グラフィックス
-            //=========================================================================================
-            public Graphics Graphics {
-                get {
-                    return m_graphics;
                 }
             }
 

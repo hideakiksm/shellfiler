@@ -39,18 +39,21 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(11, 9);
+            this.label1.Location = new System.Drawing.Point(16, 14);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(222, 12);
+            this.label1.Size = new System.Drawing.Size(340, 25);
             this.label1.TabIndex = 0;
             this.label1.Text = "次のファイルまたはフォルダがドロップされました。";
             // 
             // listViewFiles
             // 
             this.listViewFiles.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.None;
-            this.listViewFiles.Location = new System.Drawing.Point(13, 24);
+            this.listViewFiles.HideSelection = false;
+            this.listViewFiles.Location = new System.Drawing.Point(20, 39);
+            this.listViewFiles.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.listViewFiles.Name = "listViewFiles";
-            this.listViewFiles.Size = new System.Drawing.Size(529, 141);
+            this.listViewFiles.Size = new System.Drawing.Size(792, 196);
             this.listViewFiles.TabIndex = 1;
             this.listViewFiles.UseCompatibleStateImageBehavior = false;
             this.listViewFiles.View = System.Windows.Forms.View.Details;
@@ -58,18 +61,20 @@
             // buttonCancel
             // 
             this.buttonCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.buttonCancel.Location = new System.Drawing.Point(467, 258);
+            this.buttonCancel.Location = new System.Drawing.Point(700, 387);
+            this.buttonCancel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.buttonCancel.Name = "buttonCancel";
-            this.buttonCancel.Size = new System.Drawing.Size(75, 23);
+            this.buttonCancel.Size = new System.Drawing.Size(112, 34);
             this.buttonCancel.TabIndex = 13;
             this.buttonCancel.Text = "キャンセル";
             this.buttonCancel.UseVisualStyleBackColor = true;
             // 
             // buttonCopy
             // 
-            this.buttonCopy.Location = new System.Drawing.Point(12, 171);
+            this.buttonCopy.Location = new System.Drawing.Point(18, 256);
+            this.buttonCopy.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.buttonCopy.Name = "buttonCopy";
-            this.buttonCopy.Size = new System.Drawing.Size(200, 23);
+            this.buttonCopy.Size = new System.Drawing.Size(300, 34);
             this.buttonCopy.TabIndex = 3;
             this.buttonCopy.Text = "このフォルダにコピー(&C)";
             this.buttonCopy.UseVisualStyleBackColor = true;
@@ -77,9 +82,10 @@
             // 
             // buttonMove
             // 
-            this.buttonMove.Location = new System.Drawing.Point(12, 200);
+            this.buttonMove.Location = new System.Drawing.Point(18, 300);
+            this.buttonMove.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.buttonMove.Name = "buttonMove";
-            this.buttonMove.Size = new System.Drawing.Size(200, 23);
+            this.buttonMove.Size = new System.Drawing.Size(300, 34);
             this.buttonMove.TabIndex = 4;
             this.buttonMove.Text = "このフォルダに移動(&M)";
             this.buttonMove.UseVisualStyleBackColor = true;
@@ -87,9 +93,10 @@
             // 
             // buttonShortcut
             // 
-            this.buttonShortcut.Location = new System.Drawing.Point(12, 229);
+            this.buttonShortcut.Location = new System.Drawing.Point(18, 344);
+            this.buttonShortcut.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.buttonShortcut.Name = "buttonShortcut";
-            this.buttonShortcut.Size = new System.Drawing.Size(200, 23);
+            this.buttonShortcut.Size = new System.Drawing.Size(300, 34);
             this.buttonShortcut.TabIndex = 5;
             this.buttonShortcut.Text = "このフォルダにショートカットを作成(&S)";
             this.buttonShortcut.UseVisualStyleBackColor = true;
@@ -97,9 +104,10 @@
             // 
             // buttonChdir
             // 
-            this.buttonChdir.Location = new System.Drawing.Point(12, 258);
+            this.buttonChdir.Location = new System.Drawing.Point(18, 387);
+            this.buttonChdir.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.buttonChdir.Name = "buttonChdir";
-            this.buttonChdir.Size = new System.Drawing.Size(200, 23);
+            this.buttonChdir.Size = new System.Drawing.Size(300, 34);
             this.buttonChdir.TabIndex = 6;
             this.buttonChdir.Text = "転送元のフォルダを表示(&V)";
             this.buttonChdir.UseVisualStyleBackColor = true;
@@ -108,45 +116,49 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(450, 171);
+            this.label3.Location = new System.Drawing.Point(675, 256);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(53, 12);
+            this.label3.Size = new System.Drawing.Size(85, 25);
             this.label3.TabIndex = 7;
             this.label3.Text = "ファイル数:";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(450, 183);
+            this.label4.Location = new System.Drawing.Point(675, 283);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(54, 12);
+            this.label4.Size = new System.Drawing.Size(87, 25);
             this.label4.TabIndex = 9;
             this.label4.Text = "フォルダ数:";
             // 
             // labelFileCount
             // 
-            this.labelFileCount.Location = new System.Drawing.Point(504, 171);
+            this.labelFileCount.Location = new System.Drawing.Point(756, 252);
+            this.labelFileCount.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelFileCount.Name = "labelFileCount";
-            this.labelFileCount.Size = new System.Drawing.Size(38, 12);
+            this.labelFileCount.Size = new System.Drawing.Size(57, 34);
             this.labelFileCount.TabIndex = 8;
             this.labelFileCount.Text = "0";
             this.labelFileCount.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // labelFolderCount
             // 
-            this.labelFolderCount.Location = new System.Drawing.Point(504, 183);
+            this.labelFolderCount.Location = new System.Drawing.Point(756, 278);
+            this.labelFolderCount.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelFolderCount.Name = "labelFolderCount";
-            this.labelFolderCount.Size = new System.Drawing.Size(38, 12);
+            this.labelFolderCount.Size = new System.Drawing.Size(57, 34);
             this.labelFolderCount.TabIndex = 10;
             this.labelFolderCount.Text = "0";
             this.labelFolderCount.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // DropActionDialog
+            // DropActionExternalDialog
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(144F, 144F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.CancelButton = this.buttonCancel;
-            this.ClientSize = new System.Drawing.Size(554, 293);
+            this.ClientSize = new System.Drawing.Size(831, 440);
             this.Controls.Add(this.labelFolderCount);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.labelFileCount);
@@ -158,16 +170,18 @@
             this.Controls.Add(this.buttonCancel);
             this.Controls.Add(this.listViewFiles);
             this.Controls.Add(this.label1);
+            this.Font = new System.Drawing.Font("Yu Gothic UI", 9F);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "DropActionDialog";
+            this.Name = "DropActionExternalDialog";
             this.ShowIcon = false;
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "ドロップ";
-            this.Load += new System.EventHandler(this.DropActionDialog_Load);
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.DropActionDialog_FormClosed);
+            this.Load += new System.EventHandler(this.DropActionDialog_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

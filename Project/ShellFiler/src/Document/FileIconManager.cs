@@ -103,8 +103,6 @@ namespace ShellFiler.Document {
                 }
                 m_defaultIconPool[allSize[i]].AddIcon(new FileIcon(m_idFileIcon, bmpFileIcon));             // Bitmapはアタッチ
             }
-Bitmap bmp = Win32IconUtils.GetFileIconBitmap(@"E:\docfix\kiidocs\ja\samples.mkd", allSize[0].IconSize, Win32IconUtils.ICONMODE_WITH_OVERRAY);
-
         }
         
         //=========================================================================================
@@ -284,7 +282,6 @@ Bitmap bmp = Win32IconUtils.GetFileIconBitmap(@"E:\docfix\kiidocs\ja\samples.mkd
             FileIconPool pool = GetFileIconPool(fileListId);
             if (pool != null) {
                 FileIconID iconId = FileIconID.NextId(FileIconID.FileIconType.FileListIcon, iconSize, fileListId);
-//System.Diagnostics.Debug.WriteLine("add:" + iconId.IdValue);
 
                 FileIcon fileIcon = new FileIcon(iconId, bmp);
                 return pool.AddIcon(fileIcon);

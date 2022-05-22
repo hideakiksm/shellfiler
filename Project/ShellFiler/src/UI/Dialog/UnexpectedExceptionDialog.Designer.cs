@@ -38,7 +38,7 @@ namespace ShellFiler.UI.Dialog {
             this.labelMessage.AutoSize = true;
             this.labelMessage.Location = new System.Drawing.Point(62, 12);
             this.labelMessage.Name = "labelMessage";
-            this.labelMessage.Size = new System.Drawing.Size(74, 12);
+            this.labelMessage.Size = new System.Drawing.Size(84, 15);
             this.labelMessage.TabIndex = 0;
             this.labelMessage.Text = "labelMessage";
             // 
@@ -47,7 +47,7 @@ namespace ShellFiler.UI.Dialog {
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(62, 41);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(328, 12);
+            this.label2.Size = new System.Drawing.Size(330, 15);
             this.label2.TabIndex = 0;
             this.label2.Text = "申し訳ありませんが、この例外により内部状態が不安定になったため、";
             // 
@@ -83,26 +83,26 @@ namespace ShellFiler.UI.Dialog {
             // labelManualClose
             // 
             this.labelManualClose.AutoSize = true;
-            this.labelManualClose.Location = new System.Drawing.Point(62, 53);
+            this.labelManualClose.Location = new System.Drawing.Point(62, 57);
             this.labelManualClose.Name = "labelManualClose";
-            this.labelManualClose.Size = new System.Drawing.Size(157, 12);
+            this.labelManualClose.Size = new System.Drawing.Size(164, 15);
             this.labelManualClose.TabIndex = 0;
             this.labelManualClose.Text = "ShellFilerを再起動してください。";
             // 
             // labelAutoClose
             // 
             this.labelAutoClose.AutoSize = true;
-            this.labelAutoClose.Location = new System.Drawing.Point(62, 53);
+            this.labelAutoClose.Location = new System.Drawing.Point(62, 57);
             this.labelAutoClose.Name = "labelAutoClose";
-            this.labelAutoClose.Size = new System.Drawing.Size(134, 12);
+            this.labelAutoClose.Size = new System.Drawing.Size(141, 15);
             this.labelAutoClose.TabIndex = 0;
             this.labelAutoClose.Text = "ShellFilerを再起動します。";
             // 
             // UnexpectedExceptionDialog
             // 
             this.AcceptButton = this.buttonClose;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.CancelButton = this.buttonClose;
             this.ClientSize = new System.Drawing.Size(478, 293);
             this.Controls.Add(this.textBoxDetail);
@@ -112,6 +112,7 @@ namespace ShellFiler.UI.Dialog {
             this.Controls.Add(this.labelManualClose);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.labelMessage);
+            this.Font = new System.Drawing.Font("Yu Gothic UI", 9F);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.MaximizeBox = false;
             this.MinimizeBox = false;

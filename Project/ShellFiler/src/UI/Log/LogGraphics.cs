@@ -12,13 +12,7 @@ namespace ShellFiler.UI.Log {
     //=========================================================================================
     // クラス：ログウィンドウの描画用グラフィックス
     //=========================================================================================
-    public class LogGraphics {
-        // グラフィック（null:未初期化）
-        private Graphics m_graphics;
-
-        // 描画対象のコントロール（null:グラフィック指定）
-        private Control m_control;
-        
+    public class LogGraphics : HighDpiGraphics {
         // 背景色の表示モード
         private BackColorMode m_backColorMode;
 
@@ -92,9 +86,7 @@ namespace ShellFiler.UI.Log {
         // 　　　　[in]backColor   背景色の表示モード
         // 戻り値：なし
         //=========================================================================================
-        public LogGraphics(Graphics graphics, LogViewImpl.LogMode logMode, BackColorMode backColor) {
-            m_control = null;
-            m_graphics = graphics;
+        public LogGraphics(Graphics graphics, LogViewImpl.LogMode logMode, BackColorMode backColor) : base(graphics) {
             m_backColorMode = backColor;
             if (logMode == LogViewImpl.LogMode.LogWindow) {
                 m_fontSize = Configuration.Current.LogWindowFontSize;
@@ -108,9 +100,7 @@ namespace ShellFiler.UI.Log {
         // 引　数：[in]control    描画対象のコントロール
         // 戻り値：なし
         //=========================================================================================
-        public LogGraphics(Control control, LogViewImpl.LogMode logMode) {
-            m_control = control;
-            m_graphics = null;
+        public LogGraphics(Control control, LogViewImpl.LogMode logMode) : base(control) {
             if (logMode == LogViewImpl.LogMode.LogWindow) {
                 m_fontSize = Configuration.Current.LogWindowFontSize;
             } else {
@@ -123,10 +113,7 @@ namespace ShellFiler.UI.Log {
         // 引　数：なし
         // 戻り値：なし
         //=========================================================================================
-        public void Dispose() {
-            if (m_control != null && m_graphics != null) {
-                m_graphics.Dispose();
-            }
+        public new void Dispose() {
             if (m_logWindowTextBrush != null) {
                 m_logWindowTextBrush.Dispose();
                 m_logWindowTextBrush = null;
@@ -310,18 +297,6 @@ namespace ShellFiler.UI.Log {
                 }
             }
             return brush;
-        }
-
-        //=========================================================================================
-        // プロパティ：グラフィックス
-        //=========================================================================================
-        public Graphics Graphics {
-            get {
-                if (m_graphics == null) {
-                    m_graphics = m_control.CreateGraphics();
-                }
-                return m_graphics;
-            }
         }
         
         //=========================================================================================

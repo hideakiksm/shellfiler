@@ -31,7 +31,6 @@
             this.buttonDown = new System.Windows.Forms.Button();
             this.buttonClose = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // listBoxSetting
@@ -39,9 +38,9 @@
             this.listBoxSetting.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
             this.listBoxSetting.FormattingEnabled = true;
             this.listBoxSetting.ItemHeight = 12;
-            this.listBoxSetting.Location = new System.Drawing.Point(12, 41);
+            this.listBoxSetting.Location = new System.Drawing.Point(12, 33);
             this.listBoxSetting.Name = "listBoxSetting";
-            this.listBoxSetting.Size = new System.Drawing.Size(380, 172);
+            this.listBoxSetting.Size = new System.Drawing.Size(380, 184);
             this.listBoxSetting.TabIndex = 0;
             this.listBoxSetting.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.listBoxSetting_DrawItem);
             this.listBoxSetting.MeasureItem += new System.Windows.Forms.MeasureItemEventHandler(this.listBoxSetting_MeasureItem);
@@ -49,7 +48,7 @@
             // 
             // buttonWrite
             // 
-            this.buttonWrite.Location = new System.Drawing.Point(398, 41);
+            this.buttonWrite.Location = new System.Drawing.Point(398, 33);
             this.buttonWrite.Name = "buttonWrite";
             this.buttonWrite.Size = new System.Drawing.Size(83, 23);
             this.buttonWrite.TabIndex = 1;
@@ -59,7 +58,7 @@
             // 
             // buttonDelete
             // 
-            this.buttonDelete.Location = new System.Drawing.Point(398, 70);
+            this.buttonDelete.Location = new System.Drawing.Point(398, 62);
             this.buttonDelete.Name = "buttonDelete";
             this.buttonDelete.Size = new System.Drawing.Size(83, 23);
             this.buttonDelete.TabIndex = 2;
@@ -69,7 +68,7 @@
             // 
             // buttonEdit
             // 
-            this.buttonEdit.Location = new System.Drawing.Point(398, 99);
+            this.buttonEdit.Location = new System.Drawing.Point(398, 91);
             this.buttonEdit.Name = "buttonEdit";
             this.buttonEdit.Size = new System.Drawing.Size(83, 23);
             this.buttonEdit.TabIndex = 3;
@@ -79,7 +78,7 @@
             // 
             // buttonUp
             // 
-            this.buttonUp.Location = new System.Drawing.Point(398, 161);
+            this.buttonUp.Location = new System.Drawing.Point(398, 165);
             this.buttonUp.Name = "buttonUp";
             this.buttonUp.Size = new System.Drawing.Size(83, 23);
             this.buttonUp.TabIndex = 4;
@@ -89,7 +88,7 @@
             // 
             // buttonDown
             // 
-            this.buttonDown.Location = new System.Drawing.Point(398, 190);
+            this.buttonDown.Location = new System.Drawing.Point(398, 194);
             this.buttonDown.Name = "buttonDown";
             this.buttonDown.Size = new System.Drawing.Size(83, 23);
             this.buttonDown.TabIndex = 5;
@@ -113,18 +112,9 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(13, 14);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(465, 12);
+            this.label1.Size = new System.Drawing.Size(451, 12);
             this.label1.TabIndex = 8;
-            this.label1.Text = "現在のフィルター一覧をクイック設定に登録しておくと、ボタン1つで登録済みの設定を使用することが";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(13, 26);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(51, 12);
-            this.label2.TabIndex = 8;
-            this.label2.Text = "できます。";
+            this.label1.Text = "現在のフィルター一覧をクイック設定に登録すると、ボタン1つで登録済みの設定を使用できます。";
             // 
             // FileFilterQuickDialog
             // 
@@ -133,7 +123,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.buttonClose;
             this.ClientSize = new System.Drawing.Size(494, 268);
-            this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.buttonClose);
             this.Controls.Add(this.buttonDown);
@@ -165,6 +154,5 @@
         private System.Windows.Forms.Button buttonDown;
         private System.Windows.Forms.Button buttonClose;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
     }
 }

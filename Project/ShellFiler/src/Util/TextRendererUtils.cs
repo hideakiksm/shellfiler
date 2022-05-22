@@ -89,8 +89,8 @@ namespace ShellFiler.Util {
         // 　　　　[in]strLine 計測する文字列
         // 戻り値：文字列の表示幅
         //=========================================================================================
-        public static int MeasureStringJustInt(Graphics g, Font font, string strLine) {
-            int size = (int)(Math.Ceiling(MeasureStringJust(g, font, strLine)));
+        public static int MeasureStringJustInt(HighDpiGraphics g, Font font, string strLine) {
+            int size = (int) Math.Ceiling(MeasureStringJust(g.Graphics, font, strLine));
             return size;
         }
     }

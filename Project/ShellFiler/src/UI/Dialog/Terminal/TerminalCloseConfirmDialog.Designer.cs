@@ -44,16 +44,16 @@
             this.labelMessage.AutoSize = true;
             this.labelMessage.Location = new System.Drawing.Point(61, 12);
             this.labelMessage.Name = "labelMessage";
-            this.labelMessage.Size = new System.Drawing.Size(91, 12);
+            this.labelMessage.Size = new System.Drawing.Size(102, 15);
             this.labelMessage.TabIndex = 0;
             this.labelMessage.Text = "{0}は接続中です。";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(61, 24);
+            this.label2.Location = new System.Drawing.Point(61, 28);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(171, 12);
+            this.label2.Size = new System.Drawing.Size(173, 15);
             this.label2.TabIndex = 1;
             this.label2.Text = "このまま終了してもよろしいですか？";
             // 
@@ -62,7 +62,7 @@
             this.radioButtonKeep.AutoSize = true;
             this.radioButtonKeep.Location = new System.Drawing.Point(12, 139);
             this.radioButtonKeep.Name = "radioButtonKeep";
-            this.radioButtonKeep.Size = new System.Drawing.Size(122, 16);
+            this.radioButtonKeep.Size = new System.Drawing.Size(127, 19);
             this.radioButtonKeep.TabIndex = 5;
             this.radioButtonKeep.TabStop = true;
             this.radioButtonKeep.Text = "接続したまま終了(&K)";
@@ -74,7 +74,7 @@
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(40, 158);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(274, 12);
+            this.label3.Size = new System.Drawing.Size(275, 15);
             this.label3.TabIndex = 6;
             this.label3.Text = "ターミナルをウィンドウを開く際、元の画面を復元できます。";
             // 
@@ -83,7 +83,7 @@
             this.radioButtonClose.AutoSize = true;
             this.radioButtonClose.Location = new System.Drawing.Point(12, 72);
             this.radioButtonClose.Name = "radioButtonClose";
-            this.radioButtonClose.Size = new System.Drawing.Size(178, 16);
+            this.radioButtonClose.Size = new System.Drawing.Size(182, 19);
             this.radioButtonClose.TabIndex = 2;
             this.radioButtonClose.TabStop = true;
             this.radioButtonClose.Text = "シェルチャネルを切断して終了(&C)";
@@ -95,25 +95,25 @@
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(40, 91);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(218, 12);
+            this.label4.Size = new System.Drawing.Size(223, 15);
             this.label4.TabIndex = 3;
             this.label4.Text = "SSHのシェルチャネルを閉じてから終了します。";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(40, 115);
+            this.label5.Location = new System.Drawing.Point(40, 119);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(355, 12);
+            this.label5.Size = new System.Drawing.Size(362, 15);
             this.label5.TabIndex = 4;
             this.label5.Text = "セッションも閉じるには、終了後に[SSHセッションを切断]を実行してください。";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(14, 189);
+            this.label6.Location = new System.Drawing.Point(14, 187);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(256, 12);
+            this.label6.Size = new System.Drawing.Size(265, 15);
             this.label6.TabIndex = 7;
             this.label6.Text = "オプションのSSH>ターミナルで既定値を変更できます。";
             // 
@@ -151,24 +151,24 @@
             this.labelWarning.BackColor = System.Drawing.Color.Yellow;
             this.labelWarning.Location = new System.Drawing.Point(14, 205);
             this.labelWarning.Name = "labelWarning";
-            this.labelWarning.Size = new System.Drawing.Size(386, 12);
+            this.labelWarning.Size = new System.Drawing.Size(388, 15);
             this.labelWarning.TabIndex = 8;
             this.labelWarning.Text = "セッション自体を閉じるかターミナルで選択するまで、シェルの接続は維持されます。";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(40, 103);
+            this.label1.Location = new System.Drawing.Point(40, 105);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(134, 12);
+            this.label1.Size = new System.Drawing.Size(136, 15);
             this.label1.TabIndex = 3;
             this.label1.Text = "セッションは開いたままです。";
             // 
             // TerminalCloseConfirmDialog
             // 
             this.AcceptButton = this.buttonOk;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.CancelButton = this.buttonCancel;
             this.ClientSize = new System.Drawing.Size(417, 266);
             this.Controls.Add(this.pictureBoxIcon);
@@ -184,6 +184,7 @@
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.labelMessage);
+            this.Font = new System.Drawing.Font("Yu Gothic UI", 9F);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.MaximizeBox = false;
             this.MinimizeBox = false;

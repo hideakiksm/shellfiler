@@ -24,10 +24,10 @@
         /// </summary>
         private void InitializeComponent() {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.radioButtonDirect = new System.Windows.Forms.RadioButton();
-            this.radioButtonAlwaysNew = new System.Windows.Forms.RadioButton();
             this.radioButtonSameExist = new System.Windows.Forms.RadioButton();
+            this.radioButtonAlwaysNew = new System.Windows.Forms.RadioButton();
+            this.radioButtonDirect = new System.Windows.Forms.RadioButton();
+            this.label1 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -44,53 +44,54 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "展開先";
             // 
-            // label1
+            // radioButtonSameExist
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(7, 19);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(310, 12);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "圧縮ファイルの展開時にフォルダを作成するかどうかを指定します。";
-            // 
-            // radioButtonDirect
-            // 
-            this.radioButtonDirect.AutoSize = true;
-            this.radioButtonDirect.Location = new System.Drawing.Point(9, 35);
-            this.radioButtonDirect.Name = "radioButtonDirect";
-            this.radioButtonDirect.Size = new System.Drawing.Size(155, 16);
-            this.radioButtonDirect.TabIndex = 1;
-            this.radioButtonDirect.TabStop = true;
-            this.radioButtonDirect.Text = "反対パスにそのまま展開する";
-            this.radioButtonDirect.UseVisualStyleBackColor = true;
+            this.radioButtonSameExist.AutoSize = true;
+            this.radioButtonSameExist.Location = new System.Drawing.Point(9, 79);
+            this.radioButtonSameExist.Name = "radioButtonSameExist";
+            this.radioButtonSameExist.Size = new System.Drawing.Size(346, 19);
+            this.radioButtonSameExist.TabIndex = 1;
+            this.radioButtonSameExist.TabStop = true;
+            this.radioButtonSameExist.Text = "格納ファイルが反対パスと混ざる場合だけフォルダを作成して展開する";
+            this.radioButtonSameExist.UseVisualStyleBackColor = true;
             // 
             // radioButtonAlwaysNew
             // 
             this.radioButtonAlwaysNew.AutoSize = true;
             this.radioButtonAlwaysNew.Location = new System.Drawing.Point(9, 57);
             this.radioButtonAlwaysNew.Name = "radioButtonAlwaysNew";
-            this.radioButtonAlwaysNew.Size = new System.Drawing.Size(291, 16);
+            this.radioButtonAlwaysNew.Size = new System.Drawing.Size(293, 19);
             this.radioButtonAlwaysNew.TabIndex = 1;
             this.radioButtonAlwaysNew.TabStop = true;
             this.radioButtonAlwaysNew.Text = "反対パスにアーカイブ名と同じフォルダを作成して展開する";
             this.radioButtonAlwaysNew.UseVisualStyleBackColor = true;
             // 
-            // radioButtonSameExist
+            // radioButtonDirect
             // 
-            this.radioButtonSameExist.AutoSize = true;
-            this.radioButtonSameExist.Location = new System.Drawing.Point(9, 79);
-            this.radioButtonSameExist.Name = "radioButtonSameExist";
-            this.radioButtonSameExist.Size = new System.Drawing.Size(344, 16);
-            this.radioButtonSameExist.TabIndex = 1;
-            this.radioButtonSameExist.TabStop = true;
-            this.radioButtonSameExist.Text = "格納ファイルが反対パスと混ざる場合だけフォルダを作成して展開する";
-            this.radioButtonSameExist.UseVisualStyleBackColor = true;
+            this.radioButtonDirect.AutoSize = true;
+            this.radioButtonDirect.Location = new System.Drawing.Point(9, 35);
+            this.radioButtonDirect.Name = "radioButtonDirect";
+            this.radioButtonDirect.Size = new System.Drawing.Size(157, 19);
+            this.radioButtonDirect.TabIndex = 1;
+            this.radioButtonDirect.TabStop = true;
+            this.radioButtonDirect.Text = "反対パスにそのまま展開する";
+            this.radioButtonDirect.UseVisualStyleBackColor = true;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(7, 19);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(312, 15);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "圧縮ファイルの展開時にフォルダを作成するかどうかを指定します。";
             // 
             // FileOperationExtractPage
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.Controls.Add(this.groupBox1);
+            this.Font = new System.Drawing.Font("Yu Gothic UI", 9F);
             this.Name = "FileOperationExtractPage";
             this.Size = new System.Drawing.Size(520, 370);
             this.groupBox1.ResumeLayout(false);

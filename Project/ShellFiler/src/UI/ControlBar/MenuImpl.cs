@@ -98,6 +98,8 @@ namespace ShellFiler.UI.ControlBar {
             m_uiStatusPathHisPrev = true;
             m_uiStatusPathHisNext = true;
             menuBase.ImageList = UIIconManager.IconImageList;
+            menuBase.AutoSize = true;
+            menuBase.ImageScalingSize = new Size(ToolbarItemSetting.CxIconButton, ToolbarItemSetting.CyIconButton);
             if (hasMenuBar) {
                 foreach (MenuItemSetting itemSetting in itemSettingList) {
                     if (isValid != null && !isValid(itemSetting)) {
@@ -157,10 +159,11 @@ namespace ShellFiler.UI.ControlBar {
         //=========================================================================================
         private void CreateMenuItem(ToolStripItemCollection targetItems, MenuItemSetting menuSetting, KeyItemSettingList keySetting) {
             ToolStripMenuItem item = new ToolStripMenuItem();
-            item.Size = new System.Drawing.Size(85, 22);
+            item.Size = new System.Drawing.Size(MainWindowForm.X(85), MainWindowForm.Y(22));
             item.Text = menuSetting.ItemName;
             if (menuSetting.UIResource.IconIdLeft != IconImageListID.None) {
                 item.ImageIndex = (int)menuSetting.UIResource.IconIdLeft;
+                item.ImageScaling = ToolStripItemImageScaling.SizeToFit;
             }
             item.Tag = new MenuItemTag(menuSetting, menuSetting.UIResource.IconIdLeft, menuSetting.UIResource.IconIdRight);
             item.ShortcutKeyDisplayString = ToolBarImpl.CreateShortcutDisplayString(keySetting, menuSetting.ActionCommandMoniker);

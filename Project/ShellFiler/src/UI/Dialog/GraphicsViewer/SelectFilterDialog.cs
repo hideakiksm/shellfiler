@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using ShellFiler.Api;
 using ShellFiler.Document;
 using ShellFiler.Document.Setting;
 using ShellFiler.GraphicsViewer;
@@ -252,8 +253,8 @@ namespace ShellFiler.UI.Dialog.GraphicsViewer {
                 FilterMetaInfo.ParameterInfo paramInfo = metaInfo.ParameterList[i];
                 string paramLabel = paramInfo.DisplayName;
                 string paramValue = GetParameterValueDisplay(item.FilterParameter[i], paramInfo.ParameterValueType);
-                g.Graphics.DrawString(paramLabel, this.listBoxNotUse.Font, SystemBrushes.WindowText, new Point(x + 8, y + i * 12 + 16));
-                g.Graphics.DrawString(paramValue, this.listBoxNotUse.Font, SystemBrushes.WindowText, new Point(x + 120, y + i * 12 + 16));
+                g.Graphics.DrawString(paramLabel, this.listBoxNotUse.Font, SystemBrushes.WindowText, new Point(g.X(x + 8), g.Y(y + i * 12 + 16)));
+                g.Graphics.DrawString(paramValue, this.listBoxNotUse.Font, SystemBrushes.WindowText, new Point(g.X(x + 120), g.Y(y + i * 12 + 16)));
             }
 
             // 矢印
@@ -280,12 +281,14 @@ namespace ShellFiler.UI.Dialog.GraphicsViewer {
             if (index == -1) {
                 return;
             }
-            SelectFilterDialogItem item = m_dialogItemList.FilterItemListOn[evt.Index];
-            FilterMetaInfo metaInfo = item.FilterMetaInfo;
-            if (metaInfo.ParameterList.Length > 0) {
-                evt.ItemHeight = 24 + metaInfo.ParameterList.Length * 12;
-            } else {
-                evt.ItemHeight = 18;
+            using (HighDpiGraphics g = new HighDpiGraphics(this)) {
+                SelectFilterDialogItem item = m_dialogItemList.FilterItemListOn[evt.Index];
+                FilterMetaInfo metaInfo = item.FilterMetaInfo;
+                if (metaInfo.ParameterList.Length > 0) {
+                    evt.ItemHeight = g.Y(24 + metaInfo.ParameterList.Length * 12);
+                } else {
+                    evt.ItemHeight = g.Y(18);
+                }
             }
         }
 
@@ -340,7 +343,10 @@ namespace ShellFiler.UI.Dialog.GraphicsViewer {
         // 戻り値：なし
         //=========================================================================================
         private void listBoxNotUse_MeasureItem(object sender, MeasureItemEventArgs evt) {
-            evt.ItemHeight = 16;
+            using (Graphics graphics = CreateGraphics())
+            using (HighDpiGraphics g = new HighDpiGraphics(graphics)) {
+                evt.ItemHeight = g.Y(16);
+            }
         }
 
         //=========================================================================================

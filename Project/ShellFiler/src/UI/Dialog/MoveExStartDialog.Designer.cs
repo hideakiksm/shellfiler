@@ -45,22 +45,25 @@
             this.listViewTarget = new System.Windows.Forms.ListView();
             this.pictureBoxIcon = new System.Windows.Forms.PictureBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.labelAttrCopy = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.checkBoxAttrCopy = new System.Windows.Forms.CheckBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.checkBoxSuspend = new System.Windows.Forms.CheckBox();
+            this.labelAttrCopy = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.checkBoxAttrCopy = new System.Windows.Forms.CheckBox();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxIcon)).BeginInit();
             this.groupBox2.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // buttonOk
             // 
-            this.buttonOk.Location = new System.Drawing.Point(459, 383);
+            this.buttonOk.Location = new System.Drawing.Point(765, 574);
+            this.buttonOk.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.buttonOk.Name = "buttonOk";
-            this.buttonOk.Size = new System.Drawing.Size(75, 23);
+            this.buttonOk.Size = new System.Drawing.Size(125, 34);
             this.buttonOk.TabIndex = 6;
             this.buttonOk.Text = "OK";
             this.buttonOk.UseVisualStyleBackColor = true;
@@ -69,35 +72,39 @@
             // buttonCancel
             // 
             this.buttonCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.buttonCancel.Location = new System.Drawing.Point(540, 383);
+            this.buttonCancel.Location = new System.Drawing.Point(900, 574);
+            this.buttonCancel.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.buttonCancel.Name = "buttonCancel";
-            this.buttonCancel.Size = new System.Drawing.Size(75, 23);
+            this.buttonCancel.Size = new System.Drawing.Size(125, 34);
             this.buttonCancel.TabIndex = 7;
             this.buttonCancel.Text = "キャンセル";
             this.buttonCancel.UseVisualStyleBackColor = true;
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.panel1);
             this.groupBox1.Controls.Add(this.radioButtonSetting);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.radioButtonWild);
             this.groupBox1.Controls.Add(this.textBoxWildCard);
-            this.groupBox1.Controls.Add(this.checkedListCondition);
             this.groupBox1.Controls.Add(this.buttonSetting);
             this.groupBox1.Controls.Add(this.checkBoxCondition);
-            this.groupBox1.Location = new System.Drawing.Point(12, 171);
+            this.groupBox1.Location = new System.Drawing.Point(20, 256);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(364, 206);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(5, 4, 5, 4);
+            this.groupBox1.Size = new System.Drawing.Size(607, 309);
             this.groupBox1.TabIndex = 4;
             this.groupBox1.TabStop = false;
             // 
             // radioButtonSetting
             // 
             this.radioButtonSetting.AutoSize = true;
-            this.radioButtonSetting.Location = new System.Drawing.Point(7, 22);
+            this.radioButtonSetting.Location = new System.Drawing.Point(12, 33);
+            this.radioButtonSetting.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.radioButtonSetting.Name = "radioButtonSetting";
-            this.radioButtonSetting.Size = new System.Drawing.Size(154, 16);
+            this.radioButtonSetting.Size = new System.Drawing.Size(227, 22);
             this.radioButtonSetting.TabIndex = 8;
             this.radioButtonSetting.TabStop = true;
             this.radioButtonSetting.Text = "設定済みの条件で選択(&C)";
@@ -106,27 +113,30 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(25, 183);
+            this.label2.Location = new System.Drawing.Point(42, 278);
+            this.label2.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(228, 12);
+            this.label2.Size = new System.Drawing.Size(343, 18);
             this.label2.TabIndex = 14;
             this.label2.Text = "「:」区切りで複数指定可能、ファイルだけが対象";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(272, 146);
+            this.label1.Location = new System.Drawing.Point(453, 219);
+            this.label1.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(80, 12);
+            this.label1.Size = new System.Drawing.Size(120, 18);
             this.label1.TabIndex = 13;
             this.label1.Text = "↑↓で切り替え";
             // 
             // radioButtonWild
             // 
             this.radioButtonWild.AutoSize = true;
-            this.radioButtonWild.Location = new System.Drawing.Point(7, 138);
+            this.radioButtonWild.Location = new System.Drawing.Point(12, 207);
+            this.radioButtonWild.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.radioButtonWild.Name = "radioButtonWild";
-            this.radioButtonWild.Size = new System.Drawing.Size(218, 16);
+            this.radioButtonWild.Size = new System.Drawing.Size(323, 22);
             this.radioButtonWild.TabIndex = 11;
             this.radioButtonWild.TabStop = true;
             this.radioButtonWild.Text = "ファイル名のワイルドカードで簡易指定(&Q)";
@@ -134,25 +144,29 @@
             // 
             // textBoxWildCard
             // 
-            this.textBoxWildCard.Location = new System.Drawing.Point(27, 161);
+            this.textBoxWildCard.Location = new System.Drawing.Point(45, 242);
+            this.textBoxWildCard.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.textBoxWildCard.Name = "textBoxWildCard";
-            this.textBoxWildCard.Size = new System.Drawing.Size(325, 19);
+            this.textBoxWildCard.Size = new System.Drawing.Size(539, 25);
             this.textBoxWildCard.TabIndex = 12;
             // 
             // checkedListCondition
             // 
             this.checkedListCondition.CheckOnClick = true;
+            this.checkedListCondition.Dock = System.Windows.Forms.DockStyle.Fill;
             this.checkedListCondition.FormattingEnabled = true;
-            this.checkedListCondition.Location = new System.Drawing.Point(27, 44);
+            this.checkedListCondition.Location = new System.Drawing.Point(0, 0);
+            this.checkedListCondition.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.checkedListCondition.Name = "checkedListCondition";
-            this.checkedListCondition.Size = new System.Drawing.Size(325, 88);
+            this.checkedListCondition.Size = new System.Drawing.Size(542, 114);
             this.checkedListCondition.TabIndex = 9;
             // 
             // buttonSetting
             // 
-            this.buttonSetting.Location = new System.Drawing.Point(277, 18);
+            this.buttonSetting.Location = new System.Drawing.Point(462, 24);
+            this.buttonSetting.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.buttonSetting.Name = "buttonSetting";
-            this.buttonSetting.Size = new System.Drawing.Size(75, 23);
+            this.buttonSetting.Size = new System.Drawing.Size(125, 34);
             this.buttonSetting.TabIndex = 10;
             this.buttonSetting.Text = "設定(&S)...";
             this.buttonSetting.UseVisualStyleBackColor = true;
@@ -160,45 +174,51 @@
             // checkBoxCondition
             // 
             this.checkBoxCondition.AutoSize = true;
-            this.checkBoxCondition.Location = new System.Drawing.Point(10, 0);
+            this.checkBoxCondition.Location = new System.Drawing.Point(17, 0);
+            this.checkBoxCondition.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.checkBoxCondition.Name = "checkBoxCondition";
-            this.checkBoxCondition.Size = new System.Drawing.Size(112, 16);
+            this.checkBoxCondition.Size = new System.Drawing.Size(165, 22);
             this.checkBoxCondition.TabIndex = 0;
             this.checkBoxCondition.Text = "条件付きコピー(&O)";
             this.checkBoxCondition.UseVisualStyleBackColor = true;
             // 
             // textBoxDest
             // 
-            this.textBoxDest.Location = new System.Drawing.Point(78, 146);
+            this.textBoxDest.Location = new System.Drawing.Point(130, 219);
+            this.textBoxDest.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.textBoxDest.Name = "textBoxDest";
             this.textBoxDest.ReadOnly = true;
-            this.textBoxDest.Size = new System.Drawing.Size(536, 19);
+            this.textBoxDest.Size = new System.Drawing.Size(891, 25);
             this.textBoxDest.TabIndex = 3;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(12, 149);
+            this.label3.Location = new System.Drawing.Point(20, 224);
+            this.label3.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(58, 12);
+            this.label3.Size = new System.Drawing.Size(87, 18);
             this.label3.TabIndex = 2;
             this.label3.Text = "転送先(&T):";
             // 
             // labelMessage
             // 
             this.labelMessage.AutoSize = true;
-            this.labelMessage.Location = new System.Drawing.Point(34, 11);
+            this.labelMessage.Location = new System.Drawing.Point(57, 16);
+            this.labelMessage.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.labelMessage.Name = "labelMessage";
-            this.labelMessage.Size = new System.Drawing.Size(50, 12);
+            this.labelMessage.Size = new System.Drawing.Size(72, 18);
             this.labelMessage.TabIndex = 0;
             this.labelMessage.Text = "message";
             // 
             // listViewTarget
             // 
             this.listViewTarget.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.None;
-            this.listViewTarget.Location = new System.Drawing.Point(12, 32);
+            this.listViewTarget.HideSelection = false;
+            this.listViewTarget.Location = new System.Drawing.Point(20, 48);
+            this.listViewTarget.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.listViewTarget.Name = "listViewTarget";
-            this.listViewTarget.Size = new System.Drawing.Size(602, 108);
+            this.listViewTarget.Size = new System.Drawing.Size(1001, 160);
             this.listViewTarget.TabIndex = 1;
             this.listViewTarget.UseCompatibleStateImageBehavior = false;
             this.listViewTarget.View = System.Windows.Forms.View.Details;
@@ -206,9 +226,10 @@
             // pictureBoxIcon
             // 
             this.pictureBoxIcon.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBoxIcon.Location = new System.Drawing.Point(12, 10);
+            this.pictureBoxIcon.Location = new System.Drawing.Point(20, 15);
+            this.pictureBoxIcon.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.pictureBoxIcon.Name = "pictureBoxIcon";
-            this.pictureBoxIcon.Size = new System.Drawing.Size(16, 16);
+            this.pictureBoxIcon.Size = new System.Drawing.Size(27, 24);
             this.pictureBoxIcon.TabIndex = 9;
             this.pictureBoxIcon.TabStop = false;
             // 
@@ -220,77 +241,93 @@
             this.groupBox2.Controls.Add(this.labelAttrCopy);
             this.groupBox2.Controls.Add(this.label6);
             this.groupBox2.Controls.Add(this.checkBoxAttrCopy);
-            this.groupBox2.Location = new System.Drawing.Point(382, 171);
+            this.groupBox2.Location = new System.Drawing.Point(637, 256);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(232, 132);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(5, 4, 5, 4);
+            this.groupBox2.Size = new System.Drawing.Size(387, 208);
             this.groupBox2.TabIndex = 5;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "その他の設定";
             // 
-            // labelAttrCopy
-            // 
-            this.labelAttrCopy.AutoSize = true;
-            this.labelAttrCopy.Location = new System.Drawing.Point(19, 50);
-            this.labelAttrCopy.Name = "labelAttrCopy";
-            this.labelAttrCopy.Size = new System.Drawing.Size(144, 12);
-            this.labelAttrCopy.TabIndex = 2;
-            this.labelAttrCopy.Text = "現在のオプションは「{0}」です。";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(19, 38);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(195, 12);
-            this.label6.TabIndex = 1;
-            this.label6.Text = "未設定のときはオプションにしたがいます。";
-            // 
-            // checkBoxAttrCopy
-            // 
-            this.checkBoxAttrCopy.AutoSize = true;
-            this.checkBoxAttrCopy.Location = new System.Drawing.Point(7, 19);
-            this.checkBoxAttrCopy.Name = "checkBoxAttrCopy";
-            this.checkBoxAttrCopy.Size = new System.Drawing.Size(184, 16);
-            this.checkBoxAttrCopy.TabIndex = 0;
-            this.checkBoxAttrCopy.Text = "転送後にすべての属性をコピー(&A)";
-            this.checkBoxAttrCopy.ThreeState = true;
-            this.checkBoxAttrCopy.UseVisualStyleBackColor = true;
-            // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(19, 107);
+            this.label5.Location = new System.Drawing.Point(32, 170);
+            this.label5.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(163, 12);
+            this.label5.Size = new System.Drawing.Size(245, 18);
             this.label5.TabIndex = 5;
             this.label5.Text = "その処理の完了後に開始します。";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(19, 95);
+            this.label4.Location = new System.Drawing.Point(32, 148);
+            this.label4.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(165, 12);
+            this.label4.Size = new System.Drawing.Size(249, 18);
             this.label4.TabIndex = 4;
             this.label4.Text = "ほかに実行中の処理がある場合、";
             // 
             // checkBoxSuspend
             // 
             this.checkBoxSuspend.AutoSize = true;
-            this.checkBoxSuspend.Location = new System.Drawing.Point(7, 76);
+            this.checkBoxSuspend.Location = new System.Drawing.Point(12, 117);
+            this.checkBoxSuspend.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.checkBoxSuspend.Name = "checkBoxSuspend";
-            this.checkBoxSuspend.Size = new System.Drawing.Size(157, 16);
+            this.checkBoxSuspend.Size = new System.Drawing.Size(232, 22);
             this.checkBoxSuspend.TabIndex = 3;
             this.checkBoxSuspend.Text = "待機状態のタスクを作成(&W)";
             this.checkBoxSuspend.UseVisualStyleBackColor = true;
             // 
+            // labelAttrCopy
+            // 
+            this.labelAttrCopy.AutoSize = true;
+            this.labelAttrCopy.Location = new System.Drawing.Point(32, 78);
+            this.labelAttrCopy.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.labelAttrCopy.Name = "labelAttrCopy";
+            this.labelAttrCopy.Size = new System.Drawing.Size(216, 18);
+            this.labelAttrCopy.TabIndex = 2;
+            this.labelAttrCopy.Text = "現在のオプションは「{0}」です。";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(32, 57);
+            this.label6.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(294, 18);
+            this.label6.TabIndex = 1;
+            this.label6.Text = "未設定のときはオプションにしたがいます。";
+            // 
+            // checkBoxAttrCopy
+            // 
+            this.checkBoxAttrCopy.AutoSize = true;
+            this.checkBoxAttrCopy.Location = new System.Drawing.Point(12, 28);
+            this.checkBoxAttrCopy.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
+            this.checkBoxAttrCopy.Name = "checkBoxAttrCopy";
+            this.checkBoxAttrCopy.Size = new System.Drawing.Size(272, 22);
+            this.checkBoxAttrCopy.TabIndex = 0;
+            this.checkBoxAttrCopy.Text = "転送後にすべての属性をコピー(&A)";
+            this.checkBoxAttrCopy.ThreeState = true;
+            this.checkBoxAttrCopy.UseVisualStyleBackColor = true;
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.checkedListCondition);
+            this.panel1.Location = new System.Drawing.Point(45, 66);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(542, 114);
+            this.panel1.TabIndex = 15;
+            // 
             // MoveExStartDialog
             // 
             this.AcceptButton = this.buttonOk;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.buttonCancel;
-            this.ClientSize = new System.Drawing.Size(627, 418);
+            this.ClientSize = new System.Drawing.Size(1045, 627);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.pictureBoxIcon);
             this.Controls.Add(this.labelMessage);
@@ -301,6 +338,7 @@
             this.Controls.Add(this.buttonCancel);
             this.Controls.Add(this.buttonOk);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "MoveExStartDialog";
@@ -315,6 +353,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxIcon)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
+            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -345,6 +384,6 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.CheckBox checkBoxSuspend;
-
+        private System.Windows.Forms.Panel panel1;
     }
 }

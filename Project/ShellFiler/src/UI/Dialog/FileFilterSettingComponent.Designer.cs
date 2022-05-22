@@ -65,7 +65,7 @@
             this.labelNoFilter1.AutoSize = true;
             this.labelNoFilter1.Location = new System.Drawing.Point(254, 40);
             this.labelNoFilter1.Name = "labelNoFilter1";
-            this.labelNoFilter1.Size = new System.Drawing.Size(149, 12);
+            this.labelNoFilter1.Size = new System.Drawing.Size(151, 15);
             this.labelNoFilter1.TabIndex = 3;
             this.labelNoFilter1.Text = "フィルターが選択されていません";
             // 
@@ -74,7 +74,7 @@
             this.labelNoFilter2.AutoSize = true;
             this.labelNoFilter2.Location = new System.Drawing.Point(158, 84);
             this.labelNoFilter2.Name = "labelNoFilter2";
-            this.labelNoFilter2.Size = new System.Drawing.Size(340, 12);
+            this.labelNoFilter2.Size = new System.Drawing.Size(342, 15);
             this.labelNoFilter2.TabIndex = 3;
             this.labelNoFilter2.Text = "右側のフィルター一覧でフィルターを選択して、追加をクリックしてください。";
             // 
@@ -90,13 +90,14 @@
             // 
             // FileFilterSettingComponent
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.SystemColors.Window;
             this.Controls.Add(this.panelName);
             this.Controls.Add(this.labelNoFilter1);
             this.Controls.Add(this.labelNoFilter2);
             this.Controls.Add(this.panelUI);
+            this.Font = new System.Drawing.Font("Yu Gothic UI", 9F);
             this.Name = "FileFilterSettingComponent";
             this.Size = new System.Drawing.Size(656, 153);
             this.panelName.ResumeLayout(false);

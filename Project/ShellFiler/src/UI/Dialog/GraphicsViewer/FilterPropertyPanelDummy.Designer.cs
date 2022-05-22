@@ -47,8 +47,8 @@
             // 
             // FilterPropertyPanelDummy
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "FilterPropertyPanelDummy";

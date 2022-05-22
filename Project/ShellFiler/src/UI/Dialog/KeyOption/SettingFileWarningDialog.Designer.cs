@@ -46,7 +46,7 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(62, 12);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(258, 12);
+            this.label1.Size = new System.Drawing.Size(260, 15);
             this.label1.TabIndex = 4;
             this.label1.Text = "設定ファイルの一部に読み込めない項目がありました。";
             // 
@@ -55,13 +55,13 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(62, 38);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(41, 12);
+            this.label2.Size = new System.Drawing.Size(46, 15);
             this.label2.TabIndex = 4;
             this.label2.Text = "ファイル:";
             // 
             // buttonOpen
             // 
-            this.buttonOpen.Location = new System.Drawing.Point(616, 53);
+            this.buttonOpen.Location = new System.Drawing.Point(616, 55);
             this.buttonOpen.Name = "buttonOpen";
             this.buttonOpen.Size = new System.Drawing.Size(75, 23);
             this.buttonOpen.TabIndex = 6;
@@ -72,7 +72,7 @@
             // textBoxInfo
             // 
             this.textBoxInfo.BackColor = System.Drawing.SystemColors.Window;
-            this.textBoxInfo.Location = new System.Drawing.Point(12, 120);
+            this.textBoxInfo.Location = new System.Drawing.Point(12, 118);
             this.textBoxInfo.Multiline = true;
             this.textBoxInfo.Name = "textBoxInfo";
             this.textBoxInfo.ReadOnly = true;
@@ -94,17 +94,17 @@
             // listBoxFileName
             // 
             this.listBoxFileName.FormattingEnabled = true;
-            this.listBoxFileName.ItemHeight = 12;
-            this.listBoxFileName.Location = new System.Drawing.Point(64, 53);
+            this.listBoxFileName.ItemHeight = 15;
+            this.listBoxFileName.Location = new System.Drawing.Point(64, 55);
             this.listBoxFileName.Name = "listBoxFileName";
-            this.listBoxFileName.Size = new System.Drawing.Size(546, 52);
+            this.listBoxFileName.Size = new System.Drawing.Size(546, 49);
             this.listBoxFileName.TabIndex = 9;
             // 
             // SettingFileWarningDialog
             // 
             this.AcceptButton = this.buttonClose;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.CancelButton = this.buttonClose;
             this.ClientSize = new System.Drawing.Size(703, 447);
             this.Controls.Add(this.listBoxFileName);
@@ -114,6 +114,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBoxIcon);
+            this.Font = new System.Drawing.Font("Yu Gothic UI", 9F);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.MaximizeBox = false;
             this.MinimizeBox = false;

@@ -31,17 +31,18 @@
             this.labelNone.AutoSize = true;
             this.labelNone.Location = new System.Drawing.Point(140, 18);
             this.labelNone.Name = "labelNone";
-            this.labelNone.Size = new System.Drawing.Size(118, 12);
+            this.labelNone.Size = new System.Drawing.Size(120, 15);
             this.labelNone.TabIndex = 3;
             this.labelNone.Text = "条件指定はありません。";
             // 
             // FileConditionNoneControl
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.SystemColors.Window;
             this.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.Controls.Add(this.labelNone);
+            this.Font = new System.Drawing.Font("Yu Gothic UI", 9F);
             this.Name = "FileConditionNoneControl";
             this.Size = new System.Drawing.Size(398, 48);
             this.ResumeLayout(false);

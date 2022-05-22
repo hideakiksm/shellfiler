@@ -33,6 +33,9 @@ namespace ShellFiler.FileViewer {
         // WM_PAINT受信時にマウスのドラッグを継続する
         public const int UM_CHECK_MOUSE_DRAG_CONTINUE = Win32API.WM_USER + 1;
 
+        // ビジュアルベルのフラッシュ回数
+        public const int VISUAL_BELL_FLUSH_COUNT = 4;
+
         // デフォルトのタブ幅
         private const int DEFAULT_TAB_WIDTH = 8;
 
@@ -67,8 +70,8 @@ namespace ShellFiler.FileViewer {
         // 初回のpaint実行時のときtrue
         private bool m_firstPaint = true;
 
-        // ビジュアルベルを表示するときtrue
-        private bool m_requireVisualBell = false;
+        // ビジュアルベルを表示するときの残り回数（0:OFF）
+        private int m_visualBellStatus = 0;
 
         // 半角１文字分の大きさの期待値
         private SizeF m_fontSize;
@@ -88,7 +91,6 @@ namespace ShellFiler.FileViewer {
         //=========================================================================================
         public TextFileViewer(FileViewerForm form, FileViewerStatusBar statusBar, RadarBar radarBar) {
             InitializeComponent();
-            this.visualBellTimer.Stop();
             m_form = form;
             m_form.MouseWheel += new System.Windows.Forms.MouseEventHandler(this.TextFileViewer_MouseWheel);
             m_statusBar = statusBar;
@@ -129,6 +131,7 @@ namespace ShellFiler.FileViewer {
             m_searchEngine = new TextSearchEngine(this, m_statusBar, m_lineInfo);
             m_textViewerComponent = new TextViewerComponent(this, m_fontSize);
             m_dumpViewerComponent = new DumpViewerComponent(this, m_fontSize);
+            this.DoubleBuffered = false;
         }
 
         //=========================================================================================
@@ -155,8 +158,6 @@ namespace ShellFiler.FileViewer {
         //=========================================================================================
         public void OnFormClosed() {
             m_searchEngine.Dispose();       // 非nullのため、破棄後にnull設定しない
-            this.visualBellTimer.Stop();
-            this.visualBellTimer.Dispose();
         }
 
         //=========================================================================================
@@ -396,6 +397,7 @@ namespace ShellFiler.FileViewer {
         //=========================================================================================
         private void TextFileViewer_Paint(object sender, PaintEventArgs evt) {
             if (m_currentViewerComponent == null) {
+                m_visualBellStatus = 0;
                 return;
             }
 
@@ -408,9 +410,15 @@ namespace ShellFiler.FileViewer {
             DoubleBuffer doubleBuffer = new DoubleBuffer(evt.Graphics, ClientRectangle.Width, ClientRectangle.Height);
             TextViewerGraphics g = new TextViewerGraphics(doubleBuffer.DrawingGraphics, ObjectUtils.Ceil(m_currentViewerComponent.LineNoAreaWidth));
             try {
-                Brush backBrush = new SolidBrush(this.BackColor);
-                g.Graphics.FillRectangle(backBrush, ClientRectangle);
-                backBrush.Dispose();
+                if (m_visualBellStatus > 0) {
+                    m_visualBellStatus--;
+                    ShowVisualBell(g.Graphics, m_visualBellStatus, VISUAL_BELL_FLUSH_COUNT);
+                    Invalidate();
+                } else {
+                    using (Brush backBrush = new SolidBrush(this.BackColor)) {
+                        g.Graphics.FillRectangle(backBrush, ClientRectangle);
+                    }
+                }
                 m_currentViewerComponent.OnPaint(g, false, -1, -1);
             } finally {
                 g.Dispose();
@@ -486,29 +494,8 @@ namespace ShellFiler.FileViewer {
         // 戻り値：なし
         //=========================================================================================
         private void ReuqestVisualBell() {
-            BaseThread.InvokeProcedureByMainThread(new RequestVisualBellDelegate(RequestVisualBellUI));
-        }
-        private delegate void RequestVisualBellDelegate();
-        private void RequestVisualBellUI() {
-            this.visualBellTimer.Start();
-            this.visualBellTimer.Enabled = true;
-        }
-
-        //=========================================================================================
-        // 機　能：ビジュアルベルのタイマーの処理を行う
-        // 引　数：[in]sender   イベントの送信元
-        // 　　　　[in]evt      送信イベント
-        // 戻り値：なし
-        //=========================================================================================
-        private void visualBellTimer_Tick(object sender, EventArgs evt) {
-            m_requireVisualBell = true;
-            this.visualBellTimer.Stop();
-
-            // ビジュアルベル
-            if (m_requireVisualBell) {
-                m_requireVisualBell = false;
-                ShowVisualBell();
-            }
+            m_visualBellStatus = VISUAL_BELL_FLUSH_COUNT;
+            Invalidate();
         }
 
         //=========================================================================================
@@ -516,58 +503,30 @@ namespace ShellFiler.FileViewer {
         // 引　数：なし
         // 戻り値：なし
         //=========================================================================================
-        private void ShowVisualBell() {
-            if (m_currentViewerComponent == null) {
-                return;
+        private void ShowVisualBell(Graphics g, int currentFlush, int totalFlush) {
+            using (Brush backBrush = new SolidBrush(this.BackColor)) {
+                g.FillRectangle(backBrush, ClientRectangle);
             }
-            TextViewerGraphics gPanel = new TextViewerGraphics(this, m_currentViewerComponent.LineNoAreaWidth);
-            try {
-                Bitmap bmp = new Bitmap(ClientRectangle.Width, ClientRectangle.Height);
-                try {
-                    // 画面全体のコピーを作成
-                    Graphics gBmp = Graphics.FromImage(bmp);
-                    try {
-                        TextViewerGraphics gBmp2 = new TextViewerGraphics(gBmp, m_currentViewerComponent.LineNoAreaWidth);
-                        try {
-                            Brush backBrush = new SolidBrush(this.BackColor);
-                            try {
-                                gBmp2.Graphics.FillRectangle(backBrush, ClientRectangle);
-                            } finally {
-                                backBrush.Dispose();
-                            }
-                            if (m_currentViewerComponent != null) {
-                                m_currentViewerComponent.OnPaint(gBmp2, false, -1, -1);
-                            }
-                        } finally {
-                            gBmp2.Dispose();
-                        }
-                    } finally {
-                        gBmp.Dispose();
+            if (currentFlush % 2 == 1) {
+                // 表示の縮尺（左下に流れるように）
+                RectangleF size1 = new RectangleF(0.0f, 0.0f, 1.0f, 1.0f);
+                RectangleF size2 = new RectangleF(0.0f, 0.8f, 0.7f, 1.0f);
+                Color color1 = Color.Black;
+                Color color2 = GraphicsUtils.BrendColor(this.BackColor, Color.FromArgb(100, 100, 130));
+                using (Brush brush = new SolidBrush(color2)) {
+                    double ratio = (double)(totalFlush - currentFlush) / (double)totalFlush;
+                    Rectangle rect = new Rectangle(
+                        (int)(ClientRectangle.Width * ((size2.Left - size1.Left) * ratio + size1.Left)),
+                        (int)(ClientRectangle.Height * ((size2.Top - size1.Top) * ratio + size1.Top)),
+                        (int)(ClientRectangle.Width * ((size2.Right - size1.Right) * ratio + size1.Right)),
+                        (int)(ClientRectangle.Height * ((size2.Bottom - size1.Bottom) * ratio + size1.Bottom)));
+                    using (Pen pen1 = new Pen(color1))
+                    using (Pen pen2 = new Pen(color2)) {
+                        g.DrawRectangle(pen2, rect);
+                        g.FillRectangle(brush, rect);
                     }
-
-                    // 表示の縮尺（左下に流れるように）
-                    RectangleF[] size = new RectangleF[4];
-                    size[0] = new RectangleF(0.0f, 0.00f, 1.00f, 1.0f);
-                    size[1] = new RectangleF(0.0f, 0.15f, 0.95f, 1.0f);
-                    size[2] = new RectangleF(0.0f, 0.45f, 0.85f, 1.0f);
-                    size[3] = new RectangleF(0.0f, 0.80f, 0.70f, 1.0f);
-                    int[] sleepTime = { 15, 10, 8, 3};
-
-                    // ビジュアルベルを表示
-                    for (int i = 0; i < size.Length; i++) {
-                        RectangleF rect = new RectangleF(ClientRectangle.Width * size[i].Left, ClientRectangle.Height * size[i].Top, ClientRectangle.Width * size[i].Width, ClientRectangle.Height * size[i].Height);
-                        gPanel.Graphics.FillRectangle(Brushes.Black, rect);
-                        Thread.Sleep(15);
-                        gPanel.Graphics.DrawImage(bmp, 0, 0);
-                        Thread.Sleep(sleepTime[i]);
-                    }
-                } finally {
-                    bmp.Dispose();
                 }
-            } finally {
-                gPanel.Dispose();
             }
-            Invalidate();
         }
 
         //=========================================================================================

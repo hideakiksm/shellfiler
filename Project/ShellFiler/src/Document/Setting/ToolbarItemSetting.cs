@@ -2,8 +2,7 @@
 using System.Collections.Generic;
 using ShellFiler.Api;
 using ShellFiler.Command;
-using ShellFiler.Command.FileList;
-using ShellFiler.Command.FileViewer;
+using ShellFiler.UI;
 
 namespace ShellFiler.Document.Setting {
 
@@ -12,13 +11,10 @@ namespace ShellFiler.Document.Setting {
     //=========================================================================================
     class ToolbarItemSetting {
         // アイコンボタンの幅
-        public const int CX_ICON_BUTTON = 23;
-        
-        // アイコンボタンの高さ
-        public const int CY_ICON_BUTTON = 22;
+        private const int CX_ICON_BUTTON = 16;
 
-        // アイコンボタンの幅
-        public const int CX_ICON_DROPDOWN_BUTTON = 29;
+        // アイコンボタンの高さ
+        private const int CY_ICON_BUTTON = 16;
 
         // 項目の種類
         private ItemType m_itemType;
@@ -78,6 +74,24 @@ namespace ShellFiler.Document.Setting {
         //=========================================================================================
         public void AddSubMenu(MenuItemSetting item) {
             m_subMenuList.Add(item);
+        }
+
+        //=========================================================================================
+        // プロパティ：アイコンボタンの幅
+        //=========================================================================================
+        public static int CxIconButton {
+            get {
+                return MainWindowForm.X(CX_ICON_BUTTON);
+            }
+        }
+
+        //=========================================================================================
+        // プロパティ：アイコンボタンの高さ
+        //=========================================================================================
+        public static int CyIconButton {
+            get {
+                return MainWindowForm.X(CY_ICON_BUTTON);
+            }
         }
 
         //=========================================================================================

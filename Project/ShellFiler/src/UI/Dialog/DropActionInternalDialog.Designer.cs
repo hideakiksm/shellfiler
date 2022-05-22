@@ -36,14 +36,14 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(11, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(154, 12);
+            this.label1.Size = new System.Drawing.Size(155, 15);
             this.label1.TabIndex = 0;
             this.label1.Text = "反対パスからドロップされました。";
             // 
             // buttonCancel
             // 
             this.buttonCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.buttonCancel.Location = new System.Drawing.Point(138, 140);
+            this.buttonCancel.Location = new System.Drawing.Point(138, 142);
             this.buttonCancel.Name = "buttonCancel";
             this.buttonCancel.Size = new System.Drawing.Size(75, 23);
             this.buttonCancel.TabIndex = 5;
@@ -52,7 +52,7 @@
             // 
             // buttonCopy
             // 
-            this.buttonCopy.Location = new System.Drawing.Point(13, 24);
+            this.buttonCopy.Location = new System.Drawing.Point(13, 26);
             this.buttonCopy.Name = "buttonCopy";
             this.buttonCopy.Size = new System.Drawing.Size(200, 23);
             this.buttonCopy.TabIndex = 1;
@@ -62,7 +62,7 @@
             // 
             // buttonMove
             // 
-            this.buttonMove.Location = new System.Drawing.Point(13, 53);
+            this.buttonMove.Location = new System.Drawing.Point(13, 55);
             this.buttonMove.Name = "buttonMove";
             this.buttonMove.Size = new System.Drawing.Size(200, 23);
             this.buttonMove.TabIndex = 2;
@@ -72,7 +72,7 @@
             // 
             // buttonShortcut
             // 
-            this.buttonShortcut.Location = new System.Drawing.Point(13, 82);
+            this.buttonShortcut.Location = new System.Drawing.Point(13, 84);
             this.buttonShortcut.Name = "buttonShortcut";
             this.buttonShortcut.Size = new System.Drawing.Size(200, 23);
             this.buttonShortcut.TabIndex = 3;
@@ -82,7 +82,7 @@
             // 
             // buttonChdir
             // 
-            this.buttonChdir.Location = new System.Drawing.Point(13, 111);
+            this.buttonChdir.Location = new System.Drawing.Point(13, 113);
             this.buttonChdir.Name = "buttonChdir";
             this.buttonChdir.Size = new System.Drawing.Size(200, 23);
             this.buttonChdir.TabIndex = 4;
@@ -92,16 +92,17 @@
             // 
             // DropActionInternalDialog
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.CancelButton = this.buttonCancel;
-            this.ClientSize = new System.Drawing.Size(227, 177);
+            this.ClientSize = new System.Drawing.Size(227, 181);
             this.Controls.Add(this.buttonChdir);
             this.Controls.Add(this.buttonShortcut);
             this.Controls.Add(this.buttonMove);
             this.Controls.Add(this.buttonCopy);
             this.Controls.Add(this.buttonCancel);
             this.Controls.Add(this.label1);
+            this.Font = new System.Drawing.Font("Yu Gothic UI", 9F);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.MaximizeBox = false;
             this.MinimizeBox = false;

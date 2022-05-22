@@ -82,9 +82,11 @@ namespace ShellFiler.UI.ControlBar {
             Rectangle rcRect = new Rectangle(0, 0, this.Width - 1, this.Height - 1);
             g.Graphics.FillRectangle(backBrush, rcRect);
             g.Graphics.DrawRectangle(borderPen, rcRect);
-            int x = (this.Width - m_imageList.Images[0].Size.Width) / 2;
-            int y = (this.Height - m_imageList.Images[0].Size.Height) / 2;
-            m_imageList.Draw(g.Graphics, new Point(x, y), m_imageIndex);
+            Image image = m_imageList.Images[m_imageIndex];
+            int margin = (this.Width - this.Width * 8 / 10) / 2;
+            Rectangle rcDest = new Rectangle(margin, margin, this.Width - margin, this.Height - margin);
+            Rectangle rcSrc = new Rectangle(0, 0, image.Width, image.Height);
+            g.Graphics.DrawImage(m_imageList.Images[m_imageIndex], rcDest, rcSrc, GraphicsUnit.Pixel);
 
             doubleBuffer.FlushScreen(0, 0);
         }

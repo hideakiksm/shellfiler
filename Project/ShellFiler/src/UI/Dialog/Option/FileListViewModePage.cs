@@ -49,7 +49,7 @@ namespace ShellFiler.UI.Dialog.Option {
             FileIcon icon = iconManager.GetFileIcon(iconManager.DefaultFolderIconId, FileIconID.NullId, FileListViewIconSize.IconSize16);
             m_imageList = new ImageList();
             m_imageList.ColorDepth = ColorDepth.Depth32Bit;
-            m_imageList.ImageSize = new Size(UIIconManager.CX_DEFAULT_ICON, UIIconManager.CY_DEFAULT_ICON);
+            m_imageList.ImageSize = new Size(UIIconManager.CxDefaultIcon, UIIconManager.CyDefaultIcon);
             m_imageList.Images.Add(icon.IconImage);
 
             // コンフィグ値をUIに反映

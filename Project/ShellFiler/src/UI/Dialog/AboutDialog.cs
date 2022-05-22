@@ -29,8 +29,8 @@ namespace ShellFiler.UI.Dialog
             this.labelCopyright.Text = copyright;
             this.textBoxLibrary.Text = Resources.DlgAbout_ExternalSoftware;
 
-            this.pictureBoxLogo.Image = Resources.TitleLogo;
-            this.pictureBoxIcon.Image = Resources.MainIcon48;
+            this.pictureBoxLogo.Image = UIIconManager.TitleLogo;
+            this.pictureBoxIcon.Image = UIIconManager.MainIcon48;
 
             this.ActiveControl = this.buttonClose;
         }

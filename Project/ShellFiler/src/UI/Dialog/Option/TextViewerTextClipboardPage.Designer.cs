@@ -43,16 +43,16 @@
             this.label11.AutoSize = true;
             this.label11.Location = new System.Drawing.Point(3, 9);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(270, 12);
+            this.label11.Size = new System.Drawing.Size(283, 15);
             this.label11.TabIndex = 0;
             this.label11.Text = "形式を指定してクリップボードにコピー（テキスト）の初期値";
             // 
             // radioButtonFix
             // 
             this.radioButtonFix.AutoSize = true;
-            this.radioButtonFix.Location = new System.Drawing.Point(5, 46);
+            this.radioButtonFix.Location = new System.Drawing.Point(5, 47);
             this.radioButtonFix.Name = "radioButtonFix";
-            this.radioButtonFix.Size = new System.Drawing.Size(103, 16);
+            this.radioButtonFix.Size = new System.Drawing.Size(109, 19);
             this.radioButtonFix.TabIndex = 2;
             this.radioButtonFix.TabStop = true;
             this.radioButtonFix.Text = "初期値を指定(&I)";
@@ -62,9 +62,9 @@
             // radioButtonPrev
             // 
             this.radioButtonPrev.AutoSize = true;
-            this.radioButtonPrev.Location = new System.Drawing.Point(5, 24);
+            this.radioButtonPrev.Location = new System.Drawing.Point(5, 25);
             this.radioButtonPrev.Name = "radioButtonPrev";
-            this.radioButtonPrev.Size = new System.Drawing.Size(243, 16);
+            this.radioButtonPrev.Size = new System.Drawing.Size(247, 19);
             this.radioButtonPrev.TabIndex = 1;
             this.radioButtonPrev.TabStop = true;
             this.radioButtonPrev.Text = "直前に指定された設定を初期値として使用(&R)";
@@ -77,7 +77,7 @@
             this.groupBox1.Controls.Add(this.comboBoxReturn);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Location = new System.Drawing.Point(28, 68);
+            this.groupBox1.Location = new System.Drawing.Point(28, 73);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(489, 75);
             this.groupBox1.TabIndex = 3;
@@ -90,7 +90,7 @@
             this.comboBoxTab.FormattingEnabled = true;
             this.comboBoxTab.Location = new System.Drawing.Point(95, 44);
             this.comboBoxTab.Name = "comboBoxTab";
-            this.comboBoxTab.Size = new System.Drawing.Size(121, 20);
+            this.comboBoxTab.Size = new System.Drawing.Size(121, 23);
             this.comboBoxTab.TabIndex = 3;
             // 
             // comboBoxReturn
@@ -99,7 +99,7 @@
             this.comboBoxReturn.FormattingEnabled = true;
             this.comboBoxReturn.Location = new System.Drawing.Point(95, 18);
             this.comboBoxReturn.Name = "comboBoxReturn";
-            this.comboBoxReturn.Size = new System.Drawing.Size(121, 20);
+            this.comboBoxReturn.Size = new System.Drawing.Size(121, 23);
             this.comboBoxReturn.TabIndex = 1;
             // 
             // label2
@@ -107,7 +107,7 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(7, 47);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(63, 12);
+            this.label2.Size = new System.Drawing.Size(71, 15);
             this.label2.TabIndex = 2;
             this.label2.Text = "タブ文字(&T):";
             // 
@@ -116,50 +116,50 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(7, 21);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(72, 12);
+            this.label1.Size = new System.Drawing.Size(79, 15);
             this.label1.TabIndex = 0;
             this.label1.Text = "改行コード(&L):";
             // 
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(307, 60);
+            this.label13.Location = new System.Drawing.Point(307, 64);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(107, 12);
+            this.label13.Size = new System.Drawing.Size(109, 15);
             this.label13.TabIndex = 11;
             this.label13.Text = "決められた形式です。";
             // 
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(307, 48);
+            this.label12.Location = new System.Drawing.Point(307, 51);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(208, 12);
+            this.label12.Size = new System.Drawing.Size(211, 15);
             this.label12.TabIndex = 10;
             this.label12.Text = "[クリップボードにコピー]の形式は、あらかじめ";
             // 
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(307, 36);
+            this.label10.Location = new System.Drawing.Point(307, 38);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(99, 12);
+            this.label10.Size = new System.Drawing.Size(101, 15);
             this.label10.TabIndex = 9;
             this.label10.Text = "初期値を決めます。";
             // 
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(307, 24);
+            this.label9.Location = new System.Drawing.Point(307, 25);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(206, 12);
+            this.label9.Size = new System.Drawing.Size(209, 15);
             this.label9.TabIndex = 8;
             this.label9.Text = "[形式を指定してクリップボードにコピ－]での";
             // 
             // TextViewerTextClipboardPage
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.Controls.Add(this.label13);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.label10);
@@ -168,6 +168,7 @@
             this.Controls.Add(this.label11);
             this.Controls.Add(this.radioButtonFix);
             this.Controls.Add(this.radioButtonPrev);
+            this.Font = new System.Drawing.Font("Yu Gothic UI", 9F);
             this.Name = "TextViewerTextClipboardPage";
             this.Size = new System.Drawing.Size(520, 370);
             this.groupBox1.ResumeLayout(false);

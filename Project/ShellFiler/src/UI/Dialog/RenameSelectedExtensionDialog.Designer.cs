@@ -34,21 +34,21 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(12, 16);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(58, 12);
+            this.label1.Size = new System.Drawing.Size(65, 15);
             this.label1.TabIndex = 0;
             this.label1.Text = "拡張子(&E):";
             // 
             // textBoxExt
             // 
             this.textBoxExt.Font = new System.Drawing.Font("MS UI Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.textBoxExt.Location = new System.Drawing.Point(77, 13);
+            this.textBoxExt.Location = new System.Drawing.Point(79, 13);
             this.textBoxExt.Name = "textBoxExt";
             this.textBoxExt.Size = new System.Drawing.Size(154, 20);
             this.textBoxExt.TabIndex = 1;
             // 
             // buttonOk
             // 
-            this.buttonOk.Location = new System.Drawing.Point(123, 38);
+            this.buttonOk.Location = new System.Drawing.Point(123, 46);
             this.buttonOk.Name = "buttonOk";
             this.buttonOk.Size = new System.Drawing.Size(75, 23);
             this.buttonOk.TabIndex = 2;
@@ -59,7 +59,7 @@
             // buttonCancel
             // 
             this.buttonCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.buttonCancel.Location = new System.Drawing.Point(204, 38);
+            this.buttonCancel.Location = new System.Drawing.Point(204, 46);
             this.buttonCancel.Name = "buttonCancel";
             this.buttonCancel.Size = new System.Drawing.Size(75, 23);
             this.buttonCancel.TabIndex = 2;
@@ -69,14 +69,15 @@
             // RenameSelectedExtensionDialog
             // 
             this.AcceptButton = this.buttonOk;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.CancelButton = this.buttonCancel;
-            this.ClientSize = new System.Drawing.Size(291, 72);
+            this.ClientSize = new System.Drawing.Size(291, 81);
             this.Controls.Add(this.buttonCancel);
             this.Controls.Add(this.buttonOk);
             this.Controls.Add(this.textBoxExt);
             this.Controls.Add(this.label1);
+            this.Font = new System.Drawing.Font("Yu Gothic UI", 9F);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
