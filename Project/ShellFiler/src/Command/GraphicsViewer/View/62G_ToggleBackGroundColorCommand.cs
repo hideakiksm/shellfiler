@@ -37,9 +37,9 @@ namespace ShellFiler.Command.GraphicsViewer.View {
         // 戻り値：実行結果
         //=========================================================================================
         public override object Execute() {
-            if (GraphicsViewerPanel.BackgroundColor.R == 255 &&
-                GraphicsViewerPanel.BackgroundColor.G == 255 &&
-                GraphicsViewerPanel.BackgroundColor.B == 255) {
+            if (Configuration.Current.GraphicsViewerBackColor.R > 128 &&
+                Configuration.Current.GraphicsViewerBackColor.G > 128 &&
+                Configuration.Current.GraphicsViewerBackColor.B > 128) {
                 SetColor(true);
             } else {
                 SetColor(false);
