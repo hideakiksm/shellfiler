@@ -103,10 +103,10 @@ namespace ShellFiler.UI.Dialog
             this.tabPageDrive.Controls.Add(this.buttonConnect);
             this.tabPageDrive.Controls.Add(this.label1);
             this.tabPageDrive.Controls.Add(this.listViewDrive);
-            this.tabPageDrive.Location = new System.Drawing.Point(4, 22);
+            this.tabPageDrive.Location = new System.Drawing.Point(4, 24);
             this.tabPageDrive.Name = "tabPageDrive";
             this.tabPageDrive.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageDrive.Size = new System.Drawing.Size(466, 303);
+            this.tabPageDrive.Size = new System.Drawing.Size(466, 301);
             this.tabPageDrive.TabIndex = 0;
             this.tabPageDrive.Text = "ローカルドライブ";
             this.tabPageDrive.UseVisualStyleBackColor = true;
@@ -114,15 +114,15 @@ namespace ShellFiler.UI.Dialog
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(265, 289);
+            this.label5.Location = new System.Drawing.Point(265, 285);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(190, 12);
+            this.label5.Size = new System.Drawing.Size(193, 15);
             this.label5.TabIndex = 3;
             this.label5.Text = "A～Zで直接指定、←→でタブ切り替え";
             // 
             // buttonDisconnect
             // 
-            this.buttonDisconnect.Location = new System.Drawing.Point(9, 240);
+            this.buttonDisconnect.Location = new System.Drawing.Point(9, 242);
             this.buttonDisconnect.Name = "buttonDisconnect";
             this.buttonDisconnect.Size = new System.Drawing.Size(125, 23);
             this.buttonDisconnect.TabIndex = 2;
@@ -132,7 +132,7 @@ namespace ShellFiler.UI.Dialog
             // 
             // buttonConnect
             // 
-            this.buttonConnect.Location = new System.Drawing.Point(9, 211);
+            this.buttonConnect.Location = new System.Drawing.Point(9, 215);
             this.buttonConnect.Name = "buttonConnect";
             this.buttonConnect.Size = new System.Drawing.Size(125, 23);
             this.buttonConnect.TabIndex = 2;
@@ -145,24 +145,24 @@ namespace ShellFiler.UI.Dialog
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(7, 7);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(94, 12);
+            this.label1.Size = new System.Drawing.Size(101, 15);
             this.label1.TabIndex = 0;
             this.label1.Text = "変更先ドライブ(&D):";
             // 
             // listViewDrive
             // 
             this.listViewDrive.HideSelection = false;
-            this.listViewDrive.Location = new System.Drawing.Point(9, 22);
+            this.listViewDrive.Location = new System.Drawing.Point(9, 24);
             this.listViewDrive.MultiSelect = false;
             this.listViewDrive.Name = "listViewDrive";
             this.listViewDrive.Size = new System.Drawing.Size(446, 183);
             this.listViewDrive.TabIndex = 1;
             this.listViewDrive.UseCompatibleStateImageBehavior = false;
             this.listViewDrive.View = System.Windows.Forms.View.Details;
-            this.listViewDrive.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.listViewDrive_MouseStateChange);
             this.listViewDrive.DoubleClick += new System.EventHandler(this.listViewDrive_DoubleClick);
-            this.listViewDrive.MouseUp += new System.Windows.Forms.MouseEventHandler(this.listViewDrive_MouseStateChange);
+            this.listViewDrive.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.listViewDrive_MouseStateChange);
             this.listViewDrive.MouseDown += new System.Windows.Forms.MouseEventHandler(this.listViewDrive_MouseStateChange);
+            this.listViewDrive.MouseUp += new System.Windows.Forms.MouseEventHandler(this.listViewDrive_MouseStateChange);
             // 
             // tabPageRegDir
             // 
@@ -175,10 +175,10 @@ namespace ShellFiler.UI.Dialog
             this.tabPageRegDir.Controls.Add(this.label3);
             this.tabPageRegDir.Controls.Add(this.label2);
             this.tabPageRegDir.Controls.Add(this.comboBoxRegDirGroup);
-            this.tabPageRegDir.Location = new System.Drawing.Point(4, 22);
+            this.tabPageRegDir.Location = new System.Drawing.Point(4, 24);
             this.tabPageRegDir.Name = "tabPageRegDir";
             this.tabPageRegDir.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageRegDir.Size = new System.Drawing.Size(466, 303);
+            this.tabPageRegDir.Size = new System.Drawing.Size(466, 301);
             this.tabPageRegDir.TabIndex = 1;
             this.tabPageRegDir.Text = "ブックマーク";
             this.tabPageRegDir.UseVisualStyleBackColor = true;
@@ -188,7 +188,7 @@ namespace ShellFiler.UI.Dialog
             this.labelFreewareBook.AutoSize = true;
             this.labelFreewareBook.Location = new System.Drawing.Point(7, 289);
             this.labelFreewareBook.Name = "labelFreewareBook";
-            this.labelFreewareBook.Size = new System.Drawing.Size(0, 12);
+            this.labelFreewareBook.Size = new System.Drawing.Size(0, 15);
             this.labelFreewareBook.TabIndex = 10;
             // 
             // buttonSetting
@@ -204,9 +204,9 @@ namespace ShellFiler.UI.Dialog
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(265, 289);
+            this.label6.Location = new System.Drawing.Point(265, 285);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(190, 12);
+            this.label6.Size = new System.Drawing.Size(193, 15);
             this.label6.TabIndex = 8;
             this.label6.Text = "A～Zで直接指定、←→でタブ切り替え";
             // 
@@ -214,13 +214,14 @@ namespace ShellFiler.UI.Dialog
             // 
             this.textBoxRegDir.Location = new System.Drawing.Point(5, 251);
             this.textBoxRegDir.Name = "textBoxRegDir";
-            this.textBoxRegDir.Size = new System.Drawing.Size(450, 19);
+            this.textBoxRegDir.Size = new System.Drawing.Size(450, 23);
             this.textBoxRegDir.TabIndex = 7;
             // 
             // listViewRegDir
             // 
             this.listViewRegDir.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.None;
-            this.listViewRegDir.Location = new System.Drawing.Point(5, 71);
+            this.listViewRegDir.HideSelection = false;
+            this.listViewRegDir.Location = new System.Drawing.Point(5, 73);
             this.listViewRegDir.MultiSelect = false;
             this.listViewRegDir.Name = "listViewRegDir";
             this.listViewRegDir.Size = new System.Drawing.Size(450, 152);
@@ -229,15 +230,15 @@ namespace ShellFiler.UI.Dialog
             this.listViewRegDir.View = System.Windows.Forms.View.Details;
             this.listViewRegDir.SelectedIndexChanged += new System.EventHandler(this.listViewRegDir_SelectedIndexChanged);
             this.listViewRegDir.DoubleClick += new System.EventHandler(this.listViewRegDir_DoubleClick);
-            this.listViewRegDir.MouseUp += new System.Windows.Forms.MouseEventHandler(this.listViewRegDir_MouseStateChange);
             this.listViewRegDir.MouseDown += new System.Windows.Forms.MouseEventHandler(this.listViewRegDir_MouseStateChange);
+            this.listViewRegDir.MouseUp += new System.Windows.Forms.MouseEventHandler(this.listViewRegDir_MouseStateChange);
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(3, 236);
+            this.label4.Location = new System.Drawing.Point(3, 234);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(127, 12);
+            this.label4.Size = new System.Drawing.Size(134, 15);
             this.label4.TabIndex = 6;
             this.label4.Text = "ジャンプ先のフォルダ名(&P):";
             // 
@@ -246,7 +247,7 @@ namespace ShellFiler.UI.Dialog
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(3, 56);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(70, 12);
+            this.label3.Size = new System.Drawing.Size(78, 15);
             this.label3.TabIndex = 4;
             this.label3.Text = "ジャンプ先(&S):";
             // 
@@ -255,7 +256,7 @@ namespace ShellFiler.UI.Dialog
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(3, 7);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(61, 12);
+            this.label2.Size = new System.Drawing.Size(69, 15);
             this.label2.TabIndex = 0;
             this.label2.Text = "グループ(&G):";
             // 
@@ -263,9 +264,9 @@ namespace ShellFiler.UI.Dialog
             // 
             this.comboBoxRegDirGroup.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxRegDirGroup.FormattingEnabled = true;
-            this.comboBoxRegDirGroup.Location = new System.Drawing.Point(5, 23);
+            this.comboBoxRegDirGroup.Location = new System.Drawing.Point(5, 25);
             this.comboBoxRegDirGroup.Name = "comboBoxRegDirGroup";
-            this.comboBoxRegDirGroup.Size = new System.Drawing.Size(232, 20);
+            this.comboBoxRegDirGroup.Size = new System.Drawing.Size(232, 23);
             this.comboBoxRegDirGroup.TabIndex = 1;
             this.comboBoxRegDirGroup.SelectedValueChanged += new System.EventHandler(this.comboBoxRegDirGroup_SelectedValueChanged);
             // 
@@ -285,9 +286,9 @@ namespace ShellFiler.UI.Dialog
             this.tabPageSSH.Controls.Add(this.buttonSSHDelete);
             this.tabPageSSH.Controls.Add(this.buttonSSHNew);
             this.tabPageSSH.Controls.Add(this.treeViewSSH);
-            this.tabPageSSH.Location = new System.Drawing.Point(4, 22);
+            this.tabPageSSH.Location = new System.Drawing.Point(4, 24);
             this.tabPageSSH.Name = "tabPageSSH";
-            this.tabPageSSH.Size = new System.Drawing.Size(466, 303);
+            this.tabPageSSH.Size = new System.Drawing.Size(466, 301);
             this.tabPageSSH.TabIndex = 2;
             this.tabPageSSH.Text = "SSH";
             this.tabPageSSH.UseVisualStyleBackColor = true;
@@ -297,7 +298,7 @@ namespace ShellFiler.UI.Dialog
             this.linkLabelHelp.AutoSize = true;
             this.linkLabelHelp.Location = new System.Drawing.Point(47, 248);
             this.linkLabelHelp.Name = "linkLabelHelp";
-            this.linkLabelHelp.Size = new System.Drawing.Size(49, 12);
+            this.linkLabelHelp.Size = new System.Drawing.Size(51, 15);
             this.linkLabelHelp.TabIndex = 13;
             this.linkLabelHelp.TabStop = true;
             this.linkLabelHelp.Text = "プロトコル";
@@ -307,7 +308,7 @@ namespace ShellFiler.UI.Dialog
             this.checkBoxSSHNewChannel.AutoSize = true;
             this.checkBoxSSHNewChannel.Location = new System.Drawing.Point(223, 264);
             this.checkBoxSSHNewChannel.Name = "checkBoxSSHNewChannel";
-            this.checkBoxSSHNewChannel.Size = new System.Drawing.Size(163, 16);
+            this.checkBoxSSHNewChannel.Size = new System.Drawing.Size(167, 19);
             this.checkBoxSSHNewChannel.TabIndex = 10;
             this.checkBoxSSHNewChannel.Text = "常に新しいチャネルで接続(&C)";
             this.checkBoxSSHNewChannel.UseVisualStyleBackColor = true;
@@ -317,7 +318,7 @@ namespace ShellFiler.UI.Dialog
             this.radioButtonSSHShell.AutoSize = true;
             this.radioButtonSSHShell.Location = new System.Drawing.Point(122, 264);
             this.radioButtonSSHShell.Name = "radioButtonSSHShell";
-            this.radioButtonSSHShell.Size = new System.Drawing.Size(88, 16);
+            this.radioButtonSSHShell.Size = new System.Drawing.Size(96, 19);
             this.radioButtonSSHShell.TabIndex = 9;
             this.radioButtonSSHShell.TabStop = true;
             this.radioButtonSSHShell.Text = "SSHシェル(&H)";
@@ -328,7 +329,7 @@ namespace ShellFiler.UI.Dialog
             this.radioButtonSSHSFTP.AutoSize = true;
             this.radioButtonSSHSFTP.Location = new System.Drawing.Point(122, 246);
             this.radioButtonSSHSFTP.Name = "radioButtonSSHSFTP";
-            this.radioButtonSSHSFTP.Size = new System.Drawing.Size(66, 16);
+            this.radioButtonSSHSFTP.Size = new System.Drawing.Size(72, 19);
             this.radioButtonSSHSFTP.TabIndex = 8;
             this.radioButtonSSHSFTP.TabStop = true;
             this.radioButtonSSHSFTP.Text = "SFTP(&F)";
@@ -339,7 +340,7 @@ namespace ShellFiler.UI.Dialog
             this.labelProtocol.AutoSize = true;
             this.labelProtocol.Location = new System.Drawing.Point(3, 248);
             this.labelProtocol.Name = "labelProtocol";
-            this.labelProtocol.Size = new System.Drawing.Size(48, 12);
+            this.labelProtocol.Size = new System.Drawing.Size(50, 15);
             this.labelProtocol.TabIndex = 7;
             this.labelProtocol.Text = "使用する";
             // 
@@ -348,7 +349,7 @@ namespace ShellFiler.UI.Dialog
             this.labelFreewareSSH.AutoSize = true;
             this.labelFreewareSSH.Location = new System.Drawing.Point(7, 289);
             this.labelFreewareSSH.Name = "labelFreewareSSH";
-            this.labelFreewareSSH.Size = new System.Drawing.Size(0, 12);
+            this.labelFreewareSSH.Size = new System.Drawing.Size(0, 15);
             this.labelFreewareSSH.TabIndex = 11;
             // 
             // buttonSSHTemp
@@ -365,24 +366,24 @@ namespace ShellFiler.UI.Dialog
             // 
             this.textBoxSSHFolder.Location = new System.Drawing.Point(5, 220);
             this.textBoxSSHFolder.Name = "textBoxSSHFolder";
-            this.textBoxSSHFolder.Size = new System.Drawing.Size(360, 19);
+            this.textBoxSSHFolder.Size = new System.Drawing.Size(360, 23);
             this.textBoxSSHFolder.TabIndex = 6;
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(3, 205);
+            this.label7.Location = new System.Drawing.Point(3, 203);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(58, 12);
+            this.label7.Size = new System.Drawing.Size(65, 15);
             this.label7.TabIndex = 5;
             this.label7.Text = "接続先(&P):";
             // 
             // label18
             // 
             this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(358, 289);
+            this.label18.Location = new System.Drawing.Point(359, 285);
             this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(97, 12);
+            this.label18.Size = new System.Drawing.Size(99, 15);
             this.label18.TabIndex = 12;
             this.label18.Text = "←→でタブ切り替え";
             // 
@@ -431,9 +432,9 @@ namespace ShellFiler.UI.Dialog
             this.tabPageSSHDisable.Controls.Add(this.label21);
             this.tabPageSSHDisable.Controls.Add(this.label8);
             this.tabPageSSHDisable.Controls.Add(this.label20);
-            this.tabPageSSHDisable.Location = new System.Drawing.Point(4, 22);
+            this.tabPageSSHDisable.Location = new System.Drawing.Point(4, 24);
             this.tabPageSSHDisable.Name = "tabPageSSHDisable";
-            this.tabPageSSHDisable.Size = new System.Drawing.Size(466, 303);
+            this.tabPageSSHDisable.Size = new System.Drawing.Size(466, 301);
             this.tabPageSSHDisable.TabIndex = 2;
             this.tabPageSSHDisable.Text = "SSH";
             this.tabPageSSHDisable.UseVisualStyleBackColor = true;
@@ -441,9 +442,9 @@ namespace ShellFiler.UI.Dialog
             // label23
             // 
             this.label23.AutoSize = true;
-            this.label23.Location = new System.Drawing.Point(358, 289);
+            this.label23.Location = new System.Drawing.Point(359, 285);
             this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(97, 12);
+            this.label23.Size = new System.Drawing.Size(99, 15);
             this.label23.TabIndex = 4;
             this.label23.Text = "←→でタブ切り替え";
             // 
@@ -452,19 +453,19 @@ namespace ShellFiler.UI.Dialog
             this.linkLabelSSHDL.AutoSize = true;
             this.linkLabelSSHDL.Location = new System.Drawing.Point(53, 143);
             this.linkLabelSSHDL.Name = "linkLabelSSHDL";
-            this.linkLabelSSHDL.Size = new System.Drawing.Size(100, 12);
+            this.linkLabelSSHDL.Size = new System.Drawing.Size(101, 15);
             this.linkLabelSSHDL.TabIndex = 4;
             this.linkLabelSSHDL.TabStop = true;
             this.linkLabelSSHDL.Text = "ダウンロードページへ";
-            this.linkLabelSSHDL.PreviewKeyDown += new System.Windows.Forms.PreviewKeyDownEventHandler(this.linkLabelSSHDL_PreviewKeyDown);
             this.linkLabelSSHDL.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabelSSHDL_LinkClicked);
+            this.linkLabelSSHDL.PreviewKeyDown += new System.Windows.Forms.PreviewKeyDownEventHandler(this.linkLabelSSHDL_PreviewKeyDown);
             // 
             // label22
             // 
             this.label22.AutoSize = true;
             this.label22.Location = new System.Drawing.Point(32, 117);
             this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(343, 12);
+            this.label22.Size = new System.Drawing.Size(355, 15);
             this.label22.TabIndex = 3;
             this.label22.Text = "すべてのDLLをShellFilerインストール先のbinフォルダにコピーしてください。";
             // 
@@ -473,7 +474,7 @@ namespace ShellFiler.UI.Dialog
             this.label21.AutoSize = true;
             this.label21.Location = new System.Drawing.Point(32, 95);
             this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(247, 12);
+            this.label21.Size = new System.Drawing.Size(259, 15);
             this.label21.TabIndex = 2;
             this.label21.Text = "SSHを使用するには、SharpSSHをダウンロードして、";
             // 
@@ -482,7 +483,7 @@ namespace ShellFiler.UI.Dialog
             this.label8.AutoSize = true;
             this.label8.Location = new System.Drawing.Point(32, 62);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(356, 12);
+            this.label8.Size = new System.Drawing.Size(365, 15);
             this.label8.TabIndex = 1;
             this.label8.Text = "SSHを使うと、Linuxサーバなどに接続してファイルを操作することができます。";
             // 
@@ -491,7 +492,7 @@ namespace ShellFiler.UI.Dialog
             this.label20.AutoSize = true;
             this.label20.Location = new System.Drawing.Point(32, 38);
             this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(223, 12);
+            this.label20.Size = new System.Drawing.Size(228, 15);
             this.label20.TabIndex = 0;
             this.label20.Text = "この環境ではSSHを使用することができません。";
             // 
@@ -501,10 +502,10 @@ namespace ShellFiler.UI.Dialog
             this.tabPageHistory.Controls.Add(this.buttonDelete);
             this.tabPageHistory.Controls.Add(this.listBoxHistory);
             this.tabPageHistory.Controls.Add(this.label9);
-            this.tabPageHistory.Location = new System.Drawing.Point(4, 22);
+            this.tabPageHistory.Location = new System.Drawing.Point(4, 24);
             this.tabPageHistory.Name = "tabPageHistory";
             this.tabPageHistory.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageHistory.Size = new System.Drawing.Size(466, 303);
+            this.tabPageHistory.Size = new System.Drawing.Size(466, 301);
             this.tabPageHistory.TabIndex = 3;
             this.tabPageHistory.Text = "フォルダ履歴";
             this.tabPageHistory.UseVisualStyleBackColor = true;
@@ -512,9 +513,9 @@ namespace ShellFiler.UI.Dialog
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(358, 289);
+            this.label10.Location = new System.Drawing.Point(359, 285);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(97, 12);
+            this.label10.Size = new System.Drawing.Size(99, 15);
             this.label10.TabIndex = 8;
             this.label10.Text = "←→でタブ切り替え";
             // 
@@ -531,10 +532,10 @@ namespace ShellFiler.UI.Dialog
             // listBoxHistory
             // 
             this.listBoxHistory.FormattingEnabled = true;
-            this.listBoxHistory.ItemHeight = 12;
-            this.listBoxHistory.Location = new System.Drawing.Point(6, 18);
+            this.listBoxHistory.ItemHeight = 15;
+            this.listBoxHistory.Location = new System.Drawing.Point(6, 20);
             this.listBoxHistory.Name = "listBoxHistory";
-            this.listBoxHistory.Size = new System.Drawing.Size(454, 232);
+            this.listBoxHistory.Size = new System.Drawing.Size(454, 229);
             this.listBoxHistory.TabIndex = 4;
             // 
             // label9
@@ -542,7 +543,7 @@ namespace ShellFiler.UI.Dialog
             this.label9.AutoSize = true;
             this.label9.Location = new System.Drawing.Point(6, 3);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(46, 12);
+            this.label9.Size = new System.Drawing.Size(53, 15);
             this.label9.TabIndex = 3;
             this.label9.Text = "履歴(&F):";
             // 
@@ -569,14 +570,15 @@ namespace ShellFiler.UI.Dialog
             // LogInDirectoryDialog
             // 
             this.AcceptButton = this.buttonOk;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.CancelButton = this.buttonCancel;
             this.ClientSize = new System.Drawing.Size(497, 383);
             this.Controls.Add(this.buttonCancel);
             this.Controls.Add(this.buttonOk);
             this.Controls.Add(this.tabPages);
+            this.Font = new System.Drawing.Font("Yu Gothic UI", 9F);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.KeyPreview = true;
             this.MaximizeBox = false;
@@ -587,9 +589,9 @@ namespace ShellFiler.UI.Dialog
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "フォルダを変更";
-            this.Load += new System.EventHandler(this.LogInDirectoryDialog_Load);
-            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.LogInDirectoryDialog_FormClosed);
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.LogInDirectoryDialog_FormClosing);
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.LogInDirectoryDialog_FormClosed);
+            this.Load += new System.EventHandler(this.LogInDirectoryDialog_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.LogInDirectoryDialog_KeyDown);
             this.tabPages.ResumeLayout(false);
             this.tabPageDrive.ResumeLayout(false);

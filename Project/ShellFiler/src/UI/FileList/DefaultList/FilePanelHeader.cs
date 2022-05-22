@@ -70,7 +70,7 @@ namespace ShellFiler.UI.FileList.DefaultList {
             m_headerControl.SectionClick += new HeaderSectionEventHandler(HeaderControl_SectionClick);
             m_headerControl.DividerDblClick += new HeaderSectionEventHandler(HeaderControl_DividerDblClick);
             m_headerControl.Clickable = true;
-            m_cyHeader = m_headerControl.Size.Height;
+            m_cyHeader = MainWindowForm.X(m_headerControl.Size.Height);
             this.Controls.Add(m_headerControl);
             m_parent.AutoScroll = false;
             this.AutoSize = false;
@@ -457,7 +457,7 @@ namespace ShellFiler.UI.FileList.DefaultList {
             if (mousePosition.Equals(m_trackingMousePos)) {
                 return;
             }
-            if (evt.Width > MAX_SECTION_WIDTH) {
+            if (evt.Width > MainWindowForm.X(MAX_SECTION_WIDTH)) {
                 evt.Accepted = false;
                 return;
             }

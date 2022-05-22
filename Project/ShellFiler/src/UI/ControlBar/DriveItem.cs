@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Drawing;
+using System.Drawing.Imaging;
+using System.Drawing.Drawing2D;
 using System.Windows.Forms;
 using ShellFiler.Document;
 using ShellFiler.Api;
@@ -89,13 +91,12 @@ namespace ShellFiler.UI.ControlBar {
         // 戻り値：作成したアイコンのビットマップ（Disposeが必要）
         //=========================================================================================
         public static Bitmap CreateDriveOverrayIcon(IconImageListID iconBase, IconImageListID iconOverray) {
-            Bitmap icon = new Bitmap(UIIconManager.CX_DEFAULT_ICON, UIIconManager.CY_DEFAULT_ICON);
-            Graphics g = Graphics.FromImage(icon);
-            try {
+            int cx = UIIconManager.IconImageList.Images[0].Width;
+            int cy = UIIconManager.IconImageList.Images[0].Height;
+            Bitmap icon = new Bitmap(cx, cy);
+            using (Graphics g = Graphics.FromImage(icon)) {
                 UIIconManager.IconImageList.Draw(g, 0, 0, (int)iconBase);
                 UIIconManager.IconImageList.Draw(g, 0, 0, (int)iconOverray);
-            } finally {
-                g.Dispose();
             }
             return icon;
         }

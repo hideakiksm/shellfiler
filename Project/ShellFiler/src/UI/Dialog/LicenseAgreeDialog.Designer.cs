@@ -57,7 +57,7 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(12, 340);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(136, 12);
+            this.label1.Size = new System.Drawing.Size(138, 15);
             this.label1.TabIndex = 2;
             this.label1.Text = "使用許諾に同意しますか？";
             // 
@@ -66,7 +66,7 @@
             this.radioButtonAgree.AutoSize = true;
             this.radioButtonAgree.Location = new System.Drawing.Point(154, 338);
             this.radioButtonAgree.Name = "radioButtonAgree";
-            this.radioButtonAgree.Size = new System.Drawing.Size(82, 16);
+            this.radioButtonAgree.Size = new System.Drawing.Size(86, 19);
             this.radioButtonAgree.TabIndex = 3;
             this.radioButtonAgree.Text = "同意する(&A)";
             this.radioButtonAgree.UseVisualStyleBackColor = true;
@@ -77,7 +77,7 @@
             this.radioButtonDisagree.Checked = true;
             this.radioButtonDisagree.Location = new System.Drawing.Point(248, 338);
             this.radioButtonDisagree.Name = "radioButtonDisagree";
-            this.radioButtonDisagree.Size = new System.Drawing.Size(92, 16);
+            this.radioButtonDisagree.Size = new System.Drawing.Size(97, 19);
             this.radioButtonDisagree.TabIndex = 4;
             this.radioButtonDisagree.TabStop = true;
             this.radioButtonDisagree.Text = "同意しない(&D)";
@@ -95,17 +95,17 @@
             // labelTitle
             // 
             this.labelTitle.AutoSize = true;
-            this.labelTitle.Location = new System.Drawing.Point(10, 13);
+            this.labelTitle.Location = new System.Drawing.Point(10, 11);
             this.labelTitle.Name = "labelTitle";
-            this.labelTitle.Size = new System.Drawing.Size(53, 12);
+            this.labelTitle.Size = new System.Drawing.Size(55, 15);
             this.labelTitle.TabIndex = 0;
             this.labelTitle.Text = "使用許諾";
             // 
             // LicenseAgreeDialog
             // 
             this.AcceptButton = this.buttonOk;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.ClientSize = new System.Drawing.Size(579, 392);
             this.Controls.Add(this.labelTitle);
             this.Controls.Add(this.panel1);
@@ -113,6 +113,7 @@
             this.Controls.Add(this.radioButtonAgree);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.buttonOk);
+            this.Font = new System.Drawing.Font("Yu Gothic UI", 9F);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.MaximizeBox = false;
             this.MinimizeBox = false;

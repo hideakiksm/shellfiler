@@ -83,7 +83,7 @@
             this.labelMessage1.AutoSize = true;
             this.labelMessage1.Location = new System.Drawing.Point(63, 13);
             this.labelMessage1.Name = "labelMessage1";
-            this.labelMessage1.Size = new System.Drawing.Size(125, 12);
+            this.labelMessage1.Size = new System.Drawing.Size(136, 15);
             this.labelMessage1.TabIndex = 0;
             this.labelMessage1.Text = "次の削除対象は{0}です。";
             // 
@@ -92,7 +92,7 @@
             this.labelMessage2.AutoSize = true;
             this.labelMessage2.Location = new System.Drawing.Point(63, 25);
             this.labelMessage2.Name = "labelMessage2";
-            this.labelMessage2.Size = new System.Drawing.Size(79, 12);
+            this.labelMessage2.Size = new System.Drawing.Size(81, 15);
             this.labelMessage2.TabIndex = 1;
             this.labelMessage2.Text = "削除しますか？";
             // 
@@ -113,7 +113,7 @@
             this.textBoxFileName.Location = new System.Drawing.Point(77, 43);
             this.textBoxFileName.Name = "textBoxFileName";
             this.textBoxFileName.ReadOnly = true;
-            this.textBoxFileName.Size = new System.Drawing.Size(287, 12);
+            this.textBoxFileName.Size = new System.Drawing.Size(287, 16);
             this.textBoxFileName.TabIndex = 2;
             // 
             // labelMessage3
@@ -121,14 +121,14 @@
             this.labelMessage3.AutoSize = true;
             this.labelMessage3.Location = new System.Drawing.Point(64, 67);
             this.labelMessage3.Name = "labelMessage3";
-            this.labelMessage3.Size = new System.Drawing.Size(141, 12);
+            this.labelMessage3.Size = new System.Drawing.Size(156, 15);
             this.labelMessage3.TabIndex = 3;
             this.labelMessage3.Text = "SHIFT+Enterで「すべてはい」";
             // 
             // DeleteConfirmDialog
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.ClientSize = new System.Drawing.Size(378, 127);
             this.Controls.Add(this.textBoxFileName);
             this.Controls.Add(this.labelMessage3);
@@ -139,6 +139,7 @@
             this.Controls.Add(this.buttonNo);
             this.Controls.Add(this.buttonYes);
             this.Controls.Add(this.buttonAll);
+            this.Font = new System.Drawing.Font("Yu Gothic UI", 9F);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.KeyPreview = true;
             this.Name = "DeleteConfirmDialog";

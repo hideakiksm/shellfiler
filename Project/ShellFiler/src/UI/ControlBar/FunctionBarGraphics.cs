@@ -17,7 +17,7 @@ namespace ShellFiler.UI.ControlBar {
     //=========================================================================================
     // クラス：ファンクションバーの描画用グラフィックス
     //=========================================================================================
-    public class FunctionBarGraphics {
+    public class FunctionBarGraphics : HighDpiGraphics {
         // グラフィック（null:未初期化）
         private Graphics m_graphics;
 
@@ -38,7 +38,7 @@ namespace ShellFiler.UI.ControlBar {
         // 引　数：[in]graphics  グラフィックス
         // 戻り値：なし
         //=========================================================================================
-        public FunctionBarGraphics(Graphics graphics) {
+        public FunctionBarGraphics(Graphics graphics) : base(graphics) {
             m_control = null;
             m_graphics = graphics;
         }
@@ -48,7 +48,7 @@ namespace ShellFiler.UI.ControlBar {
         // 引　数：[in]control    描画対象のコントロール
         // 戻り値：なし
         //=========================================================================================
-        public FunctionBarGraphics(Control control) {
+        public FunctionBarGraphics(Control control) : base(control) {
             m_control = control;
             m_graphics = null;
         }
@@ -58,7 +58,7 @@ namespace ShellFiler.UI.ControlBar {
         // 引　数：なし
         // 戻り値：なし
         //=========================================================================================
-        public void Dispose() {
+        public override void Dispose() {
             if (m_stringFormat != null) {
                 m_stringFormat.Dispose();
                 m_stringFormat = null;
@@ -94,18 +94,6 @@ namespace ShellFiler.UI.ControlBar {
         //=========================================================================================
         public void AddIconCache(FileIconID id, Bitmap bmp) {
             m_cacheMapIconIdToBmp.Add(id, bmp);
-        }
-
-        //=========================================================================================
-        // プロパティ：グラフィックス
-        //=========================================================================================
-        public Graphics Graphics {
-            get {
-                if (m_graphics == null) {
-                    m_graphics = m_control.CreateGraphics();
-                }
-                return m_graphics;
-            }
         }
 
         //=========================================================================================

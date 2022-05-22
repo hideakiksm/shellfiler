@@ -43,40 +43,40 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(36, 64);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(99, 12);
+            this.label1.Size = new System.Drawing.Size(107, 15);
             this.label1.TabIndex = 3;
             this.label1.Text = "変更先ユーザー(&U):";
             // 
             // textBoxUser
             // 
-            this.textBoxUser.Location = new System.Drawing.Point(136, 61);
+            this.textBoxUser.Location = new System.Drawing.Point(146, 61);
             this.textBoxUser.Name = "textBoxUser";
-            this.textBoxUser.Size = new System.Drawing.Size(132, 19);
+            this.textBoxUser.Size = new System.Drawing.Size(132, 23);
             this.textBoxUser.TabIndex = 4;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(36, 89);
+            this.label2.Location = new System.Drawing.Point(36, 91);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(69, 12);
+            this.label2.Size = new System.Drawing.Size(75, 15);
             this.label2.TabIndex = 6;
             this.label2.Text = "パスワード(&P):";
             // 
             // textBoxPassword
             // 
-            this.textBoxPassword.Location = new System.Drawing.Point(136, 86);
+            this.textBoxPassword.Location = new System.Drawing.Point(146, 88);
             this.textBoxPassword.Name = "textBoxPassword";
             this.textBoxPassword.PasswordChar = '*';
-            this.textBoxPassword.Size = new System.Drawing.Size(132, 19);
+            this.textBoxPassword.Size = new System.Drawing.Size(132, 23);
             this.textBoxPassword.TabIndex = 7;
             // 
             // checkBoxLoginShell
             // 
             this.checkBoxLoginShell.AutoSize = true;
-            this.checkBoxLoginShell.Location = new System.Drawing.Point(38, 115);
+            this.checkBoxLoginShell.Location = new System.Drawing.Point(38, 117);
             this.checkBoxLoginShell.Name = "checkBoxLoginShell";
-            this.checkBoxLoginShell.Size = new System.Drawing.Size(193, 16);
+            this.checkBoxLoginShell.Size = new System.Drawing.Size(198, 19);
             this.checkBoxLoginShell.TabIndex = 9;
             this.checkBoxLoginShell.Text = "ログインシェルを使用して切り替え(&L)";
             this.checkBoxLoginShell.UseVisualStyleBackColor = true;
@@ -84,7 +84,7 @@
             // buttonCancel
             // 
             this.buttonCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.buttonCancel.Location = new System.Drawing.Point(325, 188);
+            this.buttonCancel.Location = new System.Drawing.Point(325, 195);
             this.buttonCancel.Name = "buttonCancel";
             this.buttonCancel.Size = new System.Drawing.Size(75, 23);
             this.buttonCancel.TabIndex = 12;
@@ -93,7 +93,7 @@
             // 
             // buttonOk
             // 
-            this.buttonOk.Location = new System.Drawing.Point(244, 188);
+            this.buttonOk.Location = new System.Drawing.Point(244, 195);
             this.buttonOk.Name = "buttonOk";
             this.buttonOk.Size = new System.Drawing.Size(75, 23);
             this.buttonOk.TabIndex = 11;
@@ -104,9 +104,9 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(274, 64);
+            this.label4.Location = new System.Drawing.Point(284, 64);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(78, 12);
+            this.label4.Size = new System.Drawing.Size(84, 15);
             this.label4.TabIndex = 5;
             this.label4.Text = "rootは入力なし";
             // 
@@ -115,7 +115,7 @@
             this.radioButtonSu.AutoSize = true;
             this.radioButtonSu.Location = new System.Drawing.Point(13, 40);
             this.radioButtonSu.Name = "radioButtonSu";
-            this.radioButtonSu.Size = new System.Drawing.Size(164, 16);
+            this.radioButtonSu.Size = new System.Drawing.Size(173, 19);
             this.radioButtonSu.TabIndex = 2;
             this.radioButtonSu.TabStop = true;
             this.radioButtonSu.Text = "su:別のユーザーに切り替え(&S)";
@@ -127,7 +127,7 @@
             this.radioButtonExit.AutoSize = true;
             this.radioButtonExit.Location = new System.Drawing.Point(13, 146);
             this.radioButtonExit.Name = "radioButtonExit";
-            this.radioButtonExit.Size = new System.Drawing.Size(171, 16);
+            this.radioButtonExit.Size = new System.Drawing.Size(182, 19);
             this.radioButtonExit.TabIndex = 10;
             this.radioButtonExit.TabStop = true;
             this.radioButtonExit.Text = "exit:元のユーザーに切り替え(&X)";
@@ -139,7 +139,7 @@
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(12, 12);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(81, 12);
+            this.label3.Size = new System.Drawing.Size(86, 15);
             this.label3.TabIndex = 0;
             this.label3.Text = "現在のユーザー:";
             // 
@@ -149,25 +149,25 @@
             this.textBoxCurrent.Location = new System.Drawing.Point(99, 12);
             this.textBoxCurrent.Name = "textBoxCurrent";
             this.textBoxCurrent.ReadOnly = true;
-            this.textBoxCurrent.Size = new System.Drawing.Size(301, 12);
+            this.textBoxCurrent.Size = new System.Drawing.Size(301, 16);
             this.textBoxCurrent.TabIndex = 1;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(36, 165);
+            this.label6.Location = new System.Drawing.Point(36, 167);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(274, 12);
+            this.label6.Size = new System.Drawing.Size(276, 15);
             this.label6.TabIndex = 8;
             this.label6.Text = "はじめのユーザーで実行すると、シェルの接続が切れます。";
             // 
             // SSHChangeUserDialog
             // 
             this.AcceptButton = this.buttonOk;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.CancelButton = this.buttonCancel;
-            this.ClientSize = new System.Drawing.Size(412, 223);
+            this.ClientSize = new System.Drawing.Size(412, 230);
             this.Controls.Add(this.radioButtonExit);
             this.Controls.Add(this.radioButtonSu);
             this.Controls.Add(this.buttonOk);
@@ -181,6 +181,7 @@
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label1);
+            this.Font = new System.Drawing.Font("Yu Gothic UI", 9F);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.MaximizeBox = false;
             this.MinimizeBox = false;

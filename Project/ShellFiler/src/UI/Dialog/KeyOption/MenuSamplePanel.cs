@@ -145,8 +145,8 @@ namespace ShellFiler.UI.Dialog.KeyOption {
                     g.Graphics.DrawString(itemName, this.Font, SystemBrushes.ControlText, new Point(CX_LEFT_AREA + CX_MENU_MARGIN, yPos + yFont));
 
                     if (menuList[i].UIResource != null) {
-                        int xPosIcon = (CX_LEFT_AREA - UIIconManager.CX_DEFAULT_ICON) / 2;
-                        int yPosIcon = (CY_MENU_ITEM - UIIconManager.CY_DEFAULT_ICON) / 2 + yPos;
+                        int xPosIcon = (CX_LEFT_AREA - UIIconManager.CxDefaultIcon) / 2;
+                        int yPosIcon = (CY_MENU_ITEM - UIIconManager.CyDefaultIcon) / 2 + yPos;
                         int imageId = (int)(menuList[i].UIResource.IconIdLeft);
                         if (imageId != 0) {
                             UIIconManager.IconImageList.Draw(g.Graphics, new Point(xPosIcon, yPosIcon), imageId);

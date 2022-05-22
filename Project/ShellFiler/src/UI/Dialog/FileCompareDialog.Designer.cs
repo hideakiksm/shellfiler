@@ -48,7 +48,7 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(13, 13);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(289, 12);
+            this.label1.Size = new System.Drawing.Size(291, 15);
             this.label1.TabIndex = 0;
             this.label1.Text = "左右の一覧中、同じ名前のファイルを自動的にマークします。";
             // 
@@ -70,7 +70,7 @@
             this.radioButtonTimeIgnore.AutoSize = true;
             this.radioButtonTimeIgnore.Location = new System.Drawing.Point(6, 85);
             this.radioButtonTimeIgnore.Name = "radioButtonTimeIgnore";
-            this.radioButtonTimeIgnore.Size = new System.Drawing.Size(91, 16);
+            this.radioButtonTimeIgnore.Size = new System.Drawing.Size(96, 19);
             this.radioButtonTimeIgnore.TabIndex = 3;
             this.radioButtonTimeIgnore.TabStop = true;
             this.radioButtonTimeIgnore.Text = "考慮しない(&T)";
@@ -81,7 +81,7 @@
             this.radioButtonTimeOld.AutoSize = true;
             this.radioButtonTimeOld.Location = new System.Drawing.Point(6, 63);
             this.radioButtonTimeOld.Name = "radioButtonTimeOld";
-            this.radioButtonTimeOld.Size = new System.Drawing.Size(116, 16);
+            this.radioButtonTimeOld.Size = new System.Drawing.Size(121, 19);
             this.radioButtonTimeOld.TabIndex = 2;
             this.radioButtonTimeOld.TabStop = true;
             this.radioButtonTimeOld.Text = "古いものをマーク(&O)";
@@ -92,7 +92,7 @@
             this.radioButtonTimeNew.AutoSize = true;
             this.radioButtonTimeNew.Location = new System.Drawing.Point(6, 41);
             this.radioButtonTimeNew.Name = "radioButtonTimeNew";
-            this.radioButtonTimeNew.Size = new System.Drawing.Size(126, 16);
+            this.radioButtonTimeNew.Size = new System.Drawing.Size(133, 19);
             this.radioButtonTimeNew.TabIndex = 1;
             this.radioButtonTimeNew.TabStop = true;
             this.radioButtonTimeNew.Text = "新しいものをマーク(&W)";
@@ -103,7 +103,7 @@
             this.radioButtonTimeSame.AutoSize = true;
             this.radioButtonTimeSame.Location = new System.Drawing.Point(7, 19);
             this.radioButtonTimeSame.Name = "radioButtonTimeSame";
-            this.radioButtonTimeSame.Size = new System.Drawing.Size(114, 16);
+            this.radioButtonTimeSame.Size = new System.Drawing.Size(119, 19);
             this.radioButtonTimeSame.TabIndex = 0;
             this.radioButtonTimeSame.TabStop = true;
             this.radioButtonTimeSame.Text = "同じものをマーク(&S)";
@@ -127,7 +127,7 @@
             this.radioButtonSizeIgnore.AutoSize = true;
             this.radioButtonSizeIgnore.Location = new System.Drawing.Point(6, 85);
             this.radioButtonSizeIgnore.Name = "radioButtonSizeIgnore";
-            this.radioButtonSizeIgnore.Size = new System.Drawing.Size(92, 16);
+            this.radioButtonSizeIgnore.Size = new System.Drawing.Size(97, 19);
             this.radioButtonSizeIgnore.TabIndex = 3;
             this.radioButtonSizeIgnore.TabStop = true;
             this.radioButtonSizeIgnore.Text = "考慮しない(&G)";
@@ -138,7 +138,7 @@
             this.radioButtonSizeSmall.AutoSize = true;
             this.radioButtonSizeSmall.Location = new System.Drawing.Point(6, 63);
             this.radioButtonSizeSmall.Name = "radioButtonSizeSmall";
-            this.radioButtonSizeSmall.Size = new System.Drawing.Size(125, 16);
+            this.radioButtonSizeSmall.Size = new System.Drawing.Size(130, 19);
             this.radioButtonSizeSmall.TabIndex = 2;
             this.radioButtonSizeSmall.TabStop = true;
             this.radioButtonSizeSmall.Text = "小さいものをマーク(&M)";
@@ -149,7 +149,7 @@
             this.radioButtonSizeBig.AutoSize = true;
             this.radioButtonSizeBig.Location = new System.Drawing.Point(6, 41);
             this.radioButtonSizeBig.Name = "radioButtonSizeBig";
-            this.radioButtonSizeBig.Size = new System.Drawing.Size(125, 16);
+            this.radioButtonSizeBig.Size = new System.Drawing.Size(129, 19);
             this.radioButtonSizeBig.TabIndex = 1;
             this.radioButtonSizeBig.TabStop = true;
             this.radioButtonSizeBig.Text = "大きいものをマーク(&B)";
@@ -160,7 +160,7 @@
             this.radioButtonSizeSame.AutoSize = true;
             this.radioButtonSizeSame.Location = new System.Drawing.Point(7, 19);
             this.radioButtonSizeSame.Name = "radioButtonSizeSame";
-            this.radioButtonSizeSame.Size = new System.Drawing.Size(110, 16);
+            this.radioButtonSizeSame.Size = new System.Drawing.Size(116, 19);
             this.radioButtonSizeSame.TabIndex = 0;
             this.radioButtonSizeSame.TabStop = true;
             this.radioButtonSizeSame.Text = "同じものをマーク(&I)";
@@ -171,7 +171,7 @@
             this.checkBoxExceptFolder.AutoSize = true;
             this.checkBoxExceptFolder.Location = new System.Drawing.Point(13, 156);
             this.checkBoxExceptFolder.Name = "checkBoxExceptFolder";
-            this.checkBoxExceptFolder.Size = new System.Drawing.Size(107, 16);
+            this.checkBoxExceptFolder.Size = new System.Drawing.Size(111, 19);
             this.checkBoxExceptFolder.TabIndex = 5;
             this.checkBoxExceptFolder.Text = "フォルダを除外(&F)";
             this.checkBoxExceptFolder.UseVisualStyleBackColor = true;
@@ -219,8 +219,8 @@
             // FileCompareDialog
             // 
             this.AcceptButton = this.buttonOk;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.CancelButton = this.buttonCancel;
             this.ClientSize = new System.Drawing.Size(336, 253);
             this.Controls.Add(this.buttonOk);
@@ -231,6 +231,7 @@
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label1);
+            this.Font = new System.Drawing.Font("Yu Gothic UI", 9F);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.MaximizeBox = false;
             this.MinimizeBox = false;

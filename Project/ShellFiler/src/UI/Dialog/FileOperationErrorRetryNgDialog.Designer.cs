@@ -47,7 +47,7 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(62, 12);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(198, 12);
+            this.label1.Size = new System.Drawing.Size(200, 15);
             this.label1.TabIndex = 0;
             this.label1.Text = "再試行の対象にはフォルダが含まれます。";
             // 
@@ -56,16 +56,16 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(62, 38);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(236, 12);
+            this.label2.Size = new System.Drawing.Size(238, 15);
             this.label2.TabIndex = 1;
             this.label2.Text = "フォルダ以下のすべてが再試行の対象となります。";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(62, 50);
+            this.label3.Location = new System.Drawing.Point(62, 52);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(147, 12);
+            this.label3.Size = new System.Drawing.Size(149, 15);
             this.label3.TabIndex = 2;
             this.label3.Text = "再試行してもよろしいですか？";
             // 
@@ -74,7 +74,7 @@
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(62, 78);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(263, 12);
+            this.label4.Size = new System.Drawing.Size(265, 15);
             this.label4.TabIndex = 3;
             this.label4.Text = "※同じ名前のファイルが大量に発生することがあります。";
             // 
@@ -110,8 +110,8 @@
             // 
             // FileOperationErrorRetryNgDialog
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.CancelButton = this.buttonCancel;
             this.ClientSize = new System.Drawing.Size(372, 143);
             this.Controls.Add(this.buttonFile);
@@ -122,6 +122,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBoxIcon);
+            this.Font = new System.Drawing.Font("Yu Gothic UI", 9F);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.MaximizeBox = false;
             this.MinimizeBox = false;

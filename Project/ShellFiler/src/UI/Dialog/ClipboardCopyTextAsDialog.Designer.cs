@@ -37,34 +37,40 @@
             this.radioButtonSeparatorComma = new System.Windows.Forms.RadioButton();
             this.radioButtonSeparatorTab = new System.Windows.Forms.RadioButton();
             this.radioButtonSeparatorSpace = new System.Windows.Forms.RadioButton();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // textBoxSample
             // 
-            this.textBoxSample.Location = new System.Drawing.Point(14, 24);
+            this.textBoxSample.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.textBoxSample.Location = new System.Drawing.Point(0, 0);
+            this.textBoxSample.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textBoxSample.Multiline = true;
             this.textBoxSample.Name = "textBoxSample";
             this.textBoxSample.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.textBoxSample.Size = new System.Drawing.Size(377, 82);
+            this.textBoxSample.Size = new System.Drawing.Size(584, 121);
             this.textBoxSample.TabIndex = 1;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 9);
+            this.label1.Location = new System.Drawing.Point(18, 14);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(86, 12);
+            this.label1.Size = new System.Drawing.Size(129, 25);
             this.label1.TabIndex = 0;
             this.label1.Text = "コピー文字列(&C):";
             // 
             // checkBoxFullPath
             // 
             this.checkBoxFullPath.AutoSize = true;
-            this.checkBoxFullPath.Location = new System.Drawing.Point(180, 193);
+            this.checkBoxFullPath.Location = new System.Drawing.Point(291, 296);
+            this.checkBoxFullPath.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.checkBoxFullPath.Name = "checkBoxFullPath";
-            this.checkBoxFullPath.Size = new System.Drawing.Size(119, 16);
+            this.checkBoxFullPath.Size = new System.Drawing.Size(178, 29);
             this.checkBoxFullPath.TabIndex = 4;
             this.checkBoxFullPath.Text = "フォルダ名を付加(&F)";
             this.checkBoxFullPath.UseVisualStyleBackColor = true;
@@ -75,9 +81,11 @@
             this.groupBox1.Controls.Add(this.radioButtonQuoteNone);
             this.groupBox1.Controls.Add(this.radioButtonQuoteSpace);
             this.groupBox1.Controls.Add(this.radioButtonQuoteAlways);
-            this.groupBox1.Location = new System.Drawing.Point(180, 112);
+            this.groupBox1.Location = new System.Drawing.Point(291, 174);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(211, 75);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Size = new System.Drawing.Size(316, 112);
             this.groupBox1.TabIndex = 3;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "引用符\" \"";
@@ -85,9 +93,10 @@
             // radioButtonQuoteNone
             // 
             this.radioButtonQuoteNone.AutoSize = true;
-            this.radioButtonQuoteNone.Location = new System.Drawing.Point(7, 53);
+            this.radioButtonQuoteNone.Location = new System.Drawing.Point(10, 80);
+            this.radioButtonQuoteNone.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.radioButtonQuoteNone.Name = "radioButtonQuoteNone";
-            this.radioButtonQuoteNone.Size = new System.Drawing.Size(58, 16);
+            this.radioButtonQuoteNone.Size = new System.Drawing.Size(88, 29);
             this.radioButtonQuoteNone.TabIndex = 2;
             this.radioButtonQuoteNone.TabStop = true;
             this.radioButtonQuoteNone.Text = "なし(&N)";
@@ -97,9 +106,10 @@
             // radioButtonQuoteSpace
             // 
             this.radioButtonQuoteSpace.AutoSize = true;
-            this.radioButtonQuoteSpace.Location = new System.Drawing.Point(7, 35);
+            this.radioButtonQuoteSpace.Location = new System.Drawing.Point(10, 52);
+            this.radioButtonQuoteSpace.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.radioButtonQuoteSpace.Name = "radioButtonQuoteSpace";
-            this.radioButtonQuoteSpace.Size = new System.Drawing.Size(136, 16);
+            this.radioButtonQuoteSpace.Size = new System.Drawing.Size(204, 29);
             this.radioButtonQuoteSpace.TabIndex = 1;
             this.radioButtonQuoteSpace.TabStop = true;
             this.radioButtonQuoteSpace.Text = "空白を含む場合だけ(&S)";
@@ -109,9 +119,10 @@
             // radioButtonQuoteAlways
             // 
             this.radioButtonQuoteAlways.AutoSize = true;
-            this.radioButtonQuoteAlways.Location = new System.Drawing.Point(7, 17);
+            this.radioButtonQuoteAlways.Location = new System.Drawing.Point(10, 26);
+            this.radioButtonQuoteAlways.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.radioButtonQuoteAlways.Name = "radioButtonQuoteAlways";
-            this.radioButtonQuoteAlways.Size = new System.Drawing.Size(88, 16);
+            this.radioButtonQuoteAlways.Size = new System.Drawing.Size(133, 29);
             this.radioButtonQuoteAlways.TabIndex = 0;
             this.radioButtonQuoteAlways.TabStop = true;
             this.radioButtonQuoteAlways.Text = "常につける(&A)";
@@ -120,9 +131,10 @@
             // 
             // buttonOk
             // 
-            this.buttonOk.Location = new System.Drawing.Point(235, 215);
+            this.buttonOk.Location = new System.Drawing.Point(374, 346);
+            this.buttonOk.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.buttonOk.Name = "buttonOk";
-            this.buttonOk.Size = new System.Drawing.Size(75, 23);
+            this.buttonOk.Size = new System.Drawing.Size(112, 34);
             this.buttonOk.TabIndex = 5;
             this.buttonOk.Text = "OK";
             this.buttonOk.UseVisualStyleBackColor = true;
@@ -131,9 +143,10 @@
             // buttonCancel
             // 
             this.buttonCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.buttonCancel.Location = new System.Drawing.Point(316, 215);
+            this.buttonCancel.Location = new System.Drawing.Point(495, 346);
+            this.buttonCancel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.buttonCancel.Name = "buttonCancel";
-            this.buttonCancel.Size = new System.Drawing.Size(75, 23);
+            this.buttonCancel.Size = new System.Drawing.Size(112, 34);
             this.buttonCancel.TabIndex = 6;
             this.buttonCancel.Text = "キャンセル";
             this.buttonCancel.UseVisualStyleBackColor = true;
@@ -144,9 +157,11 @@
             this.groupBox2.Controls.Add(this.radioButtonSeparatorComma);
             this.groupBox2.Controls.Add(this.radioButtonSeparatorTab);
             this.groupBox2.Controls.Add(this.radioButtonSeparatorSpace);
-            this.groupBox2.Location = new System.Drawing.Point(12, 114);
+            this.groupBox2.Location = new System.Drawing.Point(18, 174);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(145, 95);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox2.Size = new System.Drawing.Size(218, 142);
             this.groupBox2.TabIndex = 2;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "セパレータ";
@@ -154,9 +169,10 @@
             // radioButtonSeparatorReturn
             // 
             this.radioButtonSeparatorReturn.AutoSize = true;
-            this.radioButtonSeparatorReturn.Location = new System.Drawing.Point(7, 71);
+            this.radioButtonSeparatorReturn.Location = new System.Drawing.Point(10, 106);
+            this.radioButtonSeparatorReturn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.radioButtonSeparatorReturn.Name = "radioButtonSeparatorReturn";
-            this.radioButtonSeparatorReturn.Size = new System.Drawing.Size(63, 16);
+            this.radioButtonSeparatorReturn.Size = new System.Drawing.Size(94, 29);
             this.radioButtonSeparatorReturn.TabIndex = 3;
             this.radioButtonSeparatorReturn.TabStop = true;
             this.radioButtonSeparatorReturn.Text = "改行(&R)";
@@ -166,9 +182,10 @@
             // radioButtonSeparatorComma
             // 
             this.radioButtonSeparatorComma.AutoSize = true;
-            this.radioButtonSeparatorComma.Location = new System.Drawing.Point(7, 53);
+            this.radioButtonSeparatorComma.Location = new System.Drawing.Point(10, 80);
+            this.radioButtonSeparatorComma.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.radioButtonSeparatorComma.Name = "radioButtonSeparatorComma";
-            this.radioButtonSeparatorComma.Size = new System.Drawing.Size(66, 16);
+            this.radioButtonSeparatorComma.Size = new System.Drawing.Size(98, 29);
             this.radioButtonSeparatorComma.TabIndex = 2;
             this.radioButtonSeparatorComma.TabStop = true;
             this.radioButtonSeparatorComma.Text = "カンマ(&C)";
@@ -178,9 +195,10 @@
             // radioButtonSeparatorTab
             // 
             this.radioButtonSeparatorTab.AutoSize = true;
-            this.radioButtonSeparatorTab.Location = new System.Drawing.Point(7, 35);
+            this.radioButtonSeparatorTab.Location = new System.Drawing.Point(10, 52);
+            this.radioButtonSeparatorTab.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.radioButtonSeparatorTab.Name = "radioButtonSeparatorTab";
-            this.radioButtonSeparatorTab.Size = new System.Drawing.Size(55, 16);
+            this.radioButtonSeparatorTab.Size = new System.Drawing.Size(83, 29);
             this.radioButtonSeparatorTab.TabIndex = 1;
             this.radioButtonSeparatorTab.TabStop = true;
             this.radioButtonSeparatorTab.Text = "タブ(&T)";
@@ -190,30 +208,41 @@
             // radioButtonSeparatorSpace
             // 
             this.radioButtonSeparatorSpace.AutoSize = true;
-            this.radioButtonSeparatorSpace.Location = new System.Drawing.Point(7, 17);
+            this.radioButtonSeparatorSpace.Location = new System.Drawing.Point(10, 26);
+            this.radioButtonSeparatorSpace.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.radioButtonSeparatorSpace.Name = "radioButtonSeparatorSpace";
-            this.radioButtonSeparatorSpace.Size = new System.Drawing.Size(62, 16);
+            this.radioButtonSeparatorSpace.Size = new System.Drawing.Size(93, 29);
             this.radioButtonSeparatorSpace.TabIndex = 0;
             this.radioButtonSeparatorSpace.TabStop = true;
             this.radioButtonSeparatorSpace.Text = "空白(&P)";
             this.radioButtonSeparatorSpace.UseVisualStyleBackColor = true;
             this.radioButtonSeparatorSpace.CheckedChanged += new System.EventHandler(this.RadioButton_CheckedChanged);
             // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.textBoxSample);
+            this.panel1.Location = new System.Drawing.Point(23, 42);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(584, 121);
+            this.panel1.TabIndex = 7;
+            // 
             // ClipboardCopyNameAsDialog
             // 
             this.AcceptButton = this.buttonOk;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(144F, 144F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.CancelButton = this.buttonCancel;
-            this.ClientSize = new System.Drawing.Size(403, 249);
+            this.ClientSize = new System.Drawing.Size(626, 399);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.buttonCancel);
             this.Controls.Add(this.buttonOk);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.checkBoxFullPath);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBoxSample);
+            this.Font = new System.Drawing.Font("Yu Gothic UI", 9F);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "ClipboardCopyNameAsDialog";
@@ -226,6 +255,8 @@
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -247,5 +278,6 @@
         private System.Windows.Forms.RadioButton radioButtonSeparatorComma;
         private System.Windows.Forms.RadioButton radioButtonSeparatorTab;
         private System.Windows.Forms.RadioButton radioButtonSeparatorSpace;
+        private System.Windows.Forms.Panel panel1;
     }
 }

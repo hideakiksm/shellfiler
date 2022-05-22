@@ -74,9 +74,14 @@ namespace ShellFiler {
                 // メインウィンドウを用意
                 s_windowManager = new WindowManager();
                 s_mainWindow = new MainWindowForm();
-                
-                // タイトルを表示
                 s_splashWindow = new SplashWindow();
+
+                // 初期化
+                string exePath = Assembly.GetEntryAssembly().Location;
+                s_installPath = GenericFileStringUtils.CompleteDirectoryName(Path.GetDirectoryName(exePath), "\\");
+                UIIconManager.InitializeIcon(s_splashWindow, s_installPath);
+
+                // タイトルを表示
                 s_splashWindow.Show(s_mainWindow);
                 Application.DoEvents();
 
@@ -92,11 +97,6 @@ namespace ShellFiler {
 
                 // コンフィグを用意
                 s_document = new SfDocument();              // Configを読み込み
-
-                // 初期化
-                string exePath = Assembly.GetEntryAssembly().Location;
-                s_installPath = GenericFileStringUtils.CompleteDirectoryName(Path.GetDirectoryName(exePath), "\\");
-                UIIconManager.InitializeIcon(s_installPath);
 
                 // SfHelperをテスト
                 success = SfHelper.Initialize(s_mainWindow);

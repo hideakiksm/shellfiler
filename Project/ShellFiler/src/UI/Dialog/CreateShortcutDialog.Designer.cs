@@ -36,7 +36,7 @@
             this.radioButtonSymbolic.AutoSize = true;
             this.radioButtonSymbolic.Location = new System.Drawing.Point(10, 18);
             this.radioButtonSymbolic.Name = "radioButtonSymbolic";
-            this.radioButtonSymbolic.Size = new System.Drawing.Size(113, 16);
+            this.radioButtonSymbolic.Size = new System.Drawing.Size(118, 19);
             this.radioButtonSymbolic.TabIndex = 0;
             this.radioButtonSymbolic.TabStop = true;
             this.radioButtonSymbolic.Text = "シンボリックリンク(&S)";
@@ -58,7 +58,7 @@
             this.radioButtonHard.AutoSize = true;
             this.radioButtonHard.Location = new System.Drawing.Point(10, 40);
             this.radioButtonHard.Name = "radioButtonHard";
-            this.radioButtonHard.Size = new System.Drawing.Size(92, 16);
+            this.radioButtonHard.Size = new System.Drawing.Size(96, 19);
             this.radioButtonHard.TabIndex = 1;
             this.radioButtonHard.TabStop = true;
             this.radioButtonHard.Text = "ハードリンク(&H)";
@@ -87,13 +87,14 @@
             // CreateShortcutDialog
             // 
             this.AcceptButton = this.buttonOk;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.CancelButton = this.buttonCancel;
             this.ClientSize = new System.Drawing.Size(227, 123);
             this.Controls.Add(this.buttonCancel);
             this.Controls.Add(this.buttonOk);
             this.Controls.Add(this.groupBox1);
+            this.Font = new System.Drawing.Font("Yu Gothic UI", 9F);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.MaximizeBox = false;
             this.MinimizeBox = false;

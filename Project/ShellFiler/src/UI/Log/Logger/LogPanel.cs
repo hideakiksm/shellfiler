@@ -29,6 +29,12 @@ namespace ShellFiler.UI.Log.Logger {
         // ログパネルの実装
         private LogViewImpl m_logViewImpl;
 
+        // 操作種別文字列の最大表示幅
+        private static int s_cxOperationString;
+
+        // ステータス文字列の最大表示幅
+        private static int s_cxStatusString;
+
         //=========================================================================================
         // 機　能：コンストラクタ
         // 引　数：なし
@@ -57,6 +63,11 @@ namespace ShellFiler.UI.Log.Logger {
             this.PreviewKeyDown += new System.Windows.Forms.PreviewKeyDownEventHandler(Program.MainWindow.MainWindowForm_PreviewKeyDown);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(Program.MainWindow.MainWindowForm_KeyDown);
             this.KeyUp += new System.Windows.Forms.KeyEventHandler(Program.MainWindow.MainWindowForm_KeyUp);
+
+            float logFontSize = Configuration.Current.LogWindowFontSize;
+            s_cxOperationString = (int) MainWindowForm.Xf(110.0f * logFontSize / 9.0f);
+            s_cxStatusString = (int)MainWindowForm.Xf(149 * logFontSize / 9.0f);
+
         }
 
         //=========================================================================================
@@ -281,9 +292,7 @@ namespace ShellFiler.UI.Log.Logger {
         //=========================================================================================
         public static int CxOperationString {
             get {
-                float logFontSize = Configuration.Current.LogWindowFontSize;
-                float value = (110.0f * logFontSize / 9.0f);
-                return (int)value;
+                return s_cxOperationString;
             }
         }
 
@@ -292,9 +301,7 @@ namespace ShellFiler.UI.Log.Logger {
         //=========================================================================================
         public static int CxStatusString {
             get {
-                float logFontSize = Configuration.Current.LogWindowFontSize;
-                float value = (149 * logFontSize / 9.0f);
-                return (int)value;
+                return s_cxStatusString;
             }
         }
 

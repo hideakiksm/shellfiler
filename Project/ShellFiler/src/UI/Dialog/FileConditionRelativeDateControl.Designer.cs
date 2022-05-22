@@ -48,9 +48,9 @@
             // checkBoxStart
             // 
             this.checkBoxStart.AutoSize = true;
-            this.checkBoxStart.Location = new System.Drawing.Point(136, 5);
+            this.checkBoxStart.Location = new System.Drawing.Point(146, 3);
             this.checkBoxStart.Name = "checkBoxStart";
-            this.checkBoxStart.Size = new System.Drawing.Size(46, 16);
+            this.checkBoxStart.Size = new System.Drawing.Size(48, 19);
             this.checkBoxStart.TabIndex = 1;
             this.checkBoxStart.Text = "含む";
             this.checkBoxStart.UseVisualStyleBackColor = true;
@@ -58,37 +58,37 @@
             // 
             // maskedStart
             // 
-            this.maskedStart.Location = new System.Drawing.Point(83, 3);
+            this.maskedStart.Location = new System.Drawing.Point(83, 1);
             this.maskedStart.Mask = "90:00:00";
             this.maskedStart.Name = "maskedStart";
-            this.maskedStart.Size = new System.Drawing.Size(51, 19);
+            this.maskedStart.Size = new System.Drawing.Size(60, 23);
             this.maskedStart.TabIndex = 5;
             this.maskedStart.Text = "120000";
             this.maskedStart.TextChanged += new System.EventHandler(this.dateTimeStartEnd_ValueChanged);
             // 
             // numericStart
             // 
-            this.numericStart.Location = new System.Drawing.Point(10, 3);
+            this.numericStart.Location = new System.Drawing.Point(10, 1);
             this.numericStart.Name = "numericStart";
-            this.numericStart.Size = new System.Drawing.Size(40, 19);
+            this.numericStart.Size = new System.Drawing.Size(40, 23);
             this.numericStart.TabIndex = 7;
             this.numericStart.ValueChanged += new System.EventHandler(this.dateTimeStartEnd_ValueChanged);
             // 
             // labelStart
             // 
             this.labelStart.AutoSize = true;
-            this.labelStart.Location = new System.Drawing.Point(52, 6);
+            this.labelStart.Location = new System.Drawing.Point(52, 4);
             this.labelStart.Name = "labelStart";
-            this.labelStart.Size = new System.Drawing.Size(29, 12);
+            this.labelStart.Size = new System.Drawing.Size(31, 15);
             this.labelStart.TabIndex = 8;
             this.labelStart.Text = "日前";
             // 
             // checkBoxEnd
             // 
             this.checkBoxEnd.AutoSize = true;
-            this.checkBoxEnd.Location = new System.Drawing.Point(342, 5);
+            this.checkBoxEnd.Location = new System.Drawing.Point(352, 3);
             this.checkBoxEnd.Name = "checkBoxEnd";
-            this.checkBoxEnd.Size = new System.Drawing.Size(46, 16);
+            this.checkBoxEnd.Size = new System.Drawing.Size(48, 19);
             this.checkBoxEnd.TabIndex = 1;
             this.checkBoxEnd.Text = "含む";
             this.checkBoxEnd.UseVisualStyleBackColor = true;
@@ -96,35 +96,35 @@
             // 
             // maskedEnd
             // 
-            this.maskedEnd.Location = new System.Drawing.Point(289, 3);
+            this.maskedEnd.Location = new System.Drawing.Point(289, 1);
             this.maskedEnd.Mask = "90:00:00";
             this.maskedEnd.Name = "maskedEnd";
-            this.maskedEnd.Size = new System.Drawing.Size(51, 19);
+            this.maskedEnd.Size = new System.Drawing.Size(60, 23);
             this.maskedEnd.TabIndex = 5;
             this.maskedEnd.Text = "120000";
             this.maskedEnd.TextChanged += new System.EventHandler(this.dateTimeStartEnd_ValueChanged);
             // 
             // numericEnd
             // 
-            this.numericEnd.Location = new System.Drawing.Point(216, 3);
+            this.numericEnd.Location = new System.Drawing.Point(216, 1);
             this.numericEnd.Name = "numericEnd";
-            this.numericEnd.Size = new System.Drawing.Size(40, 19);
+            this.numericEnd.Size = new System.Drawing.Size(40, 23);
             this.numericEnd.TabIndex = 7;
             this.numericEnd.ValueChanged += new System.EventHandler(this.dateTimeStartEnd_ValueChanged);
             // 
             // labelEnd
             // 
             this.labelEnd.AutoSize = true;
-            this.labelEnd.Location = new System.Drawing.Point(258, 6);
+            this.labelEnd.Location = new System.Drawing.Point(258, 4);
             this.labelEnd.Name = "labelEnd";
-            this.labelEnd.Size = new System.Drawing.Size(29, 12);
+            this.labelEnd.Size = new System.Drawing.Size(31, 15);
             this.labelEnd.TabIndex = 8;
             this.labelEnd.Text = "日前";
             // 
             // FileConditionRelativeDateControl
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.SystemColors.Window;
             this.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.Controls.Add(this.labelEnd);
@@ -136,6 +136,7 @@
             this.Controls.Add(this.maskedStart);
             this.Controls.Add(this.checkBoxStart);
             this.Controls.Add(this.panelRange);
+            this.Font = new System.Drawing.Font("Yu Gothic UI", 9F);
             this.Name = "FileConditionRelativeDateControl";
             this.Size = new System.Drawing.Size(398, 48);
             ((System.ComponentModel.ISupportInitialize)(this.numericStart)).EndInit();

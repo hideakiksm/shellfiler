@@ -27,8 +27,8 @@
             this.textBoxFolder = new System.Windows.Forms.TextBox();
             this.buttonChdir = new System.Windows.Forms.Button();
             this.listViewFiles = new System.Windows.Forms.ListView();
-            this.columnMark = new System.Windows.Forms.ColumnHeader();
-            this.columnFiles = new System.Windows.Forms.ColumnHeader();
+            this.columnMark = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnFiles = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.buttonClose = new System.Windows.Forms.Button();
             this.buttonMark1 = new System.Windows.Forms.Button();
             this.buttonMark2 = new System.Windows.Forms.Button();
@@ -47,7 +47,7 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(13, 18);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(66, 12);
+            this.label1.Size = new System.Drawing.Size(71, 15);
             this.label1.TabIndex = 0;
             this.label1.Text = "対象フォルダ:";
             // 
@@ -57,7 +57,7 @@
             this.textBoxFolder.Location = new System.Drawing.Point(85, 18);
             this.textBoxFolder.Name = "textBoxFolder";
             this.textBoxFolder.ReadOnly = true;
-            this.textBoxFolder.Size = new System.Drawing.Size(270, 12);
+            this.textBoxFolder.Size = new System.Drawing.Size(270, 16);
             this.textBoxFolder.TabIndex = 1;
             // 
             // buttonChdir
@@ -76,6 +76,7 @@
             this.columnMark,
             this.columnFiles});
             this.listViewFiles.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
+            this.listViewFiles.HideSelection = false;
             this.listViewFiles.Location = new System.Drawing.Point(12, 42);
             this.listViewFiles.Name = "listViewFiles";
             this.listViewFiles.Size = new System.Drawing.Size(424, 137);
@@ -207,8 +208,8 @@
             // SlideShowMarkResultDialog
             // 
             this.AcceptButton = this.buttonClose;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.CancelButton = this.buttonClose;
             this.ClientSize = new System.Drawing.Size(447, 276);
             this.Controls.Add(this.buttonClear);
@@ -226,6 +227,7 @@
             this.Controls.Add(this.buttonChdir);
             this.Controls.Add(this.textBoxFolder);
             this.Controls.Add(this.label1);
+            this.Font = new System.Drawing.Font("Yu Gothic UI", 9F);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.HelpButton = true;
             this.MaximizeBox = false;

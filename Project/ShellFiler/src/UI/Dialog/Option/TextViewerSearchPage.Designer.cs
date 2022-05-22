@@ -38,7 +38,7 @@
             this.radioButtonFix.AutoSize = true;
             this.radioButtonFix.Location = new System.Drawing.Point(3, 46);
             this.radioButtonFix.Name = "radioButtonFix";
-            this.radioButtonFix.Size = new System.Drawing.Size(103, 16);
+            this.radioButtonFix.Size = new System.Drawing.Size(109, 19);
             this.radioButtonFix.TabIndex = 1;
             this.radioButtonFix.TabStop = true;
             this.radioButtonFix.Text = "初期値を指定(&I)";
@@ -50,7 +50,7 @@
             this.radioButtonPrev.AutoSize = true;
             this.radioButtonPrev.Location = new System.Drawing.Point(3, 24);
             this.radioButtonPrev.Name = "radioButtonPrev";
-            this.radioButtonPrev.Size = new System.Drawing.Size(243, 16);
+            this.radioButtonPrev.Size = new System.Drawing.Size(247, 19);
             this.radioButtonPrev.TabIndex = 0;
             this.radioButtonPrev.TabStop = true;
             this.radioButtonPrev.Text = "直前に指定された設定を初期値として使用(&R)";
@@ -61,9 +61,9 @@
             // 
             this.comboBoxOption.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxOption.FormattingEnabled = true;
-            this.comboBoxOption.Location = new System.Drawing.Point(105, 18);
+            this.comboBoxOption.Location = new System.Drawing.Point(109, 18);
             this.comboBoxOption.Name = "comboBoxOption";
-            this.comboBoxOption.Size = new System.Drawing.Size(284, 20);
+            this.comboBoxOption.Size = new System.Drawing.Size(284, 23);
             this.comboBoxOption.TabIndex = 1;
             // 
             // checkBoxWord
@@ -71,7 +71,7 @@
             this.checkBoxWord.AutoSize = true;
             this.checkBoxWord.Location = new System.Drawing.Point(11, 44);
             this.checkBoxWord.Name = "checkBoxWord";
-            this.checkBoxWord.Size = new System.Drawing.Size(89, 16);
+            this.checkBoxWord.Size = new System.Drawing.Size(96, 19);
             this.checkBoxWord.TabIndex = 2;
             this.checkBoxWord.Text = "単語単位(&W)";
             this.checkBoxWord.UseVisualStyleBackColor = true;
@@ -81,7 +81,7 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(9, 21);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(90, 12);
+            this.label2.Size = new System.Drawing.Size(98, 15);
             this.label2.TabIndex = 0;
             this.label2.Text = "検索オプション(&O):";
             // 
@@ -102,18 +102,19 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(3, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(82, 12);
+            this.label1.Size = new System.Drawing.Size(84, 15);
             this.label1.TabIndex = 3;
             this.label1.Text = "検索のオプション";
             // 
             // TextViewerSearchPage
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.Controls.Add(this.label1);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.radioButtonFix);
             this.Controls.Add(this.radioButtonPrev);
+            this.Font = new System.Drawing.Font("Yu Gothic UI", 9F);
             this.Name = "TextViewerSearchPage";
             this.Size = new System.Drawing.Size(520, 370);
             this.groupBox1.ResumeLayout(false);

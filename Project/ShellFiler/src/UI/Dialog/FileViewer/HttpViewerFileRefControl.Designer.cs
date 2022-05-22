@@ -33,7 +33,7 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(4, 4);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(126, 12);
+            this.label1.Size = new System.Drawing.Size(128, 15);
             this.label1.TabIndex = 0;
             this.label1.Text = "リクエスト電文のファイル名";
             // 
@@ -41,7 +41,7 @@
             // 
             this.textBoxFilePath.Location = new System.Drawing.Point(6, 20);
             this.textBoxFilePath.Name = "textBoxFilePath";
-            this.textBoxFilePath.Size = new System.Drawing.Size(403, 19);
+            this.textBoxFilePath.Size = new System.Drawing.Size(403, 23);
             this.textBoxFilePath.TabIndex = 1;
             // 
             // buttonRef
@@ -56,11 +56,12 @@
             // 
             // HttpViewerFileRefControl
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.Controls.Add(this.buttonRef);
             this.Controls.Add(this.textBoxFilePath);
             this.Controls.Add(this.label1);
+            this.Font = new System.Drawing.Font("Yu Gothic UI", 9F);
             this.Name = "HttpViewerFileRefControl";
             this.Size = new System.Drawing.Size(528, 216);
             this.ResumeLayout(false);

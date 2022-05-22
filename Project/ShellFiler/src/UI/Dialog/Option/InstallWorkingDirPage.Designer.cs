@@ -37,25 +37,28 @@
             // 
             // textBoxTempDir
             // 
-            this.textBoxTempDir.Location = new System.Drawing.Point(28, 87);
+            this.textBoxTempDir.Location = new System.Drawing.Point(33, 105);
+            this.textBoxTempDir.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textBoxTempDir.Name = "textBoxTempDir";
-            this.textBoxTempDir.Size = new System.Drawing.Size(399, 19);
+            this.textBoxTempDir.Size = new System.Drawing.Size(465, 23);
             this.textBoxTempDir.TabIndex = 3;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(6, 116);
+            this.label2.Location = new System.Drawing.Point(7, 145);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(453, 12);
+            this.label2.Size = new System.Drawing.Size(457, 15);
             this.label2.TabIndex = 5;
             this.label2.Text = "作業フォルダは、圧縮ファイルの処理や、SSHサーバーからの一時的なダウンロードで使用します。";
             // 
             // buttonTempRef
             // 
-            this.buttonTempRef.Location = new System.Drawing.Point(433, 85);
+            this.buttonTempRef.Location = new System.Drawing.Point(505, 102);
+            this.buttonTempRef.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.buttonTempRef.Name = "buttonTempRef";
-            this.buttonTempRef.Size = new System.Drawing.Size(75, 23);
+            this.buttonTempRef.Size = new System.Drawing.Size(88, 29);
             this.buttonTempRef.TabIndex = 4;
             this.buttonTempRef.Text = "参照(&R)...";
             this.buttonTempRef.UseVisualStyleBackColor = true;
@@ -71,9 +74,11 @@
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Location = new System.Drawing.Point(3, 3);
+            this.groupBox1.Location = new System.Drawing.Point(4, 4);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(514, 160);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Size = new System.Drawing.Size(600, 200);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "作業フォルダ";
@@ -81,9 +86,10 @@
             // radioButtonTempFix
             // 
             this.radioButtonTempFix.AutoSize = true;
-            this.radioButtonTempFix.Location = new System.Drawing.Point(8, 65);
+            this.radioButtonTempFix.Location = new System.Drawing.Point(9, 81);
+            this.radioButtonTempFix.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.radioButtonTempFix.Name = "radioButtonTempFix";
-            this.radioButtonTempFix.Size = new System.Drawing.Size(200, 16);
+            this.radioButtonTempFix.Size = new System.Drawing.Size(207, 19);
             this.radioButtonTempFix.TabIndex = 2;
             this.radioButtonTempFix.TabStop = true;
             this.radioButtonTempFix.Text = "指定フォルダを作業フォルダに設定(&W)";
@@ -93,9 +99,10 @@
             // radioButtonTempAuto
             // 
             this.radioButtonTempAuto.AutoSize = true;
-            this.radioButtonTempAuto.Location = new System.Drawing.Point(8, 18);
+            this.radioButtonTempAuto.Location = new System.Drawing.Point(9, 22);
+            this.radioButtonTempAuto.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.radioButtonTempAuto.Name = "radioButtonTempAuto";
-            this.radioButtonTempAuto.Size = new System.Drawing.Size(108, 16);
+            this.radioButtonTempAuto.Size = new System.Drawing.Size(112, 19);
             this.radioButtonTempAuto.TabIndex = 0;
             this.radioButtonTempAuto.TabStop = true;
             this.radioButtonTempAuto.Text = "自動的に設定(&A)";
@@ -103,37 +110,42 @@
             // 
             // textBoxTempAuto
             // 
-            this.textBoxTempAuto.Location = new System.Drawing.Point(28, 40);
+            this.textBoxTempAuto.Location = new System.Drawing.Point(33, 46);
+            this.textBoxTempAuto.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textBoxTempAuto.Name = "textBoxTempAuto";
             this.textBoxTempAuto.ReadOnly = true;
-            this.textBoxTempAuto.Size = new System.Drawing.Size(399, 19);
+            this.textBoxTempAuto.Size = new System.Drawing.Size(465, 23);
             this.textBoxTempAuto.TabIndex = 1;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(6, 140);
+            this.label1.Location = new System.Drawing.Point(7, 177);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(126, 12);
+            this.label1.Size = new System.Drawing.Size(128, 15);
             this.label1.TabIndex = 6;
             this.label1.Text = "次回起動時に有効です。";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(6, 128);
+            this.label4.Location = new System.Drawing.Point(7, 162);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(212, 12);
+            this.label4.Size = new System.Drawing.Size(214, 15);
             this.label4.TabIndex = 6;
             this.label4.Text = "変更時、旧フォルダは手操作で削除します。";
             // 
             // InstallWorkingDirPage
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.Controls.Add(this.groupBox1);
+            this.Font = new System.Drawing.Font("Yu Gothic UI", 9F);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "InstallWorkingDirPage";
-            this.Size = new System.Drawing.Size(520, 370);
+            this.Size = new System.Drawing.Size(607, 462);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);

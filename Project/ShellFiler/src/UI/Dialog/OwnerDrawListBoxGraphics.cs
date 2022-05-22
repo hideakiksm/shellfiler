@@ -17,13 +17,7 @@ namespace ShellFiler.UI.Dialog {
     //=========================================================================================
     // クラス：オーナードローのリストボックス描画用グラフィックス
     //=========================================================================================
-    public class OwnerDrawListBoxGraphics {
-        // グラフィック（null:未初期化）
-        private Graphics m_graphics;
-
-        // 描画対象のコントロール（null:グラフィック指定）
-        private Control m_control;
-
+    public class OwnerDrawListBoxGraphics : HighDpiGraphics {
         // グラデーションでの行の開始位置
         private int m_lineStart;
 
@@ -52,9 +46,7 @@ namespace ShellFiler.UI.Dialog {
         // 　　　　[in]lineHeight グラデーションでの行の高さ
         // 戻り値：なし
         //=========================================================================================
-        public OwnerDrawListBoxGraphics(Graphics graphics, int lineStart, int lineHeight) {
-            m_control = null;
-            m_graphics = graphics;
+        public OwnerDrawListBoxGraphics(Graphics graphics, int lineStart, int lineHeight) : base(graphics) {
             m_lineStart = lineStart;
             m_lineHeight = lineHeight;
         }
@@ -65,9 +57,7 @@ namespace ShellFiler.UI.Dialog {
         // 　　　　[in]lineHeight 一覧の行の高さ
         // 戻り値：なし
         //=========================================================================================
-        public OwnerDrawListBoxGraphics(Control control, int lineHeight) {
-            m_control = control;
-            m_graphics = null;
+        public OwnerDrawListBoxGraphics(Control control, int lineHeight) : base(control) {
             m_lineHeight = lineHeight;
         }
 
@@ -76,10 +66,7 @@ namespace ShellFiler.UI.Dialog {
         // 引　数：なし
         // 戻り値：なし
         //=========================================================================================
-        public void Dispose() {
-            if (m_control != null && m_graphics != null) {
-                m_graphics.Dispose();
-            }
+        public override void Dispose() {
             if (m_borderPen != null) {
                 m_borderPen.Dispose();
                 m_borderPen = null;
@@ -99,18 +86,6 @@ namespace ShellFiler.UI.Dialog {
             if (m_grayBackBrush != null) {
                 m_grayBackBrush.Dispose();
                 m_grayBackBrush = null;
-            }
-        }
-
-        //=========================================================================================
-        // プロパティ：グラフィックス
-        //=========================================================================================
-        public Graphics Graphics {
-            get {
-                if (m_graphics == null) {
-                    m_graphics = m_control.CreateGraphics();
-                }
-                return m_graphics;
             }
         }
 

@@ -43,18 +43,18 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(12, 75);
+            this.label5.Location = new System.Drawing.Point(12, 73);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(108, 12);
+            this.label5.Size = new System.Drawing.Size(115, 15);
             this.label5.TabIndex = 4;
             this.label5.Text = "使用するフィルター(&F):";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(383, 75);
+            this.label6.Location = new System.Drawing.Point(383, 73);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(105, 12);
+            this.label6.Size = new System.Drawing.Size(113, 15);
             this.label6.TabIndex = 10;
             this.label6.Text = "すべてのフィルター(&N):";
             // 
@@ -146,18 +146,18 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 40);
+            this.label1.Location = new System.Drawing.Point(12, 42);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(109, 12);
+            this.label1.Size = new System.Drawing.Size(117, 15);
             this.label1.TabIndex = 2;
             this.label1.Text = "対象とする拡張子(&X):";
             // 
             // comboBoxExtension
             // 
             this.comboBoxExtension.FormattingEnabled = true;
-            this.comboBoxExtension.Location = new System.Drawing.Point(127, 37);
+            this.comboBoxExtension.Location = new System.Drawing.Point(127, 39);
             this.comboBoxExtension.Name = "comboBoxExtension";
-            this.comboBoxExtension.Size = new System.Drawing.Size(322, 20);
+            this.comboBoxExtension.Size = new System.Drawing.Size(322, 23);
             this.comboBoxExtension.TabIndex = 3;
             // 
             // label2
@@ -165,7 +165,7 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(12, 15);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(100, 12);
+            this.label2.Size = new System.Drawing.Size(108, 15);
             this.label2.TabIndex = 0;
             this.label2.Text = "フィルターの名前(&N):";
             // 
@@ -174,14 +174,14 @@
             this.comboBoxFilterName.FormattingEnabled = true;
             this.comboBoxFilterName.Location = new System.Drawing.Point(127, 12);
             this.comboBoxFilterName.Name = "comboBoxFilterName";
-            this.comboBoxFilterName.Size = new System.Drawing.Size(322, 20);
+            this.comboBoxFilterName.Size = new System.Drawing.Size(322, 23);
             this.comboBoxFilterName.TabIndex = 1;
             // 
             // FileFilterTransferEditDialog
             // 
             this.AcceptButton = this.buttonOk;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.CancelButton = this.buttonCancel;
             this.ClientSize = new System.Drawing.Size(680, 450);
             this.Controls.Add(this.label2);
@@ -199,6 +199,7 @@
             this.Controls.Add(this.listBoxUse);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
+            this.Font = new System.Drawing.Font("Yu Gothic UI", 9F);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.MaximizeBox = false;
             this.MinimizeBox = false;

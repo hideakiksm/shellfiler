@@ -79,7 +79,7 @@
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Location = new System.Drawing.Point(13, 13);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(359, 108);
+            this.groupBox1.Size = new System.Drawing.Size(359, 120);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "ファイル名";
@@ -120,7 +120,7 @@
             this.comboBoxNameExt.FormattingEnabled = true;
             this.comboBoxNameExt.Location = new System.Drawing.Point(106, 45);
             this.comboBoxNameExt.Name = "comboBoxNameExt";
-            this.comboBoxNameExt.Size = new System.Drawing.Size(238, 20);
+            this.comboBoxNameExt.Size = new System.Drawing.Size(238, 23);
             this.comboBoxNameExt.TabIndex = 3;
             // 
             // comboBoxNameBody
@@ -129,7 +129,7 @@
             this.comboBoxNameBody.FormattingEnabled = true;
             this.comboBoxNameBody.Location = new System.Drawing.Point(106, 19);
             this.comboBoxNameBody.Name = "comboBoxNameBody";
-            this.comboBoxNameBody.Size = new System.Drawing.Size(238, 20);
+            this.comboBoxNameBody.Size = new System.Drawing.Size(238, 23);
             this.comboBoxNameBody.TabIndex = 1;
             // 
             // label2
@@ -137,7 +137,7 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(7, 48);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(58, 12);
+            this.label2.Size = new System.Drawing.Size(65, 15);
             this.label2.TabIndex = 2;
             this.label2.Text = "拡張子(&E):";
             // 
@@ -146,7 +146,7 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(7, 22);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(92, 12);
+            this.label1.Size = new System.Drawing.Size(99, 15);
             this.label1.TabIndex = 0;
             this.label1.Text = "ファイル名主部(&F):";
             // 
@@ -158,7 +158,7 @@
             this.groupBox2.Controls.Add(this.checkBoxReadOnly);
             this.groupBox2.Location = new System.Drawing.Point(382, 13);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(121, 108);
+            this.groupBox2.Size = new System.Drawing.Size(121, 120);
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "属性";
@@ -168,9 +168,9 @@
             this.checkBoxSystem.AutoSize = true;
             this.checkBoxSystem.Checked = true;
             this.checkBoxSystem.CheckState = System.Windows.Forms.CheckState.Indeterminate;
-            this.checkBoxSystem.Location = new System.Drawing.Point(6, 85);
+            this.checkBoxSystem.Location = new System.Drawing.Point(6, 88);
             this.checkBoxSystem.Name = "checkBoxSystem";
-            this.checkBoxSystem.Size = new System.Drawing.Size(77, 16);
+            this.checkBoxSystem.Size = new System.Drawing.Size(82, 19);
             this.checkBoxSystem.TabIndex = 3;
             this.checkBoxSystem.Text = "システム(&S)";
             this.checkBoxSystem.ThreeState = true;
@@ -181,9 +181,9 @@
             this.checkBoxArchive.AutoSize = true;
             this.checkBoxArchive.Checked = true;
             this.checkBoxArchive.CheckState = System.Windows.Forms.CheckState.Indeterminate;
-            this.checkBoxArchive.Location = new System.Drawing.Point(6, 63);
+            this.checkBoxArchive.Location = new System.Drawing.Point(6, 65);
             this.checkBoxArchive.Name = "checkBoxArchive";
-            this.checkBoxArchive.Size = new System.Drawing.Size(86, 16);
+            this.checkBoxArchive.Size = new System.Drawing.Size(90, 19);
             this.checkBoxArchive.TabIndex = 2;
             this.checkBoxArchive.Text = "アーカイブ(&A)";
             this.checkBoxArchive.ThreeState = true;
@@ -194,9 +194,9 @@
             this.checkBoxHidden.AutoSize = true;
             this.checkBoxHidden.Checked = true;
             this.checkBoxHidden.CheckState = System.Windows.Forms.CheckState.Indeterminate;
-            this.checkBoxHidden.Location = new System.Drawing.Point(6, 41);
+            this.checkBoxHidden.Location = new System.Drawing.Point(6, 42);
             this.checkBoxHidden.Name = "checkBoxHidden";
-            this.checkBoxHidden.Size = new System.Drawing.Size(95, 16);
+            this.checkBoxHidden.Size = new System.Drawing.Size(100, 19);
             this.checkBoxHidden.TabIndex = 1;
             this.checkBoxHidden.Text = "隠しファイル(&H)";
             this.checkBoxHidden.ThreeState = true;
@@ -209,7 +209,7 @@
             this.checkBoxReadOnly.CheckState = System.Windows.Forms.CheckState.Indeterminate;
             this.checkBoxReadOnly.Location = new System.Drawing.Point(6, 19);
             this.checkBoxReadOnly.Name = "checkBoxReadOnly";
-            this.checkBoxReadOnly.Size = new System.Drawing.Size(107, 16);
+            this.checkBoxReadOnly.Size = new System.Drawing.Size(111, 19);
             this.checkBoxReadOnly.TabIndex = 0;
             this.checkBoxReadOnly.Text = "読み取り専用(&R)";
             this.checkBoxReadOnly.ThreeState = true;
@@ -237,9 +237,9 @@
             this.groupBox3.Controls.Add(this.checkBoxDateCreate);
             this.groupBox3.Controls.Add(this.checkBoxTimeUpdate);
             this.groupBox3.Controls.Add(this.checkBoxDateUpdate);
-            this.groupBox3.Location = new System.Drawing.Point(13, 127);
+            this.groupBox3.Location = new System.Drawing.Point(13, 139);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(490, 135);
+            this.groupBox3.Size = new System.Drawing.Size(509, 135);
             this.groupBox3.TabIndex = 2;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "タイムスタンプ";
@@ -247,18 +247,18 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(6, 72);
+            this.label5.Location = new System.Drawing.Point(6, 76);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(81, 12);
+            this.label5.Size = new System.Drawing.Size(85, 15);
             this.label5.TabIndex = 12;
             this.label5.Text = "アクセス日時(&A)";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(6, 47);
+            this.label4.Location = new System.Drawing.Point(6, 49);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(69, 12);
+            this.label4.Size = new System.Drawing.Size(73, 15);
             this.label4.TabIndex = 6;
             this.label4.Text = "作成日時(&C)";
             // 
@@ -267,25 +267,25 @@
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(6, 22);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(69, 12);
+            this.label3.Size = new System.Drawing.Size(74, 15);
             this.label3.TabIndex = 0;
             this.label3.Text = "更新日時(&U)";
             // 
             // textBoxTimeAccess
             // 
-            this.textBoxTimeAccess.Location = new System.Drawing.Point(386, 67);
+            this.textBoxTimeAccess.Location = new System.Drawing.Point(386, 71);
             this.textBoxTimeAccess.Mask = "90:00:00";
             this.textBoxTimeAccess.Name = "textBoxTimeAccess";
-            this.textBoxTimeAccess.Size = new System.Drawing.Size(52, 19);
+            this.textBoxTimeAccess.Size = new System.Drawing.Size(66, 23);
             this.textBoxTimeAccess.TabIndex = 16;
             this.textBoxTimeAccess.Text = "120000";
             // 
             // textBoxTimeCreate
             // 
-            this.textBoxTimeCreate.Location = new System.Drawing.Point(386, 42);
+            this.textBoxTimeCreate.Location = new System.Drawing.Point(386, 44);
             this.textBoxTimeCreate.Mask = "90:00:00";
             this.textBoxTimeCreate.Name = "textBoxTimeCreate";
-            this.textBoxTimeCreate.Size = new System.Drawing.Size(52, 19);
+            this.textBoxTimeCreate.Size = new System.Drawing.Size(66, 23);
             this.textBoxTimeCreate.TabIndex = 10;
             this.textBoxTimeCreate.Text = "120000";
             // 
@@ -294,13 +294,13 @@
             this.textBoxTimeUpdate.Location = new System.Drawing.Point(386, 19);
             this.textBoxTimeUpdate.Mask = "90:00:00";
             this.textBoxTimeUpdate.Name = "textBoxTimeUpdate";
-            this.textBoxTimeUpdate.Size = new System.Drawing.Size(52, 19);
+            this.textBoxTimeUpdate.Size = new System.Drawing.Size(66, 23);
             this.textBoxTimeUpdate.TabIndex = 4;
             this.textBoxTimeUpdate.Text = "120000";
             // 
             // buttonTimeAccess
             // 
-            this.buttonTimeAccess.Location = new System.Drawing.Point(448, 65);
+            this.buttonTimeAccess.Location = new System.Drawing.Point(458, 71);
             this.buttonTimeAccess.Name = "buttonTimeAccess";
             this.buttonTimeAccess.Size = new System.Drawing.Size(30, 23);
             this.buttonTimeAccess.TabIndex = 17;
@@ -309,7 +309,7 @@
             // 
             // buttonTimeCreate
             // 
-            this.buttonTimeCreate.Location = new System.Drawing.Point(448, 40);
+            this.buttonTimeCreate.Location = new System.Drawing.Point(458, 44);
             this.buttonTimeCreate.Name = "buttonTimeCreate";
             this.buttonTimeCreate.Size = new System.Drawing.Size(30, 23);
             this.buttonTimeCreate.TabIndex = 11;
@@ -318,7 +318,7 @@
             // 
             // buttonTimeUpdate
             // 
-            this.buttonTimeUpdate.Location = new System.Drawing.Point(448, 15);
+            this.buttonTimeUpdate.Location = new System.Drawing.Point(458, 17);
             this.buttonTimeUpdate.Name = "buttonTimeUpdate";
             this.buttonTimeUpdate.Size = new System.Drawing.Size(30, 23);
             this.buttonTimeUpdate.TabIndex = 5;
@@ -327,7 +327,7 @@
             // 
             // buttonCurrent
             // 
-            this.buttonCurrent.Location = new System.Drawing.Point(9, 99);
+            this.buttonCurrent.Location = new System.Drawing.Point(9, 101);
             this.buttonCurrent.Name = "buttonCurrent";
             this.buttonCurrent.Size = new System.Drawing.Size(79, 23);
             this.buttonCurrent.TabIndex = 18;
@@ -337,7 +337,7 @@
             // 
             // buttonNoon
             // 
-            this.buttonNoon.Location = new System.Drawing.Point(94, 99);
+            this.buttonNoon.Location = new System.Drawing.Point(94, 101);
             this.buttonNoon.Name = "buttonNoon";
             this.buttonNoon.Size = new System.Drawing.Size(80, 23);
             this.buttonNoon.TabIndex = 19;
@@ -349,17 +349,17 @@
             // 
             this.dateTimeDateAccess.CustomFormat = "yyyy/MM/dd";
             this.dateTimeDateAccess.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimeDateAccess.Location = new System.Drawing.Point(183, 67);
+            this.dateTimeDateAccess.Location = new System.Drawing.Point(183, 71);
             this.dateTimeDateAccess.Name = "dateTimeDateAccess";
-            this.dateTimeDateAccess.Size = new System.Drawing.Size(101, 19);
+            this.dateTimeDateAccess.Size = new System.Drawing.Size(101, 23);
             this.dateTimeDateAccess.TabIndex = 14;
             // 
             // checkBoxTimeAccess
             // 
             this.checkBoxTimeAccess.AutoSize = true;
-            this.checkBoxTimeAccess.Location = new System.Drawing.Point(304, 69);
+            this.checkBoxTimeAccess.Location = new System.Drawing.Point(304, 73);
             this.checkBoxTimeAccess.Name = "checkBoxTimeAccess";
-            this.checkBoxTimeAccess.Size = new System.Drawing.Size(81, 16);
+            this.checkBoxTimeAccess.Size = new System.Drawing.Size(83, 19);
             this.checkBoxTimeAccess.TabIndex = 15;
             this.checkBoxTimeAccess.Text = "時刻を変更";
             this.checkBoxTimeAccess.UseVisualStyleBackColor = true;
@@ -369,17 +369,17 @@
             // 
             this.dateTimeDateCreate.CustomFormat = "yyyy/MM/dd";
             this.dateTimeDateCreate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimeDateCreate.Location = new System.Drawing.Point(183, 42);
+            this.dateTimeDateCreate.Location = new System.Drawing.Point(183, 44);
             this.dateTimeDateCreate.Name = "dateTimeDateCreate";
-            this.dateTimeDateCreate.Size = new System.Drawing.Size(101, 19);
+            this.dateTimeDateCreate.Size = new System.Drawing.Size(101, 23);
             this.dateTimeDateCreate.TabIndex = 8;
             // 
             // checkBoxTimeCreate
             // 
             this.checkBoxTimeCreate.AutoSize = true;
-            this.checkBoxTimeCreate.Location = new System.Drawing.Point(304, 44);
+            this.checkBoxTimeCreate.Location = new System.Drawing.Point(304, 46);
             this.checkBoxTimeCreate.Name = "checkBoxTimeCreate";
-            this.checkBoxTimeCreate.Size = new System.Drawing.Size(81, 16);
+            this.checkBoxTimeCreate.Size = new System.Drawing.Size(83, 19);
             this.checkBoxTimeCreate.TabIndex = 9;
             this.checkBoxTimeCreate.Text = "時刻を変更";
             this.checkBoxTimeCreate.UseVisualStyleBackColor = true;
@@ -388,9 +388,9 @@
             // checkBoxDateAccess
             // 
             this.checkBoxDateAccess.AutoSize = true;
-            this.checkBoxDateAccess.Location = new System.Drawing.Point(100, 69);
+            this.checkBoxDateAccess.Location = new System.Drawing.Point(100, 73);
             this.checkBoxDateAccess.Name = "checkBoxDateAccess";
-            this.checkBoxDateAccess.Size = new System.Drawing.Size(81, 16);
+            this.checkBoxDateAccess.Size = new System.Drawing.Size(83, 19);
             this.checkBoxDateAccess.TabIndex = 13;
             this.checkBoxDateAccess.Text = "日付を変更";
             this.checkBoxDateAccess.UseVisualStyleBackColor = true;
@@ -402,15 +402,15 @@
             this.dateTimeDateUpdate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dateTimeDateUpdate.Location = new System.Drawing.Point(183, 19);
             this.dateTimeDateUpdate.Name = "dateTimeDateUpdate";
-            this.dateTimeDateUpdate.Size = new System.Drawing.Size(101, 19);
+            this.dateTimeDateUpdate.Size = new System.Drawing.Size(101, 23);
             this.dateTimeDateUpdate.TabIndex = 2;
             // 
             // checkBoxDateCreate
             // 
             this.checkBoxDateCreate.AutoSize = true;
-            this.checkBoxDateCreate.Location = new System.Drawing.Point(100, 44);
+            this.checkBoxDateCreate.Location = new System.Drawing.Point(100, 46);
             this.checkBoxDateCreate.Name = "checkBoxDateCreate";
-            this.checkBoxDateCreate.Size = new System.Drawing.Size(81, 16);
+            this.checkBoxDateCreate.Size = new System.Drawing.Size(83, 19);
             this.checkBoxDateCreate.TabIndex = 7;
             this.checkBoxDateCreate.Text = "日付を変更";
             this.checkBoxDateCreate.UseVisualStyleBackColor = true;
@@ -421,7 +421,7 @@
             this.checkBoxTimeUpdate.AutoSize = true;
             this.checkBoxTimeUpdate.Location = new System.Drawing.Point(304, 21);
             this.checkBoxTimeUpdate.Name = "checkBoxTimeUpdate";
-            this.checkBoxTimeUpdate.Size = new System.Drawing.Size(81, 16);
+            this.checkBoxTimeUpdate.Size = new System.Drawing.Size(83, 19);
             this.checkBoxTimeUpdate.TabIndex = 3;
             this.checkBoxTimeUpdate.Text = "時刻を変更";
             this.checkBoxTimeUpdate.UseVisualStyleBackColor = true;
@@ -432,7 +432,7 @@
             this.checkBoxDateUpdate.AutoSize = true;
             this.checkBoxDateUpdate.Location = new System.Drawing.Point(100, 21);
             this.checkBoxDateUpdate.Name = "checkBoxDateUpdate";
-            this.checkBoxDateUpdate.Size = new System.Drawing.Size(81, 16);
+            this.checkBoxDateUpdate.Size = new System.Drawing.Size(83, 19);
             this.checkBoxDateUpdate.TabIndex = 1;
             this.checkBoxDateUpdate.Text = "日付を変更";
             this.checkBoxDateUpdate.UseVisualStyleBackColor = true;
@@ -440,7 +440,7 @@
             // 
             // buttonOk
             // 
-            this.buttonOk.Location = new System.Drawing.Point(349, 322);
+            this.buttonOk.Location = new System.Drawing.Point(370, 343);
             this.buttonOk.Name = "buttonOk";
             this.buttonOk.Size = new System.Drawing.Size(73, 23);
             this.buttonOk.TabIndex = 4;
@@ -451,7 +451,7 @@
             // buttonCancel
             // 
             this.buttonCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.buttonCancel.Location = new System.Drawing.Point(430, 322);
+            this.buttonCancel.Location = new System.Drawing.Point(449, 343);
             this.buttonCancel.Name = "buttonCancel";
             this.buttonCancel.Size = new System.Drawing.Size(73, 23);
             this.buttonCancel.TabIndex = 5;
@@ -462,9 +462,9 @@
             // 
             this.groupBox4.Controls.Add(this.comboBoxFolder);
             this.groupBox4.Controls.Add(this.label6);
-            this.groupBox4.Location = new System.Drawing.Point(13, 269);
+            this.groupBox4.Location = new System.Drawing.Point(13, 280);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(490, 47);
+            this.groupBox4.Size = new System.Drawing.Size(509, 56);
             this.groupBox4.TabIndex = 3;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "処理対象";
@@ -475,7 +475,7 @@
             this.comboBoxFolder.FormattingEnabled = true;
             this.comboBoxFolder.Location = new System.Drawing.Point(130, 18);
             this.comboBoxFolder.Name = "comboBoxFolder";
-            this.comboBoxFolder.Size = new System.Drawing.Size(214, 20);
+            this.comboBoxFolder.Size = new System.Drawing.Size(214, 23);
             this.comboBoxFolder.TabIndex = 1;
             // 
             // label6
@@ -483,23 +483,24 @@
             this.label6.AutoSize = true;
             this.label6.Location = new System.Drawing.Point(7, 21);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(116, 12);
+            this.label6.Size = new System.Drawing.Size(123, 15);
             this.label6.TabIndex = 0;
             this.label6.Text = "フォルダの処理方法(&V):";
             // 
             // RenameSelectedFilesWindowsDialog
             // 
             this.AcceptButton = this.buttonOk;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.CancelButton = this.buttonCancel;
-            this.ClientSize = new System.Drawing.Size(515, 357);
+            this.ClientSize = new System.Drawing.Size(534, 378);
             this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.buttonCancel);
             this.Controls.Add(this.buttonOk);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
+            this.Font = new System.Drawing.Font("Yu Gothic UI", 9F);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.MaximizeBox = false;
             this.MinimizeBox = false;

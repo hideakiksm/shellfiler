@@ -148,11 +148,11 @@ namespace ShellFiler.FileTask {
         //=========================================================================================
         public void ExtractIcon() {
             if (m_srcIconExtractReal) {
-                m_srcIcon = m_srcFileSystemForIcon.ExtractFileIcon(m_srcFilePath, false, true, UIIconManager.CX_LARGE_ICON, UIIconManager.CY_LARGE_ICON);
-                m_destIcon = m_destFileSystemForIcon.ExtractFileIcon(m_destFilePath, false, true, UIIconManager.CX_LARGE_ICON, UIIconManager.CY_LARGE_ICON);
+                m_srcIcon = m_srcFileSystemForIcon.ExtractFileIcon(m_srcFilePath, false, true, UIIconManager.CxLargeIcon, UIIconManager.CyLargeIcon);
+                m_destIcon = m_destFileSystemForIcon.ExtractFileIcon(m_destFilePath, false, true, UIIconManager.CxLargeIcon, UIIconManager.CyLargeIcon);
             } else {
-                m_srcIcon = m_srcFileSystemForIcon.ExtractFileIcon(m_srcFilePath, false, false, UIIconManager.CX_LARGE_ICON, UIIconManager.CY_LARGE_ICON);     // 転送先で代用
-                m_destIcon = m_destFileSystemForIcon.ExtractFileIcon(m_destFilePath, false, true, UIIconManager.CX_LARGE_ICON, UIIconManager.CY_LARGE_ICON);
+                m_srcIcon = m_srcFileSystemForIcon.ExtractFileIcon(m_srcFilePath, false, false, UIIconManager.CxLargeIcon, UIIconManager.CyLargeIcon);     // 転送先で代用
+                m_destIcon = m_destFileSystemForIcon.ExtractFileIcon(m_destFilePath, false, true, UIIconManager.CxLargeIcon, UIIconManager.CyLargeIcon);
             }
         }
 

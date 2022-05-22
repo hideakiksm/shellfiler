@@ -27,8 +27,9 @@
             // 
             // MenuSamplePanel
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
+            this.Font = new System.Drawing.Font("Yu Gothic UI", 9F);
             this.Name = "MenuSamplePanel";
             this.Size = new System.Drawing.Size(192, 200);
             this.Paint += new System.Windows.Forms.PaintEventHandler(this.MenuSamplePanel_Paint);

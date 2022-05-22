@@ -33,13 +33,13 @@
             this.labelDetail.AutoSize = true;
             this.labelDetail.Location = new System.Drawing.Point(12, 9);
             this.labelDetail.Name = "labelDetail";
-            this.labelDetail.Size = new System.Drawing.Size(35, 12);
+            this.labelDetail.Size = new System.Drawing.Size(41, 15);
             this.labelDetail.TabIndex = 0;
             this.labelDetail.Text = "label1";
             // 
             // textBoxDetail
             // 
-            this.textBoxDetail.Location = new System.Drawing.Point(11, 24);
+            this.textBoxDetail.Location = new System.Drawing.Point(11, 26);
             this.textBoxDetail.Multiline = true;
             this.textBoxDetail.Name = "textBoxDetail";
             this.textBoxDetail.ReadOnly = true;
@@ -50,7 +50,7 @@
             // buttonClose
             // 
             this.buttonClose.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.buttonClose.Location = new System.Drawing.Point(327, 141);
+            this.buttonClose.Location = new System.Drawing.Point(327, 143);
             this.buttonClose.Name = "buttonClose";
             this.buttonClose.Size = new System.Drawing.Size(75, 23);
             this.buttonClose.TabIndex = 2;
@@ -60,13 +60,14 @@
             // PsDetailDialog
             // 
             this.AcceptButton = this.buttonClose;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.CancelButton = this.buttonClose;
-            this.ClientSize = new System.Drawing.Size(414, 176);
+            this.ClientSize = new System.Drawing.Size(414, 179);
             this.Controls.Add(this.buttonClose);
             this.Controls.Add(this.textBoxDetail);
             this.Controls.Add(this.labelDetail);
+            this.Font = new System.Drawing.Font("Yu Gothic UI", 9F);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.MaximizeBox = false;
             this.MinimizeBox = false;

@@ -31,12 +31,13 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(24, 15);
+            this.label1.Location = new System.Drawing.Point(82, 42);
+            this.label1.Margin = new System.Windows.Forms.Padding(7, 0, 7, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(207, 12);
+            this.label1.Size = new System.Drawing.Size(363, 30);
             this.label1.TabIndex = 1;
             this.label1.Text = "割り当てを確認したいキーを押してください。";
-            this.label1.Click += new System.EventHandler(panelInner_Click);
+            this.label1.Click += new System.EventHandler(this.panelInner_Click);
             // 
             // panelInner
             // 
@@ -44,20 +45,23 @@
             this.panelInner.Controls.Add(this.label1);
             this.panelInner.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelInner.Location = new System.Drawing.Point(0, 0);
+            this.panelInner.Margin = new System.Windows.Forms.Padding(7, 7, 7, 7);
             this.panelInner.Name = "panelInner";
-            this.panelInner.Size = new System.Drawing.Size(258, 47);
+            this.panelInner.Size = new System.Drawing.Size(541, 127);
             this.panelInner.TabIndex = 2;
             this.panelInner.Click += new System.EventHandler(this.panelInner_Click);
             // 
             // KeyBindHelpInputDialog
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(258, 47);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(168F, 168F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
+            this.ClientSize = new System.Drawing.Size(541, 127);
             this.ControlBox = false;
             this.Controls.Add(this.panelInner);
             this.Cursor = System.Windows.Forms.Cursors.Default;
+            this.Font = new System.Drawing.Font("Yu Gothic UI", 9F);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Margin = new System.Windows.Forms.Padding(7, 7, 7, 7);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "KeyBindHelpInputDialog";

@@ -136,12 +136,12 @@ namespace ShellFiler.UI.StateList {
                 TaskNodeImpl.CreateTaskNodeText(nodeDisplayInfo, out text, out hint);
                 const int CX_ICON_MARGIN = 4;
                 int xItem = 20;
-                int xItemText = xItem + UIIconManager.CX_DEFAULT_ICON + CX_ICON_MARGIN;
+                int xItemText = xItem + UIIconManager.CxDefaultIcon + CX_ICON_MARGIN;
                 int yItem = 0;
                 int cxItem = (int)(GraphicsUtils.MeasureString(graphics, font, text) + 1);
                 int cyItem = bounds.Height;
                 int yString = yItem + (bounds.Height - font.Height) / 2;
-                int yIcon = yItem + (bounds.Height - UIIconManager.CY_DEFAULT_ICON) / 2;
+                int yIcon = yItem + (bounds.Height - UIIconManager.CyDefaultIcon) / 2;
                 Rectangle rcItemText = new Rectangle(xItemText, yItem, cxItem, cyItem);
 
                 // 背景を描画

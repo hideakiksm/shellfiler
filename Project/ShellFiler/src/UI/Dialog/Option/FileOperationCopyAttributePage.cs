@@ -21,7 +21,7 @@ namespace ShellFiler.UI.Dialog.Option {
         const int MX = 10;
 
         // マトリクス境界のＹ座標マージン
-        const int MY = 4;
+        const int MY = 2;
 
         // マトリクス境界のＸ座標
         int[] X_MATRIX = new int[] { 0, 130 - MX, 220 - MX, 310 - MX, 400 - MX, 480};
@@ -96,20 +96,21 @@ namespace ShellFiler.UI.Dialog.Option {
         // 戻り値：なし
         //=========================================================================================
         private void panelWindows_Paint(object sender, PaintEventArgs evt) {
-            Graphics g = evt.Graphics;
-            Brush brush = new SolidBrush(GraphicsUtils.BrendColor(SystemColors.ControlDark, SystemColors.Control, SystemColors.Control));
-            try {
-                g.FillRectangle(brush, new Rectangle(X_MATRIX[0], Y_MATRIX[0], X_MATRIX[1], Y_MATRIX[5]));
-                g.FillRectangle(brush, new Rectangle(X_MATRIX[0], Y_MATRIX[0], X_MATRIX[5], Y_MATRIX[1]));
-            } finally {
-                brush.Dispose();
-            }
-            for (int i = 1; i <= 4; i++) {
-                g.DrawLine(SystemPens.ControlLightLight, X_MATRIX[0], Y_MATRIX[i], X_MATRIX[5], Y_MATRIX[i]);
-            }
-            for (int i = 1; i <= 4; i++) {
-                g.DrawLine(SystemPens.ControlLightLight, X_MATRIX[i], Y_MATRIX[0], X_MATRIX[i], Y_MATRIX[3]);
-                g.DrawLine(SystemPens.ControlLightLight, X_MATRIX[i], Y_MATRIX[4], X_MATRIX[i], Y_MATRIX[5]);
+            using (HighDpiGraphics g = new HighDpiGraphics(evt.Graphics)) {
+                Brush brush = new SolidBrush(GraphicsUtils.BrendColor(SystemColors.ControlDark, SystemColors.Control, SystemColors.Control));
+                try {
+                    g.Graphics.FillRectangle(brush, new Rectangle(g.X(X_MATRIX[0]), g.Y(Y_MATRIX[0]), g.X(X_MATRIX[1]), g.Y(Y_MATRIX[5])));
+                    g.Graphics.FillRectangle(brush, new Rectangle(g.X(X_MATRIX[0]), g.Y(Y_MATRIX[0]), g.X(X_MATRIX[5]), g.Y(Y_MATRIX[1])));
+                } finally {
+                    brush.Dispose();
+                }
+                for (int i = 1; i <= 4; i++) {
+                    g.DrawLine(SystemPens.ControlLightLight, X_MATRIX[0], Y_MATRIX[i], X_MATRIX[5], Y_MATRIX[i]);
+                }
+                for (int i = 1; i <= 4; i++) {
+                    g.DrawLine(SystemPens.ControlLightLight, X_MATRIX[i], Y_MATRIX[0], X_MATRIX[i], Y_MATRIX[3]);
+                    g.DrawLine(SystemPens.ControlLightLight, X_MATRIX[i], Y_MATRIX[4], X_MATRIX[i], Y_MATRIX[5]);
+                }
             }
         }
 
@@ -120,19 +121,20 @@ namespace ShellFiler.UI.Dialog.Option {
         // 戻り値：なし
         //=========================================================================================
         private void panelSSH_Paint(object sender, PaintEventArgs evt) {
-            Graphics g = evt.Graphics;
-            Brush brush = new SolidBrush(GraphicsUtils.BrendColor(SystemColors.ControlDark, SystemColors.Control, SystemColors.Control));
-            try {
-                g.FillRectangle(brush, new Rectangle(X_MATRIX[0], Y_MATRIX[0], X_MATRIX[1], Y_MATRIX[5]));
-                g.FillRectangle(brush, new Rectangle(X_MATRIX[0], Y_MATRIX[0], X_MATRIX[5], Y_MATRIX[1]));
-            } finally {
-                brush.Dispose();
-            }
-            for (int i = 1; i <= 4; i++) {
-                g.DrawLine(SystemPens.ControlLightLight, X_MATRIX[0], Y_MATRIX[i], X_MATRIX[5], Y_MATRIX[i]);
-            }
-            for (int i = 1; i <= 3; i++) {
-                g.DrawLine(SystemPens.ControlLightLight, X_MATRIX[i], Y_MATRIX[0], X_MATRIX[i], Y_MATRIX[5]);
+            using (HighDpiGraphics g = new HighDpiGraphics(evt.Graphics)) {
+                Brush brush = new SolidBrush(GraphicsUtils.BrendColor(SystemColors.ControlDark, SystemColors.Control, SystemColors.Control));
+                try {
+                    g.Graphics.FillRectangle(brush, new Rectangle(g.X(X_MATRIX[0]), g.Y(Y_MATRIX[0]), g.X(X_MATRIX[1]), g.Y(Y_MATRIX[5])));
+                    g.Graphics.FillRectangle(brush, new Rectangle(g.X(X_MATRIX[0]), g.Y(Y_MATRIX[0]), g.X(X_MATRIX[5]), g.Y(Y_MATRIX[1])));
+                } finally {
+                    brush.Dispose();
+                }
+                for (int i = 1; i <= 4; i++) {
+                    g.DrawLine(SystemPens.ControlLightLight, X_MATRIX[0], Y_MATRIX[i], X_MATRIX[5], Y_MATRIX[i]);
+                }
+                for (int i = 1; i <= 3; i++) {
+                    g.DrawLine(SystemPens.ControlLightLight, X_MATRIX[i], Y_MATRIX[0], X_MATRIX[i], Y_MATRIX[5]);
+                }
             }
         }
 

@@ -52,8 +52,8 @@
             this.treeViewSetting.Size = new System.Drawing.Size(351, 198);
             this.treeViewSetting.TabIndex = 0;
             this.treeViewSetting.BeforeCollapse += new System.Windows.Forms.TreeViewCancelEventHandler(this.treeViewSetting_BeforeCollapse);
-            this.treeViewSetting.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.treeViewSetting_AfterSelect);
             this.treeViewSetting.BeforeSelect += new System.Windows.Forms.TreeViewCancelEventHandler(this.treeViewSetting_BeforeSelect);
+            this.treeViewSetting.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.treeViewSetting_AfterSelect);
             // 
             // buttonNewFolder
             // 
@@ -100,7 +100,7 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(11, 220);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(60, 12);
+            this.label1.Size = new System.Drawing.Size(68, 15);
             this.label1.TabIndex = 7;
             this.label1.Text = "項目名(&M):";
             // 
@@ -109,7 +109,7 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(11, 245);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(57, 12);
+            this.label2.Size = new System.Drawing.Size(64, 15);
             this.label2.TabIndex = 9;
             this.label2.Text = "フォルダ(&F):";
             // 
@@ -117,14 +117,14 @@
             // 
             this.textBoxDispName.Location = new System.Drawing.Point(100, 217);
             this.textBoxDispName.Name = "textBoxDispName";
-            this.textBoxDispName.Size = new System.Drawing.Size(161, 19);
+            this.textBoxDispName.Size = new System.Drawing.Size(161, 23);
             this.textBoxDispName.TabIndex = 8;
             // 
             // textBoxFolder
             // 
             this.textBoxFolder.Location = new System.Drawing.Point(100, 242);
             this.textBoxFolder.Name = "textBoxFolder";
-            this.textBoxFolder.Size = new System.Drawing.Size(282, 19);
+            this.textBoxFolder.Size = new System.Drawing.Size(282, 23);
             this.textBoxFolder.TabIndex = 10;
             // 
             // buttonFolderRef
@@ -143,7 +143,7 @@
             this.comboBoxShortcut.FormattingEnabled = true;
             this.comboBoxShortcut.Location = new System.Drawing.Point(100, 268);
             this.comboBoxShortcut.Name = "comboBoxShortcut";
-            this.comboBoxShortcut.Size = new System.Drawing.Size(161, 20);
+            this.comboBoxShortcut.Size = new System.Drawing.Size(161, 23);
             this.comboBoxShortcut.TabIndex = 13;
             this.comboBoxShortcut.DropDown += new System.EventHandler(this.comboBoxShortcut_DropDown);
             // 
@@ -152,7 +152,7 @@
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(9, 271);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(80, 12);
+            this.label3.Size = new System.Drawing.Size(88, 15);
             this.label3.TabIndex = 12;
             this.label3.Text = "ショートカット(&S):";
             // 
@@ -199,8 +199,8 @@
             // BookmarkSettingDialog
             // 
             this.AcceptButton = this.buttonOk;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.CancelButton = this.buttonCancel;
             this.ClientSize = new System.Drawing.Size(475, 327);
             this.Controls.Add(this.comboBoxShortcut);
@@ -219,6 +219,7 @@
             this.Controls.Add(this.buttonNewGroup);
             this.Controls.Add(this.buttonNewFolder);
             this.Controls.Add(this.treeViewSetting);
+            this.Font = new System.Drawing.Font("Yu Gothic UI", 9F);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.MaximizeBox = false;
             this.MinimizeBox = false;

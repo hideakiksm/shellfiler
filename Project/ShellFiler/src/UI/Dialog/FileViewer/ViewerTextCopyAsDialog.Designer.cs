@@ -41,7 +41,7 @@
             this.radioCrOrg.AutoSize = true;
             this.radioCrOrg.Location = new System.Drawing.Point(10, 18);
             this.radioCrOrg.Name = "radioCrOrg";
-            this.radioCrOrg.Size = new System.Drawing.Size(79, 16);
+            this.radioCrOrg.Size = new System.Drawing.Size(84, 19);
             this.radioCrOrg.TabIndex = 0;
             this.radioCrOrg.TabStop = true;
             this.radioCrOrg.Text = "元のまま(&O)";
@@ -64,7 +64,7 @@
             this.radioCrCrLf.AutoSize = true;
             this.radioCrCrLf.Location = new System.Drawing.Point(10, 62);
             this.radioCrCrLf.Name = "radioCrCrLf";
-            this.radioCrCrLf.Size = new System.Drawing.Size(72, 16);
+            this.radioCrCrLf.Size = new System.Drawing.Size(82, 19);
             this.radioCrCrLf.TabIndex = 2;
             this.radioCrCrLf.TabStop = true;
             this.radioCrCrLf.Text = "CR+LF(L)";
@@ -75,7 +75,7 @@
             this.radioCrCr.AutoSize = true;
             this.radioCrCr.Location = new System.Drawing.Point(10, 40);
             this.radioCrCr.Name = "radioCrCr";
-            this.radioCrCr.Size = new System.Drawing.Size(74, 16);
+            this.radioCrCr.Size = new System.Drawing.Size(78, 19);
             this.radioCrCr.TabIndex = 1;
             this.radioCrCr.TabStop = true;
             this.radioCrCr.Text = "CRだけ(&C)";
@@ -97,7 +97,7 @@
             this.radioTabSpace.AutoSize = true;
             this.radioTabSpace.Location = new System.Drawing.Point(11, 41);
             this.radioTabSpace.Name = "radioTabSpace";
-            this.radioTabSpace.Size = new System.Drawing.Size(95, 16);
+            this.radioTabSpace.Size = new System.Drawing.Size(100, 19);
             this.radioTabSpace.TabIndex = 1;
             this.radioTabSpace.TabStop = true;
             this.radioTabSpace.Text = "空白に変換(&S)";
@@ -108,7 +108,7 @@
             this.radioTabOrg.AutoSize = true;
             this.radioTabOrg.Location = new System.Drawing.Point(11, 19);
             this.radioTabOrg.Name = "radioTabOrg";
-            this.radioTabOrg.Size = new System.Drawing.Size(116, 16);
+            this.radioTabOrg.Size = new System.Drawing.Size(120, 19);
             this.radioTabOrg.TabIndex = 0;
             this.radioTabOrg.TabStop = true;
             this.radioTabOrg.Text = "TABコードのまま(&T)";
@@ -137,14 +137,15 @@
             // ViewerTextCopyAsDialog
             // 
             this.AcceptButton = this.buttonOk;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.CancelButton = this.buttonCancel;
             this.ClientSize = new System.Drawing.Size(278, 142);
             this.Controls.Add(this.buttonCancel);
             this.Controls.Add(this.buttonOk);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
+            this.Font = new System.Drawing.Font("Yu Gothic UI", 9F);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.MaximizeBox = false;
             this.MinimizeBox = false;

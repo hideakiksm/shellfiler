@@ -24,8 +24,8 @@
         /// </summary>
         private void InitializeComponent() {
             this.listViewFiles = new System.Windows.Forms.ListView();
-            this.columnMark = new System.Windows.Forms.ColumnHeader();
-            this.columnFiles = new System.Windows.Forms.ColumnHeader();
+            this.columnMark = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnFiles = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.labelMark1 = new System.Windows.Forms.Label();
             this.labelMark2 = new System.Windows.Forms.Label();
             this.labelMark3 = new System.Windows.Forms.Label();
@@ -44,9 +44,10 @@
             this.columnMark,
             this.columnFiles});
             this.listViewFiles.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
+            this.listViewFiles.HideSelection = false;
             this.listViewFiles.Location = new System.Drawing.Point(12, 12);
             this.listViewFiles.Name = "listViewFiles";
-            this.listViewFiles.Size = new System.Drawing.Size(437, 137);
+            this.listViewFiles.Size = new System.Drawing.Size(456, 137);
             this.listViewFiles.TabIndex = 4;
             this.listViewFiles.UseCompatibleStateImageBehavior = false;
             this.listViewFiles.View = System.Windows.Forms.View.Details;
@@ -59,7 +60,7 @@
             // columnFiles
             // 
             this.columnFiles.Text = "ファイル名";
-            this.columnFiles.Width = 300;
+            this.columnFiles.Width = 315;
             // 
             // labelMark1
             // 
@@ -67,7 +68,7 @@
             this.labelMark1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.labelMark1.Location = new System.Drawing.Point(12, 156);
             this.labelMark1.Name = "labelMark1";
-            this.labelMark1.Size = new System.Drawing.Size(100, 12);
+            this.labelMark1.Size = new System.Drawing.Size(119, 15);
             this.labelMark1.TabIndex = 5;
             this.labelMark1.Text = "    マークNo.1: {0}件";
             this.labelMark1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -78,7 +79,7 @@
             this.labelMark2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.labelMark2.Location = new System.Drawing.Point(138, 156);
             this.labelMark2.Name = "labelMark2";
-            this.labelMark2.Size = new System.Drawing.Size(100, 12);
+            this.labelMark2.Size = new System.Drawing.Size(119, 15);
             this.labelMark2.TabIndex = 5;
             this.labelMark2.Text = "    マークNo.2: {0}件";
             this.labelMark2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -89,7 +90,7 @@
             this.labelMark3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.labelMark3.Location = new System.Drawing.Point(264, 156);
             this.labelMark3.Name = "labelMark3";
-            this.labelMark3.Size = new System.Drawing.Size(100, 12);
+            this.labelMark3.Size = new System.Drawing.Size(119, 15);
             this.labelMark3.TabIndex = 5;
             this.labelMark3.Text = "    マークNo.3: {0}件";
             this.labelMark3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -100,7 +101,7 @@
             this.labelMark4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.labelMark4.Location = new System.Drawing.Point(12, 170);
             this.labelMark4.Name = "labelMark4";
-            this.labelMark4.Size = new System.Drawing.Size(100, 12);
+            this.labelMark4.Size = new System.Drawing.Size(119, 15);
             this.labelMark4.TabIndex = 5;
             this.labelMark4.Text = "    マークNo.4: {0}件";
             this.labelMark4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -111,7 +112,7 @@
             this.labelMark5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.labelMark5.Location = new System.Drawing.Point(138, 170);
             this.labelMark5.Name = "labelMark5";
-            this.labelMark5.Size = new System.Drawing.Size(100, 12);
+            this.labelMark5.Size = new System.Drawing.Size(119, 15);
             this.labelMark5.TabIndex = 5;
             this.labelMark5.Text = "    マークNo.5: {0}件";
             this.labelMark5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -122,7 +123,7 @@
             this.labelMark6.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.labelMark6.Location = new System.Drawing.Point(264, 170);
             this.labelMark6.Name = "labelMark6";
-            this.labelMark6.Size = new System.Drawing.Size(100, 12);
+            this.labelMark6.Size = new System.Drawing.Size(119, 15);
             this.labelMark6.TabIndex = 5;
             this.labelMark6.Text = "    マークNo.6: {0}件";
             this.labelMark6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -133,7 +134,7 @@
             this.labelMark7.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.labelMark7.Location = new System.Drawing.Point(12, 184);
             this.labelMark7.Name = "labelMark7";
-            this.labelMark7.Size = new System.Drawing.Size(100, 12);
+            this.labelMark7.Size = new System.Drawing.Size(119, 15);
             this.labelMark7.TabIndex = 5;
             this.labelMark7.Text = "    マークNo.7: {0}件";
             this.labelMark7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -144,7 +145,7 @@
             this.labelMark8.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.labelMark8.Location = new System.Drawing.Point(138, 184);
             this.labelMark8.Name = "labelMark8";
-            this.labelMark8.Size = new System.Drawing.Size(100, 12);
+            this.labelMark8.Size = new System.Drawing.Size(119, 15);
             this.labelMark8.TabIndex = 5;
             this.labelMark8.Text = "    マークNo.8: {0}件";
             this.labelMark8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -155,7 +156,7 @@
             this.labelMark9.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.labelMark9.Location = new System.Drawing.Point(264, 184);
             this.labelMark9.Name = "labelMark9";
-            this.labelMark9.Size = new System.Drawing.Size(100, 12);
+            this.labelMark9.Size = new System.Drawing.Size(119, 15);
             this.labelMark9.TabIndex = 5;
             this.labelMark9.Text = "    マークNo.9: {0}件";
             this.labelMark9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -163,7 +164,7 @@
             // buttonClose
             // 
             this.buttonClose.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.buttonClose.Location = new System.Drawing.Point(375, 176);
+            this.buttonClose.Location = new System.Drawing.Point(393, 182);
             this.buttonClose.Name = "buttonClose";
             this.buttonClose.Size = new System.Drawing.Size(75, 23);
             this.buttonClose.TabIndex = 6;
@@ -174,10 +175,10 @@
             // MarkFileListDialog
             // 
             this.AcceptButton = this.buttonClose;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.CancelButton = this.buttonClose;
-            this.ClientSize = new System.Drawing.Size(462, 211);
+            this.ClientSize = new System.Drawing.Size(480, 217);
             this.Controls.Add(this.buttonClose);
             this.Controls.Add(this.labelMark9);
             this.Controls.Add(this.labelMark8);
@@ -189,6 +190,7 @@
             this.Controls.Add(this.labelMark2);
             this.Controls.Add(this.labelMark1);
             this.Controls.Add(this.listViewFiles);
+            this.Font = new System.Drawing.Font("Yu Gothic UI", 9F);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.MaximizeBox = false;
             this.MinimizeBox = false;

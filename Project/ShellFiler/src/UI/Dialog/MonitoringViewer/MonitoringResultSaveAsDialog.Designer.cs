@@ -52,7 +52,7 @@
             this.radioFormatCsv.AutoSize = true;
             this.radioFormatCsv.Location = new System.Drawing.Point(6, 63);
             this.radioFormatCsv.Name = "radioFormatCsv";
-            this.radioFormatCsv.Size = new System.Drawing.Size(120, 16);
+            this.radioFormatCsv.Size = new System.Drawing.Size(125, 19);
             this.radioFormatCsv.TabIndex = 2;
             this.radioFormatCsv.TabStop = true;
             this.radioFormatCsv.Text = "表示内容のCSV(&C)";
@@ -63,7 +63,7 @@
             this.radioFormatTab.AutoSize = true;
             this.radioFormatTab.Location = new System.Drawing.Point(7, 41);
             this.radioFormatTab.Name = "radioFormatTab";
-            this.radioFormatTab.Size = new System.Drawing.Size(181, 16);
+            this.radioFormatTab.Size = new System.Drawing.Size(186, 19);
             this.radioFormatTab.TabIndex = 1;
             this.radioFormatTab.TabStop = true;
             this.radioFormatTab.Text = "表示内容のタブ区切りテキスト(&T)";
@@ -74,7 +74,7 @@
             this.radioFormatOrg.AutoSize = true;
             this.radioFormatOrg.Location = new System.Drawing.Point(7, 19);
             this.radioFormatOrg.Name = "radioFormatOrg";
-            this.radioFormatOrg.Size = new System.Drawing.Size(177, 16);
+            this.radioFormatOrg.Size = new System.Drawing.Size(181, 19);
             this.radioFormatOrg.TabIndex = 0;
             this.radioFormatOrg.TabStop = true;
             this.radioFormatOrg.Text = "コマンドの実行結果のテキスト(&X)";
@@ -85,20 +85,20 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(16, 108);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(68, 12);
+            this.label1.Size = new System.Drawing.Size(75, 15);
             this.label1.TabIndex = 1;
             this.label1.Text = "ファイル名(&F):";
             // 
             // textBoxFileName
             // 
-            this.textBoxFileName.Location = new System.Drawing.Point(22, 123);
+            this.textBoxFileName.Location = new System.Drawing.Point(22, 127);
             this.textBoxFileName.Name = "textBoxFileName";
-            this.textBoxFileName.Size = new System.Drawing.Size(322, 19);
+            this.textBoxFileName.Size = new System.Drawing.Size(322, 23);
             this.textBoxFileName.TabIndex = 2;
             // 
             // buttonFileNameRef
             // 
-            this.buttonFileNameRef.Location = new System.Drawing.Point(350, 121);
+            this.buttonFileNameRef.Location = new System.Drawing.Point(350, 127);
             this.buttonFileNameRef.Name = "buttonFileNameRef";
             this.buttonFileNameRef.Size = new System.Drawing.Size(75, 23);
             this.buttonFileNameRef.TabIndex = 3;
@@ -109,7 +109,7 @@
             // buttonCancel
             // 
             this.buttonCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.buttonCancel.Location = new System.Drawing.Point(350, 163);
+            this.buttonCancel.Location = new System.Drawing.Point(350, 170);
             this.buttonCancel.Name = "buttonCancel";
             this.buttonCancel.Size = new System.Drawing.Size(75, 23);
             this.buttonCancel.TabIndex = 5;
@@ -118,7 +118,7 @@
             // 
             // buttonOk
             // 
-            this.buttonOk.Location = new System.Drawing.Point(269, 163);
+            this.buttonOk.Location = new System.Drawing.Point(269, 170);
             this.buttonOk.Name = "buttonOk";
             this.buttonOk.Size = new System.Drawing.Size(75, 23);
             this.buttonOk.TabIndex = 4;
@@ -129,16 +129,17 @@
             // MonitoringResultSaveAsDialog
             // 
             this.AcceptButton = this.buttonOk;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.CancelButton = this.buttonCancel;
-            this.ClientSize = new System.Drawing.Size(437, 198);
+            this.ClientSize = new System.Drawing.Size(437, 205);
             this.Controls.Add(this.buttonOk);
             this.Controls.Add(this.buttonCancel);
             this.Controls.Add(this.buttonFileNameRef);
             this.Controls.Add(this.textBoxFileName);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.groupBox1);
+            this.Font = new System.Drawing.Font("Yu Gothic UI", 9F);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.MaximizeBox = false;
             this.MinimizeBox = false;

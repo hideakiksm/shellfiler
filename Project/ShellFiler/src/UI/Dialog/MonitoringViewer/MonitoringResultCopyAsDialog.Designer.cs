@@ -39,7 +39,7 @@
             this.groupBox1.Controls.Add(this.radioFormatCsv);
             this.groupBox1.Controls.Add(this.radioFormatTab);
             this.groupBox1.Controls.Add(this.radioFormatOrg);
-            this.groupBox1.Location = new System.Drawing.Point(12, 137);
+            this.groupBox1.Location = new System.Drawing.Point(12, 139);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(225, 89);
             this.groupBox1.TabIndex = 0;
@@ -51,7 +51,7 @@
             this.radioFormatCsv.AutoSize = true;
             this.radioFormatCsv.Location = new System.Drawing.Point(6, 63);
             this.radioFormatCsv.Name = "radioFormatCsv";
-            this.radioFormatCsv.Size = new System.Drawing.Size(120, 16);
+            this.radioFormatCsv.Size = new System.Drawing.Size(125, 19);
             this.radioFormatCsv.TabIndex = 2;
             this.radioFormatCsv.TabStop = true;
             this.radioFormatCsv.Text = "表示内容のCSV(&C)";
@@ -63,7 +63,7 @@
             this.radioFormatTab.AutoSize = true;
             this.radioFormatTab.Location = new System.Drawing.Point(7, 41);
             this.radioFormatTab.Name = "radioFormatTab";
-            this.radioFormatTab.Size = new System.Drawing.Size(181, 16);
+            this.radioFormatTab.Size = new System.Drawing.Size(186, 19);
             this.radioFormatTab.TabIndex = 1;
             this.radioFormatTab.TabStop = true;
             this.radioFormatTab.Text = "表示内容のタブ区切りテキスト(&T)";
@@ -75,7 +75,7 @@
             this.radioFormatOrg.AutoSize = true;
             this.radioFormatOrg.Location = new System.Drawing.Point(7, 19);
             this.radioFormatOrg.Name = "radioFormatOrg";
-            this.radioFormatOrg.Size = new System.Drawing.Size(177, 16);
+            this.radioFormatOrg.Size = new System.Drawing.Size(181, 19);
             this.radioFormatOrg.TabIndex = 0;
             this.radioFormatOrg.TabStop = true;
             this.radioFormatOrg.Text = "コマンドの実行結果のテキスト(&X)";
@@ -104,7 +104,7 @@
             // 
             // textBoxSample
             // 
-            this.textBoxSample.Location = new System.Drawing.Point(15, 28);
+            this.textBoxSample.Location = new System.Drawing.Point(15, 30);
             this.textBoxSample.Multiline = true;
             this.textBoxSample.Name = "textBoxSample";
             this.textBoxSample.ScrollBars = System.Windows.Forms.ScrollBars.Both;
@@ -117,15 +117,15 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(13, 13);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(85, 12);
+            this.label1.Size = new System.Drawing.Size(93, 15);
             this.label1.TabIndex = 7;
             this.label1.Text = "コピー文字列(&S):";
             // 
             // MonitoringResultCopyAsDialog
             // 
             this.AcceptButton = this.buttonOk;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.CancelButton = this.buttonCancel;
             this.ClientSize = new System.Drawing.Size(437, 265);
             this.Controls.Add(this.label1);
@@ -133,6 +133,7 @@
             this.Controls.Add(this.buttonOk);
             this.Controls.Add(this.buttonCancel);
             this.Controls.Add(this.groupBox1);
+            this.Font = new System.Drawing.Font("Yu Gothic UI", 9F);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.MaximizeBox = false;
             this.MinimizeBox = false;

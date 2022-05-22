@@ -39,7 +39,7 @@ namespace ShellFiler.UI.Dialog {
             // カラムを初期化
             ColumnHeader columnCommand = new ColumnHeader();
             columnCommand.Text = Resources.DlgKeyBind_ColumnCommand;
-            columnCommand.Width = 200;
+            columnCommand.Width = MainWindowForm.X(280);
             ColumnHeader columnKey = new ColumnHeader();
             columnKey.Text = Resources.DlgKeyBind_ColumnKey;
             columnKey.Width = -2;

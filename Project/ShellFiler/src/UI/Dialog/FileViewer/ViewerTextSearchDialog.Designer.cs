@@ -38,16 +38,16 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(12, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(101, 12);
+            this.label1.Size = new System.Drawing.Size(109, 15);
             this.label1.TabIndex = 0;
             this.label1.Text = "検索する文字列(&S):";
             // 
             // checkBoxWord
             // 
             this.checkBoxWord.AutoSize = true;
-            this.checkBoxWord.Location = new System.Drawing.Point(12, 94);
+            this.checkBoxWord.Location = new System.Drawing.Point(12, 102);
             this.checkBoxWord.Name = "checkBoxWord";
-            this.checkBoxWord.Size = new System.Drawing.Size(89, 16);
+            this.checkBoxWord.Size = new System.Drawing.Size(96, 19);
             this.checkBoxWord.TabIndex = 5;
             this.checkBoxWord.Text = "単語単位(&W)";
             this.checkBoxWord.UseVisualStyleBackColor = true;
@@ -57,16 +57,16 @@
             // 
             this.comboBoxOption.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxOption.FormattingEnabled = true;
-            this.comboBoxOption.Location = new System.Drawing.Point(12, 68);
+            this.comboBoxOption.Location = new System.Drawing.Point(12, 72);
             this.comboBoxOption.Name = "comboBoxOption";
-            this.comboBoxOption.Size = new System.Drawing.Size(284, 20);
+            this.comboBoxOption.Size = new System.Drawing.Size(294, 23);
             this.comboBoxOption.TabIndex = 4;
             // 
             // buttonInputHelp
             // 
-            this.buttonInputHelp.Location = new System.Drawing.Point(302, 24);
+            this.buttonInputHelp.Location = new System.Drawing.Point(314, 26);
             this.buttonInputHelp.Name = "buttonInputHelp";
-            this.buttonInputHelp.Size = new System.Drawing.Size(26, 20);
+            this.buttonInputHelp.Size = new System.Drawing.Size(26, 23);
             this.buttonInputHelp.TabIndex = 2;
             this.buttonInputHelp.Text = ">>";
             this.buttonInputHelp.UseVisualStyleBackColor = true;
@@ -75,7 +75,7 @@
             // buttonClose
             // 
             this.buttonClose.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.buttonClose.Location = new System.Drawing.Point(253, 110);
+            this.buttonClose.Location = new System.Drawing.Point(265, 124);
             this.buttonClose.Name = "buttonClose";
             this.buttonClose.Size = new System.Drawing.Size(75, 23);
             this.buttonClose.TabIndex = 6;
@@ -86,26 +86,26 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(10, 53);
+            this.label2.Location = new System.Drawing.Point(10, 55);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(90, 12);
+            this.label2.Size = new System.Drawing.Size(98, 15);
             this.label2.TabIndex = 3;
             this.label2.Text = "検索オプション(&O):";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(12, 117);
+            this.label3.Location = new System.Drawing.Point(12, 124);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(218, 12);
+            this.label3.Size = new System.Drawing.Size(234, 15);
             this.label3.TabIndex = 7;
             this.label3.Text = "F1:先頭、F2:末尾、↑↓:次候補、→:メニュー";
             // 
             // textBoxInput
             // 
-            this.textBoxInput.Location = new System.Drawing.Point(14, 25);
+            this.textBoxInput.Location = new System.Drawing.Point(14, 27);
             this.textBoxInput.Name = "textBoxInput";
-            this.textBoxInput.Size = new System.Drawing.Size(284, 19);
+            this.textBoxInput.Size = new System.Drawing.Size(294, 23);
             this.textBoxInput.TabIndex = 1;
             this.textBoxInput.TextChanged += new System.EventHandler(this.textBoxInput_TextChanged);
             this.textBoxInput.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBoxInput_KeyDown);
@@ -113,10 +113,10 @@
             // ViewerTextSearchDialog
             // 
             this.AcceptButton = this.buttonClose;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.CancelButton = this.buttonClose;
-            this.ClientSize = new System.Drawing.Size(340, 145);
+            this.ClientSize = new System.Drawing.Size(352, 159);
             this.Controls.Add(this.textBoxInput);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.buttonClose);
@@ -125,6 +125,7 @@
             this.Controls.Add(this.checkBoxWord);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.Font = new System.Drawing.Font("Yu Gothic UI", 9F);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.MaximizeBox = false;
             this.MinimizeBox = false;

@@ -24,13 +24,7 @@
         /// </summary>
         private void InitializeComponent() {
             this.components = new System.ComponentModel.Container();
-            this.visualBellTimer = new System.Windows.Forms.Timer(this.components);
             this.SuspendLayout();
-            // 
-            // visualBellTimer
-            // 
-            this.visualBellTimer.Interval = 20;
-            this.visualBellTimer.Tick += new System.EventHandler(this.visualBellTimer_Tick);
             // 
             // TextFileViewer
             // 
@@ -46,7 +40,5 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Timer visualBellTimer;
     }
 }

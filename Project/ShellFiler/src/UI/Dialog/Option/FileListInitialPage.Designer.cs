@@ -46,10 +46,10 @@
             this.radioButtonRightPrev = new System.Windows.Forms.RadioButton();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.trackBarSplash = new System.Windows.Forms.TrackBar();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericWndY2)).BeginInit();
@@ -76,7 +76,7 @@
             // 
             // buttonLeftRef
             // 
-            this.buttonLeftRef.Location = new System.Drawing.Point(433, 57);
+            this.buttonLeftRef.Location = new System.Drawing.Point(433, 59);
             this.buttonLeftRef.Name = "buttonLeftRef";
             this.buttonLeftRef.Size = new System.Drawing.Size(75, 23);
             this.buttonLeftRef.TabIndex = 3;
@@ -88,7 +88,7 @@
             // 
             this.textBoxLeftFolder.Location = new System.Drawing.Point(28, 59);
             this.textBoxLeftFolder.Name = "textBoxLeftFolder";
-            this.textBoxLeftFolder.Size = new System.Drawing.Size(399, 19);
+            this.textBoxLeftFolder.Size = new System.Drawing.Size(399, 23);
             this.textBoxLeftFolder.TabIndex = 2;
             // 
             // radioButtonLeftFix
@@ -96,7 +96,7 @@
             this.radioButtonLeftFix.AutoSize = true;
             this.radioButtonLeftFix.Location = new System.Drawing.Point(7, 41);
             this.radioButtonLeftFix.Name = "radioButtonLeftFix";
-            this.radioButtonLeftFix.Size = new System.Drawing.Size(151, 16);
+            this.radioButtonLeftFix.Size = new System.Drawing.Size(163, 19);
             this.radioButtonLeftFix.TabIndex = 1;
             this.radioButtonLeftFix.TabStop = true;
             this.radioButtonLeftFix.Text = "指定のWindowsフォルダ(&F)";
@@ -108,7 +108,7 @@
             this.radioButtonLeftPrev.AutoSize = true;
             this.radioButtonLeftPrev.Location = new System.Drawing.Point(7, 19);
             this.radioButtonLeftPrev.Name = "radioButtonLeftPrev";
-            this.radioButtonLeftPrev.Size = new System.Drawing.Size(142, 16);
+            this.radioButtonLeftPrev.Size = new System.Drawing.Size(147, 19);
             this.radioButtonLeftPrev.TabIndex = 0;
             this.radioButtonLeftPrev.TabStop = true;
             this.radioButtonLeftPrev.Text = "前回終了時のフォルダ(&L)";
@@ -137,24 +137,24 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(290, 43);
+            this.label3.Location = new System.Drawing.Point(290, 41);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(53, 12);
+            this.label3.Size = new System.Drawing.Size(55, 15);
             this.label3.TabIndex = 8;
             this.label3.Text = "右下座標";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(126, 44);
+            this.label2.Location = new System.Drawing.Point(126, 41);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(53, 12);
+            this.label2.Size = new System.Drawing.Size(55, 15);
             this.label2.TabIndex = 8;
             this.label2.Text = "左上座標";
             // 
             // buttonWndRef
             // 
-            this.buttonWndRef.Location = new System.Drawing.Point(433, 55);
+            this.buttonWndRef.Location = new System.Drawing.Point(433, 57);
             this.buttonWndRef.Name = "buttonWndRef";
             this.buttonWndRef.Size = new System.Drawing.Size(75, 23);
             this.buttonWndRef.TabIndex = 7;
@@ -167,7 +167,7 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(269, 60);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(17, 12);
+            this.label1.Size = new System.Drawing.Size(19, 15);
             this.label1.TabIndex = 4;
             this.label1.Text = "～";
             // 
@@ -180,7 +180,7 @@
             0,
             0});
             this.numericWndY2.Name = "numericWndY2";
-            this.numericWndY2.Size = new System.Drawing.Size(59, 19);
+            this.numericWndY2.Size = new System.Drawing.Size(59, 23);
             this.numericWndY2.TabIndex = 6;
             // 
             // numericWndX2
@@ -192,7 +192,7 @@
             0,
             0});
             this.numericWndX2.Name = "numericWndX2";
-            this.numericWndX2.Size = new System.Drawing.Size(59, 19);
+            this.numericWndX2.Size = new System.Drawing.Size(59, 23);
             this.numericWndX2.TabIndex = 5;
             // 
             // numericWndY1
@@ -204,7 +204,7 @@
             0,
             0});
             this.numericWndY1.Name = "numericWndY1";
-            this.numericWndY1.Size = new System.Drawing.Size(59, 19);
+            this.numericWndY1.Size = new System.Drawing.Size(59, 23);
             this.numericWndY1.TabIndex = 3;
             // 
             // numericWndX1
@@ -216,7 +216,7 @@
             0,
             0});
             this.numericWndX1.Name = "numericWndX1";
-            this.numericWndX1.Size = new System.Drawing.Size(59, 19);
+            this.numericWndX1.Size = new System.Drawing.Size(59, 23);
             this.numericWndX1.TabIndex = 2;
             // 
             // radioButtonWndFix
@@ -224,7 +224,7 @@
             this.radioButtonWndFix.AutoSize = true;
             this.radioButtonWndFix.Location = new System.Drawing.Point(7, 42);
             this.radioButtonWndFix.Name = "radioButtonWndFix";
-            this.radioButtonWndFix.Size = new System.Drawing.Size(91, 16);
+            this.radioButtonWndFix.Size = new System.Drawing.Size(96, 19);
             this.radioButtonWndFix.TabIndex = 1;
             this.radioButtonWndFix.TabStop = true;
             this.radioButtonWndFix.Text = "固定サイズ(&X)";
@@ -236,7 +236,7 @@
             this.radioButtonWndPrev.AutoSize = true;
             this.radioButtonWndPrev.Location = new System.Drawing.Point(7, 19);
             this.radioButtonWndPrev.Name = "radioButtonWndPrev";
-            this.radioButtonWndPrev.Size = new System.Drawing.Size(137, 16);
+            this.radioButtonWndPrev.Size = new System.Drawing.Size(141, 19);
             this.radioButtonWndPrev.TabIndex = 0;
             this.radioButtonWndPrev.TabStop = true;
             this.radioButtonWndPrev.Text = "前回終了時のサイズ(&P)";
@@ -257,7 +257,7 @@
             // 
             // buttonRightRef
             // 
-            this.buttonRightRef.Location = new System.Drawing.Point(433, 58);
+            this.buttonRightRef.Location = new System.Drawing.Point(433, 60);
             this.buttonRightRef.Name = "buttonRightRef";
             this.buttonRightRef.Size = new System.Drawing.Size(75, 23);
             this.buttonRightRef.TabIndex = 3;
@@ -269,7 +269,7 @@
             // 
             this.textBoxRightFolder.Location = new System.Drawing.Point(28, 60);
             this.textBoxRightFolder.Name = "textBoxRightFolder";
-            this.textBoxRightFolder.Size = new System.Drawing.Size(399, 19);
+            this.textBoxRightFolder.Size = new System.Drawing.Size(399, 23);
             this.textBoxRightFolder.TabIndex = 2;
             // 
             // radioButtonRightFix
@@ -277,7 +277,7 @@
             this.radioButtonRightFix.AutoSize = true;
             this.radioButtonRightFix.Location = new System.Drawing.Point(7, 41);
             this.radioButtonRightFix.Name = "radioButtonRightFix";
-            this.radioButtonRightFix.Size = new System.Drawing.Size(152, 16);
+            this.radioButtonRightFix.Size = new System.Drawing.Size(165, 19);
             this.radioButtonRightFix.TabIndex = 1;
             this.radioButtonRightFix.TabStop = true;
             this.radioButtonRightFix.Text = "指定のWindowsフォルダ(&O)";
@@ -289,7 +289,7 @@
             this.radioButtonRightPrev.AutoSize = true;
             this.radioButtonRightPrev.Location = new System.Drawing.Point(7, 19);
             this.radioButtonRightPrev.Name = "radioButtonRightPrev";
-            this.radioButtonRightPrev.Size = new System.Drawing.Size(144, 16);
+            this.radioButtonRightPrev.Size = new System.Drawing.Size(148, 19);
             this.radioButtonRightPrev.TabIndex = 0;
             this.radioButtonRightPrev.TabStop = true;
             this.radioButtonRightPrev.Text = "前回終了時のフォルダ(&R)";
@@ -312,55 +312,56 @@
             // 
             // trackBarSplash
             // 
-            this.trackBarSplash.Location = new System.Drawing.Point(45, 18);
+            this.trackBarSplash.Location = new System.Drawing.Point(45, 20);
             this.trackBarSplash.Name = "trackBarSplash";
             this.trackBarSplash.Size = new System.Drawing.Size(104, 45);
             this.trackBarSplash.TabIndex = 1;
             // 
-            // label4
+            // label7
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(15, 18);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(27, 12);
-            this.label4.TabIndex = 0;
-            this.label4.Text = "短い";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(152, 18);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(27, 12);
-            this.label5.TabIndex = 2;
-            this.label5.Text = "長い";
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(202, 36);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(235, 15);
+            this.label7.TabIndex = 4;
+            this.label7.Text = "処理が長引いた場合はそれ以上短くなりません。";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(202, 18);
+            this.label6.Location = new System.Drawing.Point(202, 20);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(276, 12);
+            this.label6.Size = new System.Drawing.Size(278, 15);
             this.label6.TabIndex = 3;
             this.label6.Text = "起動時にタイトルが表示されてから消えるまでの時間です。";
             // 
-            // label7
+            // label5
             // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(202, 30);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(233, 12);
-            this.label7.TabIndex = 4;
-            this.label7.Text = "処理が長引いた場合はそれ以上短くなりません。";
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(152, 20);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(29, 15);
+            this.label5.TabIndex = 2;
+            this.label5.Text = "長い";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(15, 20);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(29, 15);
+            this.label4.TabIndex = 0;
+            this.label4.Text = "短い";
             // 
             // FileListInitialPage
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
+            this.Font = new System.Drawing.Font("Yu Gothic UI", 9F);
             this.Name = "FileListInitialPage";
             this.Size = new System.Drawing.Size(520, 370);
             this.groupBox1.ResumeLayout(false);

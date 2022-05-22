@@ -4,6 +4,7 @@ using System.Text;
 using System.Drawing;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
+using ShellFiler.UI;
 
 namespace ShellFiler.Util {
 
@@ -122,9 +123,9 @@ namespace ShellFiler.Util {
                 for (int i = 0; i < this.TabPages.Count; i++) {
                     rect = this.GetTabCloseButtonRect(i);
                     if (rect.Contains(pt)) {
-                        g.DrawImage(ShellFiler.Properties.Resources.TabClose_Focus, rect.X, rect.Y, CX_BUTTON, CY_BUTTON);
+                        g.DrawImage(UIIconManager.TabClose_Focus, rect.X, rect.Y, CX_BUTTON, CY_BUTTON);
                     } else {
-                        g.DrawImage(ShellFiler.Properties.Resources.TabClose_Normal, rect.X, rect.Y, CX_BUTTON, CY_BUTTON);
+                        g.DrawImage(UIIconManager.TabClose_Normal, rect.X, rect.Y, CX_BUTTON, CY_BUTTON);
                     }
                 }
             } finally {

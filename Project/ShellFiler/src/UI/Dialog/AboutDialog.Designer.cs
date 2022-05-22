@@ -37,39 +37,42 @@ namespace ShellFiler.UI.Dialog {
             // labelCopyright
             // 
             this.labelCopyright.AutoSize = true;
-            this.labelCopyright.Location = new System.Drawing.Point(34, 89);
+            this.labelCopyright.Location = new System.Drawing.Point(62, 156);
+            this.labelCopyright.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.labelCopyright.Name = "labelCopyright";
-            this.labelCopyright.Size = new System.Drawing.Size(33, 12);
+            this.labelCopyright.Size = new System.Drawing.Size(61, 30);
             this.labelCopyright.TabIndex = 1;
             this.labelCopyright.Text = "XXXX";
             // 
             // labelVersion
             // 
             this.labelVersion.AutoSize = true;
-            this.labelVersion.Font = new System.Drawing.Font("MS UI Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.labelVersion.Location = new System.Drawing.Point(34, 77);
+            this.labelVersion.Location = new System.Drawing.Point(62, 135);
+            this.labelVersion.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.labelVersion.Name = "labelVersion";
-            this.labelVersion.Size = new System.Drawing.Size(60, 12);
+            this.labelVersion.Size = new System.Drawing.Size(110, 30);
             this.labelVersion.TabIndex = 0;
             this.labelVersion.Text = "Version {0}";
             // 
             // textBoxLibrary
             // 
             this.textBoxLibrary.BackColor = System.Drawing.SystemColors.Window;
-            this.textBoxLibrary.Location = new System.Drawing.Point(12, 145);
+            this.textBoxLibrary.Location = new System.Drawing.Point(22, 254);
+            this.textBoxLibrary.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.textBoxLibrary.Multiline = true;
             this.textBoxLibrary.Name = "textBoxLibrary";
             this.textBoxLibrary.ReadOnly = true;
             this.textBoxLibrary.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.textBoxLibrary.Size = new System.Drawing.Size(512, 153);
+            this.textBoxLibrary.Size = new System.Drawing.Size(935, 265);
             this.textBoxLibrary.TabIndex = 5;
             // 
             // buttonClose
             // 
             this.buttonClose.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.buttonClose.Location = new System.Drawing.Point(450, 304);
+            this.buttonClose.Location = new System.Drawing.Point(825, 532);
+            this.buttonClose.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.buttonClose.Name = "buttonClose";
-            this.buttonClose.Size = new System.Drawing.Size(75, 23);
+            this.buttonClose.Size = new System.Drawing.Size(138, 40);
             this.buttonClose.TabIndex = 6;
             this.buttonClose.Text = "閉じる";
             this.buttonClose.UseVisualStyleBackColor = true;
@@ -77,26 +80,29 @@ namespace ShellFiler.UI.Dialog {
             // 
             // pictureBoxIcon
             // 
-            this.pictureBoxIcon.Location = new System.Drawing.Point(321, 12);
+            this.pictureBoxIcon.Location = new System.Drawing.Point(588, 21);
+            this.pictureBoxIcon.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.pictureBoxIcon.Name = "pictureBoxIcon";
-            this.pictureBoxIcon.Size = new System.Drawing.Size(49, 49);
+            this.pictureBoxIcon.Size = new System.Drawing.Size(90, 86);
             this.pictureBoxIcon.TabIndex = 7;
             this.pictureBoxIcon.TabStop = false;
             // 
             // pictureBoxLogo
             // 
-            this.pictureBoxLogo.Location = new System.Drawing.Point(13, 12);
+            this.pictureBoxLogo.Location = new System.Drawing.Point(24, 21);
+            this.pictureBoxLogo.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.pictureBoxLogo.Name = "pictureBoxLogo";
-            this.pictureBoxLogo.Size = new System.Drawing.Size(285, 49);
+            this.pictureBoxLogo.Size = new System.Drawing.Size(522, 86);
             this.pictureBoxLogo.TabIndex = 8;
             this.pictureBoxLogo.TabStop = false;
             // 
             // linkLabelLicense
             // 
             this.linkLabelLicense.AutoSize = true;
-            this.linkLabelLicense.Location = new System.Drawing.Point(34, 120);
+            this.linkLabelLicense.Location = new System.Drawing.Point(62, 210);
+            this.linkLabelLicense.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.linkLabelLicense.Name = "linkLabelLicense";
-            this.linkLabelLicense.Size = new System.Drawing.Size(128, 12);
+            this.linkLabelLicense.Size = new System.Drawing.Size(225, 30);
             this.linkLabelLicense.TabIndex = 4;
             this.linkLabelLicense.TabStop = true;
             this.linkLabelLicense.Text = "ShellFilerのGitHubページ";
@@ -105,11 +111,11 @@ namespace ShellFiler.UI.Dialog {
             // AboutDialog
             // 
             this.AcceptButton = this.buttonClose;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(168F, 168F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.SystemColors.Window;
             this.CancelButton = this.buttonClose;
-            this.ClientSize = new System.Drawing.Size(536, 339);
+            this.ClientSize = new System.Drawing.Size(983, 593);
             this.Controls.Add(this.linkLabelLicense);
             this.Controls.Add(this.pictureBoxLogo);
             this.Controls.Add(this.pictureBoxIcon);
@@ -117,7 +123,9 @@ namespace ShellFiler.UI.Dialog {
             this.Controls.Add(this.textBoxLibrary);
             this.Controls.Add(this.labelVersion);
             this.Controls.Add(this.labelCopyright);
+            this.Font = new System.Drawing.Font("Yu Gothic UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "AboutDialog";

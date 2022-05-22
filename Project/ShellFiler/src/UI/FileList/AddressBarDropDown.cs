@@ -59,6 +59,9 @@ namespace ShellFiler.UI.FileList {
         // ファイル一覧フィルターのアイコンボタン
         private IconButton m_buttonFileListFilter;
 
+        // ボタンのアイコンサイズ
+        private Size m_iconSize;
+
         // ドロップダウン項目の情報
         List<AddressBarSettingRuntimeItem> m_dropDownItemList = null;
 
@@ -83,20 +86,21 @@ namespace ShellFiler.UI.FileList {
             this.ComboBox.DrawMode = DrawMode.OwnerDrawFixed;
             this.ComboBox.DropDownStyle = ComboBoxStyle.DropDownList;
 
-            int x = m_parent.Location.X + this.ComboBox.Location.X + X_MARGIN_TEXT;
-            int y = m_parent.Location.Y + this.ComboBox.Location.Y + Y_MARGIN_TEXT;
+            int x = m_parent.Location.X + this.ComboBox.Location.X + MainWindowForm.X(X_MARGIN_TEXT);
+            int y = m_parent.Location.Y + this.ComboBox.Location.Y + MainWindowForm.Y(Y_MARGIN_TEXT);
             int cx = this.ComboBox.Size.Width;
             int cy = this.ComboBox.Size.Height;
             m_textBoxInput = new TextBox();
             m_textBoxInput.Location = new Point(x, y);
-            m_textBoxInput.Size = new Size(cx - CX_MARGIN_TEXT, cy);
+            m_textBoxInput.Size = new Size(cx - MainWindowForm.X(CX_MARGIN_TEXT), cy);
             m_textBoxInput.BorderStyle = BorderStyle.None;
             m_textBoxInput.KeyDown += new KeyEventHandler(this.ComboBoxDirectory_KeyDown);
             m_textBoxInput.LostFocus += new EventHandler(this.ComboBoxDirectory_LostFocus);
             this.ComboBox.Controls.Add(m_textBoxInput);
 
+            m_iconSize = new Size(MainWindowForm.X(CX_ICON_BUTTON), MainWindowForm.Y(CY_ICON_BUTTON));
             m_buttonFileListFilter = new IconButton(UIIconManager.IconImageList, (int)(IconImageListID.FileList_FilterMini));
-            m_buttonFileListFilter.Size = new Size(CX_ICON_BUTTON, CY_ICON_BUTTON);
+            m_buttonFileListFilter.Size = m_iconSize;
             this.ComboBox.Controls.Add(m_buttonFileListFilter);
 
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.ComboBoxDirectory_KeyDown);
@@ -116,9 +120,9 @@ namespace ShellFiler.UI.FileList {
         //=========================================================================================
         public void SetSize(int cx, int cy) {
             this.Size = new Size(cx, cy);
-            m_textBoxInput.Size = new Size(cx - CX_MARGIN_TEXT - CX_ICON_BUTTON, cy);
+            m_textBoxInput.Size = new Size(cx - MainWindowForm.X(CX_MARGIN_TEXT) - MainWindowForm.X(CX_ICON_BUTTON), cy);
             cy = this.ComboBox.Size.Height;
-            m_buttonFileListFilter.Location = new Point(m_textBoxInput.Location.X + cx - CX_MARGIN_TEXT - CX_ICON_BUTTON, (cy - CY_ICON_BUTTON) / 2 + ((cy > CY_ICON_BUTTON + 2) ? 1 : 0));
+            m_buttonFileListFilter.Location = new Point(m_textBoxInput.Location.X + cx - MainWindowForm.X(CX_MARGIN_TEXT) - MainWindowForm.X(CX_ICON_BUTTON), (cy - MainWindowForm.Y(CY_ICON_BUTTON)) / 2 + ((cy > MainWindowForm.X(CY_ICON_BUTTON + 2)) ? 1 : 0));
             m_buttonFileListFilter.Invalidate();
         }
 
@@ -131,9 +135,9 @@ namespace ShellFiler.UI.FileList {
         void ComboBoxDirectory_DrawItem(object sender, DrawItemEventArgs evt) {
             DoubleBuffer doubleBuffer = new DoubleBuffer(evt.Graphics, evt.Bounds.Width, evt.Bounds.Height);
             doubleBuffer.SetDrawOrigin(-evt.Bounds.Left, -evt.Bounds.Top);
-            Graphics g = doubleBuffer.DrawingGraphics;
+            HighDpiGraphics g = new HighDpiGraphics(doubleBuffer.DrawingGraphics);
             Brush brush = new SolidBrush(this.BackColor);
-            g.FillRectangle(brush, evt.Bounds);
+            g.Graphics.FillRectangle(brush, evt.Bounds);
             brush.Dispose();
             try {
                 if (m_iconFolder == null) {
@@ -142,9 +146,9 @@ namespace ShellFiler.UI.FileList {
                     m_iconFolder = icon.IconImage;
                 }
                 int xPos = evt.Bounds.Left + 1;
-                int yPos = evt.Bounds.Top + (evt.Bounds.Height - IconSize.Small16.CxIconSize) / 2;
+                int yPos = evt.Bounds.Top + (evt.Bounds.Height - m_iconSize.Height) / 2;
                 if (evt.Index == -1 || (evt.State & DrawItemState.ComboBoxEdit) == DrawItemState.ComboBoxEdit) {
-                    g.DrawImage(m_iconFolder, xPos, yPos);
+                    g.Graphics.DrawImage(m_iconFolder, xPos, yPos, m_iconSize.Width, m_iconSize.Height);
                 } else {
                     AddressBarSettingRuntimeItem item = m_dropDownItemList[evt.Index];
                     const int CX_SHIFT_DEPTH = 16;
@@ -153,20 +157,21 @@ namespace ShellFiler.UI.FileList {
                     if (icon == null) {
                         icon = m_iconFolder;
                     }
-                    g.DrawImage(icon, xPos, yPos);
+                    int iconSize = Math.Min(m_iconSize.Height, evt.Bounds.Height);
+                    g.Graphics.DrawImage(icon, xPos, yPos, iconSize, iconSize);
                     const int CX_MARGIN = 8;
-                    int xName = xPos + IconSize.Small16.CxIconSize + CX_MARGIN;
+                    int xName = xPos + m_iconSize.Width + g.X(CX_MARGIN);
                     int yName = evt.Bounds.Top + (evt.Bounds.Height - this.Font.Height) / 2;
-                    int cxName = (int)(GraphicsUtils.MeasureString(g, this.Font, item.DisplayName) + 1);
+                    int cxName = (int)(GraphicsUtils.MeasureString(g.Graphics, this.Font, item.DisplayName) + 1);
                     int cyName = this.Font.Height;
                     Rectangle rcName = new Rectangle(xName, yName, cxName, cyName);
                     if ((evt.State & DrawItemState.Focus) == DrawItemState.Focus) {
                         Rectangle rcBack = FormUtils.ShrinkRectangle(rcName, 1);
-                        g.FillRectangle(SystemBrushes.MenuHighlight, rcBack);
-                        ControlPaint.DrawFocusRectangle(g, rcName);
-                        g.DrawString(item.DisplayName, this.Font, SystemBrushes.HighlightText, new Point(xName, yName));
+                        g.Graphics.FillRectangle(SystemBrushes.MenuHighlight, rcBack);
+                        ControlPaint.DrawFocusRectangle(g.Graphics, rcName);
+                        g.Graphics.DrawString(item.DisplayName, this.Font, SystemBrushes.HighlightText, new Point(xName, yName));
                     } else {
-                        g.DrawString(item.DisplayName, this.Font, SystemBrushes.ControlText, new Point(xName, yName));
+                        g.Graphics.DrawString(item.DisplayName, this.Font, SystemBrushes.ControlText, new Point(xName, yName));
                     }
                 }
             } finally {

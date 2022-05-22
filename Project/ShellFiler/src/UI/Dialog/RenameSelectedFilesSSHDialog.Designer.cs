@@ -44,11 +44,16 @@
             this.checkBoxOwnerRead = new System.Windows.Forms.CheckBox();
             this.label5 = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.textBoxTimeAccess = new System.Windows.Forms.MaskedTextBox();
             this.textBoxTimeUpdate = new System.Windows.Forms.MaskedTextBox();
             this.buttonCurrent = new System.Windows.Forms.Button();
             this.buttonNoon = new System.Windows.Forms.Button();
+            this.dateTimeDateAccess = new System.Windows.Forms.DateTimePicker();
+            this.checkBoxTimeAccess = new System.Windows.Forms.CheckBox();
             this.dateTimeDateUpdate = new System.Windows.Forms.DateTimePicker();
+            this.checkBoxDateAccess = new System.Windows.Forms.CheckBox();
             this.checkBoxTimeUpdate = new System.Windows.Forms.CheckBox();
             this.checkBoxDateUpdate = new System.Windows.Forms.CheckBox();
             this.buttonOk = new System.Windows.Forms.Button();
@@ -61,11 +66,6 @@
             this.checkBoxOwner = new System.Windows.Forms.CheckBox();
             this.textBoxGroup = new System.Windows.Forms.TextBox();
             this.textBoxOwner = new System.Windows.Forms.TextBox();
-            this.checkBoxDateAccess = new System.Windows.Forms.CheckBox();
-            this.checkBoxTimeAccess = new System.Windows.Forms.CheckBox();
-            this.dateTimeDateAccess = new System.Windows.Forms.DateTimePicker();
-            this.textBoxTimeAccess = new System.Windows.Forms.MaskedTextBox();
-            this.label4 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -84,14 +84,14 @@
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Location = new System.Drawing.Point(13, 13);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(473, 102);
+            this.groupBox1.Size = new System.Drawing.Size(473, 108);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "ファイル名";
             // 
             // buttonSequential
             // 
-            this.buttonSequential.Location = new System.Drawing.Point(168, 71);
+            this.buttonSequential.Location = new System.Drawing.Point(168, 75);
             this.buttonSequential.Name = "buttonSequential";
             this.buttonSequential.Size = new System.Drawing.Size(75, 23);
             this.buttonSequential.TabIndex = 6;
@@ -101,7 +101,7 @@
             // 
             // buttonNameLower
             // 
-            this.buttonNameLower.Location = new System.Drawing.Point(87, 71);
+            this.buttonNameLower.Location = new System.Drawing.Point(87, 75);
             this.buttonNameLower.Name = "buttonNameLower";
             this.buttonNameLower.Size = new System.Drawing.Size(75, 23);
             this.buttonNameLower.TabIndex = 5;
@@ -111,7 +111,7 @@
             // 
             // buttonNameUpper
             // 
-            this.buttonNameUpper.Location = new System.Drawing.Point(6, 71);
+            this.buttonNameUpper.Location = new System.Drawing.Point(6, 75);
             this.buttonNameUpper.Name = "buttonNameUpper";
             this.buttonNameUpper.Size = new System.Drawing.Size(75, 23);
             this.buttonNameUpper.TabIndex = 4;
@@ -123,9 +123,9 @@
             // 
             this.comboBoxNameExt.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxNameExt.FormattingEnabled = true;
-            this.comboBoxNameExt.Location = new System.Drawing.Point(106, 45);
+            this.comboBoxNameExt.Location = new System.Drawing.Point(106, 47);
             this.comboBoxNameExt.Name = "comboBoxNameExt";
-            this.comboBoxNameExt.Size = new System.Drawing.Size(238, 20);
+            this.comboBoxNameExt.Size = new System.Drawing.Size(238, 23);
             this.comboBoxNameExt.TabIndex = 3;
             // 
             // comboBoxNameBody
@@ -134,15 +134,15 @@
             this.comboBoxNameBody.FormattingEnabled = true;
             this.comboBoxNameBody.Location = new System.Drawing.Point(106, 19);
             this.comboBoxNameBody.Name = "comboBoxNameBody";
-            this.comboBoxNameBody.Size = new System.Drawing.Size(238, 20);
+            this.comboBoxNameBody.Size = new System.Drawing.Size(238, 23);
             this.comboBoxNameBody.TabIndex = 1;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(7, 48);
+            this.label2.Location = new System.Drawing.Point(7, 50);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(58, 12);
+            this.label2.Size = new System.Drawing.Size(65, 15);
             this.label2.TabIndex = 2;
             this.label2.Text = "拡張子(&E):";
             // 
@@ -151,7 +151,7 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(7, 22);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(92, 12);
+            this.label1.Size = new System.Drawing.Size(99, 15);
             this.label1.TabIndex = 0;
             this.label1.Text = "ファイル名主部(&F):";
             // 
@@ -168,9 +168,9 @@
             this.groupBox2.Controls.Add(this.checkBoxOtherRead);
             this.groupBox2.Controls.Add(this.checkBoxOwnerRead);
             this.groupBox2.Controls.Add(this.label5);
-            this.groupBox2.Location = new System.Drawing.Point(12, 121);
+            this.groupBox2.Location = new System.Drawing.Point(12, 128);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(169, 228);
+            this.groupBox2.Size = new System.Drawing.Size(169, 240);
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "属性";
@@ -180,19 +180,19 @@
             this.textBoxAttirbute.Location = new System.Drawing.Point(59, 18);
             this.textBoxAttirbute.Mask = "000";
             this.textBoxAttirbute.Name = "textBoxAttirbute";
-            this.textBoxAttirbute.Size = new System.Drawing.Size(100, 19);
+            this.textBoxAttirbute.Size = new System.Drawing.Size(100, 23);
             this.textBoxAttirbute.TabIndex = 11;
-            this.textBoxAttirbute.Leave += new System.EventHandler(this.textBoxAttirbute_Leave);
             this.textBoxAttirbute.TextChanged += new System.EventHandler(this.textBoxAttirbute_TextChanged);
+            this.textBoxAttirbute.Leave += new System.EventHandler(this.textBoxAttirbute_Leave);
             // 
             // checkBoxGroupExecute
             // 
             this.checkBoxGroupExecute.AutoSize = true;
             this.checkBoxGroupExecute.Checked = true;
             this.checkBoxGroupExecute.CheckState = System.Windows.Forms.CheckState.Indeterminate;
-            this.checkBoxGroupExecute.Location = new System.Drawing.Point(11, 144);
+            this.checkBoxGroupExecute.Location = new System.Drawing.Point(11, 150);
             this.checkBoxGroupExecute.Name = "checkBoxGroupExecute";
-            this.checkBoxGroupExecute.Size = new System.Drawing.Size(112, 16);
+            this.checkBoxGroupExecute.Size = new System.Drawing.Size(117, 19);
             this.checkBoxGroupExecute.TabIndex = 7;
             this.checkBoxGroupExecute.Text = "グループ実行可(&3)";
             this.checkBoxGroupExecute.ThreeState = true;
@@ -204,9 +204,9 @@
             this.checkBoxOtherExecute.AutoSize = true;
             this.checkBoxOtherExecute.Checked = true;
             this.checkBoxOtherExecute.CheckState = System.Windows.Forms.CheckState.Indeterminate;
-            this.checkBoxOtherExecute.Location = new System.Drawing.Point(11, 204);
+            this.checkBoxOtherExecute.Location = new System.Drawing.Point(11, 213);
             this.checkBoxOtherExecute.Name = "checkBoxOtherExecute";
-            this.checkBoxOtherExecute.Size = new System.Drawing.Size(98, 16);
+            this.checkBoxOtherExecute.Size = new System.Drawing.Size(103, 19);
             this.checkBoxOtherExecute.TabIndex = 10;
             this.checkBoxOtherExecute.Text = "他人実行可(&6)";
             this.checkBoxOtherExecute.ThreeState = true;
@@ -218,9 +218,9 @@
             this.checkBoxGroupWrite.AutoSize = true;
             this.checkBoxGroupWrite.Checked = true;
             this.checkBoxGroupWrite.CheckState = System.Windows.Forms.CheckState.Indeterminate;
-            this.checkBoxGroupWrite.Location = new System.Drawing.Point(11, 124);
+            this.checkBoxGroupWrite.Location = new System.Drawing.Point(11, 129);
             this.checkBoxGroupWrite.Name = "checkBoxGroupWrite";
-            this.checkBoxGroupWrite.Size = new System.Drawing.Size(132, 16);
+            this.checkBoxGroupWrite.Size = new System.Drawing.Size(137, 19);
             this.checkBoxGroupWrite.TabIndex = 6;
             this.checkBoxGroupWrite.Text = "グループ書き込み可(&2)";
             this.checkBoxGroupWrite.ThreeState = true;
@@ -232,9 +232,9 @@
             this.checkBoxOtherWrite.AutoSize = true;
             this.checkBoxOtherWrite.Checked = true;
             this.checkBoxOtherWrite.CheckState = System.Windows.Forms.CheckState.Indeterminate;
-            this.checkBoxOtherWrite.Location = new System.Drawing.Point(11, 184);
+            this.checkBoxOtherWrite.Location = new System.Drawing.Point(11, 192);
             this.checkBoxOtherWrite.Name = "checkBoxOtherWrite";
-            this.checkBoxOtherWrite.Size = new System.Drawing.Size(118, 16);
+            this.checkBoxOtherWrite.Size = new System.Drawing.Size(123, 19);
             this.checkBoxOtherWrite.TabIndex = 9;
             this.checkBoxOtherWrite.Text = "他人書き込み可(&5)";
             this.checkBoxOtherWrite.ThreeState = true;
@@ -246,9 +246,9 @@
             this.checkBoxOwnerExecute.AutoSize = true;
             this.checkBoxOwnerExecute.Checked = true;
             this.checkBoxOwnerExecute.CheckState = System.Windows.Forms.CheckState.Indeterminate;
-            this.checkBoxOwnerExecute.Location = new System.Drawing.Point(11, 84);
+            this.checkBoxOwnerExecute.Location = new System.Drawing.Point(11, 87);
             this.checkBoxOwnerExecute.Name = "checkBoxOwnerExecute";
-            this.checkBoxOwnerExecute.Size = new System.Drawing.Size(111, 16);
+            this.checkBoxOwnerExecute.Size = new System.Drawing.Size(116, 19);
             this.checkBoxOwnerExecute.TabIndex = 4;
             this.checkBoxOwnerExecute.Text = "所有者実行可(&X)";
             this.checkBoxOwnerExecute.ThreeState = true;
@@ -260,9 +260,9 @@
             this.checkBoxGroupRead.AutoSize = true;
             this.checkBoxGroupRead.Checked = true;
             this.checkBoxGroupRead.CheckState = System.Windows.Forms.CheckState.Indeterminate;
-            this.checkBoxGroupRead.Location = new System.Drawing.Point(11, 104);
+            this.checkBoxGroupRead.Location = new System.Drawing.Point(11, 108);
             this.checkBoxGroupRead.Name = "checkBoxGroupRead";
-            this.checkBoxGroupRead.Size = new System.Drawing.Size(134, 16);
+            this.checkBoxGroupRead.Size = new System.Drawing.Size(139, 19);
             this.checkBoxGroupRead.TabIndex = 5;
             this.checkBoxGroupRead.Text = "グループ読み込み可(&1)";
             this.checkBoxGroupRead.ThreeState = true;
@@ -274,9 +274,9 @@
             this.checkBoxOwnerWrite.AutoSize = true;
             this.checkBoxOwnerWrite.Checked = true;
             this.checkBoxOwnerWrite.CheckState = System.Windows.Forms.CheckState.Indeterminate;
-            this.checkBoxOwnerWrite.Location = new System.Drawing.Point(11, 64);
+            this.checkBoxOwnerWrite.Location = new System.Drawing.Point(11, 66);
             this.checkBoxOwnerWrite.Name = "checkBoxOwnerWrite";
-            this.checkBoxOwnerWrite.Size = new System.Drawing.Size(133, 16);
+            this.checkBoxOwnerWrite.Size = new System.Drawing.Size(140, 19);
             this.checkBoxOwnerWrite.TabIndex = 3;
             this.checkBoxOwnerWrite.Text = "所有者書き込み可(&W)";
             this.checkBoxOwnerWrite.ThreeState = true;
@@ -288,9 +288,9 @@
             this.checkBoxOtherRead.AutoSize = true;
             this.checkBoxOtherRead.Checked = true;
             this.checkBoxOtherRead.CheckState = System.Windows.Forms.CheckState.Indeterminate;
-            this.checkBoxOtherRead.Location = new System.Drawing.Point(11, 164);
+            this.checkBoxOtherRead.Location = new System.Drawing.Point(11, 171);
             this.checkBoxOtherRead.Name = "checkBoxOtherRead";
-            this.checkBoxOtherRead.Size = new System.Drawing.Size(120, 16);
+            this.checkBoxOtherRead.Size = new System.Drawing.Size(125, 19);
             this.checkBoxOtherRead.TabIndex = 8;
             this.checkBoxOtherRead.Text = "他人読み込み可(&4)";
             this.checkBoxOtherRead.ThreeState = true;
@@ -302,9 +302,9 @@
             this.checkBoxOwnerRead.AutoSize = true;
             this.checkBoxOwnerRead.Checked = true;
             this.checkBoxOwnerRead.CheckState = System.Windows.Forms.CheckState.Indeterminate;
-            this.checkBoxOwnerRead.Location = new System.Drawing.Point(11, 44);
+            this.checkBoxOwnerRead.Location = new System.Drawing.Point(11, 45);
             this.checkBoxOwnerRead.Name = "checkBoxOwnerRead";
-            this.checkBoxOwnerRead.Size = new System.Drawing.Size(134, 16);
+            this.checkBoxOwnerRead.Size = new System.Drawing.Size(138, 19);
             this.checkBoxOwnerRead.TabIndex = 2;
             this.checkBoxOwnerRead.Text = "所有者読み込み可(&R)";
             this.checkBoxOwnerRead.ThreeState = true;
@@ -316,7 +316,7 @@
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(6, 19);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(47, 12);
+            this.label5.Size = new System.Drawing.Size(55, 15);
             this.label5.TabIndex = 0;
             this.label5.Text = "直接(&D):";
             // 
@@ -334,34 +334,52 @@
             this.groupBox3.Controls.Add(this.checkBoxDateAccess);
             this.groupBox3.Controls.Add(this.checkBoxTimeUpdate);
             this.groupBox3.Controls.Add(this.checkBoxDateUpdate);
-            this.groupBox3.Location = new System.Drawing.Point(187, 127);
+            this.groupBox3.Location = new System.Drawing.Point(187, 128);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(299, 146);
+            this.groupBox3.Size = new System.Drawing.Size(299, 160);
             this.groupBox3.TabIndex = 2;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "タイムスタンプ";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(6, 76);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(85, 15);
+            this.label4.TabIndex = 5;
+            this.label4.Text = "アクセス日時(&A)";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(6, 22);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(69, 12);
+            this.label3.Size = new System.Drawing.Size(74, 15);
             this.label3.TabIndex = 0;
             this.label3.Text = "更新日時(&U)";
             // 
+            // textBoxTimeAccess
+            // 
+            this.textBoxTimeAccess.Location = new System.Drawing.Point(183, 100);
+            this.textBoxTimeAccess.Mask = "90:00:00";
+            this.textBoxTimeAccess.Name = "textBoxTimeAccess";
+            this.textBoxTimeAccess.Size = new System.Drawing.Size(101, 23);
+            this.textBoxTimeAccess.TabIndex = 9;
+            this.textBoxTimeAccess.Text = "120000";
+            // 
             // textBoxTimeUpdate
             // 
-            this.textBoxTimeUpdate.Location = new System.Drawing.Point(183, 44);
+            this.textBoxTimeUpdate.Location = new System.Drawing.Point(183, 46);
             this.textBoxTimeUpdate.Mask = "90:00:00";
             this.textBoxTimeUpdate.Name = "textBoxTimeUpdate";
-            this.textBoxTimeUpdate.Size = new System.Drawing.Size(101, 19);
+            this.textBoxTimeUpdate.Size = new System.Drawing.Size(101, 23);
             this.textBoxTimeUpdate.TabIndex = 4;
             this.textBoxTimeUpdate.Text = "120000";
             // 
             // buttonCurrent
             // 
-            this.buttonCurrent.Location = new System.Drawing.Point(5, 117);
+            this.buttonCurrent.Location = new System.Drawing.Point(5, 129);
             this.buttonCurrent.Name = "buttonCurrent";
             this.buttonCurrent.Size = new System.Drawing.Size(79, 23);
             this.buttonCurrent.TabIndex = 10;
@@ -371,7 +389,7 @@
             // 
             // buttonNoon
             // 
-            this.buttonNoon.Location = new System.Drawing.Point(90, 117);
+            this.buttonNoon.Location = new System.Drawing.Point(90, 129);
             this.buttonNoon.Name = "buttonNoon";
             this.buttonNoon.Size = new System.Drawing.Size(80, 23);
             this.buttonNoon.TabIndex = 11;
@@ -379,21 +397,52 @@
             this.buttonNoon.UseVisualStyleBackColor = true;
             this.buttonNoon.Click += new System.EventHandler(this.buttonNoon_Click);
             // 
+            // dateTimeDateAccess
+            // 
+            this.dateTimeDateAccess.CustomFormat = "yyyy/MM/dd";
+            this.dateTimeDateAccess.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dateTimeDateAccess.Location = new System.Drawing.Point(183, 73);
+            this.dateTimeDateAccess.Name = "dateTimeDateAccess";
+            this.dateTimeDateAccess.Size = new System.Drawing.Size(101, 23);
+            this.dateTimeDateAccess.TabIndex = 7;
+            // 
+            // checkBoxTimeAccess
+            // 
+            this.checkBoxTimeAccess.AutoSize = true;
+            this.checkBoxTimeAccess.Location = new System.Drawing.Point(100, 102);
+            this.checkBoxTimeAccess.Name = "checkBoxTimeAccess";
+            this.checkBoxTimeAccess.Size = new System.Drawing.Size(83, 19);
+            this.checkBoxTimeAccess.TabIndex = 8;
+            this.checkBoxTimeAccess.Text = "時刻を変更";
+            this.checkBoxTimeAccess.UseVisualStyleBackColor = true;
+            this.checkBoxTimeAccess.CheckedChanged += new System.EventHandler(this.CheckBoxDateTime_CheckedChanged);
+            // 
             // dateTimeDateUpdate
             // 
             this.dateTimeDateUpdate.CustomFormat = "yyyy/MM/dd";
             this.dateTimeDateUpdate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dateTimeDateUpdate.Location = new System.Drawing.Point(183, 19);
             this.dateTimeDateUpdate.Name = "dateTimeDateUpdate";
-            this.dateTimeDateUpdate.Size = new System.Drawing.Size(101, 19);
+            this.dateTimeDateUpdate.Size = new System.Drawing.Size(101, 23);
             this.dateTimeDateUpdate.TabIndex = 2;
+            // 
+            // checkBoxDateAccess
+            // 
+            this.checkBoxDateAccess.AutoSize = true;
+            this.checkBoxDateAccess.Location = new System.Drawing.Point(100, 75);
+            this.checkBoxDateAccess.Name = "checkBoxDateAccess";
+            this.checkBoxDateAccess.Size = new System.Drawing.Size(83, 19);
+            this.checkBoxDateAccess.TabIndex = 6;
+            this.checkBoxDateAccess.Text = "日付を変更";
+            this.checkBoxDateAccess.UseVisualStyleBackColor = true;
+            this.checkBoxDateAccess.CheckedChanged += new System.EventHandler(this.CheckBoxDateTime_CheckedChanged);
             // 
             // checkBoxTimeUpdate
             // 
             this.checkBoxTimeUpdate.AutoSize = true;
-            this.checkBoxTimeUpdate.Location = new System.Drawing.Point(100, 46);
+            this.checkBoxTimeUpdate.Location = new System.Drawing.Point(100, 48);
             this.checkBoxTimeUpdate.Name = "checkBoxTimeUpdate";
-            this.checkBoxTimeUpdate.Size = new System.Drawing.Size(81, 16);
+            this.checkBoxTimeUpdate.Size = new System.Drawing.Size(83, 19);
             this.checkBoxTimeUpdate.TabIndex = 3;
             this.checkBoxTimeUpdate.Text = "時刻を変更";
             this.checkBoxTimeUpdate.UseVisualStyleBackColor = true;
@@ -404,7 +453,7 @@
             this.checkBoxDateUpdate.AutoSize = true;
             this.checkBoxDateUpdate.Location = new System.Drawing.Point(100, 21);
             this.checkBoxDateUpdate.Name = "checkBoxDateUpdate";
-            this.checkBoxDateUpdate.Size = new System.Drawing.Size(81, 16);
+            this.checkBoxDateUpdate.Size = new System.Drawing.Size(83, 19);
             this.checkBoxDateUpdate.TabIndex = 1;
             this.checkBoxDateUpdate.Text = "日付を変更";
             this.checkBoxDateUpdate.UseVisualStyleBackColor = true;
@@ -412,7 +461,7 @@
             // 
             // buttonOk
             // 
-            this.buttonOk.Location = new System.Drawing.Point(332, 408);
+            this.buttonOk.Location = new System.Drawing.Point(332, 434);
             this.buttonOk.Name = "buttonOk";
             this.buttonOk.Size = new System.Drawing.Size(73, 23);
             this.buttonOk.TabIndex = 5;
@@ -423,7 +472,7 @@
             // buttonCancel
             // 
             this.buttonCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.buttonCancel.Location = new System.Drawing.Point(413, 408);
+            this.buttonCancel.Location = new System.Drawing.Point(413, 434);
             this.buttonCancel.Name = "buttonCancel";
             this.buttonCancel.Size = new System.Drawing.Size(73, 23);
             this.buttonCancel.TabIndex = 6;
@@ -434,7 +483,7 @@
             // 
             this.groupBox4.Controls.Add(this.comboBoxFolder);
             this.groupBox4.Controls.Add(this.label6);
-            this.groupBox4.Location = new System.Drawing.Point(12, 355);
+            this.groupBox4.Location = new System.Drawing.Point(12, 374);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Size = new System.Drawing.Size(474, 47);
             this.groupBox4.TabIndex = 4;
@@ -447,7 +496,7 @@
             this.comboBoxFolder.FormattingEnabled = true;
             this.comboBoxFolder.Location = new System.Drawing.Point(130, 18);
             this.comboBoxFolder.Name = "comboBoxFolder";
-            this.comboBoxFolder.Size = new System.Drawing.Size(214, 20);
+            this.comboBoxFolder.Size = new System.Drawing.Size(214, 23);
             this.comboBoxFolder.TabIndex = 1;
             // 
             // label6
@@ -455,7 +504,7 @@
             this.label6.AutoSize = true;
             this.label6.Location = new System.Drawing.Point(7, 21);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(116, 12);
+            this.label6.Size = new System.Drawing.Size(123, 15);
             this.label6.TabIndex = 0;
             this.label6.Text = "フォルダの処理方法(&V):";
             // 
@@ -465,9 +514,9 @@
             this.groupBox5.Controls.Add(this.checkBoxOwner);
             this.groupBox5.Controls.Add(this.textBoxGroup);
             this.groupBox5.Controls.Add(this.textBoxOwner);
-            this.groupBox5.Location = new System.Drawing.Point(187, 279);
+            this.groupBox5.Location = new System.Drawing.Point(187, 294);
             this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(299, 70);
+            this.groupBox5.Size = new System.Drawing.Size(299, 74);
             this.groupBox5.TabIndex = 3;
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "オーナー";
@@ -475,9 +524,9 @@
             // checkBoxGroup
             // 
             this.checkBoxGroup.AutoSize = true;
-            this.checkBoxGroup.Location = new System.Drawing.Point(6, 45);
+            this.checkBoxGroup.Location = new System.Drawing.Point(6, 47);
             this.checkBoxGroup.Name = "checkBoxGroup";
-            this.checkBoxGroup.Size = new System.Drawing.Size(102, 16);
+            this.checkBoxGroup.Size = new System.Drawing.Size(107, 19);
             this.checkBoxGroup.TabIndex = 2;
             this.checkBoxGroup.Text = "所有グループ(&G)";
             this.checkBoxGroup.UseVisualStyleBackColor = true;
@@ -488,7 +537,7 @@
             this.checkBoxOwner.AutoSize = true;
             this.checkBoxOwner.Location = new System.Drawing.Point(6, 20);
             this.checkBoxOwner.Name = "checkBoxOwner";
-            this.checkBoxOwner.Size = new System.Drawing.Size(103, 16);
+            this.checkBoxOwner.Size = new System.Drawing.Size(107, 19);
             this.checkBoxOwner.TabIndex = 0;
             this.checkBoxOwner.Text = "所有ユーザー(&E)";
             this.checkBoxOwner.UseVisualStyleBackColor = true;
@@ -496,74 +545,25 @@
             // 
             // textBoxGroup
             // 
-            this.textBoxGroup.Location = new System.Drawing.Point(123, 43);
+            this.textBoxGroup.Location = new System.Drawing.Point(123, 45);
             this.textBoxGroup.Name = "textBoxGroup";
-            this.textBoxGroup.Size = new System.Drawing.Size(161, 19);
+            this.textBoxGroup.Size = new System.Drawing.Size(161, 23);
             this.textBoxGroup.TabIndex = 3;
             // 
             // textBoxOwner
             // 
             this.textBoxOwner.Location = new System.Drawing.Point(123, 18);
             this.textBoxOwner.Name = "textBoxOwner";
-            this.textBoxOwner.Size = new System.Drawing.Size(161, 19);
+            this.textBoxOwner.Size = new System.Drawing.Size(161, 23);
             this.textBoxOwner.TabIndex = 1;
-            // 
-            // checkBoxDateAccess
-            // 
-            this.checkBoxDateAccess.AutoSize = true;
-            this.checkBoxDateAccess.Location = new System.Drawing.Point(100, 71);
-            this.checkBoxDateAccess.Name = "checkBoxDateAccess";
-            this.checkBoxDateAccess.Size = new System.Drawing.Size(81, 16);
-            this.checkBoxDateAccess.TabIndex = 6;
-            this.checkBoxDateAccess.Text = "日付を変更";
-            this.checkBoxDateAccess.UseVisualStyleBackColor = true;
-            this.checkBoxDateAccess.CheckedChanged += new System.EventHandler(this.CheckBoxDateTime_CheckedChanged);
-            // 
-            // checkBoxTimeAccess
-            // 
-            this.checkBoxTimeAccess.AutoSize = true;
-            this.checkBoxTimeAccess.Location = new System.Drawing.Point(100, 96);
-            this.checkBoxTimeAccess.Name = "checkBoxTimeAccess";
-            this.checkBoxTimeAccess.Size = new System.Drawing.Size(81, 16);
-            this.checkBoxTimeAccess.TabIndex = 8;
-            this.checkBoxTimeAccess.Text = "時刻を変更";
-            this.checkBoxTimeAccess.UseVisualStyleBackColor = true;
-            this.checkBoxTimeAccess.CheckedChanged += new System.EventHandler(this.CheckBoxDateTime_CheckedChanged);
-            // 
-            // dateTimeDateAccess
-            // 
-            this.dateTimeDateAccess.CustomFormat = "yyyy/MM/dd";
-            this.dateTimeDateAccess.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimeDateAccess.Location = new System.Drawing.Point(183, 69);
-            this.dateTimeDateAccess.Name = "dateTimeDateAccess";
-            this.dateTimeDateAccess.Size = new System.Drawing.Size(101, 19);
-            this.dateTimeDateAccess.TabIndex = 7;
-            // 
-            // textBoxTimeAccess
-            // 
-            this.textBoxTimeAccess.Location = new System.Drawing.Point(183, 94);
-            this.textBoxTimeAccess.Mask = "90:00:00";
-            this.textBoxTimeAccess.Name = "textBoxTimeAccess";
-            this.textBoxTimeAccess.Size = new System.Drawing.Size(101, 19);
-            this.textBoxTimeAccess.TabIndex = 9;
-            this.textBoxTimeAccess.Text = "120000";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(6, 72);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(81, 12);
-            this.label4.TabIndex = 5;
-            this.label4.Text = "アクセス日時(&A)";
             // 
             // RenameSelectedFilesSSHDialog
             // 
             this.AcceptButton = this.buttonOk;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.CancelButton = this.buttonCancel;
-            this.ClientSize = new System.Drawing.Size(501, 443);
+            this.ClientSize = new System.Drawing.Size(502, 469);
             this.Controls.Add(this.groupBox5);
             this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.buttonCancel);
@@ -571,6 +571,7 @@
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
+            this.Font = new System.Drawing.Font("Yu Gothic UI", 9F);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.MaximizeBox = false;
             this.MinimizeBox = false;

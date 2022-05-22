@@ -42,6 +42,7 @@
             // listViewTarget
             // 
             this.listViewTarget.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.None;
+            this.listViewTarget.HideSelection = false;
             this.listViewTarget.Location = new System.Drawing.Point(12, 32);
             this.listViewTarget.Name = "listViewTarget";
             this.listViewTarget.Size = new System.Drawing.Size(420, 150);
@@ -54,7 +55,7 @@
             this.checkBoxDirectory.AutoSize = true;
             this.checkBoxDirectory.Location = new System.Drawing.Point(12, 188);
             this.checkBoxDirectory.Name = "checkBoxDirectory";
-            this.checkBoxDirectory.Size = new System.Drawing.Size(190, 16);
+            this.checkBoxDirectory.Size = new System.Drawing.Size(195, 19);
             this.checkBoxDirectory.TabIndex = 2;
             this.checkBoxDirectory.Text = "フォルダを確認なしですべて削除(&D)";
             this.checkBoxDirectory.UseVisualStyleBackColor = true;
@@ -64,7 +65,7 @@
             this.checkBoxAttr.AutoSize = true;
             this.checkBoxAttr.Location = new System.Drawing.Point(12, 206);
             this.checkBoxAttr.Name = "checkBoxAttr";
-            this.checkBoxAttr.Size = new System.Drawing.Size(313, 16);
+            this.checkBoxAttr.Size = new System.Drawing.Size(316, 19);
             this.checkBoxAttr.TabIndex = 3;
             this.checkBoxAttr.Text = "読み込み/システム属性のファイルを確認なしですべて削除(&A)";
             this.checkBoxAttr.UseVisualStyleBackColor = true;
@@ -94,7 +95,7 @@
             this.labelMessage.AutoSize = true;
             this.labelMessage.Location = new System.Drawing.Point(34, 11);
             this.labelMessage.Name = "labelMessage";
-            this.labelMessage.Size = new System.Drawing.Size(50, 12);
+            this.labelMessage.Size = new System.Drawing.Size(59, 15);
             this.labelMessage.TabIndex = 0;
             this.labelMessage.Text = "message";
             // 
@@ -103,7 +104,7 @@
             this.checkBoxWithRecycle.AutoSize = true;
             this.checkBoxWithRecycle.Location = new System.Drawing.Point(12, 224);
             this.checkBoxWithRecycle.Name = "checkBoxWithRecycle";
-            this.checkBoxWithRecycle.Size = new System.Drawing.Size(134, 16);
+            this.checkBoxWithRecycle.Size = new System.Drawing.Size(138, 19);
             this.checkBoxWithRecycle.TabIndex = 4;
             this.checkBoxWithRecycle.Text = "ごみ箱を使って削除(&R)";
             this.checkBoxWithRecycle.UseVisualStyleBackColor = true;
@@ -119,8 +120,8 @@
             // DeleteStartDialog
             // 
             this.AcceptButton = this.buttonOk;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.CancelButton = this.buttonCancel;
             this.ClientSize = new System.Drawing.Size(444, 281);
             this.Controls.Add(this.pictureBoxIcon);
@@ -131,6 +132,7 @@
             this.Controls.Add(this.checkBoxAttr);
             this.Controls.Add(this.checkBoxDirectory);
             this.Controls.Add(this.listViewTarget);
+            this.Font = new System.Drawing.Font("Yu Gothic UI", 9F);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.MinimizeBox = false;

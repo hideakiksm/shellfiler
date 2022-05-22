@@ -125,6 +125,7 @@ namespace ShellFiler.UI.Dialog {
                 this.labelSrcCompare.Text = "";
                 this.labelDestCompare.Text = "";
             }
+            this.pictureBoxArrow.Image = UIIconManager.SameDialogInfoArrow;
         }
 
         //=========================================================================================
@@ -157,17 +158,18 @@ namespace ShellFiler.UI.Dialog {
         // 戻り値：なし
         //=========================================================================================
         private void SameNameFileInfoControl_Paint(object sender, PaintEventArgs evt) {
-            Graphics g = evt.Graphics;
             const int MARGIN_ICON_TO_LABEL = 4;
-            int xPosSrc = this.labelSrcCompare.Location.X - UIIconManager.CX_LARGE_ICON - MARGIN_ICON_TO_LABEL;
-            int yPosSrc = this.labelSrcCompare.Location.Y - (UIIconManager.CY_LARGE_ICON - this.labelSrcCompare.Height) / 2;
-            int xPosDest = xPosSrc;
-            int yPosDest = this.labelDestCompare.Location.Y - (UIIconManager.CY_LARGE_ICON - this.labelDestCompare.Height) / 2;
-            if (m_iconSrc != null) {
-                g.DrawIcon(m_iconSrc, xPosSrc, yPosSrc);
-            }
-            if (m_iconDest != null) {
-                g.DrawIcon(m_iconDest, xPosDest, yPosDest);
+            using (HighDpiGraphics g = new HighDpiGraphics(evt.Graphics)) {
+                int xPosSrc = this.labelSrcCompare.Location.X - g.X(UIIconManager.CxLargeIcon + MARGIN_ICON_TO_LABEL);
+                int yPosSrc = this.labelSrcCompare.Location.Y - (g.Y(UIIconManager.CyLargeIcon) - this.labelSrcCompare.Height) / 2;
+                int xPosDest = xPosSrc;
+                int yPosDest = this.labelDestCompare.Location.Y - (g.Y(UIIconManager.CyLargeIcon) - this.labelDestCompare.Height) / 2;
+                if (m_iconSrc != null) {
+                    g.Graphics.DrawIcon(m_iconSrc, xPosSrc, yPosSrc);
+                }
+                if (m_iconDest != null) {
+                    g.Graphics.DrawIcon(m_iconDest, xPosDest, yPosDest);
+                }
             }
         }
     }

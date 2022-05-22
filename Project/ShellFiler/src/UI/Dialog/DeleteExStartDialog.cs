@@ -188,7 +188,7 @@ namespace ShellFiler.UI.Dialog {
                 // イメージリストを初期化
                 m_imageList = new ImageList();
                 m_imageList.ColorDepth = ColorDepth.Depth32Bit;
-                m_imageList.ImageSize = new Size(UIIconManager.CX_DEFAULT_ICON, UIIconManager.CY_DEFAULT_ICON);
+                m_imageList.ImageSize = new Size(UIIconManager.CxDefaultIcon, UIIconManager.CyDefaultIcon);
                 m_listViewTarget.SmallImageList = m_imageList;
             }
 

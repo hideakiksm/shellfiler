@@ -206,36 +206,6 @@ namespace ShellFiler.Properties {
         }
         
         /// <summary>
-        ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
-        /// </summary>
-        internal static System.Drawing.Bitmap ButtonFace_Down {
-            get {
-                object obj = ResourceManager.GetObject("ButtonFace_Down", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
-        /// </summary>
-        internal static System.Drawing.Bitmap ButtonFace_PopupMenu {
-            get {
-                object obj = ResourceManager.GetObject("ButtonFace_PopupMenu", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
-        /// </summary>
-        internal static System.Drawing.Bitmap ButtonFace_Up {
-            get {
-                object obj = ResourceManager.GetObject("ButtonFace_Up", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
         ///   アプリケーション に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string DefaultBookmark_Application {
@@ -313,16 +283,6 @@ namespace ShellFiler.Properties {
         internal static string DefaultBookmark_Windows {
             get {
                 return ResourceManager.GetString("DefaultBookmark_Windows", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
-        /// </summary>
-        internal static System.Drawing.Bitmap Delete {
-            get {
-                object obj = ResourceManager.GetObject("Delete", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
             }
         }
         
@@ -2188,56 +2148,6 @@ namespace ShellFiler.Properties {
         internal static string DlgHttpViewerParam_CannotParse {
             get {
                 return ResourceManager.GetString("DlgHttpViewerParam_CannotParse", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
-        /// </summary>
-        internal static System.Drawing.Bitmap DlgIntelliHddDir {
-            get {
-                object obj = ResourceManager.GetObject("DlgIntelliHddDir", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
-        /// </summary>
-        internal static System.Drawing.Bitmap DlgIntelliHddFile {
-            get {
-                object obj = ResourceManager.GetObject("DlgIntelliHddFile", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
-        /// </summary>
-        internal static System.Drawing.Bitmap DlgIntelliListDir {
-            get {
-                object obj = ResourceManager.GetObject("DlgIntelliListDir", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
-        /// </summary>
-        internal static System.Drawing.Bitmap DlgIntelliListFile {
-            get {
-                object obj = ResourceManager.GetObject("DlgIntelliListFile", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
-        /// </summary>
-        internal static System.Drawing.Bitmap DlgIntelliShell {
-            get {
-                object obj = ResourceManager.GetObject("DlgIntelliShell", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
             }
         }
         
@@ -5282,26 +5192,6 @@ namespace ShellFiler.Properties {
         }
         
         /// <summary>
-        ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
-        /// </summary>
-        internal static System.Drawing.Bitmap FileCondition_Or1 {
-            get {
-                object obj = ResourceManager.GetObject("FileCondition_Or1", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
-        /// </summary>
-        internal static System.Drawing.Bitmap FileCondition_Or2 {
-            get {
-                object obj = ResourceManager.GetObject("FileCondition_Or2", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
         ///   BASE64デコード に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string FileFilter_B64Decode {
@@ -6953,46 +6843,6 @@ namespace ShellFiler.Properties {
         }
         
         /// <summary>
-        ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
-        /// </summary>
-        internal static System.Drawing.Bitmap GraphicsViewer_FilterArrow1 {
-            get {
-                object obj = ResourceManager.GetObject("GraphicsViewer_FilterArrow1", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
-        /// </summary>
-        internal static System.Drawing.Bitmap GraphicsViewer_FilterArrow2 {
-            get {
-                object obj = ResourceManager.GetObject("GraphicsViewer_FilterArrow2", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
-        /// </summary>
-        internal static System.Drawing.Bitmap GraphicsViewer_FilterSample {
-            get {
-                object obj = ResourceManager.GetObject("GraphicsViewer_FilterSample", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
-        /// </summary>
-        internal static System.Drawing.Bitmap GraphicsViewer_FilterSampleZoom {
-            get {
-                object obj = ResourceManager.GetObject("GraphicsViewer_FilterSampleZoom", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
         ///   読み込み中... に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string GraphicsViewer_MessageLoading {
@@ -7451,9 +7301,9 @@ namespace ShellFiler.Properties {
         /// <summary>
         ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
         /// </summary>
-        internal static System.Drawing.Bitmap IconOperationFailed {
+        internal static System.Drawing.Bitmap I100_BGManager00 {
             get {
-                object obj = ResourceManager.GetObject("IconOperationFailed", resourceCulture);
+                object obj = ResourceManager.GetObject("I100_BGManager00", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -7461,9 +7311,9 @@ namespace ShellFiler.Properties {
         /// <summary>
         ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
         /// </summary>
-        internal static System.Drawing.Bitmap IconSshSetting {
+        internal static System.Drawing.Bitmap I100_BGManager01 {
             get {
-                object obj = ResourceManager.GetObject("IconSshSetting", resourceCulture);
+                object obj = ResourceManager.GetObject("I100_BGManager01", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -7471,9 +7321,9 @@ namespace ShellFiler.Properties {
         /// <summary>
         ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
         /// </summary>
-        internal static System.Drawing.Bitmap ImageListBGManagerAnimation {
+        internal static System.Drawing.Bitmap I100_BGManager02 {
             get {
-                object obj = ResourceManager.GetObject("ImageListBGManagerAnimation", resourceCulture);
+                object obj = ResourceManager.GetObject("I100_BGManager02", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -7481,9 +7331,1319 @@ namespace ShellFiler.Properties {
         /// <summary>
         ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
         /// </summary>
-        internal static System.Drawing.Bitmap ImageListIcon {
+        internal static System.Drawing.Bitmap I100_BGManager03 {
             get {
-                object obj = ResourceManager.GetObject("ImageListIcon", resourceCulture);
+                object obj = ResourceManager.GetObject("I100_BGManager03", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
+        /// </summary>
+        internal static System.Drawing.Bitmap I100_BGManager04 {
+            get {
+                object obj = ResourceManager.GetObject("I100_BGManager04", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
+        /// </summary>
+        internal static System.Drawing.Bitmap I100_BGManager05 {
+            get {
+                object obj = ResourceManager.GetObject("I100_BGManager05", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
+        /// </summary>
+        internal static System.Drawing.Bitmap I100_BGManager06 {
+            get {
+                object obj = ResourceManager.GetObject("I100_BGManager06", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
+        /// </summary>
+        internal static System.Drawing.Bitmap I100_BGManager07 {
+            get {
+                object obj = ResourceManager.GetObject("I100_BGManager07", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
+        /// </summary>
+        internal static System.Drawing.Bitmap I100_BGManager08 {
+            get {
+                object obj = ResourceManager.GetObject("I100_BGManager08", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
+        /// </summary>
+        internal static System.Drawing.Bitmap I100_BGManager09 {
+            get {
+                object obj = ResourceManager.GetObject("I100_BGManager09", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
+        /// </summary>
+        internal static System.Drawing.Bitmap I100_BGManager10 {
+            get {
+                object obj = ResourceManager.GetObject("I100_BGManager10", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
+        /// </summary>
+        internal static System.Drawing.Bitmap I100_BGManager11 {
+            get {
+                object obj = ResourceManager.GetObject("I100_BGManager11", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
+        /// </summary>
+        internal static System.Drawing.Bitmap I100_BGManager12 {
+            get {
+                object obj = ResourceManager.GetObject("I100_BGManager12", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
+        /// </summary>
+        internal static System.Drawing.Bitmap I100_ButtonFace_Down {
+            get {
+                object obj = ResourceManager.GetObject("I100_ButtonFace_Down", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
+        /// </summary>
+        internal static System.Drawing.Bitmap I100_ButtonFace_PopupMenu {
+            get {
+                object obj = ResourceManager.GetObject("I100_ButtonFace_PopupMenu", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
+        /// </summary>
+        internal static System.Drawing.Bitmap I100_ButtonFace_Up {
+            get {
+                object obj = ResourceManager.GetObject("I100_ButtonFace_Up", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
+        /// </summary>
+        internal static System.Drawing.Bitmap I100_Delete {
+            get {
+                object obj = ResourceManager.GetObject("I100_Delete", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
+        /// </summary>
+        internal static System.Drawing.Bitmap I100_DlgIntelliHddDir {
+            get {
+                object obj = ResourceManager.GetObject("I100_DlgIntelliHddDir", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
+        /// </summary>
+        internal static System.Drawing.Bitmap I100_DlgIntelliHddFile {
+            get {
+                object obj = ResourceManager.GetObject("I100_DlgIntelliHddFile", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
+        /// </summary>
+        internal static System.Drawing.Bitmap I100_DlgIntelliListDir {
+            get {
+                object obj = ResourceManager.GetObject("I100_DlgIntelliListDir", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
+        /// </summary>
+        internal static System.Drawing.Bitmap I100_DlgIntelliListFile {
+            get {
+                object obj = ResourceManager.GetObject("I100_DlgIntelliListFile", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
+        /// </summary>
+        internal static System.Drawing.Bitmap I100_DlgIntelliShell {
+            get {
+                object obj = ResourceManager.GetObject("I100_DlgIntelliShell", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
+        /// </summary>
+        internal static System.Drawing.Bitmap I100_FileCondition_Or1 {
+            get {
+                object obj = ResourceManager.GetObject("I100_FileCondition_Or1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
+        /// </summary>
+        internal static System.Drawing.Bitmap I100_FileCondition_Or2 {
+            get {
+                object obj = ResourceManager.GetObject("I100_FileCondition_Or2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
+        /// </summary>
+        internal static System.Drawing.Bitmap I100_GraphicsViewer_FilterArrow1 {
+            get {
+                object obj = ResourceManager.GetObject("I100_GraphicsViewer_FilterArrow1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
+        /// </summary>
+        internal static System.Drawing.Bitmap I100_GraphicsViewer_FilterArrow2 {
+            get {
+                object obj = ResourceManager.GetObject("I100_GraphicsViewer_FilterArrow2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
+        /// </summary>
+        internal static System.Drawing.Bitmap I100_GraphicsViewer_FilterSample {
+            get {
+                object obj = ResourceManager.GetObject("I100_GraphicsViewer_FilterSample", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
+        /// </summary>
+        internal static System.Drawing.Bitmap I100_GraphicsViewer_FilterSampleZoom {
+            get {
+                object obj = ResourceManager.GetObject("I100_GraphicsViewer_FilterSampleZoom", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
+        /// </summary>
+        internal static System.Drawing.Bitmap I100_IconOperationFailed {
+            get {
+                object obj = ResourceManager.GetObject("I100_IconOperationFailed", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
+        /// </summary>
+        internal static System.Drawing.Bitmap I100_IconSshSetting {
+            get {
+                object obj = ResourceManager.GetObject("I100_IconSshSetting", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
+        /// </summary>
+        internal static System.Drawing.Bitmap I100_ImageListBGManagerAnimation {
+            get {
+                object obj = ResourceManager.GetObject("I100_ImageListBGManagerAnimation", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
+        /// </summary>
+        internal static System.Drawing.Bitmap I100_ImageListIcon {
+            get {
+                object obj = ResourceManager.GetObject("I100_ImageListIcon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
+        /// </summary>
+        internal static System.Drawing.Bitmap I100_MainIcon48 {
+            get {
+                object obj = ResourceManager.GetObject("I100_MainIcon48", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
+        /// </summary>
+        internal static System.Drawing.Bitmap I100_SameDialogInfoArrow {
+            get {
+                object obj = ResourceManager.GetObject("I100_SameDialogInfoArrow", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
+        /// </summary>
+        internal static System.Drawing.Bitmap I100_TabClose_Focus {
+            get {
+                object obj = ResourceManager.GetObject("I100_TabClose_Focus", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
+        /// </summary>
+        internal static System.Drawing.Bitmap I100_TabClose_Normal {
+            get {
+                object obj = ResourceManager.GetObject("I100_TabClose_Normal", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
+        /// </summary>
+        internal static System.Drawing.Bitmap I100_TitleLogo {
+            get {
+                object obj = ResourceManager.GetObject("I100_TitleLogo", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
+        /// </summary>
+        internal static System.Drawing.Bitmap I100_TwoStrokeKeyAlt {
+            get {
+                object obj = ResourceManager.GetObject("I100_TwoStrokeKeyAlt", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
+        /// </summary>
+        internal static System.Drawing.Bitmap I100_TwoStrokeKeyCtrl {
+            get {
+                object obj = ResourceManager.GetObject("I100_TwoStrokeKeyCtrl", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
+        /// </summary>
+        internal static System.Drawing.Bitmap I100_TwoStrokeKeyCtrlAlt {
+            get {
+                object obj = ResourceManager.GetObject("I100_TwoStrokeKeyCtrlAlt", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
+        /// </summary>
+        internal static System.Drawing.Bitmap I100_TwoStrokeKeyNormal {
+            get {
+                object obj = ResourceManager.GetObject("I100_TwoStrokeKeyNormal", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
+        /// </summary>
+        internal static System.Drawing.Bitmap I100_TwoStrokeKeyShift {
+            get {
+                object obj = ResourceManager.GetObject("I100_TwoStrokeKeyShift", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
+        /// </summary>
+        internal static System.Drawing.Bitmap I100_TwoStrokeKeyShiftAlt {
+            get {
+                object obj = ResourceManager.GetObject("I100_TwoStrokeKeyShiftAlt", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
+        /// </summary>
+        internal static System.Drawing.Bitmap I100_TwoStrokeKeyShiftCtrl {
+            get {
+                object obj = ResourceManager.GetObject("I100_TwoStrokeKeyShiftCtrl", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
+        /// </summary>
+        internal static System.Drawing.Bitmap I100_TwoStrokeKeyShiftCtrlAlt {
+            get {
+                object obj = ResourceManager.GetObject("I100_TwoStrokeKeyShiftCtrlAlt", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
+        /// </summary>
+        internal static System.Drawing.Bitmap I200_BGManager00 {
+            get {
+                object obj = ResourceManager.GetObject("I200_BGManager00", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
+        /// </summary>
+        internal static System.Drawing.Bitmap I200_BGManager01 {
+            get {
+                object obj = ResourceManager.GetObject("I200_BGManager01", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
+        /// </summary>
+        internal static System.Drawing.Bitmap I200_BGManager02 {
+            get {
+                object obj = ResourceManager.GetObject("I200_BGManager02", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
+        /// </summary>
+        internal static System.Drawing.Bitmap I200_BGManager03 {
+            get {
+                object obj = ResourceManager.GetObject("I200_BGManager03", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
+        /// </summary>
+        internal static System.Drawing.Bitmap I200_BGManager04 {
+            get {
+                object obj = ResourceManager.GetObject("I200_BGManager04", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
+        /// </summary>
+        internal static System.Drawing.Bitmap I200_BGManager05 {
+            get {
+                object obj = ResourceManager.GetObject("I200_BGManager05", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
+        /// </summary>
+        internal static System.Drawing.Bitmap I200_BGManager06 {
+            get {
+                object obj = ResourceManager.GetObject("I200_BGManager06", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
+        /// </summary>
+        internal static System.Drawing.Bitmap I200_BGManager07 {
+            get {
+                object obj = ResourceManager.GetObject("I200_BGManager07", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
+        /// </summary>
+        internal static System.Drawing.Bitmap I200_BGManager08 {
+            get {
+                object obj = ResourceManager.GetObject("I200_BGManager08", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
+        /// </summary>
+        internal static System.Drawing.Bitmap I200_BGManager09 {
+            get {
+                object obj = ResourceManager.GetObject("I200_BGManager09", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
+        /// </summary>
+        internal static System.Drawing.Bitmap I200_BGManager10 {
+            get {
+                object obj = ResourceManager.GetObject("I200_BGManager10", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
+        /// </summary>
+        internal static System.Drawing.Bitmap I200_BGManager11 {
+            get {
+                object obj = ResourceManager.GetObject("I200_BGManager11", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
+        /// </summary>
+        internal static System.Drawing.Bitmap I200_BGManager12 {
+            get {
+                object obj = ResourceManager.GetObject("I200_BGManager12", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
+        /// </summary>
+        internal static System.Drawing.Bitmap I200_ButtonFace_Down {
+            get {
+                object obj = ResourceManager.GetObject("I200_ButtonFace_Down", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
+        /// </summary>
+        internal static System.Drawing.Bitmap I200_ButtonFace_PopupMenu {
+            get {
+                object obj = ResourceManager.GetObject("I200_ButtonFace_PopupMenu", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
+        /// </summary>
+        internal static System.Drawing.Bitmap I200_ButtonFace_Up {
+            get {
+                object obj = ResourceManager.GetObject("I200_ButtonFace_Up", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
+        /// </summary>
+        internal static System.Drawing.Bitmap I200_Delete {
+            get {
+                object obj = ResourceManager.GetObject("I200_Delete", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
+        /// </summary>
+        internal static System.Drawing.Bitmap I200_DlgIntelliHddDir {
+            get {
+                object obj = ResourceManager.GetObject("I200_DlgIntelliHddDir", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
+        /// </summary>
+        internal static System.Drawing.Bitmap I200_DlgIntelliHddFile {
+            get {
+                object obj = ResourceManager.GetObject("I200_DlgIntelliHddFile", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
+        /// </summary>
+        internal static System.Drawing.Bitmap I200_DlgIntelliListDir {
+            get {
+                object obj = ResourceManager.GetObject("I200_DlgIntelliListDir", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
+        /// </summary>
+        internal static System.Drawing.Bitmap I200_DlgIntelliListFile {
+            get {
+                object obj = ResourceManager.GetObject("I200_DlgIntelliListFile", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
+        /// </summary>
+        internal static System.Drawing.Bitmap I200_DlgIntelliShell {
+            get {
+                object obj = ResourceManager.GetObject("I200_DlgIntelliShell", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
+        /// </summary>
+        internal static System.Drawing.Bitmap I200_FileCondition_Or1 {
+            get {
+                object obj = ResourceManager.GetObject("I200_FileCondition_Or1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
+        /// </summary>
+        internal static System.Drawing.Bitmap I200_FileCondition_Or2 {
+            get {
+                object obj = ResourceManager.GetObject("I200_FileCondition_Or2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
+        /// </summary>
+        internal static System.Drawing.Bitmap I200_GraphicsViewer_FilterArrow1 {
+            get {
+                object obj = ResourceManager.GetObject("I200_GraphicsViewer_FilterArrow1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
+        /// </summary>
+        internal static System.Drawing.Bitmap I200_GraphicsViewer_FilterArrow2 {
+            get {
+                object obj = ResourceManager.GetObject("I200_GraphicsViewer_FilterArrow2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
+        /// </summary>
+        internal static System.Drawing.Bitmap I200_GraphicsViewer_FilterSample {
+            get {
+                object obj = ResourceManager.GetObject("I200_GraphicsViewer_FilterSample", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
+        /// </summary>
+        internal static System.Drawing.Bitmap I200_GraphicsViewer_FilterSampleZoom {
+            get {
+                object obj = ResourceManager.GetObject("I200_GraphicsViewer_FilterSampleZoom", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
+        /// </summary>
+        internal static System.Drawing.Bitmap I200_IconOperationFailed {
+            get {
+                object obj = ResourceManager.GetObject("I200_IconOperationFailed", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
+        /// </summary>
+        internal static System.Drawing.Bitmap I200_IconSshSetting {
+            get {
+                object obj = ResourceManager.GetObject("I200_IconSshSetting", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
+        /// </summary>
+        internal static System.Drawing.Bitmap I200_ImageListBGManagerAnimation {
+            get {
+                object obj = ResourceManager.GetObject("I200_ImageListBGManagerAnimation", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
+        /// </summary>
+        internal static System.Drawing.Bitmap I200_ImageListIcon {
+            get {
+                object obj = ResourceManager.GetObject("I200_ImageListIcon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
+        /// </summary>
+        internal static System.Drawing.Bitmap I200_MainIcon48 {
+            get {
+                object obj = ResourceManager.GetObject("I200_MainIcon48", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
+        /// </summary>
+        internal static System.Drawing.Bitmap I200_SameDialogInfoArrow {
+            get {
+                object obj = ResourceManager.GetObject("I200_SameDialogInfoArrow", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
+        /// </summary>
+        internal static System.Drawing.Bitmap I200_TabClose_Focus {
+            get {
+                object obj = ResourceManager.GetObject("I200_TabClose_Focus", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
+        /// </summary>
+        internal static System.Drawing.Bitmap I200_TabClose_Normal {
+            get {
+                object obj = ResourceManager.GetObject("I200_TabClose_Normal", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
+        /// </summary>
+        internal static System.Drawing.Bitmap I200_TitleLogo {
+            get {
+                object obj = ResourceManager.GetObject("I200_TitleLogo", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
+        /// </summary>
+        internal static System.Drawing.Bitmap I200_TwoStrokeKeyAlt {
+            get {
+                object obj = ResourceManager.GetObject("I200_TwoStrokeKeyAlt", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
+        /// </summary>
+        internal static System.Drawing.Bitmap I200_TwoStrokeKeyCtrl {
+            get {
+                object obj = ResourceManager.GetObject("I200_TwoStrokeKeyCtrl", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
+        /// </summary>
+        internal static System.Drawing.Bitmap I200_TwoStrokeKeyCtrlAlt {
+            get {
+                object obj = ResourceManager.GetObject("I200_TwoStrokeKeyCtrlAlt", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
+        /// </summary>
+        internal static System.Drawing.Bitmap I200_TwoStrokeKeyNormal {
+            get {
+                object obj = ResourceManager.GetObject("I200_TwoStrokeKeyNormal", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
+        /// </summary>
+        internal static System.Drawing.Bitmap I200_TwoStrokeKeyShift {
+            get {
+                object obj = ResourceManager.GetObject("I200_TwoStrokeKeyShift", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
+        /// </summary>
+        internal static System.Drawing.Bitmap I200_TwoStrokeKeyShiftAlt {
+            get {
+                object obj = ResourceManager.GetObject("I200_TwoStrokeKeyShiftAlt", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
+        /// </summary>
+        internal static System.Drawing.Bitmap I200_TwoStrokeKeyShiftCtrl {
+            get {
+                object obj = ResourceManager.GetObject("I200_TwoStrokeKeyShiftCtrl", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
+        /// </summary>
+        internal static System.Drawing.Bitmap I200_TwoStrokeKeyShiftCtrlAlt {
+            get {
+                object obj = ResourceManager.GetObject("I200_TwoStrokeKeyShiftCtrlAlt", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
+        /// </summary>
+        internal static System.Drawing.Bitmap I400_BGManager00 {
+            get {
+                object obj = ResourceManager.GetObject("I400_BGManager00", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
+        /// </summary>
+        internal static System.Drawing.Bitmap I400_BGManager01 {
+            get {
+                object obj = ResourceManager.GetObject("I400_BGManager01", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
+        /// </summary>
+        internal static System.Drawing.Bitmap I400_BGManager02 {
+            get {
+                object obj = ResourceManager.GetObject("I400_BGManager02", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
+        /// </summary>
+        internal static System.Drawing.Bitmap I400_BGManager03 {
+            get {
+                object obj = ResourceManager.GetObject("I400_BGManager03", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
+        /// </summary>
+        internal static System.Drawing.Bitmap I400_BGManager04 {
+            get {
+                object obj = ResourceManager.GetObject("I400_BGManager04", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
+        /// </summary>
+        internal static System.Drawing.Bitmap I400_BGManager05 {
+            get {
+                object obj = ResourceManager.GetObject("I400_BGManager05", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
+        /// </summary>
+        internal static System.Drawing.Bitmap I400_BGManager06 {
+            get {
+                object obj = ResourceManager.GetObject("I400_BGManager06", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
+        /// </summary>
+        internal static System.Drawing.Bitmap I400_BGManager07 {
+            get {
+                object obj = ResourceManager.GetObject("I400_BGManager07", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
+        /// </summary>
+        internal static System.Drawing.Bitmap I400_BGManager08 {
+            get {
+                object obj = ResourceManager.GetObject("I400_BGManager08", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
+        /// </summary>
+        internal static System.Drawing.Bitmap I400_BGManager09 {
+            get {
+                object obj = ResourceManager.GetObject("I400_BGManager09", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
+        /// </summary>
+        internal static System.Drawing.Bitmap I400_BGManager10 {
+            get {
+                object obj = ResourceManager.GetObject("I400_BGManager10", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
+        /// </summary>
+        internal static System.Drawing.Bitmap I400_BGManager11 {
+            get {
+                object obj = ResourceManager.GetObject("I400_BGManager11", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
+        /// </summary>
+        internal static System.Drawing.Bitmap I400_BGManager12 {
+            get {
+                object obj = ResourceManager.GetObject("I400_BGManager12", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
+        /// </summary>
+        internal static System.Drawing.Bitmap I400_ButtonFace_Down {
+            get {
+                object obj = ResourceManager.GetObject("I400_ButtonFace_Down", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
+        /// </summary>
+        internal static System.Drawing.Bitmap I400_ButtonFace_PopupMenu {
+            get {
+                object obj = ResourceManager.GetObject("I400_ButtonFace_PopupMenu", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
+        /// </summary>
+        internal static System.Drawing.Bitmap I400_ButtonFace_Up {
+            get {
+                object obj = ResourceManager.GetObject("I400_ButtonFace_Up", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
+        /// </summary>
+        internal static System.Drawing.Bitmap I400_Delete {
+            get {
+                object obj = ResourceManager.GetObject("I400_Delete", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
+        /// </summary>
+        internal static System.Drawing.Bitmap I400_DlgIntelliHddDir {
+            get {
+                object obj = ResourceManager.GetObject("I400_DlgIntelliHddDir", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
+        /// </summary>
+        internal static System.Drawing.Bitmap I400_DlgIntelliHddFile {
+            get {
+                object obj = ResourceManager.GetObject("I400_DlgIntelliHddFile", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
+        /// </summary>
+        internal static System.Drawing.Bitmap I400_DlgIntelliListDir {
+            get {
+                object obj = ResourceManager.GetObject("I400_DlgIntelliListDir", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
+        /// </summary>
+        internal static System.Drawing.Bitmap I400_DlgIntelliListFile {
+            get {
+                object obj = ResourceManager.GetObject("I400_DlgIntelliListFile", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
+        /// </summary>
+        internal static System.Drawing.Bitmap I400_DlgIntelliShell {
+            get {
+                object obj = ResourceManager.GetObject("I400_DlgIntelliShell", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
+        /// </summary>
+        internal static System.Drawing.Bitmap I400_FileCondition_Or1 {
+            get {
+                object obj = ResourceManager.GetObject("I400_FileCondition_Or1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
+        /// </summary>
+        internal static System.Drawing.Bitmap I400_FileCondition_Or2 {
+            get {
+                object obj = ResourceManager.GetObject("I400_FileCondition_Or2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
+        /// </summary>
+        internal static System.Drawing.Bitmap I400_GraphicsViewer_FilterArrow1 {
+            get {
+                object obj = ResourceManager.GetObject("I400_GraphicsViewer_FilterArrow1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
+        /// </summary>
+        internal static System.Drawing.Bitmap I400_GraphicsViewer_FilterArrow2 {
+            get {
+                object obj = ResourceManager.GetObject("I400_GraphicsViewer_FilterArrow2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
+        /// </summary>
+        internal static System.Drawing.Bitmap I400_GraphicsViewer_FilterSample {
+            get {
+                object obj = ResourceManager.GetObject("I400_GraphicsViewer_FilterSample", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
+        /// </summary>
+        internal static System.Drawing.Bitmap I400_GraphicsViewer_FilterSampleZoom {
+            get {
+                object obj = ResourceManager.GetObject("I400_GraphicsViewer_FilterSampleZoom", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
+        /// </summary>
+        internal static System.Drawing.Bitmap I400_IconOperationFailed {
+            get {
+                object obj = ResourceManager.GetObject("I400_IconOperationFailed", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
+        /// </summary>
+        internal static System.Drawing.Bitmap I400_IconSshSetting {
+            get {
+                object obj = ResourceManager.GetObject("I400_IconSshSetting", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
+        /// </summary>
+        internal static System.Drawing.Bitmap I400_ImageListBGManagerAnimation {
+            get {
+                object obj = ResourceManager.GetObject("I400_ImageListBGManagerAnimation", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
+        /// </summary>
+        internal static System.Drawing.Bitmap I400_ImageListIcon {
+            get {
+                object obj = ResourceManager.GetObject("I400_ImageListIcon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
+        /// </summary>
+        internal static System.Drawing.Bitmap I400_MainIcon48 {
+            get {
+                object obj = ResourceManager.GetObject("I400_MainIcon48", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
+        /// </summary>
+        internal static System.Drawing.Bitmap I400_SameDialogInfoArrow {
+            get {
+                object obj = ResourceManager.GetObject("I400_SameDialogInfoArrow", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
+        /// </summary>
+        internal static System.Drawing.Bitmap I400_TabClose_Focus {
+            get {
+                object obj = ResourceManager.GetObject("I400_TabClose_Focus", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
+        /// </summary>
+        internal static System.Drawing.Bitmap I400_TabClose_Normal {
+            get {
+                object obj = ResourceManager.GetObject("I400_TabClose_Normal", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
+        /// </summary>
+        internal static System.Drawing.Bitmap I400_TitleLogo {
+            get {
+                object obj = ResourceManager.GetObject("I400_TitleLogo", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
+        /// </summary>
+        internal static System.Drawing.Bitmap I400_TwoStrokeKeyAlt {
+            get {
+                object obj = ResourceManager.GetObject("I400_TwoStrokeKeyAlt", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
+        /// </summary>
+        internal static System.Drawing.Bitmap I400_TwoStrokeKeyCtrl {
+            get {
+                object obj = ResourceManager.GetObject("I400_TwoStrokeKeyCtrl", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
+        /// </summary>
+        internal static System.Drawing.Bitmap I400_TwoStrokeKeyCtrlAlt {
+            get {
+                object obj = ResourceManager.GetObject("I400_TwoStrokeKeyCtrlAlt", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
+        /// </summary>
+        internal static System.Drawing.Bitmap I400_TwoStrokeKeyNormal {
+            get {
+                object obj = ResourceManager.GetObject("I400_TwoStrokeKeyNormal", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
+        /// </summary>
+        internal static System.Drawing.Bitmap I400_TwoStrokeKeyShift {
+            get {
+                object obj = ResourceManager.GetObject("I400_TwoStrokeKeyShift", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
+        /// </summary>
+        internal static System.Drawing.Bitmap I400_TwoStrokeKeyShiftAlt {
+            get {
+                object obj = ResourceManager.GetObject("I400_TwoStrokeKeyShiftAlt", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
+        /// </summary>
+        internal static System.Drawing.Bitmap I400_TwoStrokeKeyShiftCtrl {
+            get {
+                object obj = ResourceManager.GetObject("I400_TwoStrokeKeyShiftCtrl", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
+        /// </summary>
+        internal static System.Drawing.Bitmap I400_TwoStrokeKeyShiftCtrlAlt {
+            get {
+                object obj = ResourceManager.GetObject("I400_TwoStrokeKeyShiftCtrlAlt", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -8928,16 +10088,6 @@ namespace ShellFiler.Properties {
         internal static string LogSts_VirtualMkDir {
             get {
                 return ResourceManager.GetString("LogSts_VirtualMkDir", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
-        /// </summary>
-        internal static System.Drawing.Bitmap MainIcon48 {
-            get {
-                object obj = ResourceManager.GetObject("MainIcon48", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
             }
         }
         
@@ -14443,16 +15593,6 @@ namespace ShellFiler.Properties {
         }
         
         /// <summary>
-        ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
-        /// </summary>
-        internal static System.Drawing.Bitmap SameDialogInfoArrow {
-            get {
-                object obj = ResourceManager.GetObject("SameDialogInfoArrow", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
         ///   bool型の数値の形式が不正です に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string SettingLoader_ErrorBoolFormat {
@@ -15304,26 +16444,6 @@ namespace ShellFiler.Properties {
         }
         
         /// <summary>
-        ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
-        /// </summary>
-        internal static System.Drawing.Bitmap TabClose_Focus {
-            get {
-                object obj = ResourceManager.GetObject("TabClose_Focus", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
-        /// </summary>
-        internal static System.Drawing.Bitmap TabClose_Normal {
-            get {
-                object obj = ResourceManager.GetObject("TabClose_Normal", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
         ///   テキストファイル(*.txt)|*.txt|ログ(*.log)|*.log|すべてのファイル(*.*)|*.* に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string Terminal_SaveAsFilter {
@@ -15397,16 +16517,6 @@ namespace ShellFiler.Properties {
         }
         
         /// <summary>
-        ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
-        /// </summary>
-        internal static System.Drawing.Bitmap TitleLogo {
-            get {
-                object obj = ResourceManager.GetObject("TitleLogo", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
         ///   CD-ROM に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string ToolbarItem_DriveTypeCDROM {
@@ -15448,86 +16558,6 @@ namespace ShellFiler.Properties {
         internal static string ToolbarItem_DriveTypeRemovable {
             get {
                 return ResourceManager.GetString("ToolbarItem_DriveTypeRemovable", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
-        /// </summary>
-        internal static System.Drawing.Bitmap TwoStrokeKeyAlt {
-            get {
-                object obj = ResourceManager.GetObject("TwoStrokeKeyAlt", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
-        /// </summary>
-        internal static System.Drawing.Bitmap TwoStrokeKeyCtrl {
-            get {
-                object obj = ResourceManager.GetObject("TwoStrokeKeyCtrl", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
-        /// </summary>
-        internal static System.Drawing.Bitmap TwoStrokeKeyCtrlAlt {
-            get {
-                object obj = ResourceManager.GetObject("TwoStrokeKeyCtrlAlt", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
-        /// </summary>
-        internal static System.Drawing.Bitmap TwoStrokeKeyNormal {
-            get {
-                object obj = ResourceManager.GetObject("TwoStrokeKeyNormal", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
-        /// </summary>
-        internal static System.Drawing.Bitmap TwoStrokeKeyShift {
-            get {
-                object obj = ResourceManager.GetObject("TwoStrokeKeyShift", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
-        /// </summary>
-        internal static System.Drawing.Bitmap TwoStrokeKeyShiftAlt {
-            get {
-                object obj = ResourceManager.GetObject("TwoStrokeKeyShiftAlt", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
-        /// </summary>
-        internal static System.Drawing.Bitmap TwoStrokeKeyShiftCtrl {
-            get {
-                object obj = ResourceManager.GetObject("TwoStrokeKeyShiftCtrl", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
-        /// </summary>
-        internal static System.Drawing.Bitmap TwoStrokeKeyShiftCtrlAlt {
-            get {
-                object obj = ResourceManager.GetObject("TwoStrokeKeyShiftCtrlAlt", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
             }
         }
         

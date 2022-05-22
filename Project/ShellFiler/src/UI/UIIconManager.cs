@@ -4,6 +4,7 @@ using System.Text;
 using System.IO;
 using System.Drawing;
 using System.Drawing.Drawing2D;
+using System.Drawing.Imaging;
 using System.Reflection;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
@@ -22,17 +23,98 @@ namespace ShellFiler.UI {
     // 　　　　Resourceクラスのbmpに対して、カスタマイズされたリソースをラップする
     //=========================================================================================
     public static class UIIconManager {
+        // I1_ImageListIcon.pngの構成画像1つ分の幅
+        private const int CX_IMAGE_LIST_ICON = 16;
+
+        // I1_ImageListIcon.pngの構成画像1つ分の幅
+        private const int CX_IMAGE_LIST_ICON_SMALL = 13;
+
+        // BGManagerのアニメーションの数
+        private const int BG_MANAGER_ANIMATION_COUNT = 13;
+
         // 大きいアイコンの幅
-        public const int CX_LARGE_ICON = 32;
+        private static int s_cxLargeIcon = 32;
 
         // 大きいアイコンの高さ
-        public const int CY_LARGE_ICON = 32;
+        private static int s_cyLargeIcon = 32;
 
         // アイコンの幅
-        public const int CX_DEFAULT_ICON = 16;
+        private static int s_cxDefaultIcon = 16;
 
         // アイコンの高さ
-        public const int CY_DEFAULT_ICON = 16;
+        private static int s_cyDefaultIcon = 16;
+
+        // リストボックス用アイコンの幅
+        private static int s_cxListIcon = 12;
+
+        // リストボックス用アイコンの高さ
+        private static int s_cyListIcon = 12;
+
+        // バックグラウンドマネージャイメージの幅
+        private static int s_cxBgManageAnimationFrom;
+
+        // バックグラウンドマネージャイメージの高さ
+        private static int s_cyBgManageAnimationFrom;
+
+        // バックグラウンドマネージャイメージの幅
+        private static int s_cxBgManageAnimationTo;
+
+        // バックグラウンドマネージャイメージの高さ
+        private static int s_cyBgManageAnimationTo;
+
+        //=========================================================================================
+        // プロパティ：大きいアイコンの幅
+        //=========================================================================================
+        public static int CxLargeIcon {
+            get {
+                return s_cxLargeIcon;
+            }
+        }
+
+        //=========================================================================================
+        // プロパティ：大きいアイコンの高さ
+        //=========================================================================================
+        public static int CyLargeIcon {
+            get {
+                return s_cyLargeIcon;
+            }
+        }
+
+        //=========================================================================================
+        // プロパティ：アイコンの幅
+        //=========================================================================================
+        public static int CxDefaultIcon {
+            get {
+                return s_cxDefaultIcon;
+            }
+        }
+
+        //=========================================================================================
+        // プロパティ：アイコンの高さ
+        //=========================================================================================
+        public static int CyDefaultIcon {
+            get {
+                return s_cyDefaultIcon;
+            }
+        }
+
+        //=========================================================================================
+        // プロパティ：リストボックス用アイコンの幅
+        //=========================================================================================
+        public static int CxListIcon {
+            get {
+                return s_cxListIcon;
+            }
+        }
+
+        //=========================================================================================
+        // プロパティ：リストボックス用アイコンの高さ
+        //=========================================================================================
+        public static int CyListIcon {
+            get {
+                return s_cyListIcon;
+            }
+        }
 
         // リストボックス用アイコンの幅
         public const int CX_LIST_ICON = 12;
@@ -40,11 +122,16 @@ namespace ShellFiler.UI {
         // リストボックス用アイコンの高さ
         public const int CY_LIST_ICON = 12;
 
-        // バックグラウンドマネージャイメージの幅
-        public const int CX_BGMANAGER_ANIMATION = 40;
+        // s_dpiRatioは画像の拡大縮小比で100%のとき100
+        // s_dpiRatioが100、200、400はそのままの画像を保持している（s_dpiRatioFrom == s_dpiRatio）
+        // それ以外の解像度は、s_dpiRatioFromを拡大縮小し、Dictionaryに保存
 
-        // バックグラウンドマネージャイメージの高さ
-        public const int CY_BGMANAGER_ANIMATION = 24;
+        // ディスプレイ解像度のデフォルトに対する比[%]
+        private static int s_dpiRatio;
+        // 使用するビットマッププレフィックス
+        private static string s_bmpPrefix;
+        // 拡大/縮小を行うときの元になる画像の、ディスプレイ解像度のデフォルトに対する比[%]
+        private static int s_dpiRatioFrom;
 
         // カスタマイズアイコンのパス
         private static string s_customizePath;
@@ -54,9 +141,6 @@ namespace ShellFiler.UI {
 
         // アイコン用のイメージリスト
         private static ImageList s_iconImageList = null;
-
-        // バックグラウンドマネージャアニメーション用のイメージリスト
-        private static ImageList s_bgManagerAnimationImageList = null;
 
         // つかむカーソル
         public static Cursor s_handCursor = null;
@@ -78,8 +162,10 @@ namespace ShellFiler.UI {
         private static Bitmap s_bmpGraphicsViewer_FilterArrow2 = null;
         private static Bitmap s_bmpGraphicsViewer_FilterSample = null;
         private static Bitmap s_bmpGraphicsViewer_FilterSampleZoom = null;
+        private static Bitmap s_bmpImageListIcon = null;
         private static Bitmap s_bmpIconOperationFailed = null;
         private static Bitmap s_bmpIconSshSetting = null;
+        private static Bitmap s_bmpMainIcon48 = null;
         private static Bitmap s_bmpSameDialogInfoArrow = null;
         private static Bitmap s_bmpTabClose_Focus = null;
         private static Bitmap s_bmpTabClose_Normal = null;
@@ -92,53 +178,47 @@ namespace ShellFiler.UI {
         private static Bitmap s_bmpTwoStrokeKeyCtrlAlt = null;
         private static Bitmap s_bmpTwoStrokeKeyCtrl = null;
         private static Bitmap s_bmpTwoStrokeKeyAlt = null;
+        private static Bitmap[] s_bmpBgManager = null;
 
         //=========================================================================================
         // 機　能：汎用アイコンを初期化する
-        // 引　数：[in]installPath  インストールディレクトリ
+        // 引　数：[in]form    Graphicsの取得元となるForm
+        //         [in]installPath  インストールディレクトリ
         // 戻り値：なし
         //=========================================================================================
-        public static void InitializeIcon(string installPath) {
+        public static void InitializeIcon(Form form, string installPath) {
             s_customizePath = Path.Combine(installPath, "image");
 
+            using (Graphics g = form.CreateGraphics()) {
+                s_dpiRatio = (int)(g.DpiX * 100 / 96);
+                if (s_dpiRatio <= 100) {
+                    s_bmpPrefix = "I100_";
+                    s_dpiRatioFrom = 100;
+                } else if (s_dpiRatio <= 200) {
+                    s_bmpPrefix = "I200_";
+                    s_dpiRatioFrom = 200;
+                } else {
+                    s_bmpPrefix = "I400_";
+                    s_dpiRatioFrom = 400;
+                }
+                s_cxLargeIcon = 32 * s_dpiRatio / 100;
+                s_cyLargeIcon = 32 * s_dpiRatio / 100;
+                s_cxDefaultIcon = 16 * s_dpiRatio / 100;
+                s_cyDefaultIcon = 16 * s_dpiRatio / 100;
+                s_cxListIcon = 12 * s_dpiRatio / 100;
+                s_cyListIcon = 12 * s_dpiRatio / 100;
+                s_cxBgManageAnimationFrom = 40 * s_dpiRatioFrom / 100;
+                s_cyBgManageAnimationFrom = 24 * s_dpiRatioFrom / 100;
+                s_cxBgManageAnimationTo = 40 * s_dpiRatio / 100;
+                s_cyBgManageAnimationTo = 24 * s_dpiRatio / 100;
+            }
+
             // 汎用アイコン
+            int iconSize = UIIconManager.ImageListIcon.Height;
             s_iconImageList = new ImageList();
             s_iconImageList.ColorDepth = ColorDepth.Depth32Bit;
-            s_iconImageList.ImageSize = new Size(CX_DEFAULT_ICON, CY_DEFAULT_ICON);
-            s_iconImageList.Images.AddStrip(LoadImageListResource(Resources.ImageListIcon, "ImageListIcon"));
-        }
-
-        //=========================================================================================
-        // 機　能：待機アイコンを初期化する
-        // 引　数：[in]toolStrip  待機アイコンを表示するツールバー
-        // 戻り値：なし
-        //=========================================================================================
-        public static void InitializeBgManager(ToolStrip toolStrip) {
-            // 透過pngで入っている画像をツールバーの背景パターンに重ね合わせてImageListに設定
-            using (Bitmap bitmapTransparent = LoadImageListResource(Resources.ImageListBGManagerAnimation, "ImageListBGManagerAnimation")) {
-                // ImageListに設定する画像
-                Bitmap bitmapModified = new Bitmap(bitmapTransparent.Width, bitmapTransparent.Height);
-                int iconCount = bitmapTransparent.Width / CX_BGMANAGER_ANIMATION;
-                Rectangle rcAnimation = new Rectangle(0, 0, CX_BGMANAGER_ANIMATION, CY_BGMANAGER_ANIMATION);
-
-                // bitmapBack:ツールバーで描画した1個分の背景画像
-                using (Bitmap bitmapBack = new Bitmap(rcAnimation.Width, rcAnimation.Height)) {
-                    toolStrip.DrawToBitmap(bitmapBack, rcAnimation);
-                    using (Graphics g = Graphics.FromImage(bitmapModified)) {
-                        // ImageListに設定する画像に背景と透過画像を描画
-                        for (int i = 0; i < iconCount; i++) {
-                            g.DrawImage(bitmapBack, i * CX_BGMANAGER_ANIMATION, 0);
-                        }
-                        g.DrawImage(bitmapTransparent, 0, 0);
-                    }
-                }
-
-                // イメージリストを設定
-                s_bgManagerAnimationImageList = new ImageList();
-                s_bgManagerAnimationImageList.ColorDepth = ColorDepth.Depth32Bit;
-                s_bgManagerAnimationImageList.ImageSize = new Size(CX_BGMANAGER_ANIMATION, CY_BGMANAGER_ANIMATION);
-                s_bgManagerAnimationImageList.Images.AddStrip(bitmapModified);
-            }
+            s_iconImageList.ImageSize = new Size(iconSize, iconSize);
+            s_iconImageList.Images.AddStrip(s_bmpImageListIcon);
         }
 
         //=========================================================================================
@@ -153,7 +233,6 @@ namespace ShellFiler.UI {
             s_customizedIcon.Clear();
 
             s_iconImageList.Dispose();
-            s_bgManagerAnimationImageList.Dispose();
         }
 
         //=========================================================================================
@@ -177,28 +256,98 @@ namespace ShellFiler.UI {
         }
 
         //=========================================================================================
-        // 機　能：アイコンを取得する
-        // 引　数：[in]resource   リソースのビットマップ
-        // 　　　　[in,out]member 取得済みキャッシュを保持するクラスメンバ
-        // 　　　　[in]fileName   カスタマイズ用アイコンのファイル名
+        // 機　能：画像をオリジナルサイズのまま取得する
+        // 引　数：[in,out]member 取得済みキャッシュを保持するクラスメンバ
+        // 　　　　[in]nameBody   リソース名またはカスタマイズ用アイコンのファイル名本体
         // 戻り値：使用するビットマップ
         //=========================================================================================
-        public static Bitmap GetResource(Bitmap resource, ref Bitmap member, string fileName) {
+        public static Bitmap GetResourceOriginal(ref Bitmap member, string nameBody) {
             if (member != null) {
                 return member;
             }
-            string bmpPath = s_customizePath + fileName + ".png";
+
+            // カスタマイズから取得
+            string name = s_bmpPrefix + nameBody;
+            string bmpPath = s_customizePath + name + ".png";
             if (File.Exists(bmpPath)) {
                 try {
                     member = new Bitmap(bmpPath);
                     s_customizedIcon.Add(member);
                 } catch (Exception) {
-                    member = resource;
                 }
-            } else {
-                member = resource;
+            }
+
+            // リソースから取得
+            if (member == null) {
+                member = (Bitmap)Resources.ResourceManager.GetObject(name, Resources.Culture);
             }
             return member;
+        }
+
+        //=========================================================================================
+        // 機　能：画像をモニター解像度に合わせて取得する
+        // 引　数：[in,out]member 取得済みキャッシュを保持するクラスメンバ
+        // 　　　　[in]nameBody   リソース名またはカスタマイズ用アイコンのファイル名本体
+        //         [in]cxStepSrc  複合画像の１つ当たりのサイズ
+        // 戻り値：使用するビットマップ
+        //=========================================================================================
+        public static Bitmap GetResource(ref Bitmap member, string nameBody, int cxStepSrc = -1) {
+            if (member != null) {
+                return member;
+            }
+
+            // カスタマイズから取得
+            string name = s_bmpPrefix + nameBody;
+            string bmpPath = s_customizePath + name + ".png";
+            if (File.Exists(bmpPath)) {
+                try {
+                    member = new Bitmap(bmpPath);
+                    s_customizedIcon.Add(member);
+                } catch (Exception) {
+                }
+            }
+
+            // リソースから取得
+            if (member == null) {
+                member = (Bitmap)Resources.ResourceManager.GetObject(name, Resources.Culture);
+            }
+            if (s_dpiRatio == s_dpiRatioFrom) {
+                return member;
+            } else {
+                // 元画像が400pxでdpiRatio=150、dpiRatioFrom=200なら400*150/200=300
+                if (cxStepSrc == -1) {
+                    // 単独画像の場合はそのまま縮小
+                    Bitmap bitmapFrom = member;
+                    int width = bitmapFrom.Width * s_dpiRatio / s_dpiRatioFrom;
+                    int height = bitmapFrom.Height * s_dpiRatio / s_dpiRatioFrom;
+
+                    member = new Bitmap(width, height);
+                    using (Graphics graphics = Graphics.FromImage(member))
+                    using (ImageAttributes wrapMode = new ImageAttributes()) {
+                        wrapMode.SetWrapMode(WrapMode.TileFlipXY);
+                        graphics.DrawImage(bitmapFrom, new Rectangle(0, 0, width, height), 0, 0, bitmapFrom.Width, bitmapFrom.Height, GraphicsUnit.Pixel, wrapMode);
+                    }
+                } else {
+                    // ImageList用の複数画像で構成されている場合は1つずつ縮小
+                    Bitmap bitmapFrom = member;
+                    int cxElementSrc = cxStepSrc * s_dpiRatioFrom / 100;
+                    int cxElementDest = cxElementSrc * s_dpiRatio / s_dpiRatioFrom;
+                    int cyElementDest = bitmapFrom.Height * s_dpiRatio / s_dpiRatioFrom;
+                    int countElement = member.Width * 100 / s_dpiRatioFrom / cxStepSrc;
+
+                    member = new Bitmap(cxElementDest * countElement, cyElementDest, PixelFormat.Format32bppArgb);
+                    member.MakeTransparent();
+                    using (Graphics graphics = Graphics.FromImage(member))
+                    using (ImageAttributes wrapMode = new ImageAttributes()) {
+                        graphics.FillRectangle(Brushes.Transparent, 0, 0, member.Width, member.Height);
+                        wrapMode.SetWrapMode(WrapMode.TileFlipXY);
+                        for (int i = 0; i < countElement; i++) {
+                            graphics.DrawImage(bitmapFrom, new Rectangle(cxElementDest * i, 0, cxElementDest, cyElementDest), cxElementSrc * i, 0, cxElementSrc, bitmapFrom.Height, GraphicsUnit.Pixel, wrapMode);
+                        }
+                    }
+                }
+                return member;
+            }
         }
 
         //=========================================================================================
@@ -236,153 +385,195 @@ namespace ShellFiler.UI {
             }
         }
 
-        //=========================================================================================
-        // プロパティ：バックグラウンドマネージャ用のアニメーション
-        //=========================================================================================
-        public static ImageList BGManagerAnimationImageList {
+        public static Bitmap ButtonFace_Down {
             get {
-                return s_bgManagerAnimationImageList;
+                return GetResource(ref s_bmpButtonFace_Down, "ButtonFace_Down");
             }
         }
 
-        public static Bitmap ButtonFace_Down {
-            get {
-                return GetResource(Resources.ButtonFace_Down, ref s_bmpButtonFace_Down, "ButtonFace_Down");
-            }
-        }
         public static Bitmap ButtonFace_Up {
             get {
-                return GetResource(Resources.ButtonFace_Up, ref s_bmpButtonFace_Up, "ButtonFace_Up");
+                return GetResource(ref s_bmpButtonFace_Up, "ButtonFace_Up");
             }
         }
+
         public static Bitmap ButtonFace_PopupMenu {
             get {
-                return GetResource(Resources.ButtonFace_PopupMenu, ref s_bmpButtonFace_PopupMenu, "ButtonFace_PopupMenu");
+                return GetResource(ref s_bmpButtonFace_PopupMenu, "ButtonFace_PopupMenu");
             }
         }
+
         public static Bitmap DlgIntelliHddDir {
             get {
-                return GetResource(Resources.DlgIntelliHddDir, ref s_bmpDlgIntelliHddDir, "DlgIntelliHddDir");
+                return GetResource(ref s_bmpDlgIntelliHddDir, "DlgIntelliHddDir");
             }
         }
+
         public static Bitmap DlgIntelliHddFile {
             get {
-                return GetResource(Resources.DlgIntelliHddFile, ref s_bmpDlgIntelliHddFile, "DlgIntelliHddFile");
+                return GetResource(ref s_bmpDlgIntelliHddFile, "DlgIntelliHddFile");
             }
         }
+
         public static Bitmap DlgIntelliListDir {
             get {
-                return GetResource(Resources.DlgIntelliListDir, ref s_bmpDlgIntelliListDir, "DlgIntelliListDir");
+                return GetResource(ref s_bmpDlgIntelliListDir, "DlgIntelliListDir");
             }
         }
+
         public static Bitmap DlgIntelliListFile {
             get {
-                return GetResource(Resources.DlgIntelliListFile, ref s_bmpDlgIntelliListFile, "DlgIntelliListFile");
+                return GetResource(ref s_bmpDlgIntelliListFile, "DlgIntelliListFile");
             }
         }
+
         public static Bitmap DlgIntelliShell {
             get {
-                return GetResource(Resources.DlgIntelliShell, ref s_bmpDlgIntelliShell, "DlgIntelliShell");
+                return GetResource(ref s_bmpDlgIntelliShell, "DlgIntelliShell");
             }
         }
+
         public static Bitmap FileCondition_Or1 {
             get {
-                return GetResource(Resources.FileCondition_Or1, ref s_bmpFileCondition_Or1, "FileCondition_Or1");
+                return GetResource(ref s_bmpFileCondition_Or1, "FileCondition_Or1");
             }
         }
+
         public static Bitmap FileCondition_Or2 {
             get {
-                return GetResource(Resources.FileCondition_Or2, ref s_bmpFileCondition_Or2, "FileCondition_Or2");
+                return GetResource(ref s_bmpFileCondition_Or2, "FileCondition_Or2");
             }
         }
+
         public static Bitmap GraphicsViewer_FilterArrow1 {
             get {
-                return GetResource(Resources.GraphicsViewer_FilterArrow1, ref s_bmpGraphicsViewer_FilterArrow1, "GraphicsViewer_FilterArrow1");
+                return GetResource(ref s_bmpGraphicsViewer_FilterArrow1, "GraphicsViewer_FilterArrow1");
             }
         }
+
         public static Bitmap GraphicsViewer_FilterArrow2 {
             get {
-                return GetResource(Resources.GraphicsViewer_FilterArrow2, ref s_bmpGraphicsViewer_FilterArrow2, "GraphicsViewer_FilterArrow2");
+                return GetResource(ref s_bmpGraphicsViewer_FilterArrow2, "GraphicsViewer_FilterArrow2");
             }
         }
+
         public static Bitmap GraphicsViewer_FilterSample {
             get {
-                return GetResource(Resources.GraphicsViewer_FilterSample, ref s_bmpGraphicsViewer_FilterSample, "GraphicsViewer_FilterSample");
+                return GetResource(ref s_bmpGraphicsViewer_FilterSample, "GraphicsViewer_FilterSample");
             }
         }
+
         public static Bitmap GraphicsViewer_FilterSampleZoom {
             get {
-                return GetResource(Resources.GraphicsViewer_FilterSampleZoom, ref s_bmpGraphicsViewer_FilterSampleZoom, "GraphicsViewer_FilterSampleZoom");
+                return GetResource(ref s_bmpGraphicsViewer_FilterSampleZoom, "GraphicsViewer_FilterSampleZoom");
             }
         }
+
+        public static Bitmap ImageListIcon {
+            get {
+                return GetResourceOriginal(ref s_bmpImageListIcon, "ImageListIcon");
+            }
+        }
+
         public static Bitmap IconOperationFailed {
             get {
-                return GetResource(Resources.IconOperationFailed, ref s_bmpIconOperationFailed, "IconOperationFailed");
+                return GetResource(ref s_bmpIconOperationFailed, "IconOperationFailed");
             }
         }
+
         public static Bitmap IconSshSetting {
             get {
-                return GetResource(Resources.IconSshSetting, ref s_bmpIconSshSetting, "IconSshSetting");
+                return GetResource(ref s_bmpIconSshSetting, "IconSshSetting");
             }
         }
+
+        public static Bitmap MainIcon48 {
+            get {
+                return GetResource(ref s_bmpMainIcon48, "MainIcon48");
+            }
+        }
+
         public static Bitmap SameDialogInfoArrow {
             get {
-                return GetResource(Resources.SameDialogInfoArrow, ref s_bmpSameDialogInfoArrow, "SameDialogInfoArrow");
+                return GetResource(ref s_bmpSameDialogInfoArrow, "SameDialogInfoArrow");
             }
         }
+
         public static Bitmap TabClose_Focus {
             get {
-                return GetResource(Resources.TabClose_Focus, ref s_bmpTabClose_Focus, "TabClose_Focus");
+                return GetResource(ref s_bmpTabClose_Focus, "TabClose_Focus");
             }
         }
+
         public static Bitmap TabClose_Normal {
             get {
-                return GetResource(Resources.TabClose_Normal, ref s_bmpTabClose_Normal, "TabClose_Normal");
+                return GetResource(ref s_bmpTabClose_Normal, "TabClose_Normal");
             }
         }
+
         public static Bitmap TitleLogo {
             get {
-                return GetResource(Resources.TitleLogo, ref s_bmpTitleLogo, "TitleLogo");
+                return GetResource(ref s_bmpTitleLogo, "TitleLogo");
             }
         }
+
         public static Bitmap TwoStrokeKeyNormal {
             get {
-                return GetResource(Resources.TwoStrokeKeyNormal, ref s_bmpTwoStrokeKeyNormal, "TwoStrokeKeyNormal");
+                return GetResource(ref s_bmpTwoStrokeKeyNormal, "TwoStrokeKeyNormal");
             }
         }
+
         public static Bitmap TwoStrokeKeyShiftCtrlAlt {
             get {
-                return GetResource(Resources.TwoStrokeKeyShiftCtrlAlt, ref s_bmpTwoStrokeKeyShiftCtrlAlt, "TwoStrokeKeyShiftCtrlAlt");
+                return GetResource(ref s_bmpTwoStrokeKeyShiftCtrlAlt, "TwoStrokeKeyShiftCtrlAlt");
             }
         }
+
         public static Bitmap TwoStrokeKeyShiftCtrl {
             get {
-                return GetResource(Resources.TwoStrokeKeyShiftCtrl, ref s_bmpTwoStrokeKeyShiftCtrl, "TwoStrokeKeyShiftCtrl");
+                return GetResource(ref s_bmpTwoStrokeKeyShiftCtrl, "TwoStrokeKeyShiftCtrl");
             }
         }
+
         public static Bitmap TwoStrokeKeyShiftAlt {
             get {
-                return GetResource(Resources.TwoStrokeKeyShiftAlt, ref s_bmpTwoStrokeKeyShiftAlt, "TwoStrokeKeyShiftAlt");
+                return GetResource(ref s_bmpTwoStrokeKeyShiftAlt, "TwoStrokeKeyShiftAlt");
             }
         }
+
         public static Bitmap TwoStrokeKeyShift {
             get {
-                return GetResource(Resources.TwoStrokeKeyShift, ref s_bmpTwoStrokeKeyShift, "TwoStrokeKeyShift");
+                return GetResource(ref s_bmpTwoStrokeKeyShift, "TwoStrokeKeyShift");
             }
         }
+
         public static Bitmap TwoStrokeKeyCtrlAlt {
             get {
-                return GetResource(Resources.TwoStrokeKeyCtrlAlt, ref s_bmpTwoStrokeKeyCtrlAlt, "TwoStrokeKeyCtrlAlt");
+                return GetResource(ref s_bmpTwoStrokeKeyCtrlAlt, "TwoStrokeKeyCtrlAlt");
             }
         }
+
         public static Bitmap TwoStrokeKeyCtrl {
             get {
-                return GetResource(Resources.TwoStrokeKeyCtrl, ref s_bmpTwoStrokeKeyCtrl, "TwoStrokeKeyCtrl");
+                return GetResource(ref s_bmpTwoStrokeKeyCtrl, "TwoStrokeKeyCtrl");
             }
         }
+
         public static Bitmap TwoStrokeKeyAlt {
             get {
-                return GetResource(Resources.TwoStrokeKeyAlt, ref s_bmpTwoStrokeKeyAlt, "TwoStrokeKeyAlt");
+                return GetResource(ref s_bmpTwoStrokeKeyAlt, "TwoStrokeKeyAlt");
+            }
+        }
+
+        public static Bitmap[] ImageListBGManager {
+            get {
+                if (s_bmpBgManager == null) {
+                    s_bmpBgManager = new Bitmap[BG_MANAGER_ANIMATION_COUNT];
+                    for (int i = 0; i < BG_MANAGER_ANIMATION_COUNT; i++) {
+                        GetResource(ref s_bmpBgManager[i], $"BGManager{i:00}");
+                    }
+                }
+                return s_bmpBgManager;
             }
         }
     }

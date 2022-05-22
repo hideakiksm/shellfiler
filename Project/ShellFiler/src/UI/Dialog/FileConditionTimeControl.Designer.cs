@@ -42,9 +42,9 @@
             // checkBoxStart
             // 
             this.checkBoxStart.AutoSize = true;
-            this.checkBoxStart.Location = new System.Drawing.Point(101, 4);
+            this.checkBoxStart.Location = new System.Drawing.Point(101, 2);
             this.checkBoxStart.Name = "checkBoxStart";
-            this.checkBoxStart.Size = new System.Drawing.Size(46, 16);
+            this.checkBoxStart.Size = new System.Drawing.Size(48, 19);
             this.checkBoxStart.TabIndex = 1;
             this.checkBoxStart.Text = "含む";
             this.checkBoxStart.UseVisualStyleBackColor = true;
@@ -53,9 +53,9 @@
             // checkBoxEnd
             // 
             this.checkBoxEnd.AutoSize = true;
-            this.checkBoxEnd.Location = new System.Drawing.Point(314, 5);
+            this.checkBoxEnd.Location = new System.Drawing.Point(314, 3);
             this.checkBoxEnd.Name = "checkBoxEnd";
-            this.checkBoxEnd.Size = new System.Drawing.Size(46, 16);
+            this.checkBoxEnd.Size = new System.Drawing.Size(48, 19);
             this.checkBoxEnd.TabIndex = 3;
             this.checkBoxEnd.Text = "含む";
             this.checkBoxEnd.UseVisualStyleBackColor = true;
@@ -63,28 +63,28 @@
             // 
             // maskedStart
             // 
-            this.maskedStart.Location = new System.Drawing.Point(39, 2);
+            this.maskedStart.Location = new System.Drawing.Point(39, 0);
             this.maskedStart.Mask = "90:00:00";
             this.maskedStart.Name = "maskedStart";
-            this.maskedStart.Size = new System.Drawing.Size(60, 19);
+            this.maskedStart.Size = new System.Drawing.Size(60, 23);
             this.maskedStart.TabIndex = 0;
             this.maskedStart.Text = "120000";
             this.maskedStart.TextChanged += new System.EventHandler(this.dateTimeStartEnd_ValueChanged);
             // 
             // maskedEnd
             // 
-            this.maskedEnd.Location = new System.Drawing.Point(252, 2);
+            this.maskedEnd.Location = new System.Drawing.Point(252, 0);
             this.maskedEnd.Mask = "90:00:00";
             this.maskedEnd.Name = "maskedEnd";
-            this.maskedEnd.Size = new System.Drawing.Size(60, 19);
+            this.maskedEnd.Size = new System.Drawing.Size(60, 23);
             this.maskedEnd.TabIndex = 2;
             this.maskedEnd.Text = "120000";
             this.maskedEnd.TextChanged += new System.EventHandler(this.dateTimeStartEnd_ValueChanged);
             // 
             // FileConditionTimeControl
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.SystemColors.Window;
             this.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.Controls.Add(this.maskedEnd);
@@ -92,6 +92,7 @@
             this.Controls.Add(this.checkBoxEnd);
             this.Controls.Add(this.checkBoxStart);
             this.Controls.Add(this.panelRange);
+            this.Font = new System.Drawing.Font("Yu Gothic UI", 9F);
             this.Name = "FileConditionTimeControl";
             this.Size = new System.Drawing.Size(398, 48);
             this.ResumeLayout(false);

@@ -125,8 +125,8 @@ namespace ShellFiler.UI.Log.Logger {
                 }
                 if (m_status != FileOperationStatus.Null) {
                     // リーダーを描画
-                    int x1Leader = (locationX.X1FileName + Math.Min(locationX.SizeFileName, locationX.CxFileName) + LogLineRenderer.CX_LEADER_MARGIN) / 2 * 2;
-                    int x2Leader = locationX.X1Status - LogLineRenderer.CX_LEADER_MARGIN;
+                    int x1Leader = (locationX.X1FileName + Math.Min(locationX.SizeFileName, locationX.CxFileName) + g.X(LogLineRenderer.CX_LEADER_MARGIN)) / 2 * 2;
+                    int x2Leader = locationX.X1Status - g.X(LogLineRenderer.CX_LEADER_MARGIN);
                     int yLeader = yPos + g.LogWindowFont.Height / 2;
                     if (x1Leader < x2Leader) {
                         g.Graphics.DrawLine(leaderPen, x1Leader, yLeader, x2Leader, yLeader);
@@ -338,7 +338,19 @@ namespace ShellFiler.UI.Log.Logger {
             
             // ステータスの文字列または進捗表示のサイズ
             private int m_sizeStatus;
-            
+
+            // 操作種別の描画開始X座標
+            private int m_x1OperationType;
+
+            // ファイル名の描画幅
+            private int m_cxFileName;
+
+            // ファイル名の描画開始X座標
+            private int m_x1FileName;
+
+            // ステータスの描画開始X座標
+            private int m_x1Status;
+
             //=========================================================================================
             // 機　能：コンストラクタ
             // 引　数：[in]g          グラフィックス
@@ -352,13 +364,18 @@ namespace ShellFiler.UI.Log.Logger {
                 m_rcClient = rcClient;
                 Font font = g.LogWindowFont;
                 Font fontBold = g.LogWindowBoldFont;
-                m_sizeOperation = TextRendererUtils.MeasureStringJustInt(g.Graphics, fontBold, operation);
-                m_sizeFileName = TextRendererUtils.MeasureStringJustInt(g.Graphics, font, filePath);
+                m_sizeOperation = TextRendererUtils.MeasureStringJustInt(g, fontBold, operation);
+                m_sizeFileName = TextRendererUtils.MeasureStringJustInt(g, font, filePath);
                 if (status != FileOperationStatus.Processing) {
-                    m_sizeStatus = TextRendererUtils.MeasureStringJustInt(g.Graphics, font, status.Message);
+                    m_sizeStatus = TextRendererUtils.MeasureStringJustInt(g, font, status.Message);
                 } else {
                     m_sizeStatus = CxStatus;
                 }
+
+                m_x1OperationType = g.X(LogLineRenderer.CX_LEFT_RIGHT_MARGIN);
+                m_cxFileName = m_rcClient.Width - CxOperationType - CxStatus - g.X(LogLineRenderer.CX_LEADER) - g.X(LogLineRenderer.CX_LEFT_RIGHT_MARGIN * 2);
+                m_x1FileName = g.X(LogLineRenderer.CX_LEFT_RIGHT_MARGIN) + LogPanel.CxOperationString;
+                m_x1Status = m_rcClient.Width - g.X(LogLineRenderer.CX_LEFT_RIGHT_MARGIN) - LogPanel.CxStatusString;
             }
 
             //=========================================================================================
@@ -438,7 +455,7 @@ namespace ShellFiler.UI.Log.Logger {
             //=========================================================================================
             public int X1OperationType {
                 get {
-                    return LogLineRenderer.CX_LEFT_RIGHT_MARGIN;
+                    return m_x1OperationType;
                 }
             }
 
@@ -447,7 +464,7 @@ namespace ShellFiler.UI.Log.Logger {
             //=========================================================================================
             public int CxFileName {
                 get {
-                    return m_rcClient.Width - CxOperationType - CxStatus - LogLineRenderer.CX_LEADER - LogLineRenderer.CX_LEFT_RIGHT_MARGIN * 2;
+                    return m_cxFileName;
                 }
             }
 
@@ -456,7 +473,7 @@ namespace ShellFiler.UI.Log.Logger {
             //=========================================================================================
             public int X1FileName {
                 get {
-                    return LogLineRenderer.CX_LEFT_RIGHT_MARGIN + LogPanel.CxOperationString;
+                    return m_x1FileName;
                 }
             }
 
@@ -474,7 +491,7 @@ namespace ShellFiler.UI.Log.Logger {
             //=========================================================================================
             public int X1Status {
                 get {
-                    return m_rcClient.Width - LogLineRenderer.CX_LEFT_RIGHT_MARGIN - LogPanel.CxStatusString;
+                    return m_x1Status;
                 }
             }
 

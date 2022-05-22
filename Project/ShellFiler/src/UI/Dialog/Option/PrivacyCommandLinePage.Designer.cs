@@ -48,16 +48,16 @@
             this.label6.AutoSize = true;
             this.label6.Location = new System.Drawing.Point(251, 55);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(140, 12);
+            this.label6.Size = new System.Drawing.Size(144, 15);
             this.label6.TabIndex = 2;
             this.label6.Text = "(変更は次回起動時に有効)";
             // 
             // checkBoxCommandSave
             // 
             this.checkBoxCommandSave.AutoSize = true;
-            this.checkBoxCommandSave.Location = new System.Drawing.Point(8, 78);
+            this.checkBoxCommandSave.Location = new System.Drawing.Point(8, 80);
             this.checkBoxCommandSave.Name = "checkBoxCommandSave";
-            this.checkBoxCommandSave.Size = new System.Drawing.Size(196, 16);
+            this.checkBoxCommandSave.Size = new System.Drawing.Size(203, 19);
             this.checkBoxCommandSave.TabIndex = 3;
             this.checkBoxCommandSave.Text = "コマンド履歴をディスクに保存する(&D):";
             this.checkBoxCommandSave.UseVisualStyleBackColor = true;
@@ -69,7 +69,7 @@
             0,
             0,
             0});
-            this.numericCommandNum.Location = new System.Drawing.Point(107, 53);
+            this.numericCommandNum.Location = new System.Drawing.Point(108, 53);
             this.numericCommandNum.Maximum = new decimal(new int[] {
             1000,
             0,
@@ -81,7 +81,7 @@
             0,
             0});
             this.numericCommandNum.Name = "numericCommandNum";
-            this.numericCommandNum.Size = new System.Drawing.Size(120, 19);
+            this.numericCommandNum.Size = new System.Drawing.Size(120, 23);
             this.numericCommandNum.TabIndex = 1;
             this.numericCommandNum.Value = new decimal(new int[] {
             1,
@@ -94,7 +94,7 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(6, 55);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(95, 12);
+            this.label1.Size = new System.Drawing.Size(102, 15);
             this.label1.TabIndex = 0;
             this.label1.Text = "最大記憶件数(&C):";
             // 
@@ -103,7 +103,7 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(6, 3);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(100, 12);
+            this.label2.Size = new System.Drawing.Size(101, 15);
             this.label2.TabIndex = 6;
             this.label2.Text = "コマンドラインの履歴";
             // 
@@ -112,14 +112,14 @@
             this.label10.AutoSize = true;
             this.label10.Location = new System.Drawing.Point(6, 23);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(170, 12);
+            this.label10.Size = new System.Drawing.Size(171, 15);
             this.label10.TabIndex = 7;
             this.label10.Text = "入力したコマンドラインの履歴です。";
             // 
             // PrivacyCommandLinePage
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.Controls.Add(this.buttonCommandDel);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label6);
@@ -127,6 +127,7 @@
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.numericCommandNum);
+            this.Font = new System.Drawing.Font("Yu Gothic UI", 9F);
             this.Name = "PrivacyCommandLinePage";
             this.Size = new System.Drawing.Size(520, 370);
             ((System.ComponentModel.ISupportInitialize)(this.numericCommandNum)).EndInit();

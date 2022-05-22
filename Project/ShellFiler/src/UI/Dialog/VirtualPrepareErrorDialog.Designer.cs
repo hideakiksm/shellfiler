@@ -64,7 +64,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(12, 78);
+            this.label3.Location = new System.Drawing.Point(12, 80);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(295, 12);
             this.label3.TabIndex = 2;
@@ -73,7 +73,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(12, 106);
+            this.label4.Location = new System.Drawing.Point(12, 108);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(347, 12);
             this.label4.TabIndex = 3;
@@ -82,7 +82,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(12, 118);
+            this.label5.Location = new System.Drawing.Point(12, 122);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(338, 12);
             this.label5.TabIndex = 4;
@@ -91,7 +91,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(12, 130);
+            this.label6.Location = new System.Drawing.Point(12, 136);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(312, 12);
             this.label6.TabIndex = 5;
@@ -100,7 +100,7 @@
             // buttonClose
             // 
             this.buttonClose.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.buttonClose.Location = new System.Drawing.Point(294, 180);
+            this.buttonClose.Location = new System.Drawing.Point(294, 187);
             this.buttonClose.Name = "buttonClose";
             this.buttonClose.Size = new System.Drawing.Size(75, 23);
             this.buttonClose.TabIndex = 6;
@@ -110,7 +110,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(12, 156);
+            this.label7.Location = new System.Drawing.Point(12, 162);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(317, 12);
             this.label7.TabIndex = 5;
@@ -122,7 +122,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.buttonClose;
-            this.ClientSize = new System.Drawing.Size(381, 215);
+            this.ClientSize = new System.Drawing.Size(381, 222);
             this.Controls.Add(this.buttonClose);
             this.Controls.Add(this.pictureBoxIcon);
             this.Controls.Add(this.label7);

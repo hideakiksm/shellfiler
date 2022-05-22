@@ -55,27 +55,28 @@
             this.labelSize.AutoSize = true;
             this.labelSize.Location = new System.Drawing.Point(13, 13);
             this.labelSize.Name = "labelSize";
-            this.labelSize.Size = new System.Drawing.Size(0, 12);
+            this.labelSize.Size = new System.Drawing.Size(0, 15);
             this.labelSize.TabIndex = 2;
             // 
-            // FileListInitialPageSizeForm
+            // WindowSizeInputForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.CancelButton = this.buttonCancel;
             this.ClientSize = new System.Drawing.Size(284, 262);
             this.Controls.Add(this.labelSize);
             this.Controls.Add(this.buttonCancel);
             this.Controls.Add(this.buttonOk);
+            this.Font = new System.Drawing.Font("Yu Gothic UI", 9F);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "FileListInitialPageSizeForm";
+            this.Name = "WindowSizeInputForm";
             this.ShowIcon = false;
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "ウィンドウサイズのテスト";
-            this.SizeChanged += new System.EventHandler(this.FileListInitialPageSizeForm_SizeChanged);
             this.LocationChanged += new System.EventHandler(this.FileListInitialPageSizeForm_LocationChanged);
+            this.SizeChanged += new System.EventHandler(this.FileListInitialPageSizeForm_SizeChanged);
             this.ResumeLayout(false);
             this.PerformLayout();
 
