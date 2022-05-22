@@ -27,38 +27,20 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_768600075C45CB124CE7543AB7717448"
-        "OwnerKey" = "8:_B467683E85D14596AE4EBFA398C0EC5A"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
         "MsmKey" = "8:_834262DC0C6B485C999B28F3AC4A163B"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_8B7CD5BCE1040CAB459F0ECBC133CC8E"
+        "MsmKey" = "8:_AE1B3EF589CFE7F725A6879D8D3C2B56"
         "OwnerKey" = "8:_B467683E85D14596AE4EBFA398C0EC5A"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_8B7CD5BCE1040CAB459F0ECBC133CC8E"
-        "OwnerKey" = "8:_768600075C45CB124CE7543AB7717448"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_A52EBF9219EF2C14ECB46026011AEC56"
-        "OwnerKey" = "8:_B467683E85D14596AE4EBFA398C0EC5A"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_A52EBF9219EF2C14ECB46026011AEC56"
-        "OwnerKey" = "8:_768600075C45CB124CE7543AB7717448"
+        "MsmKey" = "8:_AE1B3EF589CFE7F725A6879D8D3C2B56"
+        "OwnerKey" = "8:_FC1AA05B3F89C99FACBC55F4D6CA6032"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -71,6 +53,18 @@
         {
         "MsmKey" = "8:_CD74F15A4ECD15073ACD500558B4ABB1"
         "OwnerKey" = "8:_1E5555AAA4144FCDB3B7664AD2027EE8"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_D040319C3F5C5C1FCAF04669219A66BB"
+        "OwnerKey" = "8:_B467683E85D14596AE4EBFA398C0EC5A"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_D040319C3F5C5C1FCAF04669219A66BB"
+        "OwnerKey" = "8:_FC1AA05B3F89C99FACBC55F4D6CA6032"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -99,6 +93,12 @@
         }
         "Entry"
         {
+        "MsmKey" = "8:_FC1AA05B3F89C99FACBC55F4D6CA6032"
+        "OwnerKey" = "8:_B467683E85D14596AE4EBFA398C0EC5A"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_FE50B99FF322439EBB7A54B46656881F"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
@@ -112,19 +112,19 @@
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_768600075C45CB124CE7543AB7717448"
+        "OwnerKey" = "8:_FC1AA05B3F89C99FACBC55F4D6CA6032"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_A52EBF9219EF2C14ECB46026011AEC56"
+        "OwnerKey" = "8:_D040319C3F5C5C1FCAF04669219A66BB"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_8B7CD5BCE1040CAB459F0ECBC133CC8E"
+        "OwnerKey" = "8:_AE1B3EF589CFE7F725A6879D8D3C2B56"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -248,37 +248,6 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_768600075C45CB124CE7543AB7717448"
-            {
-            "AssemblyRegister" = "3:1"
-            "AssemblyIsInGAC" = "11:FALSE"
-            "AssemblyAsmDisplayName" = "8:Tamir.SharpSSH, Version=1.1.1.13, Culture=neutral, processorArchitecture=MSIL"
-                "ScatterAssemblies"
-                {
-                    "_768600075C45CB124CE7543AB7717448"
-                    {
-                    "Name" = "8:Tamir.SharpSSH.dll"
-                    "Attributes" = "3:512"
-                    }
-                }
-            "SourcePath" = "8:Tamir.SharpSSH.dll"
-            "TargetName" = "8:"
-            "Tag" = "8:"
-            "Folder" = "8:_2ECAED80D2D247359AC70FA7425AEF66"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:TRUE"
-            "IsDependency" = "11:TRUE"
-            "IsolateTo" = "8:"
-            }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_834262DC0C6B485C999B28F3AC4A163B"
             {
             "SourcePath" = "8:..\\ShellFiler\\doc\\Credit.txt"
@@ -299,51 +268,20 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_8B7CD5BCE1040CAB459F0ECBC133CC8E"
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_AE1B3EF589CFE7F725A6879D8D3C2B56"
             {
             "AssemblyRegister" = "3:1"
             "AssemblyIsInGAC" = "11:FALSE"
             "AssemblyAsmDisplayName" = "8:DiffieHellman, Version=0.0.0.0, Culture=neutral"
                 "ScatterAssemblies"
                 {
-                    "_8B7CD5BCE1040CAB459F0ECBC133CC8E"
+                    "_AE1B3EF589CFE7F725A6879D8D3C2B56"
                     {
                     "Name" = "8:DiffieHellman.dll"
                     "Attributes" = "3:512"
                     }
                 }
             "SourcePath" = "8:DiffieHellman.dll"
-            "TargetName" = "8:"
-            "Tag" = "8:"
-            "Folder" = "8:_2ECAED80D2D247359AC70FA7425AEF66"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:TRUE"
-            "IsDependency" = "11:TRUE"
-            "IsolateTo" = "8:"
-            }
-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_A52EBF9219EF2C14ECB46026011AEC56"
-            {
-            "AssemblyRegister" = "3:1"
-            "AssemblyIsInGAC" = "11:FALSE"
-            "AssemblyAsmDisplayName" = "8:Org.Mentalis.Security, Version=1.0.13.715, Culture=neutral"
-                "ScatterAssemblies"
-                {
-                    "_A52EBF9219EF2C14ECB46026011AEC56"
-                    {
-                    "Name" = "8:Org.Mentalis.Security.dll"
-                    "Attributes" = "3:512"
-                    }
-                }
-            "SourcePath" = "8:Org.Mentalis.Security.dll"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_2ECAED80D2D247359AC70FA7425AEF66"
@@ -378,6 +316,37 @@
             "PackageAs" = "3:1"
             "Register" = "3:1"
             "Exclude" = "11:FALSE"
+            "IsDependency" = "11:TRUE"
+            "IsolateTo" = "8:"
+            }
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_D040319C3F5C5C1FCAF04669219A66BB"
+            {
+            "AssemblyRegister" = "3:1"
+            "AssemblyIsInGAC" = "11:FALSE"
+            "AssemblyAsmDisplayName" = "8:Org.Mentalis.Security, Version=1.0.13.715, Culture=neutral"
+                "ScatterAssemblies"
+                {
+                    "_D040319C3F5C5C1FCAF04669219A66BB"
+                    {
+                    "Name" = "8:Org.Mentalis.Security.dll"
+                    "Attributes" = "3:512"
+                    }
+                }
+            "SourcePath" = "8:Org.Mentalis.Security.dll"
+            "TargetName" = "8:"
+            "Tag" = "8:"
+            "Folder" = "8:_2ECAED80D2D247359AC70FA7425AEF66"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:TRUE"
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
@@ -469,6 +438,37 @@
             "PackageAs" = "3:1"
             "Register" = "3:1"
             "Exclude" = "11:FALSE"
+            "IsDependency" = "11:TRUE"
+            "IsolateTo" = "8:"
+            }
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_FC1AA05B3F89C99FACBC55F4D6CA6032"
+            {
+            "AssemblyRegister" = "3:1"
+            "AssemblyIsInGAC" = "11:FALSE"
+            "AssemblyAsmDisplayName" = "8:Tamir.SharpSSH, Version=1.1.1.13, Culture=neutral, processorArchitecture=MSIL"
+                "ScatterAssemblies"
+                {
+                    "_FC1AA05B3F89C99FACBC55F4D6CA6032"
+                    {
+                    "Name" = "8:Tamir.SharpSSH.dll"
+                    "Attributes" = "3:512"
+                    }
+                }
+            "SourcePath" = "8:Tamir.SharpSSH.dll"
+            "TargetName" = "8:"
+            "Tag" = "8:"
+            "Folder" = "8:_2ECAED80D2D247359AC70FA7425AEF66"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:TRUE"
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
@@ -570,15 +570,15 @@
         {
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:ShellFiler"
-        "ProductCode" = "8:{7A5F9160-BCED-43E6-9973-2E0C1AF13833}"
-        "PackageCode" = "8:{3C7CD168-44FE-4E32-BE02-0C6B918C4598}"
+        "ProductCode" = "8:{8488876C-D9B7-405D-856E-3B69E723831F}"
+        "PackageCode" = "8:{44BADF5A-2ABE-440E-A970-473796C2B529}"
         "UpgradeCode" = "8:{8530B041-F55D-4123-8188-0BF71EEFBFC2}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"
         "RemovePreviousVersions" = "11:FALSE"
         "DetectNewerInstalledVersion" = "11:TRUE"
         "InstallAllUsers" = "11:FALSE"
-        "ProductVersion" = "8:3.0.1"
+        "ProductVersion" = "8:3.0.2"
         "Manufacturer" = "8:Hideaki Kishimoto"
         "ARPHELPTELEPHONE" = "8:"
         "ARPHELPLINK" = "8:"
@@ -691,13 +691,13 @@
         }
         "Shortcut"
         {
-            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_3867E052B201477895189BE31BD8A00F"
+            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_7D53ABA56C654D789532F23A82E0EFED"
             {
             "Name" = "8:ShellFiler"
             "Arguments" = "8:"
             "Description" = "8:"
             "ShowCmd" = "3:1"
-            "IconIndex" = "3:101"
+            "IconIndex" = "3:32512"
             "Transitive" = "11:FALSE"
             "Target" = "8:_B467683E85D14596AE4EBFA398C0EC5A"
             "Folder" = "8:_08A49AC3D9B74A44B356CCAAF72F80E5"
