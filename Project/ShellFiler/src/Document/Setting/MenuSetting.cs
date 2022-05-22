@@ -314,6 +314,11 @@ namespace ShellFiler.Document.Setting {
                 menu.AddSubMenu(new MenuItemSetting(new ActionCommandMoniker(ActionCommandOption.None, typeof(ExtractCommand)),                      'E', null));
                 menu.AddSubMenu(new MenuItemSetting(new ActionCommandMoniker(ActionCommandOption.None, typeof(ChdirVirtualFolderCommand)),           'L', null));
                 menu.AddSubMenu(new MenuItemSetting(new ActionCommandMoniker(ActionCommandOption.None, typeof(PrepareVirtualFolderCommand)),         'U', null));
+                MenuItemSetting gitMenu = new MenuItemSetting("Git操作", 'A');
+                gitMenu.AddSubMenu(new MenuItemSetting(new ActionCommandMoniker(ActionCommandOption.None, typeof(GitAddCommand)),                    'A', null));
+                gitMenu.AddSubMenu(new MenuItemSetting(new ActionCommandMoniker(ActionCommandOption.None, typeof(GitMoveCommand)),                   'M', null));
+                gitMenu.AddSubMenu(new MenuItemSetting(new ActionCommandMoniker(ActionCommandOption.None, typeof(GitRenameCommand)),                 'R', null));
+                menu.AddSubMenu(gitMenu);
                 menu.AddSubMenu(new MenuItemSetting(MenuItemSetting.ItemType.Separator));
                 menu.AddSubMenu(new MenuItemSetting(new ActionCommandMoniker(ActionCommandOption.None, typeof(DiffMarkCommand)),                     'D', null));
                 menu.AddSubMenu(new MenuItemSetting(new ActionCommandMoniker(ActionCommandOption.None, typeof(DiffOppositeCommand)),                 'O', null));
