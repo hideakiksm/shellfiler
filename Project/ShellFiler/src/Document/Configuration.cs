@@ -159,7 +159,10 @@ namespace ShellFiler.Document {
 
         // フォルダ変更時にカーソル位置のレジュームを行うときtrue
         private bool m_resumeFolderCursorFile = true;
-        
+
+        // フォルダオープン時にカーソル位置にあるフォルダを開くときtrue
+        private bool m_fileListCursorOpenFolder = false;
+
         //*****************************************************************************************
         // ファイル一覧＞起動時の表示モード
         //*****************************************************************************************
@@ -1041,6 +1044,8 @@ namespace ShellFiler.Document {
                     obj.m_hideWindowDragDrop = loader.BoolValue;
                 } else if (tagType == SettingTagType.BoolValue && tagName == SettingTag.Config_ResumeFolderCursorFile) {
                     obj.m_resumeFolderCursorFile = loader.BoolValue;
+                } else if (tagType == SettingTagType.BoolValue && tagName == SettingTag.Config_FileListCursorOpenFolder) {
+                    obj.m_fileListCursorOpenFolder = loader.BoolValue;
 
                 // ファイル一覧＞起動時の表示モード
                 } else if (tagType == SettingTagType.BeginObject && tagName == SettingTag.Config_DefaultViewModeLeft) {
@@ -1688,6 +1693,7 @@ namespace ShellFiler.Document {
             saver.AddBool(SettingTag.Config_ChdirParentOtherSideMove, obj.m_chdirParentOtherSideMove);
             saver.AddBool(SettingTag.Config_HideWindowDragDrop, obj.m_hideWindowDragDrop);
             saver.AddBool(SettingTag.Config_ResumeFolderCursorFile, obj.m_resumeFolderCursorFile);
+            saver.AddBool(SettingTag.Config_FileListCursorOpenFolder, obj.m_fileListCursorOpenFolder);
 
             // ファイル一覧＞起動時の表示モード
             saver.StartObject(SettingTag.Config_DefaultViewModeLeft);
@@ -2072,6 +2078,9 @@ namespace ShellFiler.Document {
                 return false;
             }
             if (obj1.m_resumeFolderCursorFile != obj2.m_resumeFolderCursorFile) {
+                return false;
+            }
+            if (obj1.m_fileListCursorOpenFolder != obj2.m_fileListCursorOpenFolder) {
                 return false;
             }
 
@@ -2645,6 +2654,7 @@ namespace ShellFiler.Document {
             clone.m_chdirParentOtherSideMove = m_chdirParentOtherSideMove;
             clone.m_hideWindowDragDrop = m_hideWindowDragDrop;
             clone.m_resumeFolderCursorFile = m_resumeFolderCursorFile;
+            clone.m_fileListCursorOpenFolder = m_fileListCursorOpenFolder;
 
             // ファイル一覧＞サムネイル
             if (m_defaultViewModeLeft != null) {
@@ -3570,6 +3580,18 @@ namespace ShellFiler.Document {
             }
             set {
                 m_resumeFolderCursorFile = value;
+            }
+        }
+
+        //=========================================================================================
+        // プロパティ：フォルダオープン時にカーソル位置にあるフォルダを開くときtrue
+        //=========================================================================================
+        public bool FileListCursorOpenFolder {
+            get {
+                return m_fileListCursorOpenFolder;
+            }
+            set {
+                m_fileListCursorOpenFolder = value;
             }
         }
 

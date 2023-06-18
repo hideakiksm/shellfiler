@@ -52,6 +52,7 @@ namespace ShellFiler.Document.Setting {
         public static readonly SettingTag Config_ChdirParentOtherSideMove           = Add(new SettingTag("ChdirParentOtherSideMove"));
         public static readonly SettingTag Config_HideWindowDragDrop                 = Add(new SettingTag("HideWindowDragDrop"));
         public static readonly SettingTag Config_ResumeFolderCursorFile             = Add(new SettingTag("ResumeFolderCursorFile"));
+        public static readonly SettingTag Config_FileListCursorOpenFolder           = Add(new SettingTag("FileListCursorOpenFolder"));
         public static readonly SettingTag Config_DefaultViewModeLeft                = Add(new SettingTag("DefaultViewModeLeft"));
         public static readonly SettingTag Config_DefaultViewModeRight               = Add(new SettingTag("DefaultViewModeRight"));
         public static readonly SettingTag Config_FileListViewChangeMode             = Add(new SettingTag("FileListViewChangeMode"));

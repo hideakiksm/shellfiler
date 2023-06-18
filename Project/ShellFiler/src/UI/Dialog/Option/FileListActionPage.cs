@@ -56,6 +56,7 @@ namespace ShellFiler.UI.Dialog.Option {
             this.checkBoxOppositeParent.Checked = config.ChdirParentOtherSideMove;
             this.checkBoxHideDrag.Checked = config.HideWindowDragDrop;
             this.checkBoxResumeCursor.Checked = config.ResumeFolderCursorFile;
+            this.checkFileListCursorOpenFolder.Checked = config.FileListCursorOpenFolder;
         }
 
         //=========================================================================================
@@ -93,6 +94,9 @@ namespace ShellFiler.UI.Dialog.Option {
             // フォルダ変更時にカーソル位置のレジュームを行うときtrue
             bool resumeCursor = this.checkBoxResumeCursor.Checked;
 
+            // フォルダオープン時にカーソル位置にあるフォルダを開くときtrue
+            bool fileListCursorOpenFolder = this.checkFileListCursorOpenFolder.Checked;
+
             // Configに反映
             Configuration.Current.ListViewScrollMarginLineCount = scrollMargin;
             Configuration.Current.MouseWheelMaxLines = wheelLines;
@@ -101,6 +105,7 @@ namespace ShellFiler.UI.Dialog.Option {
             Configuration.Current.ChdirParentOtherSideMove = chdir;
             Configuration.Current.HideWindowDragDrop = hideDrag;
             Configuration.Current.ResumeFolderCursorFile = resumeCursor;
+            Configuration.Current.FileListCursorOpenFolder = fileListCursorOpenFolder;
 
             return true;
         }

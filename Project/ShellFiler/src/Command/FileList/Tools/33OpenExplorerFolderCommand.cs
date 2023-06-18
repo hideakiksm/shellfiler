@@ -11,6 +11,7 @@ using ShellFiler.FileSystem.Virtual;
 using ShellFiler.FileTask;
 using ShellFiler.Util;
 using ShellFiler.UI;
+using System.IO;
 
 namespace ShellFiler.Command.FileList.Tools {
 
@@ -44,6 +45,13 @@ namespace ShellFiler.Command.FileList.Tools {
             }
 
             string folder = FileListViewTarget.FileList.DisplayDirectoryName;
+
+            if (Configuration.Current.FileListCursorOpenFolder) {
+                int lineNo = FileListComponentTarget.CursorLineNo;
+                string cursorFolderName = FileListViewTarget.FileList.Files[lineNo].FileName;
+                folder = System.IO.Path.Combine(folder, cursorFolderName);
+            }
+
             IFileListContext fileListCtx = FileListViewTarget.FileList.FileListContext;
             FileSystemFactory factory = Program.Document.FileSystemFactory;
             FileOperationStatus status = FileListViewTarget.FileList.FileSystem.OpenShellFile(folder, folder, true, fileListCtx);
