@@ -28,10 +28,10 @@ namespace ShellFiler.Util {
         private const uint PROGRESS_STOP = 2; 
         private const uint PROGRESS_QUIET = 3; 
 
-        [DllImport("kernel32.dll", SetLastError = true)] 
-        private static extern bool CopyFileEx(string lpExistingFileName, string lpNewFileName, CopyProgressRoutine lpProgressRoutine, IntPtr lpData, ref Int32 pbCancel, uint dwCopyFlags); 
+        [DllImport("kernel32.dll", CharSet = CharSet.Unicode, SetLastError = true)] 
+        private static extern bool CopyFileEx(string lpExistingFileName, string lpNewFileName, CopyProgressRoutine lpProgressRoutine, IntPtr lpData, ref Int32 pbCancel, uint dwCopyFlags);
 
-        [DllImport("kernel32.dll", SetLastError = true)] 
+        [DllImport("kernel32.dll", CharSet = CharSet.Unicode, SetLastError = true)] 
         private static extern bool MoveFileWithProgress(string lpExistingFileName, string lpNewFileName, CopyProgressRoutine lpProgressRoutine, IntPtr lpData, uint dwCopyFlags); 
 
         // 進捗状況のイベント通知先のメソッド型
