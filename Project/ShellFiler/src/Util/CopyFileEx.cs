@@ -32,7 +32,7 @@ namespace ShellFiler.Util {
         private static extern bool CopyFileEx(string lpExistingFileName, string lpNewFileName, CopyProgressRoutine lpProgressRoutine, IntPtr lpData, ref Int32 pbCancel, uint dwCopyFlags);
 
         [DllImport("kernel32.dll", CharSet = CharSet.Unicode, SetLastError = true)] 
-        private static extern bool MoveFileWithProgress(string lpExistingFileName, string lpNewFileName, CopyProgressRoutine lpProgressRoutine, IntPtr lpData, uint dwCopyFlags); 
+        private static extern bool MoveFileWithProgress(string lpExistingFileName, string lpNewFileName, CopyProgressRoutine lpProgressRoutine, IntPtr lpData, uint dwCopyFlags);
 
         // 進捗状況のイベント通知先のメソッド型
         private delegate uint CopyProgressRoutine(long totalSize, long transfered, long streamSize, long streamTransferred, uint streamNumber, uint reason, IntPtr hSrcFile, IntPtr hDestFile, IntPtr lpData);
