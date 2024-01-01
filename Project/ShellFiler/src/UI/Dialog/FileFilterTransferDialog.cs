@@ -470,82 +470,83 @@ namespace ShellFiler.UI.Dialog {
 
                 DoubleBuffer doubleBuffer = new DoubleBuffer(evt.Graphics, evt.Bounds.Width, evt.Bounds.Height);
                 doubleBuffer.SetDrawOrigin(-evt.Bounds.Left, -evt.Bounds.Top);
-                OwnerDrawListBoxGraphics g = new OwnerDrawListBoxGraphics(doubleBuffer.DrawingGraphics, evt.Bounds.Top, evt.Bounds.Height);
+                using (HighDpiGraphics g2 = new HighDpiGraphics(m_parent)) {
+                    OwnerDrawListBoxGraphics g = new OwnerDrawListBoxGraphics(doubleBuffer.DrawingGraphics, evt.Bounds.Top, evt.Bounds.Height);
 
-                Brush backBrush;
-                Pen borderPen;
-                Brush textBrush;
+                    Brush backBrush;
+                    Pen borderPen;
+                    Brush textBrush;
 
-                // 背景色を決定
-                if ((evt.State & DrawItemState.Selected) == DrawItemState.Selected) {
-                    // 選択中
-                    backBrush = g.MarkBackBrush;
-                    borderPen = g.BorderPen;
-                } else {
-                    // 選択中
-                    backBrush = SystemBrushes.Window;
-                    borderPen = g.BorderPen;
-                }
-                if (filterList.UseFilter) {
-                    textBrush = SystemBrushes.WindowText;
-                } else {
-                    textBrush = SystemBrushes.GrayText;
-                }
-
-                // 描画
-                int cx = evt.Bounds.Width;
-                int cy = evt.Bounds.Height;
-                bool drawBottom = false;
-                if (index == m_parent.listBoxDetailFileType.Items.Count - 1) {
-                    cy--;
-                    drawBottom = true;
-                }
-                Rectangle rect = new Rectangle(evt.Bounds.Left, evt.Bounds.Top, evt.Bounds.Width - 1, cy);
-                g.Graphics.FillRectangle(backBrush, rect);
-                g.Graphics.DrawLine(borderPen, new Point(rect.Left, rect.Top), new Point(rect.Right, rect.Top));
-                g.Graphics.DrawLine(borderPen, new Point(rect.Left, rect.Top), new Point(rect.Left, rect.Bottom));
-                g.Graphics.DrawLine(borderPen, new Point(rect.Right, rect.Top), new Point(rect.Right, rect.Bottom));
-                if (drawBottom) {
-                    g.Graphics.DrawLine(borderPen, new Point(rect.Left, rect.Bottom), new Point(rect.Right, rect.Bottom));
-                }
-
-                // チェックボックス
-                Font font = m_parent.listBoxDetailFileType.Font;
-                int x = evt.Bounds.Left + X_CHECKBOX_CONTROL;
-                int y = evt.Bounds.Top + Y_CHECKBOX_CONTROL;
-                Rectangle rcCheckBox = new Rectangle(x, y, SIZE_CHECKBOX_CONTROL, SIZE_CHECKBOX_CONTROL);
-                ButtonState checkState = (filterList.UseFilter ? ButtonState.Checked : ButtonState.Normal);
-                ControlPaint.DrawCheckBox(g.Graphics, rcCheckBox, checkState);
-                g.Graphics.DrawString(filterList.FilterName, font, SystemBrushes.WindowText, new Point(x + SIZE_CHECKBOX_CONTROL + CX_CHECKBOX_TEXT_MARGIN, y));
-
-                // 対象
-                float cxTarget = GraphicsUtils.MeasureString(g.Graphics, font, Resources.DlgFileFilter_TransferDetailListTarget);
-                float cxItems = GraphicsUtils.MeasureString(g.Graphics, font, Resources.DlgFileFilter_TransferDetailListItems);
-                int xItemStart = (int)(Math.Max(cxTarget, cxItems)) + 5;
-
-                g.Graphics.DrawString(Resources.DlgFileFilter_TransferDetailListTarget, font, textBrush, new Point(x, y + 18));
-                g.Graphics.DrawString(filterList.TargetFileMask, font, textBrush, new Point(xItemStart, y + 18));
-
-                // フィルター一覧
-                g.Graphics.DrawString(Resources.DlgFileFilter_TransferDetailListItems, font, textBrush, new Point(x, y + 18 + 16));
-                if (filterNameList.Length > 0) {
-                    for (int i = 0; i < filterNameList.Length; i++) {
-                        string dispItem = filterNameList[i];
-                        if (i == filterNameList.Length - 1 && filterList.FilterList.Count > FILTER_DISPLAY_MAX) {
-                            dispItem += string.Format(Resources.DlgFileFilter_TransferDetailListEtc, filterList.FilterList.Count);
-                        }
-                        g.Graphics.DrawString(dispItem, font, textBrush, new Point(xItemStart, y + i * 12 + 18 + 16));
+                    // 背景色を決定
+                    if ((evt.State & DrawItemState.Selected) == DrawItemState.Selected) {
+                        // 選択中
+                        backBrush = g.MarkBackBrush;
+                        borderPen = g.BorderPen;
+                    } else {
+                        // 選択中
+                        backBrush = SystemBrushes.Window;
+                        borderPen = g.BorderPen;
                     }
-                } else {
-                    g.Graphics.DrawString(Resources.DlgFileFilter_TransferDetailListItemNone, font, textBrush, new Point(xItemStart, y + 18 + 16));
-                }
+                    if (filterList.UseFilter) {
+                        textBrush = SystemBrushes.WindowText;
+                    } else {
+                        textBrush = SystemBrushes.GrayText;
+                    }
 
-                // フォーカス
-                if ((evt.State & DrawItemState.Focus) == DrawItemState.Focus) {
-                    Rectangle rcFocus = new Rectangle(rect.Left + 1, rect.Top + 1, rect.Width - 1, rect.Height - 1);
-                    ControlPaint.DrawFocusRectangle(g.Graphics, rcFocus);
-                }
+                    // 描画
+                    int cx = evt.Bounds.Width;
+                    int cy = evt.Bounds.Height;
+                    bool drawBottom = false;
+                    if (index == m_parent.listBoxDetailFileType.Items.Count - 1) {
+                        cy--;
+                        drawBottom = true;
+                    }
+                    Rectangle rect = new Rectangle(evt.Bounds.Left, evt.Bounds.Top, evt.Bounds.Width - 1, cy);
+                    g.Graphics.FillRectangle(backBrush, rect);
+                    g.Graphics.DrawLine(borderPen, new Point(rect.Left, rect.Top), new Point(rect.Right, rect.Top));
+                    g.Graphics.DrawLine(borderPen, new Point(rect.Left, rect.Top), new Point(rect.Left, rect.Bottom));
+                    g.Graphics.DrawLine(borderPen, new Point(rect.Right, rect.Top), new Point(rect.Right, rect.Bottom));
+                    if (drawBottom) {
+                        g.Graphics.DrawLine(borderPen, new Point(rect.Left, rect.Bottom), new Point(rect.Right, rect.Bottom));
+                    }
 
+                    // チェックボックス
+                    Font font = m_parent.listBoxDetailFileType.Font;
+                    int x = evt.Bounds.Left + X_CHECKBOX_CONTROL;
+                    int y = evt.Bounds.Top + g2.Y(Y_CHECKBOX_CONTROL);
+                    Rectangle rcCheckBox = new Rectangle(x, y, SIZE_CHECKBOX_CONTROL, SIZE_CHECKBOX_CONTROL);
+                    ButtonState checkState = (filterList.UseFilter ? ButtonState.Checked : ButtonState.Normal);
+                    ControlPaint.DrawCheckBox(g.Graphics, rcCheckBox, checkState);
+                    g.Graphics.DrawString(filterList.FilterName, font, SystemBrushes.WindowText, new Point(x + SIZE_CHECKBOX_CONTROL + CX_CHECKBOX_TEXT_MARGIN, y));
+
+                    // 対象
+                    float cxTarget = GraphicsUtils.MeasureString(g.Graphics, font, Resources.DlgFileFilter_TransferDetailListTarget);
+                    float cxItems = GraphicsUtils.MeasureString(g.Graphics, font, Resources.DlgFileFilter_TransferDetailListItems);
+                    int xItemStart = (int)(Math.Max(cxTarget, cxItems)) + 5;
+
+                    g.Graphics.DrawString(Resources.DlgFileFilter_TransferDetailListTarget, font, textBrush, new Point(x, y + g2.Y(18)));
+                    g.Graphics.DrawString(filterList.TargetFileMask, font, textBrush, new Point(xItemStart, y + g2.Y(18)));
+
+                    // フィルター一覧
+                    g.Graphics.DrawString(Resources.DlgFileFilter_TransferDetailListItems, font, textBrush, new Point(x, y + g2.Y(18 + 16)));
+                    if (filterNameList.Length > 0) {
+                        for (int i = 0; i < filterNameList.Length; i++) {
+                            string dispItem = filterNameList[i];
+                            if (i == filterNameList.Length - 1 && filterList.FilterList.Count > FILTER_DISPLAY_MAX) {
+                                dispItem += string.Format(Resources.DlgFileFilter_TransferDetailListEtc, filterList.FilterList.Count);
+                            }
+                            g.Graphics.DrawString(dispItem, font, textBrush, new Point(xItemStart, y + g2.Y(i * 12 + 18 + 16)));
+                        }
+                    } else {
+                        g.Graphics.DrawString(Resources.DlgFileFilter_TransferDetailListItemNone, font, textBrush, new Point(xItemStart, y + g2.Y(18 + 16)));
+                    }
+
+                    // フォーカス
+                    if ((evt.State & DrawItemState.Focus) == DrawItemState.Focus) {
+                        Rectangle rcFocus = new Rectangle(rect.Left + 1, rect.Top + 1, rect.Width - 1, rect.Height - 1);
+                        ControlPaint.DrawFocusRectangle(g.Graphics, rcFocus);
+                    }
+                }
                 doubleBuffer.FlushScreen(evt.Bounds.Left, evt.Bounds.Top);
             }
 
@@ -560,9 +561,11 @@ namespace ShellFiler.UI.Dialog {
                 if (index == -1 || index >= m_parent.m_detailSetting.TransferList.Count) {
                     return;
                 }
-                FileFilterListTransfer item = m_parent.m_detailSetting.TransferList[index];
-                int filterCount = Math.Max(1, Math.Min(FILTER_DISPLAY_MAX, item.FilterList.Count));
-                evt.ItemHeight = 28 + 16 + filterCount * 12;
+                using (HighDpiGraphics g = new HighDpiGraphics(m_parent)) {
+                    FileFilterListTransfer item = m_parent.m_detailSetting.TransferList[index];
+                    int filterCount = Math.Max(1, Math.Min(FILTER_DISPLAY_MAX, item.FilterList.Count));
+                    evt.ItemHeight = g.Y(28 + 16 + filterCount * 12);
+                }
             }
 
             //=========================================================================================
@@ -645,7 +648,7 @@ namespace ShellFiler.UI.Dialog {
         }
 
         //=========================================================================================
-        // クラス：クイックモードページ
+        // クラス：簡易モードページ
         //=========================================================================================
         private class QuickPage : FileFilterSettingComponent.IFileFilterSettingComponentNotify {
             // 親ダイアログ
@@ -708,6 +711,11 @@ namespace ShellFiler.UI.Dialog {
                 // イベントを接続
                 m_parent.listBoxQuickFilter.DrawItem += new DrawItemEventHandler(listBoxQuickFilter_DrawItem);
                 m_parent.listBoxQuickFilter.SelectedIndexChanged += new EventHandler(listBoxQuickFilter_SelectedIndexChanged);
+                using (Graphics graphics = m_parent.CreateGraphics())
+                using (HighDpiGraphics g = new HighDpiGraphics(graphics)) {
+                    m_parent.listBoxQuickFilter.ItemHeight = g.Y(16);
+                    m_parent.listBoxQuickFilter.Size = new System.Drawing.Size(g.X(288), g.Y(84));
+                }
 
                 // その他
                 SetFilterUIItem();
@@ -756,41 +764,43 @@ namespace ShellFiler.UI.Dialog {
 
                 DoubleBuffer doubleBuffer = new DoubleBuffer(evt.Graphics, evt.Bounds.Width, evt.Bounds.Height);
                 doubleBuffer.SetDrawOrigin(-evt.Bounds.Left, -evt.Bounds.Top);
-                OwnerDrawListBoxGraphics g = new OwnerDrawListBoxGraphics(doubleBuffer.DrawingGraphics, evt.Bounds.Top, evt.Bounds.Height);
+                using (HighDpiGraphics g2 = new HighDpiGraphics(m_parent)) {
+                    OwnerDrawListBoxGraphics g = new OwnerDrawListBoxGraphics(doubleBuffer.DrawingGraphics, evt.Bounds.Top, evt.Bounds.Height);
 
-                Brush backBrush;
-                Pen borderPen;
-                
-                // 背景色を決定
-                if ((evt.State & DrawItemState.Selected) == DrawItemState.Selected) {
-                    // 選択中
-                    backBrush = g.MarkBackBrush;
-                    borderPen = g.BorderPen;
-                } else {
-                    // 選択中
-                    backBrush = SystemBrushes.Window;
-                    borderPen = g.BorderPen;
+                    Brush backBrush;
+                    Pen borderPen;
+
+                    // 背景色を決定
+                    if ((evt.State & DrawItemState.Selected) == DrawItemState.Selected) {
+                        // 選択中
+                        backBrush = g.MarkBackBrush;
+                        borderPen = g.BorderPen;
+                    } else {
+                        // 選択中
+                        backBrush = SystemBrushes.Window;
+                        borderPen = g.BorderPen;
+                    }
+
+                    // 描画
+                    int cy = evt.Bounds.Height;
+                    if (index == m_parent.listBoxQuickFilter.Items.Count - 1) {
+                        cy--;
+                    }
+                    Rectangle rect = new Rectangle(evt.Bounds.Left, evt.Bounds.Top, evt.Bounds.Width - 1, cy);
+                    g.Graphics.FillRectangle(backBrush, rect);
+                    g.Graphics.DrawRectangle(borderPen, rect);
+                    int x = evt.Bounds.Left + 2;
+                    int y = evt.Bounds.Top + g.Y(2);
+                    g.Graphics.DrawString(component.FilterName, m_parent.comboBoxQuickTargetExt.Font, SystemBrushes.WindowText, new Point(x, y));
+
+                    // フォーカス
+                    if ((evt.State & DrawItemState.Focus) == DrawItemState.Focus) {
+                        Rectangle rcFocus = new Rectangle(rect.Left + 1, rect.Top + 1, rect.Width - 1, rect.Height - 1);
+                        ControlPaint.DrawFocusRectangle(g.Graphics, rcFocus);
+                    }
+
+                    doubleBuffer.FlushScreen(evt.Bounds.Left, evt.Bounds.Top);
                 }
-
-                // 描画
-                int cy = evt.Bounds.Height;
-                if (index == m_parent.listBoxQuickFilter.Items.Count - 1) {
-                    cy--;
-                }
-                Rectangle rect = new Rectangle(evt.Bounds.Left, evt.Bounds.Top, evt.Bounds.Width - 1, cy);
-                g.Graphics.FillRectangle(backBrush, rect);
-                g.Graphics.DrawRectangle(borderPen, rect);
-                int x = evt.Bounds.Left + 2;
-                int y = evt.Bounds.Top + 2;
-                g.Graphics.DrawString(component.FilterName, m_parent.comboBoxQuickTargetExt.Font, SystemBrushes.WindowText, new Point(x, y));
-
-                // フォーカス
-                if ((evt.State & DrawItemState.Focus) == DrawItemState.Focus) {
-                    Rectangle rcFocus = new Rectangle(rect.Left + 1, rect.Top + 1, rect.Width - 1, rect.Height - 1);
-                    ControlPaint.DrawFocusRectangle(g.Graphics, rcFocus);
-                }
-
-                doubleBuffer.FlushScreen(evt.Bounds.Left, evt.Bounds.Top);
             }
 
             //=========================================================================================
