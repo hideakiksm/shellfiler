@@ -62,6 +62,12 @@ namespace ShellFiler.UI.Dialog {
             this.comboBoxFilterName.Text = setting.FilterName;
             this.comboBoxExtension.Items.AddRange(extSample);
             this.comboBoxExtension.Text = setting.TargetFileMask;
+            using (Graphics graphics = this.CreateGraphics())
+            using (HighDpiGraphics g = new HighDpiGraphics(graphics)) {
+                this.listBoxAllFilter.Size = new System.Drawing.Size(g.X(283), g.Y(148));
+                this.listBoxAllFilter.ItemHeight = g.Y(16);
+                this.listBoxUse.Size = new System.Drawing.Size(g.X(283), g.Y(148));
+            }
 
             m_fileFilterUIImpl = new FileFilterClipboardDialog.FileFilterUIImpl(this, m_setting.FilterList,
                                         this.listBoxUse, this.listBoxAllFilter, this.panelFilterProp,

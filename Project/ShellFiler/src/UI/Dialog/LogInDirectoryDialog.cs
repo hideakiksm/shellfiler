@@ -1282,6 +1282,11 @@ namespace ShellFiler.UI.Dialog {
                     m_parent.listBoxHistory.SelectedIndex = 0;
                 }
 
+                using (Graphics graphics = m_parent.CreateGraphics())
+                using (HighDpiGraphics g = new HighDpiGraphics(graphics)) {
+                    m_parent.listBoxHistory.Size = new System.Drawing.Size(g.X(454), g.Y(229));
+                }
+
                 m_parent.ActiveControl = m_parent.listBoxHistory;
             }
 
