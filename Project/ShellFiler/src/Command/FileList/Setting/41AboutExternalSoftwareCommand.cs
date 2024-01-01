@@ -42,7 +42,7 @@ namespace ShellFiler.Command.FileList.Setting {
         // 戻り値：実行結果
         //=========================================================================================
         public override object Execute() {
-            HelpMessageDialog dialog = new HelpMessageDialog(Resources.DlgHelp_TitleAboutExternalSoftware, NativeResources.HtmlAboutExternalSoftware, null);
+            HelpMessageDialog dialog = new HelpMessageDialog(Resources.DlgHelp_TitleAboutExternalSoftware, Resources.HtmlAboutExternalSoftware);
             dialog.ShowDialog(Program.MainWindow);
             return null;
         }

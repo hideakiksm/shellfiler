@@ -401,7 +401,7 @@ namespace ShellFiler.UI.Dialog {
         private void linkLabel_LinkClicked(object sender, LinkLabelLinkClickedEventArgs evt) {
             if (sender == this.linkLabelKeyGuide) {
                 // 秘密鍵ガイド
-                HelpMessageDialog dialog = new HelpMessageDialog(Resources.DlgLoginDir_SSHPrivateKey, NativeResources.HtmlSSHPrivateKey, null);
+                HelpMessageDialog dialog = new HelpMessageDialog(Resources.DlgLoginDir_SSHPrivateKey, Resources.HtmlSSHPrivateKey);
                 dialog.ShowDialog(this);
             } else if (sender == this.linkLabelPassword) {
                 // パスワード保存

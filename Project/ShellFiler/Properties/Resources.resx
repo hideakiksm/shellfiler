@@ -3219,7 +3219,11 @@ SSHでは常に選択されます。
     <comment>状態一覧のコンテキストメニュー</comment>
   </data>
   <data name="DlgAbout_ExternalSoftware" xml:space="preserve">
-    <value>ShellFilerは以下のライブラリを使用しています。
+    <value>ShellFilerは以下のコントリビューターの協力でリリースされています。
+Yuuki Sato
+
+
+ShellFilerは以下のライブラリを使用しています。
 SpHeader
    Copyright (c) 2004 by Sergei Pavlovsky
    http://www.codeproject.com/KB/miscctrl/CS_Header_Control.aspx
@@ -7335,5 +7339,1000 @@ SSH用のエディタを設定しない場合はチェックボックスをOFF�
   </data>
   <data name="I400_BGManager12" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\I400_BGManager12.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="HtmlAboutExternalSoftware" xml:space="preserve">
+    <value>&lt;html&gt;
+  &lt;header&gt;
+    &lt;meta http-equiv="Content-Type" content="text/html; charset=Shift_JIS"&gt;
+    &lt;style type="text/css"&gt;
+      h1 {
+        font-size: 14pt;
+        font-weight: bold;
+        color: #0000ff;
+        background-color: #c0f0f0;
+        line-height: 28px;
+        margin: 10px 5px 10px 5px;
+      }
+      h2 {
+        font-size: 11pt;
+        font-weight: bold;
+        color: #0000ff;
+        line-height: 13px;
+        margin: 35px 5px 5px 5px;
+      }
+      h {
+        font-size: 10pt;
+        background-color: #e0e0e0;
+      }
+      td {
+        font-size: 10pt;
+      }
+      th {
+        font-size: 10pt;
+      }
+      p.copyright {
+        font-size: 10pt;
+        line-height: 10px;
+        color: #606060;
+        right: 0px;
+        text-align: right;
+        margin: 0px 5px 0px 5px;
+      }
+      p {
+        font-size: 10pt;
+        margin: 8px 5px 8px 5px;
+      }
+    &lt;/style&gt;
+  &lt;/header&gt;
+  &lt;body&gt;
+    &lt;h1&gt;サポートする外部ツール/ライブラリ&lt;/h1&gt;
+    &lt;p&gt;次のソフトウェアをダウンロードしてインストールすると、ShellFilerの機能を拡張することができます。&lt;br&gt;開発者の皆様に感謝します。&lt;/p&gt;
+
+    &lt;h2&gt;SharpSSH&lt;/h2&gt;
+    &lt;p class="copyright"&gt;Copyright (c) 2008 TamirGal.com&lt;/p&gt;
+    &lt;p&gt;SharpSSHをインストールすると、ShellFilerからSSH/SFTPプロトコルを使って、LinuxなどのSSHサーバーにあるファイルを操作することができます。&lt;/p&gt;
+    &lt;p&gt;SharpSSHには64bit/32bitの区別はありません。&lt;br&gt;ダウンロードしたSharpSSHは一度展開し、付属のDLL3つをShellFiler.exeと同じフォルダにインストールします。&lt;/p&gt;
+    &lt;p&gt;&lt;a href="http://www.tamirgal.com/blog/page/SharpSSH.aspx" target="_blank"&gt;&amp;#x1f30f;ダウンロードページ&lt;/a&gt;&lt;/p&gt;
+
+    &lt;h2&gt;7-Zip&lt;/h2&gt;
+    &lt;p class="copyright"&gt;Copyright (c) 2011 Igor Pavlov&lt;/p&gt;
+    &lt;p&gt;7-Zipをインストールすると、ShellFilerから圧縮ファイルの作成と展開ができるようになります。&lt;/p&gt;
+    &lt;p&gt;ShellFilerからの操作でサポートする形式は次のとおりです。&lt;br&gt;圧縮：7z、tar.gz、tar.bz2、tar、zip&lt;br&gt;展開：7z、tar.gz、tar.bz2、tar、zip（jarとwarを含む）、arj、cab、iso、lzh、rar&lt;br&gt;&lt;/p&gt;
+    &lt;p&gt;ShellFilerが64bit版のときは64bit版の7-Zipを、32bit版のときは32bit版の7-Zipをインストールします。&lt;br&gt;レジストリからDLLの場所を自動的に認識するため、インストール後の特別な設定は必要ありません。&lt;/p&gt;
+    &lt;p&gt;&lt;a href="http://sevenzip.sourceforge.jp/" target="_blank"&gt;&amp;#x1f30f;ダウンロードページ&lt;/a&gt;&lt;/p&gt;
+
+    &lt;h2&gt;差分表示ツール&lt;/h2&gt;
+    &lt;p&gt;お好みの差分表示ツールをインストールすると、ShellFilerで選択されたファイルやフォルダの差分を簡単に表示させることができます。ShellFilerのUIとは完全に統合されていませんが、ShellFilerから差分表示ツールをすばやく起動できます。&lt;/p&gt;
+    &lt;p&gt;対応するツールは、ShellFilerのWebページをご覧ください。コマンドラインに比較対象のファイルを指定すると差分が比較できるツール全般に対応しています。&lt;/p&gt;
+    &lt;p&gt;ShellFilerの32bit/64bitの種類によらず、32bit/64bitのいずれのツールでも動作します。&lt;br&gt;インストール後は、メニューの[オプション-オプション]の「インストール情報＞差分表示ツール」で設定する必要があります。&lt;/p&gt;
+
+    &lt;h2&gt;エクスプローラ拡張&lt;/h2&gt;
+    &lt;p&gt;TortoiseSVN（(c)CollabNet）などによって、エクスプローラのメニューやプロパティの機能を拡張している場合、ShellFilerでもそれらの機能を使用することができます。&lt;/p&gt;
+    &lt;p&gt;いずれも64bit版にだけ対応しています。&lt;/p&gt;
+
+    &lt;p&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;/p&gt;
+    &lt;h1&gt;内蔵しているライブラリ&lt;/h1&gt;
+    &lt;p&gt;次のライブラリは、そのまま、または、それぞれ改変した状態でShellFilerに組み込んでいます。&lt;br&gt;改変したソースはShellFiler以下のlibフォルダに格納しています。&lt;/p&gt;
+    &lt;p&gt;開発者の皆様に感謝します。&lt;/p&gt;
+
+    &lt;h2&gt;SpHeader&lt;/h2&gt;
+    &lt;p class="copyright"&gt;Copyright (c) 2004 by Sergei Pavlovsky&lt;/p&gt;
+    &lt;p&gt;SpHeaderは、.NET Frameworkからヘッダコントロールを制御するために使用しているライブラリです。&lt;br&gt;64bit版のWindowsで動作するように、一部のソースを変更しています。&lt;/p&gt;
+    &lt;p&gt;&lt;a href="http://www.codeproject.com/KB/miscctrl/CS_Header_Control.aspx" target="_blank"&gt;&amp;#x1f30f;関連ページ&lt;/a&gt;&lt;/p&gt;
+
+    &lt;h2&gt;C# (.net) interface for 7-Zip archive dlls&lt;/h2&gt;
+    &lt;p class="copyright"&gt;Copyright 2008 by Eugene Sichkar&lt;/p&gt;
+    &lt;p&gt;ShellFilerに組み込んでいる、C#から7-Zipの機能を使用するためのライブラリです。&lt;br&gt;64bit対応や圧縮/展開の処理中にキャンセル対応などで、一部のソースを変更しています。&lt;/p&gt;
+    &lt;p&gt;&lt;a href="http://www.codeproject.com/KB/DLL/cs_interface_7zip.aspx" target="_blank"&gt;&amp;#x1f30f;関連ページ&lt;/a&gt;&lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;</value>
+    <comment>HTML:外部ソフトウェアについて</comment>
+  </data>
+  <data name="HtmlHowToUseMouse" xml:space="preserve">
+    <value>&lt;html&gt;
+  &lt;header&gt;
+    &lt;meta http-equiv="Content-Type" content="text/html; charset=Shift_JIS"&gt;
+    &lt;style type="text/css"&gt;
+      h1 {
+        font-size: 14pt;
+        font-weight: bold;
+        color: #0000ff;
+        background-color: #c0f0f0;
+        line-height: 28px;
+        margin: 10px 5px 10px 5px;
+      }
+      h2 {
+        font-size: 11pt;
+        font-weight: bold;
+        color: #0000ff;
+        line-height: 13px;
+        margin: 35px 5px 5px 5px;
+      }
+      th {
+        font-size: 10pt;
+        background-color: #e0e0e0;
+      }
+      td {
+        font-size: 10pt;
+      }
+      p.image {
+        text-align: center;
+        margin: 5px 5px 5px 5px;
+      }
+      p {
+        font-size: 10pt;
+        margin: 8px 5px 8px 5px;
+      }
+    &lt;/style&gt;
+  &lt;/header&gt;
+  &lt;body&gt;
+    &lt;h1&gt;マウスでの操作方法&lt;/h1&gt;
+    &lt;p&gt;ShellFilerのマウス操作のうち、一部の操作はわかりにくいため、ここで説明します。&lt;/p&gt;
+
+    &lt;h2&gt;ドラッグ＆ドロップ&lt;/h2&gt;
+    &lt;p&gt;マークされているファイルやフォルダをドラッグ＆ドロップするには、ファイル一覧でのアイコンの位置をつかむように操作します。ファイル名の位置ではファイルのマーク状態を変更します。&lt;/p&gt;
+    &lt;p&gt;ドロップ先としては、反対パスまたは外部のアプリケーションが対応しています。&lt;/p&gt;
+
+    &lt;h2&gt;マークの反転&lt;/h2&gt;
+    &lt;p&gt;特定のファイルのマーク状態だけを反転するにはマウスの中央ボタンが便利です。&lt;/p&gt;
+    &lt;p&gt;マウスによっては独立したボタンになっている場合や、ホイールの押し込みで実行できる場合があります（中央ボタンがない機種もあります）。&lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;</value>
+    <comment>HTML:マウスの使用方法</comment>
+  </data>
+  <data name="HtmlCommandArgument" xml:space="preserve">
+    <value>&lt;html&gt;
+  &lt;header&gt;
+    &lt;meta http-equiv="Content-Type" content="text/html; charset=Shift_JIS"&gt;
+    &lt;style type="text/css"&gt;
+      h1 {
+        font-size: 10pt;
+        font-weight: bold;
+        color: #0000ff;
+        background-color: #c0f0f0;
+        line-height: 20px;
+        margin: 5px 0px 5px 0px;
+      }
+      h2 {
+        font-size: 9pt;
+        font-weight: bold;
+        color: #0000ff;
+        line-height: 13px;
+        margin: 10px 0px 5px 0px;
+      }
+      td {
+        font-size: 9pt;
+      }
+      body {
+        font-size: 9pt;
+      }
+    &lt;/style&gt;
+  &lt;/header&gt;
+  &lt;body bgcolor="#ffffc0"&gt;
+    &lt;h1&gt;コマンド引数&lt;/h1&gt;
+    コマンドラインに渡す引数には、オプションなどの固定文字列のほか、ファイル一覧中でマークされているファイル名や、ダイアログで入力した項目を埋め込むことができます。&lt;br&gt;埋め込み部分は&lt;b&gt;変数&lt;/b&gt;とそれを加工する&lt;b&gt;修飾子&lt;/b&gt;で構成されます。&lt;br&gt;
+    例 editor $&amp;lt;オプション&amp;gt; $P:al
+    &lt;h2&gt;変数&lt;/h2&gt;
+    &lt;table border="1" cellspacing="0" cellpadding="2"&gt;
+      &lt;tr&gt;&lt;td&gt;$F&lt;/td&gt;&lt;td&gt;対象パスのカーソル上のファイルのファイル名（例 MyFile.txt）&lt;/td&gt;&lt;/tr&gt;
+      &lt;tr&gt;&lt;td&gt;$P&lt;/td&gt;&lt;td&gt;対象パスのカーソル上のファイルのフルパス名（例 C:\data\MyFile.txt）&lt;/td&gt;&lt;/tr&gt;
+      &lt;tr&gt;&lt;td&gt;$M&lt;/td&gt;&lt;td&gt;対象パスのマークファイル名（例　C:\data\MyFile.txt C:\data\sample.jpg）
+      &lt;tr&gt;&lt;td&gt;$D&lt;/td&gt;&lt;td&gt;対象パスのフォルダ名（例 C:）&lt;/td&gt;&lt;/tr&gt;
+      &lt;tr&gt;&lt;td&gt;$OF&lt;/td&gt;&lt;td&gt;反対パスのカーソル上のファイルのファイル名&lt;/td&gt;&lt;/tr&gt;
+      &lt;tr&gt;&lt;td&gt;$OP&lt;/td&gt;&lt;td&gt;反対パスのカーソル上のファイルのフルパス名&lt;/td&gt;&lt;/tr&gt;
+      &lt;tr&gt;&lt;td&gt;$OM&lt;/td&gt;&lt;td&gt;反対パスのマークファイル名&lt;/td&gt;&lt;/tr&gt;
+      &lt;tr&gt;&lt;td&gt;$OD&lt;/td&gt;&lt;td&gt;反対パスのフォルダ名&lt;/td&gt;&lt;/tr&gt;
+      &lt;tr&gt;&lt;td&gt;$$&lt;/td&gt;&lt;td&gt;「$」1文字&lt;/td&gt;&lt;/tr&gt;
+      &lt;tr&gt;&lt;td nowrap&gt;$&amp;lt;msg&amp;gt;&lt;/td&gt;&lt;td&gt;ダイアログでパラメータを入力します。msgに最大10文字程度で入力時の項目説明を記述します。&lt;/td&gt;&lt;/tr&gt;
+    &lt;/table&gt;
+    &lt;h2&gt;修飾子&lt;/h2&gt;
+    例は「C:\Data\LOG.txt」に対する結果です。修飾子の連続実行はできません。
+    &lt;table border="1" cellspacing="0" cellpadding="2"&gt;
+      &lt;tr&gt;&lt;td&gt;:e&lt;/td&gt;&lt;td&gt;拡張子（例：txt）&lt;/td&gt;&lt;/tr&gt;
+      &lt;tr&gt;&lt;td&gt;:r&lt;/td&gt;&lt;td&gt;拡張子をのぞいた部分（例：LOG）&lt;/td&gt;&lt;/tr&gt;
+      &lt;tr&gt;&lt;td&gt;:d&lt;/td&gt;&lt;td&gt;ドライブ名（例：C）ネットワークの場合、空文字列となります。&lt;/td&gt;&lt;/tr&gt;
+      &lt;tr&gt;&lt;td&gt;:h&lt;/td&gt;&lt;td&gt;パス名（例：C:Data）&lt;/td&gt;&lt;/tr&gt;
+      &lt;tr&gt;&lt;td&gt;:t&lt;/td&gt;&lt;td&gt;ファイル名本体（例：LOG.txt）&lt;/td&gt;&lt;/tr&gt;
+      &lt;tr&gt;&lt;td&gt;:n&lt;/td&gt;&lt;td&gt;クォーティングがある場合にはずす（例：C:\DAT\LOG.txt）&lt;/td&gt;&lt;/tr&gt;
+      &lt;tr&gt;&lt;td&gt;:q&lt;/td&gt;&lt;td&gt;クォーティングがない場合に付ける（例：C:\DAT\LOG.txt）&lt;/td&gt;&lt;/tr&gt;
+      &lt;tr&gt;&lt;td&gt;:au&lt;/td&gt;&lt;td&gt;大文字化（例：C:\DATA\LOG.TXT）&lt;/td&gt;&lt;/tr&gt;
+      &lt;tr&gt;&lt;td&gt;:al&lt;/td&gt;&lt;td&gt;小文字化（例：c:\data\log.txt）&lt;/td&gt;&lt;/tr&gt;
+      &lt;tr&gt;&lt;td nowrap&gt;:ac&amp;nbsp;&amp;nbsp;&lt;/td&gt;&lt;td&gt;先頭大文字化（例：C:\Data\Log.Sys）&lt;/td&gt;&lt;/tr&gt;
+    &lt;/table&gt;
+  &lt;/body&gt;
+&lt;/html&gt;</value>
+    <comment>HTML:コマンド引数のパラメータ</comment>
+  </data>
+  <data name="HtmlSlideShowMark" xml:space="preserve">
+    <value>&lt;html&gt;
+  &lt;header&gt;
+    &lt;meta http-equiv="Content-Type" content="text/html; charset=Shift_JIS"&gt;
+    &lt;style type="text/css"&gt;
+      h1 {
+        font-size: 14pt;
+        font-weight: bold;
+        color: #0000ff;
+        background-color: #c0f0f0;
+        line-height: 28px;
+        margin: 10px 5px 10px 5px;
+      }
+      h2 {
+        font-size: 11pt;
+        font-weight: bold;
+        color: #0000ff;
+        line-height: 13px;
+        margin: 35px 5px 5px 5px;
+      }
+      th {
+        font-size: 10pt;
+        background-color: #e0e0e0;
+      }
+      td {
+        font-size: 10pt;
+      }
+      p.image {
+        text-align: center;
+        margin: 5px 5px 5px 5px;
+      }
+      p {
+        font-size: 10pt;
+        margin: 8px 5px 8px 5px;
+      }
+    &lt;/style&gt;
+  &lt;/header&gt;
+  &lt;body&gt;
+    &lt;h1&gt;スライドショーでのマーク機能&lt;/h1&gt;
+    &lt;p&gt;マーク機能を使うと、スライドショーで表示された画像を最大9種類に分類し、ファイル一覧画面で分類ごとに選択することができます。&lt;br&gt;大量の画像ファイルを効率よく整理するときに便利な機能です。&lt;/p&gt;
+    &lt;br&gt;
+    &lt;table border="0"&gt;
+      &lt;tr&gt;
+        &lt;td colspan="2"&gt;スライドショー&lt;/td&gt;
+        &lt;td&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+        &lt;td&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/td&gt;
+        &lt;td colspan="2"&gt;画像を表示中に1～9を押すと、その画像に対してマークNo.1～9が記憶され、次の画像（スライドショー）に進みます。&lt;br&gt;※規定でのキー割り当てです。&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+        &lt;td&gt;&amp;nbsp;&lt;/td&gt;&lt;td&gt;&amp;nbsp;&lt;/td&gt;&lt;td&gt;&amp;nbsp;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+        &lt;td colspan="2"&gt;終了後&lt;/td&gt;
+        &lt;td&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+        &lt;td&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/td&gt;
+        &lt;td&gt;ビューアを閉じると、ファイル一覧画面でマークごとにファイルを選択する画面が表示されます。&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+        &lt;td&gt;&amp;nbsp;&lt;/td&gt;&lt;td&gt;&amp;nbsp;&lt;/td&gt;&lt;td&gt;&amp;nbsp;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+        &lt;td colspan="2"&gt;ファイル操作&lt;/td&gt;
+        &lt;td&gt;&lt;/td&gt;
+      &lt;tr&gt;
+        &lt;td&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/td&gt;
+        &lt;td colspan="2"&gt;ファイル一覧画面でファイルを選択して操作します。&lt;br&gt;たとえば、マークNo.1はフォルダAに移動、マークNo.2はフォルダBに移動、マークNo.3は削除など、マークの意味付けは状況に応じて自由に決められます。&lt;/td&gt;
+      &lt;/tr&gt;
+    &lt;/table&gt;
+  &lt;/body&gt;
+&lt;/html&gt;</value>
+    <comment>HTML:スライドショーマーク機能の使用方法</comment>
+  </data>
+  <data name="HtmlSSHEditor" xml:space="preserve">
+    <value>&lt;html&gt;
+  &lt;header&gt;
+    &lt;meta http-equiv="Content-Type" content="text/html; charset=Shift_JIS"&gt;
+    &lt;style type="text/css"&gt;
+      h1 {
+        font-size: 14pt;
+        font-weight: bold;
+        color: #0000ff;
+        background-color: #c0f0f0;
+        line-height: 28px;
+        margin: 10px 5px 10px 5px;
+      }
+      h2 {
+        font-size: 11pt;
+        font-weight: bold;
+        color: #0000ff;
+        line-height: 13px;
+        margin: 0px 5px 5px 5px;
+      }
+      h3 {
+        font-size: 10pt;
+        font-weight: bold;
+        line-height: 12px;
+        margin: 5px 5px 5px 5px;
+      }
+      td {
+        font-size: 10pt;
+        margin: 2px 2px 2px 5px;
+      }
+      li {
+        font-size: 10pt;
+        margin: 2px 2px 2px 25px;
+      }
+      p.copyright {
+        font-size: 10pt;
+        color: #808080;
+        margin: 5px 5px 0px 20px;
+      }
+      p {
+        font-size: 10pt;
+        margin: 8px 5px 8px 5px;
+      }
+    &lt;/style&gt;
+  &lt;/header&gt;
+  &lt;body&gt;
+    &lt;h1&gt;SSH用のエディタとは&lt;/h1&gt;
+    &lt;p&gt;SSHサーバにあるファイルを編集するときには特別な要件が求められるため、普段から使うテキストエディタとは別に、SSH専用のテキストエディタを指定することができます。&lt;/p&gt;
+    &lt;p&gt;SSHのファイルを編集するときには次の要件を満たすテキストエディタを使用すると便利です。&lt;/p&gt;
+    &lt;table border="0"&gt;
+      &lt;tr&gt;
+        &lt;td colspan="2"&gt;&lt;b&gt;改行コードLFへの対応&lt;/b&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+        &lt;td&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/td&gt;
+        &lt;td&gt;SSHサーバにあるファイルの改行コードは、通常LFだけです。&lt;br&gt;保存したとき、Windowsの改行コードの仕様に合わせてCR+LFで保存するエディタを使うとトラブルの原因になります。&lt;br&gt;&lt;br&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+        &lt;td colspan="2"&gt;&lt;b&gt;別プロセスでの起動&lt;/b&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+        &lt;td&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/td&gt;
+        &lt;td&gt;ShellFilerから編集する場合はファイルごとに別プロセスで起動できるエディタをおすすめします。&lt;br&gt;エディタで複数のファイルを開いたとき、１つのプロセスに集約して編集するエディタでは、編集終了のタイミングを検出できないため、手操作によって編集結果をアップロードする必要があります（ShellFiler右下の[編集中]の一覧から[編集結果を反映]）。&lt;br&gt;１つのファイルを１つのプロセスで編集できるエディタでは、編集終了のタイミングを検出して、ShellFilerで反映確認のダイアログを自動的に開きます。&lt;/td&gt;
+      &lt;/tr&gt;
+    &lt;/table&gt;
+    &lt;p&gt;※これらに非対応のエディタでも編集できますが、上記の特性を理解した上で使用する必要があります。&lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;</value>
+    <comment>HTML:SSH用のエディタ</comment>
+  </data>
+  <data name="HtmlSSHPrivateKey" xml:space="preserve">
+    <value>&lt;html&gt;
+  &lt;header&gt;
+    &lt;meta http-equiv="Content-Type" content="text/html; charset=Shift_JIS"&gt;
+    &lt;style type="text/css"&gt;
+      h1 {
+        font-size: 14pt;
+        font-weight: bold;
+        color: #0000ff;
+        background-color: #c0f0f0;
+        line-height: 28px;
+        margin: 10px 5px 10px 5px;
+      }
+      h2 {
+        font-size: 11pt;
+        font-weight: bold;
+        color: #0000ff;
+        line-height: 13px;
+        margin: 0px 5px 5px 5px;
+      }
+      h3 {
+        font-size: 10pt;
+        font-weight: bold;
+        line-height: 12px;
+        margin: 5px 5px 5px 5px;
+      }
+      ul {
+        font-size: 10pt;
+        margin: 2px 2px 2px 5px;
+      }
+      li {
+        font-size: 10pt;
+        margin: 2px 2px 2px 25px;
+      }
+      p.copyright {
+        font-size: 10pt;
+        color: #808080;
+        margin: 5px 5px 0px 20px;
+      }
+      p {
+        font-size: 10pt;
+        margin: 8px 5px 8px 5px;
+      }
+    &lt;/style&gt;
+  &lt;/header&gt;
+  &lt;body&gt;
+    &lt;h1&gt;鍵の生成とテスト&lt;/h1&gt;
+    &lt;p&gt;SSHでは、ユーザー名とパスワードによるログインのほか、公開鍵暗号を使ったログインもサポートしています。&lt;br&gt;ここでは鍵の動作実績についての限定した情報をまとめています。公開鍵によるログインの一般的な情報については、ネット上で「SSH 公開鍵」などを検索してください。&lt;/p&gt;
+    &lt;br&gt;
+    &lt;p&gt;ShellFilerで秘密鍵として指定できるファイルの形式は、OpenSSH形式で、かつ、SharpSSHで読み込める形式だけです。SSHの公開鍵暗号によるログインは、各ツールで生成できる鍵の形式や、読み込める形式が異なるため、注意が必要です。&lt;br&gt;ShellFilerでは、以下の方法で鍵の生成と接続テストができることを確認しています。&lt;/p&gt;
+
+    &lt;br&gt;&lt;br&gt;
+
+    &lt;h2&gt;鍵の生成&lt;/h2&gt;
+    &lt;p&gt;ShellFilerで読み込める形式の秘密鍵は、「PuTTY」に付属の鍵生成ツール「PuTTYgen」を使って作成できます。&lt;br&gt;PuTTYgenで鍵を生成した後、[Conversions(変換)]メニューから[Export OpenSSH Key(OpenSSH形式へエクスポート)]を実行すると、ShellFilerから読み込める形式で秘密鍵を保存できます。&lt;/p&gt;
+    &lt;p&gt;※対応する公開鍵はSSHサーバの所定の位置に格納します。&lt;/p&gt;
+    &lt;p&gt;暗号形式としては、最低限、RSA1024bitで動作することを確認しています。&lt;/p&gt;
+
+    &lt;br&gt;&lt;br&gt;
+
+    &lt;h2&gt;接続テスト&lt;/h2&gt;
+    &lt;p&gt;生成した秘密鍵の接続テストを行いたい場合、「Tera Term」を利用できます。&lt;br&gt;PuTTYではPuTTYgenで生成したOpenSSH形式の鍵そのものを使って接続できないため、Tera Termを使用します。&lt;/p&gt;
+    &lt;p&gt;Tera Termで接続先を入力した後、[SSH認証]ダイアログで[RSA/DSA鍵を使う]に秘密鍵（OpenSSH形式）のファイルを指定し、[パスフレーズ]にPuTTYgenで指定した鍵のパスフレーズを指定します。&lt;/p&gt;
+    &lt;br&gt;
+    &lt;p&gt;もし、Tera Termでも接続できない場合は、SSHサーバー側の設定もあわせて確認してください。一般的な確認事項は次の通りです。&lt;/p&gt;
+    &lt;ul&gt;
+      &lt;li&gt;公開鍵~/.ssh/authorized_keysには、生成した秘密鍵に対応した公開鍵が指定されていますか？&lt;/li&gt;
+      &lt;li&gt;authorized_keysのパーミッションは600に設定されていますか？&lt;/li&gt;
+      &lt;li&gt;homeディレクトリのの書き込み権は所有者だけに制限されていますか？&lt;/li&gt;
+    &lt;/ul&gt;
+
+    &lt;br&gt;&lt;br&gt;
+
+    &lt;h2&gt;その他の注意&lt;/h2&gt;
+    &lt;p&gt;ShellFilerでは指定された秘密鍵のファイルを内部情報として取り込まないため、指定した秘密鍵のファイルは認証ごとに毎回参照します（内部情報として持つのは秘密鍵のファイルパスとパスフレーズです）。&lt;/p&gt;
+    &lt;p&gt;秘密鍵は一時フォルダではなく、恒久的に参照できるフォルダに置いてから、ダイアログで指定してください。&lt;/p&gt;
+
+    &lt;br&gt;
+
+    &lt;hr&gt;
+    &lt;p&gt;PuTTYは、Simon Tatham氏作成のTelnet/SSHクライアントです。&lt;/p&gt;
+    &lt;p class="copyright"&gt;(c)1997-2011 Simon Tatham. All rights reserved.&lt;/p&gt;
+    &lt;br&gt;
+    &lt;p&gt;Tera Termは、T. Teranishi氏作成のものをオリジナルとし、Tera Term Projectで開発されているTelnet/SSHクライアントです。&lt;/p&gt;
+    &lt;p class="copyright"&gt;Copyright (C) 1994-1998 T. Teranishi&lt;br&gt;(C)2004-2012 Tera Term Project All rights reserved.&lt;/p&gt;
+    &lt;br&gt;
+    &lt;p&gt;これらの著作権は各ソフトウェアの作者または団体に帰属します。また、利用条件は各ソフトウェアの条件に基づきます。&lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;</value>
+    <comment>HTML:鍵の生成とテスト</comment>
+  </data>
+  <data name="HtmlSSHProtocol" xml:space="preserve">
+    <value>&lt;html&gt;
+  &lt;header&gt;
+    &lt;meta http-equiv="Content-Type" content="text/html; charset=Shift_JIS"&gt;
+    &lt;style type="text/css"&gt;
+      h1 {
+        font-size: 14pt;
+        font-weight: bold;
+        color: #0000ff;
+        background-color: #c0f0f0;
+        line-height: 28px;
+        margin: 10px 5px 10px 5px;
+      }
+      h2 {
+        font-size: 11pt;
+        font-weight: bold;
+        color: #0000ff;
+        line-height: 13px;
+        margin: 0px 5px 5px 5px;
+      }
+      h3 {
+        font-size: 10pt;
+        font-weight: bold;
+        line-height: 12px;
+        margin: 5px 5px 5px 5px;
+      }
+      td {
+        font-size: 10pt;
+        margin: 2px 2px 2px 5px;
+      }
+      td.center {
+        font-size: 10pt;
+        text-align: center;
+      }
+      th {
+        font-size: 10pt;
+      }
+      li {
+        font-size: 10pt;
+        margin: 2px 2px 2px 25px;
+      }
+      p.copyright {
+        font-size: 10pt;
+        color: #808080;
+        margin: 5px 5px 0px 20px;
+      }
+      p {
+        font-size: 10pt;
+        margin: 8px 5px 8px 5px;
+      }
+    &lt;/style&gt;
+  &lt;/header&gt;
+  &lt;body&gt;
+    &lt;h1&gt;SSHプロトコル&lt;/h1&gt;
+    &lt;p&gt;ShellFilerでは、LinuxなどのSSHサーバーに接続して、ファイル操作を行うことができます。&lt;br&gt;
+    SSHサーバーへは次の２つのいずれかの方法で接続することができます。&lt;/p&gt;
+    &lt;table border="0"&gt;
+      &lt;tr&gt;
+        &lt;td colspan="2"&gt;&lt;b&gt;SFTP&lt;/b&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+        &lt;td&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/td&gt;
+        &lt;td&gt;SFTPモードではSFTPプロトコルを使ってサーバー上のファイルを操作します。SFTPは、SSHの上で動作するファイル転送プロトコルです。プロトコル自身にファイル操作の機能を持っているため、ファイルの転送速度が高速で、かつ安定した動作が得られます。&lt;br&gt;
+        一方、ログインしたユーザーのアクセス権を越えて操作することはできません。&lt;br&gt;
+        ※SFTPとFTPは異なるプロトコルのためShellFilerからFTPサーバーに接続することはできません。&lt;br&gt;&lt;br&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+        &lt;td colspan="2"&gt;&lt;b&gt;SSHシェル&lt;/b&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+        &lt;td&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/td&gt;
+        &lt;td&gt;SSHシェルモードでは、SSHのコンソール画面をShellFilerが解釈/操作することでファイル操作を行います。&lt;br&gt;
+        たとえば、コンソールからファイル一覧を見る場合はlsコマンドを使いますが、ShellFilerではフォルダの変更と同時に、内部でls -a -l -Q --time-style=full-isoコマンドを自動実行し、その結果を解釈してファイル一覧画面を表示します。&lt;br&gt;
+        もともと人間が操作する画面をスクリプト等で自動制御するため、標準出力へのゴミや、想定していないエラーメッセージにより、動作が不安定になることがあります。また、仕組み上、ローカルPCからのファイルのアップロードは非常に低速で、コマンドラインの入力ヒストリも乱れます（ヒアドキュメントで同期をとりながらテキストを転送し、バイナリ変換するため）。&lt;br&gt;&lt;br&gt;
+        反面、suコマンドやトンネルなどのSSHターミナルで実行できる操作は一通り行え、かつ、ShellFilerでサポートしていない機能をコマンドラインから容易に実行することができます。&lt;br&gt;
+        ※アップロード後とダウンロード後はcksumコマンドでチェックサムの確認を行い、必要に応じて再転送するため、内容が化けることは基本的にありません。&lt;/td&gt;
+      &lt;/tr&gt;
+    &lt;/table&gt;
+    &lt;br&gt;&lt;br&gt;
+    &lt;table border="1"&gt;
+      &lt;tr&gt;
+        &lt;th&gt;&amp;nbsp;&lt;/th&gt;
+        &lt;th&gt;SFTP&lt;/th&gt;
+        &lt;th&gt;SSHシェル&lt;/th&gt;
+        &lt;th&gt;備考&lt;/th&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+        &lt;td&gt;アップロード&lt;/td&gt;
+        &lt;td class="center"&gt;○&lt;/td&gt;
+        &lt;td class="center"&gt;△&lt;/td&gt;
+        &lt;td&gt;SSHシェルは低速&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+        &lt;td&gt;ダウンロード&lt;/td&gt;
+        &lt;td class="center"&gt;○&lt;/td&gt;
+        &lt;td class="center"&gt;○&lt;/td&gt;
+        &lt;td&gt;&amp;nbsp;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+        &lt;td&gt;ファイル操作&lt;/td&gt;
+        &lt;td class="center"&gt;○&lt;/td&gt;
+        &lt;td class="center"&gt;○&lt;/td&gt;
+        &lt;td&gt;基本的に同等&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+        &lt;td&gt;コマンド実行&lt;/td&gt;
+        &lt;td class="center"&gt;△&lt;/td&gt;
+        &lt;td class="center"&gt;○&lt;/td&gt;
+        &lt;td&gt;SFTPは接続中のセッションでターミナルを開くことが可能。SSHシェルは実行中の状態の続きでターミナル操作が可能&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+        &lt;td&gt;su/トンネル&lt;/td&gt;
+        &lt;td class="center"&gt;×&lt;/td&gt;
+        &lt;td class="center"&gt;○&lt;/td&gt;
+        &lt;td&gt;SFTPはユーザーの変更不可。SSHシェルでのトンネルはコマンドラインで入力&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+        &lt;td&gt;安定性&lt;/td&gt;
+        &lt;td class="center"&gt;○&lt;/td&gt;
+        &lt;td class="center"&gt;△&lt;/td&gt;
+        &lt;td&gt;SSHシェルは未知のメッセージやバックグラウンドプロセスからのゴミの影響を受ける&lt;/td&gt;
+      &lt;/tr&gt;
+    &lt;/table&gt;
+  &lt;/body&gt;
+&lt;/html&gt;</value>
+    <comment>HTML:SSHプロトコル</comment>
+  </data>
+  <data name="HtmlSSHSession" xml:space="preserve">
+    <value>&lt;html&gt;
+  &lt;header&gt;
+    &lt;meta http-equiv="Content-Type" content="text/html; charset=Shift_JIS"&gt;
+    &lt;style type="text/css"&gt;
+      h1 {
+        font-size: 14pt;
+        font-weight: bold;
+        color: #0000ff;
+        background-color: #c0f0f0;
+        line-height: 28px;
+        margin: 10px 5px 10px 5px;
+      }
+      h2 {
+        font-size: 11pt;
+        font-weight: bold;
+        color: #0000ff;
+        line-height: 13px;
+        margin: 0px 5px 5px 5px;
+      }
+      h3 {
+        font-size: 10pt;
+        font-weight: bold;
+        line-height: 12px;
+        margin: 5px 5px 5px 5px;
+      }
+      td {
+        font-size: 10pt;
+        margin: 2px 2px 2px 5px;
+      }
+      td.center {
+        font-size: 10pt;
+        text-align: center;
+      }
+      th {
+        font-size: 10pt;
+      }
+      li {
+        font-size: 10pt;
+        margin: 2px 2px 2px 25px;
+      }
+      p.copyright {
+        font-size: 10pt;
+        color: #808080;
+        margin: 5px 5px 0px 20px;
+      }
+      p {
+        font-size: 10pt;
+        margin: 8px 5px 8px 5px;
+      }
+      b {
+        font-size: 10pt;
+        margin: 8px 5px 8px 5px;
+      }
+    &lt;/style&gt;
+  &lt;/header&gt;
+  &lt;body&gt;
+    &lt;h1&gt;SSHチャネルの選択&lt;/h1&gt;
+    &lt;p&gt;この画面は、SSHシェルモードで使用するチャネルを選択します。&lt;/p&gt;
+    &lt;br&gt;
+    &lt;h2&gt;セッションとチャネル&lt;/h2&gt;
+    &lt;p&gt;SSHプロトコルでは、ユーザー認証（パスワードや鍵ファイル）によってSSHサーバーに接続し、セッションを確立します。&lt;br&gt;セッションの配下には複数のチャネルを作成することができ、SFTPのコマンドや１つのコンソール画面でのやりとりはそれぞれのチャネルを通して実行します。&lt;/p&gt;
+    &lt;br&gt;&lt;br&gt;
+    &lt;h2&gt;ShellFilerのSSHシェル接続&lt;/h2&gt;
+    &lt;p&gt;SSHシェル接続では、コマンドを実行するチャネル/コンソールを選ぶ必要があります。&lt;br&gt;
+SSHシェル接続はShellFilerがコンソール画面に表示される文字を解釈し、コマンドを自動的に入力することで実現しています。suコマンド等でユーザーを切り替えると、その状態はコンソール画面ごとに決まるため、SSHシェルのモードでファイル一覧を操作するには、まずチャネル/コンソールの選択が必要です。&lt;/p&gt;
+    &lt;p&gt;ファイル一覧画面で操作し続けているときは前回のコンソール画面をそのまま引き継ぐことができますが、一度SSHシェルの一覧から外れた後、ブックマークで戻るような場合には、コマンドを実行するコンソール画面を選び直す必要があります。&lt;/p&gt;
+    &lt;b&gt;SSHメニューから[SSH操作ユーザ－の切り替え]（su/exit）を実行すると、そのチャネルを使用しているすべての操作ユーザーも、su/exit後のユーザーに切り替わります。&lt;/b&gt;
+  &lt;/body&gt;
+&lt;/html&gt;</value>
+    <comment>HTML:SSHセッション</comment>
+  </data>
+  <data name="HtmlTransferConditionFileName" xml:space="preserve">
+    <value>&lt;html&gt;
+  &lt;header&gt;
+    &lt;meta http-equiv="Content-Type" content="text/html; charset=Shift_JIS"&gt;
+    &lt;style type="text/css"&gt;
+      h1 {
+        font-size: 14pt;
+        font-weight: bold;
+        color: #0000ff;
+        background-color: #c0f0f0;
+        line-height: 28px;
+        margin: 10px 5px 10px 5px;
+      }
+      h2 {
+        font-size: 11pt;
+        font-weight: bold;
+        color: #0000ff;
+        line-height: 13px;
+        margin: 0px 5px 5px 5px;
+      }
+      h3 {
+        font-size: 10pt;
+        font-weight: bold;
+        line-height: 12px;
+        margin: 5px 5px 5px 5px;
+      }
+      th {
+        font-size: 10pt;
+        background-color: #e0e0e0;
+      }
+      th.left {
+        font-size: 10pt;
+        background-color: #e0e0e0;
+        text-align: left;
+      }
+      td {
+        font-size: 10pt;
+      }
+      ul {
+        font-size: 10pt;
+        margin: 2px 2px 2px 5px;
+      }
+      li {
+        font-size: 10pt;
+        margin: 2px 2px 2px 25px;
+      }
+      p.image {
+        text-align: center;
+        margin: 5px 5px 5px 5px;
+      }
+      p {
+        font-size: 10pt;
+        margin: 8px 5px 8px 5px;
+      }
+    &lt;/style&gt;
+  &lt;/header&gt;
+  &lt;body&gt;
+    &lt;h2&gt;転送条件のファイル名&lt;/h2&gt;
+    &lt;p&gt;転送条件のファイル名には正規表現とワイルドカードを指定できます。&lt;/p&gt;
+    &lt;table&gt;
+      &lt;tr&gt;
+        &lt;td nowrap colspan="2"&gt;&lt;b&gt;正規表現&lt;/b&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+        &lt;td&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/td&gt;
+        &lt;td&gt;.NET Frameworkの正規表現で比較します。検索エンジンで「C# 正規表現」などを検索してください。&lt;br&gt;
+    ファイル名の部分一致のため、たとえばSubversionの一時フォルダ「.svn」を完全一致で検索するには「^\.svn$」のように前後に「^」「$」をつける必要があります。&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+        &lt;td&gt;&amp;nbsp;&lt;/td&gt;
+        &lt;td&gt;&amp;nbsp;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+        &lt;td nowrap colspan="2"&gt;&lt;b&gt;ワイルドカード&lt;/b&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+        &lt;td&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/td&gt;
+        &lt;td&gt;ワイルドカードとして「*」「?」を使用できます。「:」で区切ることで複数の条件を指定することができます。&lt;br&gt;
+        常に完全一致で検索します。たとえば、条件「*_」を指定したとき、「abc_.txt」などは処理対象になりません。&lt;/td&gt;
+      &lt;/tr&gt;
+    &lt;/table&gt;
+  &lt;/body&gt;
+&lt;/html&gt;</value>
+    <comment>HTML:転送条件のファイル名</comment>
+  </data>
+  <data name="HtmlTransferConditionTarget" xml:space="preserve">
+    <value>&lt;html&gt;
+  &lt;header&gt;
+    &lt;meta http-equiv="Content-Type" content="text/html; charset=Shift_JIS"&gt;
+    &lt;style type="text/css"&gt;
+      h1 {
+        font-size: 14pt;
+        font-weight: bold;
+        color: #0000ff;
+        background-color: #c0f0f0;
+        line-height: 28px;
+        margin: 10px 5px 10px 5px;
+      }
+      h2 {
+        font-size: 11pt;
+        font-weight: bold;
+        color: #0000ff;
+        line-height: 13px;
+        margin: 35px 5px 5px 5px;
+      }
+      h3 {
+        font-size: 10pt;
+        font-weight: bold;
+        line-height: 12px;
+        margin: 5px 5px 5px 5px;
+      }
+      th {
+        font-size: 10pt;
+        background-color: #e0e0e0;
+      }
+      th.left {
+        font-size: 10pt;
+        background-color: #e0e0e0;
+        text-align: left;
+      }
+      td {
+        font-size: 10pt;
+      }
+      ul {
+        font-size: 10pt;
+        margin: 2px 2px 2px 5px;
+      }
+      li {
+        font-size: 10pt;
+        margin: 2px 2px 2px 25px;
+      }
+      p.image {
+        text-align: center;
+        margin: 5px 5px 5px 5px;
+      }
+      p {
+        font-size: 10pt;
+        margin: 8px 5px 8px 5px;
+      }
+    &lt;/style&gt;
+  &lt;/header&gt;
+  &lt;body&gt;
+    &lt;h1&gt;転送条件の対象&lt;/h1&gt;
+    &lt;p&gt;ファイルのコピー、移動、削除で転送条件を指定すると、指定した条件に一致するものだけを操作の対象にすることができます。例えば、名前が「Image」から始まるファイルやフォルダだけを削除することができます。&lt;/p&gt;
+    &lt;ul&gt;
+    対象は、次の通り指定します。&lt;br&gt;
+    &lt;li&gt;対象を「ファイルだけ」にすると、ファイルだけが対象となります。 コピーと移動のとき、条件に一致するファイルの親フォルダは常に作成されます。&lt;/li&gt;
+    &lt;li&gt;対象を「フォルダだけ」にすると、条件に一致したフォルダの、配下にあるすべてのファイルとフォルダが対象となります（配下のフォルダは条件に一致しなくても対象です）。&lt;/li&gt;
+    &lt;li&gt;対象を「ファイルとフォルダ」にすると、これら2つを足し合わせた内容となります。&lt;/li&gt;
+    &lt;/ul&gt;
+    &lt;br&gt;
+    &lt;/p&gt;
+    &lt;p&gt;以下の例で「Image*」に一致するものを削除する場合、ImageFolderA以下のすべてと、ImageFolderBが削除されます。&lt;/p&gt;
+    &lt;table border="1" cellspacing="0"&gt;
+      &lt;tr&gt;
+        &lt;th&gt;&amp;nbsp;&amp;nbsp;&lt;/th&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+        &lt;th class="left" nowrap&gt;&amp;#x1f5c2; ImageFolderA&lt;/th&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+        &lt;th class="left" nowrap&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;#x1f5c2; Folder&lt;/th&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+        &lt;th class="left" nowrap&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;#x1f4c4; Image1.jpg&lt;/th&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+        &lt;th class="left" nowrap&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;#x1f4c4; Text1.txt&lt;/th&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+        &lt;th class="left" nowrap&gt;&amp;#x1f5c2; ImageFolderB&lt;/th&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+        &lt;th class="left" nowrap&gt;&amp;#x1f5c2; TextFolderA&lt;/th&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+        &lt;th class="left" nowrap&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;#x1f4c4; Image2.jpg&lt;/th&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+        &lt;th class="left" nowrap&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;#x1f4c4; Text2.txt&lt;/th&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+        &lt;th class="left" nowrap&gt;&amp;#x1f5c2; TextFolderB&lt;/th&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+        &lt;th class="left" nowrap&gt;&amp;#x1f4c4; Image3.jpg&lt;/th&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+        &lt;th class="left" nowrap&gt;&amp;#x1f4c4; Text3.txt&lt;/th&gt;
+      &lt;/tr&gt;
+    &lt;/table&gt;
+    &lt;p&gt;コピー/移動と、削除のそれぞれについて対象となるファイルとフォルダを次の表に示します。&lt;/p&gt;
+    &lt;br&gt;
+    &lt;h2&gt;「Image*」のコピーと移動&lt;/h2&gt;
+    &lt;table border="1" cellspacing="0" width="100%"&gt;
+      &lt;tr&gt;
+        &lt;th&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/th&gt;
+        &lt;th&gt;対象:ファイルだけ&lt;/th&gt;
+        &lt;th&gt;対象:フォルダだけ&lt;/th&gt;
+        &lt;th&gt;対象:ファイルとフォルダ&lt;/th&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+        &lt;th class="left" nowrap&gt;&amp;#x1f5c2; ImageFolderA&lt;/th&gt;
+        &lt;td&gt;コピー(Image1.jpgに必要)&lt;/td&gt;
+        &lt;td&gt;コピー&lt;/td&gt;
+        &lt;td&gt;コピー&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+        &lt;th class="left" nowrap&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;#x1f5c2; Folder&lt;/th&gt;
+        &lt;td&gt;対象外&lt;/td&gt;
+        &lt;td&gt;コピー(ImageFolderA配下)&lt;/td&gt;
+        &lt;td&gt;コピー(ImageFolderA配下)&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+        &lt;th class="left" nowrap&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;#x1f4c4; Image1.jpg&lt;/th&gt;
+        &lt;td&gt;コピー&lt;/td&gt;
+        &lt;td&gt;コピー(ImageFolderA配下)&lt;/td&gt;
+        &lt;td&gt;コピー(ImageFolderA配下)&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+        &lt;th class="left" nowrap&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;#x1f4c4; Text1.txt&lt;/th&gt;
+        &lt;td&gt;対象外&lt;/td&gt;
+        &lt;td&gt;コピー(ImageFolderA配下)&lt;/td&gt;
+        &lt;td&gt;コピー(ImageFolderA配下)&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+        &lt;th class="left" nowrap&gt;&amp;#x1f5c2; ImageFolderB&lt;/th&gt;
+        &lt;td&gt;対象外&lt;/td&gt;
+        &lt;td&gt;コピー&lt;/td&gt;
+        &lt;td&gt;コピー&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+        &lt;th class="left" nowrap&gt;&amp;#x1f5c2; TextFolderA&lt;/th&gt;
+        &lt;td&gt;コピー(Image2.jpgに必要)&lt;/td&gt;
+        &lt;td&gt;対象外&lt;/td&gt;
+        &lt;td&gt;コピー(Image2.jpgに必要)&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+        &lt;th class="left" nowrap&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;#x1f4c4; Image2.jpg&lt;/th&gt;
+        &lt;td&gt;コピー&lt;/td&gt;
+        &lt;td&gt;対象外&lt;/td&gt;
+        &lt;td&gt;コピー&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+        &lt;th class="left" nowrap&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;#x1f4c4; Text2.txt&lt;/th&gt;
+        &lt;td&gt;対象外&lt;/td&gt;
+        &lt;td&gt;対象外&lt;/td&gt;
+        &lt;td&gt;対象外&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+        &lt;th class="left" nowrap&gt;&amp;#x1f5c2; TextFolderB&lt;/th&gt;
+        &lt;td&gt;対象外&lt;/td&gt;
+        &lt;td&gt;対象外&lt;/td&gt;
+        &lt;td&gt;対象外&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+        &lt;th class="left" nowrap&gt;&amp;#x1f4c4; Image3.jpg&lt;/th&gt;
+        &lt;td&gt;コピー&lt;/td&gt;
+        &lt;td&gt;対象外&lt;/td&gt;
+        &lt;td&gt;コピー&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+        &lt;th class="left" nowrap&gt;&amp;#x1f4c4; Text3.txt&lt;/th&gt;
+        &lt;td&gt;対象外&lt;/td&gt;
+        &lt;td&gt;対象外&lt;/td&gt;
+        &lt;td&gt;対象外&lt;/td&gt;
+      &lt;/tr&gt;
+    &lt;/table&gt;
+    &lt;p&gt;表中の括弧書きは、そのファイル操作が発生する原因となったファイルまたはフォルダを表します。&lt;/p&gt;
+    &lt;p&gt;&lt;br&gt;&lt;/p&gt;
+
+    &lt;h2&gt;「Image*」の削除&lt;/h2&gt;
+    &lt;table border="1" cellspacing="0" width="100%"&gt;
+      &lt;tr&gt;
+        &lt;th&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/th&gt;
+        &lt;th&gt;対象:ファイルだけ&lt;/th&gt;
+        &lt;th&gt;対象:フォルダだけ&lt;/th&gt;
+        &lt;th&gt;対象:ファイルとフォルダ&lt;/th&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+        &lt;th class="left" nowrap&gt;&amp;#x1f5c2; ImageFolderA&lt;/th&gt;
+        &lt;td&gt;対象外&lt;/td&gt;
+        &lt;td&gt;削除&lt;/td&gt;
+        &lt;td&gt;削除&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+        &lt;th class="left" nowrap&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;#x1f5c2; Folder&lt;/th&gt;
+        &lt;td&gt;対象外&lt;/td&gt;
+        &lt;td&gt;削除(ImageFolderA配下)&lt;/td&gt;
+        &lt;td&gt;削除(ImageFolderA配下)&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+        &lt;th class="left" nowrap&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;#x1f4c4; Image1.jpg&lt;/th&gt;
+        &lt;td&gt;削除&lt;/td&gt;
+        &lt;td&gt;削除(ImageFolderA配下)&lt;/td&gt;
+        &lt;td&gt;削除(ImageFolderA配下)&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+        &lt;th class="left" nowrap&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;#x1f4c4; Text1.txt&lt;/th&gt;
+        &lt;td&gt;対象外&lt;/td&gt;
+        &lt;td&gt;削除(ImageFolderA配下)&lt;/td&gt;
+        &lt;td&gt;削除(ImageFolderA配下)&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+        &lt;th class="left" nowrap&gt;&amp;#x1f5c2; ImageFolderB&lt;/th&gt;
+        &lt;td&gt;対象外&lt;/td&gt;
+        &lt;td&gt;削除&lt;/td&gt;
+        &lt;td&gt;削除&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+        &lt;th class="left" nowrap&gt;&amp;#x1f5c2; TextFolderA&lt;/th&gt;
+        &lt;td&gt;対象外&lt;/td&gt;
+        &lt;td&gt;対象外&lt;/td&gt;
+        &lt;td&gt;対象外&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+        &lt;th class="left" nowrap&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;#x1f4c4; Image2.jpg&lt;/th&gt;
+        &lt;td&gt;削除&lt;/td&gt;
+        &lt;td&gt;対象外&lt;/td&gt;
+        &lt;td&gt;削除&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+        &lt;th class="left" nowrap&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;#x1f4c4; Text2.txt&lt;/th&gt;
+        &lt;td&gt;対象外&lt;/td&gt;
+        &lt;td&gt;対象外&lt;/td&gt;
+        &lt;td&gt;対象外&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+        &lt;th class="left" nowrap&gt;&amp;#x1f5c2; TextFolderB&lt;/th&gt;
+        &lt;td&gt;対象外&lt;/td&gt;
+        &lt;td&gt;対象外&lt;/td&gt;
+        &lt;td&gt;対象外&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+        &lt;th class="left" nowrap&gt;&amp;#x1f4c4; Image3.jpg&lt;/th&gt;
+        &lt;td&gt;削除&lt;/td&gt;
+        &lt;td&gt;対象外&lt;/td&gt;
+        &lt;td&gt;削除&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+        &lt;th class="left" nowrap&gt;&amp;#x1f4c4; Text3.txt&lt;/th&gt;
+        &lt;td&gt;対象外&lt;/td&gt;
+        &lt;td&gt;対象外&lt;/td&gt;
+        &lt;td&gt;対象外&lt;/td&gt;
+      &lt;/tr&gt;
+    &lt;/table&gt;
+    &lt;p&gt;表中の括弧書きは、そのファイル操作が発生する原因となったファイルまたはフォルダを表します。&lt;/p&gt;
+    &lt;p&gt;&lt;br&gt;&lt;/p&gt;
+
+    &lt;h2&gt;否定の条件への注意&lt;/h2&gt;
+    &lt;p&gt;○○以外という条件は、意図とは異なる条件で転送される場合があります。&lt;br&gt;
+    たとえば、ルートフォルダAを共有する、A\B\C.txt、A\D\E.txtというフォルダ構成があったとき、「B以外をコピー」という条件を指定すると意図通りになりません。このときは、フォルダAが条件を満たすため、Aの配下すべてが対象になり、結果的にBを含むすべてのファイルとフォルダが転送されます。&lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;</value>
+    <comment>HTML:転送条件の対象</comment>
   </data>
 </root>

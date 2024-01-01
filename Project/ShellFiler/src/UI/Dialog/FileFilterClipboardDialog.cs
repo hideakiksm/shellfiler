@@ -433,7 +433,7 @@ namespace ShellFiler.UI.Dialog {
             //=========================================================================================
             private void listBoxUse_DrawItem(object sender, DrawItemEventArgs evt) {
                 int index = evt.Index;
-                if (m_setting.Count <= evt.Index) {
+                if (evt.Index < 0 || m_setting.Count <= evt.Index) {
                     return;
                 }
                 FileFilterItem item = m_setting[evt.Index];

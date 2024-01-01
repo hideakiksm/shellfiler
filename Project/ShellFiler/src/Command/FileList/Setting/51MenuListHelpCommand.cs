@@ -75,7 +75,7 @@ namespace ShellFiler.Command.FileList.Setting {
             html = html.Replace("{4}", graphicsViewerDepth.ToString());
             html = html.Replace("{5}", graphicsViewer);
 
-            HelpMessageDialog dialog = new HelpMessageDialog(Resources.DlgHelp_TitleMenuList, null, html);
+            HelpMessageDialog dialog = new HelpMessageDialog(Resources.DlgHelp_TitleMenuList, html);
             dialog.Width = 780;
             dialog.Height = 550;
             dialog.ShowDialog(Program.MainWindow);

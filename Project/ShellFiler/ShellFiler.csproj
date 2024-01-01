@@ -1077,7 +1077,6 @@
     <Compile Include="src\MonitoringViewer\ProcessMonitor\PsHeader.cs" />
     <Compile Include="src\MonitoringViewer\ProcessMonitor\PsHeaderKind.cs" />
     <Compile Include="src\MonitoringViewer\ProcessMonitor\PsResultParser.cs" />
-    <Compile Include="src\NativeResource.cs" />
     <Compile Include="src\Program.cs" />
     <Compile Include="src\Terminal\TerminalSession\CommandEmulator\CommandReplyChecker.cs" />
     <Compile Include="src\Terminal\TerminalSession\CommandEmulator\ConsoleResultCleaner.cs" />
