@@ -47,8 +47,8 @@ namespace ShellFiler.Util {
         public static bool Initialize(Form parent) {
             try {
                 s_encodedPasswordSaltDate = (int)(GetPasswordSalt());
-            } catch (Exception) {
-                InfoBox.Error(parent, Resources.SfHelperInstall);
+            } catch (Exception e) {
+                InfoBox.Error(parent, Resources.SfHelperInstall + e.ToString());
                 return false;
             }
             return true;
