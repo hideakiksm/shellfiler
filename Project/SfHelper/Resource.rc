@@ -51,8 +51,8 @@ END
 //
 
 VS_VERSION_INFO VERSIONINFO
- FILEVERSION 3,0,2,19
- PRODUCTVERSION 3,0,2,19
+ FILEVERSION 3,0,3,20
+ PRODUCTVERSION 3,0,3,20
  FILEFLAGSMASK 0x3fL
 #ifdef _DEBUG
  FILEFLAGS 0x1L
@@ -69,12 +69,12 @@ BEGIN
         BEGIN
             VALUE "CompanyName", "Hideaki Kishimoto"
             VALUE "FileDescription", "ShellFiler Helper DLL"
-            VALUE "FileVersion", "3.0.2.19"
+            VALUE "FileVersion", "3.0.3.20"
             VALUE "InternalName", "SfHelper.dll"
-            VALUE "LegalCopyright", "Copyright (c) 2011-2022 Hideaki Kishimoto"
+            VALUE "LegalCopyright", "Copyright (c) 2011-2024 Hideaki Kishimoto"
             VALUE "OriginalFilename", "SfHelper.dll"
             VALUE "ProductName", "ShellFiler"
-            VALUE "ProductVersion", "3.0.2.19"
+            VALUE "ProductVersion", "3.0.3.20"
         END
     END
     BLOCK "VarFileInfo"

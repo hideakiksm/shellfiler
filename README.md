@@ -77,6 +77,16 @@ cloneしたあと、`Project`フォルダの.slnファイルを開きます。
 * `Util_CommandXmlConverter`は、キーやメニューに割り当てる機能の説明をソースコードから自動生成するツールです。`Project\ShellFiler\src\Command`フォルダにあるC#ソースのコメントから`Project\release\CommandList.dat`を作成します。コマンドを更新した場合に実行します。
 * `Util_ImageCombine`は`Project\ShellFiler\Resources`ツールバー用のイメージリストを作成するツールです。ツールバーのイメージを更新した場合に実行します。
 
+## リリース
+
+リリース時のバージョン変更手順は以下のとおりです。
+
+* ShellFiler.txtの先頭を変更
+* ShellFilerプロジェクトのアセンブリ情報のバージョンを変更
+* SfHelperのリソースにあるバージョン情報を変更
+* 機能追加を行う場合、UIResourcにあるVerに新規バージョンを設定
+* ビルド後、セットアップのバージョンを変更
+
 ## オープンソースについて
 
 苦情対応に追われるのは本意ではないため、当面、Issueは無効化しておきます。

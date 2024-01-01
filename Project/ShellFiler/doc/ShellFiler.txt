@@ -1,5 +1,5 @@
-ShellFiler Ver.3.0.2
-Copyright (c) 2011-2022 Hideaki KISHIMOTO
+ShellFiler Ver.3.0.3
+Copyright (c) 2011-2024 Hideaki KISHIMOTO
 
 【概要】
 ShellFilerはWindows用のファイル管理ソフトです。
@@ -21,6 +21,9 @@ Windows上のファイルのコピーや移動、実行、ファイルの閲覧などを迅速に行うことが
 ShellFilerのソースコードは以下のGitHub上で公開しています。
 https://github.com/hideakiksm/shellfiler
 
+【コントリビューター】
+ShellFilerは以下のコントリビューターの協力でリリースされています。
+Yuuki Sato
 
 【関連ソフトウェア】
 ShellFilerは以下のライブラリを使用しています。
