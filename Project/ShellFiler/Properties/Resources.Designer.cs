@@ -306,7 +306,11 @@ namespace ShellFiler.Properties {
         }
         
         /// <summary>
-        ///   ShellFilerは以下のライブラリを使用しています。
+        ///   ShellFilerは以下のコントリビューターの協力でリリースされています。
+        ///Yuuki Sato
+        ///
+        ///
+        ///ShellFilerは以下のライブラリを使用しています。
         ///SpHeader
         ///   Copyright (c) 2004 by Sergei Pavlovsky
         ///   http://www.codeproject.com/KB/miscctrl/CS_Header_Control.aspx
@@ -320,10 +324,7 @@ namespace ShellFiler.Properties {
         ///    http://www.codeproject.com/KB/cs/biginteger.aspx
         ///
         ///
-        ///ShellFilerでは以下のソフトウェア仕様に依存した連携処理を組み込んでいます。
-        ///SharpSSH
-        ///   Copyright (c) 2008 TamirGal.com
-        ///   http:/ [残りの文字列は切り詰められました]&quot;; に類似しているローカライズされた文字列を検索します。
+        ///ShellFilerでは以下のソフトウェア仕様に依存した連携処理を組み込んでいます。        /// [残りの文字列は切り詰められました]&quot;; に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string DlgAbout_ExternalSoftware {
             get {
@@ -7234,6 +7235,238 @@ namespace ShellFiler.Properties {
         ///      h {
         ///        font- [残りの文字列は切り詰められました]&quot;; に類似しているローカライズされた文字列を検索します。
         /// </summary>
+        internal static string HtmlAboutExternalSoftware {
+            get {
+                return ResourceManager.GetString("HtmlAboutExternalSoftware", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   &lt;html&gt;
+        ///  &lt;header&gt;
+        ///    &lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html; charset=Shift_JIS&quot;&gt;
+        ///    &lt;style type=&quot;text/css&quot;&gt;
+        ///      h1 {
+        ///        font-size: 10pt;
+        ///        font-weight: bold;
+        ///        color: #0000ff;
+        ///        background-color: #c0f0f0;
+        ///        line-height: 20px;
+        ///        margin: 5px 0px 5px 0px;
+        ///      }
+        ///      h2 {
+        ///        font-size: 9pt;
+        ///        font-weight: bold;
+        ///        color: #0000ff;
+        ///        line-height: 13px;
+        ///        margin: 10px 0px 5px 0px;
+        ///      }
+        ///      td {
+        ///        font-s [残りの文字列は切り詰められました]&quot;; に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string HtmlCommandArgument {
+            get {
+                return ResourceManager.GetString("HtmlCommandArgument", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   &lt;html&gt;
+        ///  &lt;header&gt;
+        ///    &lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html; charset=Shift_JIS&quot;&gt;
+        ///    &lt;style type=&quot;text/css&quot;&gt;
+        ///      h1 {
+        ///        font-size: 14pt;
+        ///        font-weight: bold;
+        ///        color: #0000ff;
+        ///        background-color: #c0f0f0;
+        ///        line-height: 28px;
+        ///        margin: 10px 5px 10px 5px;
+        ///      }
+        ///      h2 {
+        ///        font-size: 11pt;
+        ///        font-weight: bold;
+        ///        color: #0000ff;
+        ///        line-height: 13px;
+        ///        margin: 35px 5px 5px 5px;
+        ///      }
+        ///      th {
+        ///        font [残りの文字列は切り詰められました]&quot;; に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string HtmlHowToUseMouse {
+            get {
+                return ResourceManager.GetString("HtmlHowToUseMouse", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   &lt;html&gt;
+        ///  &lt;header&gt;
+        ///    &lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html; charset=Shift_JIS&quot;&gt;
+        ///    &lt;style type=&quot;text/css&quot;&gt;
+        ///      h1 {
+        ///        font-size: 14pt;
+        ///        font-weight: bold;
+        ///        color: #0000ff;
+        ///        background-color: #c0f0f0;
+        ///        line-height: 28px;
+        ///        margin: 10px 5px 10px 5px;
+        ///      }
+        ///      h2 {
+        ///        font-size: 11pt;
+        ///        font-weight: bold;
+        ///        color: #0000ff;
+        ///        line-height: 13px;
+        ///        margin: 35px 5px 5px 5px;
+        ///      }
+        ///      th {
+        ///        fon [残りの文字列は切り詰められました]&quot;; に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string HtmlSlideShowMark {
+            get {
+                return ResourceManager.GetString("HtmlSlideShowMark", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   &lt;html&gt;
+        ///  &lt;header&gt;
+        ///    &lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html; charset=Shift_JIS&quot;&gt;
+        ///    &lt;style type=&quot;text/css&quot;&gt;
+        ///      h1 {
+        ///        font-size: 14pt;
+        ///        font-weight: bold;
+        ///        color: #0000ff;
+        ///        background-color: #c0f0f0;
+        ///        line-height: 28px;
+        ///        margin: 10px 5px 10px 5px;
+        ///      }
+        ///      h2 {
+        ///        font-size: 11pt;
+        ///        font-weight: bold;
+        ///        color: #0000ff;
+        ///        line-height: 13px;
+        ///        margin: 0px 5px 5px 5px;
+        ///      }
+        ///      h3 {
+        ///        font [残りの文字列は切り詰められました]&quot;; に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string HtmlSSHEditor {
+            get {
+                return ResourceManager.GetString("HtmlSSHEditor", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   &lt;html&gt;
+        ///  &lt;header&gt;
+        ///    &lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html; charset=Shift_JIS&quot;&gt;
+        ///    &lt;style type=&quot;text/css&quot;&gt;
+        ///      h1 {
+        ///        font-size: 14pt;
+        ///        font-weight: bold;
+        ///        color: #0000ff;
+        ///        background-color: #c0f0f0;
+        ///        line-height: 28px;
+        ///        margin: 10px 5px 10px 5px;
+        ///      }
+        ///      h2 {
+        ///        font-size: 11pt;
+        ///        font-weight: bold;
+        ///        color: #0000ff;
+        ///        line-height: 13px;
+        ///        margin: 0px 5px 5px 5px;
+        ///      }
+        ///      h3 {
+        ///        font [残りの文字列は切り詰められました]&quot;; に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string HtmlSSHPrivateKey {
+            get {
+                return ResourceManager.GetString("HtmlSSHPrivateKey", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   &lt;html&gt;
+        ///  &lt;header&gt;
+        ///    &lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html; charset=Shift_JIS&quot;&gt;
+        ///    &lt;style type=&quot;text/css&quot;&gt;
+        ///      h1 {
+        ///        font-size: 14pt;
+        ///        font-weight: bold;
+        ///        color: #0000ff;
+        ///        background-color: #c0f0f0;
+        ///        line-height: 28px;
+        ///        margin: 10px 5px 10px 5px;
+        ///      }
+        ///      h2 {
+        ///        font-size: 11pt;
+        ///        font-weight: bold;
+        ///        color: #0000ff;
+        ///        line-height: 13px;
+        ///        margin: 0px 5px 5px 5px;
+        ///      }
+        ///      h3 {
+        ///        font [残りの文字列は切り詰められました]&quot;; に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string HtmlSSHProtocol {
+            get {
+                return ResourceManager.GetString("HtmlSSHProtocol", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   &lt;html&gt;
+        ///  &lt;header&gt;
+        ///    &lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html; charset=Shift_JIS&quot;&gt;
+        ///    &lt;style type=&quot;text/css&quot;&gt;
+        ///      h1 {
+        ///        font-size: 14pt;
+        ///        font-weight: bold;
+        ///        color: #0000ff;
+        ///        background-color: #c0f0f0;
+        ///        line-height: 28px;
+        ///        margin: 10px 5px 10px 5px;
+        ///      }
+        ///      h2 {
+        ///        font-size: 11pt;
+        ///        font-weight: bold;
+        ///        color: #0000ff;
+        ///        line-height: 13px;
+        ///        margin: 0px 5px 5px 5px;
+        ///      }
+        ///      h3 {
+        ///        font [残りの文字列は切り詰められました]&quot;; に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string HtmlSSHSession {
+            get {
+                return ResourceManager.GetString("HtmlSSHSession", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   &lt;html&gt;
+        ///  &lt;header&gt;
+        ///    &lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html; charset=Shift_JIS&quot;&gt;
+        ///    &lt;style type=&quot;text/css&quot;&gt;
+        ///      h1 {
+        ///        font-size: 14pt;
+        ///        font-weight: bold;
+        ///        color: #0000ff;
+        ///        background-color: #c0f0f0;
+        ///        line-height: 28px;
+        ///        margin: 10px 5px 10px 5px;
+        ///      }
+        ///      h2 {
+        ///        font-size: 11pt;
+        ///        font-weight: bold;
+        ///        color: #0000ff;
+        ///        line-height: 13px;
+        ///        margin: 35px 5px 5px 5px;
+        ///      }
+        ///      h {
+        ///        font- [残りの文字列は切り詰められました]&quot;; に類似しているローカライズされた文字列を検索します。
+        /// </summary>
         internal static string HtmlTemplateCommandList {
             get {
                 return ResourceManager.GetString("HtmlTemplateCommandList", resourceCulture);
@@ -7295,6 +7528,64 @@ namespace ShellFiler.Properties {
         internal static string HtmlTemplateMenuList {
             get {
                 return ResourceManager.GetString("HtmlTemplateMenuList", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   &lt;html&gt;
+        ///  &lt;header&gt;
+        ///    &lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html; charset=Shift_JIS&quot;&gt;
+        ///    &lt;style type=&quot;text/css&quot;&gt;
+        ///      h1 {
+        ///        font-size: 14pt;
+        ///        font-weight: bold;
+        ///        color: #0000ff;
+        ///        background-color: #c0f0f0;
+        ///        line-height: 28px;
+        ///        margin: 10px 5px 10px 5px;
+        ///      }
+        ///      h2 {
+        ///        font-size: 11pt;
+        ///        font-weight: bold;
+        ///        color: #0000ff;
+        ///        line-height: 13px;
+        ///        margin: 0px 5px 5px 5px;
+        ///      }
+        ///      h3 {
+        ///        font [残りの文字列は切り詰められました]&quot;; に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string HtmlTransferConditionFileName {
+            get {
+                return ResourceManager.GetString("HtmlTransferConditionFileName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   &lt;html&gt;
+        ///  &lt;header&gt;
+        ///    &lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html; charset=Shift_JIS&quot;&gt;
+        ///    &lt;style type=&quot;text/css&quot;&gt;
+        ///      h1 {
+        ///        font-size: 14pt;
+        ///        font-weight: bold;
+        ///        color: #0000ff;
+        ///        background-color: #c0f0f0;
+        ///        line-height: 28px;
+        ///        margin: 10px 5px 10px 5px;
+        ///      }
+        ///      h2 {
+        ///        font-size: 11pt;
+        ///        font-weight: bold;
+        ///        color: #0000ff;
+        ///        line-height: 13px;
+        ///        margin: 35px 5px 5px 5px;
+        ///      }
+        ///      h3 {
+        ///        fon [残りの文字列は切り詰められました]&quot;; に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string HtmlTransferConditionTarget {
+            get {
+                return ResourceManager.GetString("HtmlTransferConditionTarget", resourceCulture);
             }
         }
         

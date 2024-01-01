@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Reflection;
 using System.Text;
 using System.Windows.Forms;
+using ShellFiler.Properties;
 
 namespace ShellFiler.UI.Dialog.KeyOption {
 
@@ -22,10 +23,7 @@ namespace ShellFiler.UI.Dialog.KeyOption {
         public CommandArgumentHelp() {
             InitializeComponent();
             this.ControlBox = false;
-
-            string urlFile = NativeResources.HtmlCommandArgument;
-            string url = "res://" + Assembly.GetExecutingAssembly().Location + "/" + urlFile;
-            this.webBrowser.Navigate(url);
+            this.webBrowser.DocumentText = Resources.HtmlCommandArgument;
         }
 
         //=========================================================================================

@@ -43,7 +43,7 @@ namespace ShellFiler.Command.FileList.Setting {
         // 戻り値：実行結果
         //=========================================================================================
         public override object Execute() {
-            HelpMessageDialog dialog = new HelpMessageDialog(Resources.DlgHelp_TitleHowToUseMouse, NativeResources.HtmlHowToUseMouse, null);
+            HelpMessageDialog dialog = new HelpMessageDialog(Resources.DlgHelp_TitleHowToUseMouse, Resources.HtmlHowToUseMouse);
             dialog.ShowDialog(Program.MainWindow);
             return null;
         }

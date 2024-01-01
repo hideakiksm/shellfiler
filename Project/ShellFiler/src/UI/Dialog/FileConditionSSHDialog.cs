@@ -212,7 +212,7 @@ namespace ShellFiler.UI.Dialog {
         // 戻り値：なし
         //=========================================================================================
         private void linkLabelTransferHelp_LinkClicked(object sender, LinkLabelLinkClickedEventArgs evt) {
-            HelpMessageDialog dialog = new HelpMessageDialog(Resources.DlgTransferCond_TitleTransferHelp, NativeResources.HtmlTransferConditionTarget, null);
+            HelpMessageDialog dialog = new HelpMessageDialog(Resources.DlgTransferCond_TitleTransferHelp, Resources.HtmlTransferConditionTarget);
             dialog.Width = dialog.Width + 200;
             dialog.ShowDialog(this);
         }

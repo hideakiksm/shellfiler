@@ -217,7 +217,7 @@ namespace ShellFiler.UI.Dialog.Option {
         // 戻り値：なし
         //=========================================================================================
         private void linkLabelSSHHelp_LinkClicked(object sender, LinkLabelLinkClickedEventArgs evt) {
-            HelpMessageDialog dialog = new HelpMessageDialog(Resources.Option_SSHEditor, NativeResources.HtmlSSHEditor, null);
+            HelpMessageDialog dialog = new HelpMessageDialog(Resources.Option_SSHEditor, Resources.HtmlSSHEditor);
             dialog.ShowDialog(this);
         }
 

@@ -37,7 +37,7 @@ namespace ShellFiler.Command.GraphicsViewer.Edit {
         // 戻り値：実行結果
         //=========================================================================================
         public override object Execute() {
-            HelpMessageDialog dialog = new HelpMessageDialog(Resources.DlgMarkFileHelp_Title, NativeResources.HtmlSlideShowMark, null);
+            HelpMessageDialog dialog = new HelpMessageDialog(Resources.DlgMarkFileHelp_Title, Resources.HtmlSlideShowMark);
             dialog.ShowDialog(GraphicsViewerPanel.GraphicsViewerForm);
             return null;
         }

@@ -17,20 +17,14 @@ namespace ShellFiler.UI.Dialog {
         //=========================================================================================
         // 機　能：コンストラクタ
         // 引　数：[in]title    ダイアログのタイトル
-        // 　　　　[in]urlFile  表示するファイルのダイアログリソース（HTML指定のときnull）
-        // 　　　　[in]html     表示するHTML（URL指定のときnull）
+        // 　　　　[in]html     表示するHTML
         // 戻り値：なし
         //=========================================================================================
-        public HelpMessageDialog(string title, string urlFile, string html) {
+        public HelpMessageDialog(string title, string html) {
             InitializeComponent();
 
             this.Text = title;
-            if (urlFile != null) {
-                string url = "res://" + Assembly.GetExecutingAssembly().Location + "/" + urlFile;
-                this.webBrowser.Navigate(url);
-            } else {
-                this.webBrowser.DocumentText = html;
-            }
+            this.webBrowser.DocumentText = html;
         }
 
         //=========================================================================================

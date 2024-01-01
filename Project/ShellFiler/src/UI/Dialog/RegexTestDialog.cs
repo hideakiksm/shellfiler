@@ -24,10 +24,7 @@ namespace ShellFiler.UI.Dialog {
         public RegexTestDialog() {
             InitializeComponent();
 
-            string urlFile = NativeResources.HtmlTransferConditionFileName;
-            string url = "res://" + Assembly.GetExecutingAssembly().Location + "/" + urlFile;
-            this.webBrowser.Navigate(url);
-
+            this.webBrowser.DocumentText = Resources.HtmlTransferConditionFileName;
             this.textBoxRegex.Text = "^[0-9]*$";
             this.textBoxTarget.Text = "12345";
         }

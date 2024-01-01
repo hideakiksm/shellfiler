@@ -177,7 +177,7 @@ namespace ShellFiler.UI.Dialog {
         // 戻り値：なし
         //=========================================================================================
         private void linkLabelChannel_LinkClicked(object sender, LinkLabelLinkClickedEventArgs evt) {
-            HelpMessageDialog dialog = new HelpMessageDialog(Resources.DlgSSHChannelSelect_HelpTitle, NativeResources.HtmlSSHSession, null);
+            HelpMessageDialog dialog = new HelpMessageDialog(Resources.DlgSSHChannelSelect_HelpTitle, Resources.HtmlSSHSession);
             dialog.ShowDialog(this);
         }
 

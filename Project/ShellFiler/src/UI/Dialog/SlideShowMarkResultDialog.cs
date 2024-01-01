@@ -133,7 +133,7 @@ namespace ShellFiler.UI.Dialog {
         // 戻り値：なし
         //=========================================================================================
         private void SlideShowMarkResultDialog_HelpButtonClicked(object sender, CancelEventArgs evt) {
-            HelpMessageDialog dialog = new HelpMessageDialog(Resources.DlgMarkFileHelp_Title, NativeResources.HtmlSlideShowMark, null);
+            HelpMessageDialog dialog = new HelpMessageDialog(Resources.DlgMarkFileHelp_Title, Resources.HtmlSlideShowMark);
             dialog.ShowDialog(this);
         }
 

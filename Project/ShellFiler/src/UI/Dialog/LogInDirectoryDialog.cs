@@ -1212,7 +1212,7 @@ namespace ShellFiler.UI.Dialog {
             // 戻り値：なし
             //=========================================================================================
             private void linkLabelSSHHelp_LinkClicked(object sender, LinkLabelLinkClickedEventArgs evt) {
-                HelpMessageDialog dialog = new HelpMessageDialog(Resources.DlgLoginDir_SSHProtocolTitle, NativeResources.HtmlSSHProtocol, null);
+                HelpMessageDialog dialog = new HelpMessageDialog(Resources.DlgLoginDir_SSHProtocolTitle, Resources.HtmlSSHProtocol);
                 dialog.ShowDialog(m_parent);
             }
         }
