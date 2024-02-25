@@ -14,10 +14,11 @@ ShellFilerはWindows PC上のファイルを軽快に操作できるだけでな
 
 Windows 10以降の64bit環境に対応しています。
 
-安定版：[shellfiler3.0.2.msi](https://github.com/hideakiksm/shellfiler-release/raw/main/release/shellfiler3.0.2.msi)
+安定版：[shellfiler3.0.3.msi](https://github.com/hideakiksm/shellfiler-release/raw/main/release/shellfiler3.0.3.msi)
 
 旧バージョン（[更新履歴](Doc/history.md)）：
 
+* [shellfiler3.0.2.msi](https://github.com/hideakiksm/shellfiler-release/raw/main/release/shellfiler3.0.2.msi)
 * [shellfiler3.0.1.msi](https://github.com/hideakiksm/shellfiler-release/raw/main/release/shellfiler3.0.1.msi)
 * [shellfiler3.0.0.msi](https://github.com/hideakiksm/shellfiler-release/raw/main/release/shellfiler3.0.0.msi)
 
